@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
-import VueElectron from 'vue-electron'
+import VueElectron from 'vue-electron';
 
-import App from './App';
+import App from './App.vue';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +12,9 @@ Vue.use(BootstrapVue);
 Vue.use(VueElectron);
 
 window.onload = function () {
-	const app = new Vue(Object.assign(App));
-
-	app.$mount('#app');
+	new Vue({
+		el: '#app',
+		components: { App },
+		template: '<App/>'
+	});
 }

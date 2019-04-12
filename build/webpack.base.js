@@ -1,5 +1,5 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -7,7 +7,7 @@ module.exports = {
 	target: 'electron-renderer',
 	entry: {
 		app: [
-			path.resolve(__dirname, '../src/render/app/index.js')
+			path.resolve(__dirname, '../src/app/index.js')
 		]
 	},
 	output: {
@@ -28,10 +28,6 @@ module.exports = {
 			{
 				test: /\.less$/,
 				loader: ExtractTextPlugin.extract(['css-loader', 'less-loader'])
-			},
-			{
-				test: /\.vue$/,
-				loader: 'vue-loader'
 			},
 			{
 				test: /\.(woff2?|eot|svg|ttf|otf)(\?.*)?$/,

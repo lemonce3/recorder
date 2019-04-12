@@ -9,7 +9,28 @@
     "build": "webpack --config build/webpack.prod.js",
     "dev:app": "webpack-dev-server --config build/webpack.dev.js",
     "dev:electron": "cross-env NODE_ENV=development electron src/main.js",
-    "dev": "run-p dev:*"
+    "dev": "run-p dev:*",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "Lemonce.lc3.recorder",
+    "productName": "录制器",
+    "directories": {
+      "output": "output"
+    },
+    "win": {
+      "icon": "asset/images/icon.ico"
+    }
+  },
+  "win": {
+    "target": [
+      {
+        "target": "squirrel",
+        "arch": [
+          "x64"
+        ]
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,10 +43,8 @@
   },
   "homepage": "https://github.com/lemonce3/recorder#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
     "@fortawesome/fontawesome-free": "^5.8.1",
     "axios": "^0.18.0",
-    "babel-loader": "^8.0.5",
     "bootstrap-vue": "^2.0.0-rc.18",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",

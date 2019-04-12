@@ -1,10 +1,11 @@
 <template>
-	<div id="app"><p>1111111111</p></div>
+  <div id="app">
+    successful!
+  </div>
 </template>
 
 <script>
 export default {
-	name: 'app'
+  name: 'App'
 }
 </script>
-

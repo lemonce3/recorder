@@ -3,6 +3,7 @@ const {render} = require('../config.json');
 const path = require('path');
 
 const isProd = process.env.NODE_ENV === 'development';
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 
 const winURL = isProd
 	? `http://localhost:8081`
@@ -12,7 +13,7 @@ function createWindow() {
 	let mainWindow = new BrowserWindow({
 		width: render.width,
 		height: render.height,
-		
+		alwaysOnTop: true
 	});
 
 	mainWindow.loadURL(winURL);
