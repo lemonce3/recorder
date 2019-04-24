@@ -1,0 +1,55 @@
+left:
+  -
+    message: 文件
+    class: fas fa-file
+    subMenu:
+      -
+        message: 打开
+        class: far fa-folder-open
+        action: openFile
+      -
+        message: 保存
+        class: fas fa-save
+        action: saveFile
+  -
+    message: 录制
+    class: fas fa-video
+    subMenu:
+      -
+        message: 开始
+        class: fas fa-play
+        action: startRecord
+      -
+        message: 结束
+        class: fas fa-stop
+        action: endRecord
+      -
+        message: 重新开始
+        class: fas fa-undo-alt
+        action: restartRecord
+      -
+        message: 截图
+        class: fas fa-vector-square
+        action: getScreenShot
+      -
+        message: 清空
+        class: fas fa-trash-restore-alt
+        action: clearWorkbench
+      -
+        message: 导出
+        class: fas fa-file-export
+        action: exportResult
+  -
+    message: 配置
+    class: fas fa-wrench
+    action: configure
+right:
+  -
+    message: 置顶
+    class: far fa-arrow-alt-circle-up
+    action: topWindow
+  -
+    message: 关闭
+    class: fas fa-times
+    action: closeWindow
+

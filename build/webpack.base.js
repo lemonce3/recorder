@@ -32,6 +32,10 @@ module.exports = {
 			{
 				test: /\.(woff2?|eot|svg|ttf|otf)(\?.*)?$/,
 				loader: 'url-loader'
+			},
+			{
+				test: /\.yaml$/,
+				loader: ['json-loader', 'yaml-loader']
 			}
 		]
 	},
