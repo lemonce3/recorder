@@ -8,16 +8,23 @@
 /* eslint-disable */
 
 // Install `electron-debug` with `devtron`
+const path = require('path');
+const electron = require('electron');
+const {BrowserWindow} = electron;
+
 require('electron-debug')({ showDevTools: true })
 
 // Install `vue-devtools`
-require('electron').app.on('ready', () => {
-  let installExtension = require('electron-devtools-installer')
-  installExtension.default(installExtension.VUEJS_DEVTOOLS)
-    .then(() => {})
-    .catch(err => {
-      console.log('Unable to install `vue-devtools`: \n', err)
-    })
+electron.app.on('ready', () => {
+  // let installExtension = require('electron-devtools-installer')
+  // installExtension.default(installExtension.VUEJS_DEVTOOLS, true)
+  //   .then((name) => console.log(`Added Extension:  ${name}`))
+  //   .catch(err => {
+  //     console.log('Unable to install `vue-devtools`: \n', err)
+  //   })
+  BrowserWindow.addDevToolsExtension(path.resolve(__dirname, '../extensions/vue-devtools-5.1.0'));
+
+  console.log(BrowserWindow.getDevToolsExtensions());
 })
 
 // Require `main` process to boot app
