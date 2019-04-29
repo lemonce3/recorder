@@ -20,7 +20,12 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
-    width: 1000
+    width: 1000,
+    webPreferences: {
+      nodeIntegration: true,  //default value of webPreferences.nodeIntegration is false in Electron 5.0.0
+      nodeIntegrationInWorker: true,  //
+      webSecurity: false
+    }
   })
 
   mainWindow.loadURL(winURL)

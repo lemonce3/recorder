@@ -13,7 +13,8 @@ let mainConfig = {
     main: path.join(__dirname, '../src/main/index.js')
   },
   externals: [
-    ...Object.keys(dependencies || {})
+    ...Object.keys(dependencies || {}),
+    {'electron-debug': 'electron-debug'} //fix webpack in electron-vue issue#498 electron-debug issue#61 webpack issue#8826
   ],
   module: {
     rules: [
