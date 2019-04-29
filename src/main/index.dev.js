@@ -10,7 +10,7 @@
 // Install `electron-debug` with `devtron`
 const path = require('path');
 const electron = require('electron');
-const {BrowserWindow} = electron;
+const { BrowserWindow } = electron;
 
 require('electron-debug')({ showDevTools: true })
 
@@ -22,7 +22,9 @@ electron.app.on('ready', () => {
   //   .catch(err => {
   //     console.log('Unable to install `vue-devtools`: \n', err)
   //   })
-  BrowserWindow.addDevToolsExtension(path.resolve(__dirname, '../extensions/vue-devtools-5.1.0'));
+  if (!BrowserWindow.getDevToolsExtensions()['Vue.js devtools']) {
+    BrowserWindow.addDevToolsExtension(path.resolve(__dirname, '../extensions/vue-devtools-5.1.0'));
+  }
 
   console.log(BrowserWindow.getDevToolsExtensions());
 })

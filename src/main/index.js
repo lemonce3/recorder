@@ -23,8 +23,9 @@ function createWindow () {
     width: 1000,
     webPreferences: {
       nodeIntegration: true,  //default value of webPreferences.nodeIntegration is false in Electron 5.0.0
-      nodeIntegrationInWorker: true,  //
-      webSecurity: false
+      nodeIntegrationInWorker: true,
+      allowRunningInsecureContent: false,
+      webSecurity: true
     }
   })
 

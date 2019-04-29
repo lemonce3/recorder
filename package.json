@@ -49,7 +49,7 @@
       "icon": "build/icons/icon.ico",
       "target": [
         {
-          "target": "squirrel",
+          "target": "nsis",
           "arch": [
             "x64"
           ]
