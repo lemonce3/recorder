@@ -1,4 +1,7 @@
-import { app, BrowserWindow } from 'electron';
+import fs from 'fs';
+import path from 'path';
+import { app, BrowserWindow, ipcMain, nativeImage, globalShortcut } from 'electron';
+import getRect from '../../../../or-change/electron-screenshot-window/dist/main/main';
 
 /**
  * Set `__static` path to static files in production
@@ -13,7 +16,9 @@ const winURL = process.env.NODE_ENV === 'development'
 	? 'http://localhost:9080'
 	: `file://${__dirname}/index.html`;
 
-function createWindow () {
+const screenshotDir = path.resolve('screenshot');
+
+function createWindow() {
 	/**
    * Initial window options
    */
@@ -36,7 +41,31 @@ function createWindow () {
 	});
 }
 
-app.on('ready', createWindow);
+async function getScreenshot() {
+	return new Promise(resolve => {
+		ipcMain.on('LEMONCE3_RECORDER::screenshot-data', (event, args) => resolve(args));
+
+		mainWindow.webContents.send('LEMONCE3_RECORDER::get-screenshot');
+	});
+}
+
+async function cropScreenshot() {
+	const { dataURL, size } = await getScreenshot();
+	const origin = nativeImage.createFromDataURL(dataURL);
+	const rect = await getRect(dataURL, size);
+	const result = origin.crop(rect);
+
+	fs.mkdir(screenshotDir, { recursive: true }, error => {
+		error && console.log(error);
+		const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
+		fs.writeFile(filename, result.toPNG(), error => error && console.log(error));
+	});
+}
+
+app.on('ready', () => {
+	createWindow();
+	globalShortcut.register('ctrl+shift+a', cropScreenshot);
+});
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
