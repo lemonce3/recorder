@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/layers/layers_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/layers</a> layers_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/256</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/104</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/102</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Layers.LayerPaintProfilerView=class extends UI.SplitWidget{<span class="fstat-no" title="function not covered" >co</span>nstructor(showImageCallback){<span class="cstat-no" title="statement not covered" >super(true,false);<span class="cstat-no" title="statement not covered" >t</span>his._logTreeView=new LayerViewer.PaintProfilerCommandLogView();<span class="cstat-no" title="statement not covered" >t</span>his.setSidebarWidget(this._logTreeView);<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView=new LayerViewer.PaintProfilerView(showImageCallback);<span class="cstat-no" title="statement not covered" >t</span>his.setMainWidget(this._paintProfilerView);<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView.addEventListener(LayerViewer.PaintProfilerView.Events.WindowChanged,this._onWindowChanged,this);}</span></span>
+<span class="fstat-no" title="function not covered" >re</span>set(){<span class="cstat-no" title="statement not covered" >this._paintProfilerView.setSnapshotAndLog(null,[],null);}</span>
+<span class="fstat-no" title="function not covered" >pr</span>ofile(snapshot){<span class="cstat-no" title="statement not covered" >snapshot.commandLog().then(<span class="fstat-no" title="function not covered" >lo</span>g=&gt;<span class="cstat-no" title="statement not covered" >setSnapshotAndLog.call(this,snapshot,log))</span>;f</span>unction <span class="fstat-no" title="function not covered" >setSnapshotAndLog(</span>snapshot,log){<span class="cstat-no" title="statement not covered" >this._logTreeView.setCommandLog(log||[]);<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView.setSnapshotAndLog(snapshot,log||[],null);<span class="cstat-no" title="statement not covered" >i</span>f(snapshot)</span>
+<span class="cstat-no" title="statement not covered" >snapshot.release();}</span>}
+<span class="fstat-no" title="function not covered" >se</span>tScale(scale){<span class="cstat-no" title="statement not covered" >this._paintProfilerView.setScale(scale);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nWindowChanged(){<span class="cstat-no" title="statement not covered" >this._logTreeView.updateWindow(this._paintProfilerView.selectionWindow());}</span>};;<span class="cstat-no" title="statement not covered" >Layers.LayerTreeModel=class extends SDK.SDKModel{<span class="fstat-no" title="function not covered" >co</span>nstructor(target){<span class="cstat-no" title="statement not covered" >super(target);<span class="cstat-no" title="statement not covered" >t</span>his._layerTreeAgent=target.layerTreeAgent();<span class="cstat-no" title="statement not covered" >t</span>arget.registerLayerTreeDispatcher(new Layers.LayerTreeDispatcher(this));<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerModel=(target.model(SDK.PaintProfilerModel));c</span>onst resourceTreeModel=<span class="cstat-no" title="statement not covered" >target.model(SDK.ResourceTreeModel);<span class="cstat-no" title="statement not covered" ></span>if(resourceTreeModel){<span class="cstat-no" title="statement not covered" >resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.MainFrameNavigated,this._onMainFrameNavigated,this);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._layerTree=null;<span class="cstat-no" title="statement not covered" >t</span>his._throttler=new Common.Throttler(20);}</span>
+<span class="fstat-no" title="function not covered" >di</span>sable(){<span class="cstat-no" title="statement not covered" >if(!this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._enabled=false;<span class="cstat-no" title="statement not covered" >t</span>his._layerTreeAgent.disable();}</span>
+<span class="fstat-no" title="function not covered" >en</span>able(){<span class="cstat-no" title="statement not covered" >if(this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._enabled=true;<span class="cstat-no" title="statement not covered" >t</span>his._forceEnable();}</span>
+<span class="fstat-no" title="function not covered" >_f</span>orceEnable(){<span class="cstat-no" title="statement not covered" >this._lastPaintRectByLayerId={};<span class="cstat-no" title="statement not covered" >i</span>f(!this._layerTree)</span>
+<span class="cstat-no" title="statement not covered" >this._layerTree=new Layers.AgentLayerTree(this);<span class="cstat-no" title="statement not covered" >t</span>his._layerTreeAgent.enable();}</span>
+<span class="fstat-no" title="function not covered" >la</span>yerTree(){<span class="cstat-no" title="statement not covered" >return this._layerTree;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _layerTreeChanged(layers){<span class="cstat-no" title="statement not covered" >if(!this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._throttler.schedule(this._innerSetLayers.bind(this,layers));}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _innerSetLayers(layers){const layerTree=(<span class="cstat-no" title="statement not covered" >this._layerTree)</span>;<span class="cstat-no" title="statement not covered" >await layerTree.setLayers(layers);<span class="cstat-no" title="statement not covered" >f</span>or(const layerId in this._lastPaintRectByLayerId){const lastPaintRect=<span class="cstat-no" title="statement not covered" >this._lastPaintRectByLayerId[layerId];</span>const layer=<span class="cstat-no" title="statement not covered" >layerTree.layerById(layerId);<span class="cstat-no" title="statement not covered" ></span>if(layer)</span></span>
+<span class="cstat-no" title="statement not covered" >layer._lastPaintRect=lastPaintRect;}</span>
+<span class="cstat-no" title="statement not covered" >this._lastPaintRectByLayerId={};<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(Layers.LayerTreeModel.Events.LayerTreeChanged);}</span>
+<span class="fstat-no" title="function not covered" >_l</span>ayerPainted(layerId,clipRect){<span class="cstat-no" title="statement not covered" >if(!this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst layerTree=(<span class="cstat-no" title="statement not covered" >this._layerTree)</span>;const layer=<span class="cstat-no" title="statement not covered" >layerTree.layerById(layerId);<span class="cstat-no" title="statement not covered" ></span>if(!layer){<span class="cstat-no" title="statement not covered" >this._lastPaintRectByLayerId[layerId]=clipRect;<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >layer._didPaint(clipRect);<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(Layers.LayerTreeModel.Events.LayerPainted,layer);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nMainFrameNavigated(){<span class="cstat-no" title="statement not covered" >this._layerTree=null;<span class="cstat-no" title="statement not covered" >i</span>f(this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >this._forceEnable();}</span>};<span class="cstat-no" title="statement not covered" >SDK.SDKModel.register(Layers.LayerTreeModel,SDK.Target.Capability.DOM,false);<span class="cstat-no" title="statement not covered" >L</span>ayers.LayerTreeModel.Events={LayerTreeChanged:Symbol('LayerTreeChanged'),LayerPainted:Symbol('LayerPainted'),};<span class="cstat-no" title="statement not covered" >L</span>ayers.AgentLayerTree=class extends SDK.LayerTreeBase{<span class="fstat-no" title="function not covered" >co</span>nstructor(layerTreeModel){<span class="cstat-no" title="statement not covered" >super(layerTreeModel.target());<span class="cstat-no" title="statement not covered" >t</span>his._layerTreeModel=layerTreeModel;}</span></span>
+<span class="fstat-no" title="function not covered" >as</span>ync setLayers(payload){<span class="cstat-no" title="statement not covered" >if(!payload){<span class="cstat-no" title="statement not covered" >this._innerSetLayers(payload);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const idsToResolve=<span class="cstat-no" title="statement not covered" >new Set();<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;payload.length;++i){const backendNodeId=<span class="cstat-no" title="statement not covered" >payload[i].backendNodeId;<span class="cstat-no" title="statement not covered" ></span>if(!backendNodeId||this.backendNodeIdToNode().has(backendNodeId))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >i</span>dsToResolve.add(backendNodeId);}</span>
+<span class="cstat-no" title="statement not covered" >await this.resolveBackendNodeIds(idsToResolve);<span class="cstat-no" title="statement not covered" >t</span>his._innerSetLayers(payload);}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nnerSetLayers(layers){<span class="cstat-no" title="statement not covered" >this.setRoot(null);<span class="cstat-no" title="statement not covered" >t</span>his.setContentRoot(null);<span class="cstat-no" title="statement not covered" >i</span>f(!layers)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et root;const oldLayersById=<span class="cstat-no" title="statement not covered" >this._layersById;<span class="cstat-no" title="statement not covered" ></span>this._layersById={};<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;layers.length;++i){const layerId=<span class="cstat-no" title="statement not covered" >layers[i].layerId;</span>let layer=<span class="cstat-no" title="statement not covered" >oldLayersById[layerId];<span class="cstat-no" title="statement not covered" ></span>if(layer)</span></span>
+<span class="cstat-no" title="statement not covered" >layer._reset(layers[i]);e</span>lse
+<span class="cstat-no" title="statement not covered" >layer=new Layers.AgentLayer(this._layerTreeModel,layers[i]);<span class="cstat-no" title="statement not covered" >t</span>his._layersById[layerId]=layer;c</span>onst backendNodeId=<span class="cstat-no" title="statement not covered" >layers[i].backendNodeId;<span class="cstat-no" title="statement not covered" ></span>if(backendNodeId)</span>
+<span class="cstat-no" title="statement not covered" >layer._setNode(this.backendNodeIdToNode().get(backendNodeId));<span class="cstat-no" title="statement not covered" >i</span>f(!this.contentRoot()&amp;&amp;layer.drawsContent())</span>
+<span class="cstat-no" title="statement not covered" >this.setContentRoot(layer);c</span>onst parentId=<span class="cstat-no" title="statement not covered" >layer.parentId();<span class="cstat-no" title="statement not covered" ></span>if(parentId){const parent=<span class="cstat-no" title="statement not covered" >this._layersById[parentId];<span class="cstat-no" title="statement not covered" ></span>if(!parent)</span></span>
+<span class="cstat-no" title="statement not covered" >console.assert(parent,'missing parent '+parentId+' for layer '+layerId);<span class="cstat-no" title="statement not covered" >p</span>arent.addChild(layer);}</span>else{<span class="cstat-no" title="statement not covered" >if(root)</span>
+<span class="cstat-no" title="statement not covered" >console.assert(false,'Multiple root layers');<span class="cstat-no" title="statement not covered" >r</span>oot=layer;}</span>}
+<span class="cstat-no" title="statement not covered" >if(root){<span class="cstat-no" title="statement not covered" >this.setRoot(root);<span class="cstat-no" title="statement not covered" >r</span>oot._calculateQuad(new WebKitCSSMatrix());}</span>}</span>};<span class="cstat-no" title="statement not covered" >Layers.AgentLayer=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(layerTreeModel,layerPayload){<span class="cstat-no" title="statement not covered" >this._layerTreeModel=layerTreeModel;<span class="cstat-no" title="statement not covered" >t</span>his._reset(layerPayload);}</span></span>
+<span class="fstat-no" title="function not covered" >id</span>(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.layerId;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>rentId(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.parentLayerId;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>rent(){<span class="cstat-no" title="statement not covered" >return this._parent;}</span>
+<span class="fstat-no" title="function not covered" >is</span>Root(){<span class="cstat-no" title="statement not covered" >return!this.parentId();}</span>
+<span class="fstat-no" title="function not covered" >ch</span>ildren(){<span class="cstat-no" title="statement not covered" >return this._children;}</span>
+<span class="fstat-no" title="function not covered" >ad</span>dChild(child){<span class="cstat-no" title="statement not covered" >if(child._parent)</span>
+<span class="cstat-no" title="statement not covered" >console.assert(false,'Child already has a parent');<span class="cstat-no" title="statement not covered" >t</span>his._children.push(child);<span class="cstat-no" title="statement not covered" >c</span>hild._parent=this;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etNode(node){<span class="cstat-no" title="statement not covered" >this._node=node;}</span>
+<span class="fstat-no" title="function not covered" >no</span>de(){<span class="cstat-no" title="statement not covered" >return this._node;}</span>
+<span class="fstat-no" title="function not covered" >no</span>deForSelfOrAncestor(){<span class="cstat-no" title="statement not covered" >for(let layer=this;layer;layer=layer._parent){<span class="cstat-no" title="statement not covered" >if(layer._node)</span></span>
+<span class="cstat-no" title="statement not covered" >return layer._node;}</span>
+<span class="cstat-no" title="statement not covered" >return null;}</span>
+<span class="fstat-no" title="function not covered" >of</span>fsetX(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.offsetX;}</span>
+<span class="fstat-no" title="function not covered" >of</span>fsetY(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.offsetY;}</span>
+<span class="fstat-no" title="function not covered" >wi</span>dth(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.width;}</span>
+<span class="fstat-no" title="function not covered" >he</span>ight(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.height;}</span>
+<span class="fstat-no" title="function not covered" >tr</span>ansform(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.transform;}</span>
+<span class="fstat-no" title="function not covered" >qu</span>ad(){<span class="cstat-no" title="statement not covered" >return this._quad;}</span>
+<span class="fstat-no" title="function not covered" >an</span>chorPoint(){<span class="cstat-no" title="statement not covered" >return[this._layerPayload.anchorX||0,this._layerPayload.anchorY||0,this._layerPayload.anchorZ||0,];}</span>
+<span class="fstat-no" title="function not covered" >in</span>visible(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.invisible;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>intCount(){<span class="cstat-no" title="statement not covered" >return this._paintCount||this._layerPayload.paintCount;}</span>
+<span class="fstat-no" title="function not covered" >la</span>stPaintRect(){<span class="cstat-no" title="statement not covered" >return this._lastPaintRect;}</span>
+<span class="fstat-no" title="function not covered" >sc</span>rollRects(){<span class="cstat-no" title="statement not covered" >return this._scrollRects;}</span>
+<span class="fstat-no" title="function not covered" >st</span>ickyPositionConstraint(){<span class="cstat-no" title="statement not covered" >return this._stickyPositionConstraint;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync requestCompositingReasons(){const reasons=<span class="cstat-no" title="statement not covered" >await this._layerTreeModel._layerTreeAgent.compositingReasons(this.id());<span class="cstat-no" title="statement not covered" ></span>return reasons||[];}</span>
+<span class="fstat-no" title="function not covered" >dr</span>awsContent(){<span class="cstat-no" title="statement not covered" >return this._layerPayload.drawsContent;}</span>
+<span class="fstat-no" title="function not covered" >gp</span>uMemoryUsage(){const bytesPerPixel=<span class="cstat-no" title="statement not covered" >4;<span class="cstat-no" title="statement not covered" ></span>return this.drawsContent()?this.width()*this.height()*bytesPerPixel:0;}</span>
+<span class="fstat-no" title="function not covered" >sn</span>apshots(){const promise=<span class="cstat-no" title="statement not covered" >this._layerTreeModel._paintProfilerModel.makeSnapshot(this.id()).then(<span class="fstat-no" title="function not covered" >sn</span>apshot=&gt;{<span class="cstat-no" title="statement not covered" >if(!snapshot)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn{rect:{x:0,y:0,width:this.width(),height:this.height()},snapshot:snapshot};}</span>);<span class="cstat-no" title="statement not covered" >return[promise];}</span>
+<span class="fstat-no" title="function not covered" >_d</span>idPaint(rect){<span class="cstat-no" title="statement not covered" >this._lastPaintRect=rect;<span class="cstat-no" title="statement not covered" >t</span>his._paintCount=this.paintCount()+1;<span class="cstat-no" title="statement not covered" >t</span>his._image=null;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>eset(layerPayload){<span class="cstat-no" title="statement not covered" >this._node=null;<span class="cstat-no" title="statement not covered" >t</span>his._children=[];<span class="cstat-no" title="statement not covered" >t</span>his._parent=null;<span class="cstat-no" title="statement not covered" >t</span>his._paintCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._layerPayload=layerPayload;<span class="cstat-no" title="statement not covered" >t</span>his._image=null;<span class="cstat-no" title="statement not covered" >t</span>his._scrollRects=this._layerPayload.scrollRects||[];<span class="cstat-no" title="statement not covered" >t</span>his._stickyPositionConstraint=this._layerPayload.stickyPositionConstraint?new SDK.Layer.StickyPositionConstraint(this._layerTreeModel.layerTree(),this._layerPayload.stickyPositionConstraint):null;}</span>
+<span class="fstat-no" title="function not covered" >_m</span>atrixFromArray(a){function <span class="fstat-no" title="function not covered" >toFixed9(</span>x){<span class="cstat-no" title="statement not covered" >return x.toFixed(9);}</span>
+<span class="cstat-no" title="statement not covered" >return new WebKitCSSMatrix('matrix3d('+a.map(toFixed9).join(',')+')');}</span>
+<span class="fstat-no" title="function not covered" >_c</span>alculateTransformToViewport(parentTransform){const offsetMatrix=<span class="cstat-no" title="statement not covered" >new WebKitCSSMatrix().translate(this._layerPayload.offsetX,this._layerPayload.offsetY);</span>let matrix=<span class="cstat-no" title="statement not covered" >offsetMatrix;<span class="cstat-no" title="statement not covered" ></span>if(this._layerPayload.transform){const transformMatrix=<span class="cstat-no" title="statement not covered" >this._matrixFromArray(this._layerPayload.transform);</span>const anchorVector=<span class="cstat-no" title="statement not covered" >new UI.Geometry.Vector(this._layerPayload.width*this.anchorPoint()[0],this._layerPayload.height*this.anchorPoint()[1],this.anchorPoint()[2]);</span>const anchorPoint=<span class="cstat-no" title="statement not covered" >UI.Geometry.multiplyVectorByMatrixAndNormalize(anchorVector,matrix);</span>const anchorMatrix=<span class="cstat-no" title="statement not covered" >new WebKitCSSMatrix().translate(-anchorPoint.x,-anchorPoint.y,-anchorPoint.z);<span class="cstat-no" title="statement not covered" ></span>matrix=anchorMatrix.inverse().multiply(transformMatrix.multiply(anchorMatrix.multiply(matrix)));}</span></span>
+<span class="cstat-no" title="statement not covered" >matrix=parentTransform.multiply(matrix);<span class="cstat-no" title="statement not covered" >r</span>eturn matrix;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateVertexArrayForRect(width,height){<span class="cstat-no" title="statement not covered" >return[0,0,0,width,0,0,width,height,0,0,height,0];}</span>
+<span class="fstat-no" title="function not covered" >_c</span>alculateQuad(parentTransform){const matrix=<span class="cstat-no" title="statement not covered" >this._calculateTransformToViewport(parentTransform);<span class="cstat-no" title="statement not covered" ></span>this._quad=[];c</span>onst vertices=<span class="cstat-no" title="statement not covered" >this._createVertexArrayForRect(this._layerPayload.width,this._layerPayload.height);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;4;++i){const point=<span class="cstat-no" title="statement not covered" >UI.Geometry.multiplyVectorByMatrixAndNormalize(new UI.Geometry.Vector(vertices[i*3],vertices[i*3+1],vertices[i*3+2]),matrix);<span class="cstat-no" title="statement not covered" ></span>this._quad.push(point.x,point.y);}</span></span>
+function <span class="fstat-no" title="function not covered" >calculateQuadForLayer(</span>layer){<span class="cstat-no" title="statement not covered" >layer._calculateQuad(matrix);}</span>
+<span class="cstat-no" title="statement not covered" >this._children.forEach(calculateQuadForLayer);}</span>};<span class="cstat-no" title="statement not covered" >Layers.LayerTreeDispatcher=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(layerTreeModel){<span class="cstat-no" title="statement not covered" >this._layerTreeModel=layerTreeModel;}</span></span>
+<span class="fstat-no" title="function not covered" >la</span>yerTreeDidChange(layers){<span class="cstat-no" title="statement not covered" >this._layerTreeModel._layerTreeChanged(layers||null);}</span>
+<span class="fstat-no" title="function not covered" >la</span>yerPainted(layerId,clipRect){<span class="cstat-no" title="statement not covered" >this._layerTreeModel._layerPainted(layerId,clipRect);}</span>};;<span class="cstat-no" title="statement not covered" >Layers.LayersPanel=class extends UI.PanelWithSidebar{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super('layers',225);<span class="cstat-no" title="statement not covered" >t</span>his._model=null;<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.observeTargets(this);<span class="cstat-no" title="statement not covered" >t</span>his._layerViewHost=new LayerViewer.LayerViewHost();<span class="cstat-no" title="statement not covered" >t</span>his._layerTreeOutline=new LayerViewer.LayerTreeOutline(this._layerViewHost);<span class="cstat-no" title="statement not covered" >t</span>his.panelSidebarElement().appendChild(this._layerTreeOutline.element);<span class="cstat-no" title="statement not covered" >t</span>his.setDefaultFocusedElement(this._layerTreeOutline.element);<span class="cstat-no" title="statement not covered" >t</span>his._rightSplitWidget=new UI.SplitWidget(false,true,'layerDetailsSplitViewState');<span class="cstat-no" title="statement not covered" >t</span>his.splitWidget().setMainWidget(this._rightSplitWidget);<span class="cstat-no" title="statement not covered" >t</span>his._layers3DView=new LayerViewer.Layers3DView(this._layerViewHost);<span class="cstat-no" title="statement not covered" >t</span>his._rightSplitWidget.setMainWidget(this._layers3DView);<span class="cstat-no" title="statement not covered" >t</span>his._layers3DView.addEventListener(LayerViewer.Layers3DView.Events.PaintProfilerRequested,this._onPaintProfileRequested,this);<span class="cstat-no" title="statement not covered" >t</span>his._layers3DView.addEventListener(LayerViewer.Layers3DView.Events.ScaleChanged,this._onScaleChanged,this);<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane=new UI.TabbedPane();<span class="cstat-no" title="statement not covered" >t</span>his._rightSplitWidget.setSidebarWidget(this._tabbedPane);<span class="cstat-no" title="statement not covered" >t</span>his._layerDetailsView=new LayerViewer.LayerDetailsView(this._layerViewHost);<span class="cstat-no" title="statement not covered" >t</span>his._layerDetailsView.addEventListener(LayerViewer.LayerDetailsView.Events.PaintProfilerRequested,this._onPaintProfileRequested,this);<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.appendTab(Layers.LayersPanel.DetailsViewTabs.Details,Common.UIString('Details'),this._layerDetailsView);<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView=new Layers.LayerPaintProfilerView(this._showImage.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.addEventListener(UI.TabbedPane.Events.TabClosed,this._onTabClosed,this);<span class="cstat-no" title="statement not covered" >t</span>his._updateThrottler=new Common.Throttler(100);}</span></span>
+<span class="fstat-no" title="function not covered" >fo</span>cus(){<span class="cstat-no" title="statement not covered" >this._layerTreeOutline.focus();}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >super.wasShown();<span class="cstat-no" title="statement not covered" >i</span>f(this._model)</span>
+<span class="cstat-no" title="statement not covered" >this._model.enable();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >if(this._model)</span>
+<span class="cstat-no" title="statement not covered" >this._model.disable();<span class="cstat-no" title="statement not covered" >s</span>uper.willHide();}</span>
+<span class="fstat-no" title="function not covered" >ta</span>rgetAdded(target){<span class="cstat-no" title="statement not covered" >if(this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._model=target.model(Layers.LayerTreeModel);<span class="cstat-no" title="statement not covered" >i</span>f(!this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._model.addEventListener(Layers.LayerTreeModel.Events.LayerTreeChanged,this._onLayerTreeUpdated,this);<span class="cstat-no" title="statement not covered" >t</span>his._model.addEventListener(Layers.LayerTreeModel.Events.LayerPainted,this._onLayerPainted,this);<span class="cstat-no" title="statement not covered" >i</span>f(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this._model.enable();}</span>
+<span class="fstat-no" title="function not covered" >ta</span>rgetRemoved(target){<span class="cstat-no" title="statement not covered" >if(!this._model||this._model.target()!==target)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._model.removeEventListener(Layers.LayerTreeModel.Events.LayerTreeChanged,this._onLayerTreeUpdated,this);<span class="cstat-no" title="statement not covered" >t</span>his._model.removeEventListener(Layers.LayerTreeModel.Events.LayerPainted,this._onLayerPainted,this);<span class="cstat-no" title="statement not covered" >t</span>his._model.disable();<span class="cstat-no" title="statement not covered" >t</span>his._model=null;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nLayerTreeUpdated(){<span class="cstat-no" title="statement not covered" >this._updateThrottler.schedule(this._update.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){<span class="cstat-no" title="statement not covered" >if(this._model)</span>
+<span class="cstat-no" title="statement not covered" >this._layerViewHost.setLayerTree(this._model.layerTree());<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.resolve();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nLayerPainted(event){<span class="cstat-no" title="statement not covered" >if(!this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst layer=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >if(this._layerViewHost.selection()&amp;&amp;this._layerViewHost.selection().layer()===layer)</span>
+<span class="cstat-no" title="statement not covered" >this._layerDetailsView.update();<span class="cstat-no" title="statement not covered" >t</span>his._layers3DView.updateLayerSnapshot(layer);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nPaintProfileRequested(event){const selection=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >this._layers3DView.snapshotForSelection(selection).then(<span class="fstat-no" title="function not covered" >sn</span>apshotWithRect=&gt;{<span class="cstat-no" title="statement not covered" >if(!snapshotWithRect)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._layerBeingProfiled=selection.layer();<span class="cstat-no" title="statement not covered" >i</span>f(!this._tabbedPane.hasTab(Layers.LayersPanel.DetailsViewTabs.Profiler)){<span class="cstat-no" title="statement not covered" >this._tabbedPane.appendTab(Layers.LayersPanel.DetailsViewTabs.Profiler,Common.UIString('Profiler'),this._paintProfilerView,undefined,true,true);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._tabbedPane.selectTab(Layers.LayersPanel.DetailsViewTabs.Profiler);<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView.profile(snapshotWithRect.snapshot);}</span>);}
+<span class="fstat-no" title="function not covered" >_o</span>nTabClosed(event){<span class="cstat-no" title="statement not covered" >if(event.data.tabId!==Layers.LayersPanel.DetailsViewTabs.Profiler||!this._layerBeingProfiled)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._paintProfilerView.reset();<span class="cstat-no" title="statement not covered" >t</span>his._layers3DView.showImageForLayer(this._layerBeingProfiled,undefined);<span class="cstat-no" title="statement not covered" >t</span>his._layerBeingProfiled=null;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>howImage(imageURL){<span class="cstat-no" title="statement not covered" >this._layers3DView.showImageForLayer(this._layerBeingProfiled,imageURL);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nScaleChanged(event){<span class="cstat-no" title="statement not covered" >this._paintProfilerView.setScale((event.data));}</span>};<span class="cstat-no" title="statement not covered" >Layers.LayersPanel.DetailsViewTabs={Details:'details',Profiler:'profiler'};;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

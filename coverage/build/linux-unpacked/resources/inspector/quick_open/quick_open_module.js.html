@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/quick_open/quick_open_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/quick_open</a> quick_open_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/392</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/147</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/128</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >QuickOpen.FilteredListWidget=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(provider,promptHistory,queryChangedCallback){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his._promptHistory=promptHistory||[];<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('filtered-list-widget');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.addEventListener('keydown',this._onKeyDown.bind(this),true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('quick_open/filteredListWidget.css');<span class="cstat-no" title="statement not covered" >t</span>his._promptElement=this.contentElement.createChild('div','filtered-list-widget-input');<span class="cstat-no" title="statement not covered" >t</span>his._promptElement.setAttribute('spellcheck','false');<span class="cstat-no" title="statement not covered" >t</span>his._promptElement.setAttribute('contenteditable','plaintext-only');<span class="cstat-no" title="statement not covered" >t</span>his._prompt=new UI.TextPrompt();<span class="cstat-no" title="statement not covered" >t</span>his._prompt.initialize(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >Promise.resolve([]))</span>;c</span>onst promptProxy=<span class="cstat-no" title="statement not covered" >this._prompt.attach(this._promptElement);<span class="cstat-no" title="statement not covered" ></span>promptProxy.addEventListener('input',this._onInput.bind(this),false);<span class="cstat-no" title="statement not covered" >p</span>romptProxy.classList.add('filtered-list-widget-prompt-element');<span class="cstat-no" title="statement not covered" >t</span>his._bottomElementsContainer=this.contentElement.createChild('div','vbox');<span class="cstat-no" title="statement not covered" >t</span>his._progressElement=this._bottomElementsContainer.createChild('div','filtered-list-widget-progress');<span class="cstat-no" title="statement not covered" >t</span>his._progressBarElement=this._progressElement.createChild('div','filtered-list-widget-progress-bar');<span class="cstat-no" title="statement not covered" >t</span>his._items=new UI.ListModel();<span class="cstat-no" title="statement not covered" >t</span>his._list=new UI.ListControl(this._items,this,UI.ListMode.EqualHeightItems);<span class="cstat-no" title="statement not covered" >t</span>his._itemElementsContainer=this._list.element;<span class="cstat-no" title="statement not covered" >t</span>his._itemElementsContainer.classList.add('container');<span class="cstat-no" title="statement not covered" >t</span>his._bottomElementsContainer.appendChild(this._itemElementsContainer);<span class="cstat-no" title="statement not covered" >t</span>his._itemElementsContainer.addEventListener('click',this._onClick.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._notFoundElement=this._bottomElementsContainer.createChild('div','not-found-text');<span class="cstat-no" title="statement not covered" >t</span>his._notFoundElement.classList.add('hidden');<span class="cstat-no" title="statement not covered" >t</span>his.setDefaultFocusedElement(this._promptElement);<span class="cstat-no" title="statement not covered" >t</span>his._prefix='';<span class="cstat-no" title="statement not covered" >t</span>his._provider=provider;<span class="cstat-no" title="statement not covered" >t</span>his._queryChangedCallback=queryChangedCallback;}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic highlightRanges(element,query,caseInsensitive){<span class="cstat-no" title="statement not covered" >if(!query)</span>
+<span class="cstat-no" title="statement not covered" >return false;f</span>unction <span class="fstat-no" title="function not covered" >rangesForMatch(</span>text,query){const opcodes=<span class="cstat-no" title="statement not covered" >Diff.Diff.charDiff(query,text);</span>let offset=<span class="cstat-no" title="statement not covered" >0;</span>const ranges=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;opcodes.length;++i){const opcode=<span class="cstat-no" title="statement not covered" >opcodes[i];<span class="cstat-no" title="statement not covered" ></span>if(opcode[0]===Diff.Diff.Operation.Equal)</span></span>
+<span class="cstat-no" title="statement not covered" >ranges.push(new TextUtils.SourceRange(offset,opcode[1].length));e</span>lse <span class="cstat-no" title="statement not covered" >if(opcode[0]!==Diff.Diff.Operation.Insert)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >o</span>ffset+=opcode[1].length;}</span>
+<span class="cstat-no" title="statement not covered" >return ranges;}</span>
+const text=<span class="cstat-no" title="statement not covered" >element.textContent;</span>let ranges=<span class="cstat-no" title="statement not covered" >rangesForMatch(text,query);<span class="cstat-no" title="statement not covered" ></span>if(!ranges||caseInsensitive)</span>
+<span class="cstat-no" title="statement not covered" >ranges=rangesForMatch(text.toUpperCase(),query.toUpperCase());<span class="cstat-no" title="statement not covered" >i</span>f(ranges){<span class="cstat-no" title="statement not covered" >UI.highlightRangesWithStyleClass(element,ranges,'highlight');<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tPlaceholder(placeholder){<span class="cstat-no" title="statement not covered" >this._prompt.setPlaceholder(placeholder);}</span>
+<span class="fstat-no" title="function not covered" >sh</span>owAsDialog(){<span class="cstat-no" title="statement not covered" >this._dialog=new UI.Dialog();<span class="cstat-no" title="statement not covered" >t</span>his._dialog.setMaxContentSize(new UI.Size(504,340));<span class="cstat-no" title="statement not covered" >t</span>his._dialog.setSizeBehavior(UI.GlassPane.SizeBehavior.SetExactWidthMaxHeight);<span class="cstat-no" title="statement not covered" >t</span>his._dialog.setContentPosition(null,22);<span class="cstat-no" title="statement not covered" >t</span>his.show(this._dialog.contentElement);<span class="cstat-no" title="statement not covered" >t</span>his._dialog.show();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tPrefix(prefix){<span class="cstat-no" title="statement not covered" >this._prefix=prefix;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tProvider(provider){<span class="cstat-no" title="statement not covered" >if(provider===this._provider)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._provider)</span>
+<span class="cstat-no" title="statement not covered" >this._provider.detach();<span class="cstat-no" title="statement not covered" >t</span>his._clearTimers();<span class="cstat-no" title="statement not covered" >t</span>his._provider=provider;<span class="cstat-no" title="statement not covered" >i</span>f(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this._attachProvider();}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ttachProvider(){<span class="cstat-no" title="statement not covered" >this._items.replaceAll([]);<span class="cstat-no" title="statement not covered" >t</span>his._list.invalidateItemHeight();<span class="cstat-no" title="statement not covered" >i</span>f(this._provider){<span class="cstat-no" title="statement not covered" >this._provider.setRefreshCallback(this._itemsLoaded.bind(this,this._provider));<span class="cstat-no" title="statement not covered" >t</span>his._provider.attach();}</span></span>
+<span class="cstat-no" title="statement not covered" >this._itemsLoaded(this._provider);}</span>
+<span class="fstat-no" title="function not covered" >_v</span>alue(){<span class="cstat-no" title="statement not covered" >return this._prompt.text().trim();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>leanValue(){<span class="cstat-no" title="statement not covered" >return this._value().substring(this._prefix.length);}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._attachProvider();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >if(this._provider)</span>
+<span class="cstat-no" title="statement not covered" >this._provider.detach();<span class="cstat-no" title="statement not covered" >t</span>his._clearTimers();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>learTimers(){<span class="cstat-no" title="statement not covered" >clearTimeout(this._filterTimer);<span class="cstat-no" title="statement not covered" >c</span>learTimeout(this._scoringTimer);<span class="cstat-no" title="statement not covered" >c</span>learTimeout(this._loadTimeout);<span class="cstat-no" title="statement not covered" >d</span>elete this._filterTimer;<span class="cstat-no" title="statement not covered" >d</span>elete this._scoringTimer;<span class="cstat-no" title="statement not covered" >d</span>elete this._loadTimeout;<span class="cstat-no" title="statement not covered" >d</span>elete this._refreshListWithCurrentResult;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nEnter(event){<span class="cstat-no" title="statement not covered" >if(!this._provider)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst selectedIndexInProvider=<span class="cstat-no" title="statement not covered" >this._provider.itemCount()?this._list.selectedItem():null;<span class="cstat-no" title="statement not covered" ></span>this._selectItem(selectedIndexInProvider);<span class="cstat-no" title="statement not covered" >i</span>f(this._dialog)</span>
+<span class="cstat-no" title="statement not covered" >this._dialog.hide();}</span>
+<span class="fstat-no" title="function not covered" >_i</span>temsLoaded(provider){<span class="cstat-no" title="statement not covered" >if(this._loadTimeout||provider!==this._provider)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._loadTimeout=setTimeout(this._updateAfterItemsLoaded.bind(this),0);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateAfterItemsLoaded(){<span class="cstat-no" title="statement not covered" >delete this._loadTimeout;<span class="cstat-no" title="statement not covered" >t</span>his._filterItems();}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateElementForItem(item){const itemElement=<span class="cstat-no" title="statement not covered" >createElement('div');<span class="cstat-no" title="statement not covered" ></span>itemElement.className='filtered-list-widget-item '+(this._provider.renderAsTwoRows()?'two-rows':'one-row');c</span>onst titleElement=<span class="cstat-no" title="statement not covered" >itemElement.createChild('div','filtered-list-widget-title');</span>const subtitleElement=<span class="cstat-no" title="statement not covered" >itemElement.createChild('div','filtered-list-widget-subtitle');<span class="cstat-no" title="statement not covered" ></span>subtitleElement.textContent='\u200B';<span class="cstat-no" title="statement not covered" >t</span>his._provider.renderItem(item,this._cleanValue(),titleElement,subtitleElement);<span class="cstat-no" title="statement not covered" >r</span>eturn itemElement;}</span>
+<span class="fstat-no" title="function not covered" >he</span>ightForItem(item){<span class="cstat-no" title="statement not covered" >return 0;}</span>
+<span class="fstat-no" title="function not covered" >is</span>ItemSelectable(item){<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectedItemChanged(from,to,fromElement,toElement){<span class="cstat-no" title="statement not covered" >if(fromElement)</span>
+<span class="cstat-no" title="statement not covered" >fromElement.classList.remove('selected');<span class="cstat-no" title="statement not covered" >i</span>f(toElement){<span class="cstat-no" title="statement not covered" >toElement.classList.add('selected');<span class="cstat-no" title="statement not covered" >U</span>I.ARIAUtils.alert(toElement.textContent,toElement);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nClick(event){const item=<span class="cstat-no" title="statement not covered" >this._list.itemForNode((event.target));<span class="cstat-no" title="statement not covered" ></span>if(item===null)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >e</span>vent.consume(true);<span class="cstat-no" title="statement not covered" >t</span>his._selectItem(item);<span class="cstat-no" title="statement not covered" >i</span>f(this._dialog)</span>
+<span class="cstat-no" title="statement not covered" >this._dialog.hide();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tQuery(query){<span class="cstat-no" title="statement not covered" >this._prompt.focus();<span class="cstat-no" title="statement not covered" >t</span>his._prompt.setText(query);<span class="cstat-no" title="statement not covered" >t</span>his._queryChanged();<span class="cstat-no" title="statement not covered" >t</span>his._prompt.autoCompleteSoon(true);<span class="cstat-no" title="statement not covered" >t</span>his._scheduleFilter();}</span>
+<span class="fstat-no" title="function not covered" >_t</span>abKeyPressed(){const userEnteredText=<span class="cstat-no" title="statement not covered" >this._prompt.text();</span>let completion;<span class="cstat-no" title="statement not covered" >for(let i=this._promptHistory.length-1;i&gt;=0;i--){<span class="cstat-no" title="statement not covered" >if(this._promptHistory[i]!==userEnteredText&amp;&amp;this._promptHistory[i].startsWith(userEnteredText)){<span class="cstat-no" title="statement not covered" >completion=this._promptHistory[i];<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!completion)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >t</span>his._prompt.focus();<span class="cstat-no" title="statement not covered" >t</span>his._prompt.setText(completion);<span class="cstat-no" title="statement not covered" >t</span>his._prompt.setDOMSelection(userEnteredText.length,completion.length);<span class="cstat-no" title="statement not covered" >t</span>his._scheduleFilter();<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>temsFilteredForTest(){}
+<span class="fstat-no" title="function not covered" >_f</span>ilterItems(){<span class="cstat-no" title="statement not covered" >delete this._filterTimer;<span class="cstat-no" title="statement not covered" >i</span>f(this._scoringTimer){<span class="cstat-no" title="statement not covered" >clearTimeout(this._scoringTimer);<span class="cstat-no" title="statement not covered" >d</span>elete this._scoringTimer;<span class="cstat-no" title="statement not covered" >i</span>f(this._refreshListWithCurrentResult)</span></span>
+<span class="cstat-no" title="statement not covered" >this._refreshListWithCurrentResult();}</span>
+<span class="cstat-no" title="statement not covered" >if(!this._provider){<span class="cstat-no" title="statement not covered" >this._bottomElementsContainer.classList.toggle('hidden',true);<span class="cstat-no" title="statement not covered" >t</span>his._itemsFilteredForTest();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._bottomElementsContainer.classList.toggle('hidden',false);<span class="cstat-no" title="statement not covered" >t</span>his._progressBarElement.style.transform='scaleX(0)';<span class="cstat-no" title="statement not covered" >t</span>his._progressBarElement.classList.remove('filtered-widget-progress-fade');<span class="cstat-no" title="statement not covered" >t</span>his._progressBarElement.classList.remove('hidden');c</span>onst query=<span class="cstat-no" title="statement not covered" >this._provider.rewriteQuery(this._cleanValue());<span class="cstat-no" title="statement not covered" ></span>this._query=query;c</span>onst filterRegex=<span class="cstat-no" title="statement not covered" >query?String.filterRegex(query):null;</span>const filteredItems=<span class="cstat-no" title="statement not covered" >[];</span>const bestScores=<span class="cstat-no" title="statement not covered" >[];</span>const bestItems=<span class="cstat-no" title="statement not covered" >[];</span>const bestItemsToCollect=<span class="cstat-no" title="statement not covered" >100;</span>let minBestScore=<span class="cstat-no" title="statement not covered" >0;</span>const overflowItems=<span class="cstat-no" title="statement not covered" >[];</span>const scoreStartTime=<span class="cstat-no" title="statement not covered" >window.performance.now();</span>const maxWorkItems=<span class="cstat-no" title="statement not covered" >Number.constrain(10,500,(this._provider.itemCount()/10)|0);<span class="cstat-no" title="statement not covered" ></span>scoreItems.call(this,0);f</span>unction <span class="fstat-no" title="function not covered" >compareIntegers(</span>a,b){<span class="cstat-no" title="statement not covered" >return b-a;}</span>
+function <span class="fstat-no" title="function not covered" >scoreItems(</span>fromIndex){<span class="cstat-no" title="statement not covered" >delete this._scoringTimer;l</span>et workDone=<span class="cstat-no" title="statement not covered" >0;</span>let i;<span class="cstat-no" title="statement not covered" >for(i=fromIndex;i&lt;this._provider.itemCount()&amp;&amp;workDone&lt;maxWorkItems;++i){<span class="cstat-no" title="statement not covered" >if(filterRegex&amp;&amp;!filterRegex.test(this._provider.itemKeyAt(i)))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst score=<span class="cstat-no" title="statement not covered" >this._provider.itemScoreAt(i,query);<span class="cstat-no" title="statement not covered" ></span>if(query)</span>
+<span class="cstat-no" title="statement not covered" >workDone++;<span class="cstat-no" title="statement not covered" >i</span>f(score&gt;minBestScore||bestScores.length&lt;bestItemsToCollect){const index=<span class="cstat-no" title="statement not covered" >bestScores.upperBound(score,compareIntegers);<span class="cstat-no" title="statement not covered" ></span>bestScores.splice(index,0,score);<span class="cstat-no" title="statement not covered" >b</span>estItems.splice(index,0,i);<span class="cstat-no" title="statement not covered" >i</span>f(bestScores.length&gt;bestItemsToCollect){<span class="cstat-no" title="statement not covered" >overflowItems.push(bestItems.peekLast());<span class="cstat-no" title="statement not covered" >b</span>estScores.length=bestItemsToCollect;<span class="cstat-no" title="statement not covered" >b</span>estItems.length=bestItemsToCollect;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >minBestScore=bestScores.peekLast();}</span>else{<span class="cstat-no" title="statement not covered" >filteredItems.push(i);}</span>}
+<span class="cstat-no" title="statement not covered" >this._refreshListWithCurrentResult=this._refreshList.bind(this,bestItems,overflowItems,filteredItems);<span class="cstat-no" title="statement not covered" >i</span>f(i&lt;this._provider.itemCount()){<span class="cstat-no" title="statement not covered" >this._scoringTimer=setTimeout(scoreItems.bind(this,i),0);<span class="cstat-no" title="statement not covered" >i</span>f(window.performance.now()-scoreStartTime&gt;50)</span></span>
+<span class="cstat-no" title="statement not covered" >this._progressBarElement.style.transform='scaleX('+i/this._provider.itemCount()+')';<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+<span class="cstat-no" title="statement not covered" >if(window.performance.now()-scoreStartTime&gt;100){<span class="cstat-no" title="statement not covered" >this._progressBarElement.style.transform='scaleX(1)';<span class="cstat-no" title="statement not covered" >t</span>his._progressBarElement.classList.add('filtered-widget-progress-fade');}</span>else{<span class="cstat-no" title="statement not covered" >this._progressBarElement.classList.add('hidden');}</span></span>
+<span class="cstat-no" title="statement not covered" >this._refreshListWithCurrentResult();}</span>}
+<span class="fstat-no" title="function not covered" >_r</span>efreshList(bestItems,overflowItems,filteredItems){<span class="cstat-no" title="statement not covered" >delete this._refreshListWithCurrentResult;<span class="cstat-no" title="statement not covered" >f</span>ilteredItems=[].concat(bestItems,overflowItems,filteredItems);<span class="cstat-no" title="statement not covered" >t</span>his._updateNotFoundMessage(!!filteredItems.length);c</span>onst oldHeight=<span class="cstat-no" title="statement not covered" >this._list.element.offsetHeight;<span class="cstat-no" title="statement not covered" ></span>this._items.replaceAll(filteredItems);<span class="cstat-no" title="statement not covered" >i</span>f(filteredItems.length)</span>
+<span class="cstat-no" title="statement not covered" >this._list.selectItem(filteredItems[0]);<span class="cstat-no" title="statement not covered" >i</span>f(this._list.element.offsetHeight!==oldHeight)</span>
+<span class="cstat-no" title="statement not covered" >this._list.viewportResized();<span class="cstat-no" title="statement not covered" >t</span>his._itemsFilteredForTest();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateNotFoundMessage(hasItems){<span class="cstat-no" title="statement not covered" >this._list.element.classList.toggle('hidden',!hasItems);<span class="cstat-no" title="statement not covered" >t</span>his._notFoundElement.classList.toggle('hidden',hasItems);<span class="cstat-no" title="statement not covered" >i</span>f(!hasItems)</span>
+<span class="cstat-no" title="statement not covered" >this._notFoundElement.textContent=this._provider.notFoundText(this._cleanValue());}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nInput(){<span class="cstat-no" title="statement not covered" >this._queryChanged();<span class="cstat-no" title="statement not covered" >t</span>his._scheduleFilter();}</span>
+<span class="fstat-no" title="function not covered" >_q</span>ueryChanged(){<span class="cstat-no" title="statement not covered" >if(this._queryChangedCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._queryChangedCallback(this._value());<span class="cstat-no" title="statement not covered" >i</span>f(this._provider)</span>
+<span class="cstat-no" title="statement not covered" >this._provider.queryChanged(this._cleanValue());}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nKeyDown(event){let handled=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>switch(event.key){case'Enter':<span class="cstat-no" title="statement not covered" >this._onEnter(event);<span class="cstat-no" title="statement not covered" >r</span>eturn;c</span>ase'Tab':<span class="cstat-no" title="statement not covered" >handled=this._tabKeyPressed();<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'ArrowUp':<span class="cstat-no" title="statement not covered" >handled=this._list.selectPreviousItem(true,false);<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'ArrowDown':<span class="cstat-no" title="statement not covered" >handled=this._list.selectNextItem(true,false);<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'PageUp':<span class="cstat-no" title="statement not covered" >handled=this._list.selectItemPreviousPage(false);<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'PageDown':<span class="cstat-no" title="statement not covered" >handled=this._list.selectItemNextPage(false);<span class="cstat-no" title="statement not covered" >b</span>reak;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(handled)</span>
+<span class="cstat-no" title="statement not covered" >event.consume(true);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>cheduleFilter(){<span class="cstat-no" title="statement not covered" >if(this._filterTimer)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._filterTimer=setTimeout(this._filterItems.bind(this),0);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>electItem(itemIndex){<span class="cstat-no" title="statement not covered" >this._promptHistory.push(this._value());<span class="cstat-no" title="statement not covered" >i</span>f(this._promptHistory.length&gt;100)</span>
+<span class="cstat-no" title="statement not covered" >this._promptHistory.shift();<span class="cstat-no" title="statement not covered" >t</span>his._provider.selectItem(itemIndex,this._cleanValue());}</span>};<span class="cstat-no" title="statement not covered" >QuickOpen.FilteredListWidget.Provider=class{<span class="fstat-no" title="function not covered" >se</span>tRefreshCallback(refreshCallback){<span class="cstat-no" title="statement not covered" >this._refreshCallback=refreshCallback;}</span></span>
+<span class="fstat-no" title="function not covered" >at</span>tach(){}
+<span class="fstat-no" title="function not covered" >it</span>emCount(){<span class="cstat-no" title="statement not covered" >return 0;}</span>
+<span class="fstat-no" title="function not covered" >it</span>emKeyAt(itemIndex){<span class="cstat-no" title="statement not covered" >return'';}</span>
+<span class="fstat-no" title="function not covered" >it</span>emScoreAt(itemIndex,query){<span class="cstat-no" title="statement not covered" >return 1;}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderItem(itemIndex,query,titleElement,subtitleElement){}
+<span class="fstat-no" title="function not covered" >re</span>nderAsTwoRows(){<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectItem(itemIndex,promptValue){}
+<span class="fstat-no" title="function not covered" >re</span>fresh(){<span class="cstat-no" title="statement not covered" >this._refreshCallback();}</span>
+<span class="fstat-no" title="function not covered" >re</span>writeQuery(query){<span class="cstat-no" title="statement not covered" >return query;}</span>
+<span class="fstat-no" title="function not covered" >qu</span>eryChanged(query){}
+<span class="fstat-no" title="function not covered" >no</span>tFoundText(query){<span class="cstat-no" title="statement not covered" >return Common.UIString('No results found');}</span>
+<span class="fstat-no" title="function not covered" >de</span>tach(){}};;<span class="cstat-no" title="statement not covered" >QuickOpen.QuickOpen=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._prefix=null;<span class="cstat-no" title="statement not covered" >t</span>his._query='';<span class="cstat-no" title="statement not covered" >t</span>his._providers=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._prefixes=[];<span class="cstat-no" title="statement not covered" >t</span>his._filteredListWidget=null;<span class="cstat-no" title="statement not covered" >s</span>elf.runtime.extensions(QuickOpen.FilteredListWidget.Provider).forEach(this._addProvider.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._prefixes.sort(<span class="fstat-no" title="function not covered" >(a</span>,b)=&gt;<span class="cstat-no" title="statement not covered" >b.length-a.length)</span>;}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic show(query){const quickOpen=<span class="cstat-no" title="statement not covered" >new this();</span>const filteredListWidget=<span class="cstat-no" title="statement not covered" >new QuickOpen.FilteredListWidget(null,this._history,quickOpen._queryChanged.bind(quickOpen));<span class="cstat-no" title="statement not covered" ></span>quickOpen._filteredListWidget=filteredListWidget;<span class="cstat-no" title="statement not covered" >f</span>ilteredListWidget.setPlaceholder(Common.UIString('Type \'?\' to see available commands'));<span class="cstat-no" title="statement not covered" >f</span>ilteredListWidget.showAsDialog();<span class="cstat-no" title="statement not covered" >f</span>ilteredListWidget.setQuery(query);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddProvider(extension){const prefix=<span class="cstat-no" title="statement not covered" >extension.descriptor()['prefix'];<span class="cstat-no" title="statement not covered" ></span>this._prefixes.push(prefix);<span class="cstat-no" title="statement not covered" >t</span>his._providers.set(prefix,(extension.instance.bind(extension)));}</span>
+<span class="fstat-no" title="function not covered" >_q</span>ueryChanged(query){const prefix=<span class="cstat-no" title="statement not covered" >this._prefixes.find(<span class="fstat-no" title="function not covered" >pr</span>efix=&gt;<span class="cstat-no" title="statement not covered" >query.startsWith(prefix))</span>;<span class="cstat-no" title="statement not covered" ></span>if(typeof prefix!=='string'||this._prefix===prefix)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._prefix=prefix;<span class="cstat-no" title="statement not covered" >t</span>his._filteredListWidget.setPrefix(prefix);<span class="cstat-no" title="statement not covered" >t</span>his._filteredListWidget.setProvider(null);<span class="cstat-no" title="statement not covered" >t</span>his._providers.get(prefix)().then(<span class="fstat-no" title="function not covered" >pr</span>ovider=&gt;{<span class="cstat-no" title="statement not covered" >if(this._prefix!==prefix)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._filteredListWidget.setProvider(provider);<span class="cstat-no" title="statement not covered" >t</span>his._providerLoadedForTest(provider);}</span>);}
+<span class="fstat-no" title="function not covered" >_p</span>roviderLoadedForTest(provider){}};<span class="cstat-no" title="statement not covered" >QuickOpen.QuickOpen._history=[];<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.QuickOpen.ShowActionDelegate=class{<span class="fstat-no" title="function not covered" >ha</span>ndleAction(context,actionId){<span class="cstat-no" title="statement not covered" >switch(actionId){<span class="branch-0 cbranch-no" title="branch not covered" >case'quickOpen.show':<span class="cstat-no" title="statement not covered" >QuickOpen.QuickOpen.show('');<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>};;<span class="cstat-no" title="statement not covered" >QuickOpen.CommandMenu=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._commands=[];<span class="cstat-no" title="statement not covered" >t</span>his._loadCommands();}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic createCommand(category,keys,title,shortcut,executeHandler,availableHandler){const key=<span class="cstat-no" title="statement not covered" >keys.replace(/,/g,'\0');<span class="cstat-no" title="statement not covered" ></span>return new QuickOpen.CommandMenu.Command(category,title,key,shortcut,executeHandler,availableHandler);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic createSettingCommand(extension,title,value){const category=<span class="cstat-no" title="statement not covered" >extension.descriptor()['category']||'';</span>const tags=<span class="cstat-no" title="statement not covered" >extension.descriptor()['tags']||'';</span>const setting=<span class="cstat-no" title="statement not covered" >Common.settings.moduleSetting(extension.descriptor()['settingName']);<span class="cstat-no" title="statement not covered" ></span>return QuickOpen.CommandMenu.createCommand(category,tags,title,'',setting.set.bind(setting,value),availableHandler);f</span>unction <span class="fstat-no" title="function not covered" >availableHandler(</span>){<span class="cstat-no" title="statement not covered" >return setting.get()!==value;}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic createActionCommand(action){const shortcut=<span class="cstat-no" title="statement not covered" >UI.shortcutRegistry.shortcutTitleForAction(action.id())||'';<span class="cstat-no" title="statement not covered" ></span>return QuickOpen.CommandMenu.createCommand(action.category(),action.tags(),action.title(),shortcut,action.execute.bind(action));}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic createRevealViewCommand(extension,category){const viewId=<span class="cstat-no" title="statement not covered" >extension.descriptor()['id'];</span>const executeHandler=<span class="cstat-no" title="statement not covered" >UI.viewManager.showView.bind(UI.viewManager,viewId);</span>const tags=<span class="cstat-no" title="statement not covered" >extension.descriptor()['tags']||'';<span class="cstat-no" title="statement not covered" ></span>return QuickOpen.CommandMenu.createCommand(category,tags,Common.UIString('Show %s',extension.title()),'',executeHandler);}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadCommands(){const locations=<span class="cstat-no" title="statement not covered" >new Map();<span class="cstat-no" title="statement not covered" ></span>self.runtime.extensions(UI.ViewLocationResolver).forEach(<span class="fstat-no" title="function not covered" >ex</span>tension=&gt;{const category=<span class="cstat-no" title="statement not covered" >extension.descriptor()['category'];</span>const name=<span class="cstat-no" title="statement not covered" >extension.descriptor()['name'];<span class="cstat-no" title="statement not covered" ></span>if(category&amp;&amp;name)</span></span>
+<span class="cstat-no" title="statement not covered" >locations.set(name,category);}</span>);const viewExtensions=<span class="cstat-no" title="statement not covered" >self.runtime.extensions('view');<span class="cstat-no" title="statement not covered" ></span>for(const extension of viewExtensions){const category=<span class="cstat-no" title="statement not covered" >locations.get(extension.descriptor()['location']);<span class="cstat-no" title="statement not covered" ></span>if(category)</span></span>
+<span class="cstat-no" title="statement not covered" >this._commands.push(QuickOpen.CommandMenu.createRevealViewCommand(extension,category));}</span>
+const settingExtensions=<span class="cstat-no" title="statement not covered" >self.runtime.extensions('setting');<span class="cstat-no" title="statement not covered" ></span>for(const extension of settingExtensions){const options=<span class="cstat-no" title="statement not covered" >extension.descriptor()['options'];<span class="cstat-no" title="statement not covered" ></span>if(!options||!extension.descriptor()['category'])</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >f</span>or(const pair of options)</span>
+<span class="cstat-no" title="statement not covered" >this._commands.push(QuickOpen.CommandMenu.createSettingCommand(extension,pair['title'],pair['value']));}</span>}
+<span class="fstat-no" title="function not covered" >co</span>mmands(){<span class="cstat-no" title="statement not covered" >return this._commands;}</span>};<span class="cstat-no" title="statement not covered" >QuickOpen.CommandMenuProvider=class extends QuickOpen.FilteredListWidget.Provider{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._commands=[];}</span></span>
+<span class="fstat-no" title="function not covered" >at</span>tach(){const allCommands=<span class="cstat-no" title="statement not covered" >QuickOpen.commandMenu.commands();</span>const actions=<span class="cstat-no" title="statement not covered" >UI.actionRegistry.availableActions();<span class="cstat-no" title="statement not covered" ></span>for(const action of actions){<span class="cstat-no" title="statement not covered" >if(action.category())</span></span>
+<span class="cstat-no" title="statement not covered" >this._commands.push(QuickOpen.CommandMenu.createActionCommand(action));}</span>
+<span class="cstat-no" title="statement not covered" >for(const command of allCommands){<span class="cstat-no" title="statement not covered" >if(command.available())</span></span>
+<span class="cstat-no" title="statement not covered" >this._commands.push(command);}</span>
+<span class="cstat-no" title="statement not covered" >this._commands=this._commands.sort(commandComparator);f</span>unction <span class="fstat-no" title="function not covered" >commandComparator(</span>left,right){const cats=<span class="cstat-no" title="statement not covered" >left.category().compareTo(right.category());<span class="cstat-no" title="statement not covered" ></span>return cats?cats:left.title().compareTo(right.title());}</span>}
+<span class="fstat-no" title="function not covered" >de</span>tach(){<span class="cstat-no" title="statement not covered" >this._commands=[];}</span>
+<span class="fstat-no" title="function not covered" >it</span>emCount(){<span class="cstat-no" title="statement not covered" >return this._commands.length;}</span>
+<span class="fstat-no" title="function not covered" >it</span>emKeyAt(itemIndex){<span class="cstat-no" title="statement not covered" >return this._commands[itemIndex].key();}</span>
+<span class="fstat-no" title="function not covered" >it</span>emScoreAt(itemIndex,query){const command=<span class="cstat-no" title="statement not covered" >this._commands[itemIndex];</span>const opcodes=<span class="cstat-no" title="statement not covered" >Diff.Diff.charDiff(query.toLowerCase(),command.title().toLowerCase());</span>let score=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;opcodes.length;++i){<span class="cstat-no" title="statement not covered" >if(opcodes[i][0]===Diff.Diff.Operation.Equal)</span></span>
+<span class="cstat-no" title="statement not covered" >score+=opcodes[i][1].length*opcodes[i][1].length;}</span>
+<span class="cstat-no" title="statement not covered" >if(command.category().startsWith('Panel'))</span>
+<span class="cstat-no" title="statement not covered" >score+=2;e</span>lse <span class="cstat-no" title="statement not covered" >if(command.category().startsWith('Drawer'))</span>
+<span class="cstat-no" title="statement not covered" >score+=1;<span class="cstat-no" title="statement not covered" >r</span>eturn score;}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderItem(itemIndex,query,titleElement,subtitleElement){const command=<span class="cstat-no" title="statement not covered" >this._commands[itemIndex];<span class="cstat-no" title="statement not covered" ></span>titleElement.removeChildren();c</span>onst tagElement=<span class="cstat-no" title="statement not covered" >titleElement.createChild('span','tag');</span>const index=<span class="cstat-no" title="statement not covered" >String.hashCode(command.category())%QuickOpen.CommandMenuProvider.MaterialPaletteColors.length;<span class="cstat-no" title="statement not covered" ></span>tagElement.style.backgroundColor=QuickOpen.CommandMenuProvider.MaterialPaletteColors[index];<span class="cstat-no" title="statement not covered" >t</span>agElement.textContent=command.category();<span class="cstat-no" title="statement not covered" >t</span>itleElement.createTextChild(command.title());<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.FilteredListWidget.highlightRanges(titleElement,query,true);<span class="cstat-no" title="statement not covered" >s</span>ubtitleElement.textContent=command.shortcut();}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectItem(itemIndex,promptValue){<span class="cstat-no" title="statement not covered" >if(itemIndex===null)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._commands[itemIndex].execute();<span class="cstat-no" title="statement not covered" >H</span>ost.userMetrics.actionTaken(Host.UserMetrics.Action.SelectCommandFromCommandMenu);}</span>
+<span class="fstat-no" title="function not covered" >no</span>tFoundText(){<span class="cstat-no" title="statement not covered" >return Common.UIString('No commands found');}</span>};<span class="cstat-no" title="statement not covered" >QuickOpen.CommandMenuProvider.MaterialPaletteColors=['#F44336','#E91E63','#9C27B0','#673AB7','#3F51B5','#03A9F4','#00BCD4','#009688','#4CAF50','#8BC34A','#CDDC39','#FFC107','#FF9800','#FF5722','#795548','#9E9E9E','#607D8B'];<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.CommandMenu.Command=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(category,title,key,shortcut,executeHandler,availableHandler){<span class="cstat-no" title="statement not covered" >this._category=category;<span class="cstat-no" title="statement not covered" >t</span>his._title=title;<span class="cstat-no" title="statement not covered" >t</span>his._key=category+'\0'+title+'\0'+key;<span class="cstat-no" title="statement not covered" >t</span>his._shortcut=shortcut;<span class="cstat-no" title="statement not covered" >t</span>his._executeHandler=executeHandler;<span class="cstat-no" title="statement not covered" >t</span>his._availableHandler=availableHandler;}</span></span>
+<span class="fstat-no" title="function not covered" >ca</span>tegory(){<span class="cstat-no" title="statement not covered" >return this._category;}</span>
+<span class="fstat-no" title="function not covered" >ti</span>tle(){<span class="cstat-no" title="statement not covered" >return this._title;}</span>
+<span class="fstat-no" title="function not covered" >ke</span>y(){<span class="cstat-no" title="statement not covered" >return this._key;}</span>
+<span class="fstat-no" title="function not covered" >sh</span>ortcut(){<span class="cstat-no" title="statement not covered" >return this._shortcut;}</span>
+<span class="fstat-no" title="function not covered" >av</span>ailable(){<span class="cstat-no" title="statement not covered" >return this._availableHandler?this._availableHandler():true;}</span>
+<span class="fstat-no" title="function not covered" >ex</span>ecute(){<span class="cstat-no" title="statement not covered" >this._executeHandler();}</span>};<span class="cstat-no" title="statement not covered" >QuickOpen.commandMenu=new QuickOpen.CommandMenu();<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.CommandMenu.ShowActionDelegate=class{<span class="fstat-no" title="function not covered" >ha</span>ndleAction(context,actionId){<span class="cstat-no" title="statement not covered" >InspectorFrontendHost.bringToFront();<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.QuickOpen.show('&gt;');<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>};;<span class="cstat-no" title="statement not covered" ></span>QuickOpen.HelpQuickOpen=class extends QuickOpen.FilteredListWidget.Provider{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._providers=[];<span class="cstat-no" title="statement not covered" >s</span>elf.runtime.extensions(QuickOpen.FilteredListWidget.Provider).forEach(this._addProvider.bind(this));}</span></span>
+<span class="fstat-no" title="function not covered" >_a</span>ddProvider(extension){<span class="cstat-no" title="statement not covered" >if(extension.descriptor()['title'])</span>
+<span class="cstat-no" title="statement not covered" >this._providers.push({prefix:extension.descriptor()['prefix'],title:extension.descriptor()['title']});}</span>
+<span class="fstat-no" title="function not covered" >it</span>emCount(){<span class="cstat-no" title="statement not covered" >return this._providers.length;}</span>
+<span class="fstat-no" title="function not covered" >it</span>emKeyAt(itemIndex){<span class="cstat-no" title="statement not covered" >return this._providers[itemIndex].prefix;}</span>
+<span class="fstat-no" title="function not covered" >it</span>emScoreAt(itemIndex,query){<span class="cstat-no" title="statement not covered" >return-this._providers[itemIndex].prefix.length;}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderItem(itemIndex,query,titleElement,subtitleElement){const provider=<span class="cstat-no" title="statement not covered" >this._providers[itemIndex];</span>const prefixElement=<span class="cstat-no" title="statement not covered" >titleElement.createChild('span','monospace');<span class="cstat-no" title="statement not covered" ></span>prefixElement.textContent=(provider.prefix||'\u2026')+' ';<span class="cstat-no" title="statement not covered" >t</span>itleElement.createTextChild(provider.title);}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectItem(itemIndex,promptValue){<span class="cstat-no" title="statement not covered" >if(itemIndex!==null)</span>
+<span class="cstat-no" title="statement not covered" >QuickOpen.QuickOpen.show(this._providers[itemIndex].prefix);}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderAsTwoRows(){<span class="cstat-no" title="statement not covered" >return false;}</span>};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["quick_open/filteredListWidget.css"]="/*\n * Copyright (c) 2015 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.filtered-list-widget {\n    display: flex;\n    flex-direction: column;\n    flex: auto;\n}\n\n.filtered-list-widget-prompt-element {\n    flex: 0 0 34px;\n    border: 0;\n    margin: 0;\n    padding: 0 6px;\n    z-index: 1;\n    font-size: inherit;\n}\n\n.filtered-list-widget-input {\n    white-space: pre;\n    height: 18px;\n    margin-top: 12px;\n    overflow: hidden;\n    flex: auto;\n}\n\n.filtered-list-widget-progress {\n    flex: none;\n    background: rgba(0, 0, 0, 0.2);\n    height: 2px;\n}\n\n.filtered-list-widget-progress-bar {\n    background-color: #2196F3;\n    height: 2px;\n    width: 100%;\n    transform: scaleX(0);\n    transform-origin: top left;\n    opacity: 1;\n    transition: none;\n}\n\n.filtered-widget-progress-fade {\n    opacity: 0;\n    transition: opacity 500ms;\n}\n\n.filtered-list-widget &gt; div.container {\n    flex: auto;\n    overflow-y: auto;\n    background: #fbfbfb;\n}\n\n.filtered-list-widget-item {\n    padding: 4px 6px;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n    color: rgb(95, 95, 95);\n}\n\n.filtered-list-widget-item.selected {\n    background-color: #f0f0f0;\n}\n\n:host-context(.-theme-with-dark-background) .filtered-list-widget-item.selected {\n    background-color: #333333;\n}\n\n.filtered-list-widget-item span.highlight {\n    color: #222;\n    font-weight: bold;\n}\n\n.filtered-list-widget-item .filtered-list-widget-title {\n    flex: auto;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.filtered-list-widget-item .filtered-list-widget-subtitle {\n    flex: none;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    color: rgb(155, 155, 155);\n    display: flex;\n}\n\n.filtered-list-widget-item .filtered-list-widget-subtitle .first-part {\n    flex-shrink: 1000;\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.filtered-list-widget-item.one-row {\n    display: flex;\n}\n\n.filtered-list-widget-item.two-rows {\n    border-bottom: 1px solid rgb(235, 235, 235);\n}\n\n.tag {\n    color: white;\n    padding: 1px 3px;\n    margin-right: 5px;\n    border-radius: 2px;\n    line-height: 18px;\n}\n\n.filtered-list-widget-item .tag .highlight {\n    color: white;\n}\n\n.not-found-text {\n    height: 34px;\n    line-height: 34px;\n    padding-left: 4px;\n    font-style: italic;\n    color: #888;\n    background: #fbfbfb;\n}\n\n/*# sourceURL=quick_open/filteredListWidget.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

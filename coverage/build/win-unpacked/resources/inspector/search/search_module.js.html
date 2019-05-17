@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/search/search_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/search</a> search_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/361</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/119</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/62</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/96</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Search.SearchView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(settingKey){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.setMinimumSize(0,40);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('search/searchView.css');<span class="cstat-no" title="statement not covered" >t</span>his._focusOnShow=false;<span class="cstat-no" title="statement not covered" >t</span>his._isIndexing=false;<span class="cstat-no" title="statement not covered" >t</span>his._searchId=1;<span class="cstat-no" title="statement not covered" >t</span>his._searchMatchesCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._nonEmptySearchResultsCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._searchingView=null;<span class="cstat-no" title="statement not covered" >t</span>his._notFoundView=null;<span class="cstat-no" title="statement not covered" >t</span>his._searchConfig=null;<span class="cstat-no" title="statement not covered" >t</span>his._pendingSearchConfig=null;<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsPane=null;<span class="cstat-no" title="statement not covered" >t</span>his._progressIndicator=null;<span class="cstat-no" title="statement not covered" >t</span>his._visiblePane=null;<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('search-view');<span class="cstat-no" title="statement not covered" >t</span>his._searchPanelElement=this.contentElement.createChild('div','search-drawer-header');<span class="cstat-no" title="statement not covered" >t</span>his._searchPanelElement.addEventListener('keydown',this._onKeyDown.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsElement=this.contentElement.createChild('div');<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsElement.className='search-results';c</span>onst searchContainer=<span class="cstat-no" title="statement not covered" >createElement('div');<span class="cstat-no" title="statement not covered" ></span>searchContainer.style.flex='auto';<span class="cstat-no" title="statement not covered" >s</span>earchContainer.style.justifyContent='start';<span class="cstat-no" title="statement not covered" >s</span>earchContainer.style.maxWidth='300px';<span class="cstat-no" title="statement not covered" >t</span>his._search=UI.HistoryInput.create();<span class="cstat-no" title="statement not covered" >s</span>earchContainer.appendChild(this._search);<span class="cstat-no" title="statement not covered" >t</span>his._search.placeholder=Common.UIString('Search');<span class="cstat-no" title="statement not covered" >t</span>his._search.setAttribute('type','text');<span class="cstat-no" title="statement not covered" >t</span>his._search.setAttribute('results','0');<span class="cstat-no" title="statement not covered" >t</span>his._search.setAttribute('size',42);c</span>onst searchItem=<span class="cstat-no" title="statement not covered" >new UI.ToolbarItem(searchContainer);</span>const toolbar=<span class="cstat-no" title="statement not covered" >new UI.Toolbar('search-toolbar',this._searchPanelElement);<span class="cstat-no" title="statement not covered" ></span>this._matchCaseButton=Search.SearchView._appendToolbarToggle(toolbar,'Aa',Common.UIString('Match Case'));<span class="cstat-no" title="statement not covered" >t</span>his._regexButton=Search.SearchView._appendToolbarToggle(toolbar,'.*',Common.UIString('Use Regular Expression'));<span class="cstat-no" title="statement not covered" >t</span>oolbar.appendToolbarItem(searchItem);c</span>onst refreshButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarButton(Common.UIString('Refresh'),'largeicon-refresh');</span>const clearButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarButton(Common.UIString('Clear'),'largeicon-clear');<span class="cstat-no" title="statement not covered" ></span>toolbar.appendToolbarItem(refreshButton);<span class="cstat-no" title="statement not covered" >t</span>oolbar.appendToolbarItem(clearButton);<span class="cstat-no" title="statement not covered" >r</span>efreshButton.addEventListener(UI.ToolbarButton.Events.Click,this._onAction.bind(this));<span class="cstat-no" title="statement not covered" >c</span>learButton.addEventListener(UI.ToolbarButton.Events.Click,<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._resetSearch();<span class="cstat-no" title="statement not covered" >t</span>his._onSearchInputClear();}</span>);c</span>onst searchStatusBarElement=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','search-toolbar-summary');<span class="cstat-no" title="statement not covered" ></span>this._searchMessageElement=searchStatusBarElement.createChild('div','search-message');<span class="cstat-no" title="statement not covered" >t</span>his._searchProgressPlaceholderElement=searchStatusBarElement.createChild('div','flex-centered');<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsMessageElement=searchStatusBarElement.createChild('div','search-message');<span class="cstat-no" title="statement not covered" >t</span>his._advancedSearchConfig=Common.settings.createLocalSetting(settingKey+'SearchConfig',new Search.SearchConfig('',true,false).toPlainObject());<span class="cstat-no" title="statement not covered" >t</span>his._load();<span class="cstat-no" title="statement not covered" >t</span>his._searchScope=null;}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic _appendToolbarToggle(toolbar,text,tooltip){const toggle=<span class="cstat-no" title="statement not covered" >new UI.ToolbarToggle(tooltip);<span class="cstat-no" title="statement not covered" ></span>toggle.setText(text);<span class="cstat-no" title="statement not covered" >t</span>oggle.addEventListener(UI.ToolbarButton.Events.Click,<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >toggle.setToggled(!toggle.toggled()))</span>;<span class="cstat-no" title="statement not covered" >t</span>oolbar.appendToolbarItem(toggle);<span class="cstat-no" title="statement not covered" >r</span>eturn toggle;}</span>
+<span class="fstat-no" title="function not covered" >_b</span>uildSearchConfig(){<span class="cstat-no" title="statement not covered" >return new Search.SearchConfig(this._search.value,!this._matchCaseButton.toggled(),this._regexButton.toggled());}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync toggle(queryCandidate,searchImmediately){<span class="cstat-no" title="statement not covered" >if(queryCandidate)</span>
+<span class="cstat-no" title="statement not covered" >this._search.value=queryCandidate;<span class="cstat-no" title="statement not covered" >i</span>f(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this.focus();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._focusOnShow=true;<span class="cstat-no" title="statement not covered" >t</span>his._initScope();<span class="cstat-no" title="statement not covered" >i</span>f(searchImmediately)</span>
+<span class="cstat-no" title="statement not covered" >this._onAction();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._startIndexing();}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateScope(){<span class="cstat-no" title="statement not covered" >throw new Error('Not implemented');}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nitScope(){<span class="cstat-no" title="statement not covered" >this._searchScope=this.createScope();}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >if(this._focusOnShow){<span class="cstat-no" title="statement not covered" >this.focus();<span class="cstat-no" title="statement not covered" >t</span>his._focusOnShow=false;}</span>}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nIndexingFinished(){const finished=<span class="cstat-no" title="statement not covered" >!this._progressIndicator.isCanceled();<span class="cstat-no" title="statement not covered" ></span>this._progressIndicator.done();<span class="cstat-no" title="statement not covered" >t</span>his._progressIndicator=null;<span class="cstat-no" title="statement not covered" >t</span>his._isIndexing=false;<span class="cstat-no" title="statement not covered" >t</span>his._indexingFinished(finished);<span class="cstat-no" title="statement not covered" >i</span>f(!finished)</span>
+<span class="cstat-no" title="statement not covered" >this._pendingSearchConfig=null;<span class="cstat-no" title="statement not covered" >i</span>f(!this._pendingSearchConfig)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst searchConfig=<span class="cstat-no" title="statement not covered" >this._pendingSearchConfig;<span class="cstat-no" title="statement not covered" ></span>this._pendingSearchConfig=null;<span class="cstat-no" title="statement not covered" >t</span>his._innerStartSearch(searchConfig);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartIndexing(){<span class="cstat-no" title="statement not covered" >this._isIndexing=true;<span class="cstat-no" title="statement not covered" >i</span>f(this._progressIndicator)</span>
+<span class="cstat-no" title="statement not covered" >this._progressIndicator.done();<span class="cstat-no" title="statement not covered" >t</span>his._progressIndicator=new UI.ProgressIndicator();<span class="cstat-no" title="statement not covered" >t</span>his._searchMessageElement.textContent=Common.UIString('Indexing\u2026');<span class="cstat-no" title="statement not covered" >t</span>his._progressIndicator.show(this._searchProgressPlaceholderElement);<span class="cstat-no" title="statement not covered" >t</span>his._searchScope.performIndexing(new Common.ProgressProxy(this._progressIndicator,this._onIndexingFinished.bind(this)));}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nSearchInputClear(){<span class="cstat-no" title="statement not covered" >this._search.value='';<span class="cstat-no" title="statement not covered" >t</span>his.focus();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nSearchResult(searchId,searchResult){<span class="cstat-no" title="statement not covered" >if(searchId!==this._searchId||!this._progressIndicator)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._progressIndicator&amp;&amp;this._progressIndicator.isCanceled()){<span class="cstat-no" title="statement not covered" >this._onIndexingFinished();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._addSearchResult(searchResult);<span class="cstat-no" title="statement not covered" >i</span>f(!searchResult.matchesCount())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!this._searchResultsPane){<span class="cstat-no" title="statement not covered" >this._searchResultsPane=new Search.SearchResultsPane((this._searchConfig));<span class="cstat-no" title="statement not covered" >t</span>his._showPane(this._searchResultsPane);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._searchResultsPane.addSearchResult(searchResult);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nSearchFinished(searchId,finished){<span class="cstat-no" title="statement not covered" >if(searchId!==this._searchId||!this._progressIndicator)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!this._searchResultsPane)</span>
+<span class="cstat-no" title="statement not covered" >this._nothingFound();<span class="cstat-no" title="statement not covered" >t</span>his._searchFinished(finished);<span class="cstat-no" title="statement not covered" >t</span>his._searchConfig=null;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _startSearch(searchConfig){<span class="cstat-no" title="statement not covered" >this._resetSearch();<span class="cstat-no" title="statement not covered" >+</span>+this._searchId;<span class="cstat-no" title="statement not covered" >t</span>his._initScope();<span class="cstat-no" title="statement not covered" >i</span>f(!this._isIndexing)</span>
+<span class="cstat-no" title="statement not covered" >this._startIndexing();<span class="cstat-no" title="statement not covered" >t</span>his._pendingSearchConfig=searchConfig;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nnerStartSearch(searchConfig){<span class="cstat-no" title="statement not covered" >this._searchConfig=searchConfig;<span class="cstat-no" title="statement not covered" >i</span>f(this._progressIndicator)</span>
+<span class="cstat-no" title="statement not covered" >this._progressIndicator.done();<span class="cstat-no" title="statement not covered" >t</span>his._progressIndicator=new UI.ProgressIndicator();<span class="cstat-no" title="statement not covered" >t</span>his._searchStarted(this._progressIndicator);<span class="cstat-no" title="statement not covered" >t</span>his._searchScope.performSearch(searchConfig,this._progressIndicator,this._onSearchResult.bind(this,this._searchId),this._onSearchFinished.bind(this,this._searchId));}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esetSearch(){<span class="cstat-no" title="statement not covered" >this._stopSearch();<span class="cstat-no" title="statement not covered" >t</span>his._showPane(null);<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsPane=null;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>topSearch(){<span class="cstat-no" title="statement not covered" >if(this._progressIndicator&amp;&amp;!this._isIndexing)</span>
+<span class="cstat-no" title="statement not covered" >this._progressIndicator.cancel();<span class="cstat-no" title="statement not covered" >i</span>f(this._searchScope)</span>
+<span class="cstat-no" title="statement not covered" >this._searchScope.stopSearch();<span class="cstat-no" title="statement not covered" >t</span>his._searchConfig=null;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>earchStarted(progressIndicator){<span class="cstat-no" title="statement not covered" >this._resetCounters();<span class="cstat-no" title="statement not covered" >i</span>f(!this._searchingView)</span>
+<span class="cstat-no" title="statement not covered" >this._searchingView=new UI.EmptyWidget(Common.UIString('Searching\u2026'));<span class="cstat-no" title="statement not covered" >t</span>his._showPane(this._searchingView);<span class="cstat-no" title="statement not covered" >t</span>his._searchMessageElement.textContent=Common.UIString('Searching\u2026');<span class="cstat-no" title="statement not covered" >p</span>rogressIndicator.show(this._searchProgressPlaceholderElement);<span class="cstat-no" title="statement not covered" >t</span>his._updateSearchResultsMessage();}</span>
+<span class="fstat-no" title="function not covered" >_i</span>ndexingFinished(finished){<span class="cstat-no" title="statement not covered" >this._searchMessageElement.textContent=finished?'':Common.UIString('Indexing interrupted.');}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateSearchResultsMessage(){<span class="cstat-no" title="statement not covered" >if(this._searchMatchesCount&amp;&amp;this._searchResultsCount){<span class="cstat-no" title="statement not covered" >if(this._searchMatchesCount===1&amp;&amp;this._nonEmptySearchResultsCount===1){<span class="cstat-no" title="statement not covered" >this._searchResultsMessageElement.textContent=Common.UIString('Found 1 matching line in 1 file.');}</span>else <span class="cstat-no" title="statement not covered" >if(this._searchMatchesCount&gt;1&amp;&amp;this._nonEmptySearchResultsCount===1){<span class="cstat-no" title="statement not covered" >this._searchResultsMessageElement.textContent=Common.UIString('Found %d matching lines in 1 file.',this._searchMatchesCount);}</span>else{<span class="cstat-no" title="statement not covered" >this._searchResultsMessageElement.textContent=Common.UIString('Found %d matching lines in %d files.',this._searchMatchesCount,this._nonEmptySearchResultsCount);}</span>}</span></span>else{<span class="cstat-no" title="statement not covered" >this._searchResultsMessageElement.textContent='';}</span>}</span>
+<span class="fstat-no" title="function not covered" >_s</span>howPane(panel){<span class="cstat-no" title="statement not covered" >if(this._visiblePane)</span>
+<span class="cstat-no" title="statement not covered" >this._visiblePane.detach();<span class="cstat-no" title="statement not covered" >i</span>f(panel)</span>
+<span class="cstat-no" title="statement not covered" >panel.show(this._searchResultsElement);<span class="cstat-no" title="statement not covered" >t</span>his._visiblePane=panel;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esetCounters(){<span class="cstat-no" title="statement not covered" >this._searchMatchesCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsCount=0;<span class="cstat-no" title="statement not covered" >t</span>his._nonEmptySearchResultsCount=0;}</span>
+<span class="fstat-no" title="function not covered" >_n</span>othingFound(){<span class="cstat-no" title="statement not covered" >if(!this._notFoundView)</span>
+<span class="cstat-no" title="statement not covered" >this._notFoundView=new UI.EmptyWidget(Common.UIString('No matches found.'));<span class="cstat-no" title="statement not covered" >t</span>his._showPane(this._notFoundView);<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsMessageElement.textContent=Common.UIString('No matches found.');}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddSearchResult(searchResult){const matchesCount=<span class="cstat-no" title="statement not covered" >searchResult.matchesCount();<span class="cstat-no" title="statement not covered" ></span>this._searchMatchesCount+=matchesCount;<span class="cstat-no" title="statement not covered" >t</span>his._searchResultsCount++;<span class="cstat-no" title="statement not covered" >i</span>f(matchesCount)</span>
+<span class="cstat-no" title="statement not covered" >this._nonEmptySearchResultsCount++;<span class="cstat-no" title="statement not covered" >t</span>his._updateSearchResultsMessage();}</span>
+<span class="fstat-no" title="function not covered" >_s</span>earchFinished(finished){<span class="cstat-no" title="statement not covered" >this._searchMessageElement.textContent=finished?Common.UIString('Search finished.'):Common.UIString('Search interrupted.');}</span>
+<span class="fstat-no" title="function not covered" >fo</span>cus(){<span class="cstat-no" title="statement not covered" >this._search.focus();<span class="cstat-no" title="statement not covered" >t</span>his._search.select();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >this._stopSearch();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nKeyDown(event){<span class="cstat-no" title="statement not covered" >switch(event.keyCode){<span class="branch-0 cbranch-no" title="branch not covered" >case UI.KeyboardShortcut.Keys.Enter.code:<span class="cstat-no" title="statement not covered" >this._onAction();<span class="cstat-no" title="statement not covered" >b</span>reak;}</span></span>}</span>
+<span class="fstat-no" title="function not covered" >_s</span>ave(){<span class="cstat-no" title="statement not covered" >this._advancedSearchConfig.set(this._buildSearchConfig().toPlainObject());}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oad(){const searchConfig=<span class="cstat-no" title="statement not covered" >Search.SearchConfig.fromPlainObject(this._advancedSearchConfig.get());<span class="cstat-no" title="statement not covered" ></span>this._search.value=searchConfig.query();<span class="cstat-no" title="statement not covered" >t</span>his._matchCaseButton.setToggled(!searchConfig.ignoreCase());<span class="cstat-no" title="statement not covered" >t</span>his._regexButton.setToggled(searchConfig.isRegex());}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nAction(){const searchConfig=<span class="cstat-no" title="statement not covered" >this._buildSearchConfig();<span class="cstat-no" title="statement not covered" ></span>if(!searchConfig.query()||!searchConfig.query().length)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._save();<span class="cstat-no" title="statement not covered" >t</span>his._startSearch(searchConfig);}</span>};;<span class="cstat-no" title="statement not covered" >Search.SearchConfig=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(query,ignoreCase,isRegex){<span class="cstat-no" title="statement not covered" >this._query=query;<span class="cstat-no" title="statement not covered" >t</span>his._ignoreCase=ignoreCase;<span class="cstat-no" title="statement not covered" >t</span>his._isRegex=isRegex;<span class="cstat-no" title="statement not covered" >t</span>his._parse();}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic fromPlainObject(object){<span class="cstat-no" title="statement not covered" >return new Search.SearchConfig(object.query,object.ignoreCase,object.isRegex);}</span>
+<span class="fstat-no" title="function not covered" >qu</span>ery(){<span class="cstat-no" title="statement not covered" >return this._query;}</span>
+<span class="fstat-no" title="function not covered" >ig</span>noreCase(){<span class="cstat-no" title="statement not covered" >return this._ignoreCase;}</span>
+<span class="fstat-no" title="function not covered" >is</span>Regex(){<span class="cstat-no" title="statement not covered" >return this._isRegex;}</span>
+<span class="fstat-no" title="function not covered" >to</span>PlainObject(){<span class="cstat-no" title="statement not covered" >return{query:this.query(),ignoreCase:this.ignoreCase(),isRegex:this.isRegex()};}</span>
+<span class="fstat-no" title="function not covered" >_p</span>arse(){const quotedPattern=<span class="cstat-no" title="statement not covered" >/"([^\\"]|\\.)+"/;</span>const unquotedWordPattern=<span class="cstat-no" title="statement not covered" >/(\s*(?!-?f(ile)?:)[^\\ ]|\\.)+/;</span>const unquotedPattern=<span class="cstat-no" title="statement not covered" >unquotedWordPattern.source+'(\\s+'+unquotedWordPattern.source+')*';</span>const pattern=<span class="cstat-no" title="statement not covered" >['(\\s*'+Search.SearchConfig.FilePatternRegex.source+'\\s*)','('+quotedPattern.source+')','('+unquotedPattern+')',].join('|');</span>const regexp=<span class="cstat-no" title="statement not covered" >new RegExp(pattern,'g');</span>const queryParts=<span class="cstat-no" title="statement not covered" >this._query.match(regexp)||[];<span class="cstat-no" title="statement not covered" ></span>this._fileQueries=[];<span class="cstat-no" title="statement not covered" >t</span>his._queries=[];<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;queryParts.length;++i){const queryPart=<span class="cstat-no" title="statement not covered" >queryParts[i];<span class="cstat-no" title="statement not covered" ></span>if(!queryPart)</span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst fileQuery=<span class="cstat-no" title="statement not covered" >this._parseFileQuery(queryPart);<span class="cstat-no" title="statement not covered" ></span>if(fileQuery){<span class="cstat-no" title="statement not covered" >this._fileQueries.push(fileQuery);<span class="cstat-no" title="statement not covered" >t</span>his._fileRegexQueries=this._fileRegexQueries||[];<span class="cstat-no" title="statement not covered" >t</span>his._fileRegexQueries.push({regex:new RegExp(fileQuery.text,this.ignoreCase?'i':''),isNegative:fileQuery.isNegative});<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(this._isRegex){<span class="cstat-no" title="statement not covered" >this._queries.push(queryPart);<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(queryPart.startsWith('"')){<span class="cstat-no" title="statement not covered" >if(!queryPart.endsWith('"'))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >t</span>his._queries.push(this._parseQuotedQuery(queryPart));<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span>
+<span class="cstat-no" title="statement not covered" >this._queries.push(this._parseUnquotedQuery(queryPart));}</span>}
+<span class="fstat-no" title="function not covered" >fi</span>lePathMatchesFileQuery(filePath){<span class="cstat-no" title="statement not covered" >if(!this._fileRegexQueries)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._fileRegexQueries.length;++i){<span class="cstat-no" title="statement not covered" >if(!!filePath.match(this._fileRegexQueries[i].regex)===this._fileRegexQueries[i].isNegative)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="fstat-no" title="function not covered" >qu</span>eries(){<span class="cstat-no" title="statement not covered" >return this._queries;}</span>
+<span class="fstat-no" title="function not covered" >_p</span>arseUnquotedQuery(query){<span class="cstat-no" title="statement not covered" >return query.replace(/\\(.)/g,'$1');}</span>
+<span class="fstat-no" title="function not covered" >_p</span>arseQuotedQuery(query){<span class="cstat-no" title="statement not covered" >return query.substring(1,query.length-1).replace(/\\(.)/g,'$1');}</span>
+<span class="fstat-no" title="function not covered" >_p</span>arseFileQuery(query){const match=<span class="cstat-no" title="statement not covered" >query.match(Search.SearchConfig.FilePatternRegex);<span class="cstat-no" title="statement not covered" ></span>if(!match)</span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst isNegative=<span class="cstat-no" title="statement not covered" >!!match[1];<span class="cstat-no" title="statement not covered" ></span>query=match[3];l</span>et result=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;query.length;++i){const char=<span class="cstat-no" title="statement not covered" >query[i];<span class="cstat-no" title="statement not covered" ></span>if(char==='*'){<span class="cstat-no" title="statement not covered" >result+='.*';}</span>else <span class="cstat-no" title="statement not covered" >if(char==='\\'){<span class="cstat-no" title="statement not covered" >++i;c</span>onst nextChar=<span class="cstat-no" title="statement not covered" >query[i];<span class="cstat-no" title="statement not covered" ></span>if(nextChar===' ')</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >result+=' ';}</span>else{<span class="cstat-no" title="statement not covered" >if(String.regexSpecialCharacters().indexOf(query.charAt(i))!==-1)</span>
+<span class="cstat-no" title="statement not covered" >result+='\\';<span class="cstat-no" title="statement not covered" >r</span>esult+=query.charAt(i);}</span>}
+<span class="cstat-no" title="statement not covered" >return new Search.SearchConfig.QueryTerm(result,isNegative);}</span>};<span class="cstat-no" title="statement not covered" >Search.SearchConfig.FilePatternRegex=/(-)?f(ile)?:((?:[^\\ ]|\\.)+)/;<span class="cstat-no" title="statement not covered" >S</span>earch.SearchConfig.RegexQuery;<span class="cstat-no" title="statement not covered" >S</span>earch.SearchConfig.QueryTerm=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(text,isNegative){<span class="cstat-no" title="statement not covered" >this.text=text;<span class="cstat-no" title="statement not covered" >t</span>his.isNegative=isNegative;}</span>};<span class="cstat-no" title="statement not covered" >S</span>earch.SearchResult=<span class="fstat-no" title="function not covered" >fu</span>nction(){};<span class="cstat-no" title="statement not covered" >S</span>earch.SearchResult.prototype={label(){},description(){},matchesCount(){},matchLabel(index){},matchLineContent(index){},matchRevealable(index){}};<span class="cstat-no" title="statement not covered" >S</span>earch.SearchScope=<span class="fstat-no" title="function not covered" >fu</span>nction(){};<span class="cstat-no" title="statement not covered" >S</span>earch.SearchScope.prototype={performSearch(searchConfig,progress,searchResultCallback,searchFinishedCallback){},performIndexing(progress){},stopSearch(){}};;<span class="cstat-no" title="statement not covered" ></span>Search.SearchResultsPane=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(searchConfig){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his._searchConfig=searchConfig;<span class="cstat-no" title="statement not covered" >t</span>his._searchResults=[];<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline=new UI.TreeOutlineInShadow();<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.hideOverflow();<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.registerRequiredCSS('search/searchResultsPane.css');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.appendChild(this._treeOutline.element);<span class="cstat-no" title="statement not covered" >t</span>his._matchesExpandedCount=0;}</span></span>
+<span class="fstat-no" title="function not covered" >ad</span>dSearchResult(searchResult){<span class="cstat-no" title="statement not covered" >this._searchResults.push(searchResult);<span class="cstat-no" title="statement not covered" >t</span>his._addTreeElement(searchResult);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddTreeElement(searchResult){const treeElement=<span class="cstat-no" title="statement not covered" >new Search.SearchResultsPane.SearchResultsTreeElement(this._searchConfig,searchResult);<span class="cstat-no" title="statement not covered" ></span>this._treeOutline.appendChild(treeElement);<span class="cstat-no" title="statement not covered" >i</span>f(this._matchesExpandedCount&lt;Search.SearchResultsPane._matchesExpandedByDefault)</span>
+<span class="cstat-no" title="statement not covered" >treeElement.expand();<span class="cstat-no" title="statement not covered" >t</span>his._matchesExpandedCount+=searchResult.matchesCount();}</span>};<span class="cstat-no" title="statement not covered" >Search.SearchResultsPane._matchesExpandedByDefault=20;<span class="cstat-no" title="statement not covered" >S</span>earch.SearchResultsPane._matchesShownAtOnce=20;<span class="cstat-no" title="statement not covered" >S</span>earch.SearchResultsPane.SearchResultsTreeElement=class extends UI.TreeElement{<span class="fstat-no" title="function not covered" >co</span>nstructor(searchConfig,searchResult){<span class="cstat-no" title="statement not covered" >super('',true);<span class="cstat-no" title="statement not covered" >t</span>his._searchConfig=searchConfig;<span class="cstat-no" title="statement not covered" >t</span>his._searchResult=searchResult;<span class="cstat-no" title="statement not covered" >t</span>his._initialized=false;<span class="cstat-no" title="statement not covered" >t</span>his.toggleOnClick=true;<span class="cstat-no" title="statement not covered" >t</span>his.selectable=false;}</span></span>
+<span class="fstat-no" title="function not covered" >on</span>expand(){<span class="cstat-no" title="statement not covered" >if(this._initialized)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._updateMatchesUI();<span class="cstat-no" title="statement not covered" >t</span>his._initialized=true;}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateMatchesUI(){<span class="cstat-no" title="statement not covered" >this.removeChildren();c</span>onst toIndex=<span class="cstat-no" title="statement not covered" >Math.min(this._searchResult.matchesCount(),Search.SearchResultsPane._matchesShownAtOnce);<span class="cstat-no" title="statement not covered" ></span>if(toIndex&lt;this._searchResult.matchesCount()){<span class="cstat-no" title="statement not covered" >this._appendSearchMatches(0,toIndex-1);<span class="cstat-no" title="statement not covered" >t</span>his._appendShowMoreMatchesElement(toIndex-1);}</span>else{<span class="cstat-no" title="statement not covered" >this._appendSearchMatches(0,toIndex);}</span>}</span>
+<span class="fstat-no" title="function not covered" >on</span>attach(){<span class="cstat-no" title="statement not covered" >this._updateSearchMatches();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateSearchMatches(){<span class="cstat-no" title="statement not covered" >this.listItemElement.classList.add('search-result');c</span>onst fileNameSpan=<span class="cstat-no" title="statement not covered" >span(this._searchResult.label(),'search-result-file-name');<span class="cstat-no" title="statement not covered" ></span>fileNameSpan.appendChild(span('\u2014','search-result-dash'));<span class="cstat-no" title="statement not covered" >f</span>ileNameSpan.appendChild(span(this._searchResult.description(),'search-result-qualifier'));<span class="cstat-no" title="statement not covered" >t</span>his.tooltip=this._searchResult.description();<span class="cstat-no" title="statement not covered" >t</span>his.listItemElement.appendChild(fileNameSpan);c</span>onst matchesCountSpan=<span class="cstat-no" title="statement not covered" >createElement('span');<span class="cstat-no" title="statement not covered" ></span>matchesCountSpan.className='search-result-matches-count';<span class="cstat-no" title="statement not covered" >m</span>atchesCountSpan.textContent=`${this._searchResult.matchesCount()}`;<span class="cstat-no" title="statement not covered" >t</span>his.listItemElement.appendChild(matchesCountSpan);<span class="cstat-no" title="statement not covered" >i</span>f(this.expanded)</span>
+<span class="cstat-no" title="statement not covered" >this._updateMatchesUI();f</span>unction <span class="fstat-no" title="function not covered" >span(</span>text,className){const span=<span class="cstat-no" title="statement not covered" >createElement('span');<span class="cstat-no" title="statement not covered" ></span>span.className=className;<span class="cstat-no" title="statement not covered" >s</span>pan.textContent=text;<span class="cstat-no" title="statement not covered" >r</span>eturn span;}</span>}
+<span class="fstat-no" title="function not covered" >_a</span>ppendSearchMatches(fromIndex,toIndex){const searchResult=<span class="cstat-no" title="statement not covered" >this._searchResult;</span>const queries=<span class="cstat-no" title="statement not covered" >this._searchConfig.queries();</span>const regexes=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;queries.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >regexes.push(createSearchRegex(queries[i],!this._searchConfig.ignoreCase(),this._searchConfig.isRegex()));<span class="cstat-no" title="statement not covered" >f</span>or(let i=fromIndex;i&lt;toIndex;++i){const lineContent=<span class="cstat-no" title="statement not covered" >searchResult.matchLineContent(i).trim();</span>let matchRanges=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let j=0;j&lt;regexes.length;++j)</span></span>
+<span class="cstat-no" title="statement not covered" >matchRanges=matchRanges.concat(this._regexMatchRanges(lineContent,regexes[j]));c</span>onst anchor=<span class="cstat-no" title="statement not covered" >Components.Linkifier.linkifyRevealable(searchResult.matchRevealable(i),'');<span class="cstat-no" title="statement not covered" ></span>anchor.classList.add('search-match-link');c</span>onst lineNumberSpan=<span class="cstat-no" title="statement not covered" >createElement('span');<span class="cstat-no" title="statement not covered" ></span>lineNumberSpan.classList.add('search-match-line-number');<span class="cstat-no" title="statement not covered" >l</span>ineNumberSpan.textContent=searchResult.matchLabel(i);<span class="cstat-no" title="statement not covered" >a</span>nchor.appendChild(lineNumberSpan);c</span>onst contentSpan=<span class="cstat-no" title="statement not covered" >this._createContentSpan(lineContent,matchRanges);<span class="cstat-no" title="statement not covered" ></span>anchor.appendChild(contentSpan);c</span>onst searchMatchElement=<span class="cstat-no" title="statement not covered" >new UI.TreeElement();<span class="cstat-no" title="statement not covered" ></span>searchMatchElement.selectable=false;<span class="cstat-no" title="statement not covered" >t</span>his.appendChild(searchMatchElement);<span class="cstat-no" title="statement not covered" >s</span>earchMatchElement.listItemElement.className='search-match';<span class="cstat-no" title="statement not covered" >s</span>earchMatchElement.listItemElement.appendChild(anchor);<span class="cstat-no" title="statement not covered" >s</span>earchMatchElement.tooltip=lineContent;}</span>}
+<span class="fstat-no" title="function not covered" >_a</span>ppendShowMoreMatchesElement(startMatchIndex){const matchesLeftCount=<span class="cstat-no" title="statement not covered" >this._searchResult.matchesCount()-startMatchIndex;</span>const showMoreMatchesText=<span class="cstat-no" title="statement not covered" >Common.UIString('Show %d more',matchesLeftCount);</span>const showMoreMatchesTreeElement=<span class="cstat-no" title="statement not covered" >new UI.TreeElement(showMoreMatchesText);<span class="cstat-no" title="statement not covered" ></span>this.appendChild(showMoreMatchesTreeElement);<span class="cstat-no" title="statement not covered" >s</span>howMoreMatchesTreeElement.listItemElement.classList.add('show-more-matches');<span class="cstat-no" title="statement not covered" >s</span>howMoreMatchesTreeElement.onselect=this._showMoreMatchesElementSelected.bind(this,showMoreMatchesTreeElement,startMatchIndex);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateContentSpan(lineContent,matchRanges){let trimBy=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>if(matchRanges.length&gt;0&amp;&amp;matchRanges[0].offset&gt;20)</span>
+<span class="cstat-no" title="statement not covered" >trimBy=15;<span class="cstat-no" title="statement not covered" >l</span>ineContent=lineContent.substring(trimBy,1000+trimBy);<span class="cstat-no" title="statement not covered" >i</span>f(trimBy){<span class="cstat-no" title="statement not covered" >matchRanges=matchRanges.map(<span class="fstat-no" title="function not covered" >ra</span>nge=&gt;<span class="cstat-no" title="statement not covered" >new TextUtils.SourceRange(range.offset-trimBy+1,range.length))</span>;<span class="cstat-no" title="statement not covered" >l</span>ineContent='\u2026'+lineContent;}</span></span>
+const contentSpan=<span class="cstat-no" title="statement not covered" >createElement('span');<span class="cstat-no" title="statement not covered" ></span>contentSpan.className='search-match-content';<span class="cstat-no" title="statement not covered" >c</span>ontentSpan.textContent=lineContent;<span class="cstat-no" title="statement not covered" >U</span>I.highlightRangesWithStyleClass(contentSpan,matchRanges,'highlighted-match');<span class="cstat-no" title="statement not covered" >r</span>eturn contentSpan;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>egexMatchRanges(lineContent,regex){<span class="cstat-no" title="statement not covered" >regex.lastIndex=0;l</span>et match;const matchRanges=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>while((regex.lastIndex&lt;lineContent.length)&amp;&amp;(match=regex.exec(lineContent)))</span>
+<span class="cstat-no" title="statement not covered" >matchRanges.push(new TextUtils.SourceRange(match.index,match[0].length));<span class="cstat-no" title="statement not covered" >r</span>eturn matchRanges;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>howMoreMatchesElementSelected(showMoreMatchesTreeElement,startMatchIndex){<span class="cstat-no" title="statement not covered" >this.removeChild(showMoreMatchesTreeElement);<span class="cstat-no" title="statement not covered" >t</span>his._appendSearchMatches(startMatchIndex,this._searchResult.matchesCount());<span class="cstat-no" title="statement not covered" >r</span>eturn false;}</span>};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["search/searchResultsPane.css"]="/*\n * Copyright 2016 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n:host {\n    padding: 0;\n    margin: 0;\n    overflow-y: auto;\n}\n\n.tree-outline {\n    padding: 0;\n}\n\n.tree-outline ol {\n    padding: 0;\n}\n\n.tree-outline li {\n    height: 16px;\n}\n\nli.search-result {\n    cursor: pointer;\n    font-size: 12px;\n    margin-top: 8px;\n    padding: 2px 0 2px 4px;\n    word-wrap: normal;\n    white-space: pre;\n}\n\nli.search-result:hover {\n    background-color: rgba(121, 121, 121, 0.1);\n}\n\nli.search-result .search-result-file-name {\n    color: #222;\n    flex: 1 1;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n}\n\nli.search-result .search-result-matches-count {\n    color: #888;\n    margin: 0 8px;\n}\n\nli.search-result.expanded .search-result-matches-count {\n    display: none;\n}\n\nli.show-more-matches {\n    color: #222;\n    cursor: pointer;\n    margin: 8px 0 0 -4px;\n}\n\nli.show-more-matches:hover {\n    text-decoration: underline;\n}\n\nli.search-match {\n    margin: 2px 0;\n    word-wrap: normal;\n    white-space: pre;\n}\n\nli.search-match::before {\n    display: none;\n}\n\nli.search-match .search-match-line-number {\n    color: rgb(128, 128, 128);\n    text-align: right;\n    vertical-align: top;\n    word-break: normal;\n    padding: 2px 4px 2px 6px;\n    margin-right: 5px;\n}\n\nli.search-match:hover {\n    background-color: rgba(56, 121, 217, 0.1);\n}\n\nli.search-match .highlighted-match {\n    background-color: #F1EA00;\n}\n\n:host-context(.-theme-with-dark-background) li.search-match .highlighted-match {\n    background-color: hsl(133, 100%, 30%) !important;\n}\n\n.tree-outline .devtools-link {\n    text-decoration: none;\n    display: block;\n    flex: auto;\n}\n\nli.search-match .search-match-content {\n    color: #000;\n}\n\nol.children.expanded {\n    padding-bottom: 4px;\n}\n\n.search-match-link {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    margin-left: 9px;\n}\n\n.search-result-qualifier {\n    color: #AAA;\n}\n\n.search-result-dash {\n    color: #AAA;\n    margin: 0 4px;\n}\n\n/*# sourceURL=search/searchResultsPane.css */";<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources["search/searchView.css"]="/*\n * Copyright 2014 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.search-drawer-header {\n    align-items: center;\n    flex-shrink: 0;\n    overflow: hidden;\n}\n\n.search-toolbar {\n    background-color: var(--toolbar-bg-color);\n    border-bottom: var(--divider-border);\n}\n\n.search-toolbar-summary {\n    background-color: #eee;\n    border-top: 1px solid #ccc;\n    padding-left: 5px;\n    flex: 0 0 19px;\n    display: flex;\n    padding-right: 5px;\n}\n\n.search-toolbar-summary .search-message {\n    padding-top: 2px;\n    padding-left: 1ex;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n}\n\n.search-view .search-results {\n    overflow-y: auto;\n    display: flex;\n    flex: auto;\n}\n\n.search-view .search-results &gt; div {\n    flex: auto;\n}\n\n/*# sourceURL=search/searchView.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

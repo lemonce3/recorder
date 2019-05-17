@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/browser_debugger/browser_debugger_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/browser_debugger</a> browser_debugger_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/308</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/94</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/75</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >BrowserDebugger.DOMBreakpointsSidebarPane=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('browser_debugger/domBreakpointsSidebarPane.css');<span class="cstat-no" title="statement not covered" >t</span>his._listElement=this.contentElement.createChild('div','breakpoint-list hidden');<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement=this.contentElement.createChild('div','gray-info-message');<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement.textContent=Common.UIString('No breakpoints');<span class="cstat-no" title="statement not covered" >t</span>his._items=new Map();<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DOMDebuggerModel,SDK.DOMDebuggerModel.Events.DOMBreakpointAdded,this._breakpointAdded,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DOMDebuggerModel,SDK.DOMDebuggerModel.Events.DOMBreakpointToggled,this._breakpointToggled,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DOMDebuggerModel,SDK.DOMDebuggerModel.Events.DOMBreakpointsRemoved,this._breakpointsRemoved,this);<span class="cstat-no" title="statement not covered" >f</span>or(const domDebuggerModel of SDK.targetManager.models(SDK.DOMDebuggerModel)){<span class="cstat-no" title="statement not covered" >domDebuggerModel.retrieveDOMBreakpoints();<span class="cstat-no" title="statement not covered" >f</span>or(const breakpoint of domDebuggerModel.domBreakpoints())</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._addBreakpoint(breakpoint);}</span>
+<span class="cstat-no" title="statement not covered" >this._highlightedElement=null;<span class="cstat-no" title="statement not covered" >t</span>his._update();}</span>
+<span class="fstat-no" title="function not covered" >_b</span>reakpointAdded(event){<span class="cstat-no" title="statement not covered" >this._addBreakpoint((event.data));}</span>
+<span class="fstat-no" title="function not covered" >_b</span>reakpointToggled(event){const breakpoint=(<span class="cstat-no" title="statement not covered" >event.data)</span>;const item=<span class="cstat-no" title="statement not covered" >this._items.get(breakpoint);<span class="cstat-no" title="statement not covered" ></span>if(item)</span>
+<span class="cstat-no" title="statement not covered" >item.checkbox.checked=breakpoint.enabled;}</span>
+<span class="fstat-no" title="function not covered" >_b</span>reakpointsRemoved(event){const breakpoints=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >for(const breakpoint of breakpoints){const item=<span class="cstat-no" title="statement not covered" >this._items.get(breakpoint);<span class="cstat-no" title="statement not covered" ></span>if(item){<span class="cstat-no" title="statement not covered" >this._items.delete(breakpoint);<span class="cstat-no" title="statement not covered" >t</span>his._listElement.removeChild(item.element);}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!this._listElement.firstChild){<span class="cstat-no" title="statement not covered" >this._emptyElement.classList.remove('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._listElement.classList.add('hidden');}</span>}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddBreakpoint(breakpoint){const element=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','breakpoint-entry');<span class="cstat-no" title="statement not covered" ></span>element.addEventListener('contextmenu',this._contextMenu.bind(this,breakpoint),true);c</span>onst checkboxLabel=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create('',breakpoint.enabled);</span>const checkboxElement=<span class="cstat-no" title="statement not covered" >checkboxLabel.checkboxElement;<span class="cstat-no" title="statement not covered" ></span>checkboxElement.addEventListener('click',this._checkboxClicked.bind(this,breakpoint),false);<span class="cstat-no" title="statement not covered" >e</span>lement.appendChild(checkboxLabel);c</span>onst labelElement=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','dom-breakpoint');<span class="cstat-no" title="statement not covered" ></span>element.appendChild(labelElement);c</span>onst linkifiedNode=<span class="cstat-no" title="statement not covered" >createElementWithClass('monospace');<span class="cstat-no" title="statement not covered" ></span>linkifiedNode.style.display='block';<span class="cstat-no" title="statement not covered" >l</span>abelElement.appendChild(linkifiedNode);<span class="cstat-no" title="statement not covered" >C</span>ommon.Linkifier.linkify(breakpoint.node).then(<span class="fstat-no" title="function not covered" >li</span>nkified=&gt;<span class="cstat-no" title="statement not covered" >linkifiedNode.appendChild(linkified))</span>;c</span>onst description=<span class="cstat-no" title="statement not covered" >createElement('div');<span class="cstat-no" title="statement not covered" ></span>description.textContent=BrowserDebugger.DOMBreakpointsSidebarPane.BreakpointTypeLabels.get(breakpoint.type);<span class="cstat-no" title="statement not covered" >l</span>abelElement.appendChild(description);c</span>onst item=<span class="cstat-no" title="statement not covered" >{breakpoint:breakpoint,element:element,checkbox:checkboxElement};<span class="cstat-no" title="statement not covered" ></span>element._item=item;<span class="cstat-no" title="statement not covered" >t</span>his._items.set(breakpoint,item);l</span>et currentElement=<span class="cstat-no" title="statement not covered" >this._listElement.firstChild;<span class="cstat-no" title="statement not covered" ></span>while(currentElement){<span class="cstat-no" title="statement not covered" >if(currentElement._item&amp;&amp;currentElement._item.breakpoint.type&lt;breakpoint.type)</span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >c</span>urrentElement=currentElement.nextSibling;}</span>
+<span class="cstat-no" title="statement not covered" >this._listElement.insertBefore(element,currentElement);<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement.classList.add('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._listElement.classList.remove('hidden');}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ontextMenu(breakpoint,event){const contextMenu=<span class="cstat-no" title="statement not covered" >new UI.ContextMenu(event);<span class="cstat-no" title="statement not covered" ></span>contextMenu.defaultSection().appendItem(Common.UIString('Remove breakpoint'),<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >breakpoint.domDebuggerModel.removeDOMBreakpoint(breakpoint.node,breakpoint.type);}</span>);<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(Common.UIString('Remove all DOM breakpoints'),<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >breakpoint.domDebuggerModel.removeAllDOMBreakpoints();}</span>);<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.show();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckboxClicked(breakpoint){const item=<span class="cstat-no" title="statement not covered" >this._items.get(breakpoint);<span class="cstat-no" title="statement not covered" ></span>if(!item)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >b</span>reakpoint.domDebuggerModel.toggleDOMBreakpoint(breakpoint,item.checkbox.checked);}</span>
+<span class="fstat-no" title="function not covered" >fl</span>avorChanged(object){<span class="cstat-no" title="statement not covered" >this._update();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){const details=<span class="cstat-no" title="statement not covered" >UI.context.flavor(SDK.DebuggerPausedDetails);<span class="cstat-no" title="statement not covered" ></span>if(!details||!details.auxData||details.reason!==SDK.DebuggerModel.BreakReason.DOM){<span class="cstat-no" title="statement not covered" >if(this._highlightedElement){<span class="cstat-no" title="statement not covered" >this._highlightedElement.classList.remove('breakpoint-hit');<span class="cstat-no" title="statement not covered" >d</span>elete this._highlightedElement;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return;}</span>
+const domDebuggerModel=<span class="cstat-no" title="statement not covered" >details.debuggerModel.target().model(SDK.DOMDebuggerModel);<span class="cstat-no" title="statement not covered" ></span>if(!domDebuggerModel)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst data=<span class="cstat-no" title="statement not covered" >domDebuggerModel.resolveDOMBreakpointData((details.auxData));<span class="cstat-no" title="statement not covered" ></span>if(!data)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et element=<span class="cstat-no" title="statement not covered" >null;<span class="cstat-no" title="statement not covered" ></span>for(const item of this._items.values()){<span class="cstat-no" title="statement not covered" >if(item.breakpoint.node===data.node&amp;&amp;item.breakpoint.type===data.type)</span></span>
+<span class="cstat-no" title="statement not covered" >element=item.element;}</span>
+<span class="cstat-no" title="statement not covered" >if(!element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >U</span>I.viewManager.showView('sources.domBreakpoints');<span class="cstat-no" title="statement not covered" >e</span>lement.classList.add('breakpoint-hit');<span class="cstat-no" title="statement not covered" >t</span>his._highlightedElement=element;}</span>};<span class="cstat-no" title="statement not covered" >BrowserDebugger.DOMBreakpointsSidebarPane.Item;<span class="cstat-no" title="statement not covered" >B</span>rowserDebugger.DOMBreakpointsSidebarPane.BreakpointTypeLabels=new Map([[SDK.DOMDebuggerModel.DOMBreakpoint.Type.SubtreeModified,Common.UIString('Subtree modified')],[SDK.DOMDebuggerModel.DOMBreakpoint.Type.AttributeModified,Common.UIString('Attribute modified')],[SDK.DOMDebuggerModel.DOMBreakpoint.Type.NodeRemoved,Common.UIString('Node removed')],]);<span class="cstat-no" title="statement not covered" >B</span>rowserDebugger.DOMBreakpointsSidebarPane.ContextMenuProvider=class{<span class="fstat-no" title="function not covered" >ap</span>pendApplicableItems(event,contextMenu,object){const node=(<span class="cstat-no" title="statement not covered" >object)</span>;<span class="cstat-no" title="statement not covered" >if(node.pseudoType())</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst domDebuggerModel=<span class="cstat-no" title="statement not covered" >node.domModel().target().model(SDK.DOMDebuggerModel);<span class="cstat-no" title="statement not covered" ></span>if(!domDebuggerModel)</span>
+<span class="cstat-no" title="statement not covered" >return;f</span>unction <span class="fstat-no" title="function not covered" >toggleBreakpoint(</span>type){<span class="cstat-no" title="statement not covered" >if(domDebuggerModel.hasDOMBreakpoint(node,type))</span>
+<span class="cstat-no" title="statement not covered" >domDebuggerModel.removeDOMBreakpoint(node,type);e</span>lse
+<span class="cstat-no" title="statement not covered" >domDebuggerModel.setDOMBreakpoint(node,type);}</span>
+const breakpointsMenu=<span class="cstat-no" title="statement not covered" >contextMenu.debugSection().appendSubMenuItem(Common.UIString('Break on'));<span class="cstat-no" title="statement not covered" ></span>for(const key in SDK.DOMDebuggerModel.DOMBreakpoint.Type){const type=<span class="cstat-no" title="statement not covered" >SDK.DOMDebuggerModel.DOMBreakpoint.Type[key];</span>const label=<span class="cstat-no" title="statement not covered" >Sources.DebuggerPausedMessage.BreakpointTypeNouns.get(type);<span class="cstat-no" title="statement not covered" ></span>breakpointsMenu.defaultSection().appendCheckboxItem(label,toggleBreakpoint.bind(null,type),domDebuggerModel.hasDOMBreakpoint(node,type));}</span>}</span>};;<span class="cstat-no" title="statement not covered" >BrowserDebugger.EventListenerBreakpointsSidebarPane=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his._categoriesTreeOutline=new UI.TreeOutlineInShadow();<span class="cstat-no" title="statement not covered" >t</span>his._categoriesTreeOutline.element.tabIndex=0;<span class="cstat-no" title="statement not covered" >t</span>his._categoriesTreeOutline.registerRequiredCSS('browser_debugger/eventListenerBreakpoints.css');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.appendChild(this._categoriesTreeOutline.element);<span class="cstat-no" title="statement not covered" >t</span>his._categories=new Map();c</span>onst categories=<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.eventListenerBreakpoints().map(<span class="fstat-no" title="function not covered" >br</span>eakpoint=&gt;<span class="cstat-no" title="statement not covered" >breakpoint.category())</span>;<span class="cstat-no" title="statement not covered" ></span>categories.sort();<span class="cstat-no" title="statement not covered" >f</span>or(const category of categories){<span class="cstat-no" title="statement not covered" >if(!this._categories.has(category))</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._createCategory(category);}</span>
+<span class="cstat-no" title="statement not covered" >this._breakpoints=new Map();<span class="cstat-no" title="statement not covered" >f</span>or(const breakpoint of SDK.domDebuggerManager.eventListenerBreakpoints())</span>
+<span class="cstat-no" title="statement not covered" >this._createBreakpoint(breakpoint);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DebuggerModel,SDK.DebuggerModel.Events.DebuggerPaused,this._update,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DebuggerModel,SDK.DebuggerModel.Events.DebuggerResumed,this._update,this);<span class="cstat-no" title="statement not covered" >U</span>I.context.addFlavorChangeListener(SDK.Target,this._update,this);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateCategory(name){const labelNode=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create(name);<span class="cstat-no" title="statement not covered" ></span>labelNode.checkboxElement.addEventListener('click',this._categoryCheckboxClicked.bind(this,name),true);c</span>onst treeElement=<span class="cstat-no" title="statement not covered" >new UI.TreeElement(labelNode);<span class="cstat-no" title="statement not covered" ></span>treeElement.selectable=false;<span class="cstat-no" title="statement not covered" >t</span>his._categoriesTreeOutline.appendChild(treeElement);<span class="cstat-no" title="statement not covered" >t</span>his._categories.set(name,{element:treeElement,checkbox:labelNode.checkboxElement});}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateBreakpoint(breakpoint){const labelNode=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create(breakpoint.title());<span class="cstat-no" title="statement not covered" ></span>labelNode.classList.add('source-code');<span class="cstat-no" title="statement not covered" >l</span>abelNode.checkboxElement.addEventListener('click',this._breakpointCheckboxClicked.bind(this,breakpoint),true);c</span>onst treeElement=<span class="cstat-no" title="statement not covered" >new UI.TreeElement(labelNode);<span class="cstat-no" title="statement not covered" ></span>treeElement.listItemElement.createChild('div','breakpoint-hit-marker');<span class="cstat-no" title="statement not covered" >t</span>reeElement.selectable=false;<span class="cstat-no" title="statement not covered" >t</span>his._categories.get(breakpoint.category()).element.appendChild(treeElement);<span class="cstat-no" title="statement not covered" >t</span>his._breakpoints.set(breakpoint,{element:treeElement,checkbox:labelNode.checkboxElement});}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){const target=<span class="cstat-no" title="statement not covered" >UI.context.flavor(SDK.Target);</span>const debuggerModel=<span class="cstat-no" title="statement not covered" >target?target.model(SDK.DebuggerModel):null;</span>const details=<span class="cstat-no" title="statement not covered" >debuggerModel?debuggerModel.debuggerPausedDetails():null;<span class="cstat-no" title="statement not covered" ></span>if(!details||details.reason!==SDK.DebuggerModel.BreakReason.EventListener||!details.auxData){<span class="cstat-no" title="statement not covered" >if(this._highlightedElement){<span class="cstat-no" title="statement not covered" >this._highlightedElement.classList.remove('breakpoint-hit');<span class="cstat-no" title="statement not covered" >d</span>elete this._highlightedElement;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return;}</span>
+const breakpoint=<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.resolveEventListenerBreakpoint((details.auxData));<span class="cstat-no" title="statement not covered" ></span>if(!breakpoint)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >U</span>I.viewManager.showView('sources.eventListenerBreakpoints');<span class="cstat-no" title="statement not covered" >t</span>his._categories.get(breakpoint.category()).element.expand();<span class="cstat-no" title="statement not covered" >t</span>his._highlightedElement=this._breakpoints.get(breakpoint).element.listItemElement;<span class="cstat-no" title="statement not covered" >t</span>his._highlightedElement.classList.add('breakpoint-hit');}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ategoryCheckboxClicked(category){const item=<span class="cstat-no" title="statement not covered" >this._categories.get(category);</span>const enabled=<span class="cstat-no" title="statement not covered" >item.checkbox.checked;<span class="cstat-no" title="statement not covered" ></span>for(const breakpoint of this._breakpoints.keys()){<span class="cstat-no" title="statement not covered" >if(breakpoint.category()===category){<span class="cstat-no" title="statement not covered" >breakpoint.setEnabled(enabled);<span class="cstat-no" title="statement not covered" >t</span>his._breakpoints.get(breakpoint).checkbox.checked=enabled;}</span>}</span>}</span>
+<span class="fstat-no" title="function not covered" >_b</span>reakpointCheckboxClicked(breakpoint){const item=<span class="cstat-no" title="statement not covered" >this._breakpoints.get(breakpoint);<span class="cstat-no" title="statement not covered" ></span>breakpoint.setEnabled(item.checkbox.checked);l</span>et hasEnabled=<span class="cstat-no" title="statement not covered" >false;</span>let hasDisabled=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>for(const other of this._breakpoints.keys()){<span class="cstat-no" title="statement not covered" >if(other.category()===breakpoint.category()){<span class="cstat-no" title="statement not covered" >if(other.enabled())</span></span></span>
+<span class="cstat-no" title="statement not covered" >hasEnabled=true;e</span>lse
+<span class="cstat-no" title="statement not covered" >hasDisabled=true;}</span>}
+const checkbox=<span class="cstat-no" title="statement not covered" >this._categories.get(breakpoint.category()).checkbox;<span class="cstat-no" title="statement not covered" ></span>checkbox.checked=hasEnabled;<span class="cstat-no" title="statement not covered" >c</span>heckbox.indeterminate=hasEnabled&amp;&amp;hasDisabled;}</span>};<span class="cstat-no" title="statement not covered" >BrowserDebugger.EventListenerBreakpointsSidebarPane.Item;;<span class="cstat-no" title="statement not covered" ></span>BrowserDebugger.ObjectEventListenersSidebarPane=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._refreshButton=new UI.ToolbarButton(Common.UIString('Refresh'),'largeicon-refresh');<span class="cstat-no" title="statement not covered" >t</span>his._refreshButton.addEventListener(UI.ToolbarButton.Events.Click,this._refreshClick,this);<span class="cstat-no" title="statement not covered" >t</span>his._refreshButton.setEnabled(false);<span class="cstat-no" title="statement not covered" >t</span>his._eventListenersView=new EventListeners.EventListenersView(this.update.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._eventListenersView.show(this.element);}</span></span>
+<span class="fstat-no" title="function not covered" >to</span>olbarItems(){<span class="cstat-no" title="statement not covered" >return[this._refreshButton];}</span>
+<span class="fstat-no" title="function not covered" >up</span>date(){<span class="cstat-no" title="statement not covered" >if(this._lastRequestedContext){<span class="cstat-no" title="statement not covered" >this._lastRequestedContext.runtimeModel.releaseObjectGroup(BrowserDebugger.ObjectEventListenersSidebarPane._objectGroupName);<span class="cstat-no" title="statement not covered" >d</span>elete this._lastRequestedContext;}</span></span>
+const executionContext=<span class="cstat-no" title="statement not covered" >UI.context.flavor(SDK.ExecutionContext);<span class="cstat-no" title="statement not covered" ></span>if(!executionContext){<span class="cstat-no" title="statement not covered" >this._eventListenersView.reset();<span class="cstat-no" title="statement not covered" >t</span>his._eventListenersView.addEmptyHolderIfNeeded();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._lastRequestedContext=executionContext;<span class="cstat-no" title="statement not covered" >P</span>romise.all([this._windowObjectInContext(executionContext)]).then(this._eventListenersView.addObjects.bind(this._eventListenersView));}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >super.wasShown();<span class="cstat-no" title="statement not covered" >U</span>I.context.addFlavorChangeListener(SDK.ExecutionContext,this.update,this);<span class="cstat-no" title="statement not covered" >t</span>his._refreshButton.setEnabled(true);<span class="cstat-no" title="statement not covered" >t</span>his.update();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >super.willHide();<span class="cstat-no" title="statement not covered" >U</span>I.context.removeFlavorChangeListener(SDK.ExecutionContext,this.update,this);<span class="cstat-no" title="statement not covered" >t</span>his._refreshButton.setEnabled(false);}</span>
+<span class="fstat-no" title="function not covered" >_w</span>indowObjectInContext(executionContext){<span class="cstat-no" title="statement not covered" >return executionContext.evaluate({expression:'self',objectGroup:BrowserDebugger.ObjectEventListenersSidebarPane._objectGroupName,includeCommandLineAPI:false,silent:true,returnByValue:false,generatePreview:false},false,false).then(<span class="fstat-no" title="function not covered" >re</span>sult=&gt;<span class="cstat-no" title="statement not covered" >result.object&amp;&amp;!result.exceptionDetails?result.object:null)</span>;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>efreshClick(event){<span class="cstat-no" title="statement not covered" >event.data.consume();<span class="cstat-no" title="statement not covered" >t</span>his.update();}</span>};<span class="cstat-no" title="statement not covered" >BrowserDebugger.ObjectEventListenersSidebarPane._objectGroupName='object-event-listeners-sidebar-pane';;<span class="cstat-no" title="statement not covered" ></span>BrowserDebugger.XHRBreakpointsSidebarPane=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('browser_debugger/xhrBreakpointsSidebarPane.css');<span class="cstat-no" title="statement not covered" >t</span>his._listElement=this.contentElement.createChild('div','breakpoint-list hidden');<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement=this.contentElement.createChild('div','gray-info-message');<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement.textContent=Common.UIString('No breakpoints');<span class="cstat-no" title="statement not covered" >t</span>his._breakpointElements=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._addButton=new UI.ToolbarButton(Common.UIString('Add breakpoint'),'largeicon-add');<span class="cstat-no" title="statement not covered" >t</span>his._addButton.addEventListener(UI.ToolbarButton.Events.Click,this._addButtonClicked.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement.addEventListener('contextmenu',this._emptyElementContextMenu.bind(this),true);<span class="cstat-no" title="statement not covered" >t</span>his._restoreBreakpoints();<span class="cstat-no" title="statement not covered" >t</span>his._update();}</span></span>
+<span class="fstat-no" title="function not covered" >to</span>olbarItems(){<span class="cstat-no" title="statement not covered" >return[this._addButton];}</span>
+<span class="fstat-no" title="function not covered" >_e</span>mptyElementContextMenu(event){const contextMenu=<span class="cstat-no" title="statement not covered" >new UI.ContextMenu(event);<span class="cstat-no" title="statement not covered" ></span>contextMenu.defaultSection().appendItem(Common.UIString('Add breakpoint'),this._addButtonClicked.bind(this));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.show();}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _addButtonClicked(){<span class="cstat-no" title="statement not covered" >await UI.viewManager.showView('sources.xhrBreakpoints');c</span>onst inputElementContainer=<span class="cstat-no" title="statement not covered" >createElementWithClass('p','breakpoint-condition');<span class="cstat-no" title="statement not covered" ></span>inputElementContainer.textContent=Common.UIString('Break when URL contains:');c</span>onst inputElement=<span class="cstat-no" title="statement not covered" >inputElementContainer.createChild('span','breakpoint-condition-input');<span class="cstat-no" title="statement not covered" ></span>this._addListElement(inputElementContainer,(this._listElement.firstChild));f</span>unction <span class="fstat-no" title="function not covered" >finishEditing(</span>accept,e,text){<span class="cstat-no" title="statement not covered" >this._removeListElement(inputElementContainer);<span class="cstat-no" title="statement not covered" >i</span>f(accept){<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.addXHRBreakpoint(text,true);<span class="cstat-no" title="statement not covered" >t</span>his._setBreakpoint(text,true);}</span>}</span>
+const config=<span class="cstat-no" title="statement not covered" >new UI.InplaceEditor.Config(finishEditing.bind(this,true),finishEditing.bind(this,false));<span class="cstat-no" title="statement not covered" ></span>UI.InplaceEditor.startEditing(inputElement,config);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etBreakpoint(url,enabled){<span class="cstat-no" title="statement not covered" >if(this._breakpointElements.has(url)){<span class="cstat-no" title="statement not covered" >this._breakpointElements.get(url)._checkboxElement.checked=enabled;<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const element=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','breakpoint-entry');<span class="cstat-no" title="statement not covered" ></span>element._url=url;<span class="cstat-no" title="statement not covered" >e</span>lement.addEventListener('contextmenu',this._contextMenu.bind(this,url),true);c</span>onst title=<span class="cstat-no" title="statement not covered" >url?Common.UIString('URL contains "%s"',url):Common.UIString('Any XHR or fetch');</span>const label=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create(title,enabled);<span class="cstat-no" title="statement not covered" ></span>element.appendChild(label);<span class="cstat-no" title="statement not covered" >l</span>abel.checkboxElement.addEventListener('click',this._checkboxClicked.bind(this,url),false);<span class="cstat-no" title="statement not covered" >e</span>lement._checkboxElement=label.checkboxElement;<span class="cstat-no" title="statement not covered" >l</span>abel.classList.add('cursor-auto');<span class="cstat-no" title="statement not covered" >l</span>abel.textElement.addEventListener('dblclick',this._labelClicked.bind(this,url),false);l</span>et currentElement=(<span class="cstat-no" title="statement not covered" >this._listElement.firstChild)</span>;<span class="cstat-no" title="statement not covered" >while(currentElement){<span class="cstat-no" title="statement not covered" >if(currentElement._url&amp;&amp;currentElement._url&lt;element._url)</span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >c</span>urrentElement=(currentElement.nextSibling);}</span>
+<span class="cstat-no" title="statement not covered" >this._addListElement(element,currentElement);<span class="cstat-no" title="statement not covered" >t</span>his._breakpointElements.set(url,element);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoveBreakpoint(url){const element=<span class="cstat-no" title="statement not covered" >this._breakpointElements.get(url);<span class="cstat-no" title="statement not covered" ></span>if(!element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._removeListElement(element);<span class="cstat-no" title="statement not covered" >t</span>his._breakpointElements.delete(url);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddListElement(element,beforeNode){<span class="cstat-no" title="statement not covered" >this._listElement.insertBefore(element,beforeNode);<span class="cstat-no" title="statement not covered" >t</span>his._emptyElement.classList.add('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._listElement.classList.remove('hidden');}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoveListElement(element){<span class="cstat-no" title="statement not covered" >this._listElement.removeChild(element);<span class="cstat-no" title="statement not covered" >i</span>f(!this._listElement.firstChild){<span class="cstat-no" title="statement not covered" >this._emptyElement.classList.remove('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._listElement.classList.add('hidden');}</span>}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ontextMenu(url,event){const contextMenu=<span class="cstat-no" title="statement not covered" >new UI.ContextMenu(event);</span>function <span class="fstat-no" title="function not covered" >removeBreakpoint(</span>){<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.removeXHRBreakpoint(url);<span class="cstat-no" title="statement not covered" >t</span>his._removeBreakpoint(url);}</span>
+function <span class="fstat-no" title="function not covered" >removeAllBreakpoints(</span>){<span class="cstat-no" title="statement not covered" >for(const url of this._breakpointElements.keys()){<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.removeXHRBreakpoint(url);<span class="cstat-no" title="statement not covered" >t</span>his._removeBreakpoint(url);}</span>}</span>
+const removeAllTitle=<span class="cstat-no" title="statement not covered" >Common.UIString('Remove all breakpoints');<span class="cstat-no" title="statement not covered" ></span>contextMenu.defaultSection().appendItem(Common.UIString('Add breakpoint'),this._addButtonClicked.bind(this));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(Common.UIString('Remove breakpoint'),removeBreakpoint.bind(this));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(removeAllTitle,removeAllBreakpoints.bind(this));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.show();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckboxClicked(url,event){<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.toggleXHRBreakpoint(url,event.target.checked);}</span>
+<span class="fstat-no" title="function not covered" >_l</span>abelClicked(url){const element=<span class="cstat-no" title="statement not covered" >this._breakpointElements.get(url)||null;</span>const inputElement=<span class="cstat-no" title="statement not covered" >createElementWithClass('span','breakpoint-condition');<span class="cstat-no" title="statement not covered" ></span>inputElement.textContent=url;<span class="cstat-no" title="statement not covered" >t</span>his._listElement.insertBefore(inputElement,element);<span class="cstat-no" title="statement not covered" >e</span>lement.classList.add('hidden');f</span>unction <span class="fstat-no" title="function not covered" >finishEditing(</span>accept,e,text){<span class="cstat-no" title="statement not covered" >this._removeListElement(inputElement);<span class="cstat-no" title="statement not covered" >i</span>f(accept){<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.removeXHRBreakpoint(url);<span class="cstat-no" title="statement not covered" >t</span>his._removeBreakpoint(url);c</span>onst enabled=<span class="cstat-no" title="statement not covered" >element?element._checkboxElement.checked:true;<span class="cstat-no" title="statement not covered" ></span>SDK.domDebuggerManager.addXHRBreakpoint(text,enabled);<span class="cstat-no" title="statement not covered" >t</span>his._setBreakpoint(text,enabled);}</span>else{<span class="cstat-no" title="statement not covered" >element.classList.remove('hidden');}</span>}</span>
+<span class="cstat-no" title="statement not covered" >UI.InplaceEditor.startEditing(inputElement,new UI.InplaceEditor.Config(finishEditing.bind(this,true),finishEditing.bind(this,false)));}</span>
+<span class="fstat-no" title="function not covered" >fl</span>avorChanged(object){<span class="cstat-no" title="statement not covered" >this._update();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){const details=<span class="cstat-no" title="statement not covered" >UI.context.flavor(SDK.DebuggerPausedDetails);<span class="cstat-no" title="statement not covered" ></span>if(!details||details.reason!==SDK.DebuggerModel.BreakReason.XHR){<span class="cstat-no" title="statement not covered" >if(this._highlightedElement){<span class="cstat-no" title="statement not covered" >this._highlightedElement.classList.remove('breakpoint-hit');<span class="cstat-no" title="statement not covered" >d</span>elete this._highlightedElement;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return;}</span>
+const url=<span class="cstat-no" title="statement not covered" >details.auxData['breakpointURL'];</span>const element=<span class="cstat-no" title="statement not covered" >this._breakpointElements.get(url);<span class="cstat-no" title="statement not covered" ></span>if(!element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >U</span>I.viewManager.showView('sources.xhrBreakpoints');<span class="cstat-no" title="statement not covered" >e</span>lement.classList.add('breakpoint-hit');<span class="cstat-no" title="statement not covered" >t</span>his._highlightedElement=element;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>estoreBreakpoints(){const breakpoints=<span class="cstat-no" title="statement not covered" >SDK.domDebuggerManager.xhrBreakpoints();<span class="cstat-no" title="statement not covered" ></span>for(const url of breakpoints.keys())</span>
+<span class="cstat-no" title="statement not covered" >this._setBreakpoint(url,breakpoints.get(url));}</span>};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["browser_debugger/domBreakpointsSidebarPane.css"]="/*\n * Copyright 2017 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.breakpoint-list {\n    padding-bottom: 3px;\n}\n\n.breakpoint-list .dom-breakpoint &gt; div {\n    overflow: hidden;\n    text-overflow: ellipsis;\n}\n\n.breakpoint-entry {\n    display: flex;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n    padding: 2px 0;\n}\n\n.breakpoint-list .breakpoint-entry:hover {\n    background-color: #eee;\n}\n\n.breakpoint-hit {\n    background-color: rgb(255, 255, 194);\n}\n\n:host-context(.-theme-with-dark-background) .breakpoint-hit {\n    background-color: hsl(46, 98%, 22%);\n    color: #ccc;\n}\n\n/*# sourceURL=browser_debugger/domBreakpointsSidebarPane.css */";<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources["browser_debugger/eventListenerBreakpoints.css"]="/*\n * Copyright 2016 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n:host {\n    margin: 0;\n    padding: 2px 4px;\n    min-height: 18px;\n}\n\n.tree-outline {\n    padding: 0;\n}\n\n.tree-outline li {\n    margin-left: 14px;\n    -webkit-user-select: text;\n    cursor: default;\n}\n\n.tree-outline li.parent {\n    margin-left: 1px;\n}\n\n.tree-outline li:not(.parent)::before {\n    display: none;\n}\n\n.breakpoint-hit {\n    background-color: rgb(255, 255, 194);\n}\n\n:host-context(.-theme-with-dark-background) .breakpoint-hit {\n    background-color: hsl(46, 98%, 22%);\n    color: #ccc;\n}\n\n.breakpoint-hit .breakpoint-hit-marker {\n    background-color: rgb(255, 255, 194);\n    height: 18px;\n    left: 0;\n    margin-left: -30px;\n    position: absolute;\n    right: -4px;\n    z-index: -1;\n}\n\n/*# sourceURL=browser_debugger/eventListenerBreakpoints.css */";<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources["browser_debugger/xhrBreakpointsSidebarPane.css"]="/*\n * Copyright 2017 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.breakpoint-list {\n    padding-bottom: 3px;\n}\n\n.breakpoint-list .editing.being-edited {\n    overflow: hidden;\n    white-space: nowrap;\n}\n\n.breakpoint-condition {\n    display: block;\n    margin-top: 4px;\n    margin-bottom: 4px;\n    margin-left: 23px;\n    margin-right: 8px;\n}\n\n.breakpoint-condition-input {\n    display: block;\n    margin-left: 0;\n    margin-right: 0;\n    outline: none !important;\n    border: 1px solid rgb(66%, 66%, 66%);\n}\n\n.breakpoint-entry {\n    white-space: nowrap;\n    padding: 2px 0;\n}\n\n.breakpoint-list .breakpoint-entry:hover {\n    background-color: #eee;\n}\n\n.breakpoint-entry [is=dt-checkbox] {\n    max-width: 100%;\n}\n\n.breakpoint-hit {\n    background-color: rgb(255, 255, 194);\n}\n\n:host-context(.-theme-with-dark-background) .breakpoint-hit {\n    background-color: hsl(46, 98%, 22%);\n    color: #ccc;\n}\n\n/*# sourceURL=browser_debugger/xhrBreakpointsSidebarPane.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

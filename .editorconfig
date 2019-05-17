@@ -13,7 +13,7 @@ insert_final_newline = false
 [*.{js,py,vue}]
 charset = utf-8
 
-[*.js]
+[*.js, *.vue]
 indent_style = tab
 indent_size = 2
 

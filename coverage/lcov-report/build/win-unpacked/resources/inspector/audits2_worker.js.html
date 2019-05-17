@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/audits2_worker.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector</a> audits2_worker.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/450</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/225</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/103</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/157</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const allDescriptors=<span class="cstat-no" title="statement not covered" >[];</span>let applicationDescriptor;const _loadedScripts=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(const k of[]){}</span>
+<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(){const baseUrl=<span class="cstat-no" title="statement not covered" >self.location?self.location.origin+self.location.pathname:'';<span class="cstat-no" title="statement not covered" ></span>self._importScriptPathPrefix=baseUrl.substring(0,baseUrl.lastIndexOf('/')+1);}</span>)();c</span>onst REMOTE_MODULE_FALLBACK_REVISION=<span class="cstat-no" title="statement not covered" >'@010ddcfda246975d194964ccf20038ebbdec6084';</span>var Runtime=<span class="cstat-no" title="statement not covered" >class{<span class="fstat-no" title="function not covered" >co</span>nstructor(descriptors){<span class="cstat-no" title="statement not covered" >this._modules=[];<span class="cstat-no" title="statement not covered" >t</span>his._modulesMap={};<span class="cstat-no" title="statement not covered" >t</span>his._extensions=[];<span class="cstat-no" title="statement not covered" >t</span>his._cachedTypeClasses={};<span class="cstat-no" title="statement not covered" >t</span>his._descriptorsMap={};<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;descriptors.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this._registerModule(descriptors[i]);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic loadResourcePromise(url){<span class="cstat-no" title="statement not covered" >return new Promise(load);f</span>unction <span class="fstat-no" title="function not covered" >load(</span>fulfill,reject){const xhr=<span class="cstat-no" title="statement not covered" >new XMLHttpRequest();<span class="cstat-no" title="statement not covered" ></span>xhr.open('GET',url,true);<span class="cstat-no" title="statement not covered" >x</span>hr.onreadystatechange=onreadystatechange;f</span>unction <span class="fstat-no" title="function not covered" >onreadystatechange(</span>e){<span class="cstat-no" title="statement not covered" >if(xhr.readyState!==XMLHttpRequest.DONE)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst status=<span class="cstat-no" title="statement not covered" >/^HTTP\/1.1 404/.test(e.target.response)?404:xhr.status;<span class="cstat-no" title="statement not covered" ></span>if([0,200,304].indexOf(status)===-1)</span>
+<span class="cstat-no" title="statement not covered" >reject(new Error('While loading from url '+url+' server responded with a status of '+status));e</span>lse
+<span class="cstat-no" title="statement not covered" >fulfill(e.target.response);}</span>
+<span class="cstat-no" title="statement not covered" >xhr.send(null);}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic loadResourcePromiseWithFallback(url){<span class="cstat-no" title="statement not covered" >return Runtime.loadResourcePromise(url).catch(<span class="fstat-no" title="function not covered" >er</span>r=&gt;{const urlWithFallbackVersion=<span class="cstat-no" title="statement not covered" >url.replace(/@[0-9a-f]{40}/,REMOTE_MODULE_FALLBACK_REVISION);<span class="cstat-no" title="statement not covered" ></span>if(urlWithFallbackVersion===url||!url.includes('audits2_worker_module'))</span></span>
+<span class="cstat-no" title="statement not covered" >throw err;<span class="cstat-no" title="statement not covered" >r</span>eturn Runtime.loadResourcePromise(urlWithFallbackVersion);}</span>);}
+<span class="fstat-no" title="function not covered" >st</span>atic normalizePath(path){<span class="cstat-no" title="statement not covered" >if(path.indexOf('..')===-1&amp;&amp;path.indexOf('.')===-1)</span>
+<span class="cstat-no" title="statement not covered" >return path;c</span>onst normalizedSegments=<span class="cstat-no" title="statement not covered" >[];</span>const segments=<span class="cstat-no" title="statement not covered" >path.split('/');<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;segments.length;i++){const segment=<span class="cstat-no" title="statement not covered" >segments[i];<span class="cstat-no" title="statement not covered" ></span>if(segment==='.')</span></span>
+<span class="cstat-no" title="statement not covered" >continue;e</span>lse <span class="cstat-no" title="statement not covered" >if(segment==='..')</span>
+<span class="cstat-no" title="statement not covered" >normalizedSegments.pop();e</span>lse <span class="cstat-no" title="statement not covered" >if(segment)</span>
+<span class="cstat-no" title="statement not covered" >normalizedSegments.push(segment);}</span>
+let normalizedPath=<span class="cstat-no" title="statement not covered" >normalizedSegments.join('/');<span class="cstat-no" title="statement not covered" ></span>if(normalizedPath[normalizedPath.length-1]==='/')</span>
+<span class="cstat-no" title="statement not covered" >return normalizedPath;<span class="cstat-no" title="statement not covered" >i</span>f(path[0]==='/'&amp;&amp;normalizedPath)</span>
+<span class="cstat-no" title="statement not covered" >normalizedPath='/'+normalizedPath;<span class="cstat-no" title="statement not covered" >i</span>f((path[path.length-1]==='/')||(segments[segments.length-1]==='.')||(segments[segments.length-1]==='..'))</span>
+<span class="cstat-no" title="statement not covered" >normalizedPath=normalizedPath+'/';<span class="cstat-no" title="statement not covered" >r</span>eturn normalizedPath;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _loadScriptsPromise(scriptNames,base){const promises=<span class="cstat-no" title="statement not covered" >[];</span>const urls=<span class="cstat-no" title="statement not covered" >[];</span>const sources=<span class="cstat-no" title="statement not covered" >new Array(scriptNames.length);</span>let scriptToEval=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;scriptNames.length;++i){const scriptName=<span class="cstat-no" title="statement not covered" >scriptNames[i];</span>let sourceURL=<span class="cstat-no" title="statement not covered" >(base||self._importScriptPathPrefix)+scriptName;</span>const schemaIndex=<span class="cstat-no" title="statement not covered" >sourceURL.indexOf('://')+3;</span>let pathIndex=<span class="cstat-no" title="statement not covered" >sourceURL.indexOf('/',schemaIndex);<span class="cstat-no" title="statement not covered" ></span>if(pathIndex===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >pathIndex=sourceURL.length;<span class="cstat-no" title="statement not covered" >s</span>ourceURL=sourceURL.substring(0,pathIndex)+Runtime.normalizePath(sourceURL.substring(pathIndex));<span class="cstat-no" title="statement not covered" >i</span>f(_loadedScripts[sourceURL])</span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >u</span>rls.push(sourceURL);c</span>onst loadResourcePromise=<span class="cstat-no" title="statement not covered" >base?Runtime.loadResourcePromiseWithFallback(sourceURL):Runtime.loadResourcePromise(sourceURL);<span class="cstat-no" title="statement not covered" ></span>promises.push(loadResourcePromise.then(scriptSourceLoaded.bind(null,i),scriptSourceLoaded.bind(null,i,undefined)));}</span>
+<span class="cstat-no" title="statement not covered" >return Promise.all(promises).then(undefined);f</span>unction <span class="fstat-no" title="function not covered" >scriptSourceLoaded(</span>scriptNumber,scriptSource){<span class="cstat-no" title="statement not covered" >sources[scriptNumber]=scriptSource||'';<span class="cstat-no" title="statement not covered" >w</span>hile(typeof sources[scriptToEval]!=='undefined'){<span class="cstat-no" title="statement not covered" >evaluateScript(urls[scriptToEval],sources[scriptToEval]);<span class="cstat-no" title="statement not covered" >+</span>+scriptToEval;}</span>}</span>
+function <span class="fstat-no" title="function not covered" >evaluateScript(</span>sourceURL,scriptSource){<span class="cstat-no" title="statement not covered" >_loadedScripts[sourceURL]=true;<span class="cstat-no" title="statement not covered" >i</span>f(!scriptSource){<span class="cstat-no" title="statement not covered" >console.error('Empty response arrived for script \''+sourceURL+'\'');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >self.eval(scriptSource+'\n//# sourceURL='+sourceURL);}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic _loadResourceIntoCache(url,appendSourceURL){<span class="cstat-no" title="statement not covered" >return Runtime.loadResourcePromise(url).then(cacheResource.bind(this,url),cacheResource.bind(this,url,undefined));f</span>unction <span class="fstat-no" title="function not covered" >cacheResource(</span>path,content){<span class="cstat-no" title="statement not covered" >if(!content){<span class="cstat-no" title="statement not covered" >console.error('Failed to load resource: '+path);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const sourceURL=<span class="cstat-no" title="statement not covered" >appendSourceURL?Runtime.resolveSourceURL(path):'';<span class="cstat-no" title="statement not covered" ></span>Runtime.cachedResources[path]=content+sourceURL;}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic async appStarted(){<span class="cstat-no" title="statement not covered" >return Runtime._appStartedPromise;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic async startApplication(appName){<span class="cstat-no" title="statement not covered" >console.timeStamp('Runtime.startApplication');c</span>onst allDescriptorsByName=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;allDescriptors.length;++i){const d=<span class="cstat-no" title="statement not covered" >allDescriptors[i];<span class="cstat-no" title="statement not covered" ></span>allDescriptorsByName[d['name']]=d;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!applicationDescriptor){let data=<span class="cstat-no" title="statement not covered" >await Runtime.loadResourcePromise(appName+'.json');<span class="cstat-no" title="statement not covered" ></span>applicationDescriptor=JSON.parse(data);l</span>et descriptor=<span class="cstat-no" title="statement not covered" >applicationDescriptor;<span class="cstat-no" title="statement not covered" ></span>while(descriptor.extends){<span class="cstat-no" title="statement not covered" >data=await Runtime.loadResourcePromise(descriptor.extends+'.json');<span class="cstat-no" title="statement not covered" >d</span>escriptor=JSON.parse(data);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor.modules=descriptor.modules.concat(applicationDescriptor.modules);}</span>}</span></span>
+const configuration=<span class="cstat-no" title="statement not covered" >applicationDescriptor.modules;</span>const moduleJSONPromises=<span class="cstat-no" title="statement not covered" >[];</span>const coreModuleNames=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;configuration.length;++i){const descriptor=<span class="cstat-no" title="statement not covered" >configuration[i];</span>const name=<span class="cstat-no" title="statement not covered" >descriptor['name'];</span>const moduleJSON=<span class="cstat-no" title="statement not covered" >allDescriptorsByName[name];<span class="cstat-no" title="statement not covered" ></span>if(moduleJSON)</span></span>
+<span class="cstat-no" title="statement not covered" >moduleJSONPromises.push(Promise.resolve(moduleJSON));e</span>lse
+<span class="cstat-no" title="statement not covered" >moduleJSONPromises.push(Runtime.loadResourcePromise(name+'/module.json').then(JSON.parse.bind(JSON)));<span class="cstat-no" title="statement not covered" >i</span>f(descriptor['type']==='autostart')</span>
+<span class="cstat-no" title="statement not covered" >coreModuleNames.push(name);}</span>
+const moduleDescriptors=<span class="cstat-no" title="statement not covered" >await Promise.all(moduleJSONPromises);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;moduleDescriptors.length;++i){<span class="cstat-no" title="statement not covered" >moduleDescriptors[i].name=configuration[i]['name'];<span class="cstat-no" title="statement not covered" >m</span>oduleDescriptors[i].condition=configuration[i]['condition'];<span class="cstat-no" title="statement not covered" >m</span>oduleDescriptors[i].remote=configuration[i]['type']==='remote';}</span></span>
+<span class="cstat-no" title="statement not covered" >self.runtime=new Runtime(moduleDescriptors);<span class="cstat-no" title="statement not covered" >i</span>f(coreModuleNames)</span>
+<span class="cstat-no" title="statement not covered" >await self.runtime._loadAutoStartModules(coreModuleNames);<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromiseCallback();}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic startWorker(appName){<span class="cstat-no" title="statement not covered" >return Runtime.startApplication(appName).then(sendWorkerReady);f</span>unction <span class="fstat-no" title="function not covered" >sendWorkerReady(</span>){<span class="cstat-no" title="statement not covered" >self.postMessage('workerReady');}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic queryParam(name){<span class="cstat-no" title="statement not covered" >return Runtime._queryParamsObject.get(name);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic queryParamsString(){<span class="cstat-no" title="statement not covered" >return location.search;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _experimentsSetting(){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >return(JSON.parse(self.localStorage&amp;&amp;self.localStorage['experiments']?self.localStorage['experiments']:'{}'));}</span>catch(e){<span class="cstat-no" title="statement not covered" >console.error('Failed to parse localStorage[\'experiments\']');<span class="cstat-no" title="statement not covered" >r</span>eturn{};}</span>}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _assert(value,message){<span class="cstat-no" title="statement not covered" >if(value)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >R</span>untime._originalAssert.call(Runtime._console,value,message+' '+new Error().stack);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic setPlatform(platform){<span class="cstat-no" title="statement not covered" >Runtime._platform=platform;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _isDescriptorEnabled(descriptor){const activatorExperiment=<span class="cstat-no" title="statement not covered" >descriptor['experiment'];<span class="cstat-no" title="statement not covered" ></span>if(activatorExperiment==='*')</span>
+<span class="cstat-no" title="statement not covered" >return Runtime.experiments.supportEnabled();<span class="cstat-no" title="statement not covered" >i</span>f(activatorExperiment&amp;&amp;activatorExperiment.startsWith('!')&amp;&amp;Runtime.experiments.isEnabled(activatorExperiment.substring(1)))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(activatorExperiment&amp;&amp;!activatorExperiment.startsWith('!')&amp;&amp;!Runtime.experiments.isEnabled(activatorExperiment))</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst condition=<span class="cstat-no" title="statement not covered" >descriptor['condition'];<span class="cstat-no" title="statement not covered" ></span>if(condition&amp;&amp;!condition.startsWith('!')&amp;&amp;!Runtime.queryParam(condition))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(condition&amp;&amp;condition.startsWith('!')&amp;&amp;Runtime.queryParam(condition.substring(1)))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic resolveSourceURL(path){let sourceURL=<span class="cstat-no" title="statement not covered" >self.location.href;<span class="cstat-no" title="statement not covered" ></span>if(self.location.search)</span>
+<span class="cstat-no" title="statement not covered" >sourceURL=sourceURL.replace(self.location.search,'');<span class="cstat-no" title="statement not covered" >s</span>ourceURL=sourceURL.substring(0,sourceURL.lastIndexOf('/')+1)+path;<span class="cstat-no" title="statement not covered" >r</span>eturn'\n/*# sourceURL='+sourceURL+' */';}</span>
+<span class="fstat-no" title="function not covered" >us</span>eTestBase(){<span class="cstat-no" title="statement not covered" >Runtime._remoteBase='http://localhost:8000/inspector-sources/';<span class="cstat-no" title="statement not covered" >i</span>f(Runtime.queryParam('debugFrontend'))</span>
+<span class="cstat-no" title="statement not covered" >Runtime._remoteBase+='debug/';}</span>
+<span class="fstat-no" title="function not covered" >_r</span>egisterModule(descriptor){const module=<span class="cstat-no" title="statement not covered" >new Runtime.Module(this,descriptor);<span class="cstat-no" title="statement not covered" ></span>this._modules.push(module);<span class="cstat-no" title="statement not covered" >t</span>his._modulesMap[descriptor['name']]=module;}</span>
+<span class="fstat-no" title="function not covered" >lo</span>adModulePromise(moduleName){<span class="cstat-no" title="statement not covered" >return this._modulesMap[moduleName]._loadPromise();}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadAutoStartModules(moduleNames){const promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;moduleNames.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >promises.push(this.loadModulePromise(moduleNames[i]));<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.all(promises);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckExtensionApplicability(extension,predicate){<span class="cstat-no" title="statement not covered" >if(!predicate)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst contextTypes=<span class="cstat-no" title="statement not covered" >extension.descriptor().contextTypes;<span class="cstat-no" title="statement not covered" ></span>if(!contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;contextTypes.length;++i){const contextType=<span class="cstat-no" title="statement not covered" >this._resolve(contextTypes[i]);</span>const isMatching=<span class="cstat-no" title="statement not covered" >!!contextType&amp;&amp;predicate(contextType);<span class="cstat-no" title="statement not covered" ></span>if(isMatching)</span></span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >is</span>ExtensionApplicableToContext(extension,context){<span class="cstat-no" title="statement not covered" >if(!context)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >r</span>eturn this._checkExtensionApplicability(extension,isInstanceOf);f</span>unction <span class="fstat-no" title="function not covered" >isInstanceOf(</span>targetType){<span class="cstat-no" title="statement not covered" >return context instanceof targetType;}</span>}
+<span class="fstat-no" title="function not covered" >is</span>ExtensionApplicableToContextTypes(extension,currentContextTypes){<span class="cstat-no" title="statement not covered" >if(!extension.descriptor().contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >r</span>eturn this._checkExtensionApplicability(extension,currentContextTypes?isContextTypeKnown:null);f</span>unction <span class="fstat-no" title="function not covered" >isContextTypeKnown(</span>targetType){<span class="cstat-no" title="statement not covered" >return currentContextTypes.has(targetType);}</span>}
+<span class="fstat-no" title="function not covered" >ex</span>tensions(type,context,sortByTitle){<span class="cstat-no" title="statement not covered" >return this._extensions.filter(filter).sort(sortByTitle?titleComparator:orderComparator);f</span>unction <span class="fstat-no" title="function not covered" >filter(</span>extension){<span class="cstat-no" title="statement not covered" >if(extension._type!==type&amp;&amp;extension._typeClass()!==type)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(!extension.enabled())</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn!context||extension.isApplicable(context);}</span>
+function <span class="fstat-no" title="function not covered" >orderComparator(</span>extension1,extension2){const order1=<span class="cstat-no" title="statement not covered" >extension1.descriptor()['order']||0;</span>const order2=<span class="cstat-no" title="statement not covered" >extension2.descriptor()['order']||0;<span class="cstat-no" title="statement not covered" ></span>return order1-order2;}</span>
+function <span class="fstat-no" title="function not covered" >titleComparator(</span>extension1,extension2){const title1=<span class="cstat-no" title="statement not covered" >extension1.title()||'';</span>const title2=<span class="cstat-no" title="statement not covered" >extension2.title()||'';<span class="cstat-no" title="statement not covered" ></span>return title1.localeCompare(title2);}</span>}
+<span class="fstat-no" title="function not covered" >ex</span>tension(type,context){<span class="cstat-no" title="statement not covered" >return this.extensions(type,context)[0]||null;}</span>
+<span class="fstat-no" title="function not covered" >al</span>lInstances(type,context){<span class="cstat-no" title="statement not covered" >return Promise.all(this.extensions(type,context).map(<span class="fstat-no" title="function not covered" >ex</span>tension=&gt;<span class="cstat-no" title="statement not covered" >extension.instance())</span>);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esolve(typeName){<span class="cstat-no" title="statement not covered" >if(!this._cachedTypeClasses[typeName]){const path=<span class="cstat-no" title="statement not covered" >typeName.split('.');</span>let object=<span class="cstat-no" title="statement not covered" >self;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;object&amp;&amp;(i&lt;path.length);++i)</span></span>
+<span class="cstat-no" title="statement not covered" >object=object[path[i]];<span class="cstat-no" title="statement not covered" >i</span>f(object)</span>
+<span class="cstat-no" title="statement not covered" >this._cachedTypeClasses[typeName]=(object);}</span>
+<span class="cstat-no" title="statement not covered" >return this._cachedTypeClasses[typeName]||null;}</span>
+<span class="fstat-no" title="function not covered" >sh</span>aredInstance(constructorFunction){<span class="cstat-no" title="statement not covered" >if(Runtime._instanceSymbol in constructorFunction&amp;&amp;Object.getOwnPropertySymbols(constructorFunction).includes(Runtime._instanceSymbol))</span>
+<span class="cstat-no" title="statement not covered" >return constructorFunction[Runtime._instanceSymbol];c</span>onst instance=<span class="cstat-no" title="statement not covered" >new constructorFunction();<span class="cstat-no" title="statement not covered" ></span>constructorFunction[Runtime._instanceSymbol]=instance;<span class="cstat-no" title="statement not covered" >r</span>eturn instance;}</span>};<span class="cstat-no" title="statement not covered" >Runtime._queryParamsObject=new URLSearchParams(Runtime.queryParamsString());<span class="cstat-no" title="statement not covered" >R</span>untime._instanceSymbol=Symbol('instance');<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources={__proto__:null};<span class="cstat-no" title="statement not covered" >R</span>untime._console=console;<span class="cstat-no" title="statement not covered" >R</span>untime._originalAssert=console.assert;<span class="cstat-no" title="statement not covered" >R</span>untime._platform='';<span class="cstat-no" title="statement not covered" >R</span>untime.ModuleDescriptor=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.name;<span class="cstat-no" title="statement not covered" >t</span>his.extensions;<span class="cstat-no" title="statement not covered" >t</span>his.dependencies;<span class="cstat-no" title="statement not covered" >t</span>his.scripts;<span class="cstat-no" title="statement not covered" >t</span>his.condition;<span class="cstat-no" title="statement not covered" >t</span>his.remote;}</span>};<span class="cstat-no" title="statement not covered" >R</span>untime.ExtensionDescriptor=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.type;<span class="cstat-no" title="statement not covered" >t</span>his.className;<span class="cstat-no" title="statement not covered" >t</span>his.factoryName;<span class="cstat-no" title="statement not covered" >t</span>his.contextTypes;}</span>};<span class="cstat-no" title="statement not covered" >R</span>untime.Module=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(manager,descriptor){<span class="cstat-no" title="statement not covered" >this._manager=manager;<span class="cstat-no" title="statement not covered" >t</span>his._descriptor=descriptor;<span class="cstat-no" title="statement not covered" >t</span>his._name=descriptor.name;<span class="cstat-no" title="statement not covered" >t</span>his._extensions=[];<span class="cstat-no" title="statement not covered" >t</span>his._extensionsByClassName=new Map();c</span>onst extensions=(<span class="cstat-no" title="statement not covered" >descriptor.extensions)</span>;<span class="cstat-no" title="statement not covered" >for(let i=0;extensions&amp;&amp;i&lt;extensions.length;++i){const extension=<span class="cstat-no" title="statement not covered" >new Runtime.Extension(this,extensions[i]);<span class="cstat-no" title="statement not covered" ></span>this._manager._extensions.push(extension);<span class="cstat-no" title="statement not covered" >t</span>his._extensions.push(extension);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._loadedForTest=false;}</span>
+<span class="fstat-no" title="function not covered" >na</span>me(){<span class="cstat-no" title="statement not covered" >return this._name;}</span>
+<span class="fstat-no" title="function not covered" >en</span>abled(){<span class="cstat-no" title="statement not covered" >return Runtime._isDescriptorEnabled(this._descriptor);}</span>
+<span class="fstat-no" title="function not covered" >re</span>source(name){const fullName=<span class="cstat-no" title="statement not covered" >this._name+'/'+name;</span>const content=<span class="cstat-no" title="statement not covered" >Runtime.cachedResources[fullName];<span class="cstat-no" title="statement not covered" ></span>if(!content)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error(fullName+' not preloaded. Check module.json');<span class="cstat-no" title="statement not covered" >r</span>eturn content;}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadPromise(){<span class="cstat-no" title="statement not covered" >if(!this.enabled())</span>
+<span class="cstat-no" title="statement not covered" >return Promise.reject(new Error('Module '+this._name+' is not enabled'));<span class="cstat-no" title="statement not covered" >i</span>f(this._pendingLoadPromise)</span>
+<span class="cstat-no" title="statement not covered" >return this._pendingLoadPromise;c</span>onst dependencies=<span class="cstat-no" title="statement not covered" >this._descriptor.dependencies;</span>const dependencyPromises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;dependencies&amp;&amp;i&lt;dependencies.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >dependencyPromises.push(this._manager._modulesMap[dependencies[i]]._loadPromise());<span class="cstat-no" title="statement not covered" >t</span>his._pendingLoadPromise=Promise.all(dependencyPromises).then(this._loadResources.bind(this)).then(this._loadScripts.bind(this)).then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._loadedForTest=true)</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn this._pendingLoadPromise;}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadResources(){const resources=<span class="cstat-no" title="statement not covered" >this._descriptor['resources'];<span class="cstat-no" title="statement not covered" ></span>if(!resources||!resources.length)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();c</span>onst promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;resources.length;++i){const url=<span class="cstat-no" title="statement not covered" >this._modularizeURL(resources[i]);<span class="cstat-no" title="statement not covered" ></span>promises.push(Runtime._loadResourceIntoCache(url,true));}</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.all(promises).then(undefined);}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadScripts(){<span class="cstat-no" title="statement not covered" >if(!this._descriptor.scripts||!this._descriptor.scripts.length)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();c</span>onst specialCases=<span class="cstat-no" title="statement not covered" >{'sdk':'SDK','js_sdk':'JSSDK','browser_sdk':'BrowserSDK','ui':'UI','object_ui':'ObjectUI','javascript_metadata':'JavaScriptMetadata','perf_ui':'PerfUI','har_importer':'HARImporter','sdk_test_runner':'SDKTestRunner','cpu_profiler_test_runner':'CPUProfilerTestRunner'};</span>const namespace=<span class="cstat-no" title="statement not covered" >specialCases[this._name]||this._name.split('_').map(<span class="fstat-no" title="function not covered" >a=</span>&gt;<span class="cstat-no" title="statement not covered" >a.substring(0,1).toUpperCase()+a.substring(1))</span>.join('');<span class="cstat-no" title="statement not covered" ></span>self[namespace]=self[namespace]||{};<span class="cstat-no" title="statement not covered" >r</span>eturn Runtime._loadScriptsPromise(this._descriptor.scripts.map(this._modularizeURL,this),this._remoteBase());}</span>
+<span class="fstat-no" title="function not covered" >_m</span>odularizeURL(resourceName){<span class="cstat-no" title="statement not covered" >return Runtime.normalizePath(this._name+'/'+resourceName);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoteBase(){<span class="cstat-no" title="statement not covered" >return!Runtime.queryParam('debugFrontend')&amp;&amp;this._descriptor.remote&amp;&amp;Runtime._remoteBase||undefined;}</span>
+<span class="fstat-no" title="function not covered" >su</span>bstituteURL(value){const base=<span class="cstat-no" title="statement not covered" >this._remoteBase()||'';<span class="cstat-no" title="statement not covered" ></span>return value.replace(/@url\(([^\)]*?)\)/g,convertURL.bind(this));f</span>unction <span class="fstat-no" title="function not covered" >convertURL(</span>match,url){<span class="cstat-no" title="statement not covered" >return base+this._modularizeURL(url);}</span>}};<span class="cstat-no" title="statement not covered" >Runtime.Extension=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(module,descriptor){<span class="cstat-no" title="statement not covered" >this._module=module;<span class="cstat-no" title="statement not covered" >t</span>his._descriptor=descriptor;<span class="cstat-no" title="statement not covered" >t</span>his._type=descriptor.type;<span class="cstat-no" title="statement not covered" >t</span>his._hasTypeClass=this._type.charAt(0)==='@';<span class="cstat-no" title="statement not covered" >t</span>his._className=descriptor.className||null;<span class="cstat-no" title="statement not covered" >t</span>his._factoryName=descriptor.factoryName||null;}</span></span>
+<span class="fstat-no" title="function not covered" >de</span>scriptor(){<span class="cstat-no" title="statement not covered" >return this._descriptor;}</span>
+<span class="fstat-no" title="function not covered" >mo</span>dule(){<span class="cstat-no" title="statement not covered" >return this._module;}</span>
+<span class="fstat-no" title="function not covered" >en</span>abled(){<span class="cstat-no" title="statement not covered" >return this._module.enabled()&amp;&amp;Runtime._isDescriptorEnabled(this.descriptor());}</span>
+<span class="fstat-no" title="function not covered" >_t</span>ypeClass(){<span class="cstat-no" title="statement not covered" >if(!this._hasTypeClass)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn this._module._manager._resolve(this._type.substring(1));}</span>
+<span class="fstat-no" title="function not covered" >is</span>Applicable(context){<span class="cstat-no" title="statement not covered" >return this._module._manager.isExtensionApplicableToContext(this,context);}</span>
+<span class="fstat-no" title="function not covered" >in</span>stance(){<span class="cstat-no" title="statement not covered" >return this._module._loadPromise().then(this._createInstance.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >ca</span>nInstantiate(){<span class="cstat-no" title="statement not covered" >return!!(this._className||this._factoryName);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateInstance(){const className=<span class="cstat-no" title="statement not covered" >this._className||this._factoryName;<span class="cstat-no" title="statement not covered" ></span>if(!className)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Could not instantiate extension with no class');c</span>onst constructorFunction=<span class="cstat-no" title="statement not covered" >self.eval((className));<span class="cstat-no" title="statement not covered" ></span>if(!(constructorFunction instanceof Function))</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Could not instantiate: '+className);<span class="cstat-no" title="statement not covered" >i</span>f(this._className)</span>
+<span class="cstat-no" title="statement not covered" >return this._module._manager.sharedInstance(constructorFunction);<span class="cstat-no" title="statement not covered" >r</span>eturn new constructorFunction(this);}</span>
+<span class="fstat-no" title="function not covered" >ti</span>tle(){<span class="cstat-no" title="statement not covered" >return this._descriptor['title-'+Runtime._platform]||this._descriptor['title'];}</span>
+<span class="fstat-no" title="function not covered" >ha</span>sContextType(contextType){const contextTypes=<span class="cstat-no" title="statement not covered" >this.descriptor().contextTypes;<span class="cstat-no" title="statement not covered" ></span>if(!contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;contextTypes.length;++i){<span class="cstat-no" title="statement not covered" >if(contextType===this._module._manager._resolve(contextTypes[i]))</span></span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>};<span class="cstat-no" title="statement not covered" >Runtime.ExperimentsSupport=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._supportEnabled=Runtime.queryParam('experiments')!==null;<span class="cstat-no" title="statement not covered" >t</span>his._experiments=[];<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames={};<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently={};}</span></span>
+<span class="fstat-no" title="function not covered" >al</span>lConfigurableExperiments(){const result=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._experiments.length;i++){const experiment=<span class="cstat-no" title="statement not covered" >this._experiments[i];<span class="cstat-no" title="statement not covered" ></span>if(!this._enabledTransiently[experiment.name])</span></span>
+<span class="cstat-no" title="statement not covered" >result.push(experiment);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>
+<span class="fstat-no" title="function not covered" >su</span>pportEnabled(){<span class="cstat-no" title="statement not covered" >return this._supportEnabled;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etExperimentsSetting(value){<span class="cstat-no" title="statement not covered" >if(!self.localStorage)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >s</span>elf.localStorage['experiments']=JSON.stringify(value);}</span>
+<span class="fstat-no" title="function not covered" >re</span>gister(experimentName,experimentTitle,hidden){<span class="cstat-no" title="statement not covered" >Runtime._assert(!this._experimentNames[experimentName],'Duplicate registration of experiment '+experimentName);<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames[experimentName]=true;<span class="cstat-no" title="statement not covered" >t</span>his._experiments.push(new Runtime.Experiment(this,experimentName,experimentTitle,!!hidden));}</span>
+<span class="fstat-no" title="function not covered" >is</span>Enabled(experimentName){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);<span class="cstat-no" title="statement not covered" >i</span>f(Runtime._experimentsSetting()[experimentName]===false)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(this._enabledTransiently[experimentName])</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >i</span>f(!this.supportEnabled())</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn!!Runtime._experimentsSetting()[experimentName];}</span>
+<span class="fstat-no" title="function not covered" >se</span>tEnabled(experimentName,enabled){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);c</span>onst experimentsSetting=<span class="cstat-no" title="statement not covered" >Runtime._experimentsSetting();<span class="cstat-no" title="statement not covered" ></span>experimentsSetting[experimentName]=enabled;<span class="cstat-no" title="statement not covered" >t</span>his._setExperimentsSetting(experimentsSetting);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tDefaultExperiments(experimentNames){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;experimentNames.length;++i){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentNames[i]);<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently[experimentNames[i]]=true;}</span>}</span>
+<span class="fstat-no" title="function not covered" >en</span>ableForTest(experimentName){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently[experimentName]=true;}</span>
+<span class="fstat-no" title="function not covered" >cl</span>earForTest(){<span class="cstat-no" title="statement not covered" >this._experiments=[];<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames={};<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently={};}</span>
+<span class="fstat-no" title="function not covered" >cl</span>eanUpStaleExperiments(){const experimentsSetting=<span class="cstat-no" title="statement not covered" >Runtime._experimentsSetting();</span>const cleanedUpExperimentSetting=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._experiments.length;++i){const experimentName=<span class="cstat-no" title="statement not covered" >this._experiments[i].name;<span class="cstat-no" title="statement not covered" ></span>if(experimentsSetting[experimentName])</span></span>
+<span class="cstat-no" title="statement not covered" >cleanedUpExperimentSetting[experimentName]=true;}</span>
+<span class="cstat-no" title="statement not covered" >this._setExperimentsSetting(cleanedUpExperimentSetting);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckExperiment(experimentName){<span class="cstat-no" title="statement not covered" >Runtime._assert(this._experimentNames[experimentName],'Unknown experiment '+experimentName);}</span>};<span class="cstat-no" title="statement not covered" >Runtime.Experiment=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(experiments,name,title,hidden){<span class="cstat-no" title="statement not covered" >this.name=name;<span class="cstat-no" title="statement not covered" >t</span>his.title=title;<span class="cstat-no" title="statement not covered" >t</span>his.hidden=hidden;<span class="cstat-no" title="statement not covered" >t</span>his._experiments=experiments;}</span></span>
+<span class="fstat-no" title="function not covered" >is</span>Enabled(){<span class="cstat-no" title="statement not covered" >return this._experiments.isEnabled(this.name);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tEnabled(enabled){<span class="cstat-no" title="statement not covered" >this._experiments.setEnabled(this.name,enabled);}</span>};<span class="cstat-no" title="statement not covered" >Runtime.experiments=new Runtime.ExperimentsSupport();<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromiseCallback;<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromise=new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfil=&gt;<span class="cstat-no" title="statement not covered" >Runtime._appStartedPromiseCallback=fulfil)</span>;<span class="cstat-no" title="statement not covered" >R</span>untime._remoteBase;<span class="cstat-no" title="statement not covered" >(</span>function <span class="fstat-no" title="function not covered" >validateRemoteBase(</span>){<span class="cstat-no" title="statement not covered" >if(location.href.startsWith('chrome-devtools://devtools/bundled/')&amp;&amp;Runtime.queryParam('remoteBase')){const versionMatch=<span class="cstat-no" title="statement not covered" >/\/serve_file\/(@[0-9a-zA-Z]+)\/?$/.exec(Runtime.queryParam('remoteBase'));<span class="cstat-no" title="statement not covered" ></span>if(versionMatch)</span></span></span>
+<span class="cstat-no" title="statement not covered" >Runtime._remoteBase=`${location.origin}/remote/serve_file/${versionMatch[1]}/`;}</span>})();function <span class="fstat-no" title="function not covered" >ServicePort(</span>){}
+<span class="cstat-no" title="statement not covered" >ServicePort.prototype={setHandlers(messageHandler,closeHandler){},send(message){},close(){}};v</span>ar runtime;<span class="cstat-no" title="statement not covered" >allDescriptors.push(...[{"skip_compilation":["lighthouse/lighthouse-dt-bundle.js"],"dependencies":["worker_service"],"extensions":[{"factoryName":"Audits2Service","type":"@Service","name":"Audits2Service"}],"name":"audits2_worker","scripts":["audits2_worker_module.js"]},{"name":"worker_service"}]);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor={"has_html":false,"modules":[{"type":"remote","name":"audits2_worker"},{"type":"autostart","name":"worker_service"}]}</span>
+<span class="cstat-no" title="statement not covered" >self['WorkerService']=self['WorkerService']||{};f</span>unction <span class="fstat-no" title="function not covered" >Service(</span>){}
+<span class="cstat-no" title="statement not covered" >Service.prototype={dispose(){},setNotify(notify){}};<span class="cstat-no" title="statement not covered" >S</span>erviceDispatcher=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(port){<span class="cstat-no" title="statement not covered" >this._objects=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._lastObjectId=1;<span class="cstat-no" title="statement not covered" >t</span>his._port=port;<span class="cstat-no" title="statement not covered" >t</span>his._port.setHandlers(this._dispatchMessageWrapped.bind(this),this._connectionClosed.bind(this));}</span></span>
+<span class="fstat-no" title="function not covered" >_d</span>ispatchMessageWrapped(data){const message=<span class="cstat-no" title="statement not covered" >JSON.parse(data);<span class="cstat-no" title="statement not covered" ></span>try{<span class="cstat-no" title="statement not covered" >if(!(message instanceof Object)){<span class="cstat-no" title="statement not covered" >this._sendErrorResponse(message['id'],'Malformed message');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._dispatchMessage(message);}</span>catch(e){<span class="cstat-no" title="statement not covered" >this._sendErrorResponse(message['id'],e.toString()+' '+e.stack);}</span>}
+<span class="fstat-no" title="function not covered" >_d</span>ispatchMessage(message){const domainAndMethod=<span class="cstat-no" title="statement not covered" >message['method'].split('.');</span>const serviceName=<span class="cstat-no" title="statement not covered" >domainAndMethod[0];</span>const method=<span class="cstat-no" title="statement not covered" >domainAndMethod[1];<span class="cstat-no" title="statement not covered" ></span>if(method==='create'){const extensions=<span class="cstat-no" title="statement not covered" >self.runtime.extensions(Service).filter(<span class="fstat-no" title="function not covered" >ex</span>tension=&gt;<span class="cstat-no" title="statement not covered" >extension.descriptor()['name']===serviceName)</span>;<span class="cstat-no" title="statement not covered" ></span>if(!extensions.length){<span class="cstat-no" title="statement not covered" >this._sendErrorResponse(message['id'],'Could not resolve service \''+serviceName+'\'');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >extensions[0].instance().then(<span class="fstat-no" title="function not covered" >ob</span>ject=&gt;{const id=<span class="cstat-no" title="statement not covered" >String(this._lastObjectId++);<span class="cstat-no" title="statement not covered" ></span>object.setNotify(this._notify.bind(this,id,serviceName));<span class="cstat-no" title="statement not covered" >t</span>his._objects.set(id,object);<span class="cstat-no" title="statement not covered" >t</span>his._sendResponse(message['id'],{id:id});}</span>);}</span>else <span class="cstat-no" title="statement not covered" >if(method==='dispose'){const object=<span class="cstat-no" title="statement not covered" >this._objects.get(message['params']['id']);<span class="cstat-no" title="statement not covered" ></span>if(!object){<span class="cstat-no" title="statement not covered" >console.error('Could not look up object with id for '+JSON.stringify(message));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._objects.delete(message['params']['id']);<span class="cstat-no" title="statement not covered" >o</span>bject.dispose().then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._sendResponse(message['id'],{}))</span>;}</span>else{<span class="cstat-no" title="statement not covered" >if(!message['params']){<span class="cstat-no" title="statement not covered" >console.error('No params in the message: '+JSON.stringify(message));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const object=<span class="cstat-no" title="statement not covered" >this._objects.get(message['params']['id']);<span class="cstat-no" title="statement not covered" ></span>if(!object){<span class="cstat-no" title="statement not covered" >console.error('Could not look up object with id for '+JSON.stringify(message));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const handler=<span class="cstat-no" title="statement not covered" >object[method];<span class="cstat-no" title="statement not covered" ></span>if(!(handler instanceof Function)){<span class="cstat-no" title="statement not covered" >console.error('Handler for \''+method+'\' is missing.');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >object[method](message['params']).then(<span class="fstat-no" title="function not covered" >re</span>sult=&gt;<span class="cstat-no" title="statement not covered" >this._sendResponse(message['id'],result))</span>;}</span>}
+<span class="fstat-no" title="function not covered" >_c</span>onnectionClosed(){<span class="cstat-no" title="statement not covered" >for(const object of this._objects.values())</span>
+<span class="cstat-no" title="statement not covered" >object.dispose();<span class="cstat-no" title="statement not covered" >t</span>his._objects.clear();}</span>
+<span class="fstat-no" title="function not covered" >_n</span>otify(objectId,serviceName,method,params){<span class="cstat-no" title="statement not covered" >params['id']=objectId;c</span>onst message=<span class="cstat-no" title="statement not covered" >{method:serviceName+'.'+method,params:params};<span class="cstat-no" title="statement not covered" ></span>this._port.send(JSON.stringify(message));}</span>
+<span class="fstat-no" title="function not covered" >_s</span>endResponse(messageId,result){const message=<span class="cstat-no" title="statement not covered" >{id:messageId,result:result};<span class="cstat-no" title="statement not covered" ></span>this._port.send(JSON.stringify(message));}</span>
+<span class="fstat-no" title="function not covered" >_s</span>endErrorResponse(messageId,error){const message=<span class="cstat-no" title="statement not covered" >{id:messageId,error:error};<span class="cstat-no" title="statement not covered" ></span>this._port.send(JSON.stringify(message));}</span>};<span class="cstat-no" title="statement not covered" >WorkerServicePort=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(port){<span class="cstat-no" title="statement not covered" >this._port=port;<span class="cstat-no" title="statement not covered" >t</span>his._port.onmessage=this._onMessage.bind(this);<span class="cstat-no" title="statement not covered" >t</span>his._port.onerror=console.error;}</span></span>
+<span class="fstat-no" title="function not covered" >se</span>tHandlers(messageHandler,closeHandler){<span class="cstat-no" title="statement not covered" >this._messageHandler=messageHandler;<span class="cstat-no" title="statement not covered" >t</span>his._closeHandler=closeHandler;}</span>
+<span class="fstat-no" title="function not covered" >se</span>nd(data){<span class="cstat-no" title="statement not covered" >this._port.postMessage(data);<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.resolve();}</span>
+<span class="fstat-no" title="function not covered" >cl</span>ose(){<span class="cstat-no" title="statement not covered" >return Promise.resolve();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nMessage(event){<span class="cstat-no" title="statement not covered" >this._messageHandler(event.data);}</span>};const dispatchers=<span class="cstat-no" title="statement not covered" >[];</span>const worker=(<span class="cstat-no" title="statement not covered" >self)</span>;const servicePort=<span class="cstat-no" title="statement not covered" >new WorkerServicePort((worker));<span class="cstat-no" title="statement not covered" ></span>dispatchers.push(new ServiceDispatcher(servicePort));;</span>;;<span class="cstat-no" title="statement not covered" >if(!self.Runtime)</span>
+<span class="cstat-no" title="statement not covered" >self.importScripts('Runtime.js');<span class="cstat-no" title="statement not covered" >R</span>untime.startWorker('audits2_worker');</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+<script src="../../../../block-navigation.js"></script>
+</body>
+</html>

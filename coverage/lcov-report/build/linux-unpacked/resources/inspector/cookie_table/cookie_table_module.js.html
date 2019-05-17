@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/cookie_table/cookie_table_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/cookie_table</a> cookie_table_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/180</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/133</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/67</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >CookieTable.CookiesTable=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(saveCallback,refreshCallback,selectedCallback,deleteCallback){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._saveCallback=saveCallback;<span class="cstat-no" title="statement not covered" >t</span>his._refreshCallback=refreshCallback;<span class="cstat-no" title="statement not covered" >t</span>his._deleteCallback=deleteCallback;c</span>onst editable=<span class="cstat-no" title="statement not covered" >!!saveCallback;</span>const columns=(<span class="cstat-no" title="statement not covered" >[{id:'name',title:Common.UIString('Name'),sortable:true,disclosure:editable,sort:DataGrid.DataGrid.Order.Ascending,longText:true,weight:24,editable:editable},{id:'value',title:Common.UIString('Value'),sortable:true,longText:true,weight:34,editable:editable},{id:'domain',title:Common.UIString('Domain'),sortable:true,weight:7,editable:editable},{id:'path',title:Common.UIString('Path'),sortable:true,weight:7,editable:editable},{id:'expires',title:Common.UIString('Expires / Max-Age'),sortable:true,weight:7,editable:editable},{id:'size',title:Common.UIString('Size'),sortable:true,align:DataGrid.DataGrid.Align.Right,weight:7},{id:'httpOnly',title:Common.UIString('HTTP'),sortable:true,align:DataGrid.DataGrid.Align.Center,weight:7},{id:'secure',title:Common.UIString('Secure'),sortable:true,align:DataGrid.DataGrid.Align.Center,weight:7},{id:'sameSite',title:Common.UIString('SameSite'),sortable:true,align:DataGrid.DataGrid.Align.Center,weight:7}])</span>;<span class="cstat-no" title="statement not covered" >if(editable){<span class="cstat-no" title="statement not covered" >this._dataGrid=new DataGrid.DataGrid(columns,this._onUpdateCookie.bind(this),this._onDeleteCookie.bind(this),refreshCallback);}</span>else{<span class="cstat-no" title="statement not covered" >this._dataGrid=new DataGrid.DataGrid(columns);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.setStriped(true);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.setName('cookiesTable');<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.addEventListener(DataGrid.DataGrid.Events.SortingChanged,this._rebuildTable,this);<span class="cstat-no" title="statement not covered" >i</span>f(selectedCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.addEventListener(DataGrid.DataGrid.Events.SelectedNode,selectedCallback,this);<span class="cstat-no" title="statement not covered" >t</span>his._lastEditedColumnId=null;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.asWidget().show(this.element);<span class="cstat-no" title="statement not covered" >t</span>his._data=[];<span class="cstat-no" title="statement not covered" >t</span>his._cookieDomain='';}</span>
+<span class="fstat-no" title="function not covered" >se</span>tCookies(cookies){<span class="cstat-no" title="statement not covered" >this.setCookieFolders([{cookies:cookies}]);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tCookieFolders(cookieFolders){<span class="cstat-no" title="statement not covered" >this._data=cookieFolders;<span class="cstat-no" title="statement not covered" >t</span>his._rebuildTable();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tCookieDomain(cookieDomain){<span class="cstat-no" title="statement not covered" >this._cookieDomain=cookieDomain;}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectedCookie(){const node=<span class="cstat-no" title="statement not covered" >this._dataGrid.selectedNode;<span class="cstat-no" title="statement not covered" ></span>return node?node.cookie:null;}</span>
+<span class="fstat-no" title="function not covered" >_g</span>etSelectionCookies(){const node=<span class="cstat-no" title="statement not covered" >this._dataGrid.selectedNode;</span>const nextNeighbor=<span class="cstat-no" title="statement not covered" >node&amp;&amp;node.traverseNextNode(true);</span>const previousNeighbor=<span class="cstat-no" title="statement not covered" >node&amp;&amp;node.traversePreviousNode(true);<span class="cstat-no" title="statement not covered" ></span>return{current:node&amp;&amp;node.cookie,neighbor:(nextNeighbor&amp;&amp;nextNeighbor.cookie)||(previousNeighbor&amp;&amp;previousNeighbor.cookie)};}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >this._lastEditedColumnId=null;}</span>
+<span class="fstat-no" title="function not covered" >_f</span>indSelectedCookie(selectionCookies,cookies){<span class="cstat-no" title="statement not covered" >if(!cookies)</span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst current=<span class="cstat-no" title="statement not covered" >selectionCookies.current;</span>const foundCurrent=<span class="cstat-no" title="statement not covered" >cookies.find(<span class="fstat-no" title="function not covered" >co</span>okie=&gt;<span class="cstat-no" title="statement not covered" >this._isSameCookie(cookie,current))</span>;<span class="cstat-no" title="statement not covered" ></span>if(foundCurrent)</span>
+<span class="cstat-no" title="statement not covered" >return foundCurrent;c</span>onst neighbor=<span class="cstat-no" title="statement not covered" >selectionCookies.neighbor;</span>const foundNeighbor=<span class="cstat-no" title="statement not covered" >cookies.find(<span class="fstat-no" title="function not covered" >co</span>okie=&gt;<span class="cstat-no" title="statement not covered" >this._isSameCookie(cookie,neighbor))</span>;<span class="cstat-no" title="statement not covered" ></span>if(foundNeighbor)</span>
+<span class="cstat-no" title="statement not covered" >return foundNeighbor;<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sSameCookie(cookieA,cookieB){<span class="cstat-no" title="statement not covered" >return!!cookieB&amp;&amp;cookieB.name()===cookieA.name()&amp;&amp;cookieB.domain()===cookieA.domain()&amp;&amp;cookieB.path()===cookieA.path();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>ebuildTable(){const selectionCookies=<span class="cstat-no" title="statement not covered" >this._getSelectionCookies();</span>const lastEditedColumnId=<span class="cstat-no" title="statement not covered" >this._lastEditedColumnId;<span class="cstat-no" title="statement not covered" ></span>this._lastEditedColumnId=null;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.rootNode().removeChildren();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._data.length;++i){const item=<span class="cstat-no" title="statement not covered" >this._data[i];</span>const selectedCookie=<span class="cstat-no" title="statement not covered" >this._findSelectedCookie(selectionCookies,item.cookies);<span class="cstat-no" title="statement not covered" ></span>if(item.folderName){const groupData=<span class="cstat-no" title="statement not covered" >{name:item.folderName,value:'',domain:'',path:'',expires:'',size:this._totalSize(item.cookies),httpOnly:'',secure:'',sameSite:''};</span>const groupNode=<span class="cstat-no" title="statement not covered" >new DataGrid.DataGridNode(groupData);<span class="cstat-no" title="statement not covered" ></span>groupNode.selectable=true;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.rootNode().appendChild(groupNode);<span class="cstat-no" title="statement not covered" >g</span>roupNode.element().classList.add('row-group');<span class="cstat-no" title="statement not covered" >t</span>his._populateNode(groupNode,item.cookies,selectedCookie,lastEditedColumnId);<span class="cstat-no" title="statement not covered" >g</span>roupNode.expand();}</span>else{<span class="cstat-no" title="statement not covered" >this._populateNode(this._dataGrid.rootNode(),item.cookies,selectedCookie,lastEditedColumnId);}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(selectionCookies.current&amp;&amp;lastEditedColumnId&amp;&amp;!this._dataGrid.selectedNode)</span>
+<span class="cstat-no" title="statement not covered" >this._addInactiveNode(this._dataGrid.rootNode(),selectionCookies.current,lastEditedColumnId);<span class="cstat-no" title="statement not covered" >i</span>f(this._saveCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.addCreationNode(false);}</span>
+<span class="fstat-no" title="function not covered" >_p</span>opulateNode(parentNode,cookies,selectedCookie,lastEditedColumnId){<span class="cstat-no" title="statement not covered" >parentNode.removeChildren();<span class="cstat-no" title="statement not covered" >i</span>f(!cookies)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._sortCookies(cookies);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;cookies.length;++i){const cookie=<span class="cstat-no" title="statement not covered" >cookies[i];</span>const cookieNode=<span class="cstat-no" title="statement not covered" >this._createGridNode(cookie);<span class="cstat-no" title="statement not covered" ></span>parentNode.appendChild(cookieNode);<span class="cstat-no" title="statement not covered" >i</span>f(this._isSameCookie(cookie,selectedCookie)){<span class="cstat-no" title="statement not covered" >cookieNode.select();<span class="cstat-no" title="statement not covered" >i</span>f(lastEditedColumnId!==null)</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.startEditingNextEditableColumnOfDataGridNode(cookieNode,lastEditedColumnId);}</span>}}
+<span class="fstat-no" title="function not covered" >_a</span>ddInactiveNode(parentNode,cookie,editedColumnId){const cookieNode=<span class="cstat-no" title="statement not covered" >this._createGridNode(cookie);<span class="cstat-no" title="statement not covered" ></span>parentNode.appendChild(cookieNode);<span class="cstat-no" title="statement not covered" >c</span>ookieNode.select();<span class="cstat-no" title="statement not covered" >c</span>ookieNode.setInactive(true);<span class="cstat-no" title="statement not covered" >i</span>f(editedColumnId!==null)</span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.startEditingNextEditableColumnOfDataGridNode(cookieNode,editedColumnId);}</span>
+<span class="fstat-no" title="function not covered" >_t</span>otalSize(cookies){let totalSize=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;cookies&amp;&amp;i&lt;cookies.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >totalSize+=cookies[i].size();<span class="cstat-no" title="statement not covered" >r</span>eturn totalSize;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>ortCookies(cookies){const sortDirection=<span class="cstat-no" title="statement not covered" >this._dataGrid.isSortOrderAscending()?1:-1;</span>function <span class="fstat-no" title="function not covered" >getValue(</span>cookie,property){<span class="cstat-no" title="statement not covered" >return typeof cookie[property]==='function'?String(cookie[property]()):String(cookie.name());}</span>
+function <span class="fstat-no" title="function not covered" >compareTo(</span>property,cookie1,cookie2){<span class="cstat-no" title="statement not covered" >return sortDirection*getValue(cookie1,property).compareTo(getValue(cookie2,property));}</span>
+function <span class="fstat-no" title="function not covered" >numberCompare(</span>cookie1,cookie2){<span class="cstat-no" title="statement not covered" >return sortDirection*(cookie1.size()-cookie2.size());}</span>
+function <span class="fstat-no" title="function not covered" >expiresCompare(</span>cookie1,cookie2){<span class="cstat-no" title="statement not covered" >if(cookie1.session()!==cookie2.session())</span>
+<span class="cstat-no" title="statement not covered" >return sortDirection*(cookie1.session()?1:-1);<span class="cstat-no" title="statement not covered" >i</span>f(cookie1.session())</span>
+<span class="cstat-no" title="statement not covered" >return 0;<span class="cstat-no" title="statement not covered" >i</span>f(cookie1.maxAge()&amp;&amp;cookie2.maxAge())</span>
+<span class="cstat-no" title="statement not covered" >return sortDirection*(cookie1.maxAge()-cookie2.maxAge());<span class="cstat-no" title="statement not covered" >i</span>f(cookie1.expires()&amp;&amp;cookie2.expires())</span>
+<span class="cstat-no" title="statement not covered" >return sortDirection*(cookie1.expires()-cookie2.expires());<span class="cstat-no" title="statement not covered" >r</span>eturn sortDirection*(cookie1.expires()?1:-1);}</span>
+let comparator;const columnId=<span class="cstat-no" title="statement not covered" >this._dataGrid.sortColumnId()||'name';<span class="cstat-no" title="statement not covered" ></span>if(columnId==='expires')</span>
+<span class="cstat-no" title="statement not covered" >comparator=expiresCompare;e</span>lse <span class="cstat-no" title="statement not covered" >if(columnId==='size')</span>
+<span class="cstat-no" title="statement not covered" >comparator=numberCompare;e</span>lse
+<span class="cstat-no" title="statement not covered" >comparator=compareTo.bind(null,columnId);<span class="cstat-no" title="statement not covered" >c</span>ookies.sort(comparator);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateGridNode(cookie){const data=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>data.name=cookie.name();<span class="cstat-no" title="statement not covered" >d</span>ata.value=cookie.value();<span class="cstat-no" title="statement not covered" >i</span>f(cookie.type()===SDK.Cookie.Type.Request){<span class="cstat-no" title="statement not covered" >data.domain=Common.UIString('N/A');<span class="cstat-no" title="statement not covered" >d</span>ata.path=Common.UIString('N/A');<span class="cstat-no" title="statement not covered" >d</span>ata.expires=Common.UIString('N/A');}</span>else{<span class="cstat-no" title="statement not covered" >data.domain=cookie.domain()||'';<span class="cstat-no" title="statement not covered" >d</span>ata.path=cookie.path()||'';<span class="cstat-no" title="statement not covered" >i</span>f(cookie.maxAge()){<span class="cstat-no" title="statement not covered" >data.expires=Number.secondsToString(parseInt(cookie.maxAge(),10));}</span>else <span class="cstat-no" title="statement not covered" >if(cookie.expires()){<span class="cstat-no" title="statement not covered" >if(cookie.expires()&lt;0)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >data.expires='N/A';e</span>lse
+<span class="cstat-no" title="statement not covered" >data.expires=new Date(cookie.expires()).toISOString();}</span>else{<span class="cstat-no" title="statement not covered" >data.expires=CookieTable.CookiesTable._expiresSessionValue;}</span>}
+<span class="cstat-no" title="statement not covered" >data.size=cookie.size();c</span>onst checkmark=<span class="cstat-no" title="statement not covered" >'\u2713';<span class="cstat-no" title="statement not covered" ></span>data.httpOnly=(cookie.httpOnly()?checkmark:'');<span class="cstat-no" title="statement not covered" >d</span>ata.secure=(cookie.secure()?checkmark:'');<span class="cstat-no" title="statement not covered" >d</span>ata.sameSite=cookie.sameSite()||'';c</span>onst node=<span class="cstat-no" title="statement not covered" >new DataGrid.DataGridNode(data);<span class="cstat-no" title="statement not covered" ></span>node.cookie=cookie;<span class="cstat-no" title="statement not covered" >n</span>ode.selectable=true;<span class="cstat-no" title="statement not covered" >r</span>eturn node;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nDeleteCookie(node){<span class="cstat-no" title="statement not covered" >if(node.cookie&amp;&amp;this._deleteCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._deleteCallback(node.cookie,<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._refresh())</span>;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nUpdateCookie(editingNode,columnIdentifier,oldText,newText){<span class="cstat-no" title="statement not covered" >this._lastEditedColumnId=columnIdentifier;<span class="cstat-no" title="statement not covered" >t</span>his._setDefaults(editingNode);<span class="cstat-no" title="statement not covered" >i</span>f(this._isValidCookieData(editingNode.data))</span>
+<span class="cstat-no" title="statement not covered" >this._saveNode(editingNode);e</span>lse
+<span class="cstat-no" title="statement not covered" >editingNode.setDirty(true);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etDefaults(node){<span class="cstat-no" title="statement not covered" >if(node.data.name===null)</span>
+<span class="cstat-no" title="statement not covered" >node.data.name='';<span class="cstat-no" title="statement not covered" >i</span>f(node.data.value===null)</span>
+<span class="cstat-no" title="statement not covered" >node.data.value='';<span class="cstat-no" title="statement not covered" >i</span>f(node.data.domain===null)</span>
+<span class="cstat-no" title="statement not covered" >node.data.domain=this._cookieDomain;<span class="cstat-no" title="statement not covered" >i</span>f(node.data.path===null)</span>
+<span class="cstat-no" title="statement not covered" >node.data.path='/';<span class="cstat-no" title="statement not covered" >i</span>f(node.data.expires===null)</span>
+<span class="cstat-no" title="statement not covered" >node.data.expires=CookieTable.CookiesTable._expiresSessionValue;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>aveNode(node){const oldCookie=<span class="cstat-no" title="statement not covered" >node.cookie;</span>const newCookie=<span class="cstat-no" title="statement not covered" >this._createCookieFromData(node.data);<span class="cstat-no" title="statement not covered" ></span>node.cookie=newCookie;<span class="cstat-no" title="statement not covered" >t</span>his._saveCallback(newCookie,oldCookie).then(<span class="fstat-no" title="function not covered" >su</span>ccess=&gt;{<span class="cstat-no" title="statement not covered" >if(success)</span></span>
+<span class="cstat-no" title="statement not covered" >this._refresh();e</span>lse
+<span class="cstat-no" title="statement not covered" >node.setDirty(true);}</span>);}
+<span class="fstat-no" title="function not covered" >_c</span>reateCookieFromData(data){const cookie=<span class="cstat-no" title="statement not covered" >new SDK.Cookie(data.name,data.value,null);<span class="cstat-no" title="statement not covered" ></span>cookie.addAttribute('domain',data.domain);<span class="cstat-no" title="statement not covered" >c</span>ookie.addAttribute('path',data.path);<span class="cstat-no" title="statement not covered" >i</span>f(data.expires&amp;&amp;data.expires!==CookieTable.CookiesTable._expiresSessionValue)</span>
+<span class="cstat-no" title="statement not covered" >cookie.addAttribute('expires',(new Date(data.expires)).toUTCString());<span class="cstat-no" title="statement not covered" >i</span>f(data.httpOnly)</span>
+<span class="cstat-no" title="statement not covered" >cookie.addAttribute('httpOnly');<span class="cstat-no" title="statement not covered" >i</span>f(data.secure)</span>
+<span class="cstat-no" title="statement not covered" >cookie.addAttribute('secure');<span class="cstat-no" title="statement not covered" >i</span>f(data.sameSite)</span>
+<span class="cstat-no" title="statement not covered" >cookie.addAttribute('sameSite',data.sameSite);<span class="cstat-no" title="statement not covered" >c</span>ookie.setSize(data.name.length+data.value.length);<span class="cstat-no" title="statement not covered" >r</span>eturn cookie;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sValidCookieData(data){<span class="cstat-no" title="statement not covered" >return(data.name||data.value)&amp;&amp;this._isValidDomain(data.domain)&amp;&amp;this._isValidPath(data.path)&amp;&amp;this._isValidDate(data.expires);}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sValidDomain(domain){<span class="cstat-no" title="statement not covered" >if(!domain)</span>
+<span class="cstat-no" title="statement not covered" >return true;c</span>onst parsedURL=<span class="cstat-no" title="statement not covered" >('http://'+domain).asParsedURL();<span class="cstat-no" title="statement not covered" ></span>return!!parsedURL&amp;&amp;parsedURL.domain()===domain;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sValidPath(path){const parsedURL=<span class="cstat-no" title="statement not covered" >('http://example.com'+path).asParsedURL();<span class="cstat-no" title="statement not covered" ></span>return!!parsedURL&amp;&amp;parsedURL.path===path;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sValidDate(date){<span class="cstat-no" title="statement not covered" >return date===''||date===CookieTable.CookiesTable._expiresSessionValue||!isNaN(Date.parse(date));}</span>
+<span class="fstat-no" title="function not covered" >_r</span>efresh(){<span class="cstat-no" title="statement not covered" >if(this._refreshCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._refreshCallback();}</span>};<span class="cstat-no" title="statement not covered" >CookieTable.CookiesTable._expiresSessionValue=Common.UIString('Session');;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

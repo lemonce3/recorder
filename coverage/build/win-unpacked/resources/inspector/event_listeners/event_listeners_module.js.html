@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/event_listeners/event_listeners_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/event_listeners</a> event_listeners_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/314</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/174</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/58</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/104</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >EventListeners.EventListenersResult;<span class="cstat-no" title="statement not covered" >E</span>ventListeners.EventListenersView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(changeCallback){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._changeCallback=changeCallback;<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline=new UI.TreeOutlineInShadow();<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.hideOverflow();<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.registerRequiredCSS('object_ui/objectValue.css');<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.registerRequiredCSS('event_listeners/eventListenersView.css');<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.setComparator(EventListeners.EventListenersTreeElement.comparator);<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.element.classList.add('monospace');<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.setShowSelectionOnKeyboardFocus(true);<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.setFocusable(true);<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(this._treeOutline.element);<span class="cstat-no" title="statement not covered" >t</span>his._emptyHolder=createElementWithClass('div','gray-info-message');<span class="cstat-no" title="statement not covered" >t</span>his._emptyHolder.textContent=Common.UIString('No event listeners');<span class="cstat-no" title="statement not covered" >t</span>his._linkifier=new Components.Linkifier();<span class="cstat-no" title="statement not covered" >t</span>his._treeItemMap=new Map();}</span></span>
+<span class="fstat-no" title="function not covered" >as</span>ync addObjects(objects){<span class="cstat-no" title="statement not covered" >this.reset();<span class="cstat-no" title="statement not covered" >a</span>wait Promise.all(objects.map(<span class="fstat-no" title="function not covered" >ob</span>j=&gt;<span class="cstat-no" title="statement not covered" >obj?this._addObject(obj):Promise.resolve())</span>);<span class="cstat-no" title="statement not covered" >t</span>his.addEmptyHolderIfNeeded();<span class="cstat-no" title="statement not covered" >t</span>his._eventListenersArrivedForTest();}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddObject(object){let eventListeners;let frameworkEventListenersObject=<span class="cstat-no" title="statement not covered" >null;</span>const promises=<span class="cstat-no" title="statement not covered" >[];</span>const domDebuggerModel=<span class="cstat-no" title="statement not covered" >object.runtimeModel().target().model(SDK.DOMDebuggerModel);<span class="cstat-no" title="statement not covered" ></span>if(domDebuggerModel)</span>
+<span class="cstat-no" title="statement not covered" >promises.push(domDebuggerModel.eventListeners(object).then(storeEventListeners));<span class="cstat-no" title="statement not covered" >p</span>romises.push(EventListeners.frameworkEventListeners(object).then(storeFrameworkEventListenersObject));<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.all(promises).then(markInternalEventListeners).then(addEventListeners.bind(this));f</span>unction <span class="fstat-no" title="function not covered" >storeEventListeners(</span>result){<span class="cstat-no" title="statement not covered" >eventListeners=result;}</span>
+function <span class="fstat-no" title="function not covered" >storeFrameworkEventListenersObject(</span>result){<span class="cstat-no" title="statement not covered" >frameworkEventListenersObject=result;}</span>
+function <span class="fstat-no" title="function not covered" >markInternalEventListeners(</span>){<span class="cstat-no" title="statement not covered" >if(!frameworkEventListenersObject.internalHandlers)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(undefined);<span class="cstat-no" title="statement not covered" >r</span>eturn frameworkEventListenersObject.internalHandlers.object().callFunctionJSON(isInternalEventListener,eventListeners.map(handlerArgument)).then(setIsInternal);f</span>unction <span class="fstat-no" title="function not covered" >handlerArgument(</span>listener){<span class="cstat-no" title="statement not covered" >return SDK.RemoteObject.toCallArgument(listener.handler());}</span>
+function <span class="fstat-no" title="function not covered" >isInternalEventListener(</span>){const isInternal=<span class="cstat-no" title="statement not covered" >[];</span>const internalHandlersSet=<span class="cstat-no" title="statement not covered" >new Set(this);<span class="cstat-no" title="statement not covered" ></span>for(const handler of arguments)</span>
+<span class="cstat-no" title="statement not covered" >isInternal.push(internalHandlersSet.has(handler));<span class="cstat-no" title="statement not covered" >r</span>eturn isInternal;}</span>
+function <span class="fstat-no" title="function not covered" >setIsInternal(</span>isInternal){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;eventListeners.length;++i){<span class="cstat-no" title="statement not covered" >if(isInternal[i])</span></span>
+<span class="cstat-no" title="statement not covered" >eventListeners[i].markAsFramework();}</span>}}
+function <span class="fstat-no" title="function not covered" >addEventListeners(</span>){<span class="cstat-no" title="statement not covered" >this._addObjectEventListeners(object,eventListeners);<span class="cstat-no" title="statement not covered" >t</span>his._addObjectEventListeners(object,frameworkEventListenersObject.eventListeners);}</span>}
+<span class="fstat-no" title="function not covered" >_a</span>ddObjectEventListeners(object,eventListeners){<span class="cstat-no" title="statement not covered" >if(!eventListeners)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >f</span>or(const eventListener of eventListeners){const treeItem=<span class="cstat-no" title="statement not covered" >this._getOrCreateTreeElementForType(eventListener.type());<span class="cstat-no" title="statement not covered" ></span>treeItem.addObjectEventListener(eventListener,object);}</span>}</span>
+<span class="fstat-no" title="function not covered" >sh</span>owFrameworkListeners(showFramework,showPassive,showBlocking){const eventTypes=<span class="cstat-no" title="statement not covered" >this._treeOutline.rootElement().children();<span class="cstat-no" title="statement not covered" ></span>for(const eventType of eventTypes){let hiddenEventType=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>for(const listenerElement of eventType.children()){const listenerOrigin=<span class="cstat-no" title="statement not covered" >listenerElement.eventListener().origin();</span>let hidden=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>if(listenerOrigin===SDK.EventListener.Origin.FrameworkUser&amp;&amp;!showFramework)</span></span></span>
+<span class="cstat-no" title="statement not covered" >hidden=true;<span class="cstat-no" title="statement not covered" >i</span>f(listenerOrigin===SDK.EventListener.Origin.Framework&amp;&amp;showFramework)</span>
+<span class="cstat-no" title="statement not covered" >hidden=true;<span class="cstat-no" title="statement not covered" >i</span>f(!showPassive&amp;&amp;listenerElement.eventListener().passive())</span>
+<span class="cstat-no" title="statement not covered" >hidden=true;<span class="cstat-no" title="statement not covered" >i</span>f(!showBlocking&amp;&amp;!listenerElement.eventListener().passive())</span>
+<span class="cstat-no" title="statement not covered" >hidden=true;<span class="cstat-no" title="statement not covered" >l</span>istenerElement.hidden=hidden;<span class="cstat-no" title="statement not covered" >h</span>iddenEventType=hiddenEventType&amp;&amp;hidden;}</span>
+<span class="cstat-no" title="statement not covered" >eventType.hidden=hiddenEventType;}</span>}
+<span class="fstat-no" title="function not covered" >_g</span>etOrCreateTreeElementForType(type){let treeItem=<span class="cstat-no" title="statement not covered" >this._treeItemMap.get(type);<span class="cstat-no" title="statement not covered" ></span>if(!treeItem){<span class="cstat-no" title="statement not covered" >treeItem=new EventListeners.EventListenersTreeElement(type,this._linkifier,this._changeCallback);<span class="cstat-no" title="statement not covered" >t</span>his._treeItemMap.set(type,treeItem);<span class="cstat-no" title="statement not covered" >t</span>reeItem.hidden=true;<span class="cstat-no" title="statement not covered" >t</span>his._treeOutline.appendChild(treeItem);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._emptyHolder.remove();<span class="cstat-no" title="statement not covered" >r</span>eturn treeItem;}</span>
+<span class="fstat-no" title="function not covered" >ad</span>dEmptyHolderIfNeeded(){let allHidden=<span class="cstat-no" title="statement not covered" >true;</span>let firstVisibleChild=<span class="cstat-no" title="statement not covered" >null;<span class="cstat-no" title="statement not covered" ></span>for(const eventType of this._treeOutline.rootElement().children()){<span class="cstat-no" title="statement not covered" >eventType.hidden=!eventType.firstChild();<span class="cstat-no" title="statement not covered" >a</span>llHidden=allHidden&amp;&amp;eventType.hidden;<span class="cstat-no" title="statement not covered" >i</span>f(!firstVisibleChild&amp;&amp;!eventType.hidden)</span></span>
+<span class="cstat-no" title="statement not covered" >firstVisibleChild=eventType;}</span>
+<span class="cstat-no" title="statement not covered" >if(allHidden&amp;&amp;!this._emptyHolder.parentNode)</span>
+<span class="cstat-no" title="statement not covered" >this.element.appendChild(this._emptyHolder);<span class="cstat-no" title="statement not covered" >i</span>f(firstVisibleChild)</span>
+<span class="cstat-no" title="statement not covered" >firstVisibleChild.select(true);}</span>
+<span class="fstat-no" title="function not covered" >re</span>set(){const eventTypes=<span class="cstat-no" title="statement not covered" >this._treeOutline.rootElement().children();<span class="cstat-no" title="statement not covered" ></span>for(const eventType of eventTypes)</span>
+<span class="cstat-no" title="statement not covered" >eventType.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._linkifier.reset();}</span>
+<span class="fstat-no" title="function not covered" >_e</span>ventListenersArrivedForTest(){}};<span class="cstat-no" title="statement not covered" >EventListeners.EventListenersTreeElement=class extends UI.TreeElement{<span class="fstat-no" title="function not covered" >co</span>nstructor(type,linkifier,changeCallback){<span class="cstat-no" title="statement not covered" >super(type);<span class="cstat-no" title="statement not covered" >t</span>his.toggleOnClick=true;<span class="cstat-no" title="statement not covered" >t</span>his._linkifier=linkifier;<span class="cstat-no" title="statement not covered" >t</span>his._changeCallback=changeCallback;}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic comparator(element1,element2){<span class="cstat-no" title="statement not covered" >if(element1.title===element2.title)</span>
+<span class="cstat-no" title="statement not covered" >return 0;<span class="cstat-no" title="statement not covered" >r</span>eturn element1.title&gt;element2.title?1:-1;}</span>
+<span class="fstat-no" title="function not covered" >ad</span>dObjectEventListener(eventListener,object){const treeElement=<span class="cstat-no" title="statement not covered" >new EventListeners.ObjectEventListenerBar(eventListener,object,this._linkifier,this._changeCallback);<span class="cstat-no" title="statement not covered" ></span>this.appendChild((treeElement));}</span>};<span class="cstat-no" title="statement not covered" >EventListeners.ObjectEventListenerBar=class extends UI.TreeElement{<span class="fstat-no" title="function not covered" >co</span>nstructor(eventListener,object,linkifier,changeCallback){<span class="cstat-no" title="statement not covered" >super('',true);<span class="cstat-no" title="statement not covered" >t</span>his._eventListener=eventListener;<span class="cstat-no" title="statement not covered" >t</span>his.editable=false;<span class="cstat-no" title="statement not covered" >t</span>his._setTitle(object,linkifier);<span class="cstat-no" title="statement not covered" >t</span>his._changeCallback=changeCallback;}</span></span>
+<span class="fstat-no" title="function not covered" >on</span>populate(){const properties=<span class="cstat-no" title="statement not covered" >[];</span>const eventListener=<span class="cstat-no" title="statement not covered" >this._eventListener;</span>const runtimeModel=<span class="cstat-no" title="statement not covered" >eventListener.domDebuggerModel().runtimeModel();<span class="cstat-no" title="statement not covered" ></span>properties.push(runtimeModel.createRemotePropertyFromPrimitiveValue('useCapture',eventListener.useCapture()));<span class="cstat-no" title="statement not covered" >p</span>roperties.push(runtimeModel.createRemotePropertyFromPrimitiveValue('passive',eventListener.passive()));<span class="cstat-no" title="statement not covered" >p</span>roperties.push(runtimeModel.createRemotePropertyFromPrimitiveValue('once',eventListener.once()));<span class="cstat-no" title="statement not covered" >i</span>f(typeof eventListener.handler()!=='undefined')</span>
+<span class="cstat-no" title="statement not covered" >properties.push(new SDK.RemoteObjectProperty('handler',eventListener.handler()));<span class="cstat-no" title="statement not covered" >O</span>bjectUI.ObjectPropertyTreeElement.populateWithProperties(this,properties,[],true,null);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etTitle(object,linkifier){const title=<span class="cstat-no" title="statement not covered" >this.listItemElement.createChild('span');</span>const subtitle=<span class="cstat-no" title="statement not covered" >this.listItemElement.createChild('span','event-listener-tree-subtitle');<span class="cstat-no" title="statement not covered" ></span>subtitle.appendChild(linkifier.linkifyRawLocation(this._eventListener.location(),this._eventListener.sourceURL()));<span class="cstat-no" title="statement not covered" >t</span>itle.appendChild(ObjectUI.ObjectPropertiesSection.createValueElement(object,false,false));<span class="cstat-no" title="statement not covered" >i</span>f(this._eventListener.canRemove()){const deleteButton=<span class="cstat-no" title="statement not covered" >title.createChild('span','event-listener-button');<span class="cstat-no" title="statement not covered" ></span>deleteButton.textContent=Common.UIString('Remove');<span class="cstat-no" title="statement not covered" >d</span>eleteButton.title=Common.UIString('Delete event listener');<span class="cstat-no" title="statement not covered" >d</span>eleteButton.addEventListener('click',removeListener.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>itle.appendChild(deleteButton);}</span></span>
+<span class="cstat-no" title="statement not covered" >if(this._eventListener.isScrollBlockingType()&amp;&amp;this._eventListener.canTogglePassive()){const passiveButton=<span class="cstat-no" title="statement not covered" >title.createChild('span','event-listener-button');<span class="cstat-no" title="statement not covered" ></span>passiveButton.textContent=Common.UIString('Toggle Passive');<span class="cstat-no" title="statement not covered" >p</span>assiveButton.title=Common.UIString('Toggle whether event listener is passive or blocking');<span class="cstat-no" title="statement not covered" >p</span>assiveButton.addEventListener('click',togglePassiveListener.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>itle.appendChild(passiveButton);}</span></span>
+function <span class="fstat-no" title="function not covered" >removeListener(</span>event){<span class="cstat-no" title="statement not covered" >event.consume();<span class="cstat-no" title="statement not covered" >t</span>his._removeListenerBar();<span class="cstat-no" title="statement not covered" >t</span>his._eventListener.remove();}</span>
+function <span class="fstat-no" title="function not covered" >togglePassiveListener(</span>event){<span class="cstat-no" title="statement not covered" >event.consume();<span class="cstat-no" title="statement not covered" >t</span>his._eventListener.togglePassive().then(this._changeCallback());}</span>}
+<span class="fstat-no" title="function not covered" >_r</span>emoveListenerBar(){const parent=<span class="cstat-no" title="statement not covered" >this.parent;<span class="cstat-no" title="statement not covered" ></span>parent.removeChild(this);<span class="cstat-no" title="statement not covered" >i</span>f(!parent.childCount())</span>
+<span class="cstat-no" title="statement not covered" >parent.collapse();l</span>et allHidden=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;parent.childCount();++i){<span class="cstat-no" title="statement not covered" >if(!parent.childAt(i).hidden)</span></span>
+<span class="cstat-no" title="statement not covered" >allHidden=false;}</span>
+<span class="cstat-no" title="statement not covered" >parent.hidden=allHidden;}</span>
+<span class="fstat-no" title="function not covered" >ev</span>entListener(){<span class="cstat-no" title="statement not covered" >return this._eventListener;}</span>};;<span class="cstat-no" title="statement not covered" >EventListeners.FrameworkEventListenersObject;<span class="cstat-no" title="statement not covered" >E</span>ventListeners.EventListenerObjectInInspectedPage;<span class="cstat-no" title="statement not covered" >E</span>ventListeners.frameworkEventListeners=<span class="fstat-no" title="function not covered" >fu</span>nction(object){const domDebuggerModel=<span class="cstat-no" title="statement not covered" >object.runtimeModel().target().model(SDK.DOMDebuggerModel);<span class="cstat-no" title="statement not covered" ></span>if(!domDebuggerModel){<span class="cstat-no" title="statement not covered" >return Promise.resolve(({eventListeners:[],internalHandlers:null}));}</span></span></span>
+const listenersResult=(<span class="cstat-no" title="statement not covered" >{eventListeners:[]})</span>;<span class="cstat-no" title="statement not covered" >return object.callFunction(frameworkEventListeners,undefined).then(assertCallFunctionResult).then(getOwnProperties).then(createEventListeners).then(returnResult).catchException(listenersResult);f</span>unction <span class="fstat-no" title="function not covered" >getOwnProperties(</span>object){<span class="cstat-no" title="statement not covered" >return object.getOwnProperties(false);}</span>
+function <span class="fstat-no" title="function not covered" >createEventListeners(</span>result){<span class="cstat-no" title="statement not covered" >if(!result.properties)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Object properties is empty');c</span>onst promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(const property of result.properties){<span class="cstat-no" title="statement not covered" >if(property.name==='eventListeners'&amp;&amp;property.value)</span></span>
+<span class="cstat-no" title="statement not covered" >promises.push(convertToEventListeners(property.value).then(storeEventListeners));<span class="cstat-no" title="statement not covered" >i</span>f(property.name==='internalHandlers'&amp;&amp;property.value)</span>
+<span class="cstat-no" title="statement not covered" >promises.push(convertToInternalHandlers(property.value).then(storeInternalHandlers));<span class="cstat-no" title="statement not covered" >i</span>f(property.name==='errorString'&amp;&amp;property.value)</span>
+<span class="cstat-no" title="statement not covered" >printErrorString(property.value);}</span>
+<span class="cstat-no" title="statement not covered" >return(Promise.all(promises));}</span>
+function <span class="fstat-no" title="function not covered" >convertToEventListeners(</span>pageEventListenersObject){<span class="cstat-no" title="statement not covered" >return SDK.RemoteArray.objectAsArray(pageEventListenersObject).map(toEventListener).then(filterOutEmptyObjects);f</span>unction <span class="fstat-no" title="function not covered" >toEventListener(</span>listenerObject){let type;let useCapture;let passive;let once;let handler=<span class="cstat-no" title="statement not covered" >null;</span>let originalHandler=<span class="cstat-no" title="statement not covered" >null;</span>let location=<span class="cstat-no" title="statement not covered" >null;</span>let removeFunctionObject=<span class="cstat-no" title="statement not covered" >null;</span>const promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>promises.push(listenerObject.callFunctionJSON(truncatePageEventListener,undefined).then(storeTruncatedListener));f</span>unction <span class="fstat-no" title="function not covered" >truncatePageEventListener(</span>){<span class="cstat-no" title="statement not covered" >return{type:this.type,useCapture:this.useCapture,passive:this.passive,once:this.once};}</span>
+function <span class="fstat-no" title="function not covered" >storeTruncatedListener(</span>truncatedListener){<span class="cstat-no" title="statement not covered" >type=truncatedListener.type;<span class="cstat-no" title="statement not covered" >u</span>seCapture=truncatedListener.useCapture;<span class="cstat-no" title="statement not covered" >p</span>assive=truncatedListener.passive;<span class="cstat-no" title="statement not covered" >o</span>nce=truncatedListener.once;}</span>
+<span class="cstat-no" title="statement not covered" >promises.push(listenerObject.callFunction(handlerFunction).then(assertCallFunctionResult).then(storeOriginalHandler).then(toTargetFunction).then(storeFunctionWithDetails));f</span>unction <span class="fstat-no" title="function not covered" >handlerFunction(</span>){<span class="cstat-no" title="statement not covered" >return this.handler;}</span>
+function <span class="fstat-no" title="function not covered" >storeOriginalHandler(</span>functionObject){<span class="cstat-no" title="statement not covered" >originalHandler=functionObject;<span class="cstat-no" title="statement not covered" >r</span>eturn originalHandler;}</span>
+function <span class="fstat-no" title="function not covered" >storeFunctionWithDetails(</span>functionObject){<span class="cstat-no" title="statement not covered" >handler=functionObject;<span class="cstat-no" title="statement not covered" >r</span>eturn(functionObject.debuggerModel().functionDetailsPromise(functionObject).then(storeFunctionDetails));}</span>
+function <span class="fstat-no" title="function not covered" >storeFunctionDetails(</span>functionDetails){<span class="cstat-no" title="statement not covered" >location=functionDetails?functionDetails.location:null;}</span>
+<span class="cstat-no" title="statement not covered" >promises.push(listenerObject.callFunction(getRemoveFunction).then(assertCallFunctionResult).then(storeRemoveFunction));f</span>unction <span class="fstat-no" title="function not covered" >getRemoveFunction(</span>){<span class="cstat-no" title="statement not covered" >return this.remove;}</span>
+function <span class="fstat-no" title="function not covered" >storeRemoveFunction(</span>functionObject){<span class="cstat-no" title="statement not covered" >if(functionObject.type!=='function')</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >r</span>emoveFunctionObject=functionObject;}</span>
+<span class="cstat-no" title="statement not covered" >return Promise.all(promises).then(createEventListener).catchException((null));f</span>unction <span class="fstat-no" title="function not covered" >createEventListener(</span>){<span class="cstat-no" title="statement not covered" >if(!location)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Empty event listener\'s location');<span class="cstat-no" title="statement not covered" >r</span>eturn new SDK.EventListener((domDebuggerModel),object,type,useCapture,passive,once,handler,originalHandler,location,removeFunctionObject,SDK.EventListener.Origin.FrameworkUser);}</span>}}
+function <span class="fstat-no" title="function not covered" >convertToInternalHandlers(</span>pageInternalHandlersObject){<span class="cstat-no" title="statement not covered" >return SDK.RemoteArray.objectAsArray(pageInternalHandlersObject).map(toTargetFunction).then(SDK.RemoteArray.createFromRemoteObjects);}</span>
+function <span class="fstat-no" title="function not covered" >toTargetFunction(</span>functionObject){<span class="cstat-no" title="statement not covered" >return SDK.RemoteFunction.objectAsFunction(functionObject).targetFunction();}</span>
+function <span class="fstat-no" title="function not covered" >storeEventListeners(</span>eventListeners){<span class="cstat-no" title="statement not covered" >listenersResult.eventListeners=eventListeners;}</span>
+function <span class="fstat-no" title="function not covered" >storeInternalHandlers(</span>internalHandlers){<span class="cstat-no" title="statement not covered" >listenersResult.internalHandlers=internalHandlers;}</span>
+function <span class="fstat-no" title="function not covered" >printErrorString(</span>errorString){<span class="cstat-no" title="statement not covered" >Common.console.error(String(errorString.value));}</span>
+function <span class="fstat-no" title="function not covered" >returnResult(</span>){<span class="cstat-no" title="statement not covered" >return listenersResult;}</span>
+function <span class="fstat-no" title="function not covered" >assertCallFunctionResult(</span>result){<span class="cstat-no" title="statement not covered" >if(result.wasThrown||!result.object)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Exception in callFunction or empty result');<span class="cstat-no" title="statement not covered" >r</span>eturn result.object;}</span>
+function <span class="fstat-no" title="function not covered" >filterOutEmptyObjects(</span>objects){<span class="cstat-no" title="statement not covered" >return objects.filter(filterOutEmpty);f</span>unction <span class="fstat-no" title="function not covered" >filterOutEmpty(</span>object){<span class="cstat-no" title="statement not covered" >return!!object;}</span>}
+function <span class="fstat-no" title="function not covered" >frameworkEventListeners(</span>){const errorLines=<span class="cstat-no" title="statement not covered" >[];</span>let eventListeners=<span class="cstat-no" title="statement not covered" >[];</span>let internalHandlers=<span class="cstat-no" title="statement not covered" >[];</span>let fetchers=<span class="cstat-no" title="statement not covered" >[jQueryFetcher];<span class="cstat-no" title="statement not covered" ></span>try{<span class="cstat-no" title="statement not covered" >if(self.devtoolsFrameworkEventListeners&amp;&amp;isArrayLike(self.devtoolsFrameworkEventListeners))</span></span>
+<span class="cstat-no" title="statement not covered" >fetchers=fetchers.concat(self.devtoolsFrameworkEventListeners);}</span>catch(e){<span class="cstat-no" title="statement not covered" >errorLines.push('devtoolsFrameworkEventListeners call produced error: '+toString(e));}</span>
+<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;fetchers.length;++i){<span class="cstat-no" title="statement not covered" >try{const fetcherResult=<span class="cstat-no" title="statement not covered" >fetchers[i](this);<span class="cstat-no" title="statement not covered" ></span>if(fetcherResult.eventListeners&amp;&amp;isArrayLike(fetcherResult.eventListeners)){<span class="cstat-no" title="statement not covered" >eventListeners=eventListeners.concat(fetcherResult.eventListeners.map(checkEventListener).filter(nonEmptyObject));}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >if(fetcherResult.internalHandlers&amp;&amp;isArrayLike(fetcherResult.internalHandlers)){<span class="cstat-no" title="statement not covered" >internalHandlers=internalHandlers.concat(fetcherResult.internalHandlers.map(checkInternalHandler).filter(nonEmptyObject));}</span>}</span>catch(e){<span class="cstat-no" title="statement not covered" >errorLines.push('fetcher call produced error: '+toString(e));}</span>}
+const result=<span class="cstat-no" title="statement not covered" >{eventListeners:eventListeners};<span class="cstat-no" title="statement not covered" ></span>if(internalHandlers.length)</span>
+<span class="cstat-no" title="statement not covered" >result.internalHandlers=internalHandlers;<span class="cstat-no" title="statement not covered" >i</span>f(errorLines.length){let errorString=<span class="cstat-no" title="statement not covered" >'Framework Event Listeners API Errors:\n\t'+errorLines.join('\n\t');<span class="cstat-no" title="statement not covered" ></span>errorString=errorString.substr(0,errorString.length-1);<span class="cstat-no" title="statement not covered" >r</span>esult.errorString=errorString;}</span></span>
+<span class="cstat-no" title="statement not covered" >return result;f</span>unction <span class="fstat-no" title="function not covered" >isArrayLike(</span>obj){<span class="cstat-no" title="statement not covered" >if(!obj||typeof obj!=='object')</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >t</span>ry{<span class="cstat-no" title="statement not covered" >if(typeof obj.splice==='function'){const len=<span class="cstat-no" title="statement not covered" >obj.length;<span class="cstat-no" title="statement not covered" ></span>return typeof len==='number'&amp;&amp;(len&gt;&gt;&gt;0===len&amp;&amp;(len&gt;0||1/len&gt;0));}</span>}</span>catch(e){}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+function <span class="fstat-no" title="function not covered" >checkEventListener(</span>eventListener){<span class="cstat-no" title="statement not covered" >try{let errorString=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>if(!eventListener)</span></span>
+<span class="cstat-no" title="statement not covered" >errorString+='empty event listener, ';c</span>onst type=<span class="cstat-no" title="statement not covered" >eventListener.type;<span class="cstat-no" title="statement not covered" ></span>if(!type||(typeof type!=='string'))</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s type isn\'t string or empty, ';c</span>onst useCapture=<span class="cstat-no" title="statement not covered" >eventListener.useCapture;<span class="cstat-no" title="statement not covered" ></span>if(typeof useCapture!=='boolean')</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s useCapture isn\'t boolean or undefined, ';c</span>onst passive=<span class="cstat-no" title="statement not covered" >eventListener.passive;<span class="cstat-no" title="statement not covered" ></span>if(typeof passive!=='boolean')</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s passive isn\'t boolean or undefined, ';c</span>onst once=<span class="cstat-no" title="statement not covered" >eventListener.once;<span class="cstat-no" title="statement not covered" ></span>if(typeof once!=='boolean')</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s once isn\'t boolean or undefined, ';c</span>onst handler=<span class="cstat-no" title="statement not covered" >eventListener.handler;<span class="cstat-no" title="statement not covered" ></span>if(!handler||(typeof handler!=='function'))</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s handler isn\'t a function or empty, ';c</span>onst remove=<span class="cstat-no" title="statement not covered" >eventListener.remove;<span class="cstat-no" title="statement not covered" ></span>if(remove&amp;&amp;(typeof remove!=='function'))</span>
+<span class="cstat-no" title="statement not covered" >errorString+='event listener\'s remove isn\'t a function, ';<span class="cstat-no" title="statement not covered" >i</span>f(!errorString){<span class="cstat-no" title="statement not covered" >return{type:type,useCapture:useCapture,passive:passive,once:once,handler:handler,remove:remove};}</span>else{<span class="cstat-no" title="statement not covered" >errorLines.push(errorString.substr(0,errorString.length-2));<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>}</span>catch(e){<span class="cstat-no" title="statement not covered" >errorLines.push(toString(e));<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>}
+function <span class="fstat-no" title="function not covered" >checkInternalHandler(</span>handler){<span class="cstat-no" title="statement not covered" >if(handler&amp;&amp;(typeof handler==='function'))</span>
+<span class="cstat-no" title="statement not covered" >return handler;<span class="cstat-no" title="statement not covered" >e</span>rrorLines.push('internal handler isn\'t a function or empty');<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>
+function <span class="fstat-no" title="function not covered" >toString(</span>obj){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >return''+obj;}</span>catch(e){<span class="cstat-no" title="statement not covered" >return'&lt;error&gt;';}</span>}</span>
+function <span class="fstat-no" title="function not covered" >nonEmptyObject(</span>obj){<span class="cstat-no" title="statement not covered" >return!!obj;}</span>
+function <span class="fstat-no" title="function not covered" >jQueryFetcher(</span>node){<span class="cstat-no" title="statement not covered" >if(!node||!(node instanceof Node))</span>
+<span class="cstat-no" title="statement not covered" >return{eventListeners:[]};c</span>onst jQuery=(<span class="cstat-no" title="statement not covered" >window['jQuery'])</span>;<span class="cstat-no" title="statement not covered" >if(!jQuery||!jQuery.fn)</span>
+<span class="cstat-no" title="statement not covered" >return{eventListeners:[]};c</span>onst jQueryFunction=(<span class="cstat-no" title="statement not covered" >jQuery)</span>;const data=<span class="cstat-no" title="statement not covered" >jQuery._data||jQuery.data;</span>const eventListeners=<span class="cstat-no" title="statement not covered" >[];</span>const internalHandlers=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(typeof data==='function'){const events=<span class="cstat-no" title="statement not covered" >data(node,'events');<span class="cstat-no" title="statement not covered" ></span>for(const type in events){<span class="cstat-no" title="statement not covered" >for(const key in events[type]){const frameworkListener=<span class="cstat-no" title="statement not covered" >events[type][key];<span class="cstat-no" title="statement not covered" ></span>if(typeof frameworkListener==='object'||typeof frameworkListener==='function'){const listener=<span class="cstat-no" title="statement not covered" >{handler:frameworkListener.handler||frameworkListener,useCapture:true,passive:false,once:false,type:type};<span class="cstat-no" title="statement not covered" ></span>listener.remove=jQueryRemove.bind(node,frameworkListener.selector);<span class="cstat-no" title="statement not covered" >e</span>ventListeners.push(listener);}</span>}</span>}</span></span></span>
+const nodeData=<span class="cstat-no" title="statement not covered" >data(node);<span class="cstat-no" title="statement not covered" ></span>if(nodeData&amp;&amp;typeof nodeData.handle==='function')</span>
+<span class="cstat-no" title="statement not covered" >internalHandlers.push(nodeData.handle);}</span>
+const entry=<span class="cstat-no" title="statement not covered" >jQueryFunction(node)[0];<span class="cstat-no" title="statement not covered" ></span>if(entry){const entryEvents=<span class="cstat-no" title="statement not covered" >entry['$events'];<span class="cstat-no" title="statement not covered" ></span>for(const type in entryEvents){const events=<span class="cstat-no" title="statement not covered" >entryEvents[type];<span class="cstat-no" title="statement not covered" ></span>for(const key in events){<span class="cstat-no" title="statement not covered" >if(typeof events[key]==='function'){const listener=<span class="cstat-no" title="statement not covered" >{handler:events[key],useCapture:true,passive:false,once:false,type:type};<span class="cstat-no" title="statement not covered" ></span>eventListeners.push(listener);}</span>}</span>}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(entry&amp;&amp;entry['$handle'])</span>
+<span class="cstat-no" title="statement not covered" >internalHandlers.push(entry['$handle']);}</span>
+<span class="cstat-no" title="statement not covered" >return{eventListeners:eventListeners,internalHandlers:internalHandlers};}</span>
+function <span class="fstat-no" title="function not covered" >jQueryRemove(</span>selector,type,handler){<span class="cstat-no" title="statement not covered" >if(!this||!(this instanceof Node))</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst node=(<span class="cstat-no" title="statement not covered" >this)</span>;const jQuery=(<span class="cstat-no" title="statement not covered" >window['jQuery'])</span>;<span class="cstat-no" title="statement not covered" >if(!jQuery||!jQuery.fn)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst jQueryFunction=(<span class="cstat-no" title="statement not covered" >jQuery)</span>;<span class="cstat-no" title="statement not covered" >jQueryFunction(node).off(type,selector,handler);}</span>}};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["event_listeners/eventListenersView.css"]="/*\n * Copyright 2015 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.tree-outline-disclosure li {\n    padding: 2px 0 0 5px;\n    overflow: hidden;\n    display: list-item;\n    min-height: 17px;\n}\n\n.tree-outline-disclosure &gt; li {\n    border-top: 1px solid #f0f0f0;\n}\n\n.tree-outline-disclosure &gt; li:first-of-type {\n    border-top: none;\n}\n\n.tree-outline-disclosure {\n    padding-left: 0 !important;\n    padding-right: 3px;\n}\n\n.tree-outline-disclosure li.parent::before {\n    top: 0 !important;\n}\n\n.tree-outline-disclosure .name {\n    color: rgb(136, 19, 145);\n}\n\n.event-listener-tree-subtitle {\n    float: right;\n    margin-left: 5px;\n}\n\n.event-listener-button {\n    padding: 0 3px;\n    background-color: #f2f2f2;\n    border-radius: 3px;\n    border: 1px solid #c3c3c3;\n    margin-left: 10px;\n    display: none;\n    cursor: pointer;\n}\n\n.event-listener-button:hover {\n    background-color: #e0e0e0;\n}\n\n.tree-outline-disclosure li:hover .event-listener-button {\n    display: inline;\n}\n\n/*# sourceURL=event_listeners/eventListenersView.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/coverage_test_runner/coverage_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/coverage_test_runner</a> coverage_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/6</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >CoverageTestRunner.startCoverage=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >UI.viewManager.showView('coverage');c</span>onst coverageView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView);<span class="cstat-no" title="statement not covered" ></span>coverageView._startRecording();}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.stopCoverage=<span class="fstat-no" title="function not covered" >fu</span>nction(){const coverageView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView);<span class="cstat-no" title="statement not covered" ></span>return coverageView._stopRecording();}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.pollCoverage=<span class="fstat-no" title="function not covered" >fu</span>nction(){const coverageView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView);<span class="cstat-no" title="statement not covered" ></span>return coverageView._poll();}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.exportReport=<span class="fstat-no" title="function not covered" >as</span>ync function(){const coverageView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView);</span>let data;<span class="cstat-no" title="statement not covered" >await coverageView._model.exportReport({write:<span class="fstat-no" title="function not covered" >d=</span>&gt;<span class="cstat-no" title="statement not covered" >data=d,</span>close:<span class="fstat-no" title="function not covered" >_=</span>&gt;<span class="cstat-no" title="statement not covered" >0}</span>);<span class="cstat-no" title="statement not covered" >r</span>eturn data;}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.sourceDecorated=<span class="fstat-no" title="function not covered" >as</span>ync function(source){<span class="cstat-no" title="statement not covered" >await UI.inspectorView.showPanel('sources');c</span>onst decoratePromise=<span class="cstat-no" title="statement not covered" >TestRunner.addSnifferPromise(Coverage.CoverageView.LineDecorator.prototype,'_innerDecorate');</span>const sourceFrame=<span class="cstat-no" title="statement not covered" >await SourcesTestRunner.showScriptSourcePromise(source);<span class="cstat-no" title="statement not covered" ></span>await decoratePromise;<span class="cstat-no" title="statement not covered" >r</span>eturn sourceFrame;}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.dumpDecorations=<span class="fstat-no" title="function not covered" >as</span>ync function(source){const sourceFrame=<span class="cstat-no" title="statement not covered" >await CoverageTestRunner.sourceDecorated(source);<span class="cstat-no" title="statement not covered" ></span>CoverageTestRunner.dumpDecorationsInSourceFrame(sourceFrame);}</span>;<span class="cstat-no" title="statement not covered" >C</span>overageTestRunner.findCoverageNodeForURL=<span class="fstat-no" title="function not covered" >fu</span>nction(url){const coverageListView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView)._listView;</span>const rootNode=<span class="cstat-no" title="statement not covered" >coverageListView._dataGrid.rootNode();<span class="cstat-no" title="statement not covered" ></span>for(const child of rootNode.children){<span class="cstat-no" title="statement not covered" >if(child._coverageInfo.url().endsWith(url))</span></span></span>
+<span class="cstat-no" title="statement not covered" >return child;}</span>
+<span class="cstat-no" title="statement not covered" >return null;}</span>;<span class="cstat-no" title="statement not covered" >CoverageTestRunner.dumpDecorationsInSourceFrame=<span class="fstat-no" title="function not covered" >fu</span>nction(sourceFrame){const markerMap=<span class="cstat-no" title="statement not covered" >new Map([['used','+'],['unused','-']]);</span>const codeMirror=<span class="cstat-no" title="statement not covered" >sourceFrame.textEditor.codeMirror();<span class="cstat-no" title="statement not covered" ></span>for(let line=0;line&lt;codeMirror.lineCount();++line){const text=<span class="cstat-no" title="statement not covered" >codeMirror.getLine(line);</span>let markerType=<span class="cstat-no" title="statement not covered" >' ';</span>const lineInfo=<span class="cstat-no" title="statement not covered" >codeMirror.lineInfo(line);<span class="cstat-no" title="statement not covered" ></span>if(!lineInfo)</span></span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst gutterElement=<span class="cstat-no" title="statement not covered" >lineInfo.gutterMarkers&amp;&amp;lineInfo.gutterMarkers['CodeMirror-gutter-coverage'];<span class="cstat-no" title="statement not covered" ></span>if(gutterElement){const markerClass=<span class="cstat-no" title="statement not covered" >/^text-editor-coverage-(\w*)-marker$/.exec(gutterElement.classList)[1];<span class="cstat-no" title="statement not covered" ></span>markerType=markerMap.get(markerClass)||gutterElement.classList;}</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`${line}: ${markerType} ${text}`);}</span>};<span class="cstat-no" title="statement not covered" >CoverageTestRunner.dumpCoverageListView=<span class="fstat-no" title="function not covered" >fu</span>nction(){const coverageListView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Coverage.CoverageView)._listView;</span>const dataGrid=<span class="cstat-no" title="statement not covered" >coverageListView._dataGrid;<span class="cstat-no" title="statement not covered" ></span>dataGrid.updateInstantly();<span class="cstat-no" title="statement not covered" >f</span>or(const child of dataGrid.rootNode().children){const data=<span class="cstat-no" title="statement not covered" >child._coverageInfo;</span>const url=<span class="cstat-no" title="statement not covered" >TestRunner.formatters.formatAsURL(data.url());<span class="cstat-no" title="statement not covered" ></span>if(url.startsWith('test://'))</span></span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst type=<span class="cstat-no" title="statement not covered" >Coverage.CoverageListView._typeToString(data.type());<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(`${url} ${type} used: ${data.usedSize()} unused: ${data.unusedSize()} total: ${data.size()}`);}</span>};;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/formatter/formatter_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/formatter</a> formatter_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/166</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/58</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/37</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Formatter.FormatterWorkerPool=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._taskQueue=[];<span class="cstat-no" title="statement not covered" >t</span>his._workerTasks=new Map();}</span></span>
+<span class="fstat-no" title="function not covered" >_c</span>reateWorker(){const worker=<span class="cstat-no" title="statement not covered" >new Common.Worker('formatter_worker');<span class="cstat-no" title="statement not covered" ></span>worker.onmessage=this._onWorkerMessage.bind(this,worker);<span class="cstat-no" title="statement not covered" >w</span>orker.onerror=this._onWorkerError.bind(this,worker);<span class="cstat-no" title="statement not covered" >r</span>eturn worker;}</span>
+<span class="fstat-no" title="function not covered" >_p</span>rocessNextTask(){<span class="cstat-no" title="statement not covered" >if(!this._taskQueue.length)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et freeWorker=<span class="cstat-no" title="statement not covered" >this._workerTasks.keysArray().find(<span class="fstat-no" title="function not covered" >wo</span>rker=&gt;<span class="cstat-no" title="statement not covered" >!this._workerTasks.get(worker))</span>;<span class="cstat-no" title="statement not covered" ></span>if(!freeWorker&amp;&amp;this._workerTasks.size&lt;Formatter.FormatterWorkerPool.MaxWorkers)</span>
+<span class="cstat-no" title="statement not covered" >freeWorker=this._createWorker();<span class="cstat-no" title="statement not covered" >i</span>f(!freeWorker)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst task=<span class="cstat-no" title="statement not covered" >this._taskQueue.shift();<span class="cstat-no" title="statement not covered" ></span>this._workerTasks.set(freeWorker,task);<span class="cstat-no" title="statement not covered" >f</span>reeWorker.postMessage({method:task.method,params:task.params});}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nWorkerMessage(worker,event){const task=<span class="cstat-no" title="statement not covered" >this._workerTasks.get(worker);<span class="cstat-no" title="statement not covered" ></span>if(task.isChunked&amp;&amp;event.data&amp;&amp;!event.data['isLastChunk']){<span class="cstat-no" title="statement not covered" >task.callback(event.data);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._workerTasks.set(worker,null);<span class="cstat-no" title="statement not covered" >t</span>his._processNextTask();<span class="cstat-no" title="statement not covered" >t</span>ask.callback(event.data?event.data:null);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nWorkerError(worker,event){<span class="cstat-no" title="statement not covered" >console.error(event);c</span>onst task=<span class="cstat-no" title="statement not covered" >this._workerTasks.get(worker);<span class="cstat-no" title="statement not covered" ></span>worker.terminate();<span class="cstat-no" title="statement not covered" >t</span>his._workerTasks.delete(worker);c</span>onst newWorker=<span class="cstat-no" title="statement not covered" >this._createWorker();<span class="cstat-no" title="statement not covered" ></span>this._workerTasks.set(newWorker,null);<span class="cstat-no" title="statement not covered" >t</span>his._processNextTask();<span class="cstat-no" title="statement not covered" >t</span>ask.callback(null);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>unChunkedTask(methodName,params,callback){const task=<span class="cstat-no" title="statement not covered" >new Formatter.FormatterWorkerPool.Task(methodName,params,onData,true);<span class="cstat-no" title="statement not covered" ></span>this._taskQueue.push(task);<span class="cstat-no" title="statement not covered" >t</span>his._processNextTask();f</span>unction <span class="fstat-no" title="function not covered" >onData(</span>data){<span class="cstat-no" title="statement not covered" >if(!data){<span class="cstat-no" title="statement not covered" >callback(true,null);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const isLastChunk=<span class="cstat-no" title="statement not covered" >!!data['isLastChunk'];</span>const chunk=<span class="cstat-no" title="statement not covered" >data['chunk'];<span class="cstat-no" title="statement not covered" ></span>callback(isLastChunk,chunk);}</span>}
+<span class="fstat-no" title="function not covered" >_r</span>unTask(methodName,params){let callback;const promise=<span class="cstat-no" title="statement not covered" >new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfill=&gt;<span class="cstat-no" title="statement not covered" >callback=fulfill)</span>;</span>const task=<span class="cstat-no" title="statement not covered" >new Formatter.FormatterWorkerPool.Task(methodName,params,callback,false);<span class="cstat-no" title="statement not covered" ></span>this._taskQueue.push(task);<span class="cstat-no" title="statement not covered" >t</span>his._processNextTask();<span class="cstat-no" title="statement not covered" >r</span>eturn promise;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>rseJSONRelaxed(content){<span class="cstat-no" title="statement not covered" >return this._runTask('parseJSONRelaxed',{content:content});}</span>
+<span class="fstat-no" title="function not covered" >pa</span>rseSCSS(content){<span class="cstat-no" title="statement not covered" >return this._runTask('parseSCSS',{content:content}).then(<span class="fstat-no" title="function not covered" >ru</span>les=&gt;<span class="cstat-no" title="statement not covered" >rules||[])</span>;}</span>
+<span class="fstat-no" title="function not covered" >fo</span>rmat(mimeType,content,indentString){const parameters=<span class="cstat-no" title="statement not covered" >{mimeType:mimeType,content:content,indentString:indentString};<span class="cstat-no" title="statement not covered" ></span>return(this._runTask('format',parameters));}</span>
+<span class="fstat-no" title="function not covered" >ja</span>vaScriptIdentifiers(content){<span class="cstat-no" title="statement not covered" >return this._runTask('javaScriptIdentifiers',{content:content}).then(<span class="fstat-no" title="function not covered" >id</span>s=&gt;<span class="cstat-no" title="statement not covered" >ids||[])</span>;}</span>
+<span class="fstat-no" title="function not covered" >ev</span>aluatableJavaScriptSubstring(content){<span class="cstat-no" title="statement not covered" >return this._runTask('evaluatableJavaScriptSubstring',{content:content}).then(<span class="fstat-no" title="function not covered" >te</span>xt=&gt;<span class="cstat-no" title="statement not covered" >text||'')</span>;}</span>
+<span class="fstat-no" title="function not covered" >pr</span>eprocessTopLevelAwaitExpressions(content){<span class="cstat-no" title="statement not covered" >return this._runTask('preprocessTopLevelAwaitExpressions',{content:content}).then(<span class="fstat-no" title="function not covered" >te</span>xt=&gt;<span class="cstat-no" title="statement not covered" >text||'')</span>;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>rseCSS(content,callback){<span class="cstat-no" title="statement not covered" >this._runChunkedTask('parseCSS',{content:content},onDataChunk);f</span>unction <span class="fstat-no" title="function not covered" >onDataChunk(</span>isLastChunk,data){const rules=(<span class="cstat-no" title="statement not covered" >data||[])</span>;<span class="cstat-no" title="statement not covered" >callback(isLastChunk,rules);}</span>}
+<span class="fstat-no" title="function not covered" >ja</span>vaScriptOutline(content,callback){<span class="cstat-no" title="statement not covered" >this._runChunkedTask('javaScriptOutline',{content:content},onDataChunk);f</span>unction <span class="fstat-no" title="function not covered" >onDataChunk(</span>isLastChunk,data){const items=(<span class="cstat-no" title="statement not covered" >data||[])</span>;<span class="cstat-no" title="statement not covered" >callback(isLastChunk,items);}</span>}
+<span class="fstat-no" title="function not covered" >ou</span>tlineForMimetype(content,mimeType,callback){<span class="cstat-no" title="statement not covered" >switch(mimeType){case'text/html':case'text/javascript':<span class="cstat-no" title="statement not covered" >this.javaScriptOutline(content,javaScriptCallback);<span class="cstat-no" title="statement not covered" >r</span>eturn true;c</span>ase'text/css':<span class="cstat-no" title="statement not covered" >this.parseCSS(content,cssCallback);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span>
+<span class="cstat-no" title="statement not covered" >return false;f</span>unction <span class="fstat-no" title="function not covered" >javaScriptCallback(</span>isLastChunk,items){<span class="cstat-no" title="statement not covered" >callback(isLastChunk,items.map(<span class="fstat-no" title="function not covered" >it</span>em=&gt;(<span class="cstat-no" title="statement not covered" >{line:item.line,column:item.column,title:item.name,subtitle:item.arguments})</span>));}</span>
+function <span class="fstat-no" title="function not covered" >cssCallback(</span>isLastChunk,rules){<span class="cstat-no" title="statement not covered" >callback(isLastChunk,rules.map(<span class="fstat-no" title="function not covered" >ru</span>le=&gt;(<span class="cstat-no" title="statement not covered" >{line:rule.lineNumber,column:rule.columnNumber,title:rule.selectorText||rule.atRule})</span>));}</span>}
+<span class="fstat-no" title="function not covered" >fi</span>ndLastExpression(content){<span class="cstat-no" title="statement not covered" >return(this._runTask('findLastExpression',{content}));}</span>
+<span class="fstat-no" title="function not covered" >fi</span>ndLastFunctionCall(content){<span class="cstat-no" title="statement not covered" >return(this._runTask('findLastFunctionCall',{content}));}</span>
+<span class="fstat-no" title="function not covered" >ar</span>gumentsList(content){<span class="cstat-no" title="statement not covered" >return(this._runTask('argumentsList',{content}));}</span>};<span class="cstat-no" title="statement not covered" >Formatter.FormatterWorkerPool.MaxWorkers=2;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.Task=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(method,params,callback,isChunked){<span class="cstat-no" title="statement not covered" >this.method=method;<span class="cstat-no" title="statement not covered" >t</span>his.params=params;<span class="cstat-no" title="statement not covered" >t</span>his.callback=callback;<span class="cstat-no" title="statement not covered" >t</span>his.isChunked=isChunked;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.FormatResult=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.content;<span class="cstat-no" title="statement not covered" >t</span>his.mapping;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.FormatMapping;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.OutlineItem;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.JSOutlineItem=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.name;<span class="cstat-no" title="statement not covered" >t</span>his.arguments;<span class="cstat-no" title="statement not covered" >t</span>his.line;<span class="cstat-no" title="statement not covered" >t</span>his.column;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.TextRange;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.CSSProperty=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.name;<span class="cstat-no" title="statement not covered" >t</span>his.nameRange;<span class="cstat-no" title="statement not covered" >t</span>his.value;<span class="cstat-no" title="statement not covered" >t</span>his.valueRange;<span class="cstat-no" title="statement not covered" >t</span>his.range;<span class="cstat-no" title="statement not covered" >t</span>his.disabled;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.CSSStyleRule=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.selectorText;<span class="cstat-no" title="statement not covered" >t</span>his.styleRange;<span class="cstat-no" title="statement not covered" >t</span>his.lineNumber;<span class="cstat-no" title="statement not covered" >t</span>his.columnNumber;<span class="cstat-no" title="statement not covered" >t</span>his.properties;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.CSSAtRule;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.CSSRule;<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.SCSSProperty=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.range;<span class="cstat-no" title="statement not covered" >t</span>his.name;<span class="cstat-no" title="statement not covered" >t</span>his.value;<span class="cstat-no" title="statement not covered" >t</span>his.disabled;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterWorkerPool.SCSSRule=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.selectors;<span class="cstat-no" title="statement not covered" >t</span>his.properties;<span class="cstat-no" title="statement not covered" >t</span>his.styleRange;}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.formatterWorkerPool=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(!Formatter._formatterWorkerPool)</span></span>
+<span class="cstat-no" title="statement not covered" >Formatter._formatterWorkerPool=new Formatter.FormatterWorkerPool();<span class="cstat-no" title="statement not covered" >r</span>eturn Formatter._formatterWorkerPool;}</span>;;<span class="cstat-no" title="statement not covered" >Formatter.Formatter=<span class="fstat-no" title="function not covered" >fu</span>nction(){};<span class="cstat-no" title="statement not covered" >F</span>ormatter.Formatter.format=<span class="fstat-no" title="function not covered" >fu</span>nction(contentType,mimeType,content,callback){<span class="cstat-no" title="statement not covered" >if(contentType.isDocumentOrScriptOrStyleSheet())</span></span>
+<span class="cstat-no" title="statement not covered" >new Formatter.ScriptFormatter(mimeType,content,callback);e</span>lse
+<span class="cstat-no" title="statement not covered" >new Formatter.ScriptIdentityFormatter(mimeType,content,callback);}</span>;<span class="cstat-no" title="statement not covered" >Formatter.Formatter.locationToPosition=<span class="fstat-no" title="function not covered" >fu</span>nction(lineEndings,lineNumber,columnNumber){const position=<span class="cstat-no" title="statement not covered" >lineNumber?lineEndings[lineNumber-1]+1:0;<span class="cstat-no" title="statement not covered" ></span>return position+columnNumber;}</span>;<span class="cstat-no" title="statement not covered" >F</span>ormatter.Formatter.positionToLocation=<span class="fstat-no" title="function not covered" >fu</span>nction(lineEndings,position){const lineNumber=<span class="cstat-no" title="statement not covered" >lineEndings.upperBound(position-1);</span>let columnNumber;<span class="cstat-no" title="statement not covered" >if(!lineNumber)</span></span>
+<span class="cstat-no" title="statement not covered" >columnNumber=position;e</span>lse
+<span class="cstat-no" title="statement not covered" >columnNumber=position-lineEndings[lineNumber-1]-1;<span class="cstat-no" title="statement not covered" >r</span>eturn[lineNumber,columnNumber];}</span>;<span class="cstat-no" title="statement not covered" >Formatter.ScriptFormatter=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(mimeType,content,callback){<span class="cstat-no" title="statement not covered" >content=content.replace(/\r\n?|[\n\u2028\u2029]/g,'\n').replace(/^\uFEFF/,'');<span class="cstat-no" title="statement not covered" >t</span>his._callback=callback;<span class="cstat-no" title="statement not covered" >t</span>his._originalContent=content;<span class="cstat-no" title="statement not covered" >F</span>ormatter.formatterWorkerPool().format(mimeType,content,Common.moduleSetting('textEditorIndent').get()).then(this._didFormatContent.bind(this));}</span></span>
+<span class="fstat-no" title="function not covered" >_d</span>idFormatContent(formatResult){const sourceMapping=<span class="cstat-no" title="statement not covered" >new Formatter.FormatterSourceMappingImpl(this._originalContent.computeLineEndings(),formatResult.content.computeLineEndings(),formatResult.mapping);<span class="cstat-no" title="statement not covered" ></span>this._callback(formatResult.content,sourceMapping);}</span>};<span class="cstat-no" title="statement not covered" >Formatter.ScriptIdentityFormatter=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(mimeType,content,callback){<span class="cstat-no" title="statement not covered" >callback(content,new Formatter.IdentityFormatterSourceMapping());}</span>};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterSourceMapping=<span class="fstat-no" title="function not covered" >fu</span>nction(){};<span class="cstat-no" title="statement not covered" >F</span>ormatter.FormatterSourceMapping.prototype={originalToFormatted(lineNumber,columnNumber){},formattedToOriginal(lineNumber,columnNumber){}};<span class="cstat-no" title="statement not covered" >F</span>ormatter.IdentityFormatterSourceMapping=class{<span class="fstat-no" title="function not covered" >or</span>iginalToFormatted(lineNumber,columnNumber){<span class="cstat-no" title="statement not covered" >return[lineNumber,columnNumber||0];}</span></span>
+<span class="fstat-no" title="function not covered" >fo</span>rmattedToOriginal(lineNumber,columnNumber){<span class="cstat-no" title="statement not covered" >return[lineNumber,columnNumber||0];}</span>};<span class="cstat-no" title="statement not covered" >Formatter.FormatterSourceMappingImpl=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(originalLineEndings,formattedLineEndings,mapping){<span class="cstat-no" title="statement not covered" >this._originalLineEndings=originalLineEndings;<span class="cstat-no" title="statement not covered" >t</span>his._formattedLineEndings=formattedLineEndings;<span class="cstat-no" title="statement not covered" >t</span>his._mapping=mapping;}</span></span>
+<span class="fstat-no" title="function not covered" >or</span>iginalToFormatted(lineNumber,columnNumber){const originalPosition=<span class="cstat-no" title="statement not covered" >Formatter.Formatter.locationToPosition(this._originalLineEndings,lineNumber,columnNumber||0);</span>const formattedPosition=<span class="cstat-no" title="statement not covered" >this._convertPosition(this._mapping.original,this._mapping.formatted,originalPosition||0);<span class="cstat-no" title="statement not covered" ></span>return Formatter.Formatter.positionToLocation(this._formattedLineEndings,formattedPosition);}</span>
+<span class="fstat-no" title="function not covered" >fo</span>rmattedToOriginal(lineNumber,columnNumber){const formattedPosition=<span class="cstat-no" title="statement not covered" >Formatter.Formatter.locationToPosition(this._formattedLineEndings,lineNumber,columnNumber||0);</span>const originalPosition=<span class="cstat-no" title="statement not covered" >this._convertPosition(this._mapping.formatted,this._mapping.original,formattedPosition);<span class="cstat-no" title="statement not covered" ></span>return Formatter.Formatter.positionToLocation(this._originalLineEndings,originalPosition||0);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>onvertPosition(positions1,positions2,position){const index=<span class="cstat-no" title="statement not covered" >positions1.upperBound(position)-1;</span>let convertedPosition=<span class="cstat-no" title="statement not covered" >positions2[index]+position-positions1[index];<span class="cstat-no" title="statement not covered" ></span>if(index&lt;positions2.length-1&amp;&amp;convertedPosition&gt;positions2[index+1])</span>
+<span class="cstat-no" title="statement not covered" >convertedPosition=positions2[index+1];<span class="cstat-no" title="statement not covered" >r</span>eturn convertedPosition;}</span>};;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

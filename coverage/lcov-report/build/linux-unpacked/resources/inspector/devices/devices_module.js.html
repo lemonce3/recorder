@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/devices/devices_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/devices</a> devices_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/357</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/115</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/79</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Devices.DevicesView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('devices/devicesView.css');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('devices-view');c</span>onst hbox=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','hbox devices-container');</span>const sidebar=<span class="cstat-no" title="statement not covered" >hbox.createChild('div','devices-sidebar');<span class="cstat-no" title="statement not covered" ></span>sidebar.createChild('div','devices-view-title').createTextChild(Common.UIString('Devices'));<span class="cstat-no" title="statement not covered" >t</span>his._sidebarList=sidebar.createChild('div','devices-sidebar-list');<span class="cstat-no" title="statement not covered" >t</span>his._discoveryView=new Devices.DevicesView.DiscoveryView();<span class="cstat-no" title="statement not covered" >t</span>his._sidebarListSpacer=this._sidebarList.createChild('div','devices-sidebar-spacer');<span class="cstat-no" title="statement not covered" >t</span>his._discoveryListItem=this._sidebarList.createChild('div','devices-sidebar-item');<span class="cstat-no" title="statement not covered" >t</span>his._discoveryListItem.textContent=Common.UIString('Settings');<span class="cstat-no" title="statement not covered" >t</span>his._discoveryListItem.addEventListener('click',this._selectSidebarListItem.bind(this,this._discoveryListItem,this._discoveryView));<span class="cstat-no" title="statement not covered" >t</span>his._viewById=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._devices=[];<span class="cstat-no" title="statement not covered" >t</span>his._listItemById=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._selectedListItem=null;<span class="cstat-no" title="statement not covered" >t</span>his._visibleView=null;<span class="cstat-no" title="statement not covered" >t</span>his._viewContainer=hbox.createChild('div','flex-auto vbox');c</span>onst discoveryFooter=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','devices-footer');<span class="cstat-no" title="statement not covered" ></span>this._deviceCountSpan=discoveryFooter.createChild('span');<span class="cstat-no" title="statement not covered" >d</span>iscoveryFooter.createChild('span').textContent=Common.UIString(' Read ');<span class="cstat-no" title="statement not covered" >d</span>iscoveryFooter.appendChild(UI.XLink.create('https://developers.google.com/chrome-developer-tools/docs/remote-debugging',Common.UIString('remote debugging documentation')));<span class="cstat-no" title="statement not covered" >d</span>iscoveryFooter.createChild('span').textContent=Common.UIString(' for more information.');<span class="cstat-no" title="statement not covered" >t</span>his._updateFooter();<span class="cstat-no" title="statement not covered" >t</span>his._selectSidebarListItem(this._discoveryListItem,this._discoveryView);<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.events.addEventListener(InspectorFrontendHostAPI.Events.DevicesUpdated,this._devicesUpdated,this);<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.events.addEventListener(InspectorFrontendHostAPI.Events.DevicesDiscoveryConfigChanged,this._devicesDiscoveryConfigChanged,this);<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.events.addEventListener(InspectorFrontendHostAPI.Events.DevicesPortForwardingStatusChanged,this._devicesPortForwardingStatusChanged,this);<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.tabIndex=0;<span class="cstat-no" title="statement not covered" >t</span>his.setDefaultFocusedElement(this.contentElement);}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic _instance(){<span class="cstat-no" title="statement not covered" >if(!Devices.DevicesView._instanceObject)</span>
+<span class="cstat-no" title="statement not covered" >Devices.DevicesView._instanceObject=new Devices.DevicesView();<span class="cstat-no" title="statement not covered" >r</span>eturn Devices.DevicesView._instanceObject;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>electSidebarListItem(listItem,view){<span class="cstat-no" title="statement not covered" >if(this._selectedListItem===listItem)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._selectedListItem){<span class="cstat-no" title="statement not covered" >this._selectedListItem.classList.remove('selected');<span class="cstat-no" title="statement not covered" >t</span>his._visibleView.detach();}</span></span>
+<span class="cstat-no" title="statement not covered" >this._visibleView=view;<span class="cstat-no" title="statement not covered" >t</span>his._selectedListItem=listItem;<span class="cstat-no" title="statement not covered" >t</span>his._visibleView.show(this._viewContainer);<span class="cstat-no" title="statement not covered" >t</span>his._selectedListItem.classList.add('selected');}</span>
+<span class="fstat-no" title="function not covered" >_d</span>evicesUpdated(event){<span class="cstat-no" title="statement not covered" >this._devices=(event.data).slice().filter(<span class="fstat-no" title="function not covered" >d=</span>&gt;<span class="cstat-no" title="statement not covered" >d.adbSerial.toUpperCase()!=='WEBRTC'&amp;&amp;d.adbSerial.toUpperCase()!=='LOCALHOST')</span>;<span class="cstat-no" title="statement not covered" >f</span>or(const device of this._devices){<span class="cstat-no" title="statement not covered" >if(!device.adbConnected)</span></span>
+<span class="cstat-no" title="statement not covered" >device.adbModel=Common.UIString('Unknown');}</span>
+const ids=<span class="cstat-no" title="statement not covered" >new Set();<span class="cstat-no" title="statement not covered" ></span>for(const device of this._devices)</span>
+<span class="cstat-no" title="statement not covered" >ids.add(device.id);l</span>et selectedRemoved=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>for(const deviceId of this._viewById.keys()){<span class="cstat-no" title="statement not covered" >if(!ids.has(deviceId)){const listItem=(<span class="cstat-no" title="statement not covered" >this._listItemById.get(deviceId))</span>;<span class="cstat-no" title="statement not covered" >this._listItemById.remove(deviceId);<span class="cstat-no" title="statement not covered" >t</span>his._viewById.remove(deviceId);<span class="cstat-no" title="statement not covered" >l</span>istItem.remove();<span class="cstat-no" title="statement not covered" >i</span>f(listItem===this._selectedListItem)</span></span></span>
+<span class="cstat-no" title="statement not covered" >selectedRemoved=true;}</span>}
+<span class="cstat-no" title="statement not covered" >for(const device of this._devices){let view=<span class="cstat-no" title="statement not covered" >this._viewById.get(device.id);</span>let listItem=<span class="cstat-no" title="statement not covered" >this._listItemById.get(device.id);<span class="cstat-no" title="statement not covered" ></span>if(!view){<span class="cstat-no" title="statement not covered" >view=new Devices.DevicesView.DeviceView();<span class="cstat-no" title="statement not covered" >t</span>his._viewById.set(device.id,view);<span class="cstat-no" title="statement not covered" >l</span>istItem=this._createSidebarListItem(view);<span class="cstat-no" title="statement not covered" >t</span>his._listItemById.set(device.id,listItem);<span class="cstat-no" title="statement not covered" >t</span>his._sidebarList.insertBefore(listItem,this._sidebarListSpacer);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >listItem._title.textContent=device.adbModel;<span class="cstat-no" title="statement not covered" >l</span>istItem._status.textContent=device.adbConnected?Common.UIString('Connected'):Common.UIString('Pending Authorization');<span class="cstat-no" title="statement not covered" >l</span>istItem.classList.toggle('device-connected',device.adbConnected);<span class="cstat-no" title="statement not covered" >v</span>iew.update(device);}</span>
+<span class="cstat-no" title="statement not covered" >if(selectedRemoved)</span>
+<span class="cstat-no" title="statement not covered" >this._selectSidebarListItem(this._discoveryListItem,this._discoveryView);<span class="cstat-no" title="statement not covered" >t</span>his._updateFooter();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateSidebarListItem(view){const listItem=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','devices-sidebar-item');<span class="cstat-no" title="statement not covered" ></span>listItem.addEventListener('click',this._selectSidebarListItem.bind(this,listItem,view));<span class="cstat-no" title="statement not covered" >l</span>istItem._title=listItem.createChild('div','devices-sidebar-item-title');<span class="cstat-no" title="statement not covered" >l</span>istItem._status=listItem.createChild('div','devices-sidebar-item-status');<span class="cstat-no" title="statement not covered" >r</span>eturn listItem;}</span>
+<span class="fstat-no" title="function not covered" >_d</span>evicesDiscoveryConfigChanged(event){const config=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >this._discoveryView.discoveryConfigChanged(config);}</span>
+<span class="fstat-no" title="function not covered" >_d</span>evicesPortForwardingStatusChanged(event){const status=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >for(const deviceId in status){const view=<span class="cstat-no" title="statement not covered" >this._viewById.get(deviceId);<span class="cstat-no" title="statement not covered" ></span>if(view)</span></span>
+<span class="cstat-no" title="statement not covered" >view.portForwardingStatusChanged(status[deviceId]);}</span>
+<span class="cstat-no" title="statement not covered" >for(const deviceId of this._viewById.keys()){const view=<span class="cstat-no" title="statement not covered" >this._viewById.get(deviceId);<span class="cstat-no" title="statement not covered" ></span>if(view&amp;&amp;!(deviceId in status))</span></span>
+<span class="cstat-no" title="statement not covered" >view.portForwardingStatusChanged({ports:{},browserId:''});}</span>}
+<span class="fstat-no" title="function not covered" >_u</span>pdateFooter(){<span class="cstat-no" title="statement not covered" >this._deviceCountSpan.textContent=!this._devices.length?Common.UIString('No devices detected.'):this._devices.length===1?Common.UIString('1 device detected.'):Common.UIString('%d devices detected.',this._devices.length);}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >super.wasShown();<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.setDevicesUpdatesEnabled(true);}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >super.willHide();<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.setDevicesUpdatesEnabled(false);}</span>};<span class="cstat-no" title="statement not covered" >Devices.DevicesView.DiscoveryView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his.setMinimumSize(100,100);<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.add('discovery-view');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.createChild('div','hbox device-text-row').createChild('div','view-title').textContent=Common.UIString('Settings');c</span>onst discoverUsbDevicesCheckbox=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create(Common.UIString('Discover USB devices'));<span class="cstat-no" title="statement not covered" ></span>discoverUsbDevicesCheckbox.classList.add('usb-checkbox');<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(discoverUsbDevicesCheckbox);<span class="cstat-no" title="statement not covered" >t</span>his._discoverUsbDevicesCheckbox=discoverUsbDevicesCheckbox.checkboxElement;<span class="cstat-no" title="statement not covered" >t</span>his._discoverUsbDevicesCheckbox.addEventListener('click',<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._config.discoverUsbDevices=this._discoverUsbDevicesCheckbox.checked;<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.setDevicesDiscoveryConfig(this._config);}</span>,false);c</span>onst help=<span class="cstat-no" title="statement not covered" >this.element.createChild('div','discovery-help');<span class="cstat-no" title="statement not covered" ></span>help.createChild('span').textContent=Common.UIString('Need help? Read Chrome ');<span class="cstat-no" title="statement not covered" >h</span>elp.appendChild(UI.XLink.create('https://developers.google.com/chrome-developer-tools/docs/remote-debugging',Common.UIString('remote debugging documentation.')));<span class="cstat-no" title="statement not covered" >t</span>his._config;<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingView=new Devices.DevicesView.PortForwardingView(<span class="fstat-no" title="function not covered" >(e</span>nabled,config)=&gt;{<span class="cstat-no" title="statement not covered" >this._config.portForwardingEnabled=enabled;<span class="cstat-no" title="statement not covered" >t</span>his._config.portForwardingConfig={};<span class="cstat-no" title="statement not covered" >f</span>or(const rule of config)</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._config.portForwardingConfig[rule.port]=rule.address;<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.setDevicesDiscoveryConfig(this._config);}</span>);<span class="cstat-no" title="statement not covered" >this._portForwardingView.show(this.element);}</span>
+<span class="fstat-no" title="function not covered" >di</span>scoveryConfigChanged(config){<span class="cstat-no" title="statement not covered" >this._config=config;<span class="cstat-no" title="statement not covered" >t</span>his._discoverUsbDevicesCheckbox.checked=config.discoverUsbDevices;<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingView.discoveryConfigChanged(config.portForwardingEnabled,config.portForwardingConfig);}</span>};<span class="cstat-no" title="statement not covered" >Devices.DevicesView.PortForwardingView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(callback){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._callback=callback;<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.add('port-forwarding-view');c</span>onst portForwardingHeader=<span class="cstat-no" title="statement not covered" >this.element.createChild('div','port-forwarding-header');</span>const portForwardingEnabledCheckbox=<span class="cstat-no" title="statement not covered" >UI.CheckboxLabel.create(Common.UIString('Port forwarding'));<span class="cstat-no" title="statement not covered" ></span>portForwardingEnabledCheckbox.classList.add('port-forwarding-checkbox');<span class="cstat-no" title="statement not covered" >p</span>ortForwardingHeader.appendChild(portForwardingEnabledCheckbox);<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingEnabledCheckbox=portForwardingEnabledCheckbox.checkboxElement;<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingEnabledCheckbox.addEventListener('click',this._update.bind(this),false);c</span>onst portForwardingFooter=<span class="cstat-no" title="statement not covered" >this.element.createChild('div','port-forwarding-footer');<span class="cstat-no" title="statement not covered" ></span>portForwardingFooter.createChild('span').textContent=Common.UIString('Define the listening port on your device that maps to a port accessible from your development machine. ');<span class="cstat-no" title="statement not covered" >p</span>ortForwardingFooter.appendChild(UI.XLink.create('https://developer.chrome.com/devtools/docs/remote-debugging#port-forwarding',Common.UIString('Learn more')));<span class="cstat-no" title="statement not covered" >t</span>his._list=new UI.ListWidget(this);<span class="cstat-no" title="statement not covered" >t</span>his._list.registerRequiredCSS('devices/devicesView.css');<span class="cstat-no" title="statement not covered" >t</span>his._list.element.classList.add('port-forwarding-list');c</span>onst placeholder=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','port-forwarding-list-empty');<span class="cstat-no" title="statement not covered" ></span>placeholder.textContent=Common.UIString('No rules');<span class="cstat-no" title="statement not covered" >t</span>his._list.setEmptyPlaceholder(placeholder);<span class="cstat-no" title="statement not covered" >t</span>his._list.show(this.element);<span class="cstat-no" title="statement not covered" >t</span>his._editor=null;<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(UI.createTextButton(Common.UIString('Add rule'),this._addRuleButtonClicked.bind(this),'add-rule-button'));<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingConfig=[];}</span></span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){<span class="cstat-no" title="statement not covered" >this._callback.call(null,this._portForwardingEnabledCheckbox.checked,this._portForwardingConfig);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddRuleButtonClicked(){<span class="cstat-no" title="statement not covered" >this._list.addNewItem(this._portForwardingConfig.length,{port:'',address:''});}</span>
+<span class="fstat-no" title="function not covered" >di</span>scoveryConfigChanged(portForwardingEnabled,portForwardingConfig){<span class="cstat-no" title="statement not covered" >this._portForwardingEnabledCheckbox.checked=portForwardingEnabled;<span class="cstat-no" title="statement not covered" >t</span>his._portForwardingConfig=[];<span class="cstat-no" title="statement not covered" >t</span>his._list.clear();<span class="cstat-no" title="statement not covered" >f</span>or(const key of Object.keys(portForwardingConfig)){const rule=(<span class="cstat-no" title="statement not covered" >{port:key,address:portForwardingConfig[key]})</span>;<span class="cstat-no" title="statement not covered" >this._portForwardingConfig.push(rule);<span class="cstat-no" title="statement not covered" >t</span>his._list.appendItem(rule,true);}</span>}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderItem(rule,editable){const element=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','port-forwarding-list-item');</span>const port=<span class="cstat-no" title="statement not covered" >element.createChild('div','port-forwarding-value port-forwarding-port');<span class="cstat-no" title="statement not covered" ></span>port.createChild('span','port-localhost').textContent=Common.UIString('localhost:');<span class="cstat-no" title="statement not covered" >p</span>ort.createTextChild(rule.port);<span class="cstat-no" title="statement not covered" >e</span>lement.createChild('div','port-forwarding-separator');<span class="cstat-no" title="statement not covered" >e</span>lement.createChild('div','port-forwarding-value').textContent=rule.address;<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveItemRequested(rule,index){<span class="cstat-no" title="statement not covered" >this._portForwardingConfig.splice(index,1);<span class="cstat-no" title="statement not covered" >t</span>his._list.removeItem(index);<span class="cstat-no" title="statement not covered" >t</span>his._update();}</span>
+<span class="fstat-no" title="function not covered" >co</span>mmitEdit(rule,editor,isNew){<span class="cstat-no" title="statement not covered" >rule.port=editor.control('port').value.trim();<span class="cstat-no" title="statement not covered" >r</span>ule.address=editor.control('address').value.trim();<span class="cstat-no" title="statement not covered" >i</span>f(isNew)</span>
+<span class="cstat-no" title="statement not covered" >this._portForwardingConfig.push(rule);<span class="cstat-no" title="statement not covered" >t</span>his._update();}</span>
+<span class="fstat-no" title="function not covered" >be</span>ginEdit(rule){const editor=<span class="cstat-no" title="statement not covered" >this._createEditor();<span class="cstat-no" title="statement not covered" ></span>editor.control('port').value=rule.port;<span class="cstat-no" title="statement not covered" >e</span>ditor.control('address').value=rule.address;<span class="cstat-no" title="statement not covered" >r</span>eturn editor;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateEditor(){<span class="cstat-no" title="statement not covered" >if(this._editor)</span>
+<span class="cstat-no" title="statement not covered" >return this._editor;c</span>onst editor=<span class="cstat-no" title="statement not covered" >new UI.ListWidget.Editor();<span class="cstat-no" title="statement not covered" ></span>this._editor=editor;c</span>onst content=<span class="cstat-no" title="statement not covered" >editor.contentElement();</span>const fields=<span class="cstat-no" title="statement not covered" >content.createChild('div','port-forwarding-edit-row');<span class="cstat-no" title="statement not covered" ></span>fields.createChild('div','port-forwarding-value port-forwarding-port').appendChild(editor.createInput('port','text','Device port (3333)',portValidator.bind(this)));<span class="cstat-no" title="statement not covered" >f</span>ields.createChild('div','port-forwarding-separator port-forwarding-separator-invisible');<span class="cstat-no" title="statement not covered" >f</span>ields.createChild('div','port-forwarding-value').appendChild(editor.createInput('address','text','Local address (dev.example.corp:3333)',addressValidator));<span class="cstat-no" title="statement not covered" >r</span>eturn editor;f</span>unction <span class="fstat-no" title="function not covered" >portValidator(</span>rule,index,input){const value=<span class="cstat-no" title="statement not covered" >input.value.trim();</span>const match=<span class="cstat-no" title="statement not covered" >value.match(/^(\d+)$/);<span class="cstat-no" title="statement not covered" ></span>if(!match)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst port=<span class="cstat-no" title="statement not covered" >parseInt(match[1],10);<span class="cstat-no" title="statement not covered" ></span>if(port&lt;1024||port&gt;65535)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._portForwardingConfig.length;++i){<span class="cstat-no" title="statement not covered" >if(i!==index&amp;&amp;this._portForwardingConfig[i].port===value)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+function <span class="fstat-no" title="function not covered" >addressValidator(</span>rule,index,input){const match=<span class="cstat-no" title="statement not covered" >input.value.trim().match(/^([a-zA-Z0-9\.\-_]+):(\d+)$/);<span class="cstat-no" title="statement not covered" ></span>if(!match)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst port=<span class="cstat-no" title="statement not covered" >parseInt(match[2],10);<span class="cstat-no" title="statement not covered" ></span>return port&lt;=65535;}</span>}};<span class="cstat-no" title="statement not covered" >Devices.DevicesView.DeviceView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his.setMinimumSize(100,100);<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('device-view');c</span>onst topRow=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','hbox device-text-row');<span class="cstat-no" title="statement not covered" ></span>this._deviceTitle=topRow.createChild('div','view-title');<span class="cstat-no" title="statement not covered" >t</span>his._deviceSerial=topRow.createChild('div','device-serial');<span class="cstat-no" title="statement not covered" >t</span>his._portStatus=this.contentElement.createChild('div','device-port-status hidden');<span class="cstat-no" title="statement not covered" >t</span>his._deviceOffline=this.contentElement.createChild('div');<span class="cstat-no" title="statement not covered" >t</span>his._deviceOffline.textContent=Common.UIString('Pending authentication: please accept debugging session on the device.');<span class="cstat-no" title="statement not covered" >t</span>his._noBrowsers=this.contentElement.createChild('div');<span class="cstat-no" title="statement not covered" >t</span>his._noBrowsers.textContent=Common.UIString('No browsers detected.');<span class="cstat-no" title="statement not covered" >t</span>his._browsers=this.contentElement.createChild('div','device-browser-list vbox');<span class="cstat-no" title="statement not covered" >t</span>his._browserById=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._cachedPortStatus=null;<span class="cstat-no" title="statement not covered" >t</span>his._device=null;}</span></span>
+<span class="fstat-no" title="function not covered" >up</span>date(device){<span class="cstat-no" title="statement not covered" >if(!this._device||this._device.adbModel!==device.adbModel)</span>
+<span class="cstat-no" title="statement not covered" >this._deviceTitle.textContent=device.adbModel;<span class="cstat-no" title="statement not covered" >i</span>f(!this._device||this._device.adbSerial!==device.adbSerial)</span>
+<span class="cstat-no" title="statement not covered" >this._deviceSerial.textContent='#'+device.adbSerial;<span class="cstat-no" title="statement not covered" >t</span>his._deviceOffline.classList.toggle('hidden',device.adbConnected);<span class="cstat-no" title="statement not covered" >t</span>his._noBrowsers.classList.toggle('hidden',!device.adbConnected||!!device.browsers.length);<span class="cstat-no" title="statement not covered" >t</span>his._browsers.classList.toggle('hidden',!device.adbConnected||!device.browsers.length);c</span>onst browserIds=<span class="cstat-no" title="statement not covered" >new Set();<span class="cstat-no" title="statement not covered" ></span>for(const browser of device.browsers)</span>
+<span class="cstat-no" title="statement not covered" >browserIds.add(browser.id);<span class="cstat-no" title="statement not covered" >f</span>or(const browserId of this._browserById.keys()){<span class="cstat-no" title="statement not covered" >if(!browserIds.has(browserId)){<span class="cstat-no" title="statement not covered" >this._browserById.get(browserId).element.remove();<span class="cstat-no" title="statement not covered" >t</span>his._browserById.remove(browserId);}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >for(const browser of device.browsers){let section=<span class="cstat-no" title="statement not covered" >this._browserById.get(browser.id);<span class="cstat-no" title="statement not covered" ></span>if(!section){<span class="cstat-no" title="statement not covered" >section=this._createBrowserSection();<span class="cstat-no" title="statement not covered" >t</span>his._browserById.set(browser.id,section);<span class="cstat-no" title="statement not covered" >t</span>his._browsers.appendChild(section.element);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._updateBrowserSection(section,browser);}</span>
+<span class="cstat-no" title="statement not covered" >this._device=device;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateBrowserSection(){const element=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','vbox flex-none');</span>const topRow=<span class="cstat-no" title="statement not covered" >element.createChild('div','');</span>const title=<span class="cstat-no" title="statement not covered" >topRow.createChild('div','device-browser-title');</span>const newTabRow=<span class="cstat-no" title="statement not covered" >element.createChild('div','device-browser-new-tab');<span class="cstat-no" title="statement not covered" ></span>newTabRow.createChild('div','').textContent=Common.UIString('New tab:');c</span>onst newTabInput=<span class="cstat-no" title="statement not covered" >UI.createInput('','text');<span class="cstat-no" title="statement not covered" ></span>newTabRow.appendChild(newTabInput);<span class="cstat-no" title="statement not covered" >n</span>ewTabInput.placeholder=Common.UIString('Enter URL');<span class="cstat-no" title="statement not covered" >n</span>ewTabInput.addEventListener('keydown',newTabKeyDown,false);c</span>onst newTabButton=<span class="cstat-no" title="statement not covered" >UI.createTextButton(Common.UIString('Open'),openNewTab);<span class="cstat-no" title="statement not covered" ></span>newTabRow.appendChild(newTabButton);c</span>onst pages=<span class="cstat-no" title="statement not covered" >element.createChild('div','device-page-list vbox');</span>const viewMore=<span class="cstat-no" title="statement not covered" >element.createChild('div','device-view-more');<span class="cstat-no" title="statement not covered" ></span>viewMore.addEventListener('click',viewMoreClick,false);<span class="cstat-no" title="statement not covered" >u</span>pdateViewMoreTitle();c</span>onst section=<span class="cstat-no" title="statement not covered" >{browser:null,element:element,title:title,pages:pages,viewMore:viewMore,newTab:newTabRow,pageSections:new Map()};<span class="cstat-no" title="statement not covered" ></span>return section;f</span>unction <span class="fstat-no" title="function not covered" >viewMoreClick(</span>){<span class="cstat-no" title="statement not covered" >pages.classList.toggle('device-view-more-toggled');<span class="cstat-no" title="statement not covered" >u</span>pdateViewMoreTitle();}</span>
+function <span class="fstat-no" title="function not covered" >updateViewMoreTitle(</span>){<span class="cstat-no" title="statement not covered" >viewMore.textContent=pages.classList.contains('device-view-more-toggled')?Common.UIString('View less tabs\u2026'):Common.UIString('View more tabs\u2026');}</span>
+function <span class="fstat-no" title="function not covered" >newTabKeyDown(</span>event){<span class="cstat-no" title="statement not covered" >if(event.key==='Enter'){<span class="cstat-no" title="statement not covered" >event.consume(true);<span class="cstat-no" title="statement not covered" >o</span>penNewTab();}</span>}</span>
+function <span class="fstat-no" title="function not covered" >openNewTab(</span>){<span class="cstat-no" title="statement not covered" >if(section.browser){<span class="cstat-no" title="statement not covered" >InspectorFrontendHost.openRemotePage(section.browser.id,newTabInput.value.trim()||'about:blank');<span class="cstat-no" title="statement not covered" >n</span>ewTabInput.value='';}</span>}</span>}
+<span class="fstat-no" title="function not covered" >_u</span>pdateBrowserSection(section,browser){<span class="cstat-no" title="statement not covered" >if(!section.browser||section.browser.adbBrowserName!==browser.adbBrowserName||section.browser.adbBrowserVersion!==browser.adbBrowserVersion){<span class="cstat-no" title="statement not covered" >if(browser.adbBrowserVersion)</span></span>
+<span class="cstat-no" title="statement not covered" >section.title.textContent=String.sprintf('%s (%s)',browser.adbBrowserName,browser.adbBrowserVersion);e</span>lse
+<span class="cstat-no" title="statement not covered" >section.title.textContent=browser.adbBrowserName;}</span>
+const pageIds=<span class="cstat-no" title="statement not covered" >new Set();<span class="cstat-no" title="statement not covered" ></span>for(const page of browser.pages)</span>
+<span class="cstat-no" title="statement not covered" >pageIds.add(page.id);<span class="cstat-no" title="statement not covered" >f</span>or(const pageId of section.pageSections.keys()){<span class="cstat-no" title="statement not covered" >if(!pageIds.has(pageId)){<span class="cstat-no" title="statement not covered" >section.pageSections.get(pageId).element.remove();<span class="cstat-no" title="statement not covered" >s</span>ection.pageSections.remove(pageId);}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let index=0;index&lt;browser.pages.length;++index){const page=<span class="cstat-no" title="statement not covered" >browser.pages[index];</span>let pageSection=<span class="cstat-no" title="statement not covered" >section.pageSections.get(page.id);<span class="cstat-no" title="statement not covered" ></span>if(!pageSection){<span class="cstat-no" title="statement not covered" >pageSection=this._createPageSection();<span class="cstat-no" title="statement not covered" >s</span>ection.pageSections.set(page.id,pageSection);<span class="cstat-no" title="statement not covered" >s</span>ection.pages.appendChild(pageSection.element);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._updatePageSection(pageSection,page);<span class="cstat-no" title="statement not covered" >i</span>f(!index&amp;&amp;section.pages.firstChild!==pageSection.element)</span>
+<span class="cstat-no" title="statement not covered" >section.pages.insertBefore(pageSection.element,section.pages.firstChild);}</span>
+const kViewMoreCount=<span class="cstat-no" title="statement not covered" >3;<span class="cstat-no" title="statement not covered" ></span>for(let index=0,element=section.pages.firstChild;element;element=element.nextSibling,++index)</span>
+<span class="cstat-no" title="statement not covered" >element.classList.toggle('device-view-more-page',index&gt;=kViewMoreCount);<span class="cstat-no" title="statement not covered" >s</span>ection.viewMore.classList.toggle('device-needs-view-more',browser.pages.length&gt;kViewMoreCount);<span class="cstat-no" title="statement not covered" >s</span>ection.newTab.classList.toggle('hidden',!browser.adbBrowserChromeVersion);<span class="cstat-no" title="statement not covered" >s</span>ection.browser=browser;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reatePageSection(){const element=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','vbox');</span>const titleRow=<span class="cstat-no" title="statement not covered" >element.createChild('div','device-page-title-row');</span>const title=<span class="cstat-no" title="statement not covered" >titleRow.createChild('div','device-page-title');</span>const inspect=<span class="cstat-no" title="statement not covered" >UI.createTextButton(Common.UIString('Inspect'),doAction.bind(null,'inspect'));<span class="cstat-no" title="statement not covered" ></span>titleRow.appendChild(inspect);c</span>onst toolbar=<span class="cstat-no" title="statement not covered" >new UI.Toolbar('');<span class="cstat-no" title="statement not covered" ></span>toolbar.appendToolbarItem(new UI.ToolbarMenuButton(appendActions));<span class="cstat-no" title="statement not covered" >t</span>itleRow.appendChild(toolbar.element);c</span>onst url=<span class="cstat-no" title="statement not covered" >element.createChild('div','device-page-url');</span>const section=<span class="cstat-no" title="statement not covered" >{page:null,element:element,title:title,url:url,inspect:inspect};<span class="cstat-no" title="statement not covered" ></span>return section;f</span>unction <span class="fstat-no" title="function not covered" >appendActions(</span>contextMenu){<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(Common.UIString('Reload'),doAction.bind(null,'reload'));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(Common.UIString('Focus'),doAction.bind(null,'activate'));<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(Common.UIString('Close'),doAction.bind(null,'close'));}</span>
+function <span class="fstat-no" title="function not covered" >doAction(</span>action){<span class="cstat-no" title="statement not covered" >if(section.page)</span>
+<span class="cstat-no" title="statement not covered" >InspectorFrontendHost.performActionOnRemotePage(section.page.id,action);}</span>}
+<span class="fstat-no" title="function not covered" >_u</span>pdatePageSection(section,page){<span class="cstat-no" title="statement not covered" >if(!section.page||section.page.name!==page.name){<span class="cstat-no" title="statement not covered" >section.title.textContent=page.name;<span class="cstat-no" title="statement not covered" >s</span>ection.title.title=page.name;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!section.page||section.page.url!==page.url){<span class="cstat-no" title="statement not covered" >section.url.textContent='';<span class="cstat-no" title="statement not covered" >s</span>ection.url.appendChild(UI.XLink.create(page.url));}</span></span>
+<span class="cstat-no" title="statement not covered" >section.inspect.disabled=page.attached;<span class="cstat-no" title="statement not covered" >s</span>ection.page=page;}</span>
+<span class="fstat-no" title="function not covered" >po</span>rtForwardingStatusChanged(status){const json=<span class="cstat-no" title="statement not covered" >JSON.stringify(status);<span class="cstat-no" title="statement not covered" ></span>if(json===this._cachedPortStatus)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._cachedPortStatus=json;<span class="cstat-no" title="statement not covered" >t</span>his._portStatus.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._portStatus.createChild('div','device-port-status-text').textContent=Common.UIString('Port Forwarding:');c</span>onst connected=<span class="cstat-no" title="statement not covered" >[];</span>const transient=<span class="cstat-no" title="statement not covered" >[];</span>const error=<span class="cstat-no" title="statement not covered" >[];</span>let empty=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>for(const port in status.ports){<span class="cstat-no" title="statement not covered" >if(!status.ports.hasOwnProperty(port))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >e</span>mpty=false;c</span>onst portStatus=<span class="cstat-no" title="statement not covered" >status.ports[port];</span>const portNumber=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','device-view-port-number monospace');<span class="cstat-no" title="statement not covered" ></span>portNumber.textContent=':'+port;<span class="cstat-no" title="statement not covered" >i</span>f(portStatus&gt;=0)</span>
+<span class="cstat-no" title="statement not covered" >this._portStatus.appendChild(portNumber);e</span>lse
+<span class="cstat-no" title="statement not covered" >this._portStatus.insertBefore(portNumber,this._portStatus.firstChild);c</span>onst portIcon=<span class="cstat-no" title="statement not covered" >createElementWithClass('div','device-view-port-icon');<span class="cstat-no" title="statement not covered" ></span>if(portStatus&gt;=0){<span class="cstat-no" title="statement not covered" >connected.push(port);}</span>else <span class="cstat-no" title="statement not covered" >if(portStatus===-1||portStatus===-2){<span class="cstat-no" title="statement not covered" >portIcon.classList.add('device-view-port-icon-transient');<span class="cstat-no" title="statement not covered" >t</span>ransient.push(port);}</span>else <span class="cstat-no" title="statement not covered" >if(portStatus&lt;0){<span class="cstat-no" title="statement not covered" >portIcon.classList.add('device-view-port-icon-error');<span class="cstat-no" title="statement not covered" >e</span>rror.push(port);}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >this._portStatus.insertBefore(portIcon,portNumber);}</span>
+const title=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(connected.length)</span>
+<span class="cstat-no" title="statement not covered" >title.push(Common.UIString('Connected: %s',connected.join(', ')));<span class="cstat-no" title="statement not covered" >i</span>f(transient.length)</span>
+<span class="cstat-no" title="statement not covered" >title.push(Common.UIString('Transient: %s',transient.join(', ')));<span class="cstat-no" title="statement not covered" >i</span>f(error.length)</span>
+<span class="cstat-no" title="statement not covered" >title.push(Common.UIString('Error: %s',error.join(', ')));<span class="cstat-no" title="statement not covered" >t</span>his._portStatus.title=title.join('; ');<span class="cstat-no" title="statement not covered" >t</span>his._portStatus.classList.toggle('hidden',empty);}</span>};<span class="cstat-no" title="statement not covered" >Devices.DevicesView.BrowserSection;<span class="cstat-no" title="statement not covered" >D</span>evices.DevicesView.PageSection;;<span class="cstat-no" title="statement not covered" ></span>Runtime.cachedResources["devices/devicesView.css"]="/*\n * Copyright (c) 2015 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.devices-container {\n    overflow: hidden;\n    flex: auto;\n}\n\n.devices-sidebar {\n    flex: 0 0 150px;\n    display: flex;\n    flex-direction: column;\n    align-items: stretch;\n    margin: 15px 10px 0 0;\n}\n\n.devices-sidebar-list {\n    flex: auto;\n    display: flex;\n    flex-direction: column;\n    align-items: stretch;\n    overflow: auto;\n}\n\n.devices-sidebar-item {\n    color: #222 !important;\n    padding: 6px 6px 6px 16px;\n    flex: auto;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    font-size: 14px;\n    flex: none;\n}\n\n.devices-sidebar-item.selected {\n    border-left: 6px solid #666 !important;\n    padding-left: 10px;\n}\n\n.devices-sidebar-item-status:before {\n    content: \"\\25cf\";\n    font-size: 16px;\n    color: red;\n    position: relative;\n    top: 1px;\n    margin-right: 2px;\n}\n\n.devices-sidebar-item.device-connected .devices-sidebar-item-status:before {\n    color: green;\n}\n\n.devices-sidebar-spacer {\n    flex: none;\n}\n\n.devices-view-title {\n    font-size: 16px;\n    margin: 0 0 15px 15px;\n    padding-top: 1px;\n    flex: none;\n}\n\n.view-title {\n    font-size: 16px;\n    flex: none;\n}\n\n.devices-footer {\n    border-top: 1px solid #cdcdcd;\n    background-color: var(--toolbar-bg-color);\n    flex: none;\n    padding: 3px 10px;\n    overflow: hidden;\n}\n\n.devices-footer &gt; span {\n    white-space: pre;\n}\n\n.discovery-view {\n    overflow-x: hidden;\n    overflow-y: auto;\n    padding: 15px 15px 0px 0px;\n}\n\n.discovery-view &gt; * {\n    flex: none;\n}\n\n.usb-checkbox {\n    padding-bottom: 8px;\n    margin-top: 20px;\n}\n\n.port-forwarding-header {\n    display: flex;\n    align-items: center;\n    flex-direction: row;\n    margin-top: 5px;\n}\n\n.add-rule-button {\n    margin: 10px 25px;\n    align-self: flex-start;\n}\n\n.discovery-help {\n    margin: 5px 0 25px 25px;\n}\n\n.discovery-help &gt; span {\n    white-space: pre;\n}\n\n.port-forwarding-list {\n    margin: 10px 0 0 25px;\n    max-width: 500px;\n    flex: none;\n}\n\n.port-forwarding-list-empty {\n    flex: auto;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.port-forwarding-list-item {\n    padding: 3px 5px 3px 5px;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    position: relative;\n    flex: auto 1 1;\n}\n\n.list-item .port-forwarding-value {\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    -webkit-user-select: none;\n    color: #222;\n    overflow: hidden;\n}\n\n.port-forwarding-value {\n    flex: 3 1 0;\n}\n\n.port-forwarding-value.port-forwarding-port {\n    flex: 1 1 0;\n}\n\n.port-localhost {\n    color: #aaa;\n}\n\n.port-forwarding-separator {\n    flex: 0 0 1px;\n    background-color: rgb(231, 231, 231);\n    height: 30px;\n    margin: 0 4px;\n}\n\n.port-forwarding-separator-invisible {\n    visibility: hidden;\n    height: 100% !important;\n}\n\n.port-forwarding-edit-row {\n    flex: none;\n    display: flex;\n    flex-direction: row;\n    margin: 6px 5px;\n    align-items: center;\n}\n\n.port-forwarding-edit-row input {\n    width: 100%;\n    text-align: inherit;\n}\n\n.port-forwarding-footer {\n    overflow: hidden;\n    margin: 15px 0 0 25px;\n    max-width: 500px;\n}\n\n.port-forwarding-footer &gt; * {\n    white-space: pre-wrap;\n}\n\n.network-discovery-header {\n    display: flex;\n    align-items: center;\n    flex-direction: row;\n    margin-top: 5px;\n}\n\n.add-network-target-button {\n    margin: 10px 25px;\n    align-self: flex-start;\n}\n\n.network-discovery-list {\n    margin: 10px 0 0 25px;\n    max-width: 500px;\n    flex: none;\n}\n\n.network-discovery-list-empty {\n    flex: auto;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.network-discovery-list-item {\n    padding: 3px 5px 3px 5px;\n    height: 30px;\n    display: flex;\n    align-items: center;\n    position: relative;\n    flex: auto 1 1;\n}\n\n.list-item .network-discovery-value {\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    -webkit-user-select: none;\n    color: #222;\n    overflow: hidden;\n}\n\n.network-discovery-value {\n    flex: 3 1 0;\n}\n\n.network-discovery-edit-row {\n    flex: none;\n    display: flex;\n    flex-direction: row;\n    margin: 6px 5px;\n    align-items: center;\n}\n\n.network-discovery-edit-row input {\n    width: 100%;\n    text-align: inherit;\n}\n\n.network-discovery-footer {\n    overflow: hidden;\n    margin: 15px 0 0 25px;\n    max-width: 500px;\n}\n\n.network-discovery-footer &gt; * {\n    white-space: pre-wrap;\n}\n\n.device-view {\n    overflow: auto;\n    -webkit-user-select: text;\n    flex: auto;\n    padding-top: 15px;\n}\n\n.device-text-row {\n    align-items: baseline;\n    margin-right: 25px;\n}\n\n.device-serial {\n    color: #777;\n    margin-left: 5px;\n    flex: none;\n}\n\n.device-browser-list {\n    flex: auto;\n    overflow: auto;\n    padding-right: 10px;\n    margin-top: 30px;\n}\n\n.device-browser-list &gt; div {\n    margin-bottom: 15px;\n}\n\n.device-browser-title {\n    font-size: 16px;\n}\n\n.device-browser-new-tab {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    margin: 10px 0 0 10px;\n}\n\n.device-browser-new-tab &gt; div {\n    font-size: 13px;\n}\n\n.device-browser-new-tab &gt; input {\n    margin: 0 10px;\n}\n\n.device-page-list {\n    margin: 10px 0 0 10px;\n    overflow-x: auto;\n    align-items: stretch;\n    flex: none;\n}\n\n.device-page-list &gt; div {\n    flex: none;\n    padding: 5px 0;\n}\n\n.device-page-list:not(.device-view-more-toggled) &gt; div.device-view-more-page {\n    display: none;\n}\n\n.device-page-title-row {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n}\n\n.device-page-title {\n    font-size: 15px;\n    flex: auto;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n}\n\n.device-page-title-row .toolbar {\n    margin-left: 3px;\n    padding: 0;\n    border-radius: 3px;\n}\n\n.device-page-title-row .toolbar:hover {\n    background-color: hsl(0, 0%, 90%);\n}\n\n.device-page-url {\n    margin: 3px 100px 3px 0;\n}\n\n.device-page-url a {\n    color: #777;\n    word-break: break-all;\n}\n\n.device-view-more {\n    cursor: pointer;\n    text-decoration: underline;\n    color: rgb(17, 85, 204);\n    margin: 5px 0 0 10px;\n    display: none;\n}\n\n.device-view-more.device-needs-view-more  {\n    display: block;\n}\n\n.device-port-status {\n    overflow: hidden;\n    flex: none;\n    display: flex;\n    align-items: baseline;\n    margin: 10px 0 0 10px;\n}\n\n.device-port-status-text {\n    margin-right: 10px;\n}\n\n.device-view-port-icon {\n    background-color: green;\n    border: 0 solid transparent;\n    border-radius: 6px;\n    height: 12px;\n    width: 12px;\n    position: relative;\n    top: 2px;\n    flex: none;\n}\n\n.device-view-port-number {\n    margin: 0 10px 0 2px;\n    flex: none;\n}\n\n.device-view-port-icon.device-view-port-icon-error {\n    background-color: red;\n}\n\n.device-view-port-icon.device-view-port-icon-transient {\n    transform: scale(1.2);\n    background-color: orange;\n}\n\n/*# sourceURL=devices/devicesView.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

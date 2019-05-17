@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/extensions_test_runner/extensions_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/extensions_test_runner</a> extensions_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/7</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function <span class="fstat-no" title="function not covered" >extension_getRequestByUrl(</span>urls,callback){function <span class="fstat-no" title="function not covered" >onHAR(</span>response){const entries=<span class="cstat-no" title="statement not covered" >response.entries;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;entries.length;++i){<span class="cstat-no" title="statement not covered" >for(let url=0;url&lt;urls.length;++url){<span class="cstat-no" title="statement not covered" >if(urls[url].test(entries[i].request.url)){<span class="cstat-no" title="statement not covered" >callback(entries[i]);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >output('no item found');<span class="cstat-no" title="statement not covered" >c</span>allback(null);}</span>
+<span class="cstat-no" title="statement not covered" >webInspector.network.getHAR(onHAR);}</span>;const extensionsHost=<span class="cstat-no" title="statement not covered" >'devtools-extensions.oopif.test';</span>const extensionsOrigin=<span class="cstat-no" title="statement not covered" >`http://${extensionsHost}:8000`;<span class="cstat-no" title="statement not covered" ></span>Extensions.extensionServer._registerHandler('evaluateForTestInFrontEnd',onEvaluate);<span class="cstat-no" title="statement not covered" >E</span>xtensions.extensionServer._extensionAPITestHook=<span class="fstat-no" title="function not covered" >fu</span>nction(extensionServerClient,coreAPI){<span class="cstat-no" title="statement not covered" >window.webInspector=coreAPI;<span class="cstat-no" title="statement not covered" >w</span>indow._extensionServerForTests=extensionServerClient;<span class="cstat-no" title="statement not covered" >c</span>oreAPI.panels.themeName='themeNameForTest';}</span>;<span class="cstat-no" title="statement not covered" >E</span>xtensionsTestRunner._replyToExtension=<span class="fstat-no" title="function not covered" >fu</span>nction(requestId,port){<span class="cstat-no" title="statement not covered" >Extensions.extensionServer._dispatchCallback(requestId,port);}</span>;f</span>unction <span class="fstat-no" title="function not covered" >onEvaluate(</span>message,port){function <span class="fstat-no" title="function not covered" >reply(</span>param){<span class="cstat-no" title="statement not covered" >Extensions.extensionServer._dispatchCallback(message.requestId,port,param);}</span>
+<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >eval(message.expression);}</span>catch(e){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Exception while running: '+message.expression+'\n'+(e.stack||e));<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();}</span>}</span>
+<span class="cstat-no" title="statement not covered" >ExtensionsTestRunner.showPanel=<span class="fstat-no" title="function not covered" >fu</span>nction(panelId){<span class="cstat-no" title="statement not covered" >if(panelId==='extension')</span></span>
+<span class="cstat-no" title="statement not covered" >panelId=UI.inspectorView._tabbedPane._tabs[UI.inspectorView._tabbedPane._tabs.length-1].id;<span class="cstat-no" title="statement not covered" >r</span>eturn UI.inspectorView.showPanel(panelId);}</span>;<span class="cstat-no" title="statement not covered" >ExtensionsTestRunner.evaluateInExtension=<span class="fstat-no" title="function not covered" >fu</span>nction(code){<span class="cstat-no" title="statement not covered" >ExtensionsTestRunner._codeToEvaluateBeforeTests=code;}</span>;<span class="cstat-no" title="statement not covered" >E</span>xtensionsTestRunner.runExtensionTests=<span class="fstat-no" title="function not covered" >as</span>ync function(tests){const result=<span class="cstat-no" title="statement not covered" >await TestRunner.RuntimeAgent.evaluate('location.href','console',false);<span class="cstat-no" title="statement not covered" ></span>if(!result)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >E</span>xtensionsTestRunner._pendingTests=(ExtensionsTestRunner._codeToEvaluateBeforeTests||'')+tests.join('\n');c</span>onst pageURL=<span class="cstat-no" title="statement not covered" >result.value;</span>let extensionURL=<span class="cstat-no" title="statement not covered" >pageURL.replace(/^(https?:\/\/[^\/]*\/).*$/,'$1')+'devtools/resources/extension-main.html';<span class="cstat-no" title="statement not covered" ></span>extensionURL=extensionURL.replace('127.0.0.1',extensionsHost);<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendAPI.addExtensions([{startPage:extensionURL,name:'test extension',exposeWebInspectorNamespace:true}]);<span class="cstat-no" title="statement not covered" >E</span>xtensions.extensionServer.initializeExtensions();}</span>;<span class="cstat-no" title="statement not covered" >(function <span class="fstat-no" title="function not covered" >disableLogging(</span>){<span class="cstat-no" title="statement not covered" >console.warn=<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >undefined;</span>}</span>)();;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

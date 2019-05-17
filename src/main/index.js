@@ -26,6 +26,8 @@ function createWindow() {
 		height: 600,
 		useContentSize: true,
 		width: 400,
+		frame: false,
+		resizable: false,
 		webPreferences: {
 			nodeIntegration: true,  //default value of webPreferences.nodeIntegration is false in Electron 5.0.0
 			nodeIntegrationInWorker: true,

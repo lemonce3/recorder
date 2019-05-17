@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/snippets/snippets_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/snippets</a> snippets_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/98</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/27</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Snippets.SnippetFileSystem=class extends Persistence.PlatformFileSystem{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super('snippet://','snippets');<span class="cstat-no" title="statement not covered" >t</span>his._lastSnippetIdentifierSetting=Common.settings.createSetting('scriptSnippets_lastIdentifier',0);<span class="cstat-no" title="statement not covered" >t</span>his._snippetsSetting=Common.settings.createSetting('scriptSnippets',[]);}</span></span>
+<span class="fstat-no" title="function not covered" >in</span>itialFilePaths(){const savedSnippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get();<span class="cstat-no" title="statement not covered" ></span>return savedSnippets.map(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >escape(snippet.name))</span>;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync createFile(path,name){const nextId=<span class="cstat-no" title="statement not covered" >this._lastSnippetIdentifierSetting.get()+1;<span class="cstat-no" title="statement not covered" ></span>this._lastSnippetIdentifierSetting.set(nextId);c</span>onst snippetName=<span class="cstat-no" title="statement not covered" >`Script snippet #${nextId}`;</span>const snippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get();<span class="cstat-no" title="statement not covered" ></span>snippets.push({name:snippetName,content:''});<span class="cstat-no" title="statement not covered" >t</span>his._snippetsSetting.set(snippets);<span class="cstat-no" title="statement not covered" >r</span>eturn escape(snippetName);}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync deleteFile(path){const name=<span class="cstat-no" title="statement not covered" >unescape(path.substring(1));</span>const allSnippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get();</span>const snippets=<span class="cstat-no" title="statement not covered" >allSnippets.filter(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.name!==name)</span>;<span class="cstat-no" title="statement not covered" ></span>if(allSnippets.length!==snippets.length){<span class="cstat-no" title="statement not covered" >this._snippetsSetting.set(snippets);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >re</span>questFileContent(path,callback){const name=<span class="cstat-no" title="statement not covered" >unescape(path.substring(1));</span>const snippet=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get().find(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.name===name)</span>;<span class="cstat-no" title="statement not covered" ></span>callback(snippet?snippet.content:null,false);}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync setFileContent(path,content,isBase64){const name=<span class="cstat-no" title="statement not covered" >unescape(path.substring(1));</span>const snippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get();</span>const snippet=<span class="cstat-no" title="statement not covered" >snippets.find(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.name===name)</span>;<span class="cstat-no" title="statement not covered" ></span>if(snippet){<span class="cstat-no" title="statement not covered" >snippet.content=content;<span class="cstat-no" title="statement not covered" >t</span>his._snippetsSetting.set(snippets);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >re</span>nameFile(path,newName,callback){const name=<span class="cstat-no" title="statement not covered" >unescape(path.substring(1));</span>const snippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get();</span>const snippet=<span class="cstat-no" title="statement not covered" >snippets.find(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.name===name)</span>;<span class="cstat-no" title="statement not covered" ></span>newName=newName.trim();<span class="cstat-no" title="statement not covered" >i</span>f(!snippet||newName.length===0||snippets.find(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.name===newName)</span>){<span class="cstat-no" title="statement not covered" >callback(false);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >snippet.name=newName;<span class="cstat-no" title="statement not covered" >t</span>his._snippetsSetting.set(snippets);<span class="cstat-no" title="statement not covered" >c</span>allback(true,newName);}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync searchInPath(query,progress){const re=<span class="cstat-no" title="statement not covered" >new RegExp(query.escapeForRegExp(),'i');</span>const snippets=<span class="cstat-no" title="statement not covered" >this._snippetsSetting.get().filter(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >snippet.content.match(re))</span>;<span class="cstat-no" title="statement not covered" ></span>return snippets.map(<span class="fstat-no" title="function not covered" >sn</span>ippet=&gt;<span class="cstat-no" title="statement not covered" >escape(snippet.name))</span>;}</span>
+<span class="fstat-no" title="function not covered" >mi</span>meFromPath(path){<span class="cstat-no" title="statement not covered" >return'text/javascript';}</span>
+<span class="fstat-no" title="function not covered" >co</span>ntentType(path){<span class="cstat-no" title="statement not covered" >return Common.resourceTypes.Script;}</span>
+<span class="fstat-no" title="function not covered" >to</span>oltipForURL(url){<span class="cstat-no" title="statement not covered" >return ls`Linked to ${unescape(url.substring(this.path().length))}`;}</span>
+<span class="fstat-no" title="function not covered" >su</span>pportsAutomapping(){<span class="cstat-no" title="statement not covered" >return true;}</span>};<span class="cstat-no" title="statement not covered" >Snippets.evaluateScriptSnippet=<span class="fstat-no" title="function not covered" >as</span>ync function(uiSourceCode){<span class="cstat-no" title="statement not covered" >if(!uiSourceCode.url().startsWith('snippet://'))</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst executionContext=<span class="cstat-no" title="statement not covered" >UI.context.flavor(SDK.ExecutionContext);<span class="cstat-no" title="statement not covered" ></span>if(!executionContext)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst runtimeModel=<span class="cstat-no" title="statement not covered" >executionContext.runtimeModel;<span class="cstat-no" title="statement not covered" ></span>await uiSourceCode.requestContent();<span class="cstat-no" title="statement not covered" >u</span>iSourceCode.commitWorkingCopy();c</span>onst expression=<span class="cstat-no" title="statement not covered" >uiSourceCode.workingCopy();<span class="cstat-no" title="statement not covered" ></span>Common.console.show();c</span>onst url=<span class="cstat-no" title="statement not covered" >uiSourceCode.url();</span>const result=<span class="cstat-no" title="statement not covered" >await executionContext.evaluate({expression:`${expression}\n//# sourceURL=${url}`,objectGroup:'console',silent:false,includeCommandLineAPI:true,returnByValue:false,generatePreview:true,},false,true);<span class="cstat-no" title="statement not covered" ></span>if(result.exceptionDetails){<span class="cstat-no" title="statement not covered" >SDK.consoleModel.addMessage(SDK.ConsoleMessage.fromException(runtimeModel,result.exceptionDetails,undefined,undefined,url));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!result.object)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst scripts=<span class="cstat-no" title="statement not covered" >executionContext.debuggerModel.scriptsForSourceURL(url);</span>const scriptId=<span class="cstat-no" title="statement not covered" >scripts[scripts.length-1].scriptId;<span class="cstat-no" title="statement not covered" ></span>SDK.consoleModel.addMessage(new SDK.ConsoleMessage(runtimeModel,SDK.ConsoleMessage.MessageSource.JS,SDK.ConsoleMessage.MessageLevel.Info,'',SDK.ConsoleMessage.MessageType.Result,url,undefined,undefined,[result.object],undefined,undefined,executionContext.id,scriptId));}</span>;<span class="cstat-no" title="statement not covered" >Snippets.isSnippetsUISourceCode=<span class="fstat-no" title="function not covered" >fu</span>nction(uiSourceCode){<span class="cstat-no" title="statement not covered" >return uiSourceCode.url().startsWith('snippet://');}</span>;<span class="cstat-no" title="statement not covered" >S</span>nippets.isSnippetsProject=<span class="fstat-no" title="function not covered" >fu</span>nction(project){<span class="cstat-no" title="statement not covered" >return project.type()===Workspace.projectTypes.FileSystem&amp;&amp;Persistence.FileSystemWorkspaceBinding.fileSystemType(project)==='snippets';}</span>;<span class="cstat-no" title="statement not covered" >P</span>ersistence.isolatedFileSystemManager.addPlatformFileSystem('snippet://',new Snippets.SnippetFileSystem());<span class="cstat-no" title="statement not covered" >S</span>nippets.project=(Workspace.workspace.projectsForType(Workspace.projectTypes.FileSystem).find(<span class="fstat-no" title="function not covered" >pr</span>oject=&gt;<span class="cstat-no" title="statement not covered" >Persistence.FileSystemWorkspaceBinding.fileSystemType(project)==='snippets')</span>);;<span class="cstat-no" title="statement not covered" ></span>Snippets.SnippetsQuickOpen=class extends QuickOpen.FilteredListWidget.Provider{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._snippets=[];}</span></span>
+<span class="fstat-no" title="function not covered" >se</span>lectItem(itemIndex,promptValue){<span class="cstat-no" title="statement not covered" >if(itemIndex===null)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >S</span>nippets.evaluateScriptSnippet(this._snippets[itemIndex]);}</span>
+<span class="fstat-no" title="function not covered" >no</span>tFoundText(query){<span class="cstat-no" title="statement not covered" >return Common.UIString('No snippets found.');}</span>
+<span class="fstat-no" title="function not covered" >at</span>tach(){<span class="cstat-no" title="statement not covered" >this._snippets=Snippets.project.uiSourceCodes();}</span>
+<span class="fstat-no" title="function not covered" >de</span>tach(){<span class="cstat-no" title="statement not covered" >this._snippets=[];}</span>
+<span class="fstat-no" title="function not covered" >it</span>emCount(){<span class="cstat-no" title="statement not covered" >return this._snippets.length;}</span>
+<span class="fstat-no" title="function not covered" >it</span>emKeyAt(itemIndex){<span class="cstat-no" title="statement not covered" >return this._snippets[itemIndex].name();}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderItem(itemIndex,query,titleElement,subtitleElement){<span class="cstat-no" title="statement not covered" >titleElement.textContent=unescape(this._snippets[itemIndex].name());<span class="cstat-no" title="statement not covered" >t</span>itleElement.classList.add('monospace');<span class="cstat-no" title="statement not covered" >Q</span>uickOpen.FilteredListWidget.highlightRanges(titleElement,query,true);}</span>};;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

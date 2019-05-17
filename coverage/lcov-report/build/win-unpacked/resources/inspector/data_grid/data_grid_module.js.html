@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/data_grid/data_grid_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/data_grid</a> data_grid_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/1290</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/762</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/177</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/453</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a>
+<a name='L432'></a><a href='#L432'>432</a>
+<a name='L433'></a><a href='#L433'>433</a>
+<a name='L434'></a><a href='#L434'>434</a>
+<a name='L435'></a><a href='#L435'>435</a>
+<a name='L436'></a><a href='#L436'>436</a>
+<a name='L437'></a><a href='#L437'>437</a>
+<a name='L438'></a><a href='#L438'>438</a>
+<a name='L439'></a><a href='#L439'>439</a>
+<a name='L440'></a><a href='#L440'>440</a>
+<a name='L441'></a><a href='#L441'>441</a>
+<a name='L442'></a><a href='#L442'>442</a>
+<a name='L443'></a><a href='#L443'>443</a>
+<a name='L444'></a><a href='#L444'>444</a>
+<a name='L445'></a><a href='#L445'>445</a>
+<a name='L446'></a><a href='#L446'>446</a>
+<a name='L447'></a><a href='#L447'>447</a>
+<a name='L448'></a><a href='#L448'>448</a>
+<a name='L449'></a><a href='#L449'>449</a>
+<a name='L450'></a><a href='#L450'>450</a>
+<a name='L451'></a><a href='#L451'>451</a>
+<a name='L452'></a><a href='#L452'>452</a>
+<a name='L453'></a><a href='#L453'>453</a>
+<a name='L454'></a><a href='#L454'>454</a>
+<a name='L455'></a><a href='#L455'>455</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >DataGrid.DataGrid=class extends Common.Object{<span class="fstat-no" title="function not covered" >co</span>nstructor(columnsArray,editCallback,deleteCallback,refreshCallback){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his.element=createElementWithClass('div','data-grid');<span class="cstat-no" title="statement not covered" >U</span>I.appendStyle(this.element,'data_grid/dataGrid.css');<span class="cstat-no" title="statement not covered" >t</span>his.element.tabIndex=0;<span class="cstat-no" title="statement not covered" >t</span>his.element.addEventListener('keydown',this._keyDown.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his.element.addEventListener('contextmenu',this._contextMenu.bind(this),true);<span class="cstat-no" title="statement not covered" >t</span>his._editCallback=editCallback;<span class="cstat-no" title="statement not covered" >t</span>his._deleteCallback=deleteCallback;<span class="cstat-no" title="statement not covered" >t</span>his._refreshCallback=refreshCallback;c</span>onst headerContainer=<span class="cstat-no" title="statement not covered" >this.element.createChild('div','header-container');<span class="cstat-no" title="statement not covered" ></span>this._headerTable=headerContainer.createChild('table','header');<span class="cstat-no" title="statement not covered" >t</span>his._headerTableHeaders={};<span class="cstat-no" title="statement not covered" >t</span>his._scrollContainer=this.element.createChild('div','data-container');<span class="cstat-no" title="statement not covered" >t</span>his._dataTable=this._scrollContainer.createChild('table','data');<span class="cstat-no" title="statement not covered" >i</span>f(editCallback)</span></span>
+<span class="cstat-no" title="statement not covered" >this._dataTable.addEventListener('dblclick',this._ondblclick.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._dataTable.addEventListener('mousedown',this._mouseDownInDataTable.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._dataTable.addEventListener('click',this._clickInDataTable.bind(this),true);<span class="cstat-no" title="statement not covered" >t</span>his._inline=false;<span class="cstat-no" title="statement not covered" >t</span>his._columnsArray=[];<span class="cstat-no" title="statement not covered" >t</span>his._columns={};<span class="cstat-no" title="statement not covered" >t</span>his._visibleColumnsArray=columnsArray;<span class="cstat-no" title="statement not covered" >c</span>olumnsArray.forEach(<span class="fstat-no" title="function not covered" >co</span>lumn=&gt;<span class="cstat-no" title="statement not covered" >this._innerAddColumn(column))</span>;<span class="cstat-no" title="statement not covered" >t</span>his._cellClass=null;<span class="cstat-no" title="statement not covered" >t</span>his._headerTableColumnGroup=this._headerTable.createChild('colgroup');<span class="cstat-no" title="statement not covered" >t</span>his._headerTableBody=this._headerTable.createChild('tbody');<span class="cstat-no" title="statement not covered" >t</span>his._headerRow=this._headerTableBody.createChild('tr');<span class="cstat-no" title="statement not covered" >t</span>his._dataTableColumnGroup=this._dataTable.createChild('colgroup');<span class="cstat-no" title="statement not covered" >t</span>his.dataTableBody=this._dataTable.createChild('tbody');<span class="cstat-no" title="statement not covered" >t</span>his._topFillerRow=this.dataTableBody.createChild('tr','data-grid-filler-row revealed');<span class="cstat-no" title="statement not covered" >t</span>his._bottomFillerRow=this.dataTableBody.createChild('tr','data-grid-filler-row revealed');<span class="cstat-no" title="statement not covered" >t</span>his.setVerticalPadding(0,0);<span class="cstat-no" title="statement not covered" >t</span>his._refreshHeader();<span class="cstat-no" title="statement not covered" >t</span>his._editing=false;<span class="cstat-no" title="statement not covered" >t</span>his.selectedNode=null;<span class="cstat-no" title="statement not covered" >t</span>his.expandNodesWhenArrowing=false;<span class="cstat-no" title="statement not covered" >t</span>his.setRootNode((new DataGrid.DataGridNode()));<span class="cstat-no" title="statement not covered" >t</span>his.indentWidth=15;<span class="cstat-no" title="statement not covered" >t</span>his._resizers=[];<span class="cstat-no" title="statement not covered" >t</span>his._columnWidthsInitialized=false;<span class="cstat-no" title="statement not covered" >t</span>his._cornerWidth=DataGrid.DataGrid.CornerWidth;<span class="cstat-no" title="statement not covered" >t</span>his._resizeMethod=DataGrid.DataGrid.ResizeMethod.Nearest;<span class="cstat-no" title="statement not covered" >t</span>his._headerContextMenuCallback=null;<span class="cstat-no" title="statement not covered" >t</span>his._rowContextMenuCallback=null;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic setElementText(element,newText,longText){<span class="cstat-no" title="statement not covered" >if(longText&amp;&amp;newText.length&gt;1000){<span class="cstat-no" title="statement not covered" >element.textContent=newText.trimEnd(1000);<span class="cstat-no" title="statement not covered" >e</span>lement.title=newText;<span class="cstat-no" title="statement not covered" >e</span>lement[DataGrid.DataGrid._longTextSymbol]=newText;}</span>else{<span class="cstat-no" title="statement not covered" >element.textContent=newText;<span class="cstat-no" title="statement not covered" >e</span>lement.title='';<span class="cstat-no" title="statement not covered" >e</span>lement[DataGrid.DataGrid._longTextSymbol]=undefined;}</span>}</span>
+<span class="fstat-no" title="function not covered" >se</span>tStriped(isStriped){<span class="cstat-no" title="statement not covered" >this.element.classList.toggle('striped-data-grid',isStriped);}</span>
+<span class="fstat-no" title="function not covered" >he</span>aderTableBody(){<span class="cstat-no" title="statement not covered" >return this._headerTableBody;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nnerAddColumn(column,position){const columnId=<span class="cstat-no" title="statement not covered" >column.id;<span class="cstat-no" title="statement not covered" ></span>if(columnId in this._columns)</span>
+<span class="cstat-no" title="statement not covered" >this._innerRemoveColumn(columnId);<span class="cstat-no" title="statement not covered" >i</span>f(position===undefined)</span>
+<span class="cstat-no" title="statement not covered" >position=this._columnsArray.length;<span class="cstat-no" title="statement not covered" >t</span>his._columnsArray.splice(position,0,column);<span class="cstat-no" title="statement not covered" >t</span>his._columns[columnId]=column;<span class="cstat-no" title="statement not covered" >i</span>f(column.disclosure)</span>
+<span class="cstat-no" title="statement not covered" >this.disclosureColumnId=columnId;c</span>onst cell=<span class="cstat-no" title="statement not covered" >createElement('th');<span class="cstat-no" title="statement not covered" ></span>cell.className=columnId+'-column';<span class="cstat-no" title="statement not covered" >c</span>ell[DataGrid.DataGrid._columnIdSymbol]=columnId;<span class="cstat-no" title="statement not covered" >t</span>his._headerTableHeaders[columnId]=cell;c</span>onst div=<span class="cstat-no" title="statement not covered" >createElement('div');<span class="cstat-no" title="statement not covered" ></span>if(column.titleDOMFragment)</span>
+<span class="cstat-no" title="statement not covered" >div.appendChild(column.titleDOMFragment);e</span>lse
+<span class="cstat-no" title="statement not covered" >div.textContent=column.title;<span class="cstat-no" title="statement not covered" >c</span>ell.appendChild(div);<span class="cstat-no" title="statement not covered" >i</span>f(column.sort){<span class="cstat-no" title="statement not covered" >cell.classList.add(column.sort);<span class="cstat-no" title="statement not covered" >t</span>his._sortColumnCell=cell;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(column.sortable){<span class="cstat-no" title="statement not covered" >cell.addEventListener('click',this._clickInHeaderCell.bind(this),false);<span class="cstat-no" title="statement not covered" >c</span>ell.classList.add('sortable');c</span>onst icon=<span class="cstat-no" title="statement not covered" >UI.Icon.create('','sort-order-icon');<span class="cstat-no" title="statement not covered" ></span>cell.createChild('div','sort-order-icon-container').appendChild(icon);<span class="cstat-no" title="statement not covered" >c</span>ell[DataGrid.DataGrid._sortIconSymbol]=icon;}</span>}</span>
+<span class="fstat-no" title="function not covered" >ad</span>dColumn(column,position){<span class="cstat-no" title="statement not covered" >this._innerAddColumn(column,position);}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nnerRemoveColumn(columnId){const column=<span class="cstat-no" title="statement not covered" >this._columns[columnId];<span class="cstat-no" title="statement not covered" ></span>if(!column)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >d</span>elete this._columns[columnId];c</span>onst index=<span class="cstat-no" title="statement not covered" >this._columnsArray.findIndex(<span class="fstat-no" title="function not covered" >co</span>lumnConfig=&gt;<span class="cstat-no" title="statement not covered" >columnConfig.id===columnId)</span>;<span class="cstat-no" title="statement not covered" ></span>this._columnsArray.splice(index,1);c</span>onst cell=<span class="cstat-no" title="statement not covered" >this._headerTableHeaders[columnId];<span class="cstat-no" title="statement not covered" ></span>if(cell.parentElement)</span>
+<span class="cstat-no" title="statement not covered" >cell.parentElement.removeChild(cell);<span class="cstat-no" title="statement not covered" >d</span>elete this._headerTableHeaders[columnId];}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveColumn(columnId){<span class="cstat-no" title="statement not covered" >this._innerRemoveColumn(columnId);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tCellClass(cellClass){<span class="cstat-no" title="statement not covered" >this._cellClass=cellClass;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>efreshHeader(){<span class="cstat-no" title="statement not covered" >this._headerTableColumnGroup.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._dataTableColumnGroup.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._headerRow.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._topFillerRow.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._bottomFillerRow.removeChildren();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._visibleColumnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[i];</span>const columnId=<span class="cstat-no" title="statement not covered" >column.id;</span>const headerColumn=<span class="cstat-no" title="statement not covered" >this._headerTableColumnGroup.createChild('col');</span>const dataColumn=<span class="cstat-no" title="statement not covered" >this._dataTableColumnGroup.createChild('col');<span class="cstat-no" title="statement not covered" ></span>if(column.width){<span class="cstat-no" title="statement not covered" >headerColumn.style.width=column.width;<span class="cstat-no" title="statement not covered" >d</span>ataColumn.style.width=column.width;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._headerRow.appendChild(this._headerTableHeaders[columnId]);<span class="cstat-no" title="statement not covered" >t</span>his._topFillerRow.createChild('td','top-filler-td');<span class="cstat-no" title="statement not covered" >t</span>his._bottomFillerRow.createChild('td','bottom-filler-td')[DataGrid.DataGrid._columnIdSymbol]=columnId;}</span>
+<span class="cstat-no" title="statement not covered" >this._headerRow.createChild('th','corner');<span class="cstat-no" title="statement not covered" >t</span>his._topFillerRow.createChild('td','corner').classList.add('top-filler-td');<span class="cstat-no" title="statement not covered" >t</span>his._bottomFillerRow.createChild('td','corner').classList.add('bottom-filler-td');<span class="cstat-no" title="statement not covered" >t</span>his._headerTableColumnGroup.createChild('col','corner');<span class="cstat-no" title="statement not covered" >t</span>his._dataTableColumnGroup.createChild('col','corner');}</span>
+<span class="fstat-no" title="function not covered" >se</span>tVerticalPadding(top,bottom){const topPx=<span class="cstat-no" title="statement not covered" >top+'px';</span>const bottomPx=<span class="cstat-no" title="statement not covered" >(top||bottom)?bottom+'px':'auto';<span class="cstat-no" title="statement not covered" ></span>if(this._topFillerRow.style.height===topPx&amp;&amp;this._bottomFillerRow.style.height===bottomPx)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._topFillerRow.style.height=topPx;<span class="cstat-no" title="statement not covered" >t</span>his._bottomFillerRow.style.height=bottomPx;<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(DataGrid.DataGrid.Events.PaddingChanged);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tRootNode(rootNode){<span class="cstat-no" title="statement not covered" >if(this._rootNode){<span class="cstat-no" title="statement not covered" >this._rootNode.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._rootNode.dataGrid=null;<span class="cstat-no" title="statement not covered" >t</span>his._rootNode._isRoot=false;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._rootNode=rootNode;<span class="cstat-no" title="statement not covered" >r</span>ootNode._isRoot=true;<span class="cstat-no" title="statement not covered" >r</span>ootNode.setHasChildren(false);<span class="cstat-no" title="statement not covered" >r</span>ootNode._expanded=true;<span class="cstat-no" title="statement not covered" >r</span>ootNode._revealed=true;<span class="cstat-no" title="statement not covered" >r</span>ootNode.selectable=false;<span class="cstat-no" title="statement not covered" >r</span>ootNode.dataGrid=this;}</span>
+<span class="fstat-no" title="function not covered" >ro</span>otNode(){<span class="cstat-no" title="statement not covered" >return this._rootNode;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>ndblclick(event){<span class="cstat-no" title="statement not covered" >if(this._editing||this._editingNode)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst columnId=<span class="cstat-no" title="statement not covered" >this.columnIdFromNode((event.target));<span class="cstat-no" title="statement not covered" ></span>if(!columnId||!this._columns[columnId].editable)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._startEditing((event.target));}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartEditingColumnOfDataGridNode(node,cellIndex){<span class="cstat-no" title="statement not covered" >this._editing=true;<span class="cstat-no" title="statement not covered" >t</span>his._editingNode=node;<span class="cstat-no" title="statement not covered" >t</span>his._editingNode.select();c</span>onst element=<span class="cstat-no" title="statement not covered" >this._editingNode._element.children[cellIndex];<span class="cstat-no" title="statement not covered" ></span>UI.InplaceEditor.startEditing(element,this._startEditingConfig(element));<span class="cstat-no" title="statement not covered" >e</span>lement.getComponentSelection().selectAllChildren(element);}</span>
+<span class="fstat-no" title="function not covered" >st</span>artEditingNextEditableColumnOfDataGridNode(node,columnIdentifier){const column=<span class="cstat-no" title="statement not covered" >this._columns[columnIdentifier];</span>const cellIndex=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray.indexOf(column);</span>const nextEditableColumn=<span class="cstat-no" title="statement not covered" >this._nextEditableColumn(cellIndex);<span class="cstat-no" title="statement not covered" ></span>if(nextEditableColumn!==-1)</span>
+<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(node,nextEditableColumn);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartEditing(target){const element=(<span class="cstat-no" title="statement not covered" >target.enclosingNodeOrSelfWithNodeName('td'))</span>;<span class="cstat-no" title="statement not covered" >if(!element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._editingNode=this.dataGridNodeFromNode(target);<span class="cstat-no" title="statement not covered" >i</span>f(!this._editingNode){<span class="cstat-no" title="statement not covered" >if(!this.creationNode)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._editingNode=this.creationNode;}</span>
+<span class="cstat-no" title="statement not covered" >if(this._editingNode.isCreationNode){<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(this._editingNode,this._nextEditableColumn(-1));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._editing=true;<span class="cstat-no" title="statement not covered" >i</span>f(element[DataGrid.DataGrid._longTextSymbol])</span>
+<span class="cstat-no" title="statement not covered" >element.textContent=element[DataGrid.DataGrid._longTextSymbol];<span class="cstat-no" title="statement not covered" >U</span>I.InplaceEditor.startEditing(element,this._startEditingConfig(element));<span class="cstat-no" title="statement not covered" >e</span>lement.getComponentSelection().selectAllChildren(element);}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderInline(){<span class="cstat-no" title="statement not covered" >this.element.classList.add('inline');<span class="cstat-no" title="statement not covered" >t</span>his._cornerWidth=0;<span class="cstat-no" title="statement not covered" >t</span>his._inline=true;<span class="cstat-no" title="statement not covered" >t</span>his.updateWidths();}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartEditingConfig(element){<span class="cstat-no" title="statement not covered" >return new UI.InplaceEditor.Config(this._editingCommitted.bind(this),this._editingCancelled.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >_e</span>ditingCommitted(element,newText,oldText,context,moveDirection){const columnId=<span class="cstat-no" title="statement not covered" >this.columnIdFromNode(element);<span class="cstat-no" title="statement not covered" ></span>if(!columnId){<span class="cstat-no" title="statement not covered" >this._editingCancelled(element);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const column=<span class="cstat-no" title="statement not covered" >this._columns[columnId];</span>const cellIndex=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray.indexOf(column);</span>const textBeforeEditing=(<span class="cstat-no" title="statement not covered" >this._editingNode.data[columnId]||'')</span>;const currentEditingNode=<span class="cstat-no" title="statement not covered" >this._editingNode;</span>function <span class="fstat-no" title="function not covered" >moveToNextIfNeeded(</span>wasChange){<span class="cstat-no" title="statement not covered" >if(!moveDirection)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(moveDirection==='forward'){const firstEditableColumn=<span class="cstat-no" title="statement not covered" >this._nextEditableColumn(-1);<span class="cstat-no" title="statement not covered" ></span>if(currentEditingNode.isCreationNode&amp;&amp;cellIndex===firstEditableColumn&amp;&amp;!wasChange)</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst nextEditableColumn=<span class="cstat-no" title="statement not covered" >this._nextEditableColumn(cellIndex);<span class="cstat-no" title="statement not covered" ></span>if(nextEditableColumn!==-1){<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(currentEditingNode,nextEditableColumn);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const nextDataGridNode=<span class="cstat-no" title="statement not covered" >currentEditingNode.traverseNextNode(true,null,true);<span class="cstat-no" title="statement not covered" ></span>if(nextDataGridNode){<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(nextDataGridNode,firstEditableColumn);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(currentEditingNode.isCreationNode&amp;&amp;wasChange){<span class="cstat-no" title="statement not covered" >this.addCreationNode(false);<span class="cstat-no" title="statement not covered" >t</span>his._startEditingColumnOfDataGridNode(this.creationNode,firstEditableColumn);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >return;}</span>
+<span class="cstat-no" title="statement not covered" >if(moveDirection==='backward'){const prevEditableColumn=<span class="cstat-no" title="statement not covered" >this._nextEditableColumn(cellIndex,true);<span class="cstat-no" title="statement not covered" ></span>if(prevEditableColumn!==-1){<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(currentEditingNode,prevEditableColumn);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+const lastEditableColumn=<span class="cstat-no" title="statement not covered" >this._nextEditableColumn(this._visibleColumnsArray.length,true);</span>const nextDataGridNode=<span class="cstat-no" title="statement not covered" >currentEditingNode.traversePreviousNode(true,true);<span class="cstat-no" title="statement not covered" ></span>if(nextDataGridNode)</span>
+<span class="cstat-no" title="statement not covered" >this._startEditingColumnOfDataGridNode(nextDataGridNode,lastEditableColumn);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>}
+<span class="cstat-no" title="statement not covered" >DataGrid.DataGrid.setElementText(element,newText,!!column.longText);<span class="cstat-no" title="statement not covered" >i</span>f(textBeforeEditing===newText){<span class="cstat-no" title="statement not covered" >this._editingCancelled(element);<span class="cstat-no" title="statement not covered" >m</span>oveToNextIfNeeded.call(this,false);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._editingNode.data[columnId]=newText;<span class="cstat-no" title="statement not covered" >t</span>his._editCallback(this._editingNode,columnId,textBeforeEditing,newText);<span class="cstat-no" title="statement not covered" >i</span>f(this._editingNode.isCreationNode)</span>
+<span class="cstat-no" title="statement not covered" >this.addCreationNode(false);<span class="cstat-no" title="statement not covered" >t</span>his._editingCancelled(element);<span class="cstat-no" title="statement not covered" >m</span>oveToNextIfNeeded.call(this,true);}</span>
+<span class="fstat-no" title="function not covered" >_e</span>ditingCancelled(element){<span class="cstat-no" title="statement not covered" >this._editing=false;<span class="cstat-no" title="statement not covered" >t</span>his._editingNode=null;}</span>
+<span class="fstat-no" title="function not covered" >_n</span>extEditableColumn(cellIndex,moveBackward){const increment=<span class="cstat-no" title="statement not covered" >moveBackward?-1:1;</span>const columns=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray;<span class="cstat-no" title="statement not covered" ></span>for(let i=cellIndex+increment;(i&gt;=0)&amp;&amp;(i&lt;columns.length);i+=increment){<span class="cstat-no" title="statement not covered" >if(columns[i].editable)</span></span>
+<span class="cstat-no" title="statement not covered" >return i;}</span>
+<span class="cstat-no" title="statement not covered" >return-1;}</span>
+<span class="fstat-no" title="function not covered" >so</span>rtColumnId(){<span class="cstat-no" title="statement not covered" >if(!this._sortColumnCell)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn this._sortColumnCell[DataGrid.DataGrid._columnIdSymbol];}</span>
+<span class="fstat-no" title="function not covered" >so</span>rtOrder(){<span class="cstat-no" title="statement not covered" >if(!this._sortColumnCell||this._sortColumnCell.classList.contains(DataGrid.DataGrid.Order.Ascending))</span>
+<span class="cstat-no" title="statement not covered" >return DataGrid.DataGrid.Order.Ascending;<span class="cstat-no" title="statement not covered" >i</span>f(this._sortColumnCell.classList.contains(DataGrid.DataGrid.Order.Descending))</span>
+<span class="cstat-no" title="statement not covered" >return DataGrid.DataGrid.Order.Descending;<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>
+<span class="fstat-no" title="function not covered" >is</span>SortOrderAscending(){<span class="cstat-no" title="statement not covered" >return!this._sortColumnCell||this._sortColumnCell.classList.contains(DataGrid.DataGrid.Order.Ascending);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>utoSizeWidths(widths,minPercent,maxPercent){<span class="cstat-no" title="statement not covered" >if(minPercent)</span>
+<span class="cstat-no" title="statement not covered" >minPercent=Math.min(minPercent,Math.floor(100/widths.length));l</span>et totalWidth=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;widths.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >totalWidth+=widths[i];l</span>et totalPercentWidth=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;widths.length;++i){let width=<span class="cstat-no" title="statement not covered" >Math.round(100*widths[i]/totalWidth);<span class="cstat-no" title="statement not covered" ></span>if(minPercent&amp;&amp;width&lt;minPercent)</span></span>
+<span class="cstat-no" title="statement not covered" >width=minPercent;e</span>lse <span class="cstat-no" title="statement not covered" >if(maxPercent&amp;&amp;width&gt;maxPercent)</span>
+<span class="cstat-no" title="statement not covered" >width=maxPercent;<span class="cstat-no" title="statement not covered" >t</span>otalPercentWidth+=width;<span class="cstat-no" title="statement not covered" >w</span>idths[i]=width;}</span>
+let recoupPercent=<span class="cstat-no" title="statement not covered" >totalPercentWidth-100;<span class="cstat-no" title="statement not covered" ></span>while(minPercent&amp;&amp;recoupPercent&gt;0){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;widths.length;++i){<span class="cstat-no" title="statement not covered" >if(widths[i]&gt;minPercent){<span class="cstat-no" title="statement not covered" >--widths[i];<span class="cstat-no" title="statement not covered" >-</span>-recoupPercent;<span class="cstat-no" title="statement not covered" >i</span>f(!recoupPercent)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >break;}</span>}}
+<span class="cstat-no" title="statement not covered" >while(maxPercent&amp;&amp;recoupPercent&lt;0){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;widths.length;++i){<span class="cstat-no" title="statement not covered" >if(widths[i]&lt;maxPercent){<span class="cstat-no" title="statement not covered" >++widths[i];<span class="cstat-no" title="statement not covered" >+</span>+recoupPercent;<span class="cstat-no" title="statement not covered" >i</span>f(!recoupPercent)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >break;}</span>}}
+<span class="cstat-no" title="statement not covered" >return widths;}</span>
+<span class="fstat-no" title="function not covered" >au</span>toSizeColumns(minPercent,maxPercent,maxDescentLevel){let widths=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._columnsArray.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >widths.push((this._columnsArray[i].title||'').length);<span class="cstat-no" title="statement not covered" >m</span>axDescentLevel=maxDescentLevel||0;c</span>onst children=<span class="cstat-no" title="statement not covered" >this._enumerateChildren(this._rootNode,[],maxDescentLevel+1);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;children.length;++i){const node=<span class="cstat-no" title="statement not covered" >children[i];<span class="cstat-no" title="statement not covered" ></span>for(let j=0;j&lt;this._columnsArray.length;++j){const text=<span class="cstat-no" title="statement not covered" >String(node.data[this._columnsArray[j].id]);<span class="cstat-no" title="statement not covered" ></span>if(text.length&gt;widths[j])</span></span></span>
+<span class="cstat-no" title="statement not covered" >widths[j]=text.length;}</span>}
+<span class="cstat-no" title="statement not covered" >widths=this._autoSizeWidths(widths,minPercent,maxPercent);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._columnsArray.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this._columnsArray[i].weight=widths[i];<span class="cstat-no" title="statement not covered" >t</span>his._columnWidthsInitialized=false;<span class="cstat-no" title="statement not covered" >t</span>his.updateWidths();}</span>
+<span class="fstat-no" title="function not covered" >_e</span>numerateChildren(rootNode,result,maxLevel){<span class="cstat-no" title="statement not covered" >if(!rootNode._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >result.push(rootNode);<span class="cstat-no" title="statement not covered" >i</span>f(!maxLevel)</span>
+<span class="cstat-no" title="statement not covered" >return[];<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;rootNode.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this._enumerateChildren(rootNode.children[i],result,maxLevel-1);<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >this.updateWidths();}</span>
+<span class="fstat-no" title="function not covered" >up</span>dateWidths(){<span class="cstat-no" title="statement not covered" >if(!this._columnWidthsInitialized&amp;&amp;this.element.offsetWidth){const tableWidth=<span class="cstat-no" title="statement not covered" >this.element.offsetWidth-this._cornerWidth;</span>const cells=<span class="cstat-no" title="statement not covered" >this._headerTableBody.rows[0].cells;</span>const numColumns=<span class="cstat-no" title="statement not covered" >cells.length-1;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;numColumns;i++){const column=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[i];<span class="cstat-no" title="statement not covered" ></span>if(!column.weight)</span></span></span>
+<span class="cstat-no" title="statement not covered" >column.weight=100*cells[i].offsetWidth/tableWidth||10;}</span>
+<span class="cstat-no" title="statement not covered" >this._columnWidthsInitialized=true;}</span>
+<span class="cstat-no" title="statement not covered" >this._applyColumnWeights();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tName(name){<span class="cstat-no" title="statement not covered" >this._columnWeightsSetting=Common.settings.createSetting('dataGrid-'+name+'-columnWeights',{});<span class="cstat-no" title="statement not covered" >t</span>his._loadColumnWeights();}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadColumnWeights(){<span class="cstat-no" title="statement not covered" >if(!this._columnWeightsSetting)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst weights=<span class="cstat-no" title="statement not covered" >this._columnWeightsSetting.get();<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._columnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._columnsArray[i];</span>const weight=<span class="cstat-no" title="statement not covered" >weights[column.id];<span class="cstat-no" title="statement not covered" ></span>if(weight)</span></span>
+<span class="cstat-no" title="statement not covered" >column.weight=weight;}</span>
+<span class="cstat-no" title="statement not covered" >this._applyColumnWeights();}</span>
+<span class="fstat-no" title="function not covered" >_s</span>aveColumnWeights(){<span class="cstat-no" title="statement not covered" >if(!this._columnWeightsSetting)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst weights=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._columnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._columnsArray[i];<span class="cstat-no" title="statement not covered" ></span>weights[column.id]=column.weight;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._columnWeightsSetting.set(weights);}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._loadColumnWeights();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){}
+<span class="fstat-no" title="function not covered" >_a</span>pplyColumnWeights(){let tableWidth=<span class="cstat-no" title="statement not covered" >this.element.offsetWidth-this._cornerWidth;<span class="cstat-no" title="statement not covered" ></span>if(tableWidth&lt;=0)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et sumOfWeights=<span class="cstat-no" title="statement not covered" >0.0;</span>const fixedColumnWidths=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._visibleColumnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[i];<span class="cstat-no" title="statement not covered" ></span>if(column.fixedWidth){const width=<span class="cstat-no" title="statement not covered" >this._headerTableColumnGroup.children[i][DataGrid.DataGrid._preferredWidthSymbol]||this._headerTableBody.rows[0].cells[i].offsetWidth;<span class="cstat-no" title="statement not covered" ></span>fixedColumnWidths[i]=width;<span class="cstat-no" title="statement not covered" >t</span>ableWidth-=width;}</span>else{<span class="cstat-no" title="statement not covered" >sumOfWeights+=this._visibleColumnsArray[i].weight;}</span>}</span></span>
+let sum=<span class="cstat-no" title="statement not covered" >0;</span>let lastOffset=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._visibleColumnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[i];</span>let width;<span class="cstat-no" title="statement not covered" >if(column.fixedWidth){<span class="cstat-no" title="statement not covered" >width=fixedColumnWidths[i];}</span>else{<span class="cstat-no" title="statement not covered" >sum+=column.weight;c</span>onst offset=<span class="cstat-no" title="statement not covered" >(sum*tableWidth/sumOfWeights)|0;<span class="cstat-no" title="statement not covered" ></span>width=offset-lastOffset;<span class="cstat-no" title="statement not covered" >l</span>astOffset=offset;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._setPreferredWidth(i,width);}</span>
+<span class="cstat-no" title="statement not covered" >this._positionResizers();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tColumnsVisiblity(columnsVisibility){<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray=[];<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._columnsArray.length;++i){const column=<span class="cstat-no" title="statement not covered" >this._columnsArray[i];<span class="cstat-no" title="statement not covered" ></span>if(columnsVisibility[column.id])</span></span>
+<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray.push(column);}</span>
+<span class="cstat-no" title="statement not covered" >this._refreshHeader();<span class="cstat-no" title="statement not covered" >t</span>his._applyColumnWeights();c</span>onst nodes=<span class="cstat-no" title="statement not covered" >this._enumerateChildren(this.rootNode(),[],-1);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;nodes.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >nodes[i].refresh();}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t scrollContainer(){<span class="cstat-no" title="statement not covered" >return this._scrollContainer;}</span>
+<span class="fstat-no" title="function not covered" >_p</span>ositionResizers(){const headerTableColumns=<span class="cstat-no" title="statement not covered" >this._headerTableColumnGroup.children;</span>const numColumns=<span class="cstat-no" title="statement not covered" >headerTableColumns.length-1;</span>const left=<span class="cstat-no" title="statement not covered" >[];</span>const resizers=<span class="cstat-no" title="statement not covered" >this._resizers;<span class="cstat-no" title="statement not covered" ></span>while(resizers.length&gt;numColumns-1)</span>
+<span class="cstat-no" title="statement not covered" >resizers.pop().remove();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;numColumns-1;i++){<span class="cstat-no" title="statement not covered" >left[i]=(left[i-1]||0)+this._headerTableBody.rows[0].cells[i].offsetWidth;}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;numColumns-1;i++){let resizer=<span class="cstat-no" title="statement not covered" >resizers[i];<span class="cstat-no" title="statement not covered" ></span>if(!resizer){<span class="cstat-no" title="statement not covered" >resizer=createElement('div');<span class="cstat-no" title="statement not covered" >r</span>esizer.__index=i;<span class="cstat-no" title="statement not covered" >r</span>esizer.classList.add('data-grid-resizer');<span class="cstat-no" title="statement not covered" >U</span>I.installDragHandle(resizer,this._startResizerDragging.bind(this),this._resizerDragging.bind(this),this._endResizerDragging.bind(this),'col-resize');<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(resizer);<span class="cstat-no" title="statement not covered" >r</span>esizers.push(resizer);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(resizer.__position!==left[i]){<span class="cstat-no" title="statement not covered" >resizer.__position=left[i];<span class="cstat-no" title="statement not covered" >r</span>esizer.style.left=left[i]+'px';}</span>}</span>}
+<span class="fstat-no" title="function not covered" >ad</span>dCreationNode(hasChildren){<span class="cstat-no" title="statement not covered" >if(this.creationNode)</span>
+<span class="cstat-no" title="statement not covered" >this.creationNode.makeNormal();c</span>onst emptyData=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(const column in this._columns)</span>
+<span class="cstat-no" title="statement not covered" >emptyData[column]=null;<span class="cstat-no" title="statement not covered" >t</span>his.creationNode=new DataGrid.CreationDataGridNode(emptyData,hasChildren);<span class="cstat-no" title="statement not covered" >t</span>his.rootNode().appendChild(this.creationNode);}</span>
+<span class="fstat-no" title="function not covered" >_k</span>eyDown(event){<span class="cstat-no" title="statement not covered" >if(!this.selectedNode||event.shiftKey||event.metaKey||event.ctrlKey||this._editing||UI.isEditing())</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et handled=<span class="cstat-no" title="statement not covered" >false;</span>let nextSelectedNode;<span class="cstat-no" title="statement not covered" >if(event.key==='ArrowUp'&amp;&amp;!event.altKey){<span class="cstat-no" title="statement not covered" >nextSelectedNode=this.selectedNode.traversePreviousNode(true);<span class="cstat-no" title="statement not covered" >w</span>hile(nextSelectedNode&amp;&amp;!nextSelectedNode.selectable)</span></span>
+<span class="cstat-no" title="statement not covered" >nextSelectedNode=nextSelectedNode.traversePreviousNode(true);<span class="cstat-no" title="statement not covered" >h</span>andled=nextSelectedNode?true:false;}</span>else <span class="cstat-no" title="statement not covered" >if(event.key==='ArrowDown'&amp;&amp;!event.altKey){<span class="cstat-no" title="statement not covered" >nextSelectedNode=this.selectedNode.traverseNextNode(true);<span class="cstat-no" title="statement not covered" >w</span>hile(nextSelectedNode&amp;&amp;!nextSelectedNode.selectable)</span></span>
+<span class="cstat-no" title="statement not covered" >nextSelectedNode=nextSelectedNode.traverseNextNode(true);<span class="cstat-no" title="statement not covered" >h</span>andled=nextSelectedNode?true:false;}</span>else <span class="cstat-no" title="statement not covered" >if(event.key==='ArrowLeft'){<span class="cstat-no" title="statement not covered" >if(this.selectedNode.expanded){<span class="cstat-no" title="statement not covered" >if(event.altKey)</span></span></span>
+<span class="cstat-no" title="statement not covered" >this.selectedNode.collapseRecursively();e</span>lse
+<span class="cstat-no" title="statement not covered" >this.selectedNode.collapse();<span class="cstat-no" title="statement not covered" >h</span>andled=true;}</span>else <span class="cstat-no" title="statement not covered" >if(this.selectedNode.parent&amp;&amp;!this.selectedNode.parent._isRoot){<span class="cstat-no" title="statement not covered" >handled=true;<span class="cstat-no" title="statement not covered" >i</span>f(this.selectedNode.parent.selectable){<span class="cstat-no" title="statement not covered" >nextSelectedNode=this.selectedNode.parent;<span class="cstat-no" title="statement not covered" >h</span>andled=nextSelectedNode?true:false;}</span>else <span class="cstat-no" title="statement not covered" >if(this.selectedNode.parent){<span class="cstat-no" title="statement not covered" >this.selectedNode.parent.collapse();}</span>}</span></span>}</span>else <span class="cstat-no" title="statement not covered" >if(event.key==='ArrowRight'){<span class="cstat-no" title="statement not covered" >if(!this.selectedNode.revealed){<span class="cstat-no" title="statement not covered" >this.selectedNode.reveal();<span class="cstat-no" title="statement not covered" >h</span>andled=true;}</span>else <span class="cstat-no" title="statement not covered" >if(this.selectedNode.hasChildren()){<span class="cstat-no" title="statement not covered" >handled=true;<span class="cstat-no" title="statement not covered" >i</span>f(this.selectedNode.expanded){<span class="cstat-no" title="statement not covered" >nextSelectedNode=this.selectedNode.children[0];<span class="cstat-no" title="statement not covered" >h</span>andled=nextSelectedNode?true:false;}</span>else{<span class="cstat-no" title="statement not covered" >if(event.altKey)</span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >this.selectedNode.expandRecursively();e</span>lse
+<span class="cstat-no" title="statement not covered" >this.selectedNode.expand();}</span>}}else <span class="cstat-no" title="statement not covered" >if(event.keyCode===8||event.keyCode===46){<span class="cstat-no" title="statement not covered" >if(this._deleteCallback){<span class="cstat-no" title="statement not covered" >handled=true;<span class="cstat-no" title="statement not covered" >t</span>his._deleteCallback(this.selectedNode);}</span>}</span>else <span class="cstat-no" title="statement not covered" >if(isEnterKey(event)){<span class="cstat-no" title="statement not covered" >if(this._editCallback){<span class="cstat-no" title="statement not covered" >handled=true;<span class="cstat-no" title="statement not covered" >t</span>his._startEditing(this.selectedNode._element.children[this._nextEditableColumn(-1)]);}</span>else{<span class="cstat-no" title="statement not covered" >this.dispatchEventToListeners(DataGrid.DataGrid.Events.OpenedNode,this.selectedNode);}</span>}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(nextSelectedNode){<span class="cstat-no" title="statement not covered" >nextSelectedNode.reveal();<span class="cstat-no" title="statement not covered" >n</span>extSelectedNode.select();}</span></span>
+<span class="cstat-no" title="statement not covered" >if(handled)</span>
+<span class="cstat-no" title="statement not covered" >event.consume(true);}</span>
+<span class="fstat-no" title="function not covered" >up</span>dateSelectionBeforeRemoval(root,onlyAffectsSubtree){let ancestor=<span class="cstat-no" title="statement not covered" >this.selectedNode;<span class="cstat-no" title="statement not covered" ></span>while(ancestor&amp;&amp;ancestor!==root)</span>
+<span class="cstat-no" title="statement not covered" >ancestor=ancestor.parent;<span class="cstat-no" title="statement not covered" >i</span>f(!ancestor)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et nextSelectedNode;<span class="cstat-no" title="statement not covered" >for(ancestor=root;ancestor&amp;&amp;!ancestor.nextSibling;ancestor=ancestor.parent){}</span>
+<span class="cstat-no" title="statement not covered" >if(ancestor)</span>
+<span class="cstat-no" title="statement not covered" >nextSelectedNode=ancestor.nextSibling;<span class="cstat-no" title="statement not covered" >w</span>hile(nextSelectedNode&amp;&amp;!nextSelectedNode.selectable)</span>
+<span class="cstat-no" title="statement not covered" >nextSelectedNode=nextSelectedNode.traverseNextNode(true);<span class="cstat-no" title="statement not covered" >i</span>f(!nextSelectedNode||nextSelectedNode.isCreationNode){<span class="cstat-no" title="statement not covered" >nextSelectedNode=root.traversePreviousNode(true);<span class="cstat-no" title="statement not covered" >w</span>hile(nextSelectedNode&amp;&amp;!nextSelectedNode.selectable)</span></span>
+<span class="cstat-no" title="statement not covered" >nextSelectedNode=nextSelectedNode.traversePreviousNode(true);}</span>
+<span class="cstat-no" title="statement not covered" >if(nextSelectedNode){<span class="cstat-no" title="statement not covered" >nextSelectedNode.reveal();<span class="cstat-no" title="statement not covered" >n</span>extSelectedNode.select();}</span>else{<span class="cstat-no" title="statement not covered" >this.selectedNode.deselect();}</span>}</span>
+<span class="fstat-no" title="function not covered" >da</span>taGridNodeFromNode(target){const rowElement=<span class="cstat-no" title="statement not covered" >target.enclosingNodeOrSelfWithNodeName('tr');<span class="cstat-no" title="statement not covered" ></span>return rowElement&amp;&amp;rowElement._dataGridNode;}</span>
+<span class="fstat-no" title="function not covered" >co</span>lumnIdFromNode(target){const cellElement=<span class="cstat-no" title="statement not covered" >target.enclosingNodeOrSelfWithNodeName('td');<span class="cstat-no" title="statement not covered" ></span>return cellElement&amp;&amp;cellElement[DataGrid.DataGrid._columnIdSymbol];}</span>
+<span class="fstat-no" title="function not covered" >_c</span>lickInHeaderCell(event){const cell=<span class="cstat-no" title="statement not covered" >event.target.enclosingNodeOrSelfWithNodeName('th');<span class="cstat-no" title="statement not covered" ></span>if(!cell||(cell[DataGrid.DataGrid._columnIdSymbol]===undefined)||!cell.classList.contains('sortable'))</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et sortOrder=<span class="cstat-no" title="statement not covered" >DataGrid.DataGrid.Order.Ascending;<span class="cstat-no" title="statement not covered" ></span>if((cell===this._sortColumnCell)&amp;&amp;this.isSortOrderAscending())</span>
+<span class="cstat-no" title="statement not covered" >sortOrder=DataGrid.DataGrid.Order.Descending;<span class="cstat-no" title="statement not covered" >i</span>f(this._sortColumnCell)</span>
+<span class="cstat-no" title="statement not covered" >this._sortColumnCell.classList.remove(DataGrid.DataGrid.Order.Ascending,DataGrid.DataGrid.Order.Descending);<span class="cstat-no" title="statement not covered" >t</span>his._sortColumnCell=cell;<span class="cstat-no" title="statement not covered" >c</span>ell.classList.add(sortOrder);c</span>onst icon=<span class="cstat-no" title="statement not covered" >cell[DataGrid.DataGrid._sortIconSymbol];<span class="cstat-no" title="statement not covered" ></span>icon.setIconType(sortOrder===DataGrid.DataGrid.Order.Ascending?'smallicon-triangle-up':'smallicon-triangle-down');<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(DataGrid.DataGrid.Events.SortingChanged);}</span>
+<span class="fstat-no" title="function not covered" >ma</span>rkColumnAsSortedBy(columnId,sortOrder){<span class="cstat-no" title="statement not covered" >if(this._sortColumnCell)</span>
+<span class="cstat-no" title="statement not covered" >this._sortColumnCell.classList.remove(DataGrid.DataGrid.Order.Ascending,DataGrid.DataGrid.Order.Descending);<span class="cstat-no" title="statement not covered" >t</span>his._sortColumnCell=this._headerTableHeaders[columnId];<span class="cstat-no" title="statement not covered" >t</span>his._sortColumnCell.classList.add(sortOrder);}</span>
+<span class="fstat-no" title="function not covered" >he</span>aderTableHeader(columnId){<span class="cstat-no" title="statement not covered" >return this._headerTableHeaders[columnId];}</span>
+<span class="fstat-no" title="function not covered" >_m</span>ouseDownInDataTable(event){const target=(<span class="cstat-no" title="statement not covered" >event.target)</span>;const gridNode=<span class="cstat-no" title="statement not covered" >this.dataGridNodeFromNode(target);<span class="cstat-no" title="statement not covered" ></span>if(!gridNode||!gridNode.selectable||gridNode.isEventWithinDisclosureTriangle(event))</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst columnId=<span class="cstat-no" title="statement not covered" >this.columnIdFromNode(target);<span class="cstat-no" title="statement not covered" ></span>if(columnId&amp;&amp;this._columns[columnId].nonSelectable)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(event.metaKey){<span class="cstat-no" title="statement not covered" >if(gridNode.selected)</span></span>
+<span class="cstat-no" title="statement not covered" >gridNode.deselect();e</span>lse
+<span class="cstat-no" title="statement not covered" >gridNode.select();}</span>else{<span class="cstat-no" title="statement not covered" >gridNode.select();<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(DataGrid.DataGrid.Events.OpenedNode,gridNode);}</span>}
+<span class="fstat-no" title="function not covered" >se</span>tHeaderContextMenuCallback(callback){<span class="cstat-no" title="statement not covered" >this._headerContextMenuCallback=callback;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tRowContextMenuCallback(callback){<span class="cstat-no" title="statement not covered" >this._rowContextMenuCallback=callback;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ontextMenu(event){const contextMenu=<span class="cstat-no" title="statement not covered" >new UI.ContextMenu(event);</span>const target=(<span class="cstat-no" title="statement not covered" >event.target)</span>;<span class="cstat-no" title="statement not covered" >if(target.isSelfOrDescendant(this._headerTableBody)){<span class="cstat-no" title="statement not covered" >if(this._headerContextMenuCallback)</span></span>
+<span class="cstat-no" title="statement not covered" >this._headerContextMenuCallback(contextMenu);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+const gridNode=<span class="cstat-no" title="statement not covered" >this.dataGridNodeFromNode(target);<span class="cstat-no" title="statement not covered" ></span>if(this._refreshCallback&amp;&amp;(!gridNode||gridNode!==this.creationNode))</span>
+<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(Common.UIString('Refresh'),this._refreshCallback.bind(this));<span class="cstat-no" title="statement not covered" >i</span>f(gridNode&amp;&amp;gridNode.selectable&amp;&amp;!gridNode.isEventWithinDisclosureTriangle(event)){<span class="cstat-no" title="statement not covered" >if(this._editCallback){<span class="cstat-no" title="statement not covered" >if(gridNode===this.creationNode){<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(Common.UIString('Add new'),this._startEditing.bind(this,target));}</span>else{const columnId=<span class="cstat-no" title="statement not covered" >this.columnIdFromNode(target);<span class="cstat-no" title="statement not covered" ></span>if(columnId&amp;&amp;this._columns[columnId].editable){<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(Common.UIString('Edit "%s"',this._columns[columnId].title),this._startEditing.bind(this,target));}</span>}</span>}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(this._deleteCallback&amp;&amp;gridNode!==this.creationNode)</span>
+<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(Common.UIString('Delete'),this._deleteCallback.bind(this,gridNode));<span class="cstat-no" title="statement not covered" >i</span>f(this._rowContextMenuCallback)</span>
+<span class="cstat-no" title="statement not covered" >this._rowContextMenuCallback(contextMenu,gridNode);}</span>
+<span class="cstat-no" title="statement not covered" >contextMenu.show();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>lickInDataTable(event){const gridNode=<span class="cstat-no" title="statement not covered" >this.dataGridNodeFromNode((event.target));<span class="cstat-no" title="statement not covered" ></span>if(!gridNode||!gridNode.hasChildren()||!gridNode.isEventWithinDisclosureTriangle(event))</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(gridNode.expanded){<span class="cstat-no" title="statement not covered" >if(event.altKey)</span></span>
+<span class="cstat-no" title="statement not covered" >gridNode.collapseRecursively();e</span>lse
+<span class="cstat-no" title="statement not covered" >gridNode.collapse();}</span>else{<span class="cstat-no" title="statement not covered" >if(event.altKey)</span>
+<span class="cstat-no" title="statement not covered" >gridNode.expandRecursively();e</span>lse
+<span class="cstat-no" title="statement not covered" >gridNode.expand();}</span>}
+<span class="fstat-no" title="function not covered" >se</span>tResizeMethod(method){<span class="cstat-no" title="statement not covered" >this._resizeMethod=method;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartResizerDragging(event){<span class="cstat-no" title="statement not covered" >this._currentResizer=event.target;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >_e</span>ndResizerDragging(){<span class="cstat-no" title="statement not covered" >this._currentResizer=null;<span class="cstat-no" title="statement not covered" >t</span>his._saveColumnWeights();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esizerDragging(event){const resizer=<span class="cstat-no" title="statement not covered" >this._currentResizer;<span class="cstat-no" title="statement not covered" ></span>if(!resizer)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et dragPoint=<span class="cstat-no" title="statement not covered" >event.clientX-this.element.totalOffsetLeft();</span>const firstRowCells=<span class="cstat-no" title="statement not covered" >this._headerTableBody.rows[0].cells;</span>let leftEdgeOfPreviousColumn=<span class="cstat-no" title="statement not covered" >0;</span>let leftCellIndex=<span class="cstat-no" title="statement not covered" >resizer.__index;</span>let rightCellIndex=<span class="cstat-no" title="statement not covered" >leftCellIndex+1;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;leftCellIndex;i++)</span>
+<span class="cstat-no" title="statement not covered" >leftEdgeOfPreviousColumn+=firstRowCells[i].offsetWidth;<span class="cstat-no" title="statement not covered" >i</span>f(this._resizeMethod===DataGrid.DataGrid.ResizeMethod.Last){<span class="cstat-no" title="statement not covered" >rightCellIndex=this._resizers.length;}</span>else <span class="cstat-no" title="statement not covered" >if(this._resizeMethod===DataGrid.DataGrid.ResizeMethod.First){<span class="cstat-no" title="statement not covered" >leftEdgeOfPreviousColumn+=firstRowCells[leftCellIndex].offsetWidth-firstRowCells[0].offsetWidth;<span class="cstat-no" title="statement not covered" >l</span>eftCellIndex=0;}</span></span></span>
+const rightEdgeOfNextColumn=<span class="cstat-no" title="statement not covered" >leftEdgeOfPreviousColumn+firstRowCells[leftCellIndex].offsetWidth+firstRowCells[rightCellIndex].offsetWidth;</span>const leftMinimum=<span class="cstat-no" title="statement not covered" >leftEdgeOfPreviousColumn+DataGrid.DataGrid.ColumnResizePadding;</span>const rightMaximum=<span class="cstat-no" title="statement not covered" >rightEdgeOfNextColumn-DataGrid.DataGrid.ColumnResizePadding;<span class="cstat-no" title="statement not covered" ></span>if(leftMinimum&gt;rightMaximum)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >d</span>ragPoint=Number.constrain(dragPoint,leftMinimum,rightMaximum);c</span>onst position=(<span class="cstat-no" title="statement not covered" >dragPoint-DataGrid.DataGrid.CenterResizerOverBorderAdjustment)</span>;<span class="cstat-no" title="statement not covered" >resizer.__position=position;<span class="cstat-no" title="statement not covered" >r</span>esizer.style.left=position+'px';<span class="cstat-no" title="statement not covered" >t</span>his._setPreferredWidth(leftCellIndex,dragPoint-leftEdgeOfPreviousColumn);<span class="cstat-no" title="statement not covered" >t</span>his._setPreferredWidth(rightCellIndex,rightEdgeOfNextColumn-dragPoint);c</span>onst leftColumn=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[leftCellIndex];</span>const rightColumn=<span class="cstat-no" title="statement not covered" >this._visibleColumnsArray[rightCellIndex];<span class="cstat-no" title="statement not covered" ></span>if(leftColumn.weight||rightColumn.weight){const sumOfWeights=<span class="cstat-no" title="statement not covered" >leftColumn.weight+rightColumn.weight;</span>const delta=<span class="cstat-no" title="statement not covered" >rightEdgeOfNextColumn-leftEdgeOfPreviousColumn;<span class="cstat-no" title="statement not covered" ></span>leftColumn.weight=(dragPoint-leftEdgeOfPreviousColumn)*sumOfWeights/delta;<span class="cstat-no" title="statement not covered" >r</span>ightColumn.weight=(rightEdgeOfNextColumn-dragPoint)*sumOfWeights/delta;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._positionResizers();<span class="cstat-no" title="statement not covered" >e</span>vent.preventDefault();}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etPreferredWidth(columnIndex,width){const pxWidth=<span class="cstat-no" title="statement not covered" >width+'px';<span class="cstat-no" title="statement not covered" ></span>this._headerTableColumnGroup.children[columnIndex][DataGrid.DataGrid._preferredWidthSymbol]=width;<span class="cstat-no" title="statement not covered" >t</span>his._headerTableColumnGroup.children[columnIndex].style.width=pxWidth;<span class="cstat-no" title="statement not covered" >t</span>his._dataTableColumnGroup.children[columnIndex].style.width=pxWidth;}</span>
+<span class="fstat-no" title="function not covered" >co</span>lumnOffset(columnId){<span class="cstat-no" title="statement not covered" >if(!this.element.offsetWidth)</span>
+<span class="cstat-no" title="statement not covered" >return 0;<span class="cstat-no" title="statement not covered" >f</span>or(let i=1;i&lt;this._visibleColumnsArray.length;++i){<span class="cstat-no" title="statement not covered" >if(columnId===this._visibleColumnsArray[i].id){<span class="cstat-no" title="statement not covered" >if(this._resizers[i-1])</span></span></span>
+<span class="cstat-no" title="statement not covered" >return this._resizers[i-1].__position;}</span>}
+<span class="cstat-no" title="statement not covered" >return 0;}</span>
+<span class="fstat-no" title="function not covered" >as</span>Widget(){<span class="cstat-no" title="statement not covered" >if(!this._dataGridWidget)</span>
+<span class="cstat-no" title="statement not covered" >this._dataGridWidget=new DataGrid.DataGridWidget(this);<span class="cstat-no" title="statement not covered" >r</span>eturn this._dataGridWidget;}</span>
+<span class="fstat-no" title="function not covered" >to</span>pFillerRowElement(){<span class="cstat-no" title="statement not covered" >return this._topFillerRow;}</span>};<span class="cstat-no" title="statement not covered" >DataGrid.DataGrid.CornerWidth=14;<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.ColumnDescriptor;<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.Events={SelectedNode:Symbol('SelectedNode'),DeselectedNode:Symbol('DeselectedNode'),OpenedNode:Symbol('OpenedNode'),SortingChanged:Symbol('SortingChanged'),PaddingChanged:Symbol('PaddingChanged'),};<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.Order={Ascending:'sort-ascending',Descending:'sort-descending'};<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.Align={Center:'center',Right:'right'};<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid._preferredWidthSymbol=Symbol('preferredWidth');<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid._columnIdSymbol=Symbol('columnId');<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid._sortIconSymbol=Symbol('sortIcon');<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid._longTextSymbol=Symbol('longText');<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.ColumnResizePadding=24;<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.CenterResizerOverBorderAdjustment=3;<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGrid.ResizeMethod={Nearest:'nearest',First:'first',Last:'last'};<span class="cstat-no" title="statement not covered" >D</span>ataGrid.DataGridNode=class extends Common.Object{<span class="fstat-no" title="function not covered" >co</span>nstructor(data,hasChildren){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._element=null;<span class="cstat-no" title="statement not covered" >t</span>his._expanded=false;<span class="cstat-no" title="statement not covered" >t</span>his._selected=false;<span class="cstat-no" title="statement not covered" >t</span>his._dirty=false;<span class="cstat-no" title="statement not covered" >t</span>his._inactive=false;<span class="cstat-no" title="statement not covered" >t</span>his._depth;<span class="cstat-no" title="statement not covered" >t</span>his._revealed;<span class="cstat-no" title="statement not covered" >t</span>his._attached=false;<span class="cstat-no" title="statement not covered" >t</span>his._savedPosition=null;<span class="cstat-no" title="statement not covered" >t</span>his._shouldRefreshChildren=true;<span class="cstat-no" title="statement not covered" >t</span>his._data=data||{};<span class="cstat-no" title="statement not covered" >t</span>his._hasChildren=hasChildren||false;<span class="cstat-no" title="statement not covered" >t</span>his.children=[];<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid=null;<span class="cstat-no" title="statement not covered" >t</span>his.parent=null;<span class="cstat-no" title="statement not covered" >t</span>his.previousSibling=null;<span class="cstat-no" title="statement not covered" >t</span>his.nextSibling=null;<span class="cstat-no" title="statement not covered" >t</span>his.disclosureToggleWidth=10;<span class="cstat-no" title="statement not covered" >t</span>his.selectable=true;<span class="cstat-no" title="statement not covered" >t</span>his._isRoot=false;}</span></span>
+<span class="fstat-no" title="function not covered" >el</span>ement(){<span class="cstat-no" title="statement not covered" >if(!this._element){const element=<span class="cstat-no" title="statement not covered" >this.createElement();<span class="cstat-no" title="statement not covered" ></span>this.createCells(element);}</span></span>
+<span class="cstat-no" title="statement not covered" >return(this._element);}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateElement(){<span class="cstat-no" title="statement not covered" >this._element=createElementWithClass('tr','data-grid-data-grid-node');<span class="cstat-no" title="statement not covered" >t</span>his._element._dataGridNode=this;<span class="cstat-no" title="statement not covered" >i</span>f(this._hasChildren)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('parent');<span class="cstat-no" title="statement not covered" >i</span>f(this.expanded)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('expanded');<span class="cstat-no" title="statement not covered" >i</span>f(this.selected)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('selected');<span class="cstat-no" title="statement not covered" >i</span>f(this.revealed)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('revealed');<span class="cstat-no" title="statement not covered" >i</span>f(this.dirty)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('dirty');<span class="cstat-no" title="statement not covered" >i</span>f(this.inactive)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('inactive');<span class="cstat-no" title="statement not covered" >r</span>eturn this._element;}</span>
+<span class="fstat-no" title="function not covered" >ex</span>istingElement(){<span class="cstat-no" title="statement not covered" >return this._element||null;}</span>
+<span class="fstat-no" title="function not covered" >re</span>setElement(){<span class="cstat-no" title="statement not covered" >this._element=null;}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateCells(element){<span class="cstat-no" title="statement not covered" >element.removeChildren();c</span>onst columnsArray=<span class="cstat-no" title="statement not covered" >this.dataGrid._visibleColumnsArray;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;columnsArray.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >element.appendChild(this.createCell(columnsArray[i].id));<span class="cstat-no" title="statement not covered" >e</span>lement.appendChild(this._createTDWithClass('corner'));}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t data(){<span class="cstat-no" title="statement not covered" >return this._data;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t data(x){<span class="cstat-no" title="statement not covered" >this._data=x||{};<span class="cstat-no" title="statement not covered" >t</span>his.refresh();}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t revealed(){<span class="cstat-no" title="statement not covered" >if(this._revealed!==undefined)</span>
+<span class="cstat-no" title="statement not covered" >return this._revealed;l</span>et currentAncestor=<span class="cstat-no" title="statement not covered" >this.parent;<span class="cstat-no" title="statement not covered" ></span>while(currentAncestor&amp;&amp;!currentAncestor._isRoot){<span class="cstat-no" title="statement not covered" >if(!currentAncestor.expanded){<span class="cstat-no" title="statement not covered" >this._revealed=false;<span class="cstat-no" title="statement not covered" >r</span>eturn false;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >currentAncestor=currentAncestor.parent;}</span>
+<span class="cstat-no" title="statement not covered" >this.revealed=true;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t revealed(x){<span class="cstat-no" title="statement not covered" >if(this._revealed===x)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._revealed=x;<span class="cstat-no" title="statement not covered" >i</span>f(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.toggle('revealed',this._revealed);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this.children[i].revealed=x&amp;&amp;this.expanded;}</span>
+<span class="fstat-no" title="function not covered" >is</span>Dirty(){<span class="cstat-no" title="statement not covered" >return this._dirty;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tDirty(dirty){<span class="cstat-no" title="statement not covered" >if(this._dirty===dirty)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._dirty=dirty;<span class="cstat-no" title="statement not covered" >i</span>f(!this._element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(dirty)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('dirty');e</span>lse
+<span class="cstat-no" title="statement not covered" >this._element.classList.remove('dirty');}</span>
+<span class="fstat-no" title="function not covered" >is</span>Inactive(){<span class="cstat-no" title="statement not covered" >return this._inactive;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tInactive(inactive){<span class="cstat-no" title="statement not covered" >if(this._inactive===inactive)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._inactive=inactive;<span class="cstat-no" title="statement not covered" >i</span>f(!this._element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(inactive)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('inactive');e</span>lse
+<span class="cstat-no" title="statement not covered" >this._element.classList.remove('inactive');}</span>
+<span class="fstat-no" title="function not covered" >ha</span>sChildren(){<span class="cstat-no" title="statement not covered" >return this._hasChildren;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tHasChildren(x){<span class="cstat-no" title="statement not covered" >if(this._hasChildren===x)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._hasChildren=x;<span class="cstat-no" title="statement not covered" >i</span>f(!this._element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._element.classList.toggle('parent',this._hasChildren);<span class="cstat-no" title="statement not covered" >t</span>his._element.classList.toggle('expanded',this._hasChildren&amp;&amp;this.expanded);}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t depth(){<span class="cstat-no" title="statement not covered" >if(this._depth!==undefined)</span>
+<span class="cstat-no" title="statement not covered" >return this._depth;<span class="cstat-no" title="statement not covered" >i</span>f(this.parent&amp;&amp;!this.parent._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >this._depth=this.parent.depth+1;e</span>lse
+<span class="cstat-no" title="statement not covered" >this._depth=0;<span class="cstat-no" title="statement not covered" >r</span>eturn this._depth;}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t leftPadding(){<span class="cstat-no" title="statement not covered" >return this.depth*this.dataGrid.indentWidth;}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t shouldRefreshChildren(){<span class="cstat-no" title="statement not covered" >return this._shouldRefreshChildren;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t shouldRefreshChildren(x){<span class="cstat-no" title="statement not covered" >this._shouldRefreshChildren=x;<span class="cstat-no" title="statement not covered" >i</span>f(x&amp;&amp;this.expanded)</span>
+<span class="cstat-no" title="statement not covered" >this.expand();}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t selected(){<span class="cstat-no" title="statement not covered" >return this._selected;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t selected(x){<span class="cstat-no" title="statement not covered" >if(x)</span>
+<span class="cstat-no" title="statement not covered" >this.select();e</span>lse
+<span class="cstat-no" title="statement not covered" >this.deselect();}</span>
+<span class="fstat-no" title="function not covered" >ge</span>t expanded(){<span class="cstat-no" title="statement not covered" >return this._expanded;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t expanded(x){<span class="cstat-no" title="statement not covered" >if(x)</span>
+<span class="cstat-no" title="statement not covered" >this.expand();e</span>lse
+<span class="cstat-no" title="statement not covered" >this.collapse();}</span>
+<span class="fstat-no" title="function not covered" >re</span>fresh(){<span class="cstat-no" title="statement not covered" >if(!this.dataGrid)</span>
+<span class="cstat-no" title="statement not covered" >this._element=null;<span class="cstat-no" title="statement not covered" >i</span>f(!this._element)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his.createCells(this._element);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateTDWithClass(className){const cell=<span class="cstat-no" title="statement not covered" >createElementWithClass('td',className);</span>const cellClass=<span class="cstat-no" title="statement not covered" >this.dataGrid._cellClass;<span class="cstat-no" title="statement not covered" ></span>if(cellClass)</span>
+<span class="cstat-no" title="statement not covered" >cell.classList.add(cellClass);<span class="cstat-no" title="statement not covered" >r</span>eturn cell;}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateTD(columnId){const cell=<span class="cstat-no" title="statement not covered" >this._createTDWithClass(columnId+'-column');<span class="cstat-no" title="statement not covered" ></span>cell[DataGrid.DataGrid._columnIdSymbol]=columnId;c</span>onst alignment=<span class="cstat-no" title="statement not covered" >this.dataGrid._columns[columnId].align;<span class="cstat-no" title="statement not covered" ></span>if(alignment)</span>
+<span class="cstat-no" title="statement not covered" >cell.classList.add(alignment);<span class="cstat-no" title="statement not covered" >i</span>f(columnId===this.dataGrid.disclosureColumnId){<span class="cstat-no" title="statement not covered" >cell.classList.add('disclosure');<span class="cstat-no" title="statement not covered" >i</span>f(this.leftPadding)</span></span>
+<span class="cstat-no" title="statement not covered" >cell.style.setProperty('padding-left',this.leftPadding+'px');}</span>
+<span class="cstat-no" title="statement not covered" >return cell;}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateCell(columnId){const cell=<span class="cstat-no" title="statement not covered" >this.createTD(columnId);</span>const data=<span class="cstat-no" title="statement not covered" >this.data[columnId];<span class="cstat-no" title="statement not covered" ></span>if(data instanceof Node)</span>
+<span class="cstat-no" title="statement not covered" >cell.appendChild(data);e</span>lse <span class="cstat-no" title="statement not covered" >if(data!==null)</span>
+<span class="cstat-no" title="statement not covered" >DataGrid.DataGrid.setElementText(cell,(data),!!this.dataGrid._columns[columnId].longText);<span class="cstat-no" title="statement not covered" >r</span>eturn cell;}</span>
+<span class="fstat-no" title="function not covered" >no</span>deSelfHeight(){<span class="cstat-no" title="statement not covered" >return 20;}</span>
+<span class="fstat-no" title="function not covered" >ap</span>pendChild(child){<span class="cstat-no" title="statement not covered" >this.insertChild(child,this.children.length);}</span>
+<span class="fstat-no" title="function not covered" >re</span>setNode(onlyCaches){<span class="cstat-no" title="statement not covered" >delete this._depth;<span class="cstat-no" title="statement not covered" >d</span>elete this._revealed;<span class="cstat-no" title="statement not covered" >i</span>f(onlyCaches)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this.previousSibling)</span>
+<span class="cstat-no" title="statement not covered" >this.previousSibling.nextSibling=this.nextSibling;<span class="cstat-no" title="statement not covered" >i</span>f(this.nextSibling)</span>
+<span class="cstat-no" title="statement not covered" >this.nextSibling.previousSibling=this.previousSibling;<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid=null;<span class="cstat-no" title="statement not covered" >t</span>his.parent=null;<span class="cstat-no" title="statement not covered" >t</span>his.nextSibling=null;<span class="cstat-no" title="statement not covered" >t</span>his.previousSibling=null;<span class="cstat-no" title="statement not covered" >t</span>his._attached=false;}</span>
+<span class="fstat-no" title="function not covered" >in</span>sertChild(child,index){<span class="cstat-no" title="statement not covered" >if(!child)</span>
+<span class="cstat-no" title="statement not covered" >throw'insertChild: Node can\'t be undefined or null.';<span class="cstat-no" title="statement not covered" >i</span>f(child.parent===this){const currentIndex=<span class="cstat-no" title="statement not covered" >this.children.indexOf(child);<span class="cstat-no" title="statement not covered" ></span>if(currentIndex&lt;0)</span></span>
+<span class="cstat-no" title="statement not covered" >console.assert(false,'Inconsistent DataGrid state');<span class="cstat-no" title="statement not covered" >i</span>f(currentIndex===index)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(currentIndex&lt;index)</span>
+<span class="cstat-no" title="statement not covered" >--index;}</span>
+<span class="cstat-no" title="statement not covered" >child.remove();<span class="cstat-no" title="statement not covered" >t</span>his.children.splice(index,0,child);<span class="cstat-no" title="statement not covered" >t</span>his.setHasChildren(true);<span class="cstat-no" title="statement not covered" >c</span>hild.parent=this;<span class="cstat-no" title="statement not covered" >c</span>hild.dataGrid=this.dataGrid;<span class="cstat-no" title="statement not covered" >c</span>hild.recalculateSiblings(index);<span class="cstat-no" title="statement not covered" >c</span>hild._shouldRefreshChildren=true;l</span>et current=<span class="cstat-no" title="statement not covered" >child.children[0];<span class="cstat-no" title="statement not covered" ></span>while(current){<span class="cstat-no" title="statement not covered" >current.resetNode(true);<span class="cstat-no" title="statement not covered" >c</span>urrent.dataGrid=this.dataGrid;<span class="cstat-no" title="statement not covered" >c</span>urrent._attached=false;<span class="cstat-no" title="statement not covered" >c</span>urrent._shouldRefreshChildren=true;<span class="cstat-no" title="statement not covered" >c</span>urrent=current.traverseNextNode(false,child,true);}</span></span>
+<span class="cstat-no" title="statement not covered" >if(this.expanded)</span>
+<span class="cstat-no" title="statement not covered" >child._attach();<span class="cstat-no" title="statement not covered" >i</span>f(!this.revealed)</span>
+<span class="cstat-no" title="statement not covered" >child.revealed=false;}</span>
+<span class="fstat-no" title="function not covered" >re</span>move(){<span class="cstat-no" title="statement not covered" >if(this.parent)</span>
+<span class="cstat-no" title="statement not covered" >this.parent.removeChild(this);}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveChild(child){<span class="cstat-no" title="statement not covered" >if(!child)</span>
+<span class="cstat-no" title="statement not covered" >throw'removeChild: Node can\'t be undefined or null.';<span class="cstat-no" title="statement not covered" >i</span>f(child.parent!==this)</span>
+<span class="cstat-no" title="statement not covered" >throw'removeChild: Node is not a child of this node.';<span class="cstat-no" title="statement not covered" >i</span>f(this.dataGrid)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.updateSelectionBeforeRemoval(child,false);<span class="cstat-no" title="statement not covered" >c</span>hild._detach();<span class="cstat-no" title="statement not covered" >c</span>hild.resetNode();<span class="cstat-no" title="statement not covered" >t</span>his.children.remove(child,true);<span class="cstat-no" title="statement not covered" >i</span>f(this.children.length&lt;=0)</span>
+<span class="cstat-no" title="statement not covered" >this.setHasChildren(false);}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveChildren(){<span class="cstat-no" title="statement not covered" >if(this.dataGrid)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.updateSelectionBeforeRemoval(this,true);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i){const child=<span class="cstat-no" title="statement not covered" >this.children[i];<span class="cstat-no" title="statement not covered" ></span>child._detach();<span class="cstat-no" title="statement not covered" >c</span>hild.resetNode();}</span></span>
+<span class="cstat-no" title="statement not covered" >this.children=[];<span class="cstat-no" title="statement not covered" >t</span>his.setHasChildren(false);}</span>
+<span class="fstat-no" title="function not covered" >re</span>calculateSiblings(myIndex){<span class="cstat-no" title="statement not covered" >if(!this.parent)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst previousChild=<span class="cstat-no" title="statement not covered" >this.parent.children[myIndex-1]||null;<span class="cstat-no" title="statement not covered" ></span>if(previousChild)</span>
+<span class="cstat-no" title="statement not covered" >previousChild.nextSibling=this;<span class="cstat-no" title="statement not covered" >t</span>his.previousSibling=previousChild;c</span>onst nextChild=<span class="cstat-no" title="statement not covered" >this.parent.children[myIndex+1]||null;<span class="cstat-no" title="statement not covered" ></span>if(nextChild)</span>
+<span class="cstat-no" title="statement not covered" >nextChild.previousSibling=this;<span class="cstat-no" title="statement not covered" >t</span>his.nextSibling=nextChild;}</span>
+<span class="fstat-no" title="function not covered" >co</span>llapse(){<span class="cstat-no" title="statement not covered" >if(this._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.remove('expanded');<span class="cstat-no" title="statement not covered" >t</span>his._expanded=false;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this.children[i].revealed=false;}</span>
+<span class="fstat-no" title="function not covered" >co</span>llapseRecursively(){let item=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(item){<span class="cstat-no" title="statement not covered" >if(item.expanded)</span></span>
+<span class="cstat-no" title="statement not covered" >item.collapse();<span class="cstat-no" title="statement not covered" >i</span>tem=item.traverseNextNode(false,this,true);}</span>}
+<span class="fstat-no" title="function not covered" >po</span>pulate(){}
+<span class="fstat-no" title="function not covered" >ex</span>pand(){<span class="cstat-no" title="statement not covered" >if(!this._hasChildren||this.expanded)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this.revealed&amp;&amp;!this._shouldRefreshChildren){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;this.children.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.children[i].revealed=true;}</span>
+<span class="cstat-no" title="statement not covered" >if(this._shouldRefreshChildren){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;this.children.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.children[i]._detach();<span class="cstat-no" title="statement not covered" >t</span>his.populate();<span class="cstat-no" title="statement not covered" >i</span>f(this._attached){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;this.children.length;++i){const child=<span class="cstat-no" title="statement not covered" >this.children[i];<span class="cstat-no" title="statement not covered" ></span>if(this.revealed)</span></span></span>
+<span class="cstat-no" title="statement not covered" >child.revealed=true;<span class="cstat-no" title="statement not covered" >c</span>hild._attach();}</span>}
+<span class="cstat-no" title="statement not covered" >this._shouldRefreshChildren=false;}</span>
+<span class="cstat-no" title="statement not covered" >if(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('expanded');<span class="cstat-no" title="statement not covered" >t</span>his._expanded=true;}</span>
+<span class="fstat-no" title="function not covered" >ex</span>pandRecursively(){let item=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(item){<span class="cstat-no" title="statement not covered" >item.expand();<span class="cstat-no" title="statement not covered" >i</span>tem=item.traverseNextNode(false,this);}</span>}</span>
+<span class="fstat-no" title="function not covered" >re</span>veal(){<span class="cstat-no" title="statement not covered" >if(this._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et currentAncestor=<span class="cstat-no" title="statement not covered" >this.parent;<span class="cstat-no" title="statement not covered" ></span>while(currentAncestor&amp;&amp;!currentAncestor._isRoot){<span class="cstat-no" title="statement not covered" >if(!currentAncestor.expanded)</span></span>
+<span class="cstat-no" title="statement not covered" >currentAncestor.expand();<span class="cstat-no" title="statement not covered" >c</span>urrentAncestor=currentAncestor.parent;}</span>
+<span class="cstat-no" title="statement not covered" >this.element().scrollIntoViewIfNeeded(false);}</span>
+<span class="fstat-no" title="function not covered" >se</span>lect(supressSelectedEvent){<span class="cstat-no" title="statement not covered" >if(!this.dataGrid||!this.selectable||this.selected)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this.dataGrid.selectedNode)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.selectedNode.deselect();<span class="cstat-no" title="statement not covered" >t</span>his._selected=true;<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid.selectedNode=this;<span class="cstat-no" title="statement not covered" >i</span>f(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.add('selected');<span class="cstat-no" title="statement not covered" >i</span>f(!supressSelectedEvent)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.dispatchEventToListeners(DataGrid.DataGrid.Events.SelectedNode,this);}</span>
+<span class="fstat-no" title="function not covered" >re</span>vealAndSelect(){<span class="cstat-no" title="statement not covered" >if(this._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his.reveal();<span class="cstat-no" title="statement not covered" >t</span>his.select();}</span>
+<span class="fstat-no" title="function not covered" >de</span>select(supressDeselectedEvent){<span class="cstat-no" title="statement not covered" >if(!this.dataGrid||this.dataGrid.selectedNode!==this||!this.selected)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._selected=false;<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid.selectedNode=null;<span class="cstat-no" title="statement not covered" >i</span>f(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.classList.remove('selected');<span class="cstat-no" title="statement not covered" >i</span>f(!supressDeselectedEvent)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.dispatchEventToListeners(DataGrid.DataGrid.Events.DeselectedNode);}</span>
+<span class="fstat-no" title="function not covered" >tr</span>averseNextNode(skipHidden,stayWithin,dontPopulate,info){<span class="cstat-no" title="statement not covered" >if(!dontPopulate&amp;&amp;this._hasChildren)</span>
+<span class="cstat-no" title="statement not covered" >this.populate();<span class="cstat-no" title="statement not covered" >i</span>f(info)</span>
+<span class="cstat-no" title="statement not covered" >info.depthChange=0;l</span>et node=<span class="cstat-no" title="statement not covered" >(!skipHidden||this.revealed)?this.children[0]:null;<span class="cstat-no" title="statement not covered" ></span>if(node&amp;&amp;(!skipHidden||this.expanded)){<span class="cstat-no" title="statement not covered" >if(info)</span></span>
+<span class="cstat-no" title="statement not covered" >info.depthChange=1;<span class="cstat-no" title="statement not covered" >r</span>eturn node;}</span>
+<span class="cstat-no" title="statement not covered" >if(this===stayWithin)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >n</span>ode=(!skipHidden||this.revealed)?this.nextSibling:null;<span class="cstat-no" title="statement not covered" >i</span>f(node)</span>
+<span class="cstat-no" title="statement not covered" >return node;<span class="cstat-no" title="statement not covered" >n</span>ode=this;<span class="cstat-no" title="statement not covered" >w</span>hile(node&amp;&amp;!node._isRoot&amp;&amp;!((!skipHidden||node.revealed)?node.nextSibling:null)&amp;&amp;node.parent!==stayWithin){<span class="cstat-no" title="statement not covered" >if(info)</span></span>
+<span class="cstat-no" title="statement not covered" >info.depthChange-=1;<span class="cstat-no" title="statement not covered" >n</span>ode=node.parent;}</span>
+<span class="cstat-no" title="statement not covered" >if(!node)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn(!skipHidden||node.revealed)?node.nextSibling:null;}</span>
+<span class="fstat-no" title="function not covered" >tr</span>aversePreviousNode(skipHidden,dontPopulate){let node=<span class="cstat-no" title="statement not covered" >(!skipHidden||this.revealed)?this.previousSibling:null;<span class="cstat-no" title="statement not covered" ></span>if(!dontPopulate&amp;&amp;node&amp;&amp;node._hasChildren)</span>
+<span class="cstat-no" title="statement not covered" >node.populate();<span class="cstat-no" title="statement not covered" >w</span>hile(node&amp;&amp;((!skipHidden||(node.revealed&amp;&amp;node.expanded))?node.children[node.children.length-1]:null)){<span class="cstat-no" title="statement not covered" >if(!dontPopulate&amp;&amp;node._hasChildren)</span></span>
+<span class="cstat-no" title="statement not covered" >node.populate();<span class="cstat-no" title="statement not covered" >n</span>ode=((!skipHidden||(node.revealed&amp;&amp;node.expanded))?node.children[node.children.length-1]:null);}</span>
+<span class="cstat-no" title="statement not covered" >if(node)</span>
+<span class="cstat-no" title="statement not covered" >return node;<span class="cstat-no" title="statement not covered" >i</span>f(!this.parent||this.parent._isRoot)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn this.parent;}</span>
+<span class="fstat-no" title="function not covered" >is</span>EventWithinDisclosureTriangle(event){<span class="cstat-no" title="statement not covered" >if(!this._hasChildren)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst cell=<span class="cstat-no" title="statement not covered" >event.target.enclosingNodeOrSelfWithNodeName('td');<span class="cstat-no" title="statement not covered" ></span>if(!cell||!cell.classList.contains('disclosure'))</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst left=<span class="cstat-no" title="statement not covered" >cell.totalOffsetLeft()+this.leftPadding;<span class="cstat-no" title="statement not covered" ></span>return event.pageX&gt;=left&amp;&amp;event.pageX&lt;=left+this.disclosureToggleWidth;}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ttach(){<span class="cstat-no" title="statement not covered" >if(!this.dataGrid||this._attached)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._attached=true;c</span>onst previousNode=<span class="cstat-no" title="statement not covered" >this.traversePreviousNode(true,true);</span>const previousElement=<span class="cstat-no" title="statement not covered" >previousNode?previousNode.element():this.dataGrid._topFillerRow;<span class="cstat-no" title="statement not covered" ></span>this.dataGrid.dataTableBody.insertBefore(this.element(),previousElement.nextSibling);<span class="cstat-no" title="statement not covered" >i</span>f(this.expanded){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;this.children.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.children[i]._attach();}</span>}
+<span class="fstat-no" title="function not covered" >_d</span>etach(){<span class="cstat-no" title="statement not covered" >if(!this._attached)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._attached=false;<span class="cstat-no" title="statement not covered" >i</span>f(this._element)</span>
+<span class="cstat-no" title="statement not covered" >this._element.remove();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this.children[i]._detach();}</span>
+<span class="fstat-no" title="function not covered" >sa</span>vePosition(){<span class="cstat-no" title="statement not covered" >if(this._savedPosition)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!this.parent)</span>
+<span class="cstat-no" title="statement not covered" >throw'savePosition: Node must have a parent.';<span class="cstat-no" title="statement not covered" >t</span>his._savedPosition={parent:this.parent,index:this.parent.children.indexOf(this)};}</span>
+<span class="fstat-no" title="function not covered" >re</span>storePosition(){<span class="cstat-no" title="statement not covered" >if(!this._savedPosition)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this.parent!==this._savedPosition.parent)</span>
+<span class="cstat-no" title="statement not covered" >this._savedPosition.parent.insertChild(this,this._savedPosition.index);<span class="cstat-no" title="statement not covered" >t</span>his._savedPosition=null;}</span>};<span class="cstat-no" title="statement not covered" >DataGrid.CreationDataGridNode=class extends DataGrid.DataGridNode{<span class="fstat-no" title="function not covered" >co</span>nstructor(data,hasChildren){<span class="cstat-no" title="statement not covered" >super(data,hasChildren);<span class="cstat-no" title="statement not covered" >t</span>his.isCreationNode=true;}</span></span>
+<span class="fstat-no" title="function not covered" >ma</span>keNormal(){<span class="cstat-no" title="statement not covered" >this.isCreationNode=false;}</span>};<span class="cstat-no" title="statement not covered" >DataGrid.DataGridWidget=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(dataGrid){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid=dataGrid;<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(dataGrid.element);}</span></span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._dataGrid.wasShown();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >this._dataGrid.willHide();}</span>
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >this._dataGrid.onResize();}</span>
+<span class="fstat-no" title="function not covered" >el</span>ementsToRestoreScrollPositionsFor(){<span class="cstat-no" title="statement not covered" >return[this._dataGrid._scrollContainer];}</span>
+<span class="fstat-no" title="function not covered" >de</span>tachChildWidgets(){<span class="cstat-no" title="statement not covered" >super.detachChildWidgets();<span class="cstat-no" title="statement not covered" >f</span>or(const dataGrid of this._dataGrids)</span>
+<span class="cstat-no" title="statement not covered" >this.element.removeChild(dataGrid.element);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrids=[];}</span>};;<span class="cstat-no" title="statement not covered" >DataGrid.ViewportDataGrid=class extends DataGrid.DataGrid{<span class="fstat-no" title="function not covered" >co</span>nstructor(columnsArray,editCallback,deleteCallback,refreshCallback){<span class="cstat-no" title="statement not covered" >super(columnsArray,editCallback,deleteCallback,refreshCallback);<span class="cstat-no" title="statement not covered" >t</span>his._onScrollBound=this._onScroll.bind(this);<span class="cstat-no" title="statement not covered" >t</span>his._scrollContainer.addEventListener('scroll',this._onScrollBound,true);<span class="cstat-no" title="statement not covered" >t</span>his._visibleNodes=[];<span class="cstat-no" title="statement not covered" >t</span>his._inline=false;<span class="cstat-no" title="statement not covered" >t</span>his._stickToBottom=false;<span class="cstat-no" title="statement not covered" >t</span>his._updateIsFromUser=false;<span class="cstat-no" title="statement not covered" >t</span>his._lastScrollTop=0;<span class="cstat-no" title="statement not covered" >t</span>his._firstVisibleIsStriped=false;<span class="cstat-no" title="statement not covered" >t</span>his._isStriped=false;<span class="cstat-no" title="statement not covered" >t</span>his.setRootNode(new DataGrid.ViewportDataGridNode());}</span></span>
+<span class="fstat-no" title="function not covered" >se</span>tStriped(striped){<span class="cstat-no" title="statement not covered" >this._isStriped=striped;l</span>et startsWithOdd=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>if(this._visibleNodes.length){const allChildren=<span class="cstat-no" title="statement not covered" >this.rootNode().flatChildren();<span class="cstat-no" title="statement not covered" ></span>startsWithOdd=!!(allChildren.indexOf(this._visibleNodes[0]));}</span></span>
+<span class="cstat-no" title="statement not covered" >this._updateStripesClass(startsWithOdd);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateStripesClass(startsWithOdd){<span class="cstat-no" title="statement not covered" >this.element.classList.toggle('striped-data-grid',!startsWithOdd&amp;&amp;this._isStriped);<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.toggle('striped-data-grid-starts-with-odd',startsWithOdd&amp;&amp;this._isStriped);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tScrollContainer(scrollContainer){<span class="cstat-no" title="statement not covered" >this._scrollContainer.removeEventListener('scroll',this._onScrollBound,true);<span class="cstat-no" title="statement not covered" >t</span>his._scrollContainer=scrollContainer;<span class="cstat-no" title="statement not covered" >t</span>his._scrollContainer.addEventListener('scroll',this._onScrollBound,true);}</span>
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >if(this._stickToBottom)</span>
+<span class="cstat-no" title="statement not covered" >this._scrollContainer.scrollTop=this._scrollContainer.scrollHeight-this._scrollContainer.clientHeight;<span class="cstat-no" title="statement not covered" >t</span>his.scheduleUpdate();<span class="cstat-no" title="statement not covered" >s</span>uper.onResize();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tStickToBottom(stick){<span class="cstat-no" title="statement not covered" >this._stickToBottom=stick;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nScroll(event){<span class="cstat-no" title="statement not covered" >this._stickToBottom=this._scrollContainer.isScrolledToBottom();<span class="cstat-no" title="statement not covered" >i</span>f(this._lastScrollTop!==this._scrollContainer.scrollTop)</span>
+<span class="cstat-no" title="statement not covered" >this.scheduleUpdate(true);}</span>
+<span class="fstat-no" title="function not covered" >sc</span>heduleUpdateStructure(){<span class="cstat-no" title="statement not covered" >this.scheduleUpdate();}</span>
+<span class="fstat-no" title="function not covered" >sc</span>heduleUpdate(isFromUser){<span class="cstat-no" title="statement not covered" >if(this._stickToBottom&amp;&amp;isFromUser)</span>
+<span class="cstat-no" title="statement not covered" >this._stickToBottom=this._scrollContainer.isScrolledToBottom();<span class="cstat-no" title="statement not covered" >t</span>his._updateIsFromUser=this._updateIsFromUser||isFromUser;<span class="cstat-no" title="statement not covered" >i</span>f(this._updateAnimationFrameId)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._updateAnimationFrameId=this.element.window().requestAnimationFrame(this._update.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >up</span>dateInstantly(){<span class="cstat-no" title="statement not covered" >this._update();}</span>
+<span class="fstat-no" title="function not covered" >re</span>nderInline(){<span class="cstat-no" title="statement not covered" >this._inline=true;<span class="cstat-no" title="statement not covered" >s</span>uper.renderInline();<span class="cstat-no" title="statement not covered" >t</span>his._update();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>alculateVisibleNodes(clientHeight,scrollTop){const nodes=<span class="cstat-no" title="statement not covered" >this.rootNode().flatChildren();<span class="cstat-no" title="statement not covered" ></span>if(this._inline)</span>
+<span class="cstat-no" title="statement not covered" >return{topPadding:0,bottomPadding:0,contentHeight:0,visibleNodes:nodes,offset:0};c</span>onst size=<span class="cstat-no" title="statement not covered" >nodes.length;</span>let i=<span class="cstat-no" title="statement not covered" >0;</span>let y=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(;i&lt;size&amp;&amp;y+nodes[i].nodeSelfHeight()&lt;scrollTop;++i)</span>
+<span class="cstat-no" title="statement not covered" >y+=nodes[i].nodeSelfHeight();c</span>onst start=<span class="cstat-no" title="statement not covered" >i;</span>const topPadding=<span class="cstat-no" title="statement not covered" >y;<span class="cstat-no" title="statement not covered" ></span>for(;i&lt;size&amp;&amp;y&lt;scrollTop+clientHeight;++i)</span>
+<span class="cstat-no" title="statement not covered" >y+=nodes[i].nodeSelfHeight();c</span>onst end=<span class="cstat-no" title="statement not covered" >i;</span>let bottomPadding=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(;i&lt;size;++i)</span>
+<span class="cstat-no" title="statement not covered" >bottomPadding+=nodes[i].nodeSelfHeight();<span class="cstat-no" title="statement not covered" >r</span>eturn{topPadding:topPadding,bottomPadding:bottomPadding,contentHeight:y-topPadding,visibleNodes:nodes.slice(start,end),offset:start};}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ontentHeight(){const nodes=<span class="cstat-no" title="statement not covered" >this.rootNode().flatChildren();</span>let result=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0,size=nodes.length;i&lt;size;++i)</span>
+<span class="cstat-no" title="statement not covered" >result+=nodes[i].nodeSelfHeight();<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(){<span class="cstat-no" title="statement not covered" >if(this._updateAnimationFrameId){<span class="cstat-no" title="statement not covered" >this.element.window().cancelAnimationFrame(this._updateAnimationFrameId);<span class="cstat-no" title="statement not covered" >d</span>elete this._updateAnimationFrameId;}</span></span>
+const clientHeight=<span class="cstat-no" title="statement not covered" >this._scrollContainer.clientHeight;</span>let scrollTop=<span class="cstat-no" title="statement not covered" >this._scrollContainer.scrollTop;</span>const currentScrollTop=<span class="cstat-no" title="statement not covered" >scrollTop;</span>const maxScrollTop=<span class="cstat-no" title="statement not covered" >Math.max(0,this._contentHeight()-clientHeight);<span class="cstat-no" title="statement not covered" ></span>if(!this._updateIsFromUser&amp;&amp;this._stickToBottom)</span>
+<span class="cstat-no" title="statement not covered" >scrollTop=maxScrollTop;<span class="cstat-no" title="statement not covered" >t</span>his._updateIsFromUser=false;<span class="cstat-no" title="statement not covered" >s</span>crollTop=Math.min(maxScrollTop,scrollTop);c</span>onst viewportState=<span class="cstat-no" title="statement not covered" >this._calculateVisibleNodes(clientHeight,scrollTop);</span>const visibleNodes=<span class="cstat-no" title="statement not covered" >viewportState.visibleNodes;</span>const visibleNodesSet=<span class="cstat-no" title="statement not covered" >new Set(visibleNodes);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._visibleNodes.length;++i){const oldNode=<span class="cstat-no" title="statement not covered" >this._visibleNodes[i];<span class="cstat-no" title="statement not covered" ></span>if(!visibleNodesSet.has(oldNode)&amp;&amp;oldNode.attached()){const element=<span class="cstat-no" title="statement not covered" >oldNode.existingElement();<span class="cstat-no" title="statement not covered" ></span>element.remove();}</span>}</span></span>
+let previousElement=<span class="cstat-no" title="statement not covered" >this.topFillerRowElement();</span>const tBody=<span class="cstat-no" title="statement not covered" >this.dataTableBody;</span>let offset=<span class="cstat-no" title="statement not covered" >viewportState.offset;<span class="cstat-no" title="statement not covered" ></span>if(visibleNodes.length){const nodes=<span class="cstat-no" title="statement not covered" >this.rootNode().flatChildren();</span>const index=<span class="cstat-no" title="statement not covered" >nodes.indexOf(visibleNodes[0]);<span class="cstat-no" title="statement not covered" ></span>this._updateStripesClass(!!(index%2));<span class="cstat-no" title="statement not covered" >i</span>f(this._stickToBottom&amp;&amp;index!==-1&amp;&amp;!!(index%2)!==this._firstVisibleIsStriped)</span></span>
+<span class="cstat-no" title="statement not covered" >offset+=1;}</span>
+<span class="cstat-no" title="statement not covered" >this._firstVisibleIsStriped=!!(offset%2);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;visibleNodes.length;++i){const node=<span class="cstat-no" title="statement not covered" >visibleNodes[i];</span>const element=<span class="cstat-no" title="statement not covered" >node.element();<span class="cstat-no" title="statement not covered" ></span>node.setStriped((offset+i)%2===0);<span class="cstat-no" title="statement not covered" >i</span>f(element!==previousElement.nextSibling)</span></span>
+<span class="cstat-no" title="statement not covered" >tBody.insertBefore(element,previousElement.nextSibling);<span class="cstat-no" title="statement not covered" >n</span>ode.revealed=true;<span class="cstat-no" title="statement not covered" >p</span>reviousElement=element;}</span>
+<span class="cstat-no" title="statement not covered" >this.setVerticalPadding(viewportState.topPadding,viewportState.bottomPadding);<span class="cstat-no" title="statement not covered" >t</span>his._lastScrollTop=scrollTop;<span class="cstat-no" title="statement not covered" >i</span>f(scrollTop!==currentScrollTop)</span>
+<span class="cstat-no" title="statement not covered" >this._scrollContainer.scrollTop=scrollTop;c</span>onst contentFits=<span class="cstat-no" title="statement not covered" >viewportState.contentHeight&lt;=clientHeight&amp;&amp;viewportState.topPadding+viewportState.bottomPadding===0;<span class="cstat-no" title="statement not covered" ></span>if(contentFits!==this.element.classList.contains('data-grid-fits-viewport')){<span class="cstat-no" title="statement not covered" >this.element.classList.toggle('data-grid-fits-viewport',contentFits);<span class="cstat-no" title="statement not covered" >t</span>his.updateWidths();}</span></span>
+<span class="cstat-no" title="statement not covered" >this._visibleNodes=visibleNodes;<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(DataGrid.ViewportDataGrid.Events.ViewportCalculated);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>evealViewportNode(node){const nodes=<span class="cstat-no" title="statement not covered" >this.rootNode().flatChildren();</span>const index=<span class="cstat-no" title="statement not covered" >nodes.indexOf(node);<span class="cstat-no" title="statement not covered" ></span>if(index===-1)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et fromY=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;index;++i)</span>
+<span class="cstat-no" title="statement not covered" >fromY+=nodes[i].nodeSelfHeight();c</span>onst toY=<span class="cstat-no" title="statement not covered" >fromY+node.nodeSelfHeight();</span>let scrollTop=<span class="cstat-no" title="statement not covered" >this._scrollContainer.scrollTop;<span class="cstat-no" title="statement not covered" ></span>if(scrollTop&gt;fromY){<span class="cstat-no" title="statement not covered" >scrollTop=fromY;<span class="cstat-no" title="statement not covered" >t</span>his._stickToBottom=false;}</span>else <span class="cstat-no" title="statement not covered" >if(scrollTop+this._scrollContainer.offsetHeight&lt;toY){<span class="cstat-no" title="statement not covered" >scrollTop=toY-this._scrollContainer.offsetHeight;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._scrollContainer.scrollTop=scrollTop;}</span>};<span class="cstat-no" title="statement not covered" >DataGrid.ViewportDataGrid.Events={ViewportCalculated:Symbol('ViewportCalculated')};<span class="cstat-no" title="statement not covered" >D</span>ataGrid.ViewportDataGridNode=class extends DataGrid.DataGridNode{<span class="fstat-no" title="function not covered" >co</span>nstructor(data,hasChildren){<span class="cstat-no" title="statement not covered" >super(data,hasChildren);<span class="cstat-no" title="statement not covered" >t</span>his._stale=false;<span class="cstat-no" title="statement not covered" >t</span>his._flatNodes=null;<span class="cstat-no" title="statement not covered" >t</span>his._isStriped=false;}</span></span>
+<span class="fstat-no" title="function not covered" >el</span>ement(){const existingElement=<span class="cstat-no" title="statement not covered" >this.existingElement();</span>const element=<span class="cstat-no" title="statement not covered" >existingElement||this.createElement();<span class="cstat-no" title="statement not covered" ></span>if(!existingElement||this._stale){<span class="cstat-no" title="statement not covered" >this.createCells(element);<span class="cstat-no" title="statement not covered" >t</span>his._stale=false;}</span></span>
+<span class="cstat-no" title="statement not covered" >return element;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tStriped(isStriped){<span class="cstat-no" title="statement not covered" >this._isStriped=isStriped;<span class="cstat-no" title="statement not covered" >t</span>his.element().classList.toggle('odd',isStriped);}</span>
+<span class="fstat-no" title="function not covered" >is</span>Striped(){<span class="cstat-no" title="statement not covered" >return this._isStriped;}</span>
+<span class="fstat-no" title="function not covered" >cl</span>earFlatNodes(){<span class="cstat-no" title="statement not covered" >this._flatNodes=null;c</span>onst parent=(<span class="cstat-no" title="statement not covered" >this.parent)</span>;<span class="cstat-no" title="statement not covered" >if(parent)</span>
+<span class="cstat-no" title="statement not covered" >parent.clearFlatNodes();}</span>
+<span class="fstat-no" title="function not covered" >fl</span>atChildren(){<span class="cstat-no" title="statement not covered" >if(this._flatNodes)</span>
+<span class="cstat-no" title="statement not covered" >return this._flatNodes;c</span>onst flatNodes=<span class="cstat-no" title="statement not covered" >[];</span>const children=<span class="cstat-no" title="statement not covered" >[this.children];</span>const counters=<span class="cstat-no" title="statement not covered" >[0];</span>let depth=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>while(depth&gt;=0){<span class="cstat-no" title="statement not covered" >if(children[depth].length&lt;=counters[depth]){<span class="cstat-no" title="statement not covered" >depth--;<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span></span>
+const node=<span class="cstat-no" title="statement not covered" >children[depth][counters[depth]++];<span class="cstat-no" title="statement not covered" ></span>flatNodes.push(node);<span class="cstat-no" title="statement not covered" >i</span>f(node._expanded&amp;&amp;node.children.length){<span class="cstat-no" title="statement not covered" >depth++;<span class="cstat-no" title="statement not covered" >c</span>hildren[depth]=node.children;<span class="cstat-no" title="statement not covered" >c</span>ounters[depth]=0;}</span>}</span>
+<span class="cstat-no" title="statement not covered" >this._flatNodes=flatNodes;<span class="cstat-no" title="statement not covered" >r</span>eturn flatNodes;}</span>
+<span class="fstat-no" title="function not covered" >in</span>sertChild(child,index){<span class="cstat-no" title="statement not covered" >this.clearFlatNodes();<span class="cstat-no" title="statement not covered" >i</span>f(child.parent===this){const currentIndex=<span class="cstat-no" title="statement not covered" >this.children.indexOf(child);<span class="cstat-no" title="statement not covered" ></span>if(currentIndex&lt;0)</span></span>
+<span class="cstat-no" title="statement not covered" >console.assert(false,'Inconsistent DataGrid state');<span class="cstat-no" title="statement not covered" >i</span>f(currentIndex===index)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(currentIndex&lt;index)</span>
+<span class="cstat-no" title="statement not covered" >--index;}</span>
+<span class="cstat-no" title="statement not covered" >child.remove();<span class="cstat-no" title="statement not covered" >c</span>hild.parent=this;<span class="cstat-no" title="statement not covered" >c</span>hild.dataGrid=this.dataGrid;<span class="cstat-no" title="statement not covered" >i</span>f(!this.children.length)</span>
+<span class="cstat-no" title="statement not covered" >this.setHasChildren(true);<span class="cstat-no" title="statement not covered" >t</span>his.children.splice(index,0,child);<span class="cstat-no" title="statement not covered" >c</span>hild.recalculateSiblings(index);<span class="cstat-no" title="statement not covered" >i</span>f(this._expanded)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.scheduleUpdateStructure();}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveChild(child){<span class="cstat-no" title="statement not covered" >this.clearFlatNodes();<span class="cstat-no" title="statement not covered" >i</span>f(this.dataGrid)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.updateSelectionBeforeRemoval(child,false);<span class="cstat-no" title="statement not covered" >i</span>f(child.previousSibling)</span>
+<span class="cstat-no" title="statement not covered" >child.previousSibling.nextSibling=child.nextSibling;<span class="cstat-no" title="statement not covered" >i</span>f(child.nextSibling)</span>
+<span class="cstat-no" title="statement not covered" >child.nextSibling.previousSibling=child.previousSibling;<span class="cstat-no" title="statement not covered" >i</span>f(child.parent!==this)</span>
+<span class="cstat-no" title="statement not covered" >throw'removeChild: Node is not a child of this node.';<span class="cstat-no" title="statement not covered" >t</span>his.children.remove(child,true);<span class="cstat-no" title="statement not covered" >c</span>hild._unlink();<span class="cstat-no" title="statement not covered" >i</span>f(!this.children.length)</span>
+<span class="cstat-no" title="statement not covered" >this.setHasChildren(false);<span class="cstat-no" title="statement not covered" >i</span>f(this._expanded)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.scheduleUpdateStructure();}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveChildren(){<span class="cstat-no" title="statement not covered" >this.clearFlatNodes();<span class="cstat-no" title="statement not covered" >i</span>f(this.dataGrid)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.updateSelectionBeforeRemoval(this,true);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this.children[i]._unlink();<span class="cstat-no" title="statement not covered" >t</span>his.children=[];<span class="cstat-no" title="statement not covered" >i</span>f(this._expanded)</span>
+<span class="cstat-no" title="statement not covered" >this.dataGrid.scheduleUpdateStructure();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>nlink(){<span class="cstat-no" title="statement not covered" >if(this.attached())</span>
+<span class="cstat-no" title="statement not covered" >this.existingElement().remove();<span class="cstat-no" title="statement not covered" >t</span>his.resetNode();}</span>
+<span class="fstat-no" title="function not covered" >co</span>llapse(){<span class="cstat-no" title="statement not covered" >if(!this._expanded)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his.clearFlatNodes();<span class="cstat-no" title="statement not covered" >t</span>his._expanded=false;<span class="cstat-no" title="statement not covered" >i</span>f(this.existingElement())</span>
+<span class="cstat-no" title="statement not covered" >this.existingElement().classList.remove('expanded');<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid.scheduleUpdateStructure();}</span>
+<span class="fstat-no" title="function not covered" >ex</span>pand(){<span class="cstat-no" title="statement not covered" >if(this._expanded)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid._stickToBottom=false;<span class="cstat-no" title="statement not covered" >t</span>his.clearFlatNodes();<span class="cstat-no" title="statement not covered" >s</span>uper.expand();<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid.scheduleUpdateStructure();}</span>
+<span class="fstat-no" title="function not covered" >at</span>tached(){<span class="cstat-no" title="statement not covered" >return!!(this.dataGrid&amp;&amp;this.existingElement()&amp;&amp;this.existingElement().parentElement);}</span>
+<span class="fstat-no" title="function not covered" >re</span>fresh(){<span class="cstat-no" title="statement not covered" >if(this.attached()){<span class="cstat-no" title="statement not covered" >this._stale=true;<span class="cstat-no" title="statement not covered" >t</span>his.dataGrid.scheduleUpdate();}</span>else{<span class="cstat-no" title="statement not covered" >this.resetElement();}</span>}</span>
+<span class="fstat-no" title="function not covered" >re</span>veal(){<span class="cstat-no" title="statement not covered" >this.dataGrid._revealViewportNode(this);}</span>
+<span class="fstat-no" title="function not covered" >re</span>calculateSiblings(index){<span class="cstat-no" title="statement not covered" >this.clearFlatNodes();<span class="cstat-no" title="statement not covered" >s</span>uper.recalculateSiblings(index);}</span>};;<span class="cstat-no" title="statement not covered" >DataGrid.SortableDataGrid=class extends DataGrid.ViewportDataGrid{<span class="fstat-no" title="function not covered" >co</span>nstructor(columnsArray,editCallback,deleteCallback,refreshCallback){<span class="cstat-no" title="statement not covered" >super(columnsArray,editCallback,deleteCallback,refreshCallback);<span class="cstat-no" title="statement not covered" >t</span>his._sortingFunction=DataGrid.SortableDataGrid.TrivialComparator;<span class="cstat-no" title="statement not covered" >t</span>his.setRootNode((new DataGrid.SortableDataGridNode()));}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic TrivialComparator(a,b){<span class="cstat-no" title="statement not covered" >return 0;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic NumericComparator(columnId,a,b){const aValue=<span class="cstat-no" title="statement not covered" >a.data[columnId];</span>const bValue=<span class="cstat-no" title="statement not covered" >b.data[columnId];</span>const aNumber=<span class="cstat-no" title="statement not covered" >Number(aValue instanceof Node?aValue.textContent:aValue);</span>const bNumber=<span class="cstat-no" title="statement not covered" >Number(bValue instanceof Node?bValue.textContent:bValue);<span class="cstat-no" title="statement not covered" ></span>return aNumber&lt;bNumber?-1:(aNumber&gt;bNumber?1:0);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic StringComparator(columnId,a,b){const aValue=<span class="cstat-no" title="statement not covered" >a.data[columnId];</span>const bValue=<span class="cstat-no" title="statement not covered" >b.data[columnId];</span>const aString=<span class="cstat-no" title="statement not covered" >aValue instanceof Node?aValue.textContent:String(aValue);</span>const bString=<span class="cstat-no" title="statement not covered" >bValue instanceof Node?bValue.textContent:String(bValue);<span class="cstat-no" title="statement not covered" ></span>return aString&lt;bString?-1:(aString&gt;bString?1:0);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic Comparator(comparator,reverseMode,a,b){<span class="cstat-no" title="statement not covered" >return reverseMode?comparator(b,a):comparator(a,b);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic create(columnNames,values){const numColumns=<span class="cstat-no" title="statement not covered" >columnNames.length;<span class="cstat-no" title="statement not covered" ></span>if(!numColumns)</span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst columns=(<span class="cstat-no" title="statement not covered" >[])</span>;<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;columnNames.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >columns.push({id:String(i),title:columnNames[i],width:columnNames[i].length,sortable:true});c</span>onst nodes=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;values.length/numColumns;++i){const data=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let j=0;j&lt;columnNames.length;++j)</span></span>
+<span class="cstat-no" title="statement not covered" >data[j]=values[numColumns*i+j];c</span>onst node=<span class="cstat-no" title="statement not covered" >new DataGrid.SortableDataGridNode(data);<span class="cstat-no" title="statement not covered" ></span>node.selectable=false;<span class="cstat-no" title="statement not covered" >n</span>odes.push(node);}</span>
+const dataGrid=<span class="cstat-no" title="statement not covered" >new DataGrid.SortableDataGrid(columns);</span>const length=<span class="cstat-no" title="statement not covered" >nodes.length;</span>const rootNode=<span class="cstat-no" title="statement not covered" >dataGrid.rootNode();<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;length;++i)</span>
+<span class="cstat-no" title="statement not covered" >rootNode.appendChild(nodes[i]);<span class="cstat-no" title="statement not covered" >d</span>ataGrid.addEventListener(DataGrid.DataGrid.Events.SortingChanged,sortDataGrid);f</span>unction <span class="fstat-no" title="function not covered" >sortDataGrid(</span>){const nodes=<span class="cstat-no" title="statement not covered" >dataGrid.rootNode().children;</span>const sortColumnId=<span class="cstat-no" title="statement not covered" >dataGrid.sortColumnId();<span class="cstat-no" title="statement not covered" ></span>if(!sortColumnId)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et columnIsNumeric=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;nodes.length;i++){const value=<span class="cstat-no" title="statement not covered" >nodes[i].data[sortColumnId];<span class="cstat-no" title="statement not covered" ></span>if(isNaN(value instanceof Node?value.textContent:value)){<span class="cstat-no" title="statement not covered" >columnIsNumeric=false;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span></span>
+const comparator=<span class="cstat-no" title="statement not covered" >columnIsNumeric?DataGrid.SortableDataGrid.NumericComparator:DataGrid.SortableDataGrid.StringComparator;<span class="cstat-no" title="statement not covered" ></span>dataGrid.sortNodes(comparator.bind(null,sortColumnId),!dataGrid.isSortOrderAscending());}</span>
+<span class="cstat-no" title="statement not covered" >return dataGrid;}</span>
+<span class="fstat-no" title="function not covered" >in</span>sertChild(node){const root=(<span class="cstat-no" title="statement not covered" >this.rootNode())</span>;<span class="cstat-no" title="statement not covered" >root.insertChildOrdered(node);}</span>
+<span class="fstat-no" title="function not covered" >so</span>rtNodes(comparator,reverseMode){<span class="cstat-no" title="statement not covered" >this._sortingFunction=DataGrid.SortableDataGrid.Comparator.bind(null,comparator,reverseMode);<span class="cstat-no" title="statement not covered" >t</span>his.rootNode().recalculateSiblings(0);<span class="cstat-no" title="statement not covered" >t</span>his.rootNode()._sortChildren(reverseMode);<span class="cstat-no" title="statement not covered" >t</span>his.scheduleUpdateStructure();}</span>};<span class="cstat-no" title="statement not covered" >DataGrid.SortableDataGridNode=class extends DataGrid.ViewportDataGridNode{<span class="fstat-no" title="function not covered" >co</span>nstructor(data,hasChildren){<span class="cstat-no" title="statement not covered" >super(data,hasChildren);}</span></span>
+<span class="fstat-no" title="function not covered" >in</span>sertChildOrdered(node){<span class="cstat-no" title="statement not covered" >this.insertChild(node,this.children.upperBound(node,this.dataGrid._sortingFunction));}</span>
+<span class="fstat-no" title="function not covered" >_s</span>ortChildren(){<span class="cstat-no" title="statement not covered" >this.children.sort(this.dataGrid._sortingFunction);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >this.children[i].recalculateSiblings(i);<span class="cstat-no" title="statement not covered" >f</span>or(const child of this.children)</span>
+<span class="cstat-no" title="statement not covered" >child._sortChildren();}</span>};;<span class="cstat-no" title="statement not covered" >DataGrid.ShowMoreDataGridNode=class extends DataGrid.DataGridNode{<span class="fstat-no" title="function not covered" >co</span>nstructor(callback,startPosition,endPosition,chunkSize){<span class="cstat-no" title="statement not covered" >super({summaryRow:true},false);<span class="cstat-no" title="statement not covered" >t</span>his._callback=callback;<span class="cstat-no" title="statement not covered" >t</span>his._startPosition=startPosition;<span class="cstat-no" title="statement not covered" >t</span>his._endPosition=endPosition;<span class="cstat-no" title="statement not covered" >t</span>his._chunkSize=chunkSize;<span class="cstat-no" title="statement not covered" >t</span>his.showNext=createElement('button');<span class="cstat-no" title="statement not covered" >t</span>his.showNext.setAttribute('type','button');<span class="cstat-no" title="statement not covered" >t</span>his.showNext.addEventListener('click',this._showNextChunk.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his.showNext.textContent=Common.UIString('Show %d before',this._chunkSize);<span class="cstat-no" title="statement not covered" >t</span>his.showAll=createElement('button');<span class="cstat-no" title="statement not covered" >t</span>his.showAll.setAttribute('type','button');<span class="cstat-no" title="statement not covered" >t</span>his.showAll.addEventListener('click',this._showAll.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his.showLast=createElement('button');<span class="cstat-no" title="statement not covered" >t</span>his.showLast.setAttribute('type','button');<span class="cstat-no" title="statement not covered" >t</span>his.showLast.addEventListener('click',this._showLastChunk.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his.showLast.textContent=Common.UIString('Show %d after',this._chunkSize);<span class="cstat-no" title="statement not covered" >t</span>his._updateLabels();<span class="cstat-no" title="statement not covered" >t</span>his.selectable=false;}</span></span>
+<span class="fstat-no" title="function not covered" >_s</span>howNextChunk(){<span class="cstat-no" title="statement not covered" >this._callback(this._startPosition,this._startPosition+this._chunkSize);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>howAll(){<span class="cstat-no" title="statement not covered" >this._callback(this._startPosition,this._endPosition);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>howLastChunk(){<span class="cstat-no" title="statement not covered" >this._callback(this._endPosition-this._chunkSize,this._endPosition);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateLabels(){const totalSize=<span class="cstat-no" title="statement not covered" >this._endPosition-this._startPosition;<span class="cstat-no" title="statement not covered" ></span>if(totalSize&gt;this._chunkSize){<span class="cstat-no" title="statement not covered" >this.showNext.classList.remove('hidden');<span class="cstat-no" title="statement not covered" >t</span>his.showLast.classList.remove('hidden');}</span>else{<span class="cstat-no" title="statement not covered" >this.showNext.classList.add('hidden');<span class="cstat-no" title="statement not covered" >t</span>his.showLast.classList.add('hidden');}</span></span>
+<span class="cstat-no" title="statement not covered" >this.showAll.textContent=Common.UIString('Show all %d',totalSize);}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateCells(element){<span class="cstat-no" title="statement not covered" >this._hasCells=false;<span class="cstat-no" title="statement not covered" >s</span>uper.createCells(element);}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateCell(columnIdentifier){const cell=<span class="cstat-no" title="statement not covered" >this.createTD(columnIdentifier);<span class="cstat-no" title="statement not covered" ></span>if(!this._hasCells){<span class="cstat-no" title="statement not covered" >this._hasCells=true;<span class="cstat-no" title="statement not covered" >i</span>f(this.depth)</span></span>
+<span class="cstat-no" title="statement not covered" >cell.style.setProperty('padding-left',(this.depth*this.dataGrid.indentWidth)+'px');<span class="cstat-no" title="statement not covered" >c</span>ell.appendChild(this.showNext);<span class="cstat-no" title="statement not covered" >c</span>ell.appendChild(this.showAll);<span class="cstat-no" title="statement not covered" >c</span>ell.appendChild(this.showLast);}</span>
+<span class="cstat-no" title="statement not covered" >return cell;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tStartPosition(from){<span class="cstat-no" title="statement not covered" >this._startPosition=from;<span class="cstat-no" title="statement not covered" >t</span>his._updateLabels();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tEndPosition(to){<span class="cstat-no" title="statement not covered" >this._endPosition=to;<span class="cstat-no" title="statement not covered" >t</span>his._updateLabels();}</span>
+<span class="fstat-no" title="function not covered" >no</span>deSelfHeight(){<span class="cstat-no" title="statement not covered" >return 40;}</span>
+<span class="fstat-no" title="function not covered" >di</span>spose(){}};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["data_grid/dataGrid.css"]=".data-grid {\n    position: relative;\n    border: 1px solid #aaa;\n    line-height: 120%;\n}\n\n.data-grid table {\n    table-layout: fixed;\n    border-spacing: 0;\n    border-collapse: separate;\n    height: 100%;\n    width: 100%;\n}\n\n.data-grid .header-container,\n.data-grid .data-container {\n    position: absolute;\n    left: 0;\n    right: 0;\n    overflow-x: hidden;\n}\n\n.data-grid .header-container {\n    top: 0;\n    height: 21px;\n}\n\n.data-grid .data-container {\n    top: 21px;\n    bottom: 0;\n    overflow-y: overlay;\n    transform: translateZ(0);\n}\n\n.data-grid.inline .header-container,\n.data-grid.inline .data-container {\n    position: static;\n}\n\n.data-grid.inline .corner {\n    display: none;\n}\n\n.platform-mac .data-grid .corner,\n.data-grid.data-grid-fits-viewport .corner {\n    display: none;\n}\n\n.data-grid .corner {\n    width: 14px;\n    padding-right: 0;\n    padding-left: 0;\n    border-left: 0 none transparent !important;\n}\n\n.data-grid .top-filler-td,\n.data-grid .bottom-filler-td {\n    height: auto !important;\n    padding: 0 !important;\n}\n\n.data-grid table.data {\n    position: absolute;\n    left: 0;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    border-top: 0 none transparent;\n    table-layout: fixed;\n}\n\n.data-grid.inline table.data {\n    position: static;\n}\n\n.data-grid table.data tr {\n    display: none;\n    height: 20px;\n}\n\n.data-grid table.data tr.revealed {\n    display: table-row;\n}\n\n.striped-data-grid .revealed.data-grid-data-grid-node:nth-child(odd),\n.striped-data-grid-starts-with-odd .revealed.data-grid-data-grid-node:nth-child(even) {\n    background-color: hsl(214, 70%, 97%);\n}\n\n.data-grid td,\n.data-grid th {\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n    line-height: 18px;\n    height: 18px;\n    border-left: 1px solid #aaa;\n    padding: 1px 4px;\n}\n\n.data-grid th:first-child,\n.data-grid td:first-child {\n    border-left: none !important;\n}\n\n.data-grid td {\n    vertical-align: top;\n    -webkit-user-select: text;\n}\n\n.data-grid th {\n    text-align: left;\n    background-color: var(--toolbar-bg-color);\n    border-bottom: 1px solid #aaa;\n    font-weight: normal;\n    vertical-align: middle;\n}\n\n.data-grid td &gt; div,\n.data-grid th &gt; div {\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    overflow: hidden;\n}\n\n.data-grid td.editing &gt; div {\n    text-overflow: clip;\n}\n\n.data-grid .center {\n    text-align: center;\n}\n\n.data-grid .right {\n    text-align: right;\n}\n\n.data-grid th.sortable {\n    position: relative;\n}\n\n.data-grid th.sortable:active::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, 0.15);\n}\n\n.data-grid th .sort-order-icon-container {\n    position: absolute;\n    top: 1px;\n    right: 0;\n    bottom: 1px;\n    display: flex;\n    align-items: center;\n}\n\n.data-grid th .sort-order-icon {\n    margin-right: 4px;\n    margin-bottom: -2px;\n    display: none;\n}\n\n.data-grid th.sort-ascending .sort-order-icon,\n.data-grid th.sort-descending .sort-order-icon {\n    display: block;\n}\n\n.data-grid th.sortable:hover {\n    background-color: hsla(0, 0%, 90%, 1);\n}\n\n.data-grid button {\n    line-height: 18px;\n    color: inherit;\n}\n\n.data-grid td.disclosure::before {\n    -webkit-user-select: none;\n    -webkit-mask-image: url(Images/treeoutlineTriangles.png);\n    -webkit-mask-position: 0 0;\n    -webkit-mask-size: 32px 24px;\n    float: left;\n    width: 8px;\n    height: 12px;\n    margin-right: 2px;\n    content: \"\";\n    position: relative;\n    top: 3px;\n    background-color: rgb(110, 110, 110);\n}\n\n.data-grid tr:not(.parent) td.disclosure::before {\n    background-color: transparent;\n}\n\n@media (-webkit-min-device-pixel-ratio: 1.1) {\n.data-grid tr.parent td.disclosure::before {\n    -webkit-mask-image: url(Images/treeoutlineTriangles_2x.png);\n}\n} /* media */\n\n.data-grid tr.expanded td.disclosure::before {\n    -webkit-mask-position: -16px 0;\n}\n\n.data-grid table.data tr.revealed.selected {\n    background-color: rgb(212, 212, 212);\n    color: inherit;\n}\n\n.data-grid:focus table.data tr.selected {\n    background-color: var(--selection-bg-color);\n    color: var(--selection-fg-color);\n}\n\n.data-grid:focus tr.selected .devtools-link {\n    color: var(--selection-fg-color);\n}\n\n.data-grid:focus tr.parent.selected td.disclosure::before {\n    background-color: var(--selection-fg-color);\n    -webkit-mask-position: 0 0;\n}\n\n.data-grid:focus tr.expanded.selected td.disclosure::before {\n    background-color: var(--selection-fg-color);\n    -webkit-mask-position: -16px 0;\n}\n\n.data-grid tr.inactive {\n    color: rgb(128, 128, 128);\n    font-style: italic;\n}\n\n.data-grid tr.dirty {\n    background-color: hsl(0, 100%, 92%);\n    color: red;\n    font-style: normal;\n}\n\n.data-grid:focus tr.selected.dirty {\n    background-color: hsl(0, 100%, 70%);\n}\n\n.data-grid-resizer {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    width: 5px;\n    z-index: 500;\n}\n\n/*# sourceURL=data_grid/dataGrid.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

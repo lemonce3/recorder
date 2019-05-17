@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/data_grid_test_runner/data_grid_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/data_grid_test_runner</a> data_grid_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/15</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >DataGridTestRunner.dumpDataGrid=<span class="fstat-no" title="function not covered" >fu</span>nction(root,descentIntoCollapsed,prefix){<span class="cstat-no" title="statement not covered" >if(!prefix)</span></span>
+<span class="cstat-no" title="statement not covered" >prefix='';c</span>onst suffix=<span class="cstat-no" title="statement not covered" >root.selected?' &lt;- selected':'';</span>const columnKeys=<span class="cstat-no" title="statement not covered" >root.dataGrid._columnsArray.map(<span class="fstat-no" title="function not covered" >co</span>lumn=&gt;<span class="cstat-no" title="statement not covered" >column.id)</span>;</span>const outputColumns=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(const key of columnKeys){<span class="cstat-no" title="statement not covered" >if(key in root.data)</span></span>
+<span class="cstat-no" title="statement not covered" >outputColumns.push(root.data[key]);}</span>
+<span class="cstat-no" title="statement not covered" >if(outputColumns.length)</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefix+outputColumns.join(' | ')+suffix);<span class="cstat-no" title="statement not covered" >i</span>f(!descentIntoCollapsed&amp;&amp;!root.expanded)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >f</span>or(const child of root.children)</span>
+<span class="cstat-no" title="statement not covered" >DataGridTestRunner.dumpDataGrid(child,descentIntoCollapsed,prefix+' ');}</span>;<span class="cstat-no" title="statement not covered" >DataGridTestRunner.validateDataGrid=<span class="fstat-no" title="function not covered" >fu</span>nction(root){const children=<span class="cstat-no" title="statement not covered" >root.children;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;children.length;++i){const child=<span class="cstat-no" title="statement not covered" >children[i];<span class="cstat-no" title="statement not covered" ></span>if(child.parent!==root)</span></span></span>
+<span class="cstat-no" title="statement not covered" >throw'Wrong parent for child '+child.data.id+' of '+root.data.id;<span class="cstat-no" title="statement not covered" >i</span>f(child.nextSibling!==((i+1===children.length?null:children[i+1])))</span>
+<span class="cstat-no" title="statement not covered" >throw'Wrong child.nextSibling for '+child.data.id+' ('+i+' of '+children.length+') ';<span class="cstat-no" title="statement not covered" >i</span>f(child.previousSibling!==((i?children[i-1]:null)))</span>
+<span class="cstat-no" title="statement not covered" >throw'Wrong child.previousSibling for '+child.data.id+' ('+i+' of '+children.length+') ';<span class="cstat-no" title="statement not covered" >i</span>f(child.parent&amp;&amp;!child.parent._isRoot&amp;&amp;child.depth!==root.depth+1)</span>
+<span class="cstat-no" title="statement not covered" >throw'Wrong depth for '+child.data.id+' expected '+(root.depth+1)+' but got '+child.depth;<span class="cstat-no" title="statement not covered" >D</span>ataGridTestRunner.validateDataGrid(child);}</span>
+const selectedNode=<span class="cstat-no" title="statement not covered" >root.dataGrid.selectedNode;<span class="cstat-no" title="statement not covered" ></span>if(!root.parent&amp;&amp;selectedNode){<span class="cstat-no" title="statement not covered" >if(!selectedNode.selectable)</span></span>
+<span class="cstat-no" title="statement not covered" >throw'Selected node is not selectable';l</span>et node=<span class="cstat-no" title="statement not covered" >selectedNode;<span class="cstat-no" title="statement not covered" ></span>for(;node&amp;&amp;node!==root;node=node.parent){}</span>
+<span class="cstat-no" title="statement not covered" >if(!node)</span>
+<span class="cstat-no" title="statement not covered" >throw'Selected node ('+selectedNode.data.id+') is not within the DataGrid';}</span>};<span class="cstat-no" title="statement not covered" >DataGridTestRunner.dumpAndValidateDataGrid=<span class="fstat-no" title="function not covered" >fu</span>nction(root){<span class="cstat-no" title="statement not covered" >DataGridTestRunner.dumpDataGrid(root);<span class="cstat-no" title="statement not covered" >D</span>ataGridTestRunner.validateDataGrid(root);}</span>;;</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

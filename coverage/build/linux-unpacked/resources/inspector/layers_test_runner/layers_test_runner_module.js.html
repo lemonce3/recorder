@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/layers_test_runner/layers_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/layers_test_runner</a> layers_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/17</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >LayersTestRunner.layerTreeModel=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(!LayersTestRunner._layerTreeModel)</span></span>
+<span class="cstat-no" title="statement not covered" >LayersTestRunner._layerTreeModel=TestRunner.mainTarget.model(Layers.LayerTreeModel);<span class="cstat-no" title="statement not covered" >r</span>eturn LayersTestRunner._layerTreeModel;}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.labelForLayer=<span class="fstat-no" title="function not covered" >fu</span>nction(layer){const node=<span class="cstat-no" title="statement not covered" >layer.nodeForSelfOrAncestor();</span>let label=(<span class="cstat-no" title="statement not covered" >node?Elements.DOMPath.fullQualifiedSelector(node,false):'&lt;invalid node id&gt;')</span>;const height=<span class="cstat-no" title="statement not covered" >layer.height();</span>const width=<span class="cstat-no" title="statement not covered" >layer.width();<span class="cstat-no" title="statement not covered" ></span>if(height&lt;=200&amp;&amp;width&lt;=200)</span></span>
+<span class="cstat-no" title="statement not covered" >label+=' '+height+'x'+width;<span class="cstat-no" title="statement not covered" >i</span>f(typeof layer.__extraData!=='undefined')</span>
+<span class="cstat-no" title="statement not covered" >label+=' ('+layer.__extraData+')';<span class="cstat-no" title="statement not covered" >r</span>eturn label;}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.dumpLayerTree=<span class="fstat-no" title="function not covered" >fu</span>nction(prefix,root){<span class="cstat-no" title="statement not covered" >if(!prefix)</span></span>
+<span class="cstat-no" title="statement not covered" >prefix='';<span class="cstat-no" title="statement not covered" >i</span>f(!root){<span class="cstat-no" title="statement not covered" >root=LayersTestRunner.layerTreeModel().layerTree().contentRoot();<span class="cstat-no" title="statement not covered" >i</span>f(!root){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('No layer root, perhaps not in the composited mode! ');<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefix+LayersTestRunner.labelForLayer(root));<span class="cstat-no" title="statement not covered" >r</span>oot.children().forEach(LayersTestRunner.dumpLayerTree.bind(LayersTestRunner,prefix+'    '));}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.dumpLayers3DView=<span class="fstat-no" title="function not covered" >fu</span>nction(prefix,root){<span class="cstat-no" title="statement not covered" >if(!prefix)</span></span>
+<span class="cstat-no" title="statement not covered" >prefix='';<span class="cstat-no" title="statement not covered" >i</span>f(!root)</span>
+<span class="cstat-no" title="statement not covered" >root=UI.panels.layers._layers3DView._rotatingContainerElement;<span class="cstat-no" title="statement not covered" >i</span>f(root.__layer)</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefix+LayersTestRunner.labelForLayer(root.__layer));<span class="cstat-no" title="statement not covered" >f</span>or(let element=root.firstElementChild;element;element=element.nextSibling)</span>
+<span class="cstat-no" title="statement not covered" >LayersTestRunner.dumpLayers3DView(prefix+'    ',element);}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.evaluateAndWaitForTreeChange=<span class="fstat-no" title="function not covered" >as</span>ync function(expression){<span class="cstat-no" title="statement not covered" >await TestRunner.evaluateInPageAnonymously(expression);<span class="cstat-no" title="statement not covered" >r</span>eturn LayersTestRunner.layerTreeModel().once(Layers.LayerTreeModel.Events.LayerTreeChanged);}</span>;<span class="cstat-no" title="statement not covered" >L</span>ayersTestRunner.findLayerByNodeIdAttribute=<span class="fstat-no" title="function not covered" >fu</span>nction(nodeIdAttribute){let result;function <span class="fstat-no" title="function not covered" >testLayer(</span>layer){const node=<span class="cstat-no" title="statement not covered" >layer.node();<span class="cstat-no" title="statement not covered" ></span>if(!node)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(!node||node.getAttribute('id')!==nodeIdAttribute)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>esult=layer;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="cstat-no" title="statement not covered" >LayersTestRunner.layerTreeModel().layerTree().forEachLayer(testLayer);<span class="cstat-no" title="statement not covered" >i</span>f(!result)</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult('ERROR: No layer for '+nodeIdAttribute);<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.requestLayers=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >LayersTestRunner.layerTreeModel().enable();<span class="cstat-no" title="statement not covered" >r</span>eturn LayersTestRunner.layerTreeModel().once(Layers.LayerTreeModel.Events.LayerTreeChanged);}</span>;<span class="cstat-no" title="statement not covered" >L</span>ayersTestRunner.dispatchMouseEvent=<span class="fstat-no" title="function not covered" >fu</span>nction(eventType,button,element,offsetX,offsetY){const totalOffset=<span class="cstat-no" title="statement not covered" >element.totalOffset();</span>const eventArguments=<span class="cstat-no" title="statement not covered" >{bubbles:true,cancelable:true,view:window,screenX:totalOffset.left-element.scrollLeft+offsetX,screenY:totalOffset.top-element.scrollTop+offsetY,clientX:totalOffset.left+offsetX,clientY:totalOffset.top+offsetY,button:button,composed:true};<span class="cstat-no" title="statement not covered" ></span>if(eventType==='mouseout'){<span class="cstat-no" title="statement not covered" >eventArguments.screenX=0;<span class="cstat-no" title="statement not covered" >e</span>ventArguments.screenY=0;<span class="cstat-no" title="statement not covered" >e</span>ventArguments.clientX=0;<span class="cstat-no" title="statement not covered" >e</span>ventArguments.clientY=0;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >element.dispatchEvent(new MouseEvent(eventType,eventArguments));}</span>;<span class="cstat-no" title="statement not covered" >LayersTestRunner.findLayerTreeElement=<span class="fstat-no" title="function not covered" >fu</span>nction(layer){const element=<span class="cstat-no" title="statement not covered" >layer[LayerViewer.LayerTreeElement._symbol];<span class="cstat-no" title="statement not covered" ></span>element.reveal();<span class="cstat-no" title="statement not covered" >r</span>eturn element.listItemElement;}</span>;<span class="cstat-no" title="statement not covered" >L</span>ayersTestRunner.dispatchMouseEventToLayerTree=<span class="fstat-no" title="function not covered" >fu</span>nction(eventType,button,layer){const element=<span class="cstat-no" title="statement not covered" >LayersTestRunner.findLayerTreeElement(layer);<span class="cstat-no" title="statement not covered" ></span>TestRunner.assertTrue(!!element);<span class="cstat-no" title="statement not covered" >L</span>ayersTestRunner.dispatchMouseEvent(eventType,button,element,element.clientWidth&gt;&gt;1,element.clientHeight&gt;&gt;1);}</span>;<span class="cstat-no" title="statement not covered" >L</span>ayersTestRunner.dumpSelectedStyles=<span class="fstat-no" title="function not covered" >fu</span>nction(message,element){const classes=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(element.classList.contains('selected'))</span></span>
+<span class="cstat-no" title="statement not covered" >classes.push('selected');<span class="cstat-no" title="statement not covered" >i</span>f(element.classList.contains('hovered'))</span>
+<span class="cstat-no" title="statement not covered" >classes.push('hovered');<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(message+': '+classes.join(', '));}</span>;;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

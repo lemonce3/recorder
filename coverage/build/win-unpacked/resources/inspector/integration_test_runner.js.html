@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/integration_test_runner.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector</a> integration_test_runner.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/592</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/231</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/135</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/111</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >allDescriptors.push(...[{"skip_compilation":["AppcacheTestRunner.js","CacheStorageTestRunner.js","IndexedDBTestRunner.js","ResourceTreeTestRunner.js","ResourcesTestRunner.js","ServiceWorkersTestRunner.js"],"dependencies":["test_runner","resources","console_test_runner","sources","sources_test_runner"],"name":"application_test_runner","scripts":["application_test_runner_module.js"]},{"dependencies":["heap_snapshot_model","platform","common"],"name":"heap_snapshot_worker","scripts":["heap_snapshot_worker_module.js"]},{"skip_compilation":["ElementsTestRunner.js","EditDOMTestRunner.js","SetOuterHTMLTestRunner.js","ElementsPanelShadowSelectionOnRefreshTestRunner.js","StylesUpdateLinksTestRunner.js"],"dependencies":["test_runner","elements","event_listeners","animation"],"name":"elements_test_runner","scripts":["elements_test_runner_module.js"]},{"skip_compilation":["ExtensionsNetworkTestRunner.js","ExtensionsTestRunner.js"],"dependencies":["test_runner","extensions"],"name":"extensions_test_runner","scripts":["extensions_test_runner_module.js"]},{"skip_compilation":["CoverageTestRunner.js"],"dependencies":["test_runner","coverage","sources_test_runner"],"name":"coverage_test_runner","scripts":["coverage_test_runner_module.js"]},{"dependencies":["sdk","workspace","ui","host","main"],"name":"test_runner"},{"skip_compilation":["LayersTestRunner.js"],"dependencies":["test_runner","layers","elements","components"],"name":"layers_test_runner","scripts":["layers_test_runner_module.js"]},{"dependencies":["test_runner","audits2"],"name":"audits2_test_runner","scripts":["audits2_test_runner_module.js"]},{"skip_compilation":["AccessibilityPaneTestRunner.js"],"dependencies":["test_runner","accessibility","elements_test_runner"],"name":"accessibility_test_runner","scripts":["accessibility_test_runner_module.js"]},{"skip_compilation":["NetworkTestRunner.js","ProductRegistryTestRunner.js"],"dependencies":["test_runner","product_registry_impl","console_test_runner"],"name":"network_test_runner","scripts":["network_test_runner_module.js"]},{"skip_compilation":["DeviceModeTestRunner.js"],"dependencies":["test_runner","emulation"],"name":"device_mode_test_runner","scripts":["device_mode_test_runner_module.js"]},{"skip_compilation":["DataGridTestRunner.js"],"dependencies":["test_runner","data_grid"],"name":"data_grid_test_runner","scripts":["data_grid_test_runner_module.js"]},{"skip_compilation":["HeapProfilerTestRunner.js"],"dependencies":["heap_snapshot_worker","test_runner","profiler","data_grid"],"name":"heap_profiler_test_runner","scripts":["heap_profiler_test_runner_module.js"]},{"skip_compilation":["ProfilerTestRunner.js"],"dependencies":["profiler","test_runner"],"name":"cpu_profiler_test_runner","scripts":["cpu_profiler_test_runner_module.js"]},{"skip_compilation":["TimelineTestRunner.js","TimelineDataTestRunner.js"],"dependencies":["test_runner","timeline_model","timeline"],"name":"performance_test_runner","scripts":["performance_test_runner_module.js"]},{"skip_compilation":["DebuggerTestRunner.js","LiveEditTestRunner.js","SearchTestRunner.js","SourcesTestRunner.js","EditorTestRunner.js","AutocompleteTestRunner.js"],"dependencies":["test_runner","sources","workspace","source_frame","text_utils","browser_debugger"],"name":"sources_test_runner","scripts":["sources_test_runner_module.js"]},{"skip_compilation":["BindingsTestRunner.js","IsolatedFilesystemTestRunner.js","AutomappingTestRunner.js","PersistenceTestRunner.js","OverridesTestRunner.js"],"dependencies":["test_runner","workspace","diff","bindings","persistence"],"name":"bindings_test_runner","scripts":["bindings_test_runner_module.js"]},{"skip_compilation":["PageMockTestRunner.js"],"dependencies":["sdk","test_runner"],"name":"sdk_test_runner","scripts":["sdk_test_runner_module.js"]},{"dependencies":["test_runner","console","console_counters"],"name":"console_test_runner","scripts":["console_test_runner_module.js"]},{"skip_compilation":["SecurityTestRunner.js"],"dependencies":["test_runner","security"],"name":"security_test_runner","scripts":["security_test_runner_module.js"]}]);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor.modules.push(...[{"name":"application_test_runner"},{"name":"heap_snapshot_worker"},{"name":"elements_test_runner"},{"name":"extensions_test_runner"},{"name":"coverage_test_runner"},{"type":"autostart","name":"test_runner"},{"name":"layers_test_runner"},{"name":"audits2_test_runner"},{"name":"network_test_runner"},{"name":"device_mode_test_runner"},{"name":"sources_test_runner"},{"name":"data_grid_test_runner"},{"name":"heap_profiler_test_runner"},{"name":"cpu_profiler_test_runner"},{"name":"performance_test_runner"},{"name":"accessibility_test_runner"},{"name":"bindings_test_runner"},{"name":"sdk_test_runner"},{"name":"console_test_runner"},{"name":"security_test_runner"}])</span>
+<span class="cstat-no" title="statement not covered" >self['TestRunner']=self['TestRunner']||{};<span class="cstat-no" title="statement not covered" >s</span>elf.testRunner;<span class="cstat-no" title="statement not covered" >T</span>estRunner.setupStartupTest=<span class="fstat-no" title="function not covered" >fu</span>nction(path){const absoluteURL=<span class="cstat-no" title="statement not covered" >TestRunner.url(path);<span class="cstat-no" title="statement not covered" ></span>self.testRunner.navigateSecondaryWindow(absoluteURL);<span class="cstat-no" title="statement not covered" >r</span>eturn new Promise(<span class="fstat-no" title="function not covered" >f=</span>&gt;<span class="cstat-no" title="statement not covered" >TestRunner._startupTestSetupFinished=<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >TestRunner._initializeTargetForStartupTest();<span class="cstat-no" title="statement not covered" >d</span>elete TestRunner._startupTestSetupFinished;<span class="cstat-no" title="statement not covered" >f</span>();}</span>)</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._executeTestScript=<span class="fstat-no" title="function not covered" >fu</span>nction(){const testScriptURL=(<span class="cstat-no" title="statement not covered" >Runtime.queryParam('test'))</span>;<span class="cstat-no" title="statement not covered" >fetch(testScriptURL).then(<span class="fstat-no" title="function not covered" >da</span>ta=&gt;<span class="cstat-no" title="statement not covered" >data.text())</span>.then(<span class="fstat-no" title="function not covered" >te</span>stScript=&gt;{<span class="cstat-no" title="statement not covered" >if(TestRunner._isDebugTest()){<span class="cstat-no" title="statement not covered" >TestRunner.addResult=console.log;<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest=<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >console.log('Test completed');<span class="cstat-no" title="statement not covered" ></span>i</span>f(!self.testRunner)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >eval(`(function test(){${testScript}})()\n//# sourceURL=${testScriptURL}`);e</span>lse
+<span class="cstat-no" title="statement not covered" >self.eval(`function test(){${testScript}}\n//# sourceURL=${testScriptURL}`);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+<span class="cstat-no" title="statement not covered" >testScript=testScript.trimRight();<span class="cstat-no" title="statement not covered" >i</span>f(testScript.endsWith(';'))</span>
+<span class="cstat-no" title="statement not covered" >testScript=testScript.slice(0,testScript.length-1);<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" ></span>as</span>ync function(){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >await eval(testScript+`\n//# sourceURL=${testScriptURL}`);}</span>catch(err){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('TEST ENDED EARLY DUE TO UNCAUGHT ERROR:');<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(err&amp;&amp;err.stack||err);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('=== DO NOT COMMIT THIS INTO -expected.txt ===');<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();}</span>}</span>)();}</span>).catch(<span class="fstat-no" title="function not covered" >er</span>ror=&gt;{<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`Unable to execute test script because of error: ${error}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();}</span>);};<span class="cstat-no" title="statement not covered" >TestRunner._results=[];<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >TestRunner.flushResults();<span class="cstat-no" title="statement not covered" >s</span>elf.testRunner.notifyDone();}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.flushResults=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >Array.prototype.forEach.call(document.documentElement.childNodes,<span class="fstat-no" title="function not covered" >x=</span>&gt;<span class="cstat-no" title="statement not covered" >x.remove())</span>;c</span>onst outputElement=<span class="cstat-no" title="statement not covered" >document.createElement('div');<span class="cstat-no" title="statement not covered" ></span>if(outputElement.style){<span class="cstat-no" title="statement not covered" >outputElement.style.whiteSpace='pre';<span class="cstat-no" title="statement not covered" >o</span>utputElement.style.height='10px';<span class="cstat-no" title="statement not covered" >o</span>utputElement.style.overflow='hidden';}</span></span></span>
+<span class="cstat-no" title="statement not covered" >document.documentElement.appendChild(outputElement);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;TestRunner._results.length;i++){<span class="cstat-no" title="statement not covered" >outputElement.appendChild(document.createTextNode(TestRunner._results[i]));<span class="cstat-no" title="statement not covered" >o</span>utputElement.appendChild(document.createElement('br'));}</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner._results=[];}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.addResult=<span class="fstat-no" title="function not covered" >fu</span>nction(text){<span class="cstat-no" title="statement not covered" >TestRunner._results.push(String(text));}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResults=<span class="fstat-no" title="function not covered" >fu</span>nction(textArray){<span class="cstat-no" title="statement not covered" >if(!textArray)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0,size=textArray.length;i&lt;size;++i)</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(textArray[i]);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.runTests=<span class="fstat-no" title="function not covered" >fu</span>nction(tests){<span class="cstat-no" title="statement not covered" >nextTest();f</span>unction <span class="fstat-no" title="function not covered" >nextTest(</span>){const test=<span class="cstat-no" title="statement not covered" >tests.shift();<span class="cstat-no" title="statement not covered" ></span>if(!test){<span class="cstat-no" title="statement not covered" >TestRunner.completeTest();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult('\ntest: '+test.name);l</span>et testPromise=<span class="cstat-no" title="statement not covered" >test();<span class="cstat-no" title="statement not covered" ></span>if(!(testPromise instanceof Promise))</span>
+<span class="cstat-no" title="statement not covered" >testPromise=Promise.resolve();<span class="cstat-no" title="statement not covered" >t</span>estPromise.then(nextTest);}</span>};<span class="cstat-no" title="statement not covered" >TestRunner.addSniffer=<span class="fstat-no" title="function not covered" >fu</span>nction(receiver,methodName,override,opt_sticky){<span class="cstat-no" title="statement not covered" >override=TestRunner.safeWrap(override);c</span>onst original=<span class="cstat-no" title="statement not covered" >receiver[methodName];<span class="cstat-no" title="statement not covered" ></span>if(typeof original!=='function')</span></span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Cannot find method to override: '+methodName);<span class="cstat-no" title="statement not covered" >r</span>eceiver[methodName]=<span class="fstat-no" title="function not covered" >fu</span>nction(var_args){let result;<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >result=original.apply(this,arguments);}</span>finally{<span class="cstat-no" title="statement not covered" >if(!opt_sticky)</span></span></span>
+<span class="cstat-no" title="statement not covered" >receiver[methodName]=original;}</span>
+<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >Array.prototype.push.call(arguments,result);<span class="cstat-no" title="statement not covered" >o</span>verride.apply(this,arguments);}</span>catch(e){<span class="cstat-no" title="statement not covered" >throw new Error('Exception in overriden method \''+methodName+'\': '+e);}</span></span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;};<span class="cstat-no" title="statement not covered" >TestRunner.addSnifferPromise=<span class="fstat-no" title="function not covered" >fu</span>nction(receiver,methodName){<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >fu</span>nction(resolve,reject){const original=<span class="cstat-no" title="statement not covered" >receiver[methodName];<span class="cstat-no" title="statement not covered" ></span>if(typeof original!=='function'){<span class="cstat-no" title="statement not covered" >reject('Cannot find method to override: '+methodName);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >receiver[methodName]=<span class="fstat-no" title="function not covered" >fu</span>nction(var_args){let result;<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >result=original.apply(this,arguments);}</span>finally{<span class="cstat-no" title="statement not covered" >receiver[methodName]=original;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >Array.prototype.push.call(arguments,result);<span class="cstat-no" title="statement not covered" >r</span>esolve.apply(this,arguments);}</span>catch(e){<span class="cstat-no" title="statement not covered" >reject('Exception in overridden method \''+methodName+'\': '+e);<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();}</span></span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;});};<span class="cstat-no" title="statement not covered" >TestRunner._resolveOnFinishInits;<span class="cstat-no" title="statement not covered" >T</span>estRunner.loadModule=<span class="fstat-no" title="function not covered" >as</span>ync function(module){const promise=<span class="cstat-no" title="statement not covered" >new Promise(<span class="fstat-no" title="function not covered" >re</span>solve=&gt;<span class="cstat-no" title="statement not covered" >TestRunner._resolveOnFinishInits=resolve)</span>;<span class="cstat-no" title="statement not covered" ></span>await self.runtime.loadModulePromise(module);<span class="cstat-no" title="statement not covered" >i</span>f(!TestRunner._pendingInits)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >r</span>eturn promise;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.showPanel=<span class="fstat-no" title="function not covered" >fu</span>nction(panel){<span class="cstat-no" title="statement not covered" >return UI.viewManager.showView(panel);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.createKeyEvent=<span class="fstat-no" title="function not covered" >fu</span>nction(key,ctrlKey,altKey,shiftKey,metaKey){<span class="cstat-no" title="statement not covered" >return new KeyboardEvent('keydown',{key:key,bubbles:true,cancelable:true,ctrlKey:!!ctrlKey,altKey:!!altKey,shiftKey:!!shiftKey,metaKey:!!metaKey});}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.safeWrap=<span class="fstat-no" title="function not covered" >fu</span>nction(func,onexception){function <span class="fstat-no" title="function not covered" >result(</span>){<span class="cstat-no" title="statement not covered" >if(!func)</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst wrapThis=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>try{<span class="cstat-no" title="statement not covered" >return func.apply(wrapThis,arguments);}</span>catch(e){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Exception while running: '+func+'\n'+(e.stack||e));<span class="cstat-no" title="statement not covered" >i</span>f(onexception)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.safeWrap(onexception)();e</span>lse
+<span class="cstat-no" title="statement not covered" >TestRunner.completeTest();}</span>}
+<span class="cstat-no" title="statement not covered" >return result;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.textContentWithLineBreaks=<span class="fstat-no" title="function not covered" >fu</span>nction(node){function <span class="fstat-no" title="function not covered" >padding(</span>currentNode){let result=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>while(currentNode&amp;&amp;currentNode!==node){<span class="cstat-no" title="statement not covered" >if(currentNode.nodeName==='OL'&amp;&amp;!(currentNode.classList&amp;&amp;currentNode.classList.contains('object-properties-section')))</span></span></span>
+<span class="cstat-no" title="statement not covered" >++result;<span class="cstat-no" title="statement not covered" >c</span>urrentNode=currentNode.parentNode;}</span>
+<span class="cstat-no" title="statement not covered" >return Array(result*4+1).join(' ');}</span>
+let buffer=<span class="cstat-no" title="statement not covered" >'';</span>let currentNode=<span class="cstat-no" title="statement not covered" >node;</span>let ignoreFirst=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>while(currentNode.traverseNextNode(node)){<span class="cstat-no" title="statement not covered" >currentNode=currentNode.traverseNextNode(node);<span class="cstat-no" title="statement not covered" >i</span>f(currentNode.nodeType===Node.TEXT_NODE){<span class="cstat-no" title="statement not covered" >buffer+=currentNode.nodeValue;}</span>else <span class="cstat-no" title="statement not covered" >if(currentNode.nodeName==='LI'||currentNode.nodeName==='TR'){<span class="cstat-no" title="statement not covered" >if(!ignoreFirst)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >buffer+='\n'+padding(currentNode);e</span>lse
+<span class="cstat-no" title="statement not covered" >ignoreFirst=false;}</span>else <span class="cstat-no" title="statement not covered" >if(currentNode.nodeName==='STYLE'){<span class="cstat-no" title="statement not covered" >currentNode=currentNode.traverseNextNode(node);<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span>else <span class="cstat-no" title="statement not covered" >if(currentNode.classList&amp;&amp;currentNode.classList.contains('object-properties-section')){<span class="cstat-no" title="statement not covered" >ignoreFirst=true;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >return buffer;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.textContentWithoutStyles=<span class="fstat-no" title="function not covered" >fu</span>nction(node){let buffer=<span class="cstat-no" title="statement not covered" >'';</span>let currentNode=<span class="cstat-no" title="statement not covered" >node;<span class="cstat-no" title="statement not covered" ></span>while(currentNode.traverseNextNode(node)){<span class="cstat-no" title="statement not covered" >currentNode=currentNode.traverseNextNode(node);<span class="cstat-no" title="statement not covered" >i</span>f(currentNode.nodeType===Node.TEXT_NODE)</span></span></span>
+<span class="cstat-no" title="statement not covered" >buffer+=currentNode.nodeValue;e</span>lse <span class="cstat-no" title="statement not covered" >if(currentNode.nodeName==='STYLE')</span>
+<span class="cstat-no" title="statement not covered" >currentNode=currentNode.traverseNextNode(node);}</span>
+<span class="cstat-no" title="statement not covered" >return buffer;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner._setupTestHelpers=<span class="fstat-no" title="function not covered" >fu</span>nction(target){<span class="cstat-no" title="statement not covered" >TestRunner.BrowserAgent=target.browserAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.CSSAgent=target.cssAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.DeviceOrientationAgent=target.deviceOrientationAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.DOMAgent=target.domAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.DOMDebuggerAgent=target.domdebuggerAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.DebuggerAgent=target.debuggerAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.EmulationAgent=target.emulationAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.HeapProfilerAgent=target.heapProfilerAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.InspectorAgent=target.inspectorAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.NetworkAgent=target.networkAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.OverlayAgent=target.overlayAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.PageAgent=target.pageAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.ProfilerAgent=target.profilerAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.RuntimeAgent=target.runtimeAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.TargetAgent=target.targetAgent();<span class="cstat-no" title="statement not covered" >T</span>estRunner.networkManager=target.model(SDK.NetworkManager);<span class="cstat-no" title="statement not covered" >T</span>estRunner.securityOriginManager=target.model(SDK.SecurityOriginManager);<span class="cstat-no" title="statement not covered" >T</span>estRunner.resourceTreeModel=target.model(SDK.ResourceTreeModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.debuggerModel=target.model(SDK.DebuggerModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.runtimeModel=target.model(SDK.RuntimeModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.domModel=target.model(SDK.DOMModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.domDebuggerModel=target.model(SDK.DOMDebuggerModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.cssModel=target.model(SDK.CSSModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.cpuProfilerModel=target.model(SDK.CPUProfilerModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.overlayModel=target.model(SDK.OverlayModel);<span class="cstat-no" title="statement not covered" >T</span>estRunner.serviceWorkerManager=target.model(SDK.ServiceWorkerManager);<span class="cstat-no" title="statement not covered" >T</span>estRunner.tracingManager=target.model(SDK.TracingManager);<span class="cstat-no" title="statement not covered" >T</span>estRunner.mainTarget=target;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPageRemoteObject=<span class="fstat-no" title="function not covered" >as</span>ync function(code){const response=<span class="cstat-no" title="statement not covered" >await TestRunner._evaluateInPage(code);<span class="cstat-no" title="statement not covered" ></span>return TestRunner.runtimeModel.createRemoteObject(response.result);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPage=<span class="fstat-no" title="function not covered" >as</span>ync function(code,callback){const response=<span class="cstat-no" title="statement not covered" >await TestRunner._evaluateInPage(code);<span class="cstat-no" title="statement not covered" ></span>TestRunner.safeWrap(callback)(response.result.value,response.exceptionDetails);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._evaluateInPageCounter=0;<span class="cstat-no" title="statement not covered" >T</span>estRunner._evaluateInPage=<span class="fstat-no" title="function not covered" >as</span>ync function(code){const lines=<span class="cstat-no" title="statement not covered" >new Error().stack.split('at ');</span>const testScriptURL=(<span class="cstat-no" title="statement not covered" >Runtime.queryParam('test'))</span>;const functionLine=<span class="cstat-no" title="statement not covered" >lines.reduce(<span class="fstat-no" title="function not covered" >(a</span>cc,line)=&gt;<span class="cstat-no" title="statement not covered" >line.includes(testScriptURL)?line:acc,</span>lines[lines.length-2]);</span>const components=<span class="cstat-no" title="statement not covered" >functionLine.trim().split('/');</span>const source=<span class="cstat-no" title="statement not covered" >components[components.length-1].slice(0,-1).split(':');</span>const fileName=<span class="cstat-no" title="statement not covered" >source[0];</span>const sourceURL=<span class="cstat-no" title="statement not covered" >`test://evaluations/${TestRunner._evaluateInPageCounter++}/`+fileName;</span>const lineOffset=<span class="cstat-no" title="statement not covered" >parseInt(source[1],10);<span class="cstat-no" title="statement not covered" ></span>code='\n'.repeat(lineOffset-1)+code;<span class="cstat-no" title="statement not covered" >i</span>f(code.indexOf('sourceURL=')===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >code+=`//# sourceURL=${sourceURL}`;c</span>onst response=<span class="cstat-no" title="statement not covered" >await TestRunner.RuntimeAgent.invoke_evaluate({expression:code,objectGroup:'console'});</span>const error=<span class="cstat-no" title="statement not covered" >response[Protocol.Error];<span class="cstat-no" title="statement not covered" ></span>if(error){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Error: '+error);<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >return response;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.evaluateInPageAnonymously=<span class="fstat-no" title="function not covered" >as</span>ync function(code,userGesture){const response=<span class="cstat-no" title="statement not covered" >await TestRunner.RuntimeAgent.invoke_evaluate({expression:code,objectGroup:'console',userGesture});<span class="cstat-no" title="statement not covered" ></span>if(!response[Protocol.Error])</span></span>
+<span class="cstat-no" title="statement not covered" >return response.result.value;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('Error: '+</span>
+(response.exceptionDetails&amp;&amp;response.exceptionDetails.text||'exception from evaluateInPageAnonymously.'));<span class="cstat-no" title="statement not covered" >TestRunner.completeTest();}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.evaluateInPagePromise=<span class="fstat-no" title="function not covered" >fu</span>nction(code){<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >su</span>ccess=&gt;<span class="cstat-no" title="statement not covered" >TestRunner.evaluateInPage(code,success))</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPageAsync=<span class="fstat-no" title="function not covered" >as</span>ync function(code){const response=<span class="cstat-no" title="statement not covered" >await TestRunner.RuntimeAgent.invoke_evaluate({expression:code,objectGroup:'console',includeCommandLineAPI:false,awaitPromise:true});</span>const error=<span class="cstat-no" title="statement not covered" >response[Protocol.Error];<span class="cstat-no" title="statement not covered" ></span>if(!error&amp;&amp;!response.exceptionDetails)</span></span>
+<span class="cstat-no" title="statement not covered" >return response.result.value;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('Error: '+</span>
+(error||response.exceptionDetails&amp;&amp;response.exceptionDetails.text||'exception while evaluation in page.'));<span class="cstat-no" title="statement not covered" >TestRunner.completeTest();}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.callFunctionInPageAsync=<span class="fstat-no" title="function not covered" >fu</span>nction(name,args){<span class="cstat-no" title="statement not covered" >args=args||[];<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.evaluateInPageAsync(name+'('+args.map(<span class="fstat-no" title="function not covered" >a=</span>&gt;<span class="cstat-no" title="statement not covered" >JSON.stringify(a))</span>.join(',')+')');}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPageWithTimeout=<span class="fstat-no" title="function not covered" >fu</span>nction(code,userGesture){<span class="cstat-no" title="statement not covered" >TestRunner.evaluateInPageAnonymously('setTimeout(unescape(\''+escape(code)+'\'), 1)',userGesture);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateFunctionInOverlay=<span class="fstat-no" title="function not covered" >fu</span>nction(func,callback){const expression=<span class="cstat-no" title="statement not covered" >'internals.evaluateInInspectorOverlay("(" + '+func+' + ")()")';</span>const mainContext=<span class="cstat-no" title="statement not covered" >TestRunner.runtimeModel.executionContexts()[0];<span class="cstat-no" title="statement not covered" ></span>mainContext.evaluate({expression:expression,objectGroup:'',includeCommandLineAPI:false,silent:false,returnByValue:true,generatePreview:false},false,false).then(<span class="fstat-no" title="function not covered" >re</span>sult=&gt;<span class="cstat-no" title="statement not covered" >void callback(result.object.value))</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.check=<span class="fstat-no" title="function not covered" >fu</span>nction(passCondition,failureText){<span class="cstat-no" title="statement not covered" >if(!passCondition)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult('FAIL: '+failureText);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.deprecatedRunAfterPendingDispatches=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >Protocol.test.deprecatedRunAfterPendingDispatches(callback);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.loadHTML=<span class="fstat-no" title="function not covered" >fu</span>nction(html){<span class="cstat-no" title="statement not covered" >if(!html.includes('&lt;base')){const doctypeRegex=<span class="cstat-no" title="statement not covered" >/(&lt;!DOCTYPE.*?&gt;)/i;</span>const baseTag=<span class="cstat-no" title="statement not covered" >`&lt;base href="${TestRunner.url()}"&gt;`;<span class="cstat-no" title="statement not covered" ></span>if(html.match(doctypeRegex))</span></span></span>
+<span class="cstat-no" title="statement not covered" >html=html.replace(doctypeRegex,'$1'+baseTag);e</span>lse
+<span class="cstat-no" title="statement not covered" >html=baseTag+html;}</span>
+<span class="cstat-no" title="statement not covered" >html=html.replace(/'/g,'\\\'').replace(/\n/g,'\\n');<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.evaluateInPageAnonymously(`document.write(\`${html}\`);document.close();`);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.addScriptTag=<span class="fstat-no" title="function not covered" >fu</span>nction(path){<span class="cstat-no" title="statement not covered" >return TestRunner.evaluateInPageAsync(`</span></span>
+    (function(){
+      let script = document.createElement('script');
+      script.src = '${path}';
+      document.head.append(script);
+      return new Promise(f =&gt; script.onload = f);
+    })();
+  `);};<span class="cstat-no" title="statement not covered" >TestRunner.addStylesheetTag=<span class="fstat-no" title="function not covered" >fu</span>nction(path){<span class="cstat-no" title="statement not covered" >return TestRunner.evaluateInPageAsync(`</span></span>
+    (function(){
+      let link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '${path}';
+      link.onload = onload;
+      document.head.append(link);
+      let resolve;
+      let promise = new Promise(r =&gt; resolve = r);
+      function onload() {
+        // TODO(chenwilliam): It shouldn't be necessary to force
+        // style recalc here but some tests rely on it.
+        window.getComputedStyle(document.body).color;
+        resolve();
+      }
+      return promise;
+    })();
+  `);};<span class="cstat-no" title="statement not covered" >TestRunner.addHTMLImport=<span class="fstat-no" title="function not covered" >fu</span>nction(path){<span class="cstat-no" title="statement not covered" >return TestRunner.evaluateInPageAsync(`</span></span>
+    (function(){
+      let link = document.createElement('link');
+      link.rel = 'import';
+      link.href = '${path}';
+      let promise = new Promise(r =&gt; link.onload = r);
+      document.body.append(link);
+      return promise;
+    })();
+  `);};<span class="cstat-no" title="statement not covered" >TestRunner.addIframe=<span class="fstat-no" title="function not covered" >fu</span>nction(path,options=<span class="branch-0 cbranch-no" title="branch not covered" >{})</span>{<span class="cstat-no" title="statement not covered" >options.id=options.id||'';<span class="cstat-no" title="statement not covered" >o</span>ptions.name=options.name||'';<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.evaluateInPageAsync(`</span></span>
+    (function(){
+      let iframe = document.createElement('iframe');
+      iframe.src = '${path}';
+      iframe.id = '${options.id}';
+      iframe.name = '${options.name}';
+      document.body.appendChild(iframe);
+      return new Promise(f =&gt; iframe.onload = f);
+    })();
+  `);};<span class="cstat-no" title="statement not covered" >TestRunner._pendingInits=0;<span class="cstat-no" title="statement not covered" >T</span>estRunner.deprecatedInitAsync=<span class="fstat-no" title="function not covered" >as</span>ync function(code){<span class="cstat-no" title="statement not covered" >TestRunner._pendingInits++;<span class="cstat-no" title="statement not covered" >a</span>wait TestRunner.RuntimeAgent.invoke_evaluate({expression:code,objectGroup:'console'});<span class="cstat-no" title="statement not covered" >T</span>estRunner._pendingInits--;<span class="cstat-no" title="statement not covered" >i</span>f(!TestRunner._pendingInits)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner._resolveOnFinishInits();}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.markStep=<span class="fstat-no" title="function not covered" >fu</span>nction(title){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('\nRunning: '+title);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.startDumpingProtocolMessages=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >Protocol.test.dumpProtocol=self.testRunner.logToStderr.bind(self.testRunner);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addScriptForFrame=<span class="fstat-no" title="function not covered" >fu</span>nction(url,content,frame){<span class="cstat-no" title="statement not covered" >content+='\n//# sourceURL='+url;c</span>onst executionContext=<span class="cstat-no" title="statement not covered" >TestRunner.runtimeModel.executionContexts().find(<span class="fstat-no" title="function not covered" >co</span>ntext=&gt;<span class="cstat-no" title="statement not covered" >context.frameId===frame.id)</span>;<span class="cstat-no" title="statement not covered" ></span>TestRunner.RuntimeAgent.evaluate(content,'console',false,false,executionContext.id);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.formatters={};<span class="cstat-no" title="statement not covered" >T</span>estRunner.formatters.formatAsTypeName=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >return'&lt;'+typeof value+'&gt;';}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.formatters.formatAsTypeNameOrNull=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >if(value===null)</span></span>
+<span class="cstat-no" title="statement not covered" >return'null';<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.formatters.formatAsTypeName(value);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.formatters.formatAsRecentTime=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >if(typeof value!=='object'||!(value instanceof Date))</span></span>
+<span class="cstat-no" title="statement not covered" >return TestRunner.formatters.formatAsTypeName(value);c</span>onst delta=<span class="cstat-no" title="statement not covered" >Date.now()-value;<span class="cstat-no" title="statement not covered" ></span>return 0&lt;=delta&amp;&amp;delta&lt;30*60*1000?'&lt;plausible&gt;':value;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.formatters.formatAsURL=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >if(!value)</span></span>
+<span class="cstat-no" title="statement not covered" >return value;c</span>onst lastIndex=<span class="cstat-no" title="statement not covered" >value.lastIndexOf('devtools/');<span class="cstat-no" title="statement not covered" ></span>if(lastIndex&lt;0)</span>
+<span class="cstat-no" title="statement not covered" >return value;<span class="cstat-no" title="statement not covered" >r</span>eturn'.../'+value.substr(lastIndex);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.formatters.formatAsDescription=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >if(!value)</span></span>
+<span class="cstat-no" title="statement not covered" >return value;<span class="cstat-no" title="statement not covered" >r</span>eturn'"'+value.replace(/^function [gs]et /,'function ')+'"';}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.CustomFormatters;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addObject=<span class="fstat-no" title="function not covered" >fu</span>nction(object,customFormatters,prefix,firstLinePrefix){<span class="cstat-no" title="statement not covered" >prefix=prefix||'';<span class="cstat-no" title="statement not covered" >f</span>irstLinePrefix=firstLinePrefix||prefix;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(firstLinePrefix+'{');c</span>onst propertyNames=<span class="cstat-no" title="statement not covered" >Object.keys(object);<span class="cstat-no" title="statement not covered" ></span>propertyNames.sort();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;propertyNames.length;++i){const prop=<span class="cstat-no" title="statement not covered" >propertyNames[i];<span class="cstat-no" title="statement not covered" ></span>if(!object.hasOwnProperty(prop))</span></span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst prefixWithName=<span class="cstat-no" title="statement not covered" >'    '+prefix+prop+' : ';</span>const propValue=<span class="cstat-no" title="statement not covered" >object[prop];<span class="cstat-no" title="statement not covered" ></span>if(customFormatters&amp;&amp;customFormatters[prop]){const formatterName=<span class="cstat-no" title="statement not covered" >customFormatters[prop];<span class="cstat-no" title="statement not covered" ></span>if(formatterName!=='skip'){const formatter=<span class="cstat-no" title="statement not covered" >TestRunner.formatters[formatterName];<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(prefixWithName+formatter(propValue));}</span>}</span>else{<span class="cstat-no" title="statement not covered" >TestRunner.dump(propValue,customFormatters,'    '+prefix,prefixWithName);}</span>}</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefix+'}');}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.addArray=<span class="fstat-no" title="function not covered" >fu</span>nction(array,customFormatters,prefix,firstLinePrefix){<span class="cstat-no" title="statement not covered" >prefix=prefix||'';<span class="cstat-no" title="statement not covered" >f</span>irstLinePrefix=firstLinePrefix||prefix;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(firstLinePrefix+'[');<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;array.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.dump(array[i],customFormatters,prefix+'    ');<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(prefix+']');}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.dumpDeepInnerHTML=<span class="fstat-no" title="function not covered" >fu</span>nction(node){function <span class="fstat-no" title="function not covered" >innerHTML(</span>prefix,node){const openTag=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(node.nodeType===Node.TEXT_NODE){<span class="cstat-no" title="statement not covered" >if(!node.parentElement||node.parentElement.nodeName!=='STYLE')</span></span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(node.nodeValue);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+<span class="cstat-no" title="statement not covered" >openTag.push('&lt;'+node.nodeName);c</span>onst attrs=<span class="cstat-no" title="statement not covered" >node.attributes;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;attrs&amp;&amp;i&lt;attrs.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >openTag.push(attrs[i].name+'='+attrs[i].value);<span class="cstat-no" title="statement not covered" >o</span>penTag.push('&gt;');<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(prefix+openTag.join(' '));<span class="cstat-no" title="statement not covered" >f</span>or(let child=node.firstChild;child;child=child.nextSibling)</span>
+<span class="cstat-no" title="statement not covered" >innerHTML(prefix+'    ',child);<span class="cstat-no" title="statement not covered" >i</span>f(node.shadowRoot)</span>
+<span class="cstat-no" title="statement not covered" >innerHTML(prefix+'    ',node.shadowRoot);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(prefix+'&lt;/'+node.nodeName+'&gt;');}</span>
+<span class="cstat-no" title="statement not covered" >innerHTML('',node);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.deepTextContent=<span class="fstat-no" title="function not covered" >fu</span>nction(node){<span class="cstat-no" title="statement not covered" >if(!node)</span></span>
+<span class="cstat-no" title="statement not covered" >return'';<span class="cstat-no" title="statement not covered" >i</span>f(node.nodeType===Node.TEXT_NODE&amp;&amp;node.nodeValue)</span>
+<span class="cstat-no" title="statement not covered" >return!node.parentElement||node.parentElement.nodeName!=='STYLE'?node.nodeValue:'';l</span>et res=<span class="cstat-no" title="statement not covered" >'';</span>const children=<span class="cstat-no" title="statement not covered" >node.childNodes;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;children.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >res+=TestRunner.deepTextContent(children[i]);<span class="cstat-no" title="statement not covered" >i</span>f(node.shadowRoot)</span>
+<span class="cstat-no" title="statement not covered" >res+=TestRunner.deepTextContent(node.shadowRoot);<span class="cstat-no" title="statement not covered" >r</span>eturn res;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.dump=<span class="fstat-no" title="function not covered" >fu</span>nction(value,customFormatters,prefix,prefixWithName){<span class="cstat-no" title="statement not covered" >prefixWithName=prefixWithName||prefix;<span class="cstat-no" title="statement not covered" >i</span>f(prefixWithName&amp;&amp;prefixWithName.length&gt;80){<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefixWithName+'was skipped due to prefix length limit');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(value===null)</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefixWithName+'null');e</span>lse <span class="cstat-no" title="statement not covered" >if(value&amp;&amp;value.constructor&amp;&amp;value.constructor.name==='Array')</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addArray((value),customFormatters,prefix,prefixWithName);e</span>lse <span class="cstat-no" title="statement not covered" >if(typeof value==='object')</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addObject((value),customFormatters,prefix,prefixWithName);e</span>lse <span class="cstat-no" title="statement not covered" >if(typeof value==='string')</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefixWithName+'"'+value+'"');e</span>lse
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(prefixWithName+value);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.dumpObjectPropertyTreeElement=<span class="fstat-no" title="function not covered" >fu</span>nction(treeElement){const expandedSubstring=<span class="cstat-no" title="statement not covered" >treeElement.expanded?'[expanded]':'[collapsed]';<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(expandedSubstring+' '+treeElement.listItemElement.deepTextContent());<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;treeElement.childCount();++i){const property=<span class="cstat-no" title="statement not covered" >treeElement.childAt(i).property;</span>const key=<span class="cstat-no" title="statement not covered" >property.name;</span>const value=<span class="cstat-no" title="statement not covered" >property.value._description;<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult('    '+key+': '+value);}</span>}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.waitForEvent=<span class="fstat-no" title="function not covered" >fu</span>nction(event,obj,condition){<span class="cstat-no" title="statement not covered" >condition=condition||<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return true;}</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn new Promise(<span class="fstat-no" title="function not covered" >re</span>solve=&gt;{<span class="cstat-no" title="statement not covered" >obj.addEventListener(event,onEventFired);f</span>unction <span class="fstat-no" title="function not covered" >onEventFired(</span>event){<span class="cstat-no" title="statement not covered" >if(!condition(event.data))</span></span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >o</span>bj.removeEventListener(event,onEventFired);<span class="cstat-no" title="statement not covered" >r</span>esolve(event.data);}</span>});};<span class="cstat-no" title="statement not covered" >TestRunner.waitForTarget=<span class="fstat-no" title="function not covered" >fu</span>nction(filter){<span class="cstat-no" title="statement not covered" >filter=filter||(<span class="fstat-no" title="function not covered" >ta</span>rget=&gt;<span class="cstat-no" title="statement not covered" >true)</span>;<span class="cstat-no" title="statement not covered" >f</span>or(const target of SDK.targetManager.targets()){<span class="cstat-no" title="statement not covered" >if(filter(target))</span></span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(target);}</span>
+<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfill=&gt;{const observer=(<span class="cstat-no" title="statement not covered" >{targetAdded:<span class="fstat-no" title="function not covered" >fu</span>nction(target){<span class="cstat-no" title="statement not covered" >if(filter(target)){<span class="cstat-no" title="statement not covered" >SDK.targetManager.unobserveTargets(observer);<span class="cstat-no" title="statement not covered" >f</span>ulfill(target);}</span>}</span>,targetRemoved:<span class="fstat-no" title="function not covered" >fu</span>nction(){},})</span>;<span class="cstat-no" title="statement not covered" >SDK.targetManager.observeTargets(observer);}</span>);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.waitForExecutionContext=<span class="fstat-no" title="function not covered" >fu</span>nction(runtimeModel){<span class="cstat-no" title="statement not covered" >if(runtimeModel.executionContexts().length)</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(runtimeModel.executionContexts()[0]);<span class="cstat-no" title="statement not covered" >r</span>eturn runtimeModel.once(SDK.RuntimeModel.Events.ExecutionContextCreated);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.waitForExecutionContextDestroyed=<span class="fstat-no" title="function not covered" >fu</span>nction(context){const runtimeModel=<span class="cstat-no" title="statement not covered" >context.runtimeModel;<span class="cstat-no" title="statement not covered" ></span>if(runtimeModel.executionContexts().indexOf(context)===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.waitForEvent(SDK.RuntimeModel.Events.ExecutionContextDestroyed,runtimeModel,<span class="fstat-no" title="function not covered" >de</span>stroyedContext=&gt;<span class="cstat-no" title="statement not covered" >destroyedContext===context)</span>;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.assertGreaterOrEqual=<span class="fstat-no" title="function not covered" >fu</span>nction(a,b,message){<span class="cstat-no" title="statement not covered" >if(a&lt;b)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult('FAILED: '+(message?message+': ':'')+a+' &lt; '+b);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.navigate=<span class="fstat-no" title="function not covered" >fu</span>nction(url,callback){<span class="cstat-no" title="statement not covered" >TestRunner._pageLoadedCallback=TestRunner.safeWrap(callback);<span class="cstat-no" title="statement not covered" >T</span>estRunner.resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.Load,TestRunner._pageNavigated);<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPageAnonymously('window.location.replace(\''+url+'\')');}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.navigatePromise=<span class="fstat-no" title="function not covered" >fu</span>nction(url){<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfill=&gt;<span class="cstat-no" title="statement not covered" >TestRunner.navigate(url,fulfill))</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._pageNavigated=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >TestRunner.resourceTreeModel.removeEventListener(SDK.ResourceTreeModel.Events.Load,TestRunner._pageNavigated);<span class="cstat-no" title="statement not covered" >T</span>estRunner._handlePageLoaded();}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.hardReloadPage=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >TestRunner._innerReloadPage(true,undefined,callback);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.reloadPage=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >TestRunner._innerReloadPage(false,undefined,callback);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.reloadPageWithInjectedScript=<span class="fstat-no" title="function not covered" >fu</span>nction(injectedScript,callback){<span class="cstat-no" title="statement not covered" >TestRunner._innerReloadPage(false,injectedScript,callback);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.reloadPagePromise=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfill=&gt;<span class="cstat-no" title="statement not covered" >TestRunner.reloadPage(fulfill))</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._innerReloadPage=<span class="fstat-no" title="function not covered" >fu</span>nction(hardReload,injectedScript,callback){<span class="cstat-no" title="statement not covered" >TestRunner._pageLoadedCallback=TestRunner.safeWrap(callback);<span class="cstat-no" title="statement not covered" >T</span>estRunner.resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.Load,TestRunner.pageLoaded);<span class="cstat-no" title="statement not covered" >T</span>estRunner.resourceTreeModel.reloadPage(hardReload,injectedScript);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.pageLoaded=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >TestRunner.resourceTreeModel.removeEventListener(SDK.ResourceTreeModel.Events.Load,TestRunner.pageLoaded);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('Page reloaded.');<span class="cstat-no" title="statement not covered" >T</span>estRunner._handlePageLoaded();}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._handlePageLoaded=<span class="fstat-no" title="function not covered" >as</span>ync function(){<span class="cstat-no" title="statement not covered" >await TestRunner.waitForExecutionContext((TestRunner.runtimeModel));<span class="cstat-no" title="statement not covered" >i</span>f(TestRunner._pageLoadedCallback){const callback=<span class="cstat-no" title="statement not covered" >TestRunner._pageLoadedCallback;<span class="cstat-no" title="statement not covered" ></span>delete TestRunner._pageLoadedCallback;<span class="cstat-no" title="statement not covered" >c</span>allback();}</span>}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.waitForPageLoad=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >TestRunner.resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.Load,onLoaded);f</span>unction <span class="fstat-no" title="function not covered" >onLoaded(</span>){<span class="cstat-no" title="statement not covered" >TestRunner.resourceTreeModel.removeEventListener(SDK.ResourceTreeModel.Events.Load,onLoaded);<span class="cstat-no" title="statement not covered" >c</span>allback();}</span>};<span class="cstat-no" title="statement not covered" >T</span>estRunner.runWhenPageLoads=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){const oldCallback=<span class="cstat-no" title="statement not covered" >TestRunner._pageLoadedCallback;</span>function <span class="fstat-no" title="function not covered" >chainedCallback(</span>){<span class="cstat-no" title="statement not covered" >if(oldCallback)</span></span>
+<span class="cstat-no" title="statement not covered" >oldCallback();<span class="cstat-no" title="statement not covered" >c</span>allback();}</span>
+<span class="cstat-no" title="statement not covered" >TestRunner._pageLoadedCallback=TestRunner.safeWrap(chainedCallback);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.runTestSuite=<span class="fstat-no" title="function not covered" >fu</span>nction(testSuite){const testSuiteTests=<span class="cstat-no" title="statement not covered" >testSuite.slice();</span>function <span class="fstat-no" title="function not covered" >runner(</span>){<span class="cstat-no" title="statement not covered" >if(!testSuiteTests.length){<span class="cstat-no" title="statement not covered" >TestRunner.completeTest();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+const nextTest=<span class="cstat-no" title="statement not covered" >testSuiteTests.shift();<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult('');<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('Running: '+/function\s([^(]*)/.exec(nextTest)[1]);<span class="cstat-no" title="statement not covered" >T</span>estRunner.safeWrap(nextTest)(runner);}</span>
+<span class="cstat-no" title="statement not covered" >runner();}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.assertEquals=<span class="fstat-no" title="function not covered" >fu</span>nction(expected,found,message){<span class="cstat-no" title="statement not covered" >if(expected===found)</span></span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et error;<span class="cstat-no" title="statement not covered" >if(message)</span>
+<span class="cstat-no" title="statement not covered" >error='Failure ('+message+'):';e</span>lse
+<span class="cstat-no" title="statement not covered" >error='Failure:';<span class="cstat-no" title="statement not covered" >t</span>hrow new Error(error+' expected &lt;'+expected+'&gt; found &lt;'+found+'&gt;');}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.assertTrue=<span class="fstat-no" title="function not covered" >fu</span>nction(found,message){<span class="cstat-no" title="statement not covered" >TestRunner.assertEquals(true,!!found,message);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.override=<span class="fstat-no" title="function not covered" >fu</span>nction(receiver,methodName,override,opt_sticky){<span class="cstat-no" title="statement not covered" >override=TestRunner.safeWrap(override);c</span>onst original=<span class="cstat-no" title="statement not covered" >receiver[methodName];<span class="cstat-no" title="statement not covered" ></span>if(typeof original!=='function')</span></span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Cannot find method to override: '+methodName);<span class="cstat-no" title="statement not covered" >r</span>eceiver[methodName]=<span class="fstat-no" title="function not covered" >fu</span>nction(var_args){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >return override.apply(this,arguments);}</span>catch(e){<span class="cstat-no" title="statement not covered" >throw new Error('Exception in overriden method \''+methodName+'\': '+e);}</span>finally{<span class="cstat-no" title="statement not covered" >if(!opt_sticky)</span></span></span>
+<span class="cstat-no" title="statement not covered" >receiver[methodName]=original;}</span>};<span class="cstat-no" title="statement not covered" >return original;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.clearSpecificInfoFromStackFrames=<span class="fstat-no" title="function not covered" >fu</span>nction(text){let buffer=<span class="cstat-no" title="statement not covered" >text.replace(/\(file:\/\/\/(?:[^)]+\)|[\w\/:-]+)/g,'(...)');<span class="cstat-no" title="statement not covered" ></span>buffer=buffer.replace(/\(http:\/\/(?:[^)]+\)|[\w\/:-]+)/g,'(...)');<span class="cstat-no" title="statement not covered" >b</span>uffer=buffer.replace(/\(test:\/\/(?:[^)]+\)|[\w\/:-]+)/g,'(...)');<span class="cstat-no" title="statement not covered" >b</span>uffer=buffer.replace(/\(&lt;anonymous&gt;:[^)]+\)/g,'(...)');<span class="cstat-no" title="statement not covered" >b</span>uffer=buffer.replace(/VM\d+/g,'VM');<span class="cstat-no" title="statement not covered" >r</span>eturn buffer.replace(/\s*at[^()]+\(native\)/g,'');}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.hideInspectorView=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >UI.inspectorView.element.setAttribute('style','display:none !important');}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.mainFrame=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return TestRunner.resourceTreeModel.mainFrame;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.StringOutputStream=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(callback){<span class="cstat-no" title="statement not covered" >this._callback=callback;<span class="cstat-no" title="statement not covered" >t</span>his._buffer='';}</span></span>
+<span class="fstat-no" title="function not covered" >as</span>ync open(fileName){<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync write(chunk){<span class="cstat-no" title="statement not covered" >this._buffer+=chunk;}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync close(){<span class="cstat-no" title="statement not covered" >this._callback(this._buffer);}</span>};<span class="cstat-no" title="statement not covered" >TestRunner.MockSetting=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(value){<span class="cstat-no" title="statement not covered" >this._value=value;}</span></span>
+<span class="fstat-no" title="function not covered" >ge</span>t(){<span class="cstat-no" title="statement not covered" >return this._value;}</span>
+<span class="fstat-no" title="function not covered" >se</span>t(value){<span class="cstat-no" title="statement not covered" >this._value=value;}</span>};<span class="cstat-no" title="statement not covered" >TestRunner.loadedModules=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return self.runtime._modules.filter(<span class="fstat-no" title="function not covered" >mo</span>dule=&gt;<span class="cstat-no" title="statement not covered" >module._loadedForTest)</span>.filter(<span class="fstat-no" title="function not covered" >mo</span>dule=&gt;<span class="cstat-no" title="statement not covered" >module.name().indexOf('test_runner')===-1)</span>;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.dumpLoadedModules=<span class="fstat-no" title="function not covered" >fu</span>nction(relativeTo){const previous=<span class="cstat-no" title="statement not covered" >new Set(relativeTo||[]);</span>function <span class="fstat-no" title="function not covered" >moduleSorter(</span>left,right){<span class="cstat-no" title="statement not covered" >return String.naturalOrderComparator(left._descriptor.name,right._descriptor.name);}</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Loaded modules:');c</span>onst loadedModules=<span class="cstat-no" title="statement not covered" >TestRunner.loadedModules().sort(moduleSorter);<span class="cstat-no" title="statement not covered" ></span>for(const module of loadedModules){<span class="cstat-no" title="statement not covered" >if(previous.has(module))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('    '+module._descriptor.name);}</span>
+<span class="cstat-no" title="statement not covered" >return loadedModules;}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.waitForUISourceCode=<span class="fstat-no" title="function not covered" >fu</span>nction(urlSuffix,projectType){function <span class="fstat-no" title="function not covered" >matches(</span>uiSourceCode){<span class="cstat-no" title="statement not covered" >if(projectType&amp;&amp;uiSourceCode.project().type()!==projectType)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(!projectType&amp;&amp;uiSourceCode.project().type()===Workspace.projectTypes.Service)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(urlSuffix&amp;&amp;!uiSourceCode.url().endsWith(urlSuffix))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="cstat-no" title="statement not covered" >for(const uiSourceCode of Workspace.workspace.uiSourceCodes()){<span class="cstat-no" title="statement not covered" >if(urlSuffix&amp;&amp;matches(uiSourceCode))</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(uiSourceCode);}</span>
+<span class="cstat-no" title="statement not covered" >return TestRunner.waitForEvent(Workspace.Workspace.Events.UISourceCodeAdded,Workspace.workspace,matches);}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.waitForUISourceCodeRemoved=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >Workspace.workspace.once(Workspace.Workspace.Events.UISourceCodeRemoved).then(callback);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.url=<span class="fstat-no" title="function not covered" >fu</span>nction(url=<span class="branch-0 cbranch-no" title="branch not covered" >'')</span>{const testScriptURL=(<span class="cstat-no" title="statement not covered" >Runtime.queryParam('test'))</span>;<span class="cstat-no" title="statement not covered" >return new URL(url,testScriptURL+'/../').href;}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner.dumpSyntaxHighlight=<span class="fstat-no" title="function not covered" >fu</span>nction(str,mimeType){const node=<span class="cstat-no" title="statement not covered" >document.createElement('span');<span class="cstat-no" title="statement not covered" ></span>node.textContent=str;c</span>onst javascriptSyntaxHighlighter=<span class="cstat-no" title="statement not covered" >new UI.SyntaxHighlighter(mimeType,false);<span class="cstat-no" title="statement not covered" ></span>return javascriptSyntaxHighlighter.syntaxHighlightNode(node).then(dumpSyntax);f</span>unction <span class="fstat-no" title="function not covered" >dumpSyntax(</span>){const node_parts=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;node.childNodes.length;i++){<span class="cstat-no" title="statement not covered" >if(node.childNodes[i].getAttribute)</span></span></span>
+<span class="cstat-no" title="statement not covered" >node_parts.push(node.childNodes[i].getAttribute('class'));e</span>lse
+<span class="cstat-no" title="statement not covered" >node_parts.push('*');}</span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(str+': '+node_parts.join(', '));}</span>};<span class="cstat-no" title="statement not covered" >TestRunner._consoleOutputHook=<span class="fstat-no" title="function not covered" >fu</span>nction(messageType){<span class="cstat-no" title="statement not covered" >TestRunner.addResult(messageType+': '+Array.prototype.slice.call(arguments,1));}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._printDevToolsConsole=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(TestRunner._isDebugTest())</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >c</span>onsole.log=TestRunner._consoleOutputHook.bind(TestRunner,'log');<span class="cstat-no" title="statement not covered" >c</span>onsole.error=TestRunner._consoleOutputHook.bind(TestRunner,'error');<span class="cstat-no" title="statement not covered" >c</span>onsole.info=TestRunner._consoleOutputHook.bind(TestRunner,'info');}</span>;<span class="cstat-no" title="statement not covered" >TestRunner.dumpInspectedPageElementText=<span class="fstat-no" title="function not covered" >as</span>ync function(querySelector){const value=<span class="cstat-no" title="statement not covered" >await TestRunner.evaluateInPageAsync(`document.querySelector('${querySelector}').innerText`);<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(value);}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._startedTest=false;<span class="cstat-no" title="statement not covered" >T</span>estRunner._TestObserver=class{<span class="fstat-no" title="function not covered" >ta</span>rgetAdded(target){<span class="cstat-no" title="statement not covered" >if(TestRunner._startedTest)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >T</span>estRunner._startedTest=true;<span class="cstat-no" title="statement not covered" >T</span>estRunner._setupTestHelpers(target);<span class="cstat-no" title="statement not covered" >i</span>f(TestRunner._isStartupTest())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >T</span>estRunner.loadHTML(`</span>
+      &lt;head&gt;
+        &lt;base href="${TestRunner.url()}"&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;/body&gt;
+    `).then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >TestRunner._executeTestScript())</span>;}
+<span class="fstat-no" title="function not covered" >ta</span>rgetRemoved(target){}};<span class="cstat-no" title="statement not covered" >TestRunner._isDebugTest=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return!self.testRunner||!!Runtime.queryParam('debugFrontend');}</span>;<span class="cstat-no" title="statement not covered" >T</span>estRunner._isStartupTest=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Runtime.queryParam('test').includes('/startup/');}</span>;<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" ></span>as</span>ync function(){function <span class="fstat-no" title="function not covered" >completeTestOnError(</span>message,source,lineno,colno,error){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('TEST ENDED IN ERROR: '+error.stack);<span class="cstat-no" title="statement not covered" >T</span>estRunner.completeTest();}</span></span>
+<span class="cstat-no" title="statement not covered" >self['onerror']=completeTestOnError;<span class="cstat-no" title="statement not covered" >T</span>estRunner._printDevToolsConsole();<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.observeTargets(new TestRunner._TestObserver());<span class="cstat-no" title="statement not covered" >i</span>f(!TestRunner._isStartupTest())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >T</span>estRunner._initializeTargetForStartupTest=TestRunner.override(Main.Main._instanceForTest,'_initializeTarget',<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >undefined)</span>.bind(Main.Main._instanceForTest);<span class="cstat-no" title="statement not covered" >a</span>wait TestRunner.addSnifferPromise(Main.Main._instanceForTest,'_showAppUI');<span class="cstat-no" title="statement not covered" >T</span>estRunner._executeTestScript();}</span>)();;;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+<script src="../../../../block-navigation.js"></script>
+</body>
+</html>

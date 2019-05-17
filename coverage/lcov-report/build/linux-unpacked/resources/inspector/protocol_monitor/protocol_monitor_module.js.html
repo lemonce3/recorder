@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/protocol_monitor/protocol_monitor_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/protocol_monitor</a> protocol_monitor_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/162</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/49</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/34</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >ProtocolMonitor.ProtocolMonitor=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his._nodes=[];<span class="cstat-no" title="statement not covered" >t</span>his._started=false;<span class="cstat-no" title="statement not covered" >t</span>his._startTime=0;<span class="cstat-no" title="statement not covered" >t</span>his._nodeForId={};<span class="cstat-no" title="statement not covered" >t</span>his._filter=<span class="fstat-no" title="function not covered" >no</span>de=&gt;<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>t</span>his._columns=[{id:'method',title:ls`Method`,visible:true,sortable:true,weight:60},{id:'direction',title:ls`Direction`,visible:false,sortable:true,hideable:true,weight:30},{id:'request',title:ls`Request`,visible:true,hideable:true,weight:60},{id:'response',title:ls`Response`,visible:true,hideable:true,weight:60},{id:'timestamp',title:ls`Timestamp`,visible:false,sortable:true,hideable:true,weight:30}];<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('protocol_monitor/protocolMonitor.css');c</span>onst topToolbar=<span class="cstat-no" title="statement not covered" >new UI.Toolbar('protocol-monitor-toolbar',this.contentElement);</span>const recordButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarToggle(ls`Record`,'largeicon-start-recording','largeicon-stop-recording');<span class="cstat-no" title="statement not covered" ></span>recordButton.addEventListener(UI.ToolbarButton.Events.Click,<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >recordButton.setToggled(!recordButton.toggled());<span class="cstat-no" title="statement not covered" >t</span>his._setRecording(recordButton.toggled());}</span>);<span class="cstat-no" title="statement not covered" >r</span>ecordButton.setToggleWithRedColor(true);<span class="cstat-no" title="statement not covered" >t</span>opToolbar.appendToolbarItem(recordButton);<span class="cstat-no" title="statement not covered" >r</span>ecordButton.setToggled(true);c</span>onst clearButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarButton(ls`Clear all`,'largeicon-clear');<span class="cstat-no" title="statement not covered" ></span>clearButton.addEventListener(UI.ToolbarButton.Events.Click,<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._dataGrid.rootNode().removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._nodes=[];<span class="cstat-no" title="statement not covered" >t</span>his._nodeForId={};}</span>);<span class="cstat-no" title="statement not covered" >t</span>opToolbar.appendToolbarItem(clearButton);c</span>onst split=<span class="cstat-no" title="statement not covered" >new UI.SplitWidget(true,true,'protocol-monitor-panel-split',250);<span class="cstat-no" title="statement not covered" ></span>split.show(this.contentElement);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid=new DataGrid.SortableDataGrid(this._columns);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.element.style.flex='1';<span class="cstat-no" title="statement not covered" >t</span>his._infoWidget=new ProtocolMonitor.ProtocolMonitor.InfoWidget();<span class="cstat-no" title="statement not covered" >s</span>plit.setMainWidget(this._dataGrid.asWidget());<span class="cstat-no" title="statement not covered" >s</span>plit.setSidebarWidget(this._infoWidget);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.addEventListener(DataGrid.DataGrid.Events.SelectedNode,<span class="fstat-no" title="function not covered" >ev</span>ent=&gt;<span class="cstat-no" title="statement not covered" >this._infoWidget.render(event.data.data))</span>;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.addEventListener(DataGrid.DataGrid.Events.DeselectedNode,<span class="fstat-no" title="function not covered" >ev</span>ent=&gt;<span class="cstat-no" title="statement not covered" >this._infoWidget.render(null))</span>;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.setHeaderContextMenuCallback(this._innerHeaderContextMenu.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.setRowContextMenuCallback(this._innerRowContextMenu.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.addEventListener(DataGrid.DataGrid.Events.SortingChanged,this._sortDataGrid.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.setStickToBottom(true);<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.sortNodes(DataGrid.SortableDataGrid.NumericComparator.bind(null,'timestamp'),false);<span class="cstat-no" title="statement not covered" >t</span>his._updateColumnVisibility();c</span>onst keys=<span class="cstat-no" title="statement not covered" >['method','request','response','direction'];<span class="cstat-no" title="statement not covered" ></span>this._filterParser=new TextUtils.FilterParser(keys);<span class="cstat-no" title="statement not covered" >t</span>his._suggestionBuilder=new UI.FilterSuggestionBuilder(keys);<span class="cstat-no" title="statement not covered" >t</span>his._textFilterUI=new UI.ToolbarInput(ls`Filter`,1,.2,'',this._suggestionBuilder.completions.bind(this._suggestionBuilder));<span class="cstat-no" title="statement not covered" >t</span>his._textFilterUI.addEventListener(UI.ToolbarInput.Event.TextChanged,<span class="fstat-no" title="function not covered" >ev</span>ent=&gt;{const query=(<span class="cstat-no" title="statement not covered" >event.data)</span>;const filters=<span class="cstat-no" title="statement not covered" >this._filterParser.parse(query);<span class="cstat-no" title="statement not covered" ></span>this._filter=<span class="fstat-no" title="function not covered" >no</span>de=&gt;{<span class="cstat-no" title="statement not covered" >for(const{key,text,negative}of filters){<span class="cstat-no" title="statement not covered" >if(!text)</span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst data=<span class="cstat-no" title="statement not covered" >key?node.data[key]:node.data;<span class="cstat-no" title="statement not covered" ></span>if(!data)</span>
+<span class="cstat-no" title="statement not covered" >continue;c</span>onst found=<span class="cstat-no" title="statement not covered" >JSON.stringify(data).toLowerCase().indexOf(text.toLowerCase())!==-1;<span class="cstat-no" title="statement not covered" ></span>if(found===negative)</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>;<span class="cstat-no" title="statement not covered" >this._filterNodes();}</span>);<span class="cstat-no" title="statement not covered" >topToolbar.appendToolbarItem(this._textFilterUI);}</span>
+<span class="fstat-no" title="function not covered" >_f</span>ilterNodes(){<span class="cstat-no" title="statement not covered" >for(const node of this._nodes){<span class="cstat-no" title="statement not covered" >if(this._filter(node)){<span class="cstat-no" title="statement not covered" >if(!node.parent)</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.insertChild(node);}</span>else{<span class="cstat-no" title="statement not covered" >node.remove();}</span>}}
+<span class="fstat-no" title="function not covered" >_i</span>nnerHeaderContextMenu(contextMenu){const columnConfigs=<span class="cstat-no" title="statement not covered" >this._columns.filter(<span class="fstat-no" title="function not covered" >co</span>lumnConfig=&gt;<span class="cstat-no" title="statement not covered" >columnConfig.hideable)</span>;<span class="cstat-no" title="statement not covered" ></span>for(const columnConfig of columnConfigs){<span class="cstat-no" title="statement not covered" >contextMenu.headerSection().appendCheckboxItem(columnConfig.title,this._toggleColumnVisibility.bind(this,columnConfig),columnConfig.visible);}</span></span>
+<span class="cstat-no" title="statement not covered" >contextMenu.show();}</span>
+<span class="fstat-no" title="function not covered" >_i</span>nnerRowContextMenu(contextMenu,node){<span class="cstat-no" title="statement not covered" >contextMenu.defaultSection().appendItem(ls`Filter`,<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._textFilterUI.setValue(`method:${node.data.method}`,true);}</span>);<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.defaultSection().appendItem(ls`Documentation`,<span class="fstat-no" title="function not covered" >()</span>=&gt;{const[domain,method]=<span class="cstat-no" title="statement not covered" >node.data.method.split('.');</span>const type=<span class="cstat-no" title="statement not covered" >node.data.direction==='sent'?'method':'event';<span class="cstat-no" title="statement not covered" ></span>InspectorFrontendHost.openInNewTab(`https://chromedevtools.github.io/devtools-protocol/tot/${domain}#${type}-${method}`);}</span>);}</span>
+<span class="fstat-no" title="function not covered" >_t</span>oggleColumnVisibility(columnConfig){<span class="cstat-no" title="statement not covered" >columnConfig.visible=!columnConfig.visible;<span class="cstat-no" title="statement not covered" >t</span>his._updateColumnVisibility();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateColumnVisibility(){const visibleColumns=(<span class="cstat-no" title="statement not covered" >{})</span>;<span class="cstat-no" title="statement not covered" >for(const columnConfig of this._columns)</span>
+<span class="cstat-no" title="statement not covered" >visibleColumns[columnConfig.id]=columnConfig.visible;<span class="cstat-no" title="statement not covered" >t</span>his._dataGrid.setColumnsVisiblity(visibleColumns);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>ortDataGrid(){const sortColumnId=<span class="cstat-no" title="statement not covered" >this._dataGrid.sortColumnId();<span class="cstat-no" title="statement not covered" ></span>if(!sortColumnId)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et columnIsNumeric=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>switch(sortColumnId){case'method':case'direction':<span class="cstat-no" title="statement not covered" >columnIsNumeric=false;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span></span>
+const comparator=<span class="cstat-no" title="statement not covered" >columnIsNumeric?DataGrid.SortableDataGrid.NumericComparator:DataGrid.SortableDataGrid.StringComparator;<span class="cstat-no" title="statement not covered" ></span>this._dataGrid.sortNodes(comparator.bind(null,sortColumnId),!this._dataGrid.isSortOrderAscending());}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >if(this._started)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._started=true;<span class="cstat-no" title="statement not covered" >t</span>his._startTime=Date.now();<span class="cstat-no" title="statement not covered" >t</span>his._setRecording(true);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etRecording(recording){<span class="cstat-no" title="statement not covered" >if(recording){<span class="cstat-no" title="statement not covered" >Protocol.test.onMessageSent=this._messageSent.bind(this);<span class="cstat-no" title="statement not covered" >P</span>rotocol.test.onMessageReceived=this._messageRecieved.bind(this);}</span>else{<span class="cstat-no" title="statement not covered" >Protocol.test.onMessageSent=null;<span class="cstat-no" title="statement not covered" >P</span>rotocol.test.onMessageReceived=null;}</span>}</span>
+<span class="fstat-no" title="function not covered" >_m</span>essageRecieved(message){<span class="cstat-no" title="statement not covered" >if('id'in message){const node=<span class="cstat-no" title="statement not covered" >this._nodeForId[message.id];<span class="cstat-no" title="statement not covered" ></span>if(!node)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >n</span>ode.data.response=message.result||message.error;<span class="cstat-no" title="statement not covered" >n</span>ode.hasError=!!message.error;<span class="cstat-no" title="statement not covered" >n</span>ode.refresh();<span class="cstat-no" title="statement not covered" >i</span>f(this._dataGrid.selectedNode===node)</span>
+<span class="cstat-no" title="statement not covered" >this._infoWidget.render(node.data);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+const node=<span class="cstat-no" title="statement not covered" >new ProtocolMonitor.ProtocolMonitor.ProtocolNode({method:message.method,direction:'recieved',response:message.params,timestamp:Date.now()-this._startTime,request:''});<span class="cstat-no" title="statement not covered" ></span>this._nodes.push(node);<span class="cstat-no" title="statement not covered" >i</span>f(this._filter(node))</span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.insertChild(node);}</span>
+<span class="fstat-no" title="function not covered" >_m</span>essageSent(message){const node=<span class="cstat-no" title="statement not covered" >new ProtocolMonitor.ProtocolMonitor.ProtocolNode({method:message.method,direction:'sent',request:message.params,timestamp:Date.now()-this._startTime,response:'(pending)',id:message.id});<span class="cstat-no" title="statement not covered" ></span>this._nodeForId[message.id]=node;<span class="cstat-no" title="statement not covered" >t</span>his._nodes.push(node);<span class="cstat-no" title="statement not covered" >i</span>f(this._filter(node))</span>
+<span class="cstat-no" title="statement not covered" >this._dataGrid.insertChild(node);}</span>};<span class="cstat-no" title="statement not covered" >ProtocolMonitor.ProtocolMonitor.ProtocolNode=class extends DataGrid.SortableDataGridNode{<span class="fstat-no" title="function not covered" >co</span>nstructor(data){<span class="cstat-no" title="statement not covered" >super(data);<span class="cstat-no" title="statement not covered" >t</span>his.hasError=false;}</span></span>
+<span class="fstat-no" title="function not covered" >cr</span>eateCell(columnId){<span class="cstat-no" title="statement not covered" >switch(columnId){case'response':<span class="cstat-no" title="statement not covered" >if(!this.data[columnId]&amp;&amp;this.data.direction==='send'){const cell=<span class="cstat-no" title="statement not covered" >this.createTD(columnId);<span class="cstat-no" title="statement not covered" ></span>cell.textContent='(pending)';<span class="cstat-no" title="statement not covered" >r</span>eturn cell;}</span></span></span>
+case'request':{const cell=<span class="cstat-no" title="statement not covered" >this.createTD(columnId);</span>const obj=<span class="cstat-no" title="statement not covered" >SDK.RemoteObject.fromLocalObject(this.data[columnId]);<span class="cstat-no" title="statement not covered" ></span>cell.textContent=obj.description.trimEnd(50);<span class="cstat-no" title="statement not covered" >c</span>ell.classList.add('source-code');<span class="cstat-no" title="statement not covered" >r</span>eturn cell;}</span>
+case'timestamp':{const cell=<span class="cstat-no" title="statement not covered" >this.createTD(columnId);<span class="cstat-no" title="statement not covered" ></span>cell.textContent=ls`${this.data[columnId]} ms`;<span class="cstat-no" title="statement not covered" >r</span>eturn cell;}</span>}
+<span class="cstat-no" title="statement not covered" >return super.createCell(columnId);}</span>
+<span class="fstat-no" title="function not covered" >el</span>ement(){const element=<span class="cstat-no" title="statement not covered" >super.element();<span class="cstat-no" title="statement not covered" ></span>element.classList.toggle('protocol-message-sent',this.data.direction==='sent');<span class="cstat-no" title="statement not covered" >e</span>lement.classList.toggle('protocol-message-recieved',this.data.direction!=='sent');<span class="cstat-no" title="statement not covered" >e</span>lement.classList.toggle('error',this.hasError);<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>};<span class="cstat-no" title="statement not covered" >ProtocolMonitor.ProtocolMonitor.InfoWidget=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane=new UI.TabbedPane();<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.appendTab('request','Request',new UI.Widget());<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.appendTab('response','Response',new UI.Widget());<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.show(this.contentElement);<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.selectTab('response');<span class="cstat-no" title="statement not covered" >t</span>his.render(null);}</span></span>
+<span class="fstat-no" title="function not covered" >re</span>nder(data){const requestEnabled=<span class="cstat-no" title="statement not covered" >data&amp;&amp;data.direction==='sent';<span class="cstat-no" title="statement not covered" ></span>this._tabbedPane.setTabEnabled('request',!!requestEnabled);<span class="cstat-no" title="statement not covered" >i</span>f(!data){<span class="cstat-no" title="statement not covered" >this._tabbedPane.changeTabView('request',new UI.EmptyWidget(ls`No message selected`));<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.changeTabView('response',new UI.EmptyWidget(ls`No message selected`));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!requestEnabled)</span>
+<span class="cstat-no" title="statement not covered" >this._tabbedPane.selectTab('response');<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.changeTabView('request',SourceFrame.JSONView.createViewSync(data.request));<span class="cstat-no" title="statement not covered" >t</span>his._tabbedPane.changeTabView('response',SourceFrame.JSONView.createViewSync(data.response));}</span>};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["protocol_monitor/protocolMonitor.css"]=".data-grid {\n    border: none;\n}\n.data-grid {\n    flex: auto;\n    border: none;\n}\n\n.data-grid .data {\n    background-image: none;\n}\n\n.data-grid td {\n    /* border-bottom: 1px solid #ccc; */\n    border-left-color: #ccc;\n}\n\n.data-grid tr.selected {\n    background-color: #def;\n}\n\n.data-grid th {\n    border-left-color: #ccc;\n}\n\n.protocol-message-sent {\n    background-color: hsl(281, 64%, 95%);\n}\n\n.protocol-monitor-toolbar {\n    border-bottom:var(--divider-border);\n}\n\n.error {\n    background-color: hsl(0, 100%, 97%);\n    color: red;\n}\n/*# sourceURL=protocol_monitor/protocolMonitor.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

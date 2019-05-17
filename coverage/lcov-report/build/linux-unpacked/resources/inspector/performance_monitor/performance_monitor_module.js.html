@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/performance_monitor/performance_monitor_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/performance_monitor</a> performance_monitor_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/269</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/59</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor=class extends UI.HBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('performance_monitor/performanceMonitor.css');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('perfmon-pane');<span class="cstat-no" title="statement not covered" >t</span>his._metricsBuffer=[];<span class="cstat-no" title="statement not covered" >t</span>his._pixelsPerMs=10/1000;<span class="cstat-no" title="statement not covered" >t</span>his._pollIntervalMs=500;<span class="cstat-no" title="statement not covered" >t</span>his._scaleHeight=16;<span class="cstat-no" title="statement not covered" >t</span>his._graphHeight=90;<span class="cstat-no" title="statement not covered" >t</span>his._gridColor=UI.themeSupport.patchColorText('rgba(0, 0, 0, 0.08)',UI.ThemeSupport.ColorUsage.Foreground);<span class="cstat-no" title="statement not covered" >t</span>his._controlPane=new PerformanceMonitor.PerformanceMonitor.ControlPane(this.contentElement);c</span>onst chartContainer=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','perfmon-chart-container');<span class="cstat-no" title="statement not covered" ></span>this._canvas=(chartContainer.createChild('canvas'));<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.createChild('div','perfmon-chart-suspend-overlay fill').createChild('div').textContent=Common.UIString('Paused');<span class="cstat-no" title="statement not covered" >t</span>his._controlPane.addEventListener(PerformanceMonitor.PerformanceMonitor.ControlPane.Events.MetricChanged,this._recalcChartHeight,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.observeModels(SDK.PerformanceMetricsModel,this);}</span></span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >if(!this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addEventListener(SDK.TargetManager.Events.SuspendStateChanged,this._suspendStateChanged,this);<span class="cstat-no" title="statement not covered" >t</span>his._model.enable();<span class="cstat-no" title="statement not covered" >t</span>his._suspendStateChanged();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >if(!this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.removeEventListener(SDK.TargetManager.Events.SuspendStateChanged,this._suspendStateChanged,this);<span class="cstat-no" title="statement not covered" >t</span>his._stopPolling();<span class="cstat-no" title="statement not covered" >t</span>his._model.disable();}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delAdded(model){<span class="cstat-no" title="statement not covered" >if(this._model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._model=model;<span class="cstat-no" title="statement not covered" >i</span>f(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this.wasShown();}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delRemoved(model){<span class="cstat-no" title="statement not covered" >if(this._model!==model)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this.willHide();<span class="cstat-no" title="statement not covered" >t</span>his._model=null;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>uspendStateChanged(){const suspended=<span class="cstat-no" title="statement not covered" >SDK.targetManager.allTargetsSuspended();<span class="cstat-no" title="statement not covered" ></span>if(suspended)</span>
+<span class="cstat-no" title="statement not covered" >this._stopPolling();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._startPolling();<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.toggle('suspended',suspended);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartPolling(){<span class="cstat-no" title="statement not covered" >this._startTimestamp=0;<span class="cstat-no" title="statement not covered" >t</span>his._pollTimer=setInterval(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._poll(),</span>this._pollIntervalMs);<span class="cstat-no" title="statement not covered" >t</span>his.onResize();<span class="cstat-no" title="statement not covered" >a</span>nimate.call(this);f</span>unction <span class="fstat-no" title="function not covered" >animate(</span>){<span class="cstat-no" title="statement not covered" >this._draw();<span class="cstat-no" title="statement not covered" >t</span>his._animationId=this.contentElement.window().requestAnimationFrame(animate.bind(this));}</span>}
+<span class="fstat-no" title="function not covered" >_s</span>topPolling(){<span class="cstat-no" title="statement not covered" >clearInterval(this._pollTimer);<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.window().cancelAnimationFrame(this._animationId);<span class="cstat-no" title="statement not covered" >t</span>his._metricsBuffer=[];}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _poll(){const data=<span class="cstat-no" title="statement not covered" >await this._model.requestMetrics();</span>const timestamp=<span class="cstat-no" title="statement not covered" >data.timestamp;</span>const metrics=<span class="cstat-no" title="statement not covered" >data.metrics;<span class="cstat-no" title="statement not covered" ></span>this._metricsBuffer.push({timestamp,metrics:metrics});c</span>onst millisPerWidth=<span class="cstat-no" title="statement not covered" >this._width/this._pixelsPerMs;</span>const maxCount=<span class="cstat-no" title="statement not covered" >Math.ceil(millisPerWidth/this._pollIntervalMs*2);<span class="cstat-no" title="statement not covered" ></span>if(this._metricsBuffer.length&gt;maxCount*2)</span>
+<span class="cstat-no" title="statement not covered" >this._metricsBuffer.splice(0,this._metricsBuffer.length-maxCount);<span class="cstat-no" title="statement not covered" >t</span>his._controlPane.updateMetrics(metrics);}</span>
+<span class="fstat-no" title="function not covered" >_d</span>raw(){const ctx=(<span class="cstat-no" title="statement not covered" >this._canvas.getContext('2d'))</span>;<span class="cstat-no" title="statement not covered" >ctx.save();<span class="cstat-no" title="statement not covered" >c</span>tx.scale(window.devicePixelRatio,window.devicePixelRatio);<span class="cstat-no" title="statement not covered" >c</span>tx.clearRect(0,0,this._width,this._height);<span class="cstat-no" title="statement not covered" >c</span>tx.save();<span class="cstat-no" title="statement not covered" >c</span>tx.translate(0,this._scaleHeight);<span class="cstat-no" title="statement not covered" >f</span>or(const chartInfo of this._controlPane.charts()){<span class="cstat-no" title="statement not covered" >if(!this._controlPane.isActive(chartInfo.metrics[0].name))</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >t</span>his._drawChart(ctx,chartInfo,this._graphHeight);<span class="cstat-no" title="statement not covered" >c</span>tx.translate(0,this._graphHeight);}</span>
+<span class="cstat-no" title="statement not covered" >ctx.restore();<span class="cstat-no" title="statement not covered" >t</span>his._drawHorizontalGrid(ctx);<span class="cstat-no" title="statement not covered" >c</span>tx.restore();}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawHorizontalGrid(ctx){const labelDistanceSeconds=<span class="cstat-no" title="statement not covered" >10;</span>const lightGray=<span class="cstat-no" title="statement not covered" >UI.themeSupport.patchColorText('rgba(0, 0, 0, 0.02)',UI.ThemeSupport.ColorUsage.Foreground);<span class="cstat-no" title="statement not covered" ></span>ctx.font='10px '+Host.fontFamily();<span class="cstat-no" title="statement not covered" >c</span>tx.fillStyle=UI.themeSupport.patchColorText('rgba(0, 0, 0, 0.3)',UI.ThemeSupport.ColorUsage.Foreground);c</span>onst currentTime=<span class="cstat-no" title="statement not covered" >Date.now()/1000;<span class="cstat-no" title="statement not covered" ></span>for(let sec=Math.ceil(currentTime);;--sec){const x=<span class="cstat-no" title="statement not covered" >this._width-((currentTime-sec)*1000-this._pollIntervalMs)*this._pixelsPerMs;<span class="cstat-no" title="statement not covered" ></span>if(x&lt;-50)</span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >c</span>tx.beginPath();<span class="cstat-no" title="statement not covered" >c</span>tx.moveTo(Math.round(x)+0.5,0);<span class="cstat-no" title="statement not covered" >c</span>tx.lineTo(Math.round(x)+0.5,this._height);<span class="cstat-no" title="statement not covered" >i</span>f(sec&gt;=0&amp;&amp;sec%labelDistanceSeconds===0)</span>
+<span class="cstat-no" title="statement not covered" >ctx.fillText(new Date(sec*1000).toLocaleTimeString(),Math.round(x)+4,12);<span class="cstat-no" title="statement not covered" >c</span>tx.strokeStyle=sec%labelDistanceSeconds?lightGray:this._gridColor;<span class="cstat-no" title="statement not covered" >c</span>tx.stroke();}</span>}
+<span class="fstat-no" title="function not covered" >_d</span>rawChart(ctx,chartInfo,height){<span class="cstat-no" title="statement not covered" >ctx.save();<span class="cstat-no" title="statement not covered" >c</span>tx.rect(0,0,this._width,height);<span class="cstat-no" title="statement not covered" >c</span>tx.clip();c</span>onst bottomPadding=<span class="cstat-no" title="statement not covered" >8;</span>const extraSpace=<span class="cstat-no" title="statement not covered" >1.05;</span>const max=<span class="cstat-no" title="statement not covered" >this._calcMax(chartInfo)*extraSpace;</span>const stackedChartBaseLandscape=<span class="cstat-no" title="statement not covered" >chartInfo.stacked?new Map():null;</span>const paths=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=chartInfo.metrics.length-1;i&gt;=0;--i){const metricInfo=<span class="cstat-no" title="statement not covered" >chartInfo.metrics[i];<span class="cstat-no" title="statement not covered" ></span>paths.push({path:this._buildMetricPath(chartInfo,metricInfo,height-bottomPadding,max,i?stackedChartBaseLandscape:null),color:metricInfo.color});}</span></span>
+const backgroundColor=<span class="cstat-no" title="statement not covered" >Common.Color.parse(UI.themeSupport.patchColorText('white',UI.ThemeSupport.ColorUsage.Background));<span class="cstat-no" title="statement not covered" ></span>for(const path of paths.reverse()){const color=<span class="cstat-no" title="statement not covered" >path.color;<span class="cstat-no" title="statement not covered" ></span>ctx.save();<span class="cstat-no" title="statement not covered" >c</span>tx.fillStyle=backgroundColor.blendWith(Common.Color.parse(color).setAlpha(0.2)).asString(null);<span class="cstat-no" title="statement not covered" >c</span>tx.fill(path.path);<span class="cstat-no" title="statement not covered" >c</span>tx.strokeStyle=color;<span class="cstat-no" title="statement not covered" >c</span>tx.lineWidth=0.5;<span class="cstat-no" title="statement not covered" >c</span>tx.stroke(path.path);<span class="cstat-no" title="statement not covered" >c</span>tx.restore();}</span></span>
+<span class="cstat-no" title="statement not covered" >this._drawVerticalGrid(ctx,height-bottomPadding,max,chartInfo);<span class="cstat-no" title="statement not covered" >c</span>tx.restore();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>alcMax(chartInfo){<span class="cstat-no" title="statement not covered" >if(chartInfo.max)</span>
+<span class="cstat-no" title="statement not covered" >return chartInfo.max;c</span>onst width=<span class="cstat-no" title="statement not covered" >this._width;</span>const startTime=<span class="cstat-no" title="statement not covered" >performance.now()-this._pollIntervalMs-width/this._pixelsPerMs;</span>let max=<span class="cstat-no" title="statement not covered" >-Infinity;<span class="cstat-no" title="statement not covered" ></span>for(const metricInfo of chartInfo.metrics){<span class="cstat-no" title="statement not covered" >for(let i=this._metricsBuffer.length-1;i&gt;=0;--i){const metrics=<span class="cstat-no" title="statement not covered" >this._metricsBuffer[i];</span>const value=<span class="cstat-no" title="statement not covered" >metrics.metrics.get(metricInfo.name);<span class="cstat-no" title="statement not covered" ></span>max=Math.max(max,value);<span class="cstat-no" title="statement not covered" >i</span>f(metrics.timestamp&lt;startTime)</span></span></span>
+<span class="cstat-no" title="statement not covered" >break;}</span>}
+<span class="cstat-no" title="statement not covered" >if(!this._metricsBuffer.length)</span>
+<span class="cstat-no" title="statement not covered" >return 10;c</span>onst base10=<span class="cstat-no" title="statement not covered" >Math.pow(10,Math.floor(Math.log10(max)));<span class="cstat-no" title="statement not covered" ></span>max=Math.ceil(max/base10/2)*base10*2;c</span>onst alpha=<span class="cstat-no" title="statement not covered" >0.2;<span class="cstat-no" title="statement not covered" ></span>chartInfo.currentMax=max*alpha+(chartInfo.currentMax||max)*(1-alpha);<span class="cstat-no" title="statement not covered" >r</span>eturn chartInfo.currentMax;}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawVerticalGrid(ctx,height,max,info){let base=<span class="cstat-no" title="statement not covered" >Math.pow(10,Math.floor(Math.log10(max)));</span>const firstDigit=<span class="cstat-no" title="statement not covered" >Math.floor(max/base);<span class="cstat-no" title="statement not covered" ></span>if(firstDigit!==1&amp;&amp;firstDigit%2===1)</span>
+<span class="cstat-no" title="statement not covered" >base*=2;l</span>et scaleValue=<span class="cstat-no" title="statement not covered" >Math.floor(max/base)*base;</span>const span=<span class="cstat-no" title="statement not covered" >max;</span>const topPadding=<span class="cstat-no" title="statement not covered" >5;</span>const visibleHeight=<span class="cstat-no" title="statement not covered" >height-topPadding;<span class="cstat-no" title="statement not covered" ></span>ctx.fillStyle=UI.themeSupport.patchColorText('rgba(0, 0, 0, 0.3)',UI.ThemeSupport.ColorUsage.Foreground);<span class="cstat-no" title="statement not covered" >c</span>tx.strokeStyle=this._gridColor;<span class="cstat-no" title="statement not covered" >c</span>tx.beginPath();<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;2;++i){const y=<span class="cstat-no" title="statement not covered" >calcY(scaleValue);</span>const labelText=<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.MetricIndicator._formatNumber(scaleValue,info);<span class="cstat-no" title="statement not covered" ></span>ctx.moveTo(0,y);<span class="cstat-no" title="statement not covered" >c</span>tx.lineTo(4,y);<span class="cstat-no" title="statement not covered" >c</span>tx.moveTo(ctx.measureText(labelText).width+12,y);<span class="cstat-no" title="statement not covered" >c</span>tx.lineTo(this._width,y);<span class="cstat-no" title="statement not covered" >c</span>tx.fillText(labelText,8,calcY(scaleValue)+3);<span class="cstat-no" title="statement not covered" >s</span>caleValue/=2;}</span></span>
+<span class="cstat-no" title="statement not covered" >ctx.stroke();<span class="cstat-no" title="statement not covered" >c</span>tx.beginPath();<span class="cstat-no" title="statement not covered" >c</span>tx.moveTo(0,height+0.5);<span class="cstat-no" title="statement not covered" >c</span>tx.lineTo(this._width,height+0.5);<span class="cstat-no" title="statement not covered" >c</span>tx.strokeStyle=UI.themeSupport.patchColorText('rgba(0, 0, 0, 0.2)',UI.ThemeSupport.ColorUsage.Foreground);<span class="cstat-no" title="statement not covered" >c</span>tx.stroke();f</span>unction <span class="fstat-no" title="function not covered" >calcY(</span>value){<span class="cstat-no" title="statement not covered" >return Math.round(height-visibleHeight*value/span)+0.5;}</span>}
+<span class="fstat-no" title="function not covered" >_b</span>uildMetricPath(chartInfo,metricInfo,height,scaleMax,stackedChartBaseLandscape){const path=<span class="cstat-no" title="statement not covered" >new Path2D();</span>const topPadding=<span class="cstat-no" title="statement not covered" >5;</span>const visibleHeight=<span class="cstat-no" title="statement not covered" >height-topPadding;<span class="cstat-no" title="statement not covered" ></span>if(visibleHeight&lt;1)</span>
+<span class="cstat-no" title="statement not covered" >return path;c</span>onst span=<span class="cstat-no" title="statement not covered" >scaleMax;</span>const metricName=<span class="cstat-no" title="statement not covered" >metricInfo.name;</span>const pixelsPerMs=<span class="cstat-no" title="statement not covered" >this._pixelsPerMs;</span>const startTime=<span class="cstat-no" title="statement not covered" >performance.now()-this._pollIntervalMs-this._width/pixelsPerMs;</span>const smooth=<span class="cstat-no" title="statement not covered" >chartInfo.smooth;</span>let x=<span class="cstat-no" title="statement not covered" >0;</span>let lastY=<span class="cstat-no" title="statement not covered" >0;</span>let lastX=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>if(this._metricsBuffer.length){<span class="cstat-no" title="statement not covered" >x=(this._metricsBuffer[0].timestamp-startTime)*pixelsPerMs;<span class="cstat-no" title="statement not covered" >p</span>ath.moveTo(x,calcY(0));<span class="cstat-no" title="statement not covered" >p</span>ath.lineTo(this._width+5,calcY(0));<span class="cstat-no" title="statement not covered" >l</span>astY=calcY(this._metricsBuffer.peekLast().metrics.get(metricName));<span class="cstat-no" title="statement not covered" >l</span>astX=this._width+5;<span class="cstat-no" title="statement not covered" >p</span>ath.lineTo(lastX,lastY);}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let i=this._metricsBuffer.length-1;i&gt;=0;--i){const metrics=<span class="cstat-no" title="statement not covered" >this._metricsBuffer[i];</span>const timestamp=<span class="cstat-no" title="statement not covered" >metrics.timestamp;</span>let value=<span class="cstat-no" title="statement not covered" >metrics.metrics.get(metricName);<span class="cstat-no" title="statement not covered" ></span>if(stackedChartBaseLandscape){<span class="cstat-no" title="statement not covered" >value+=stackedChartBaseLandscape.get(timestamp)||0;<span class="cstat-no" title="statement not covered" >v</span>alue=Number.constrain(value,0,1);<span class="cstat-no" title="statement not covered" >s</span>tackedChartBaseLandscape.set(timestamp,value);}</span></span></span>
+const y=<span class="cstat-no" title="statement not covered" >calcY(value);<span class="cstat-no" title="statement not covered" ></span>x=(timestamp-startTime)*pixelsPerMs;<span class="cstat-no" title="statement not covered" >i</span>f(smooth){const midX=<span class="cstat-no" title="statement not covered" >(lastX+x)/2;<span class="cstat-no" title="statement not covered" ></span>path.bezierCurveTo(midX,lastY,midX,y,x,y);}</span>else{<span class="cstat-no" title="statement not covered" >path.lineTo(x,lastY);<span class="cstat-no" title="statement not covered" >p</span>ath.lineTo(x,y);}</span></span>
+<span class="cstat-no" title="statement not covered" >lastX=x;<span class="cstat-no" title="statement not covered" >l</span>astY=y;<span class="cstat-no" title="statement not covered" >i</span>f(timestamp&lt;startTime)</span>
+<span class="cstat-no" title="statement not covered" >break;}</span>
+<span class="cstat-no" title="statement not covered" >return path;f</span>unction <span class="fstat-no" title="function not covered" >calcY(</span>value){<span class="cstat-no" title="statement not covered" >return Math.round(height-visibleHeight*value/span)+0.5;}</span>}
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >super.onResize();<span class="cstat-no" title="statement not covered" >t</span>his._width=this._canvas.offsetWidth;<span class="cstat-no" title="statement not covered" >t</span>his._canvas.width=Math.round(this._width*window.devicePixelRatio);<span class="cstat-no" title="statement not covered" >t</span>his._recalcChartHeight();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>ecalcChartHeight(){let height=<span class="cstat-no" title="statement not covered" >this._scaleHeight;<span class="cstat-no" title="statement not covered" ></span>for(const chartInfo of this._controlPane.charts()){<span class="cstat-no" title="statement not covered" >if(this._controlPane.isActive(chartInfo.metrics[0].name))</span></span>
+<span class="cstat-no" title="statement not covered" >height+=this._graphHeight;}</span>
+<span class="cstat-no" title="statement not covered" >this._height=Math.ceil(height*window.devicePixelRatio);<span class="cstat-no" title="statement not covered" >t</span>his._canvas.height=this._height;<span class="cstat-no" title="statement not covered" >t</span>his._canvas.style.height=`${this._height / window.devicePixelRatio}px`;}</span>};<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.Format={Percent:Symbol('Percent'),Bytes:Symbol('Bytes'),};<span class="cstat-no" title="statement not covered" >P</span>erformanceMonitor.PerformanceMonitor.ChartInfo;<span class="cstat-no" title="statement not covered" >P</span>erformanceMonitor.PerformanceMonitor.MetricInfo;<span class="cstat-no" title="statement not covered" >P</span>erformanceMonitor.PerformanceMonitor.ControlPane=class extends Common.Object{<span class="fstat-no" title="function not covered" >co</span>nstructor(parent){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his.element=parent.createChild('div','perfmon-control-pane');<span class="cstat-no" title="statement not covered" >t</span>his._enabledChartsSetting=Common.settings.createSetting('perfmonActiveIndicators2',['TaskDuration','JSHeapTotalSize','Nodes']);<span class="cstat-no" title="statement not covered" >t</span>his._enabledCharts=new Set(this._enabledChartsSetting.get());c</span>onst format=<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.Format;<span class="cstat-no" title="statement not covered" ></span>this._chartsInfo=[{title:Common.UIString('CPU usage'),metrics:[{name:'TaskDuration',color:'#999'},{name:'ScriptDuration',color:'orange'},{name:'LayoutDuration',color:'blueviolet'},{name:'RecalcStyleDuration',color:'violet'}],format:format.Percent,smooth:true,stacked:true,color:'red',max:1},{title:Common.UIString('JS heap size'),metrics:[{name:'JSHeapTotalSize',color:'#99f'},{name:'JSHeapUsedSize',color:'blue'}],format:format.Bytes,color:'blue'},{title:Common.UIString('DOM Nodes'),metrics:[{name:'Nodes',color:'green'}]},{title:Common.UIString('JS event listeners'),metrics:[{name:'JSEventListeners',color:'yellowgreen'}]},{title:Common.UIString('Documents'),metrics:[{name:'Documents',color:'darkblue'}]},{title:Common.UIString('Document Frames'),metrics:[{name:'Frames',color:'darkcyan'}]},{title:Common.UIString('Layouts / sec'),metrics:[{name:'LayoutCount',color:'hotpink'}]},{title:Common.UIString('Style recalcs / sec'),metrics:[{name:'RecalcStyleCount',color:'deeppink'}]}];<span class="cstat-no" title="statement not covered" >f</span>or(const info of this._chartsInfo){<span class="cstat-no" title="statement not covered" >for(const metric of info.metrics)</span></span></span>
+<span class="cstat-no" title="statement not covered" >metric.color=UI.themeSupport.patchColorText(metric.color,UI.ThemeSupport.ColorUsage.Foreground);}</span>
+<span class="cstat-no" title="statement not covered" >this._indicators=new Map();<span class="cstat-no" title="statement not covered" >f</span>or(const chartInfo of this._chartsInfo){const chartName=<span class="cstat-no" title="statement not covered" >chartInfo.metrics[0].name;</span>const active=<span class="cstat-no" title="statement not covered" >this._enabledCharts.has(chartName);</span>const indicator=<span class="cstat-no" title="statement not covered" >new PerformanceMonitor.PerformanceMonitor.MetricIndicator(this.element,chartInfo,active,this._onToggle.bind(this,chartName));<span class="cstat-no" title="statement not covered" ></span>this._indicators.set(chartName,indicator);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nToggle(chartName,active){<span class="cstat-no" title="statement not covered" >if(active)</span>
+<span class="cstat-no" title="statement not covered" >this._enabledCharts.add(chartName);e</span>lse
+<span class="cstat-no" title="statement not covered" >this._enabledCharts.delete(chartName);<span class="cstat-no" title="statement not covered" >t</span>his._enabledChartsSetting.set(Array.from(this._enabledCharts));<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(PerformanceMonitor.PerformanceMonitor.ControlPane.Events.MetricChanged);}</span>
+<span class="fstat-no" title="function not covered" >ch</span>arts(){<span class="cstat-no" title="statement not covered" >return this._chartsInfo;}</span>
+<span class="fstat-no" title="function not covered" >is</span>Active(metricName){<span class="cstat-no" title="statement not covered" >return this._enabledCharts.has(metricName);}</span>
+<span class="fstat-no" title="function not covered" >up</span>dateMetrics(metrics){<span class="cstat-no" title="statement not covered" >for(const name of this._indicators.keys()){<span class="cstat-no" title="statement not covered" >if(metrics.has(name))</span></span>
+<span class="cstat-no" title="statement not covered" >this._indicators.get(name).setValue(metrics.get(name));}</span>}};<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.ControlPane.Events={MetricChanged:Symbol('MetricChanged')};<span class="cstat-no" title="statement not covered" >P</span>erformanceMonitor.PerformanceMonitor.MetricIndicator=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(parent,info,active,onToggle){const color=<span class="cstat-no" title="statement not covered" >info.color||info.metrics[0].color;<span class="cstat-no" title="statement not covered" ></span>this._info=info;<span class="cstat-no" title="statement not covered" >t</span>his._active=active;<span class="cstat-no" title="statement not covered" >t</span>his._onToggle=onToggle;<span class="cstat-no" title="statement not covered" >t</span>his.element=parent.createChild('div','perfmon-indicator');<span class="cstat-no" title="statement not covered" >t</span>his._swatchElement=UI.Icon.create('smallicon-checkmark-square','perfmon-indicator-swatch');<span class="cstat-no" title="statement not covered" >t</span>his._swatchElement.style.backgroundColor=color;<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(this._swatchElement);<span class="cstat-no" title="statement not covered" >t</span>his.element.createChild('div','perfmon-indicator-title').textContent=info.title;<span class="cstat-no" title="statement not covered" >t</span>his._valueElement=this.element.createChild('div','perfmon-indicator-value');<span class="cstat-no" title="statement not covered" >t</span>his._valueElement.style.color=color;<span class="cstat-no" title="statement not covered" >t</span>his.element.addEventListener('click',<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._toggleIndicator())</span>;<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.toggle('active',active);}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic _formatNumber(value,info){<span class="cstat-no" title="statement not covered" >if(!PerformanceMonitor.PerformanceMonitor.MetricIndicator._numberFormatter){<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.MetricIndicator._numberFormatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:1});<span class="cstat-no" title="statement not covered" >P</span>erformanceMonitor.PerformanceMonitor.MetricIndicator._percentFormatter=new Intl.NumberFormat('en-US',{maximumFractionDigits:1,style:'percent'});}</span></span>
+<span class="cstat-no" title="statement not covered" >switch(info.format){case PerformanceMonitor.PerformanceMonitor.Format.Percent:<span class="cstat-no" title="statement not covered" >return PerformanceMonitor.PerformanceMonitor.MetricIndicator._percentFormatter.format(value);c</span>ase PerformanceMonitor.PerformanceMonitor.Format.Bytes:<span class="cstat-no" title="statement not covered" >return Number.bytesToString(value);d</span>efault:<span class="cstat-no" title="statement not covered" >return PerformanceMonitor.PerformanceMonitor.MetricIndicator._numberFormatter.format(value);}</span>}</span>
+<span class="fstat-no" title="function not covered" >se</span>tValue(value){<span class="cstat-no" title="statement not covered" >this._valueElement.textContent=PerformanceMonitor.PerformanceMonitor.MetricIndicator._formatNumber(value,this._info);}</span>
+<span class="fstat-no" title="function not covered" >_t</span>oggleIndicator(){<span class="cstat-no" title="statement not covered" >this._active=!this._active;<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.toggle('active',this._active);<span class="cstat-no" title="statement not covered" >t</span>his._onToggle(this._active);}</span>};<span class="cstat-no" title="statement not covered" >PerformanceMonitor.PerformanceMonitor.MetricIndicator._format=new Intl.NumberFormat('en-US',{maximumFractionDigits:1});;<span class="cstat-no" title="statement not covered" ></span>Runtime.cachedResources["performance_monitor/performanceMonitor.css"]="/*\n * Copyright 2017 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n.perfmon-pane {\n  overflow: hidden;\n}\n\n.perfmon-pane.suspended {\n  opacity: 0.4;\n  pointer-events: none;\n}\n\n.perfmon-pane .perfmon-chart-suspend-overlay {\n  display: none;\n  font-size: 26px;\n  align-items: center;\n  justify-content: center;\n}\n\n.perfmon-pane.suspended .perfmon-chart-suspend-overlay {\n  display: flex;\n}\n\n.perfmon-control-pane {\n  display: flex;\n  flex-direction: column;\n  padding: 6px 0;\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n\n.perfmon-chart-container {\n  display: flex;\n  flex: 1 1;\n  border-left: 1px solid #ccc;\n  overflow-y: auto;\n}\n\n.perfmon-chart-container canvas {\n  width: 100%;\n}\n\n.perfmon-indicator {\n  padding: 6px 12px;\n  margin: -1px 0;\n  display: flex;\n  flex-shrink: 0;\n  width: 210px;\n}\n\n.perfmon-indicator:hover {\n  background-color: #f8f8f8;\n}\n\n.perfmon-indicator-swatch {\n  margin-right: 6px;\n}\n\n.perfmon-indicator:not(.active) .perfmon-indicator-swatch {\n  background-color: #eee !important;\n}\n\n.perfmon-indicator-title {\n  flex: 0 0 115px;\n}\n\n.perfmon-indicator:not(.active) .perfmon-indicator-title {\n  color: #aaa;\n}\n\n.perfmon-indicator-value {\n  flex: 0 0 55px;\n  text-align: right;\n  overflow: visible;\n}\n\n.perfmon-indicator:not(.active) .perfmon-indicator-value {\n  opacity: 0;\n}\n\n.perfmon-indicator-close {\n  padding-left: 4px;\n}\n\n.perfmon-indicator:not(:hover) .perfmon-indicator-close {\n  opacity: 0;\n}\n\n.perfmon-add-button:not(:hover) {\n  color: #bbb;\n}\n\n/*# sourceURL=performance_monitor/performanceMonitor.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

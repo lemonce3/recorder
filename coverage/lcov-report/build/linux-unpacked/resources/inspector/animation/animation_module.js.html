@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/animation/animation_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/animation</a> animation_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/838</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/276</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/172</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/278</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Animation.AnimationModel=class extends SDK.SDKModel{<span class="fstat-no" title="function not covered" >co</span>nstructor(target){<span class="cstat-no" title="statement not covered" >super(target);<span class="cstat-no" title="statement not covered" >t</span>his._runtimeModel=(target.model(SDK.RuntimeModel));<span class="cstat-no" title="statement not covered" >t</span>his._agent=target.animationAgent();<span class="cstat-no" title="statement not covered" >t</span>arget.registerAnimationDispatcher(new Animation.AnimationDispatcher(this));<span class="cstat-no" title="statement not covered" >t</span>his._animationsById=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._animationGroups=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._pendingAnimations=[];<span class="cstat-no" title="statement not covered" >t</span>his._playbackRate=1;c</span>onst resourceTreeModel=(<span class="cstat-no" title="statement not covered" >target.model(SDK.ResourceTreeModel))</span>;<span class="cstat-no" title="statement not covered" >resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.MainFrameNavigated,this._reset,this);c</span>onst screenCaptureModel=<span class="cstat-no" title="statement not covered" >target.model(SDK.ScreenCaptureModel);<span class="cstat-no" title="statement not covered" ></span>if(screenCaptureModel)</span></span>
+<span class="cstat-no" title="statement not covered" >this._screenshotCapture=new Animation.AnimationModel.ScreenshotCapture(this,screenCaptureModel);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>eset(){<span class="cstat-no" title="statement not covered" >this._animationsById.clear();<span class="cstat-no" title="statement not covered" >t</span>his._animationGroups.clear();<span class="cstat-no" title="statement not covered" >t</span>his._pendingAnimations=[];<span class="cstat-no" title="statement not covered" >t</span>his.dispatchEventToListeners(Animation.AnimationModel.Events.ModelReset);}</span>
+<span class="fstat-no" title="function not covered" >an</span>imationCreated(id){<span class="cstat-no" title="statement not covered" >this._pendingAnimations.push(id);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>nimationCanceled(id){<span class="cstat-no" title="statement not covered" >this._pendingAnimations.remove(id);<span class="cstat-no" title="statement not covered" >t</span>his._flushPendingAnimationsIfNeeded();}</span>
+<span class="fstat-no" title="function not covered" >an</span>imationStarted(payload){<span class="cstat-no" title="statement not covered" >if(!payload.source||!payload.source.backendNodeId)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst animation=<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.Animation.parsePayload(this,payload);<span class="cstat-no" title="statement not covered" ></span>if(animation.type()==='WebAnimation'&amp;&amp;animation.source().keyframesRule().keyframes().length===0){<span class="cstat-no" title="statement not covered" >this._pendingAnimations.remove(animation.id());}</span>else{<span class="cstat-no" title="statement not covered" >this._animationsById.set(animation.id(),animation);<span class="cstat-no" title="statement not covered" >i</span>f(this._pendingAnimations.indexOf(animation.id())===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >this._pendingAnimations.push(animation.id());}</span>
+<span class="cstat-no" title="statement not covered" >this._flushPendingAnimationsIfNeeded();}</span>
+<span class="fstat-no" title="function not covered" >_f</span>lushPendingAnimationsIfNeeded(){<span class="cstat-no" title="statement not covered" >for(const id of this._pendingAnimations){<span class="cstat-no" title="statement not covered" >if(!this._animationsById.get(id))</span></span>
+<span class="cstat-no" title="statement not covered" >return;}</span>
+<span class="cstat-no" title="statement not covered" >while(this._pendingAnimations.length)</span>
+<span class="cstat-no" title="statement not covered" >this._matchExistingGroups(this._createGroupFromPendingAnimations());}</span>
+<span class="fstat-no" title="function not covered" >_m</span>atchExistingGroups(incomingGroup){let matchedGroup=<span class="cstat-no" title="statement not covered" >null;<span class="cstat-no" title="statement not covered" ></span>for(const group of this._animationGroups.values()){<span class="cstat-no" title="statement not covered" >if(group._matches(incomingGroup)){<span class="cstat-no" title="statement not covered" >matchedGroup=group;<span class="cstat-no" title="statement not covered" >g</span>roup._update(incomingGroup);<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!matchedGroup){<span class="cstat-no" title="statement not covered" >this._animationGroups.set(incomingGroup.id(),incomingGroup);<span class="cstat-no" title="statement not covered" >i</span>f(this._screenshotCapture)</span></span>
+<span class="cstat-no" title="statement not covered" >this._screenshotCapture.captureScreenshots(incomingGroup.finiteDuration(),incomingGroup._screenshots);}</span>
+<span class="cstat-no" title="statement not covered" >this.dispatchEventToListeners(Animation.AnimationModel.Events.AnimationGroupStarted,matchedGroup||incomingGroup);<span class="cstat-no" title="statement not covered" >r</span>eturn!!matchedGroup;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateGroupFromPendingAnimations(){<span class="cstat-no" title="statement not covered" >console.assert(this._pendingAnimations.length);c</span>onst groupedAnimations=<span class="cstat-no" title="statement not covered" >[this._animationsById.get(this._pendingAnimations.shift())];</span>const remainingAnimations=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(const id of this._pendingAnimations){const anim=<span class="cstat-no" title="statement not covered" >this._animationsById.get(id);<span class="cstat-no" title="statement not covered" ></span>if(anim.startTime()===groupedAnimations[0].startTime())</span></span>
+<span class="cstat-no" title="statement not covered" >groupedAnimations.push(anim);e</span>lse
+<span class="cstat-no" title="statement not covered" >remainingAnimations.push(id);}</span>
+<span class="cstat-no" title="statement not covered" >this._pendingAnimations=remainingAnimations;<span class="cstat-no" title="statement not covered" >r</span>eturn new Animation.AnimationModel.AnimationGroup(this,groupedAnimations[0].id(),groupedAnimations);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tPlaybackRate(playbackRate){<span class="cstat-no" title="statement not covered" >this._playbackRate=playbackRate;<span class="cstat-no" title="statement not covered" >t</span>his._agent.setPlaybackRate(playbackRate);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>eleaseAnimations(animations){<span class="cstat-no" title="statement not covered" >this._agent.releaseAnimations(animations);}</span>
+<span class="fstat-no" title="function not covered" >su</span>spendModel(){<span class="cstat-no" title="statement not covered" >this._reset();<span class="cstat-no" title="statement not covered" >r</span>eturn this._agent.disable();}</span>
+<span class="fstat-no" title="function not covered" >re</span>sumeModel(){<span class="cstat-no" title="statement not covered" >if(!this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();<span class="cstat-no" title="statement not covered" >r</span>eturn this._agent.enable();}</span>
+<span class="fstat-no" title="function not covered" >en</span>sureEnabled(){<span class="cstat-no" title="statement not covered" >if(this._enabled)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._agent.enable();<span class="cstat-no" title="statement not covered" >t</span>his._enabled=true;}</span>};<span class="cstat-no" title="statement not covered" >SDK.SDKModel.register(Animation.AnimationModel,SDK.Target.Capability.DOM,false);<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationModel.Events={AnimationGroupStarted:Symbol('AnimationGroupStarted'),ModelReset:Symbol('ModelReset')};<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationModel.Animation=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationModel,payload){<span class="cstat-no" title="statement not covered" >this._animationModel=animationModel;<span class="cstat-no" title="statement not covered" >t</span>his._payload=payload;<span class="cstat-no" title="statement not covered" >t</span>his._source=new Animation.AnimationModel.AnimationEffect(animationModel,(this._payload.source));}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic parsePayload(animationModel,payload){<span class="cstat-no" title="statement not covered" >return new Animation.AnimationModel.Animation(animationModel,payload);}</span>
+<span class="fstat-no" title="function not covered" >pa</span>yload(){<span class="cstat-no" title="statement not covered" >return this._payload;}</span>
+<span class="fstat-no" title="function not covered" >id</span>(){<span class="cstat-no" title="statement not covered" >return this._payload.id;}</span>
+<span class="fstat-no" title="function not covered" >na</span>me(){<span class="cstat-no" title="statement not covered" >return this._payload.name;}</span>
+<span class="fstat-no" title="function not covered" >pa</span>used(){<span class="cstat-no" title="statement not covered" >return this._payload.pausedState;}</span>
+<span class="fstat-no" title="function not covered" >pl</span>ayState(){<span class="cstat-no" title="statement not covered" >return this._playState||this._payload.playState;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tPlayState(playState){<span class="cstat-no" title="statement not covered" >this._playState=playState;}</span>
+<span class="fstat-no" title="function not covered" >pl</span>aybackRate(){<span class="cstat-no" title="statement not covered" >return this._payload.playbackRate;}</span>
+<span class="fstat-no" title="function not covered" >st</span>artTime(){<span class="cstat-no" title="statement not covered" >return this._payload.startTime;}</span>
+<span class="fstat-no" title="function not covered" >en</span>dTime(){<span class="cstat-no" title="statement not covered" >if(!this.source().iterations)</span>
+<span class="cstat-no" title="statement not covered" >return Infinity;<span class="cstat-no" title="statement not covered" >r</span>eturn this.startTime()+this.source().delay()+this.source().duration()*this.source().iterations()+</span>
+this.source().endDelay();}
+<span class="fstat-no" title="function not covered" >_f</span>initeDuration(){const iterations=<span class="cstat-no" title="statement not covered" >Math.min(this.source().iterations(),3);<span class="cstat-no" title="statement not covered" ></span>return this.source().delay()+this.source().duration()*iterations;}</span>
+<span class="fstat-no" title="function not covered" >cu</span>rrentTime(){<span class="cstat-no" title="statement not covered" >return this._payload.currentTime;}</span>
+<span class="fstat-no" title="function not covered" >so</span>urce(){<span class="cstat-no" title="statement not covered" >return this._source;}</span>
+<span class="fstat-no" title="function not covered" >ty</span>pe(){<span class="cstat-no" title="statement not covered" >return(this._payload.type);}</span>
+<span class="fstat-no" title="function not covered" >ov</span>erlaps(animation){<span class="cstat-no" title="statement not covered" >if(!this.source().iterations()||!animation.source().iterations())</span>
+<span class="cstat-no" title="statement not covered" >return true;c</span>onst firstAnimation=<span class="cstat-no" title="statement not covered" >this.startTime()&lt;animation.startTime()?this:animation;</span>const secondAnimation=<span class="cstat-no" title="statement not covered" >firstAnimation===this?animation:this;<span class="cstat-no" title="statement not covered" ></span>return firstAnimation.endTime()&gt;=secondAnimation.startTime();}</span>
+<span class="fstat-no" title="function not covered" >se</span>tTiming(duration,delay){<span class="cstat-no" title="statement not covered" >this._source.node().then(this._updateNodeStyle.bind(this,duration,delay));<span class="cstat-no" title="statement not covered" >t</span>his._source._duration=duration;<span class="cstat-no" title="statement not covered" >t</span>his._source._delay=delay;<span class="cstat-no" title="statement not covered" >t</span>his._animationModel._agent.setTiming(this.id(),duration,delay);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateNodeStyle(duration,delay,node){let animationPrefix;<span class="cstat-no" title="statement not covered" >if(this.type()===Animation.AnimationModel.Animation.Type.CSSTransition)</span>
+<span class="cstat-no" title="statement not covered" >animationPrefix='transition-';e</span>lse <span class="cstat-no" title="statement not covered" >if(this.type()===Animation.AnimationModel.Animation.Type.CSSAnimation)</span>
+<span class="cstat-no" title="statement not covered" >animationPrefix='animation-';e</span>lse
+<span class="cstat-no" title="statement not covered" >return;c</span>onst cssModel=<span class="cstat-no" title="statement not covered" >node.domModel().cssModel();<span class="cstat-no" title="statement not covered" ></span>cssModel.setEffectivePropertyValueForNode(node.id,animationPrefix+'duration',duration+'ms');<span class="cstat-no" title="statement not covered" >c</span>ssModel.setEffectivePropertyValueForNode(node.id,animationPrefix+'delay',delay+'ms');}</span>
+<span class="fstat-no" title="function not covered" >re</span>moteObjectPromise(){<span class="cstat-no" title="statement not covered" >return this._animationModel._agent.resolveAnimation(this.id()).then(<span class="fstat-no" title="function not covered" >pa</span>yload=&gt;<span class="cstat-no" title="statement not covered" >payload&amp;&amp;this._animationModel._runtimeModel.createRemoteObject(payload))</span>;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ssId(){<span class="cstat-no" title="statement not covered" >return this._payload.cssId||'';}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.Animation.Type={CSSTransition:'CSSTransition',CSSAnimation:'CSSAnimation',WebAnimation:'WebAnimation'};<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationModel.AnimationEffect=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationModel,payload){<span class="cstat-no" title="statement not covered" >this._animationModel=animationModel;<span class="cstat-no" title="statement not covered" >t</span>his._payload=payload;<span class="cstat-no" title="statement not covered" >i</span>f(payload.keyframesRule)</span></span>
+<span class="cstat-no" title="statement not covered" >this._keyframesRule=new Animation.AnimationModel.KeyframesRule(payload.keyframesRule);<span class="cstat-no" title="statement not covered" >t</span>his._delay=this._payload.delay;<span class="cstat-no" title="statement not covered" >t</span>his._duration=this._payload.duration;}</span>
+<span class="fstat-no" title="function not covered" >de</span>lay(){<span class="cstat-no" title="statement not covered" >return this._delay;}</span>
+<span class="fstat-no" title="function not covered" >en</span>dDelay(){<span class="cstat-no" title="statement not covered" >return this._payload.endDelay;}</span>
+<span class="fstat-no" title="function not covered" >it</span>erationStart(){<span class="cstat-no" title="statement not covered" >return this._payload.iterationStart;}</span>
+<span class="fstat-no" title="function not covered" >it</span>erations(){<span class="cstat-no" title="statement not covered" >if(!this.delay()&amp;&amp;!this.endDelay()&amp;&amp;!this.duration())</span>
+<span class="cstat-no" title="statement not covered" >return 0;<span class="cstat-no" title="statement not covered" >r</span>eturn this._payload.iterations||Infinity;}</span>
+<span class="fstat-no" title="function not covered" >du</span>ration(){<span class="cstat-no" title="statement not covered" >return this._duration;}</span>
+<span class="fstat-no" title="function not covered" >di</span>rection(){<span class="cstat-no" title="statement not covered" >return this._payload.direction;}</span>
+<span class="fstat-no" title="function not covered" >fi</span>ll(){<span class="cstat-no" title="statement not covered" >return this._payload.fill;}</span>
+<span class="fstat-no" title="function not covered" >no</span>de(){<span class="cstat-no" title="statement not covered" >if(!this._deferredNode)</span>
+<span class="cstat-no" title="statement not covered" >this._deferredNode=new SDK.DeferredDOMNode(this._animationModel.target(),this.backendNodeId());<span class="cstat-no" title="statement not covered" >r</span>eturn this._deferredNode.resolvePromise();}</span>
+<span class="fstat-no" title="function not covered" >de</span>ferredNode(){<span class="cstat-no" title="statement not covered" >return new SDK.DeferredDOMNode(this._animationModel.target(),this.backendNodeId());}</span>
+<span class="fstat-no" title="function not covered" >ba</span>ckendNodeId(){<span class="cstat-no" title="statement not covered" >return(this._payload.backendNodeId);}</span>
+<span class="fstat-no" title="function not covered" >ke</span>yframesRule(){<span class="cstat-no" title="statement not covered" >return this._keyframesRule;}</span>
+<span class="fstat-no" title="function not covered" >ea</span>sing(){<span class="cstat-no" title="statement not covered" >return this._payload.easing;}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.KeyframesRule=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(payload){<span class="cstat-no" title="statement not covered" >this._payload=payload;<span class="cstat-no" title="statement not covered" >t</span>his._keyframes=this._payload.keyframes.map(<span class="fstat-no" title="function not covered" >fu</span>nction(keyframeStyle){<span class="cstat-no" title="statement not covered" >return new Animation.AnimationModel.KeyframeStyle(keyframeStyle);}</span>);}</span></span>
+<span class="fstat-no" title="function not covered" >_s</span>etKeyframesPayload(payload){<span class="cstat-no" title="statement not covered" >this._keyframes=payload.map(<span class="fstat-no" title="function not covered" >fu</span>nction(keyframeStyle){<span class="cstat-no" title="statement not covered" >return new Animation.AnimationModel.KeyframeStyle(keyframeStyle);}</span>);}</span>
+<span class="fstat-no" title="function not covered" >na</span>me(){<span class="cstat-no" title="statement not covered" >return this._payload.name;}</span>
+<span class="fstat-no" title="function not covered" >ke</span>yframes(){<span class="cstat-no" title="statement not covered" >return this._keyframes;}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.KeyframeStyle=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(payload){<span class="cstat-no" title="statement not covered" >this._payload=payload;<span class="cstat-no" title="statement not covered" >t</span>his._offset=this._payload.offset;}</span></span>
+<span class="fstat-no" title="function not covered" >of</span>fset(){<span class="cstat-no" title="statement not covered" >return this._offset;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tOffset(offset){<span class="cstat-no" title="statement not covered" >this._offset=offset*100+'%';}</span>
+<span class="fstat-no" title="function not covered" >of</span>fsetAsNumber(){<span class="cstat-no" title="statement not covered" >return parseFloat(this._offset)/100;}</span>
+<span class="fstat-no" title="function not covered" >ea</span>sing(){<span class="cstat-no" title="statement not covered" >return this._payload.easing;}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.AnimationGroup=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationModel,id,animations){<span class="cstat-no" title="statement not covered" >this._animationModel=animationModel;<span class="cstat-no" title="statement not covered" >t</span>his._id=id;<span class="cstat-no" title="statement not covered" >t</span>his._animations=animations;<span class="cstat-no" title="statement not covered" >t</span>his._paused=false;<span class="cstat-no" title="statement not covered" >t</span>his._screenshots=[];<span class="cstat-no" title="statement not covered" >t</span>his._screenshotImages=[];}</span></span>
+<span class="fstat-no" title="function not covered" >id</span>(){<span class="cstat-no" title="statement not covered" >return this._id;}</span>
+<span class="fstat-no" title="function not covered" >an</span>imations(){<span class="cstat-no" title="statement not covered" >return this._animations;}</span>
+<span class="fstat-no" title="function not covered" >re</span>lease(){<span class="cstat-no" title="statement not covered" >this._animationModel._animationGroups.remove(this.id());<span class="cstat-no" title="statement not covered" >t</span>his._animationModel._releaseAnimations(this._animationIds());}</span>
+<span class="fstat-no" title="function not covered" >_a</span>nimationIds(){function <span class="fstat-no" title="function not covered" >extractId(</span>animation){<span class="cstat-no" title="statement not covered" >return animation.id();}</span>
+<span class="cstat-no" title="statement not covered" >return this._animations.map(extractId);}</span>
+<span class="fstat-no" title="function not covered" >st</span>artTime(){<span class="cstat-no" title="statement not covered" >return this._animations[0].startTime();}</span>
+<span class="fstat-no" title="function not covered" >fi</span>niteDuration(){let maxDuration=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._animations.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >maxDuration=Math.max(maxDuration,this._animations[i]._finiteDuration());<span class="cstat-no" title="statement not covered" >r</span>eturn maxDuration;}</span>
+<span class="fstat-no" title="function not covered" >se</span>ekTo(currentTime){<span class="cstat-no" title="statement not covered" >this._animationModel._agent.seekAnimations(this._animationIds(),currentTime);}</span>
+<span class="fstat-no" title="function not covered" >pa</span>used(){<span class="cstat-no" title="statement not covered" >return this._paused;}</span>
+<span class="fstat-no" title="function not covered" >to</span>gglePause(paused){<span class="cstat-no" title="statement not covered" >if(paused===this._paused)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._paused=paused;<span class="cstat-no" title="statement not covered" >t</span>his._animationModel._agent.setPaused(this._animationIds(),paused);}</span>
+<span class="fstat-no" title="function not covered" >cu</span>rrentTimePromise(){let longestAnim=<span class="cstat-no" title="statement not covered" >null;<span class="cstat-no" title="statement not covered" ></span>for(const anim of this._animations){<span class="cstat-no" title="statement not covered" >if(!longestAnim||anim.endTime()&gt;longestAnim.endTime())</span></span>
+<span class="cstat-no" title="statement not covered" >longestAnim=anim;}</span>
+<span class="cstat-no" title="statement not covered" >return this._animationModel._agent.getCurrentTime(longestAnim.id()).then(<span class="fstat-no" title="function not covered" >cu</span>rrentTime=&gt;<span class="cstat-no" title="statement not covered" >currentTime||0)</span>;}</span>
+<span class="fstat-no" title="function not covered" >_m</span>atches(group){function <span class="fstat-no" title="function not covered" >extractId(</span>anim){<span class="cstat-no" title="statement not covered" >if(anim.type()===Animation.AnimationModel.Animation.Type.WebAnimation)</span>
+<span class="cstat-no" title="statement not covered" >return anim.type()+anim.id();e</span>lse
+<span class="cstat-no" title="statement not covered" >return anim._cssId();}</span>
+<span class="cstat-no" title="statement not covered" >if(this._animations.length!==group._animations.length)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst left=<span class="cstat-no" title="statement not covered" >this._animations.map(extractId).sort();</span>const right=<span class="cstat-no" title="statement not covered" >group._animations.map(extractId).sort();<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;left.length;i++){<span class="cstat-no" title="statement not covered" >if(left[i]!==right[i])</span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdate(group){<span class="cstat-no" title="statement not covered" >this._animationModel._releaseAnimations(this._animationIds());<span class="cstat-no" title="statement not covered" >t</span>his._animations=group._animations;}</span>
+<span class="fstat-no" title="function not covered" >sc</span>reenshots(){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;this._screenshots.length;++i){const image=<span class="cstat-no" title="statement not covered" >new Image();<span class="cstat-no" title="statement not covered" ></span>image.src='data:image/jpeg;base64,'+this._screenshots[i];<span class="cstat-no" title="statement not covered" >t</span>his._screenshotImages.push(image);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._screenshots=[];<span class="cstat-no" title="statement not covered" >r</span>eturn this._screenshotImages;}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationDispatcher=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationModel){<span class="cstat-no" title="statement not covered" >this._animationModel=animationModel;}</span></span>
+<span class="fstat-no" title="function not covered" >an</span>imationCreated(id){<span class="cstat-no" title="statement not covered" >this._animationModel.animationCreated(id);}</span>
+<span class="fstat-no" title="function not covered" >an</span>imationCanceled(id){<span class="cstat-no" title="statement not covered" >this._animationModel._animationCanceled(id);}</span>
+<span class="fstat-no" title="function not covered" >an</span>imationStarted(payload){<span class="cstat-no" title="statement not covered" >this._animationModel.animationStarted(payload);}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.ScreenshotCapture=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationModel,screenCaptureModel){<span class="cstat-no" title="statement not covered" >this._requests=[];<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel=screenCaptureModel;<span class="cstat-no" title="statement not covered" >t</span>his._animationModel=animationModel;<span class="cstat-no" title="statement not covered" >t</span>his._animationModel.addEventListener(Animation.AnimationModel.Events.ModelReset,this._stopScreencast,this);}</span></span>
+<span class="fstat-no" title="function not covered" >ca</span>ptureScreenshots(duration,screenshots){const screencastDuration=<span class="cstat-no" title="statement not covered" >Math.min(duration/this._animationModel._playbackRate,3000);</span>const endTime=<span class="cstat-no" title="statement not covered" >screencastDuration+window.performance.now();<span class="cstat-no" title="statement not covered" ></span>this._requests.push({endTime:endTime,screenshots:screenshots});<span class="cstat-no" title="statement not covered" >i</span>f(!this._endTime||endTime&gt;this._endTime){<span class="cstat-no" title="statement not covered" >clearTimeout(this._stopTimer);<span class="cstat-no" title="statement not covered" >t</span>his._stopTimer=setTimeout(this._stopScreencast.bind(this),screencastDuration);<span class="cstat-no" title="statement not covered" >t</span>his._endTime=endTime;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(this._capturing)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._capturing=true;<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel.startScreencast('jpeg',80,undefined,300,2,this._screencastFrame.bind(this),<span class="fstat-no" title="function not covered" >vi</span>sible=&gt;{});}</span>
+<span class="fstat-no" title="function not covered" >_s</span>creencastFrame(base64Data,metadata){function <span class="fstat-no" title="function not covered" >isAnimating(</span>request){<span class="cstat-no" title="statement not covered" >return request.endTime&gt;=now;}</span>
+<span class="cstat-no" title="statement not covered" >if(!this._capturing)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst now=<span class="cstat-no" title="statement not covered" >window.performance.now();<span class="cstat-no" title="statement not covered" ></span>this._requests=this._requests.filter(isAnimating);<span class="cstat-no" title="statement not covered" >f</span>or(const request of this._requests)</span>
+<span class="cstat-no" title="statement not covered" >request.screenshots.push(base64Data);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>topScreencast(){<span class="cstat-no" title="statement not covered" >if(!this._capturing)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >d</span>elete this._stopTimer;<span class="cstat-no" title="statement not covered" >d</span>elete this._endTime;<span class="cstat-no" title="statement not covered" >t</span>his._requests=[];<span class="cstat-no" title="statement not covered" >t</span>his._capturing=false;<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel.stopScreencast();}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationModel.ScreenshotCapture.Request;;<span class="cstat-no" title="statement not covered" ></span>Animation.AnimationGroupPreviewUI=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(model){<span class="cstat-no" title="statement not covered" >this._model=model;<span class="cstat-no" title="statement not covered" >t</span>his.element=createElementWithClass('div','animation-buffer-preview');<span class="cstat-no" title="statement not covered" >t</span>his.element.createChild('div','animation-paused fill');<span class="cstat-no" title="statement not covered" >t</span>his._removeButton=this.element.createChild('div','animation-remove-button');<span class="cstat-no" title="statement not covered" >t</span>his._removeButton.textContent='\u2715';<span class="cstat-no" title="statement not covered" >t</span>his._replayOverlayElement=this.element.createChild('div','animation-buffer-preview-animation');<span class="cstat-no" title="statement not covered" >t</span>his._svg=this.element.createSVGChild('svg');<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('width','100%');<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('preserveAspectRatio','none');<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('height','100%');<span class="cstat-no" title="statement not covered" >t</span>his._viewBoxHeight=32;<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('viewBox','0 0 100 '+this._viewBoxHeight);<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('shape-rendering','crispEdges');<span class="cstat-no" title="statement not covered" >t</span>his._render();}</span></span>
+<span class="fstat-no" title="function not covered" >_g</span>roupDuration(){let duration=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(const anim of this._model.animations()){const animDuration=<span class="cstat-no" title="statement not covered" >anim.source().delay()+anim.source().duration();<span class="cstat-no" title="statement not covered" ></span>if(animDuration&gt;duration)</span></span>
+<span class="cstat-no" title="statement not covered" >duration=animDuration;}</span>
+<span class="cstat-no" title="statement not covered" >return duration;}</span>
+<span class="fstat-no" title="function not covered" >re</span>moveButton(){<span class="cstat-no" title="statement not covered" >return this._removeButton;}</span>
+<span class="fstat-no" title="function not covered" >re</span>play(){<span class="cstat-no" title="statement not covered" >this._replayOverlayElement.animate([{offset:0,width:'0%',opacity:1},{offset:0.9,width:'100%',opacity:1},{offset:1,width:'100%',opacity:0}],{duration:200,easing:'cubic-bezier(0, 0, 0.2, 1)'});}</span>
+<span class="fstat-no" title="function not covered" >_r</span>ender(){<span class="cstat-no" title="statement not covered" >this._svg.removeChildren();c</span>onst maxToShow=<span class="cstat-no" title="statement not covered" >10;</span>const numberOfAnimations=<span class="cstat-no" title="statement not covered" >Math.min(this._model.animations().length,maxToShow);</span>const timeToPixelRatio=<span class="cstat-no" title="statement not covered" >100/Math.max(this._groupDuration(),750);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;numberOfAnimations;i++){const effect=<span class="cstat-no" title="statement not covered" >this._model.animations()[i].source();</span>const line=<span class="cstat-no" title="statement not covered" >this._svg.createSVGChild('line');<span class="cstat-no" title="statement not covered" ></span>line.setAttribute('x1',effect.delay()*timeToPixelRatio);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('x2',(effect.delay()+effect.duration())*timeToPixelRatio);c</span>onst y=<span class="cstat-no" title="statement not covered" >Math.floor(this._viewBoxHeight/Math.max(6,numberOfAnimations)*i+1);<span class="cstat-no" title="statement not covered" ></span>line.setAttribute('y1',y);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y2',y);<span class="cstat-no" title="statement not covered" >l</span>ine.style.stroke=Animation.AnimationUI.Color(this._model.animations()[i]);}</span>}</span>};;<span class="cstat-no" title="statement not covered" >Animation.AnimationScreenshotPopover=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(images){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >c</span>onsole.assert(images.length);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('animation/animationScreenshotPopover.css');<span class="cstat-no" title="statement not covered" >t</span>his.contentElement.classList.add('animation-screenshot-popover');<span class="cstat-no" title="statement not covered" >t</span>his._frames=images;<span class="cstat-no" title="statement not covered" >f</span>or(const image of images){<span class="cstat-no" title="statement not covered" >this.contentElement.appendChild(image);<span class="cstat-no" title="statement not covered" >i</span>mage.style.display='none';}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._currentFrame=0;<span class="cstat-no" title="statement not covered" >t</span>his._frames[0].style.display='block';<span class="cstat-no" title="statement not covered" >t</span>his._progressBar=this.contentElement.createChild('div','animation-progress');}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._rafId=this.contentElement.window().requestAnimationFrame(this._changeFrame.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >this.contentElement.window().cancelAnimationFrame(this._rafId);<span class="cstat-no" title="statement not covered" >d</span>elete this._endDelay;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>hangeFrame(){<span class="cstat-no" title="statement not covered" >this._rafId=this.contentElement.window().requestAnimationFrame(this._changeFrame.bind(this));<span class="cstat-no" title="statement not covered" >i</span>f(this._endDelay){<span class="cstat-no" title="statement not covered" >this._endDelay--;<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._showFrame=!this._showFrame;<span class="cstat-no" title="statement not covered" >i</span>f(!this._showFrame)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst numFrames=<span class="cstat-no" title="statement not covered" >this._frames.length;<span class="cstat-no" title="statement not covered" ></span>this._frames[this._currentFrame%numFrames].style.display='none';<span class="cstat-no" title="statement not covered" >t</span>his._currentFrame++;<span class="cstat-no" title="statement not covered" >t</span>his._frames[(this._currentFrame)%numFrames].style.display='block';<span class="cstat-no" title="statement not covered" >i</span>f(this._currentFrame%numFrames===numFrames-1)</span>
+<span class="cstat-no" title="statement not covered" >this._endDelay=50;<span class="cstat-no" title="statement not covered" >t</span>his._progressBar.style.width=(this._currentFrame%numFrames+1)/numFrames*100+'%';}</span>};;<span class="cstat-no" title="statement not covered" >Animation.AnimationTimeline=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('animation/animationTimeline.css');<span class="cstat-no" title="statement not covered" >t</span>his.element.classList.add('animations-timeline');<span class="cstat-no" title="statement not covered" >t</span>his._grid=this.contentElement.createSVGChild('svg','animation-timeline-grid');<span class="cstat-no" title="statement not covered" >t</span>his._playbackRate=1;<span class="cstat-no" title="statement not covered" >t</span>his._allPaused=false;<span class="cstat-no" title="statement not covered" >t</span>his._createHeader();<span class="cstat-no" title="statement not covered" >t</span>his._animationsContainer=this.contentElement.createChild('div','animation-timeline-rows');c</span>onst timelineHint=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','animation-timeline-rows-hint');<span class="cstat-no" title="statement not covered" ></span>timelineHint.textContent=ls`Select an effect above to inspect and modify.`;<span class="cstat-no" title="statement not covered" >t</span>his._defaultDuration=100;<span class="cstat-no" title="statement not covered" >t</span>his._duration=this._defaultDuration;<span class="cstat-no" title="statement not covered" >t</span>his._timelineControlsWidth=150;<span class="cstat-no" title="statement not covered" >t</span>his._nodesMap=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._uiAnimations=[];<span class="cstat-no" title="statement not covered" >t</span>his._groupBuffer=[];<span class="cstat-no" title="statement not covered" >t</span>his._previewMap=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._symbol=Symbol('animationTimeline');<span class="cstat-no" title="statement not covered" >t</span>his._animationsMap=new Map();<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addModelListener(SDK.DOMModel,SDK.DOMModel.Events.NodeRemoved,this._nodeRemoved,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.observeModels(Animation.AnimationModel,this);<span class="cstat-no" title="statement not covered" >U</span>I.context.addFlavorChangeListener(SDK.DOMNode,this._nodeChanged,this);}</span></span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >for(const animationModel of SDK.targetManager.models(Animation.AnimationModel))</span>
+<span class="cstat-no" title="statement not covered" >this._addEventListeners(animationModel);}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >for(const animationModel of SDK.targetManager.models(Animation.AnimationModel))</span>
+<span class="cstat-no" title="statement not covered" >this._removeEventListeners(animationModel);<span class="cstat-no" title="statement not covered" >t</span>his._popoverHelper.hidePopover();}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delAdded(animationModel){<span class="cstat-no" title="statement not covered" >if(this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this._addEventListeners(animationModel);}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delRemoved(animationModel){<span class="cstat-no" title="statement not covered" >this._removeEventListeners(animationModel);}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddEventListeners(animationModel){<span class="cstat-no" title="statement not covered" >animationModel.ensureEnabled();<span class="cstat-no" title="statement not covered" >a</span>nimationModel.addEventListener(Animation.AnimationModel.Events.AnimationGroupStarted,this._animationGroupStarted,this);<span class="cstat-no" title="statement not covered" >a</span>nimationModel.addEventListener(Animation.AnimationModel.Events.ModelReset,this._reset,this);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoveEventListeners(animationModel){<span class="cstat-no" title="statement not covered" >animationModel.removeEventListener(Animation.AnimationModel.Events.AnimationGroupStarted,this._animationGroupStarted,this);<span class="cstat-no" title="statement not covered" >a</span>nimationModel.removeEventListener(Animation.AnimationModel.Events.ModelReset,this._reset,this);}</span>
+<span class="fstat-no" title="function not covered" >_n</span>odeChanged(){<span class="cstat-no" title="statement not covered" >for(const nodeUI of this._nodesMap.values())</span>
+<span class="cstat-no" title="statement not covered" >nodeUI._nodeChanged();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateScrubber(){<span class="cstat-no" title="statement not covered" >this._timelineScrubber=createElementWithClass('div','animation-scrubber hidden');<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubberLine=this._timelineScrubber.createChild('div','animation-scrubber-line');<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubberLine.createChild('div','animation-scrubber-head');<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubber.createChild('div','animation-time-overlay');<span class="cstat-no" title="statement not covered" >r</span>eturn this._timelineScrubber;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateHeader(){const toolbarContainer=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','animation-timeline-toolbar-container');</span>const topToolbar=<span class="cstat-no" title="statement not covered" >new UI.Toolbar('animation-timeline-toolbar',toolbarContainer);</span>const clearButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarButton(ls`Clear all`,'largeicon-clear');<span class="cstat-no" title="statement not covered" ></span>clearButton.addEventListener(UI.ToolbarButton.Events.Click,this._reset.bind(this));<span class="cstat-no" title="statement not covered" >t</span>opToolbar.appendToolbarItem(clearButton);<span class="cstat-no" title="statement not covered" >t</span>opToolbar.appendSeparator();<span class="cstat-no" title="statement not covered" >t</span>his._pauseButton=new UI.ToolbarToggle(ls`Pause all`,'largeicon-pause','largeicon-resume');<span class="cstat-no" title="statement not covered" >t</span>his._pauseButton.addEventListener(UI.ToolbarButton.Events.Click,this._togglePauseAll.bind(this));<span class="cstat-no" title="statement not covered" >t</span>opToolbar.appendToolbarItem(this._pauseButton);c</span>onst playbackRateControl=<span class="cstat-no" title="statement not covered" >toolbarContainer.createChild('div','animation-playback-rate-control');<span class="cstat-no" title="statement not covered" ></span>this._playbackRateButtons=[];<span class="cstat-no" title="statement not covered" >f</span>or(const playbackRate of Animation.AnimationTimeline.GlobalPlaybackRates){const button=<span class="cstat-no" title="statement not covered" >playbackRateControl.createChild('div','animation-playback-rate-button');<span class="cstat-no" title="statement not covered" ></span>button.textContent=playbackRate?ls`${playbackRate * 100}%`:ls`Pause`;<span class="cstat-no" title="statement not covered" >b</span>utton.playbackRate=playbackRate;<span class="cstat-no" title="statement not covered" >b</span>utton.addEventListener('click',this._setPlaybackRate.bind(this,playbackRate));<span class="cstat-no" title="statement not covered" >b</span>utton.title=ls`Set speed to ${button.textContent}`;<span class="cstat-no" title="statement not covered" >t</span>his._playbackRateButtons.push(button);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._updatePlaybackControls();<span class="cstat-no" title="statement not covered" >t</span>his._previewContainer=this.contentElement.createChild('div','animation-timeline-buffer');<span class="cstat-no" title="statement not covered" >t</span>his._popoverHelper=new UI.PopoverHelper(this._previewContainer,this._getPopoverRequest.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._popoverHelper.setDisableOnClick(true);<span class="cstat-no" title="statement not covered" >t</span>his._popoverHelper.setTimeout(0);c</span>onst emptyBufferHint=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','animation-timeline-buffer-hint');<span class="cstat-no" title="statement not covered" ></span>emptyBufferHint.textContent=ls`Listening for animations...`;c</span>onst container=<span class="cstat-no" title="statement not covered" >this.contentElement.createChild('div','animation-timeline-header');</span>const controls=<span class="cstat-no" title="statement not covered" >container.createChild('div','animation-controls');<span class="cstat-no" title="statement not covered" ></span>this._currentTime=controls.createChild('div','animation-timeline-current-time monospace');c</span>onst toolbar=<span class="cstat-no" title="statement not covered" >new UI.Toolbar('animation-controls-toolbar',controls);<span class="cstat-no" title="statement not covered" ></span>this._controlButton=new UI.ToolbarToggle(ls`Replay timeline`,'largeicon-replay-animation');<span class="cstat-no" title="statement not covered" >t</span>his._controlState=Animation.AnimationTimeline._ControlState.Replay;<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setToggled(true);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.addEventListener(UI.ToolbarButton.Events.Click,this._controlButtonToggle.bind(this));<span class="cstat-no" title="statement not covered" >t</span>oolbar.appendToolbarItem(this._controlButton);c</span>onst gridHeader=<span class="cstat-no" title="statement not covered" >container.createChild('div','animation-grid-header');<span class="cstat-no" title="statement not covered" ></span>UI.installDragHandle(gridHeader,this._repositionScrubber.bind(this),this._scrubberDragMove.bind(this),this._scrubberDragEnd.bind(this),'text');<span class="cstat-no" title="statement not covered" >c</span>ontainer.appendChild(this._createScrubber());<span class="cstat-no" title="statement not covered" >U</span>I.installDragHandle(this._timelineScrubberLine,this._scrubberDragStart.bind(this),this._scrubberDragMove.bind(this),this._scrubberDragEnd.bind(this),'col-resize');<span class="cstat-no" title="statement not covered" >t</span>his._currentTime.textContent='';<span class="cstat-no" title="statement not covered" >r</span>eturn container;}</span>
+<span class="fstat-no" title="function not covered" >_g</span>etPopoverRequest(event){const element=<span class="cstat-no" title="statement not covered" >event.target;<span class="cstat-no" title="statement not covered" ></span>if(!element.isDescendant(this._previewContainer))</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn{box:event.target.boxInWindow(),show:<span class="fstat-no" title="function not covered" >po</span>pover=&gt;{let animGroup;<span class="cstat-no" title="statement not covered" >for(const group of this._previewMap.keysArray()){<span class="cstat-no" title="statement not covered" >if(this._previewMap.get(group).element===element.parentElement)</span></span></span>
+<span class="cstat-no" title="statement not covered" >animGroup=group;}</span>
+<span class="cstat-no" title="statement not covered" >console.assert(animGroup);c</span>onst screenshots=<span class="cstat-no" title="statement not covered" >animGroup.screenshots();<span class="cstat-no" title="statement not covered" ></span>if(!screenshots.length)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(false);l</span>et fulfill;const promise=<span class="cstat-no" title="statement not covered" >new Promise(<span class="fstat-no" title="function not covered" >x=</span>&gt;<span class="cstat-no" title="statement not covered" >fulfill=x)</span>;<span class="cstat-no" title="statement not covered" ></span>if(!screenshots[0].complete)</span>
+<span class="cstat-no" title="statement not covered" >screenshots[0].onload=onFirstScreenshotLoaded.bind(null,screenshots);e</span>lse
+<span class="cstat-no" title="statement not covered" >onFirstScreenshotLoaded(screenshots);<span class="cstat-no" title="statement not covered" >r</span>eturn promise;f</span>unction <span class="fstat-no" title="function not covered" >onFirstScreenshotLoaded(</span>screenshots){<span class="cstat-no" title="statement not covered" >new Animation.AnimationScreenshotPopover(screenshots).show(popover.contentElement);<span class="cstat-no" title="statement not covered" >f</span>ulfill(true);}</span>}};}
+<span class="fstat-no" title="function not covered" >_t</span>ogglePauseAll(){<span class="cstat-no" title="statement not covered" >this._allPaused=!this._allPaused;<span class="cstat-no" title="statement not covered" >t</span>his._pauseButton.setToggled(this._allPaused);<span class="cstat-no" title="statement not covered" >t</span>his._setPlaybackRate(this._playbackRate);<span class="cstat-no" title="statement not covered" >t</span>his._pauseButton.setTitle(this._allPaused?ls`Resume all`:ls`Pause all`);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etPlaybackRate(playbackRate){<span class="cstat-no" title="statement not covered" >this._playbackRate=playbackRate;<span class="cstat-no" title="statement not covered" >f</span>or(const animationModel of SDK.targetManager.models(Animation.AnimationModel))</span>
+<span class="cstat-no" title="statement not covered" >animationModel.setPlaybackRate(this._allPaused?0:this._playbackRate);<span class="cstat-no" title="statement not covered" >H</span>ost.userMetrics.actionTaken(Host.UserMetrics.Action.AnimationsPlaybackRateChanged);<span class="cstat-no" title="statement not covered" >i</span>f(this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >this._scrubberPlayer.playbackRate=this._effectivePlaybackRate();<span class="cstat-no" title="statement not covered" >t</span>his._updatePlaybackControls();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdatePlaybackControls(){<span class="cstat-no" title="statement not covered" >for(const button of this._playbackRateButtons){const selected=<span class="cstat-no" title="statement not covered" >this._playbackRate===button.playbackRate;<span class="cstat-no" title="statement not covered" ></span>button.classList.toggle('selected',selected);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ontrolButtonToggle(){<span class="cstat-no" title="statement not covered" >if(this._controlState===Animation.AnimationTimeline._ControlState.Play)</span>
+<span class="cstat-no" title="statement not covered" >this._togglePause(false);e</span>lse <span class="cstat-no" title="statement not covered" >if(this._controlState===Animation.AnimationTimeline._ControlState.Replay)</span>
+<span class="cstat-no" title="statement not covered" >this._replay();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._togglePause(true);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateControlButton(){<span class="cstat-no" title="statement not covered" >this._controlButton.setEnabled(!!this._selectedGroup);<span class="cstat-no" title="statement not covered" >i</span>f(this._selectedGroup&amp;&amp;this._selectedGroup.paused()){<span class="cstat-no" title="statement not covered" >this._controlState=Animation.AnimationTimeline._ControlState.Play;<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setToggled(true);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setTitle(ls`Play timeline`);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setGlyph('largeicon-play-animation');}</span>else <span class="cstat-no" title="statement not covered" >if(!this._scrubberPlayer||this._scrubberPlayer.currentTime&gt;=this.duration()){<span class="cstat-no" title="statement not covered" >this._controlState=Animation.AnimationTimeline._ControlState.Replay;<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setToggled(true);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setTitle(ls`Replay timeline`);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setGlyph('largeicon-replay-animation');}</span>else{<span class="cstat-no" title="statement not covered" >this._controlState=Animation.AnimationTimeline._ControlState.Pause;<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setToggled(false);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setTitle(ls`Pause timeline`);<span class="cstat-no" title="statement not covered" >t</span>his._controlButton.setGlyph('largeicon-pause-animation');}</span>}</span></span>
+<span class="fstat-no" title="function not covered" >_e</span>ffectivePlaybackRate(){<span class="cstat-no" title="statement not covered" >return(this._allPaused||(this._selectedGroup&amp;&amp;this._selectedGroup.paused()))?0:this._playbackRate;}</span>
+<span class="fstat-no" title="function not covered" >_t</span>ogglePause(pause){<span class="cstat-no" title="statement not covered" >this._selectedGroup.togglePause(pause);<span class="cstat-no" title="statement not covered" >i</span>f(this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >this._scrubberPlayer.playbackRate=this._effectivePlaybackRate();<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.get(this._selectedGroup).element.classList.toggle('paused',pause);<span class="cstat-no" title="statement not covered" >t</span>his._updateControlButton();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>eplay(){<span class="cstat-no" title="statement not covered" >if(!this._selectedGroup)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._selectedGroup.seekTo(0);<span class="cstat-no" title="statement not covered" >t</span>his._animateTime(0);<span class="cstat-no" title="statement not covered" >t</span>his._updateControlButton();}</span>
+<span class="fstat-no" title="function not covered" >du</span>ration(){<span class="cstat-no" title="statement not covered" >return this._duration;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tDuration(duration){<span class="cstat-no" title="statement not covered" >this._duration=duration;<span class="cstat-no" title="statement not covered" >t</span>his.scheduleRedraw();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>learTimeline(){<span class="cstat-no" title="statement not covered" >this._uiAnimations=[];<span class="cstat-no" title="statement not covered" >t</span>his._nodesMap.clear();<span class="cstat-no" title="statement not covered" >t</span>his._animationsMap.clear();<span class="cstat-no" title="statement not covered" >t</span>his._animationsContainer.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._duration=this._defaultDuration;<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubber.classList.add('hidden');<span class="cstat-no" title="statement not covered" >d</span>elete this._selectedGroup;<span class="cstat-no" title="statement not covered" >i</span>f(this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >this._scrubberPlayer.cancel();<span class="cstat-no" title="statement not covered" >d</span>elete this._scrubberPlayer;<span class="cstat-no" title="statement not covered" >t</span>his._currentTime.textContent='';<span class="cstat-no" title="statement not covered" >t</span>his._updateControlButton();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>eset(){<span class="cstat-no" title="statement not covered" >this._clearTimeline();<span class="cstat-no" title="statement not covered" >i</span>f(this._allPaused)</span>
+<span class="cstat-no" title="statement not covered" >this._togglePauseAll();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._setPlaybackRate(this._playbackRate);<span class="cstat-no" title="statement not covered" >f</span>or(const group of this._groupBuffer)</span>
+<span class="cstat-no" title="statement not covered" >group.release();<span class="cstat-no" title="statement not covered" >t</span>his._groupBuffer=[];<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.clear();<span class="cstat-no" title="statement not covered" >t</span>his._previewContainer.removeChildren();<span class="cstat-no" title="statement not covered" >t</span>his._popoverHelper.hidePopover();<span class="cstat-no" title="statement not covered" >t</span>his._renderGrid();}</span>
+<span class="fstat-no" title="function not covered" >_a</span>nimationGroupStarted(event){<span class="cstat-no" title="statement not covered" >this._addAnimationGroup((event.data));}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddAnimationGroup(group){function <span class="fstat-no" title="function not covered" >startTimeComparator(</span>left,right){<span class="cstat-no" title="statement not covered" >return left.startTime()&gt;right.startTime();}</span>
+<span class="cstat-no" title="statement not covered" >if(this._previewMap.get(group)){<span class="cstat-no" title="statement not covered" >if(this._selectedGroup===group)</span></span>
+<span class="cstat-no" title="statement not covered" >this._syncScrubber();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._previewMap.get(group).replay();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+<span class="cstat-no" title="statement not covered" >this._groupBuffer.sort(startTimeComparator);c</span>onst groupsToDiscard=<span class="cstat-no" title="statement not covered" >[];</span>const bufferSize=<span class="cstat-no" title="statement not covered" >this.width()/50;<span class="cstat-no" title="statement not covered" ></span>while(this._groupBuffer.length&gt;bufferSize){const toDiscard=<span class="cstat-no" title="statement not covered" >this._groupBuffer.splice(this._groupBuffer[0]===this._selectedGroup?1:0,1);<span class="cstat-no" title="statement not covered" ></span>groupsToDiscard.push(toDiscard[0]);}</span></span>
+<span class="cstat-no" title="statement not covered" >for(const g of groupsToDiscard){<span class="cstat-no" title="statement not covered" >this._previewMap.get(g).element.remove();<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.delete(g);<span class="cstat-no" title="statement not covered" >g</span>.release();}</span></span>
+const preview=<span class="cstat-no" title="statement not covered" >new Animation.AnimationGroupPreviewUI(group);<span class="cstat-no" title="statement not covered" ></span>this._groupBuffer.push(group);<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.set(group,preview);<span class="cstat-no" title="statement not covered" >t</span>his._previewContainer.appendChild(preview.element);<span class="cstat-no" title="statement not covered" >p</span>review.removeButton().addEventListener('click',this._removeAnimationGroup.bind(this,group));<span class="cstat-no" title="statement not covered" >p</span>review.element.addEventListener('click',this._selectAnimationGroup.bind(this,group));}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoveAnimationGroup(group,event){<span class="cstat-no" title="statement not covered" >this._groupBuffer.remove(group);<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.get(group).element.remove();<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.delete(group);<span class="cstat-no" title="statement not covered" >g</span>roup.release();<span class="cstat-no" title="statement not covered" >e</span>vent.consume(true);<span class="cstat-no" title="statement not covered" >i</span>f(this._selectedGroup===group){<span class="cstat-no" title="statement not covered" >this._clearTimeline();<span class="cstat-no" title="statement not covered" >t</span>his._renderGrid();}</span>}</span>
+<span class="fstat-no" title="function not covered" >_s</span>electAnimationGroup(group){function <span class="fstat-no" title="function not covered" >applySelectionClass(</span>ui,group){<span class="cstat-no" title="statement not covered" >ui.element.classList.toggle('selected',this._selectedGroup===group);}</span>
+<span class="cstat-no" title="statement not covered" >if(this._selectedGroup===group){<span class="cstat-no" title="statement not covered" >this._togglePause(false);<span class="cstat-no" title="statement not covered" >t</span>his._replay();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._clearTimeline();<span class="cstat-no" title="statement not covered" >t</span>his._selectedGroup=group;<span class="cstat-no" title="statement not covered" >t</span>his._previewMap.forEach(applySelectionClass,this);<span class="cstat-no" title="statement not covered" >t</span>his.setDuration(Math.max(500,group.finiteDuration()+100));<span class="cstat-no" title="statement not covered" >f</span>or(const anim of group.animations())</span>
+<span class="cstat-no" title="statement not covered" >this._addAnimation(anim);<span class="cstat-no" title="statement not covered" >t</span>his.scheduleRedraw();<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubber.classList.remove('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._togglePause(false);<span class="cstat-no" title="statement not covered" >t</span>his._replay();}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddAnimation(animation){function <span class="fstat-no" title="function not covered" >nodeResolved(</span>node){<span class="cstat-no" title="statement not covered" >nodeUI.nodeResolved(node);<span class="cstat-no" title="statement not covered" >u</span>iAnimation.setNode(node);<span class="cstat-no" title="statement not covered" >i</span>f(node)</span>
+<span class="cstat-no" title="statement not covered" >node[this._symbol]=nodeUI;}</span>
+let nodeUI=<span class="cstat-no" title="statement not covered" >this._nodesMap.get(animation.source().backendNodeId());<span class="cstat-no" title="statement not covered" ></span>if(!nodeUI){<span class="cstat-no" title="statement not covered" >nodeUI=new Animation.AnimationTimeline.NodeUI(animation.source());<span class="cstat-no" title="statement not covered" >t</span>his._animationsContainer.appendChild(nodeUI.element);<span class="cstat-no" title="statement not covered" >t</span>his._nodesMap.set(animation.source().backendNodeId(),nodeUI);}</span></span>
+const nodeRow=<span class="cstat-no" title="statement not covered" >nodeUI.createNewRow();</span>const uiAnimation=<span class="cstat-no" title="statement not covered" >new Animation.AnimationUI(animation,this,nodeRow);<span class="cstat-no" title="statement not covered" ></span>animation.source().deferredNode().resolve(nodeResolved.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._uiAnimations.push(uiAnimation);<span class="cstat-no" title="statement not covered" >t</span>his._animationsMap.set(animation.id(),animation);}</span>
+<span class="fstat-no" title="function not covered" >_n</span>odeRemoved(event){const node=<span class="cstat-no" title="statement not covered" >event.data.node;<span class="cstat-no" title="statement not covered" ></span>if(node[this._symbol])</span>
+<span class="cstat-no" title="statement not covered" >node[this._symbol].nodeRemoved();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>enderGrid(){const gridSize=<span class="cstat-no" title="statement not covered" >250;<span class="cstat-no" title="statement not covered" ></span>this._grid.setAttribute('width',this.width()+10);<span class="cstat-no" title="statement not covered" >t</span>his._grid.setAttribute('height',this._cachedTimelineHeight+30);<span class="cstat-no" title="statement not covered" >t</span>his._grid.setAttribute('shape-rendering','crispEdges');<span class="cstat-no" title="statement not covered" >t</span>his._grid.removeChildren();l</span>et lastDraw=<span class="cstat-no" title="statement not covered" >undefined;<span class="cstat-no" title="statement not covered" ></span>for(let time=0;time&lt;this.duration();time+=gridSize){const line=<span class="cstat-no" title="statement not covered" >this._grid.createSVGChild('rect','animation-timeline-grid-line');<span class="cstat-no" title="statement not covered" ></span>line.setAttribute('x',time*this.pixelMsRatio()+10);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y',23);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('height','100%');<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('width',1);}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let time=0;time&lt;this.duration();time+=gridSize){const gridWidth=<span class="cstat-no" title="statement not covered" >time*this.pixelMsRatio();<span class="cstat-no" title="statement not covered" ></span>if(lastDraw===undefined||gridWidth-lastDraw&gt;50){<span class="cstat-no" title="statement not covered" >lastDraw=gridWidth;c</span>onst label=<span class="cstat-no" title="statement not covered" >this._grid.createSVGChild('text','animation-timeline-grid-label');<span class="cstat-no" title="statement not covered" ></span>label.textContent=Number.millisToString(time);<span class="cstat-no" title="statement not covered" >l</span>abel.setAttribute('x',gridWidth+10);<span class="cstat-no" title="statement not covered" >l</span>abel.setAttribute('y',16);}</span>}</span>}</span>
+<span class="fstat-no" title="function not covered" >sc</span>heduleRedraw(){<span class="cstat-no" title="statement not covered" >this._renderQueue=[];<span class="cstat-no" title="statement not covered" >f</span>or(const ui of this._uiAnimations)</span>
+<span class="cstat-no" title="statement not covered" >this._renderQueue.push(ui);<span class="cstat-no" title="statement not covered" >i</span>f(this._redrawing)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._redrawing=true;<span class="cstat-no" title="statement not covered" >t</span>his._renderGrid();<span class="cstat-no" title="statement not covered" >t</span>his._animationsContainer.window().requestAnimationFrame(this._render.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >_r</span>ender(timestamp){<span class="cstat-no" title="statement not covered" >while(this._renderQueue.length&amp;&amp;(!timestamp||window.performance.now()-timestamp&lt;50))</span>
+<span class="cstat-no" title="statement not covered" >this._renderQueue.shift().redraw();<span class="cstat-no" title="statement not covered" >i</span>f(this._renderQueue.length)</span>
+<span class="cstat-no" title="statement not covered" >this._animationsContainer.window().requestAnimationFrame(this._render.bind(this));e</span>lse
+<span class="cstat-no" title="statement not covered" >delete this._redrawing;}</span>
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >this._cachedTimelineWidth=Math.max(0,this._animationsContainer.offsetWidth-this._timelineControlsWidth)||0;<span class="cstat-no" title="statement not covered" >t</span>his._cachedTimelineHeight=this._animationsContainer.offsetHeight;<span class="cstat-no" title="statement not covered" >t</span>his.scheduleRedraw();<span class="cstat-no" title="statement not covered" >i</span>f(this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >this._syncScrubber();<span class="cstat-no" title="statement not covered" >d</span>elete this._gridOffsetLeft;}</span>
+<span class="fstat-no" title="function not covered" >wi</span>dth(){<span class="cstat-no" title="statement not covered" >return this._cachedTimelineWidth||0;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esizeWindow(animation){let resized=<span class="cstat-no" title="statement not covered" >false;</span>const duration=<span class="cstat-no" title="statement not covered" >animation.source().duration()*Math.min(2,animation.source().iterations());</span>const requiredDuration=<span class="cstat-no" title="statement not covered" >animation.source().delay()+duration+animation.source().endDelay();<span class="cstat-no" title="statement not covered" ></span>if(requiredDuration&gt;this._duration){<span class="cstat-no" title="statement not covered" >resized=true;<span class="cstat-no" title="statement not covered" >t</span>his._duration=requiredDuration+200;}</span></span>
+<span class="cstat-no" title="statement not covered" >return resized;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>yncScrubber(){<span class="cstat-no" title="statement not covered" >if(!this._selectedGroup)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._selectedGroup.currentTimePromise().then(this._animateTime.bind(this)).then(this._updateControlButton.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >_a</span>nimateTime(currentTime){<span class="cstat-no" title="statement not covered" >if(this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >this._scrubberPlayer.cancel();<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer=this._timelineScrubber.animate([{transform:'translateX(0px)'},{transform:'translateX('+this.width()+'px)'}],{duration:this.duration(),fill:'forwards'});<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer.playbackRate=this._effectivePlaybackRate();<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer.onfinish=this._updateControlButton.bind(this);<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer.currentTime=currentTime;<span class="cstat-no" title="statement not covered" >t</span>his.element.window().requestAnimationFrame(this._updateScrubber.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >pi</span>xelMsRatio(){<span class="cstat-no" title="statement not covered" >return this.width()/this.duration()||0;}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateScrubber(timestamp){<span class="cstat-no" title="statement not covered" >if(!this._scrubberPlayer)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._currentTime.textContent=Number.millisToString(this._scrubberPlayer.currentTime);<span class="cstat-no" title="statement not covered" >i</span>f(this._scrubberPlayer.playState==='pending'||this._scrubberPlayer.playState==='running')</span>
+<span class="cstat-no" title="statement not covered" >this.element.window().requestAnimationFrame(this._updateScrubber.bind(this));e</span>lse <span class="cstat-no" title="statement not covered" >if(this._scrubberPlayer.playState==='finished')</span>
+<span class="cstat-no" title="statement not covered" >this._currentTime.textContent='';}</span>
+<span class="fstat-no" title="function not covered" >_r</span>epositionScrubber(event){<span class="cstat-no" title="statement not covered" >if(!this._selectedGroup)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(!this._gridOffsetLeft)</span>
+<span class="cstat-no" title="statement not covered" >this._gridOffsetLeft=this._grid.totalOffsetLeft()+10;c</span>onst seekTime=<span class="cstat-no" title="statement not covered" >Math.max(0,event.x-this._gridOffsetLeft)/this.pixelMsRatio();<span class="cstat-no" title="statement not covered" ></span>this._selectedGroup.seekTo(seekTime);<span class="cstat-no" title="statement not covered" >t</span>his._togglePause(true);<span class="cstat-no" title="statement not covered" >t</span>his._animateTime(seekTime);<span class="cstat-no" title="statement not covered" >t</span>his._originalScrubberTime=seekTime;<span class="cstat-no" title="statement not covered" >t</span>his._originalMousePosition=event.x;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>crubberDragStart(event){<span class="cstat-no" title="statement not covered" >if(!this._scrubberPlayer||!this._selectedGroup)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >t</span>his._originalScrubberTime=this._scrubberPlayer.currentTime;<span class="cstat-no" title="statement not covered" >t</span>his._timelineScrubber.classList.remove('animation-timeline-end');<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer.pause();<span class="cstat-no" title="statement not covered" >t</span>his._originalMousePosition=event.x;<span class="cstat-no" title="statement not covered" >t</span>his._togglePause(true);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>crubberDragMove(event){const delta=<span class="cstat-no" title="statement not covered" >event.x-this._originalMousePosition;</span>const currentTime=<span class="cstat-no" title="statement not covered" >Math.max(0,Math.min(this._originalScrubberTime+delta/this.pixelMsRatio(),this.duration()));<span class="cstat-no" title="statement not covered" ></span>this._scrubberPlayer.currentTime=currentTime;<span class="cstat-no" title="statement not covered" >t</span>his._currentTime.textContent=Number.millisToString(Math.round(currentTime));<span class="cstat-no" title="statement not covered" >t</span>his._selectedGroup.seekTo(currentTime);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>crubberDragEnd(event){const currentTime=<span class="cstat-no" title="statement not covered" >Math.max(0,this._scrubberPlayer.currentTime);<span class="cstat-no" title="statement not covered" ></span>this._scrubberPlayer.play();<span class="cstat-no" title="statement not covered" >t</span>his._scrubberPlayer.currentTime=currentTime;<span class="cstat-no" title="statement not covered" >t</span>his._currentTime.window().requestAnimationFrame(this._updateScrubber.bind(this));}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationTimeline.GlobalPlaybackRates=[1,0.25,0.1];<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationTimeline._ControlState={Play:'play-outline',Replay:'replay-outline',Pause:'pause-outline'};<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationTimeline.NodeUI=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animationEffect){<span class="cstat-no" title="statement not covered" >this.element=createElementWithClass('div','animation-node-row');<span class="cstat-no" title="statement not covered" >t</span>his._description=this.element.createChild('div','animation-node-description');<span class="cstat-no" title="statement not covered" >t</span>his._timelineElement=this.element.createChild('div','animation-node-timeline');}</span></span>
+<span class="fstat-no" title="function not covered" >as</span>ync nodeResolved(node){<span class="cstat-no" title="statement not covered" >if(!node){<span class="cstat-no" title="statement not covered" >this._description.createTextChild('&lt;node&gt;');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._node=node;<span class="cstat-no" title="statement not covered" >t</span>his._nodeChanged();<span class="cstat-no" title="statement not covered" >C</span>ommon.Linkifier.linkify(node).then(<span class="fstat-no" title="function not covered" >li</span>nk=&gt;<span class="cstat-no" title="statement not covered" >this._description.appendChild(link))</span>;<span class="cstat-no" title="statement not covered" >i</span>f(!node.ownerDocument)</span>
+<span class="cstat-no" title="statement not covered" >this.nodeRemoved();}</span>
+<span class="fstat-no" title="function not covered" >cr</span>eateNewRow(){<span class="cstat-no" title="statement not covered" >return this._timelineElement.createChild('div','animation-timeline-row');}</span>
+<span class="fstat-no" title="function not covered" >no</span>deRemoved(){<span class="cstat-no" title="statement not covered" >this.element.classList.add('animation-node-removed');<span class="cstat-no" title="statement not covered" >t</span>his._node=null;}</span>
+<span class="fstat-no" title="function not covered" >_n</span>odeChanged(){<span class="cstat-no" title="statement not covered" >this.element.classList.toggle('animation-node-selected',this._node&amp;&amp;this._node===UI.context.flavor(SDK.DOMNode));}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationTimeline.StepTimingFunction=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(steps,stepAtPosition){<span class="cstat-no" title="statement not covered" >this.steps=steps;<span class="cstat-no" title="statement not covered" >t</span>his.stepAtPosition=stepAtPosition;}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic parse(text){let match=<span class="cstat-no" title="statement not covered" >text.match(/^steps\((\d+), (start|middle)\)$/);<span class="cstat-no" title="statement not covered" ></span>if(match)</span>
+<span class="cstat-no" title="statement not covered" >return new Animation.AnimationTimeline.StepTimingFunction(parseInt(match[1],10),match[2]);<span class="cstat-no" title="statement not covered" >m</span>atch=text.match(/^steps\((\d+)\)$/);<span class="cstat-no" title="statement not covered" >i</span>f(match)</span>
+<span class="cstat-no" title="statement not covered" >return new Animation.AnimationTimeline.StepTimingFunction(parseInt(match[1],10),'end');<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>};;<span class="cstat-no" title="statement not covered" >Animation.AnimationUI=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(animation,timeline,parentElement){<span class="cstat-no" title="statement not covered" >this._animation=animation;<span class="cstat-no" title="statement not covered" >t</span>his._timeline=timeline;<span class="cstat-no" title="statement not covered" >t</span>his._parentElement=parentElement;<span class="cstat-no" title="statement not covered" >i</span>f(this._animation.source().keyframesRule())</span></span>
+<span class="cstat-no" title="statement not covered" >this._keyframes=this._animation.source().keyframesRule().keyframes();<span class="cstat-no" title="statement not covered" >t</span>his._nameElement=parentElement.createChild('div','animation-name');<span class="cstat-no" title="statement not covered" >t</span>his._nameElement.textContent=this._animation.name();<span class="cstat-no" title="statement not covered" >t</span>his._svg=parentElement.createSVGChild('svg','animation-ui');<span class="cstat-no" title="statement not covered" >t</span>his._svg.setAttribute('height',Animation.AnimationUI.Options.AnimationSVGHeight);<span class="cstat-no" title="statement not covered" >t</span>his._svg.style.marginLeft='-'+Animation.AnimationUI.Options.AnimationMargin+'px';<span class="cstat-no" title="statement not covered" >t</span>his._svg.addEventListener('contextmenu',this._onContextMenu.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._activeIntervalGroup=this._svg.createSVGChild('g');<span class="cstat-no" title="statement not covered" >U</span>I.installDragHandle(this._activeIntervalGroup,this._mouseDown.bind(this,Animation.AnimationUI.MouseEvents.AnimationDrag,null),this._mouseMove.bind(this),this._mouseUp.bind(this),'-webkit-grabbing','-webkit-grab');<span class="cstat-no" title="statement not covered" >t</span>his._cachedElements=[];<span class="cstat-no" title="statement not covered" >t</span>his._movementInMs=0;<span class="cstat-no" title="statement not covered" >t</span>his._color=Animation.AnimationUI.Color(this._animation);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic Color(animation){const names=<span class="cstat-no" title="statement not covered" >Object.keys(Animation.AnimationUI.Colors);</span>const color=<span class="cstat-no" title="statement not covered" >Animation.AnimationUI.Colors[names[String.hashCode(animation.name()||animation.id())%names.length]];<span class="cstat-no" title="statement not covered" ></span>return color.asString(Common.Color.Format.RGB);}</span>
+<span class="fstat-no" title="function not covered" >an</span>imation(){<span class="cstat-no" title="statement not covered" >return this._animation;}</span>
+<span class="fstat-no" title="function not covered" >se</span>tNode(node){<span class="cstat-no" title="statement not covered" >this._node=node;}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateLine(parentElement,className){const line=<span class="cstat-no" title="statement not covered" >parentElement.createSVGChild('line',className);<span class="cstat-no" title="statement not covered" ></span>line.setAttribute('x1',Animation.AnimationUI.Options.AnimationMargin);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y1',Animation.AnimationUI.Options.AnimationHeight);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y2',Animation.AnimationUI.Options.AnimationHeight);<span class="cstat-no" title="statement not covered" >l</span>ine.style.stroke=this._color;<span class="cstat-no" title="statement not covered" >r</span>eturn line;}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawAnimationLine(iteration,parentElement){const cache=<span class="cstat-no" title="statement not covered" >this._cachedElements[iteration];<span class="cstat-no" title="statement not covered" ></span>if(!cache.animationLine)</span>
+<span class="cstat-no" title="statement not covered" >cache.animationLine=this._createLine(parentElement,'animation-line');<span class="cstat-no" title="statement not covered" >c</span>ache.animationLine.setAttribute('x2',(this._duration()*this._timeline.pixelMsRatio()+Animation.AnimationUI.Options.AnimationMargin).toFixed(2));}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawDelayLine(parentElement){<span class="cstat-no" title="statement not covered" >if(!this._delayLine){<span class="cstat-no" title="statement not covered" >this._delayLine=this._createLine(parentElement,'animation-delay-line');<span class="cstat-no" title="statement not covered" >t</span>his._endDelayLine=this._createLine(parentElement,'animation-delay-line');}</span></span>
+const fill=<span class="cstat-no" title="statement not covered" >this._animation.source().fill();<span class="cstat-no" title="statement not covered" ></span>this._delayLine.classList.toggle('animation-fill',fill==='backwards'||fill==='both');c</span>onst margin=<span class="cstat-no" title="statement not covered" >Animation.AnimationUI.Options.AnimationMargin;<span class="cstat-no" title="statement not covered" ></span>this._delayLine.setAttribute('x1',margin);<span class="cstat-no" title="statement not covered" >t</span>his._delayLine.setAttribute('x2',(this._delay()*this._timeline.pixelMsRatio()+margin).toFixed(2));c</span>onst forwardsFill=<span class="cstat-no" title="statement not covered" >fill==='forwards'||fill==='both';<span class="cstat-no" title="statement not covered" ></span>this._endDelayLine.classList.toggle('animation-fill',forwardsFill);c</span>onst leftMargin=<span class="cstat-no" title="statement not covered" >Math.min(this._timeline.width(),(this._delay()+this._duration()*this._animation.source().iterations())*this._timeline.pixelMsRatio());<span class="cstat-no" title="statement not covered" ></span>this._endDelayLine.style.transform='translateX('+leftMargin.toFixed(2)+'px)';<span class="cstat-no" title="statement not covered" >t</span>his._endDelayLine.setAttribute('x1',margin);<span class="cstat-no" title="statement not covered" >t</span>his._endDelayLine.setAttribute('x2',forwardsFill?(this._timeline.width()-leftMargin+margin).toFixed(2):(this._animation.source().endDelay()*this._timeline.pixelMsRatio()+margin).toFixed(2));}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawPoint(iteration,parentElement,x,keyframeIndex,attachEvents){<span class="cstat-no" title="statement not covered" >if(this._cachedElements[iteration].keyframePoints[keyframeIndex]){<span class="cstat-no" title="statement not covered" >this._cachedElements[iteration].keyframePoints[keyframeIndex].setAttribute('cx',x.toFixed(2));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const circle=<span class="cstat-no" title="statement not covered" >parentElement.createSVGChild('circle',keyframeIndex&lt;=0?'animation-endpoint':'animation-keyframe-point');<span class="cstat-no" title="statement not covered" ></span>circle.setAttribute('cx',x.toFixed(2));<span class="cstat-no" title="statement not covered" >c</span>ircle.setAttribute('cy',Animation.AnimationUI.Options.AnimationHeight);<span class="cstat-no" title="statement not covered" >c</span>ircle.style.stroke=this._color;<span class="cstat-no" title="statement not covered" >c</span>ircle.setAttribute('r',Animation.AnimationUI.Options.AnimationMargin/2);<span class="cstat-no" title="statement not covered" >i</span>f(keyframeIndex&lt;=0)</span>
+<span class="cstat-no" title="statement not covered" >circle.style.fill=this._color;<span class="cstat-no" title="statement not covered" >t</span>his._cachedElements[iteration].keyframePoints[keyframeIndex]=circle;<span class="cstat-no" title="statement not covered" >i</span>f(!attachEvents)</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et eventType;<span class="cstat-no" title="statement not covered" >if(keyframeIndex===0)</span>
+<span class="cstat-no" title="statement not covered" >eventType=Animation.AnimationUI.MouseEvents.StartEndpointMove;e</span>lse <span class="cstat-no" title="statement not covered" >if(keyframeIndex===-1)</span>
+<span class="cstat-no" title="statement not covered" >eventType=Animation.AnimationUI.MouseEvents.FinishEndpointMove;e</span>lse
+<span class="cstat-no" title="statement not covered" >eventType=Animation.AnimationUI.MouseEvents.KeyframeMove;<span class="cstat-no" title="statement not covered" >U</span>I.installDragHandle(circle,this._mouseDown.bind(this,eventType,keyframeIndex),this._mouseMove.bind(this),this._mouseUp.bind(this),'ew-resize');}</span>
+<span class="fstat-no" title="function not covered" >_r</span>enderKeyframe(iteration,keyframeIndex,parentElement,leftDistance,width,easing){function <span class="fstat-no" title="function not covered" >createStepLine(</span>parentElement,x,strokeColor){const line=<span class="cstat-no" title="statement not covered" >parentElement.createSVGChild('line');<span class="cstat-no" title="statement not covered" ></span>line.setAttribute('x1',x);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('x2',x);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y1',Animation.AnimationUI.Options.AnimationMargin);<span class="cstat-no" title="statement not covered" >l</span>ine.setAttribute('y2',Animation.AnimationUI.Options.AnimationHeight);<span class="cstat-no" title="statement not covered" >l</span>ine.style.stroke=strokeColor;}</span>
+const bezier=<span class="cstat-no" title="statement not covered" >UI.Geometry.CubicBezier.parse(easing);</span>const cache=<span class="cstat-no" title="statement not covered" >this._cachedElements[iteration].keyframeRender;<span class="cstat-no" title="statement not covered" ></span>if(!cache[keyframeIndex]){<span class="cstat-no" title="statement not covered" >cache[keyframeIndex]=bezier?parentElement.createSVGChild('path','animation-keyframe'):parentElement.createSVGChild('g','animation-keyframe-step');}</span></span>
+const group=<span class="cstat-no" title="statement not covered" >cache[keyframeIndex];<span class="cstat-no" title="statement not covered" ></span>group.style.transform='translateX('+leftDistance.toFixed(2)+'px)';<span class="cstat-no" title="statement not covered" >i</span>f(easing==='linear'){<span class="cstat-no" title="statement not covered" >group.style.fill=this._color;c</span>onst height=<span class="cstat-no" title="statement not covered" >InlineEditor.BezierUI.Height;<span class="cstat-no" title="statement not covered" ></span>group.setAttribute('d',['M',0,height,'L',0,5,'L',width.toFixed(2),5,'L',width.toFixed(2),height,'Z'].join(' '));}</span>else <span class="cstat-no" title="statement not covered" >if(bezier){<span class="cstat-no" title="statement not covered" >group.style.fill=this._color;<span class="cstat-no" title="statement not covered" >I</span>nlineEditor.BezierUI.drawVelocityChart(bezier,group,width);}</span>else{const stepFunction=<span class="cstat-no" title="statement not covered" >Animation.AnimationTimeline.StepTimingFunction.parse(easing);<span class="cstat-no" title="statement not covered" ></span>group.removeChildren();c</span>onst offsetMap=<span class="cstat-no" title="statement not covered" >{'start':0,'middle':0.5,'end':1};</span>const offsetWeight=<span class="cstat-no" title="statement not covered" >offsetMap[stepFunction.stepAtPosition];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;stepFunction.steps;i++)</span></span></span>
+<span class="cstat-no" title="statement not covered" >createStepLine(group,(i+offsetWeight)*width/stepFunction.steps,this._color);}</span>}
+<span class="fstat-no" title="function not covered" >re</span>draw(){const maxWidth=<span class="cstat-no" title="statement not covered" >this._timeline.width()-Animation.AnimationUI.Options.AnimationMargin;<span class="cstat-no" title="statement not covered" ></span>this._svg.setAttribute('width',(maxWidth+2*Animation.AnimationUI.Options.AnimationMargin).toFixed(2));<span class="cstat-no" title="statement not covered" >t</span>his._activeIntervalGroup.style.transform='translateX('+(this._delay()*this._timeline.pixelMsRatio()).toFixed(2)+'px)';<span class="cstat-no" title="statement not covered" >t</span>his._nameElement.style.transform='translateX('+</span>
+(this._delay()*this._timeline.pixelMsRatio()+Animation.AnimationUI.Options.AnimationMargin).toFixed(2)+'px)';<span class="cstat-no" title="statement not covered" >this._nameElement.style.width=(this._duration()*this._timeline.pixelMsRatio()).toFixed(2)+'px';<span class="cstat-no" title="statement not covered" >t</span>his._drawDelayLine(this._svg);<span class="cstat-no" title="statement not covered" >i</span>f(this._animation.type()==='CSSTransition'){<span class="cstat-no" title="statement not covered" >this._renderTransition();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._renderIteration(this._activeIntervalGroup,0);<span class="cstat-no" title="statement not covered" >i</span>f(!this._tailGroup)</span>
+<span class="cstat-no" title="statement not covered" >this._tailGroup=this._activeIntervalGroup.createSVGChild('g','animation-tail-iterations');c</span>onst iterationWidth=<span class="cstat-no" title="statement not covered" >this._duration()*this._timeline.pixelMsRatio();</span>let iteration;<span class="cstat-no" title="statement not covered" >for(iteration=1;iteration&lt;this._animation.source().iterations()&amp;&amp;iterationWidth*(iteration-1)&lt;this._timeline.width();iteration++)</span>
+<span class="cstat-no" title="statement not covered" >this._renderIteration(this._tailGroup,iteration);<span class="cstat-no" title="statement not covered" >w</span>hile(iteration&lt;this._cachedElements.length)</span>
+<span class="cstat-no" title="statement not covered" >this._cachedElements.pop().group.remove();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>enderTransition(){<span class="cstat-no" title="statement not covered" >if(!this._cachedElements[0])</span>
+<span class="cstat-no" title="statement not covered" >this._cachedElements[0]={animationLine:null,keyframePoints:{},keyframeRender:{},group:null};<span class="cstat-no" title="statement not covered" >t</span>his._drawAnimationLine(0,this._activeIntervalGroup);<span class="cstat-no" title="statement not covered" >t</span>his._renderKeyframe(0,0,this._activeIntervalGroup,Animation.AnimationUI.Options.AnimationMargin,this._duration()*this._timeline.pixelMsRatio(),this._animation.source().easing());<span class="cstat-no" title="statement not covered" >t</span>his._drawPoint(0,this._activeIntervalGroup,Animation.AnimationUI.Options.AnimationMargin,0,true);<span class="cstat-no" title="statement not covered" >t</span>his._drawPoint(0,this._activeIntervalGroup,this._duration()*this._timeline.pixelMsRatio()+Animation.AnimationUI.Options.AnimationMargin,-1,true);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>enderIteration(parentElement,iteration){<span class="cstat-no" title="statement not covered" >if(!this._cachedElements[iteration]){<span class="cstat-no" title="statement not covered" >this._cachedElements[iteration]={animationLine:null,keyframePoints:{},keyframeRender:{},group:parentElement.createSVGChild('g')};}</span></span>
+const group=<span class="cstat-no" title="statement not covered" >this._cachedElements[iteration].group;<span class="cstat-no" title="statement not covered" ></span>group.style.transform='translateX('+(iteration*this._duration()*this._timeline.pixelMsRatio()).toFixed(2)+'px)';<span class="cstat-no" title="statement not covered" >t</span>his._drawAnimationLine(iteration,group);<span class="cstat-no" title="statement not covered" >c</span>onsole.assert(this._keyframes.length&gt;1);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this._keyframes.length-1;i++){const leftDistance=<span class="cstat-no" title="statement not covered" >this._offset(i)*this._duration()*this._timeline.pixelMsRatio()+</span></span>
+Animation.AnimationUI.Options.AnimationMargin;const width=<span class="cstat-no" title="statement not covered" >this._duration()*(this._offset(i+1)-this._offset(i))*this._timeline.pixelMsRatio();<span class="cstat-no" title="statement not covered" ></span>this._renderKeyframe(iteration,i,group,leftDistance,width,this._keyframes[i].easing());<span class="cstat-no" title="statement not covered" >i</span>f(i||(!i&amp;&amp;iteration===0))</span>
+<span class="cstat-no" title="statement not covered" >this._drawPoint(iteration,group,leftDistance,i,iteration===0);}</span>
+<span class="cstat-no" title="statement not covered" >this._drawPoint(iteration,group,this._duration()*this._timeline.pixelMsRatio()+Animation.AnimationUI.Options.AnimationMargin,-1,iteration===0);}</span>
+<span class="fstat-no" title="function not covered" >_d</span>elay(){let delay=<span class="cstat-no" title="statement not covered" >this._animation.source().delay();<span class="cstat-no" title="statement not covered" ></span>if(this._mouseEventType===Animation.AnimationUI.MouseEvents.AnimationDrag||this._mouseEventType===Animation.AnimationUI.MouseEvents.StartEndpointMove)</span>
+<span class="cstat-no" title="statement not covered" >delay+=this._movementInMs;<span class="cstat-no" title="statement not covered" >r</span>eturn Math.max(0,delay);}</span>
+<span class="fstat-no" title="function not covered" >_d</span>uration(){let duration=<span class="cstat-no" title="statement not covered" >this._animation.source().duration();<span class="cstat-no" title="statement not covered" ></span>if(this._mouseEventType===Animation.AnimationUI.MouseEvents.FinishEndpointMove)</span>
+<span class="cstat-no" title="statement not covered" >duration+=this._movementInMs;e</span>lse <span class="cstat-no" title="statement not covered" >if(this._mouseEventType===Animation.AnimationUI.MouseEvents.StartEndpointMove)</span>
+<span class="cstat-no" title="statement not covered" >duration-=Math.max(this._movementInMs,-this._animation.source().delay());<span class="cstat-no" title="statement not covered" >r</span>eturn Math.max(0,duration);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>ffset(i){let offset=<span class="cstat-no" title="statement not covered" >this._keyframes[i].offsetAsNumber();<span class="cstat-no" title="statement not covered" ></span>if(this._mouseEventType===Animation.AnimationUI.MouseEvents.KeyframeMove&amp;&amp;i===this._keyframeMoved){<span class="cstat-no" title="statement not covered" >console.assert(i&gt;0&amp;&amp;i&lt;this._keyframes.length-1,'First and last keyframe cannot be moved');<span class="cstat-no" title="statement not covered" >o</span>ffset+=this._movementInMs/this._animation.source().duration();<span class="cstat-no" title="statement not covered" >o</span>ffset=Math.max(offset,this._keyframes[i-1].offsetAsNumber());<span class="cstat-no" title="statement not covered" >o</span>ffset=Math.min(offset,this._keyframes[i+1].offsetAsNumber());}</span></span>
+<span class="cstat-no" title="statement not covered" >return offset;}</span>
+<span class="fstat-no" title="function not covered" >_m</span>ouseDown(mouseEventType,keyframeIndex,event){<span class="cstat-no" title="statement not covered" >if(event.buttons===2)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(this._svg.enclosingNodeOrSelfWithClass('animation-node-removed'))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >t</span>his._mouseEventType=mouseEventType;<span class="cstat-no" title="statement not covered" >t</span>his._keyframeMoved=keyframeIndex;<span class="cstat-no" title="statement not covered" >t</span>his._downMouseX=event.clientX;<span class="cstat-no" title="statement not covered" >e</span>vent.consume(true);<span class="cstat-no" title="statement not covered" >i</span>f(this._node)</span>
+<span class="cstat-no" title="statement not covered" >Common.Revealer.reveal(this._node);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >_m</span>ouseMove(event){<span class="cstat-no" title="statement not covered" >this._movementInMs=(event.clientX-this._downMouseX)/this._timeline.pixelMsRatio();<span class="cstat-no" title="statement not covered" >i</span>f(this._delay()+this._duration()&gt;this._timeline.duration()*0.8)</span>
+<span class="cstat-no" title="statement not covered" >this._timeline.setDuration(this._timeline.duration()*1.2);<span class="cstat-no" title="statement not covered" >t</span>his.redraw();}</span>
+<span class="fstat-no" title="function not covered" >_m</span>ouseUp(event){<span class="cstat-no" title="statement not covered" >this._movementInMs=(event.clientX-this._downMouseX)/this._timeline.pixelMsRatio();<span class="cstat-no" title="statement not covered" >i</span>f(this._mouseEventType===Animation.AnimationUI.MouseEvents.KeyframeMove)</span>
+<span class="cstat-no" title="statement not covered" >this._keyframes[this._keyframeMoved].setOffset(this._offset(this._keyframeMoved));e</span>lse
+<span class="cstat-no" title="statement not covered" >this._animation.setTiming(this._duration(),this._delay());<span class="cstat-no" title="statement not covered" >t</span>his._movementInMs=0;<span class="cstat-no" title="statement not covered" >t</span>his.redraw();<span class="cstat-no" title="statement not covered" >d</span>elete this._mouseEventType;<span class="cstat-no" title="statement not covered" >d</span>elete this._downMouseX;<span class="cstat-no" title="statement not covered" >d</span>elete this._keyframeMoved;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nContextMenu(event){function <span class="fstat-no" title="function not covered" >showContextMenu(</span>remoteObject){<span class="cstat-no" title="statement not covered" >if(!remoteObject)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst contextMenu=<span class="cstat-no" title="statement not covered" >new UI.ContextMenu(event);<span class="cstat-no" title="statement not covered" ></span>contextMenu.appendApplicableItems(remoteObject);<span class="cstat-no" title="statement not covered" >c</span>ontextMenu.show();}</span>
+<span class="cstat-no" title="statement not covered" >this._animation.remoteObjectPromise().then(showContextMenu);<span class="cstat-no" title="statement not covered" >e</span>vent.consume(true);}</span>};<span class="cstat-no" title="statement not covered" >Animation.AnimationUI.MouseEvents={AnimationDrag:'AnimationDrag',KeyframeMove:'KeyframeMove',StartEndpointMove:'StartEndpointMove',FinishEndpointMove:'FinishEndpointMove'};<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationUI.Options={AnimationHeight:26,AnimationSVGHeight:50,AnimationMargin:7,EndpointsClickRegionSize:10,GridCanvasHeight:40};<span class="cstat-no" title="statement not covered" >A</span>nimation.AnimationUI.Colors={'Purple':Common.Color.parse('#9C27B0'),'Light Blue':Common.Color.parse('#03A9F4'),'Deep Orange':Common.Color.parse('#FF5722'),'Blue':Common.Color.parse('#5677FC'),'Lime':Common.Color.parse('#CDDC39'),'Blue Grey':Common.Color.parse('#607D8B'),'Pink':Common.Color.parse('#E91E63'),'Green':Common.Color.parse('#0F9D58'),'Brown':Common.Color.parse('#795548'),'Cyan':Common.Color.parse('#00BCD4')};;<span class="cstat-no" title="statement not covered" ></span>Runtime.cachedResources["animation/animationScreenshotPopover.css"]="/*\n * Copyright (c) 2015 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\nimg {\n    max-height: 300px;\n    border-radius: 2px;\n}\n\n.animation-progress {\n    position: absolute;\n    height: 2px;\n    bottom: 0;\n    left: 0;\n    background: var(--selection-bg-color);\n}\n\n/*# sourceURL=animation/animationScreenshotPopover.css */";<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources["animation/animationTimeline.css"]="/*\n * Copyright (c) 2015 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n\n:host {\n    overflow: hidden;\n}\n\n.animation-node-row {\n    width: 100%;\n    display: flex;\n    border-bottom: 1px dashed hsla(0,0%,94%,1);\n}\n\n.animation-node-description {\n    width: 150px;\n    padding-left: 8px;\n    overflow: hidden;\n    position: relative;\n    transform-style: preserve-3d;\n    border-bottom: 1px solid hsl(0, 0%, 90%);\n    margin-bottom: -1px;\n    background-color: hsl(0, 0%, 98%);\n    display: flex;\n    align-items: center;\n    flex: 0 0 150px;\n}\n\n.animation-node-description &gt; * {\n    flex: 0 0 auto;\n}\n\n.animation-timeline-row {\n    height: 32px;\n    position: relative;\n}\n\npath.animation-keyframe {\n    fill-opacity: 0.2;\n}\n\nsvg.animation-ui g:first-child:hover path.animation-keyframe {\n    fill-opacity: 0.4;\n}\n\n.animation-node-selected path.animation-keyframe {\n    fill-opacity: 0.4;\n}\n\nline.animation-line {\n    stroke-width: 2px;\n    stroke-linecap: round;\n    fill: none;\n}\n\nline.animation-delay-line {\n    stroke-width: 2px;\n    stroke-dasharray: 6, 4;\n}\n\nline.animation-delay-line.animation-fill {\n    stroke-dasharray: none;\n}\n\ncircle.animation-endpoint, circle.animation-keyframe-point {\n    stroke-width: 2px;\n    transition: transform 100ms cubic-bezier(0, 0, 0.2, 1);\n    transform: scale(1);\n    transform-box: fill-box;\n    transform-origin: 50% 50%;\n}\n\n.animation-ui circle.animation-endpoint:hover, .animation-ui circle.animation-keyframe-point:hover {\n    transform: scale(1.2);\n}\n\ncircle.animation-endpoint:active, circle.animation-keyframe-point:active {\n    transform: scale(1);\n}\n\ncircle.animation-keyframe-point {\n    fill: white;\n}\n\n.animation-name {\n    position: absolute;\n    top: 8px;\n    color: #333;\n    text-align: center;\n    margin-left: -8px;\n    white-space: nowrap;\n}\n\n.animation-timeline-toolbar-container {\n    display: flex;\n    background-color: var(--toolbar-bg-color);\n    border-bottom: var(--divider-border);\n    flex: 0 0 auto;\n}\n\n.animation-timeline-toolbar {\n    display: inline-block;\n}\n\n.animation-timeline-header {\n    height: 28px;\n    border-bottom: 1px solid #ccc;\n    flex-shrink: 0;\n    display: flex;\n}\n\n.animation-timeline-header:after {\n    content: \"\";\n    height: calc(100% - 48px - 28px);\n    position: absolute;\n    width: 150px;\n    left: 0;\n    margin-top: 28px;\n    background-color: hsl(0, 0%, 98%);\n    z-index: 0;\n    border-right: 1px solid hsl(0, 0%, 90%);\n}\n\n.animation-controls {\n    flex: 0 0 150px;\n    position: relative;\n    display: flex;\n    justify-content: flex-end;\n    padding-right: 8px;\n}\n\n.animation-timeline-current-time {flex: 0 0 auto;line-height: 28px;margin-right: 5px;}\n.animation-grid-header {\n    flex: 1 0 auto;\n    z-index: 1;\n    cursor: text;\n}\n\n.animation-timeline-buffer, .animation-timeline-buffer-hint {\n    height: 48px;\n    flex: 0 0 auto;\n    border-bottom: 1px solid #ccc;\n    display: flex;\n    padding: 0 2px;\n}\n\n.animation-timeline-buffer:empty, .animation-timeline-buffer-hint {\n    display: none;\n}\n\n.animation-timeline-buffer:empty ~ .animation-timeline-buffer-hint {\n    align-items: center;\n    justify-content: center;\n    font-size: 14px;\n    z-index: 101;\n    display: flex;\n}\n\n.animation-time-overlay {\n    background-color: black;\n    opacity: 0.05;\n    position: absolute;\n    height: 100%;\n    width: 100%;\n    z-index: -1;\n}\n\n.animation-timeline-end &gt; .animation-time-overlay {\n    visibility: hidden;\n}\n\n.animation-scrubber {\n    opacity: 1;\n    position: absolute;\n    left: 150px;\n    height: calc(100% - 103px);\n    width: calc(100% - 150px);\n    top: 103px;\n    border-left: 1px solid hsla(4,90%,58%,1);\n    z-index: 1;\n}\n\n.animation-scrubber-line {\n    width: 11px;\n    background: linear-gradient(to right, transparent 5px, hsla(4,90%,58%,1) 5px, hsla(4,90%,58%,1) 6px, transparent 6px);\n    position: absolute;\n    top: -28px;\n    height: 28px;\n    left: -6px;\n    padding: 0 5px;\n    z-index: 2;\n}\n\n.animation-scrubber-head {\n    width: 7px;\n    height: 7px;\n    transform: rotate(45deg);\n    background: red;\n    position: absolute;\n    left: 2px;\n    top: 1px;\n}\n\nsvg.animation-timeline-grid {\n    position: absolute;\n    left: 140px;\n    top: 76px;\n    z-index: 0;\n}\n\nrect.animation-timeline-grid-line {\n    fill: hsla(0,0%,93%,1);\n}\n\n.animation-timeline-row &gt; svg.animation-ui {\n    position: absolute;\n}\n\n.animation-node-timeline {\n    flex-grow: 1;\n}\n\n.animation-node-description &gt; div {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    max-height: 100%;\n}\n\n.animation-node-removed {\n    -webkit-filter: saturate(0);\n    cursor: not-allowed;\n}\n\nsvg.animation-ui g:first-child {\n    opacity: 1;\n}\n\n.animation-tail-iterations {\n    opacity: 0.5;\n}\n\n.animation-keyframe-step line {\n    stroke-width: 2;\n    stroke-opacity: 0.3;\n}\n\ntext.animation-timeline-grid-label {\n    font-size: 10px;\n    fill: #5a5a5a;\n    text-anchor: middle;\n}\n\n.animation-timeline-rows, .animation-timeline-rows-hint {\n    flex-grow: 1;\n    overflow-y: auto;\n    z-index: 1;\n    overflow-x: hidden;\n}\n\n.animation-timeline-rows-hint {\n    display: none;\n}\n\n.animation-timeline-buffer:not(:empty) ~ .animation-timeline-rows:empty {\n    flex-grow: 0;\n}\n\n.animation-timeline-buffer:not(:empty) ~ .animation-timeline-rows:empty ~ .animation-timeline-rows-hint {\n    font-size: 14px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    margin-left: 150px;\n    padding: 10px;\n}\n\n.toolbar.animation-controls-toolbar {\n    flex: 0 0 auto;\n}\n\n.animation-node-row.animation-node-selected {\n    background-color: hsla(216, 71%, 53%, 0.08);\n}\n\n.animation-node-selected &gt; .animation-node-description {\n    background-color: #EFF4FD;\n}\n\n.animation-timeline-empty-message {\n    padding-left: 230px;\n    padding-right: 30px;\n    text-align: center;\n    position: absolute;\n    font-size: 20px;\n    line-height: 32px;\n    align-items: center;   justify-content: center;\n    width: 100%;\n    height: calc(100% - 44px);\n    display: flex;\n}\n\n.animation-buffer-preview {\n    height: 40px;\n    margin: 4px 2px;\n    background-color: var(--toolbar-bg-color);\n    border-radius: 2px;\n    flex: 1 1;\n    padding: 4px;\n    max-width: 100px;\n    animation: newGroupAnim 200ms;\n    position: relative;\n}\n\n.animation-buffer-preview-animation {\n    width: 100%;\n    height: 100%;\n    border-radius: 2px 0 0 2px;\n    position: absolute;\n    top: 0;\n    left: 0;\n    background: hsla(219, 100%, 66%, 0.27);\n    opacity: 0;\n    border-right: 1px solid #A7A7A7;\n    cursor: pointer;\n}\n\n.animation-buffer-preview:not(.selected):hover {\n    background-color: hsla(217,90%,92%,1);\n}\n\n.animation-buffer-preview.selected {\n    background-color: var(--selection-bg-color);\n}\n\n.animation-paused {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: hsla(0,0%,70%,0.5);\n    display: none;\n}\n\n.animation-paused:before, .animation-paused:after {\n    content: \"\";\n    background: hsl(0, 100%, 100%);\n    width: 7px;\n    height: 20px;\n    border-radius: 2px;\n    margin: 2px;\n    border: 1px solid #ccc;\n}\n\n.animation-buffer-preview.paused .animation-paused {\n    display: flex;\n}\n\n.animation-buffer-preview.selected &gt; svg &gt; line {\n    stroke: white !important;\n}\n\n.animation-buffer-preview &gt; svg &gt; line {\n    stroke-width: 1px;\n}\n\n@keyframes newGroupAnim {\n    from {\n        -webkit-clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);\n    }\n    to {\n        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);\n    }\n}\n\n.animation-playback-rate-control {\n    margin: 4px 0 4px 2px;\n    display: flex;\n    width: 120px;\n}\n\n.animation-playback-rate-button:first-child {\n    border-radius: 4px 0 0 4px;\n}\n\n.animation-playback-rate-button:last-child {\n    border-radius: 0 4px 4px 0;\n}\n\n.animation-playback-rate-button {\n    border: 1px solid #ccc;\n    display: inline-block;\n    margin-right: -1px;\n    padding: 1px 4px;\n    background: white;\n    flex: 1 0 auto;\n    text-align: center;\n    cursor: pointer;\n}\n\n.animation-playback-rate-button:not(.selected):hover {\n    background: hsl(211, 100%, 95%);\n}\n\n.animation-playback-rate-button.selected {\n    color: hsl(0, 100%, 100%);\n    background-color: var(--selection-bg-color);\n    border-color: var(--selection-bg-color);\n    z-index: 1;\n}\n\n.animation-playback-rate-button.selected:first-child {\n    color: var(--selection-bg-color);\n    background-color: hsl(217, 89%, 100%);\n}\n\n.animation-remove-button, -theme-preserve {\n    position: absolute;\n    top: -3px;\n    right: -3px;\n    background: #7B7B7B;\n    border-radius: 12px;\n    height: 16px;\n    width: 16px;\n    align-items: center;\n    font-size: 10px;\n    justify-content: center;\n    box-shadow: 0 1px 4px 0 rgb(185, 185, 185);\n    z-index: 100;\n    display: none;\n    cursor: pointer;\n    font-weight: 700;\n    color: white;\n}\n\n.animation-remove-button:hover {\n    background: #585858;\n}\n\n.animation-buffer-preview:hover .animation-remove-button {\n    display: flex;\n}\n\n/*# sourceURL=animation/animationTimeline.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

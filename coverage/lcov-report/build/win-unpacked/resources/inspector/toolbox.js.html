@@ -1,0 +1,1188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/toolbox.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector</a> toolbox.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/1309</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/730</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/258</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/373</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const allDescriptors=<span class="cstat-no" title="statement not covered" >[];</span>let applicationDescriptor;const _loadedScripts=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(const k of[]){}</span>
+<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(){const baseUrl=<span class="cstat-no" title="statement not covered" >self.location?self.location.origin+self.location.pathname:'';<span class="cstat-no" title="statement not covered" ></span>self._importScriptPathPrefix=baseUrl.substring(0,baseUrl.lastIndexOf('/')+1);}</span>)();c</span>onst REMOTE_MODULE_FALLBACK_REVISION=<span class="cstat-no" title="statement not covered" >'@010ddcfda246975d194964ccf20038ebbdec6084';</span>var Runtime=<span class="cstat-no" title="statement not covered" >class{<span class="fstat-no" title="function not covered" >co</span>nstructor(descriptors){<span class="cstat-no" title="statement not covered" >this._modules=[];<span class="cstat-no" title="statement not covered" >t</span>his._modulesMap={};<span class="cstat-no" title="statement not covered" >t</span>his._extensions=[];<span class="cstat-no" title="statement not covered" >t</span>his._cachedTypeClasses={};<span class="cstat-no" title="statement not covered" >t</span>his._descriptorsMap={};<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;descriptors.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this._registerModule(descriptors[i]);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic loadResourcePromise(url){<span class="cstat-no" title="statement not covered" >return new Promise(load);f</span>unction <span class="fstat-no" title="function not covered" >load(</span>fulfill,reject){const xhr=<span class="cstat-no" title="statement not covered" >new XMLHttpRequest();<span class="cstat-no" title="statement not covered" ></span>xhr.open('GET',url,true);<span class="cstat-no" title="statement not covered" >x</span>hr.onreadystatechange=onreadystatechange;f</span>unction <span class="fstat-no" title="function not covered" >onreadystatechange(</span>e){<span class="cstat-no" title="statement not covered" >if(xhr.readyState!==XMLHttpRequest.DONE)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst status=<span class="cstat-no" title="statement not covered" >/^HTTP\/1.1 404/.test(e.target.response)?404:xhr.status;<span class="cstat-no" title="statement not covered" ></span>if([0,200,304].indexOf(status)===-1)</span>
+<span class="cstat-no" title="statement not covered" >reject(new Error('While loading from url '+url+' server responded with a status of '+status));e</span>lse
+<span class="cstat-no" title="statement not covered" >fulfill(e.target.response);}</span>
+<span class="cstat-no" title="statement not covered" >xhr.send(null);}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic loadResourcePromiseWithFallback(url){<span class="cstat-no" title="statement not covered" >return Runtime.loadResourcePromise(url).catch(<span class="fstat-no" title="function not covered" >er</span>r=&gt;{const urlWithFallbackVersion=<span class="cstat-no" title="statement not covered" >url.replace(/@[0-9a-f]{40}/,REMOTE_MODULE_FALLBACK_REVISION);<span class="cstat-no" title="statement not covered" ></span>if(urlWithFallbackVersion===url||!url.includes('audits2_worker_module'))</span></span>
+<span class="cstat-no" title="statement not covered" >throw err;<span class="cstat-no" title="statement not covered" >r</span>eturn Runtime.loadResourcePromise(urlWithFallbackVersion);}</span>);}
+<span class="fstat-no" title="function not covered" >st</span>atic normalizePath(path){<span class="cstat-no" title="statement not covered" >if(path.indexOf('..')===-1&amp;&amp;path.indexOf('.')===-1)</span>
+<span class="cstat-no" title="statement not covered" >return path;c</span>onst normalizedSegments=<span class="cstat-no" title="statement not covered" >[];</span>const segments=<span class="cstat-no" title="statement not covered" >path.split('/');<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;segments.length;i++){const segment=<span class="cstat-no" title="statement not covered" >segments[i];<span class="cstat-no" title="statement not covered" ></span>if(segment==='.')</span></span>
+<span class="cstat-no" title="statement not covered" >continue;e</span>lse <span class="cstat-no" title="statement not covered" >if(segment==='..')</span>
+<span class="cstat-no" title="statement not covered" >normalizedSegments.pop();e</span>lse <span class="cstat-no" title="statement not covered" >if(segment)</span>
+<span class="cstat-no" title="statement not covered" >normalizedSegments.push(segment);}</span>
+let normalizedPath=<span class="cstat-no" title="statement not covered" >normalizedSegments.join('/');<span class="cstat-no" title="statement not covered" ></span>if(normalizedPath[normalizedPath.length-1]==='/')</span>
+<span class="cstat-no" title="statement not covered" >return normalizedPath;<span class="cstat-no" title="statement not covered" >i</span>f(path[0]==='/'&amp;&amp;normalizedPath)</span>
+<span class="cstat-no" title="statement not covered" >normalizedPath='/'+normalizedPath;<span class="cstat-no" title="statement not covered" >i</span>f((path[path.length-1]==='/')||(segments[segments.length-1]==='.')||(segments[segments.length-1]==='..'))</span>
+<span class="cstat-no" title="statement not covered" >normalizedPath=normalizedPath+'/';<span class="cstat-no" title="statement not covered" >r</span>eturn normalizedPath;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _loadScriptsPromise(scriptNames,base){const promises=<span class="cstat-no" title="statement not covered" >[];</span>const urls=<span class="cstat-no" title="statement not covered" >[];</span>const sources=<span class="cstat-no" title="statement not covered" >new Array(scriptNames.length);</span>let scriptToEval=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;scriptNames.length;++i){const scriptName=<span class="cstat-no" title="statement not covered" >scriptNames[i];</span>let sourceURL=<span class="cstat-no" title="statement not covered" >(base||self._importScriptPathPrefix)+scriptName;</span>const schemaIndex=<span class="cstat-no" title="statement not covered" >sourceURL.indexOf('://')+3;</span>let pathIndex=<span class="cstat-no" title="statement not covered" >sourceURL.indexOf('/',schemaIndex);<span class="cstat-no" title="statement not covered" ></span>if(pathIndex===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >pathIndex=sourceURL.length;<span class="cstat-no" title="statement not covered" >s</span>ourceURL=sourceURL.substring(0,pathIndex)+Runtime.normalizePath(sourceURL.substring(pathIndex));<span class="cstat-no" title="statement not covered" >i</span>f(_loadedScripts[sourceURL])</span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >u</span>rls.push(sourceURL);c</span>onst loadResourcePromise=<span class="cstat-no" title="statement not covered" >base?Runtime.loadResourcePromiseWithFallback(sourceURL):Runtime.loadResourcePromise(sourceURL);<span class="cstat-no" title="statement not covered" ></span>promises.push(loadResourcePromise.then(scriptSourceLoaded.bind(null,i),scriptSourceLoaded.bind(null,i,undefined)));}</span>
+<span class="cstat-no" title="statement not covered" >return Promise.all(promises).then(undefined);f</span>unction <span class="fstat-no" title="function not covered" >scriptSourceLoaded(</span>scriptNumber,scriptSource){<span class="cstat-no" title="statement not covered" >sources[scriptNumber]=scriptSource||'';<span class="cstat-no" title="statement not covered" >w</span>hile(typeof sources[scriptToEval]!=='undefined'){<span class="cstat-no" title="statement not covered" >evaluateScript(urls[scriptToEval],sources[scriptToEval]);<span class="cstat-no" title="statement not covered" >+</span>+scriptToEval;}</span>}</span>
+function <span class="fstat-no" title="function not covered" >evaluateScript(</span>sourceURL,scriptSource){<span class="cstat-no" title="statement not covered" >_loadedScripts[sourceURL]=true;<span class="cstat-no" title="statement not covered" >i</span>f(!scriptSource){<span class="cstat-no" title="statement not covered" >console.error('Empty response arrived for script \''+sourceURL+'\'');<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >self.eval(scriptSource+'\n//# sourceURL='+sourceURL);}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic _loadResourceIntoCache(url,appendSourceURL){<span class="cstat-no" title="statement not covered" >return Runtime.loadResourcePromise(url).then(cacheResource.bind(this,url),cacheResource.bind(this,url,undefined));f</span>unction <span class="fstat-no" title="function not covered" >cacheResource(</span>path,content){<span class="cstat-no" title="statement not covered" >if(!content){<span class="cstat-no" title="statement not covered" >console.error('Failed to load resource: '+path);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const sourceURL=<span class="cstat-no" title="statement not covered" >appendSourceURL?Runtime.resolveSourceURL(path):'';<span class="cstat-no" title="statement not covered" ></span>Runtime.cachedResources[path]=content+sourceURL;}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic async appStarted(){<span class="cstat-no" title="statement not covered" >return Runtime._appStartedPromise;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic async startApplication(appName){<span class="cstat-no" title="statement not covered" >console.timeStamp('Runtime.startApplication');c</span>onst allDescriptorsByName=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;allDescriptors.length;++i){const d=<span class="cstat-no" title="statement not covered" >allDescriptors[i];<span class="cstat-no" title="statement not covered" ></span>allDescriptorsByName[d['name']]=d;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!applicationDescriptor){let data=<span class="cstat-no" title="statement not covered" >await Runtime.loadResourcePromise(appName+'.json');<span class="cstat-no" title="statement not covered" ></span>applicationDescriptor=JSON.parse(data);l</span>et descriptor=<span class="cstat-no" title="statement not covered" >applicationDescriptor;<span class="cstat-no" title="statement not covered" ></span>while(descriptor.extends){<span class="cstat-no" title="statement not covered" >data=await Runtime.loadResourcePromise(descriptor.extends+'.json');<span class="cstat-no" title="statement not covered" >d</span>escriptor=JSON.parse(data);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor.modules=descriptor.modules.concat(applicationDescriptor.modules);}</span>}</span></span>
+const configuration=<span class="cstat-no" title="statement not covered" >applicationDescriptor.modules;</span>const moduleJSONPromises=<span class="cstat-no" title="statement not covered" >[];</span>const coreModuleNames=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;configuration.length;++i){const descriptor=<span class="cstat-no" title="statement not covered" >configuration[i];</span>const name=<span class="cstat-no" title="statement not covered" >descriptor['name'];</span>const moduleJSON=<span class="cstat-no" title="statement not covered" >allDescriptorsByName[name];<span class="cstat-no" title="statement not covered" ></span>if(moduleJSON)</span></span>
+<span class="cstat-no" title="statement not covered" >moduleJSONPromises.push(Promise.resolve(moduleJSON));e</span>lse
+<span class="cstat-no" title="statement not covered" >moduleJSONPromises.push(Runtime.loadResourcePromise(name+'/module.json').then(JSON.parse.bind(JSON)));<span class="cstat-no" title="statement not covered" >i</span>f(descriptor['type']==='autostart')</span>
+<span class="cstat-no" title="statement not covered" >coreModuleNames.push(name);}</span>
+const moduleDescriptors=<span class="cstat-no" title="statement not covered" >await Promise.all(moduleJSONPromises);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;moduleDescriptors.length;++i){<span class="cstat-no" title="statement not covered" >moduleDescriptors[i].name=configuration[i]['name'];<span class="cstat-no" title="statement not covered" >m</span>oduleDescriptors[i].condition=configuration[i]['condition'];<span class="cstat-no" title="statement not covered" >m</span>oduleDescriptors[i].remote=configuration[i]['type']==='remote';}</span></span>
+<span class="cstat-no" title="statement not covered" >self.runtime=new Runtime(moduleDescriptors);<span class="cstat-no" title="statement not covered" >i</span>f(coreModuleNames)</span>
+<span class="cstat-no" title="statement not covered" >await self.runtime._loadAutoStartModules(coreModuleNames);<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromiseCallback();}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic startWorker(appName){<span class="cstat-no" title="statement not covered" >return Runtime.startApplication(appName).then(sendWorkerReady);f</span>unction <span class="fstat-no" title="function not covered" >sendWorkerReady(</span>){<span class="cstat-no" title="statement not covered" >self.postMessage('workerReady');}</span>}
+<span class="fstat-no" title="function not covered" >st</span>atic queryParam(name){<span class="cstat-no" title="statement not covered" >return Runtime._queryParamsObject.get(name);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic queryParamsString(){<span class="cstat-no" title="statement not covered" >return location.search;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _experimentsSetting(){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >return(JSON.parse(self.localStorage&amp;&amp;self.localStorage['experiments']?self.localStorage['experiments']:'{}'));}</span>catch(e){<span class="cstat-no" title="statement not covered" >console.error('Failed to parse localStorage[\'experiments\']');<span class="cstat-no" title="statement not covered" >r</span>eturn{};}</span>}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _assert(value,message){<span class="cstat-no" title="statement not covered" >if(value)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >R</span>untime._originalAssert.call(Runtime._console,value,message+' '+new Error().stack);}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic setPlatform(platform){<span class="cstat-no" title="statement not covered" >Runtime._platform=platform;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic _isDescriptorEnabled(descriptor){const activatorExperiment=<span class="cstat-no" title="statement not covered" >descriptor['experiment'];<span class="cstat-no" title="statement not covered" ></span>if(activatorExperiment==='*')</span>
+<span class="cstat-no" title="statement not covered" >return Runtime.experiments.supportEnabled();<span class="cstat-no" title="statement not covered" >i</span>f(activatorExperiment&amp;&amp;activatorExperiment.startsWith('!')&amp;&amp;Runtime.experiments.isEnabled(activatorExperiment.substring(1)))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(activatorExperiment&amp;&amp;!activatorExperiment.startsWith('!')&amp;&amp;!Runtime.experiments.isEnabled(activatorExperiment))</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst condition=<span class="cstat-no" title="statement not covered" >descriptor['condition'];<span class="cstat-no" title="statement not covered" ></span>if(condition&amp;&amp;!condition.startsWith('!')&amp;&amp;!Runtime.queryParam(condition))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(condition&amp;&amp;condition.startsWith('!')&amp;&amp;Runtime.queryParam(condition.substring(1)))</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>
+<span class="fstat-no" title="function not covered" >st</span>atic resolveSourceURL(path){let sourceURL=<span class="cstat-no" title="statement not covered" >self.location.href;<span class="cstat-no" title="statement not covered" ></span>if(self.location.search)</span>
+<span class="cstat-no" title="statement not covered" >sourceURL=sourceURL.replace(self.location.search,'');<span class="cstat-no" title="statement not covered" >s</span>ourceURL=sourceURL.substring(0,sourceURL.lastIndexOf('/')+1)+path;<span class="cstat-no" title="statement not covered" >r</span>eturn'\n/*# sourceURL='+sourceURL+' */';}</span>
+<span class="fstat-no" title="function not covered" >us</span>eTestBase(){<span class="cstat-no" title="statement not covered" >Runtime._remoteBase='http://localhost:8000/inspector-sources/';<span class="cstat-no" title="statement not covered" >i</span>f(Runtime.queryParam('debugFrontend'))</span>
+<span class="cstat-no" title="statement not covered" >Runtime._remoteBase+='debug/';}</span>
+<span class="fstat-no" title="function not covered" >_r</span>egisterModule(descriptor){const module=<span class="cstat-no" title="statement not covered" >new Runtime.Module(this,descriptor);<span class="cstat-no" title="statement not covered" ></span>this._modules.push(module);<span class="cstat-no" title="statement not covered" >t</span>his._modulesMap[descriptor['name']]=module;}</span>
+<span class="fstat-no" title="function not covered" >lo</span>adModulePromise(moduleName){<span class="cstat-no" title="statement not covered" >return this._modulesMap[moduleName]._loadPromise();}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadAutoStartModules(moduleNames){const promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;moduleNames.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >promises.push(this.loadModulePromise(moduleNames[i]));<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.all(promises);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckExtensionApplicability(extension,predicate){<span class="cstat-no" title="statement not covered" >if(!predicate)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst contextTypes=<span class="cstat-no" title="statement not covered" >extension.descriptor().contextTypes;<span class="cstat-no" title="statement not covered" ></span>if(!contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;contextTypes.length;++i){const contextType=<span class="cstat-no" title="statement not covered" >this._resolve(contextTypes[i]);</span>const isMatching=<span class="cstat-no" title="statement not covered" >!!contextType&amp;&amp;predicate(contextType);<span class="cstat-no" title="statement not covered" ></span>if(isMatching)</span></span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="fstat-no" title="function not covered" >is</span>ExtensionApplicableToContext(extension,context){<span class="cstat-no" title="statement not covered" >if(!context)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >r</span>eturn this._checkExtensionApplicability(extension,isInstanceOf);f</span>unction <span class="fstat-no" title="function not covered" >isInstanceOf(</span>targetType){<span class="cstat-no" title="statement not covered" >return context instanceof targetType;}</span>}
+<span class="fstat-no" title="function not covered" >is</span>ExtensionApplicableToContextTypes(extension,currentContextTypes){<span class="cstat-no" title="statement not covered" >if(!extension.descriptor().contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >r</span>eturn this._checkExtensionApplicability(extension,currentContextTypes?isContextTypeKnown:null);f</span>unction <span class="fstat-no" title="function not covered" >isContextTypeKnown(</span>targetType){<span class="cstat-no" title="statement not covered" >return currentContextTypes.has(targetType);}</span>}
+<span class="fstat-no" title="function not covered" >ex</span>tensions(type,context,sortByTitle){<span class="cstat-no" title="statement not covered" >return this._extensions.filter(filter).sort(sortByTitle?titleComparator:orderComparator);f</span>unction <span class="fstat-no" title="function not covered" >filter(</span>extension){<span class="cstat-no" title="statement not covered" >if(extension._type!==type&amp;&amp;extension._typeClass()!==type)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(!extension.enabled())</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn!context||extension.isApplicable(context);}</span>
+function <span class="fstat-no" title="function not covered" >orderComparator(</span>extension1,extension2){const order1=<span class="cstat-no" title="statement not covered" >extension1.descriptor()['order']||0;</span>const order2=<span class="cstat-no" title="statement not covered" >extension2.descriptor()['order']||0;<span class="cstat-no" title="statement not covered" ></span>return order1-order2;}</span>
+function <span class="fstat-no" title="function not covered" >titleComparator(</span>extension1,extension2){const title1=<span class="cstat-no" title="statement not covered" >extension1.title()||'';</span>const title2=<span class="cstat-no" title="statement not covered" >extension2.title()||'';<span class="cstat-no" title="statement not covered" ></span>return title1.localeCompare(title2);}</span>}
+<span class="fstat-no" title="function not covered" >ex</span>tension(type,context){<span class="cstat-no" title="statement not covered" >return this.extensions(type,context)[0]||null;}</span>
+<span class="fstat-no" title="function not covered" >al</span>lInstances(type,context){<span class="cstat-no" title="statement not covered" >return Promise.all(this.extensions(type,context).map(<span class="fstat-no" title="function not covered" >ex</span>tension=&gt;<span class="cstat-no" title="statement not covered" >extension.instance())</span>);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>esolve(typeName){<span class="cstat-no" title="statement not covered" >if(!this._cachedTypeClasses[typeName]){const path=<span class="cstat-no" title="statement not covered" >typeName.split('.');</span>let object=<span class="cstat-no" title="statement not covered" >self;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;object&amp;&amp;(i&lt;path.length);++i)</span></span>
+<span class="cstat-no" title="statement not covered" >object=object[path[i]];<span class="cstat-no" title="statement not covered" >i</span>f(object)</span>
+<span class="cstat-no" title="statement not covered" >this._cachedTypeClasses[typeName]=(object);}</span>
+<span class="cstat-no" title="statement not covered" >return this._cachedTypeClasses[typeName]||null;}</span>
+<span class="fstat-no" title="function not covered" >sh</span>aredInstance(constructorFunction){<span class="cstat-no" title="statement not covered" >if(Runtime._instanceSymbol in constructorFunction&amp;&amp;Object.getOwnPropertySymbols(constructorFunction).includes(Runtime._instanceSymbol))</span>
+<span class="cstat-no" title="statement not covered" >return constructorFunction[Runtime._instanceSymbol];c</span>onst instance=<span class="cstat-no" title="statement not covered" >new constructorFunction();<span class="cstat-no" title="statement not covered" ></span>constructorFunction[Runtime._instanceSymbol]=instance;<span class="cstat-no" title="statement not covered" >r</span>eturn instance;}</span>};<span class="cstat-no" title="statement not covered" >Runtime._queryParamsObject=new URLSearchParams(Runtime.queryParamsString());<span class="cstat-no" title="statement not covered" >R</span>untime._instanceSymbol=Symbol('instance');<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources={__proto__:null};<span class="cstat-no" title="statement not covered" >R</span>untime._console=console;<span class="cstat-no" title="statement not covered" >R</span>untime._originalAssert=console.assert;<span class="cstat-no" title="statement not covered" >R</span>untime._platform='';<span class="cstat-no" title="statement not covered" >R</span>untime.ModuleDescriptor=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.name;<span class="cstat-no" title="statement not covered" >t</span>his.extensions;<span class="cstat-no" title="statement not covered" >t</span>his.dependencies;<span class="cstat-no" title="statement not covered" >t</span>his.scripts;<span class="cstat-no" title="statement not covered" >t</span>his.condition;<span class="cstat-no" title="statement not covered" >t</span>his.remote;}</span>};<span class="cstat-no" title="statement not covered" >R</span>untime.ExtensionDescriptor=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this.type;<span class="cstat-no" title="statement not covered" >t</span>his.className;<span class="cstat-no" title="statement not covered" >t</span>his.factoryName;<span class="cstat-no" title="statement not covered" >t</span>his.contextTypes;}</span>};<span class="cstat-no" title="statement not covered" >R</span>untime.Module=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(manager,descriptor){<span class="cstat-no" title="statement not covered" >this._manager=manager;<span class="cstat-no" title="statement not covered" >t</span>his._descriptor=descriptor;<span class="cstat-no" title="statement not covered" >t</span>his._name=descriptor.name;<span class="cstat-no" title="statement not covered" >t</span>his._extensions=[];<span class="cstat-no" title="statement not covered" >t</span>his._extensionsByClassName=new Map();c</span>onst extensions=(<span class="cstat-no" title="statement not covered" >descriptor.extensions)</span>;<span class="cstat-no" title="statement not covered" >for(let i=0;extensions&amp;&amp;i&lt;extensions.length;++i){const extension=<span class="cstat-no" title="statement not covered" >new Runtime.Extension(this,extensions[i]);<span class="cstat-no" title="statement not covered" ></span>this._manager._extensions.push(extension);<span class="cstat-no" title="statement not covered" >t</span>his._extensions.push(extension);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._loadedForTest=false;}</span>
+<span class="fstat-no" title="function not covered" >na</span>me(){<span class="cstat-no" title="statement not covered" >return this._name;}</span>
+<span class="fstat-no" title="function not covered" >en</span>abled(){<span class="cstat-no" title="statement not covered" >return Runtime._isDescriptorEnabled(this._descriptor);}</span>
+<span class="fstat-no" title="function not covered" >re</span>source(name){const fullName=<span class="cstat-no" title="statement not covered" >this._name+'/'+name;</span>const content=<span class="cstat-no" title="statement not covered" >Runtime.cachedResources[fullName];<span class="cstat-no" title="statement not covered" ></span>if(!content)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error(fullName+' not preloaded. Check module.json');<span class="cstat-no" title="statement not covered" >r</span>eturn content;}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadPromise(){<span class="cstat-no" title="statement not covered" >if(!this.enabled())</span>
+<span class="cstat-no" title="statement not covered" >return Promise.reject(new Error('Module '+this._name+' is not enabled'));<span class="cstat-no" title="statement not covered" >i</span>f(this._pendingLoadPromise)</span>
+<span class="cstat-no" title="statement not covered" >return this._pendingLoadPromise;c</span>onst dependencies=<span class="cstat-no" title="statement not covered" >this._descriptor.dependencies;</span>const dependencyPromises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;dependencies&amp;&amp;i&lt;dependencies.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >dependencyPromises.push(this._manager._modulesMap[dependencies[i]]._loadPromise());<span class="cstat-no" title="statement not covered" >t</span>his._pendingLoadPromise=Promise.all(dependencyPromises).then(this._loadResources.bind(this)).then(this._loadScripts.bind(this)).then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >this._loadedForTest=true)</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn this._pendingLoadPromise;}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadResources(){const resources=<span class="cstat-no" title="statement not covered" >this._descriptor['resources'];<span class="cstat-no" title="statement not covered" ></span>if(!resources||!resources.length)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();c</span>onst promises=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;resources.length;++i){const url=<span class="cstat-no" title="statement not covered" >this._modularizeURL(resources[i]);<span class="cstat-no" title="statement not covered" ></span>promises.push(Runtime._loadResourceIntoCache(url,true));}</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.all(promises).then(undefined);}</span>
+<span class="fstat-no" title="function not covered" >_l</span>oadScripts(){<span class="cstat-no" title="statement not covered" >if(!this._descriptor.scripts||!this._descriptor.scripts.length)</span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve();c</span>onst specialCases=<span class="cstat-no" title="statement not covered" >{'sdk':'SDK','js_sdk':'JSSDK','browser_sdk':'BrowserSDK','ui':'UI','object_ui':'ObjectUI','javascript_metadata':'JavaScriptMetadata','perf_ui':'PerfUI','har_importer':'HARImporter','sdk_test_runner':'SDKTestRunner','cpu_profiler_test_runner':'CPUProfilerTestRunner'};</span>const namespace=<span class="cstat-no" title="statement not covered" >specialCases[this._name]||this._name.split('_').map(<span class="fstat-no" title="function not covered" >a=</span>&gt;<span class="cstat-no" title="statement not covered" >a.substring(0,1).toUpperCase()+a.substring(1))</span>.join('');<span class="cstat-no" title="statement not covered" ></span>self[namespace]=self[namespace]||{};<span class="cstat-no" title="statement not covered" >r</span>eturn Runtime._loadScriptsPromise(this._descriptor.scripts.map(this._modularizeURL,this),this._remoteBase());}</span>
+<span class="fstat-no" title="function not covered" >_m</span>odularizeURL(resourceName){<span class="cstat-no" title="statement not covered" >return Runtime.normalizePath(this._name+'/'+resourceName);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoteBase(){<span class="cstat-no" title="statement not covered" >return!Runtime.queryParam('debugFrontend')&amp;&amp;this._descriptor.remote&amp;&amp;Runtime._remoteBase||undefined;}</span>
+<span class="fstat-no" title="function not covered" >su</span>bstituteURL(value){const base=<span class="cstat-no" title="statement not covered" >this._remoteBase()||'';<span class="cstat-no" title="statement not covered" ></span>return value.replace(/@url\(([^\)]*?)\)/g,convertURL.bind(this));f</span>unction <span class="fstat-no" title="function not covered" >convertURL(</span>match,url){<span class="cstat-no" title="statement not covered" >return base+this._modularizeURL(url);}</span>}};<span class="cstat-no" title="statement not covered" >Runtime.Extension=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(module,descriptor){<span class="cstat-no" title="statement not covered" >this._module=module;<span class="cstat-no" title="statement not covered" >t</span>his._descriptor=descriptor;<span class="cstat-no" title="statement not covered" >t</span>his._type=descriptor.type;<span class="cstat-no" title="statement not covered" >t</span>his._hasTypeClass=this._type.charAt(0)==='@';<span class="cstat-no" title="statement not covered" >t</span>his._className=descriptor.className||null;<span class="cstat-no" title="statement not covered" >t</span>his._factoryName=descriptor.factoryName||null;}</span></span>
+<span class="fstat-no" title="function not covered" >de</span>scriptor(){<span class="cstat-no" title="statement not covered" >return this._descriptor;}</span>
+<span class="fstat-no" title="function not covered" >mo</span>dule(){<span class="cstat-no" title="statement not covered" >return this._module;}</span>
+<span class="fstat-no" title="function not covered" >en</span>abled(){<span class="cstat-no" title="statement not covered" >return this._module.enabled()&amp;&amp;Runtime._isDescriptorEnabled(this.descriptor());}</span>
+<span class="fstat-no" title="function not covered" >_t</span>ypeClass(){<span class="cstat-no" title="statement not covered" >if(!this._hasTypeClass)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn this._module._manager._resolve(this._type.substring(1));}</span>
+<span class="fstat-no" title="function not covered" >is</span>Applicable(context){<span class="cstat-no" title="statement not covered" >return this._module._manager.isExtensionApplicableToContext(this,context);}</span>
+<span class="fstat-no" title="function not covered" >in</span>stance(){<span class="cstat-no" title="statement not covered" >return this._module._loadPromise().then(this._createInstance.bind(this));}</span>
+<span class="fstat-no" title="function not covered" >ca</span>nInstantiate(){<span class="cstat-no" title="statement not covered" >return!!(this._className||this._factoryName);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateInstance(){const className=<span class="cstat-no" title="statement not covered" >this._className||this._factoryName;<span class="cstat-no" title="statement not covered" ></span>if(!className)</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Could not instantiate extension with no class');c</span>onst constructorFunction=<span class="cstat-no" title="statement not covered" >self.eval((className));<span class="cstat-no" title="statement not covered" ></span>if(!(constructorFunction instanceof Function))</span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Could not instantiate: '+className);<span class="cstat-no" title="statement not covered" >i</span>f(this._className)</span>
+<span class="cstat-no" title="statement not covered" >return this._module._manager.sharedInstance(constructorFunction);<span class="cstat-no" title="statement not covered" >r</span>eturn new constructorFunction(this);}</span>
+<span class="fstat-no" title="function not covered" >ti</span>tle(){<span class="cstat-no" title="statement not covered" >return this._descriptor['title-'+Runtime._platform]||this._descriptor['title'];}</span>
+<span class="fstat-no" title="function not covered" >ha</span>sContextType(contextType){const contextTypes=<span class="cstat-no" title="statement not covered" >this.descriptor().contextTypes;<span class="cstat-no" title="statement not covered" ></span>if(!contextTypes)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;contextTypes.length;++i){<span class="cstat-no" title="statement not covered" >if(contextType===this._module._manager._resolve(contextTypes[i]))</span></span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>};<span class="cstat-no" title="statement not covered" >Runtime.ExperimentsSupport=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._supportEnabled=Runtime.queryParam('experiments')!==null;<span class="cstat-no" title="statement not covered" >t</span>his._experiments=[];<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames={};<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently={};}</span></span>
+<span class="fstat-no" title="function not covered" >al</span>lConfigurableExperiments(){const result=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._experiments.length;i++){const experiment=<span class="cstat-no" title="statement not covered" >this._experiments[i];<span class="cstat-no" title="statement not covered" ></span>if(!this._enabledTransiently[experiment.name])</span></span>
+<span class="cstat-no" title="statement not covered" >result.push(experiment);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>
+<span class="fstat-no" title="function not covered" >su</span>pportEnabled(){<span class="cstat-no" title="statement not covered" >return this._supportEnabled;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>etExperimentsSetting(value){<span class="cstat-no" title="statement not covered" >if(!self.localStorage)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >s</span>elf.localStorage['experiments']=JSON.stringify(value);}</span>
+<span class="fstat-no" title="function not covered" >re</span>gister(experimentName,experimentTitle,hidden){<span class="cstat-no" title="statement not covered" >Runtime._assert(!this._experimentNames[experimentName],'Duplicate registration of experiment '+experimentName);<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames[experimentName]=true;<span class="cstat-no" title="statement not covered" >t</span>his._experiments.push(new Runtime.Experiment(this,experimentName,experimentTitle,!!hidden));}</span>
+<span class="fstat-no" title="function not covered" >is</span>Enabled(experimentName){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);<span class="cstat-no" title="statement not covered" >i</span>f(Runtime._experimentsSetting()[experimentName]===false)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(this._enabledTransiently[experimentName])</span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >i</span>f(!this.supportEnabled())</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn!!Runtime._experimentsSetting()[experimentName];}</span>
+<span class="fstat-no" title="function not covered" >se</span>tEnabled(experimentName,enabled){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);c</span>onst experimentsSetting=<span class="cstat-no" title="statement not covered" >Runtime._experimentsSetting();<span class="cstat-no" title="statement not covered" ></span>experimentsSetting[experimentName]=enabled;<span class="cstat-no" title="statement not covered" >t</span>his._setExperimentsSetting(experimentsSetting);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tDefaultExperiments(experimentNames){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;experimentNames.length;++i){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentNames[i]);<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently[experimentNames[i]]=true;}</span>}</span>
+<span class="fstat-no" title="function not covered" >en</span>ableForTest(experimentName){<span class="cstat-no" title="statement not covered" >this._checkExperiment(experimentName);<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently[experimentName]=true;}</span>
+<span class="fstat-no" title="function not covered" >cl</span>earForTest(){<span class="cstat-no" title="statement not covered" >this._experiments=[];<span class="cstat-no" title="statement not covered" >t</span>his._experimentNames={};<span class="cstat-no" title="statement not covered" >t</span>his._enabledTransiently={};}</span>
+<span class="fstat-no" title="function not covered" >cl</span>eanUpStaleExperiments(){const experimentsSetting=<span class="cstat-no" title="statement not covered" >Runtime._experimentsSetting();</span>const cleanedUpExperimentSetting=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this._experiments.length;++i){const experimentName=<span class="cstat-no" title="statement not covered" >this._experiments[i].name;<span class="cstat-no" title="statement not covered" ></span>if(experimentsSetting[experimentName])</span></span>
+<span class="cstat-no" title="statement not covered" >cleanedUpExperimentSetting[experimentName]=true;}</span>
+<span class="cstat-no" title="statement not covered" >this._setExperimentsSetting(cleanedUpExperimentSetting);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>heckExperiment(experimentName){<span class="cstat-no" title="statement not covered" >Runtime._assert(this._experimentNames[experimentName],'Unknown experiment '+experimentName);}</span>};<span class="cstat-no" title="statement not covered" >Runtime.Experiment=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(experiments,name,title,hidden){<span class="cstat-no" title="statement not covered" >this.name=name;<span class="cstat-no" title="statement not covered" >t</span>his.title=title;<span class="cstat-no" title="statement not covered" >t</span>his.hidden=hidden;<span class="cstat-no" title="statement not covered" >t</span>his._experiments=experiments;}</span></span>
+<span class="fstat-no" title="function not covered" >is</span>Enabled(){<span class="cstat-no" title="statement not covered" >return this._experiments.isEnabled(this.name);}</span>
+<span class="fstat-no" title="function not covered" >se</span>tEnabled(enabled){<span class="cstat-no" title="statement not covered" >this._experiments.setEnabled(this.name,enabled);}</span>};<span class="cstat-no" title="statement not covered" >Runtime.experiments=new Runtime.ExperimentsSupport();<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromiseCallback;<span class="cstat-no" title="statement not covered" >R</span>untime._appStartedPromise=new Promise(<span class="fstat-no" title="function not covered" >fu</span>lfil=&gt;<span class="cstat-no" title="statement not covered" >Runtime._appStartedPromiseCallback=fulfil)</span>;<span class="cstat-no" title="statement not covered" >R</span>untime._remoteBase;<span class="cstat-no" title="statement not covered" >(</span>function <span class="fstat-no" title="function not covered" >validateRemoteBase(</span>){<span class="cstat-no" title="statement not covered" >if(location.href.startsWith('chrome-devtools://devtools/bundled/')&amp;&amp;Runtime.queryParam('remoteBase')){const versionMatch=<span class="cstat-no" title="statement not covered" >/\/serve_file\/(@[0-9a-zA-Z]+)\/?$/.exec(Runtime.queryParam('remoteBase'));<span class="cstat-no" title="statement not covered" ></span>if(versionMatch)</span></span></span>
+<span class="cstat-no" title="statement not covered" >Runtime._remoteBase=`${location.origin}/remote/serve_file/${versionMatch[1]}/`;}</span>})();function <span class="fstat-no" title="function not covered" >ServicePort(</span>){}
+<span class="cstat-no" title="statement not covered" >ServicePort.prototype={setHandlers(messageHandler,closeHandler){},send(message){},close(){}};v</span>ar runtime;<span class="cstat-no" title="statement not covered" >allDescriptors.push(...[{"dependencies":[],"name":"platform"},{"dependencies":["platform","dom_extension"],"name":"toolbox_bootstrap"},{"dependencies":["platform"],"name":"dom_extension"}]);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor={"has_html":true,"modules":[{"type":"autostart","name":"platform"},{"type":"autostart","name":"toolbox_bootstrap"},{"type":"autostart","name":"dom_extension"}]}</span>
+<span class="cstat-no" title="statement not covered" >self['Platform']=self['Platform']||{};l</span>et ArrayLike;function <span class="fstat-no" title="function not covered" >mod(</span>m,n){<span class="cstat-no" title="statement not covered" >return((m%n)+n)%n;}</span>
+<span class="cstat-no" title="statement not covered" >String.prototype.findAll=<span class="fstat-no" title="function not covered" >fu</span>nction(string){const matches=<span class="cstat-no" title="statement not covered" >[];</span>let i=<span class="cstat-no" title="statement not covered" >this.indexOf(string);<span class="cstat-no" title="statement not covered" ></span>while(i!==-1){<span class="cstat-no" title="statement not covered" >matches.push(i);<span class="cstat-no" title="statement not covered" >i</span>=this.indexOf(string,i+string.length);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return matches;}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.reverse=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.split('').reverse().join('');}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.replaceControlCharacters=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u0080-\u009f]/g,'�');}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.isWhitespace=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return/^\s*$/.test(this);}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.computeLineEndings=<span class="fstat-no" title="function not covered" >fu</span>nction(){const endings=<span class="cstat-no" title="statement not covered" >this.findAll('\n');<span class="cstat-no" title="statement not covered" ></span>endings.push(this.length);<span class="cstat-no" title="statement not covered" >r</span>eturn endings;}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.escapeCharacters=<span class="fstat-no" title="function not covered" >fu</span>nction(chars){let foundChar=<span class="cstat-no" title="statement not covered" >false;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;chars.length;++i){<span class="cstat-no" title="statement not covered" >if(this.indexOf(chars.charAt(i))!==-1){<span class="cstat-no" title="statement not covered" >foundChar=true;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(!foundChar)</span>
+<span class="cstat-no" title="statement not covered" >return String(this);l</span>et result=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this.length;++i){<span class="cstat-no" title="statement not covered" >if(chars.indexOf(this.charAt(i))!==-1)</span></span>
+<span class="cstat-no" title="statement not covered" >result+='\\';<span class="cstat-no" title="statement not covered" >r</span>esult+=this.charAt(i);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;<span class="cstat-no" title="statement not covered" >String.regexSpecialCharacters=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return'^[]{}()\\.^$*+?|-,';}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.escapeForRegExp=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.escapeCharacters(String.regexSpecialCharacters());}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.filterRegex=<span class="fstat-no" title="function not covered" >fu</span>nction(query){const toEscape=<span class="cstat-no" title="statement not covered" >String.regexSpecialCharacters();</span>let regexString=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;query.length;++i){let c=<span class="cstat-no" title="statement not covered" >query.charAt(i);<span class="cstat-no" title="statement not covered" ></span>if(toEscape.indexOf(c)!==-1)</span></span></span>
+<span class="cstat-no" title="statement not covered" >c='\\'+c;<span class="cstat-no" title="statement not covered" >i</span>f(i)</span>
+<span class="cstat-no" title="statement not covered" >regexString+='[^\\0'+c+']*';<span class="cstat-no" title="statement not covered" >r</span>egexString+=c;}</span>
+<span class="cstat-no" title="statement not covered" >return new RegExp(regexString,'i');}</span>;<span class="cstat-no" title="statement not covered" >String.escapeInvalidUnicodeCharacters=<span class="fstat-no" title="function not covered" >fu</span>nction(text){<span class="cstat-no" title="statement not covered" >if(!String._invalidCharactersRegExp){let invalidCharacters=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>for(let i=0xfffe;i&lt;=0x10ffff;i+=0x10000)</span></span></span>
+<span class="cstat-no" title="statement not covered" >invalidCharacters+=String.fromCodePoint(i,i+1);<span class="cstat-no" title="statement not covered" >S</span>tring._invalidCharactersRegExp=new RegExp(`[${invalidCharacters}\uD800-\uDFFF\uFDD0-\uFDEF]`,'gu');}</span>
+let result=<span class="cstat-no" title="statement not covered" >'';</span>let lastPos=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>while(true){const match=<span class="cstat-no" title="statement not covered" >String._invalidCharactersRegExp.exec(text);<span class="cstat-no" title="statement not covered" ></span>if(!match)</span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >r</span>esult+=text.substring(lastPos,match.index)+'\\u'+text.charCodeAt(match.index).toString(16);<span class="cstat-no" title="statement not covered" >i</span>f(match.index+1&lt;String._invalidCharactersRegExp.lastIndex)</span>
+<span class="cstat-no" title="statement not covered" >result+='\\u'+text.charCodeAt(match.index+1).toString(16);<span class="cstat-no" title="statement not covered" >l</span>astPos=String._invalidCharactersRegExp.lastIndex;}</span>
+<span class="cstat-no" title="statement not covered" >return result+text.substring(lastPos);}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.escapeHTML=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.replace(/&amp;/g,'&amp;amp;').replace(/&lt;/g,'&amp;lt;').replace(/&gt;/g,'&amp;gt;').replace(/"/g,'&amp;quot;');}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.unescapeHTML=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.replace(/&amp;lt;/g,'&lt;').replace(/&amp;gt;/g,'&gt;').replace(/&amp;#58;/g,':').replace(/&amp;quot;/g,'"').replace(/&amp;#60;/g,'&lt;').replace(/&amp;#62;/g,'&gt;').replace(/&amp;amp;/g,'&amp;');}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.collapseWhitespace=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.replace(/[\s\xA0]+/g,' ');}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.trimMiddle=<span class="fstat-no" title="function not covered" >fu</span>nction(maxLength){<span class="cstat-no" title="statement not covered" >if(this.length&lt;=maxLength)</span></span>
+<span class="cstat-no" title="statement not covered" >return String(this);l</span>et leftHalf=<span class="cstat-no" title="statement not covered" >maxLength&gt;&gt;1;</span>let rightHalf=<span class="cstat-no" title="statement not covered" >maxLength-leftHalf-1;<span class="cstat-no" title="statement not covered" ></span>if(this.codePointAt(this.length-rightHalf-1)&gt;=0x10000){<span class="cstat-no" title="statement not covered" >--rightHalf;<span class="cstat-no" title="statement not covered" >+</span>+leftHalf;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(leftHalf&gt;0&amp;&amp;this.codePointAt(leftHalf-1)&gt;=0x10000)</span>
+<span class="cstat-no" title="statement not covered" >--leftHalf;<span class="cstat-no" title="statement not covered" >r</span>eturn this.substr(0,leftHalf)+'\u2026'+this.substr(this.length-rightHalf,rightHalf);}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.trimEnd=<span class="fstat-no" title="function not covered" >fu</span>nction(maxLength){<span class="cstat-no" title="statement not covered" >if(this.length&lt;=maxLength)</span></span>
+<span class="cstat-no" title="statement not covered" >return String(this);<span class="cstat-no" title="statement not covered" >r</span>eturn this.substr(0,maxLength-1)+'\u2026';}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.trimURL=<span class="fstat-no" title="function not covered" >fu</span>nction(baseURLDomain){let result=<span class="cstat-no" title="statement not covered" >this.replace(/^(https|http|file):\/\//i,'');<span class="cstat-no" title="statement not covered" ></span>if(baseURLDomain){<span class="cstat-no" title="statement not covered" >if(result.toLowerCase().startsWith(baseURLDomain.toLowerCase()))</span></span></span>
+<span class="cstat-no" title="statement not covered" >result=result.substr(baseURLDomain.length);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.toTitleCase=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.substring(0,1).toUpperCase()+this.substring(1);}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.compareTo=<span class="fstat-no" title="function not covered" >fu</span>nction(other){<span class="cstat-no" title="statement not covered" >if(this&gt;other)</span></span>
+<span class="cstat-no" title="statement not covered" >return 1;<span class="cstat-no" title="statement not covered" >i</span>f(this&lt;other)</span>
+<span class="cstat-no" title="statement not covered" >return-1;<span class="cstat-no" title="statement not covered" >r</span>eturn 0;}</span>;<span class="cstat-no" title="statement not covered" >String.prototype.removeURLFragment=<span class="fstat-no" title="function not covered" >fu</span>nction(){let fragmentIndex=<span class="cstat-no" title="statement not covered" >this.indexOf('#');<span class="cstat-no" title="statement not covered" ></span>if(fragmentIndex===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >fragmentIndex=this.length;<span class="cstat-no" title="statement not covered" >r</span>eturn this.substring(0,fragmentIndex);}</span>;<span class="cstat-no" title="statement not covered" >String.hashCode=<span class="fstat-no" title="function not covered" >fu</span>nction(string){<span class="cstat-no" title="statement not covered" >if(!string)</span></span>
+<span class="cstat-no" title="statement not covered" >return 0;c</span>onst p=(<span class="cstat-no" title="statement not covered" >(1&lt;&lt;30)*4-5)</span>;const z=<span class="cstat-no" title="statement not covered" >0x5033d967;</span>const z2=<span class="cstat-no" title="statement not covered" >0x59d2f15d;</span>let s=<span class="cstat-no" title="statement not covered" >0;</span>let zi=<span class="cstat-no" title="statement not covered" >1;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;string.length;i++){const xi=<span class="cstat-no" title="statement not covered" >string.charCodeAt(i)*z2;<span class="cstat-no" title="statement not covered" ></span>s=(s+zi*xi)%p;<span class="cstat-no" title="statement not covered" >z</span>i=(zi*z)%p;}</span></span>
+<span class="cstat-no" title="statement not covered" >s=(s+zi*(p-1))%p;<span class="cstat-no" title="statement not covered" >r</span>eturn Math.abs(s|0);}</span>;<span class="cstat-no" title="statement not covered" >String.isDigitAt=<span class="fstat-no" title="function not covered" >fu</span>nction(string,index){const c=<span class="cstat-no" title="statement not covered" >string.charCodeAt(index);<span class="cstat-no" title="statement not covered" ></span>return(48&lt;=c&amp;&amp;c&lt;=57);}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.prototype.toBase64=<span class="fstat-no" title="function not covered" >fu</span>nction(){function <span class="fstat-no" title="function not covered" >encodeBits(</span>b){<span class="cstat-no" title="statement not covered" >return b&lt;26?b+65:b&lt;52?b+71:b&lt;62?b-4:b===62?43:b===63?47:65;}</span></span>
+const encoder=<span class="cstat-no" title="statement not covered" >new TextEncoder();</span>const data=<span class="cstat-no" title="statement not covered" >encoder.encode(this.toString());</span>const n=<span class="cstat-no" title="statement not covered" >data.length;</span>let encoded=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>if(n===0)</span>
+<span class="cstat-no" title="statement not covered" >return encoded;l</span>et shift;let v=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;n;i++){<span class="cstat-no" title="statement not covered" >shift=i%3;<span class="cstat-no" title="statement not covered" >v</span>|=data[i]&lt;&lt;(16&gt;&gt;&gt;shift&amp;24);<span class="cstat-no" title="statement not covered" >i</span>f(shift===2){<span class="cstat-no" title="statement not covered" >encoded+=String.fromCharCode(encodeBits(v&gt;&gt;&gt;18&amp;63),encodeBits(v&gt;&gt;&gt;12&amp;63),encodeBits(v&gt;&gt;&gt;6&amp;63),encodeBits(v&amp;63));<span class="cstat-no" title="statement not covered" >v</span>=0;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(shift===0)</span>
+<span class="cstat-no" title="statement not covered" >encoded+=String.fromCharCode(encodeBits(v&gt;&gt;&gt;18&amp;63),encodeBits(v&gt;&gt;&gt;12&amp;63),61,61);e</span>lse <span class="cstat-no" title="statement not covered" >if(shift===1)</span>
+<span class="cstat-no" title="statement not covered" >encoded+=String.fromCharCode(encodeBits(v&gt;&gt;&gt;18&amp;63),encodeBits(v&gt;&gt;&gt;12&amp;63),encodeBits(v&gt;&gt;&gt;6&amp;63),61);<span class="cstat-no" title="statement not covered" >r</span>eturn encoded;}</span>;<span class="cstat-no" title="statement not covered" >String.naturalOrderComparator=<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){const chunk=<span class="cstat-no" title="statement not covered" >/^\d+|^\D+/;</span>let chunka,chunkb,anum,bnum;<span class="cstat-no" title="statement not covered" >while(1){<span class="cstat-no" title="statement not covered" >if(a){<span class="cstat-no" title="statement not covered" >if(!b)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >return 1;}</span>else{<span class="cstat-no" title="statement not covered" >if(b)</span>
+<span class="cstat-no" title="statement not covered" >return-1;e</span>lse
+<span class="cstat-no" title="statement not covered" >return 0;}</span>
+<span class="cstat-no" title="statement not covered" >chunka=a.match(chunk)[0];<span class="cstat-no" title="statement not covered" >c</span>hunkb=b.match(chunk)[0];<span class="cstat-no" title="statement not covered" >a</span>num=!isNaN(chunka);<span class="cstat-no" title="statement not covered" >b</span>num=!isNaN(chunkb);<span class="cstat-no" title="statement not covered" >i</span>f(anum&amp;&amp;!bnum)</span>
+<span class="cstat-no" title="statement not covered" >return-1;<span class="cstat-no" title="statement not covered" >i</span>f(bnum&amp;&amp;!anum)</span>
+<span class="cstat-no" title="statement not covered" >return 1;<span class="cstat-no" title="statement not covered" >i</span>f(anum&amp;&amp;bnum){const diff=<span class="cstat-no" title="statement not covered" >chunka-chunkb;<span class="cstat-no" title="statement not covered" ></span>if(diff)</span></span>
+<span class="cstat-no" title="statement not covered" >return diff;<span class="cstat-no" title="statement not covered" >i</span>f(chunka.length!==chunkb.length){<span class="cstat-no" title="statement not covered" >if(!+chunka&amp;&amp;!+chunkb)</span></span>
+<span class="cstat-no" title="statement not covered" >return chunka.length-chunkb.length;e</span>lse
+<span class="cstat-no" title="statement not covered" >return chunkb.length-chunka.length;}</span>}else <span class="cstat-no" title="statement not covered" >if(chunka!==chunkb){<span class="cstat-no" title="statement not covered" >return(chunka&lt;chunkb)?-1:1;}</span></span>
+<span class="cstat-no" title="statement not covered" >a=a.substring(chunka.length);<span class="cstat-no" title="statement not covered" >b</span>=b.substring(chunkb.length);}</span>};<span class="cstat-no" title="statement not covered" >String.caseInsensetiveComparator=<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){<span class="cstat-no" title="statement not covered" >a=a.toUpperCase();<span class="cstat-no" title="statement not covered" >b</span>=b.toUpperCase();<span class="cstat-no" title="statement not covered" >i</span>f(a===b)</span></span>
+<span class="cstat-no" title="statement not covered" >return 0;<span class="cstat-no" title="statement not covered" >r</span>eturn a&gt;b?1:-1;}</span>;<span class="cstat-no" title="statement not covered" >Number.constrain=<span class="fstat-no" title="function not covered" >fu</span>nction(num,min,max){<span class="cstat-no" title="statement not covered" >if(num&lt;min)</span></span>
+<span class="cstat-no" title="statement not covered" >num=min;e</span>lse <span class="cstat-no" title="statement not covered" >if(num&gt;max)</span>
+<span class="cstat-no" title="statement not covered" >num=max;<span class="cstat-no" title="statement not covered" >r</span>eturn num;}</span>;<span class="cstat-no" title="statement not covered" >Number.gcd=<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){<span class="cstat-no" title="statement not covered" >if(b===0)</span></span>
+<span class="cstat-no" title="statement not covered" >return a;e</span>lse
+<span class="cstat-no" title="statement not covered" >return Number.gcd(b,a%b);}</span>;<span class="cstat-no" title="statement not covered" >Number.toFixedIfFloating=<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >if(!value||isNaN(value))</span></span>
+<span class="cstat-no" title="statement not covered" >return value;c</span>onst number=<span class="cstat-no" title="statement not covered" >Number(value);<span class="cstat-no" title="statement not covered" ></span>return number%1?number.toFixed(3):String(number);}</span>;<span class="cstat-no" title="statement not covered" >Date.prototype.isValid=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return!isNaN(this.getTime());}</span>;<span class="cstat-no" title="statement not covered" >D</span>ate.prototype.toISO8601Compact=<span class="fstat-no" title="function not covered" >fu</span>nction(){function <span class="fstat-no" title="function not covered" >leadZero(</span>x){<span class="cstat-no" title="statement not covered" >return(x&gt;9?'':'0')+x;}</span></span>
+<span class="cstat-no" title="statement not covered" >return this.getFullYear()+leadZero(this.getMonth()+1)+leadZero(this.getDate())+'T'+</span>
+leadZero(this.getHours())+leadZero(this.getMinutes())+leadZero(this.getSeconds());};<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'remove',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(value,firstOnly){let index=<span class="cstat-no" title="statement not covered" >this.indexOf(value);<span class="cstat-no" title="statement not covered" ></span>if(index===-1)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >i</span>f(firstOnly){<span class="cstat-no" title="statement not covered" >this.splice(index,1);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let i=index+1,n=this.length;i&lt;n;++i){<span class="cstat-no" title="statement not covered" >if(this[i]!==value)</span></span>
+<span class="cstat-no" title="statement not covered" >this[index++]=this[i];}</span>
+<span class="cstat-no" title="statement not covered" >this.length=index;<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'pushAll',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(array){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;array.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.push(array[i]);}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'rotate',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(index){const result=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=index;i&lt;index+this.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >result.push(this[i%this.length]);<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'sortNumbers',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(){function <span class="fstat-no" title="function not covered" >numericComparator(</span>a,b){<span class="cstat-no" title="statement not covered" >return a-b;}</span></span>
+<span class="cstat-no" title="statement not covered" >this.sort(numericComparator);}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Uint32Array.prototype,'sort',{value:Array.prototype.sort});<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" ></span>fu</span>nction(){const partition=<span class="cstat-no" title="statement not covered" >{value:<span class="fstat-no" title="function not covered" >fu</span>nction(comparator,left,right,pivotIndex){function <span class="fstat-no" title="function not covered" >swap(</span>array,i1,i2){const temp=<span class="cstat-no" title="statement not covered" >array[i1];<span class="cstat-no" title="statement not covered" ></span>array[i1]=array[i2];<span class="cstat-no" title="statement not covered" >a</span>rray[i2]=temp;}</span></span></span>
+const pivotValue=<span class="cstat-no" title="statement not covered" >this[pivotIndex];<span class="cstat-no" title="statement not covered" ></span>swap(this,right,pivotIndex);l</span>et storeIndex=<span class="cstat-no" title="statement not covered" >left;<span class="cstat-no" title="statement not covered" ></span>for(let i=left;i&lt;right;++i){<span class="cstat-no" title="statement not covered" >if(comparator(this[i],pivotValue)&lt;0){<span class="cstat-no" title="statement not covered" >swap(this,storeIndex,i);<span class="cstat-no" title="statement not covered" >+</span>+storeIndex;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >swap(this,right,storeIndex);<span class="cstat-no" title="statement not covered" >r</span>eturn storeIndex;}</span>};<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'partition',partition);<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Uint32Array.prototype,'partition',partition);c</span>onst sortRange=<span class="cstat-no" title="statement not covered" >{value:<span class="fstat-no" title="function not covered" >fu</span>nction(comparator,leftBound,rightBound,sortWindowLeft,sortWindowRight){function <span class="fstat-no" title="function not covered" >quickSortRange(</span>array,comparator,left,right,sortWindowLeft,sortWindowRight){<span class="cstat-no" title="statement not covered" >if(right&lt;=left)</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst pivotIndex=<span class="cstat-no" title="statement not covered" >Math.floor(Math.random()*(right-left))+left;</span>const pivotNewIndex=<span class="cstat-no" title="statement not covered" >array.partition(comparator,left,right,pivotIndex);<span class="cstat-no" title="statement not covered" ></span>if(sortWindowLeft&lt;pivotNewIndex)</span>
+<span class="cstat-no" title="statement not covered" >quickSortRange(array,comparator,left,pivotNewIndex-1,sortWindowLeft,sortWindowRight);<span class="cstat-no" title="statement not covered" >i</span>f(pivotNewIndex&lt;sortWindowRight)</span>
+<span class="cstat-no" title="statement not covered" >quickSortRange(array,comparator,pivotNewIndex+1,right,sortWindowLeft,sortWindowRight);}</span>
+<span class="cstat-no" title="statement not covered" >if(leftBound===0&amp;&amp;rightBound===(this.length-1)&amp;&amp;sortWindowLeft===0&amp;&amp;sortWindowRight&gt;=rightBound)</span>
+<span class="cstat-no" title="statement not covered" >this.sort(comparator);e</span>lse
+<span class="cstat-no" title="statement not covered" >quickSortRange(this,comparator,leftBound,rightBound,sortWindowLeft,sortWindowRight);<span class="cstat-no" title="statement not covered" >r</span>eturn this;}</span>};<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'sortRange',sortRange);<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Uint32Array.prototype,'sortRange',sortRange);}</span>)();<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'stableSort',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(comparator){function <span class="fstat-no" title="function not covered" >defaultComparator(</span>a,b){<span class="cstat-no" title="statement not covered" >return a&lt;b?-1:(a&gt;b?1:0);}</span></span>
+<span class="cstat-no" title="statement not covered" >comparator=comparator||defaultComparator;c</span>onst indices=<span class="cstat-no" title="statement not covered" >new Array(this.length);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >indices[i]=i;c</span>onst self=<span class="cstat-no" title="statement not covered" >this;</span>function <span class="fstat-no" title="function not covered" >indexComparator(</span>a,b){const result=<span class="cstat-no" title="statement not covered" >comparator(self[a],self[b]);<span class="cstat-no" title="statement not covered" ></span>return result?result:a-b;}</span>
+<span class="cstat-no" title="statement not covered" >indices.sort(indexComparator);<span class="cstat-no" title="statement not covered" >f</span>or(let i=0;i&lt;this.length;++i){<span class="cstat-no" title="statement not covered" >if(indices[i]&lt;0||i===indices[i])</span></span>
+<span class="cstat-no" title="statement not covered" >continue;l</span>et cyclical=<span class="cstat-no" title="statement not covered" >i;</span>const saved=<span class="cstat-no" title="statement not covered" >this[i];<span class="cstat-no" title="statement not covered" ></span>while(true){const next=<span class="cstat-no" title="statement not covered" >indices[cyclical];<span class="cstat-no" title="statement not covered" ></span>indices[cyclical]=-1;<span class="cstat-no" title="statement not covered" >i</span>f(next===i){<span class="cstat-no" title="statement not covered" >this[cyclical]=saved;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>else{<span class="cstat-no" title="statement not covered" >this[cyclical]=this[next];<span class="cstat-no" title="statement not covered" >c</span>yclical=next;}</span>}</span>}</span>
+<span class="cstat-no" title="statement not covered" >return this;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'qselect',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(k,comparator){<span class="cstat-no" title="statement not covered" >if(k&lt;0||k&gt;=this.length)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!comparator){<span class="cstat-no" title="statement not covered" >comparator=<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){<span class="cstat-no" title="statement not covered" >return a-b;}</span>;}</span></span>
+let low=<span class="cstat-no" title="statement not covered" >0;</span>let high=<span class="cstat-no" title="statement not covered" >this.length-1;<span class="cstat-no" title="statement not covered" ></span>for(;;){const pivotPosition=<span class="cstat-no" title="statement not covered" >this.partition(comparator,low,high,Math.floor((high+low)/2));<span class="cstat-no" title="statement not covered" ></span>if(pivotPosition===k)</span></span>
+<span class="cstat-no" title="statement not covered" >return this[k];e</span>lse <span class="cstat-no" title="statement not covered" >if(pivotPosition&gt;k)</span>
+<span class="cstat-no" title="statement not covered" >high=pivotPosition-1;e</span>lse
+<span class="cstat-no" title="statement not covered" >low=pivotPosition+1;}</span>}});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'lowerBound',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(object,comparator,left,right){function <span class="fstat-no" title="function not covered" >defaultComparator(</span>a,b){<span class="cstat-no" title="statement not covered" >return a&lt;b?-1:(a&gt;b?1:0);}</span></span>
+<span class="cstat-no" title="statement not covered" >comparator=comparator||defaultComparator;l</span>et l=<span class="cstat-no" title="statement not covered" >left||0;</span>let r=<span class="cstat-no" title="statement not covered" >right!==undefined?right:this.length;<span class="cstat-no" title="statement not covered" ></span>while(l&lt;r){const m=<span class="cstat-no" title="statement not covered" >(l+r)&gt;&gt;1;<span class="cstat-no" title="statement not covered" ></span>if(comparator(object,this[m])&gt;0)</span></span>
+<span class="cstat-no" title="statement not covered" >l=m+1;e</span>lse
+<span class="cstat-no" title="statement not covered" >r=m;}</span>
+<span class="cstat-no" title="statement not covered" >return r;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'upperBound',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(object,comparator,left,right){function <span class="fstat-no" title="function not covered" >defaultComparator(</span>a,b){<span class="cstat-no" title="statement not covered" >return a&lt;b?-1:(a&gt;b?1:0);}</span></span>
+<span class="cstat-no" title="statement not covered" >comparator=comparator||defaultComparator;l</span>et l=<span class="cstat-no" title="statement not covered" >left||0;</span>let r=<span class="cstat-no" title="statement not covered" >right!==undefined?right:this.length;<span class="cstat-no" title="statement not covered" ></span>while(l&lt;r){const m=<span class="cstat-no" title="statement not covered" >(l+r)&gt;&gt;1;<span class="cstat-no" title="statement not covered" ></span>if(comparator(object,this[m])&gt;=0)</span></span>
+<span class="cstat-no" title="statement not covered" >l=m+1;e</span>lse
+<span class="cstat-no" title="statement not covered" >r=m;}</span>
+<span class="cstat-no" title="statement not covered" >return r;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Uint32Array.prototype,'lowerBound',{value:Array.prototype.lowerBound});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Uint32Array.prototype,'upperBound',{value:Array.prototype.upperBound});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Int32Array.prototype,'lowerBound',{value:Array.prototype.lowerBound});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Int32Array.prototype,'upperBound',{value:Array.prototype.upperBound});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Float64Array.prototype,'lowerBound',{value:Array.prototype.lowerBound});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Array.prototype,'binaryIndexOf',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(value,comparator){const index=<span class="cstat-no" title="statement not covered" >this.lowerBound(value,comparator);<span class="cstat-no" title="statement not covered" ></span>return index&lt;this.length&amp;&amp;comparator(value,this[index])===0?index:-1;}</span>});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Array.prototype,'select',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(field){const result=<span class="cstat-no" title="statement not covered" >new Array(this.length);<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;this.length;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >result[i]=this[i][field];<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>});<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'peekLast',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this[this.length-1];}</span>});<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" ></span>fu</span>nction(){function <span class="fstat-no" title="function not covered" >mergeOrIntersect(</span>array1,array2,comparator,mergeNotIntersect){const result=<span class="cstat-no" title="statement not covered" >[];</span>let i=<span class="cstat-no" title="statement not covered" >0;</span>let j=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>while(i&lt;array1.length&amp;&amp;j&lt;array2.length){const compareValue=<span class="cstat-no" title="statement not covered" >comparator(array1[i],array2[j]);<span class="cstat-no" title="statement not covered" ></span>if(mergeNotIntersect||!compareValue)</span></span></span>
+<span class="cstat-no" title="statement not covered" >result.push(compareValue&lt;=0?array1[i]:array2[j]);<span class="cstat-no" title="statement not covered" >i</span>f(compareValue&lt;=0)</span>
+<span class="cstat-no" title="statement not covered" >i++;<span class="cstat-no" title="statement not covered" >i</span>f(compareValue&gt;=0)</span>
+<span class="cstat-no" title="statement not covered" >j++;}</span>
+<span class="cstat-no" title="statement not covered" >if(mergeNotIntersect){<span class="cstat-no" title="statement not covered" >while(i&lt;array1.length)</span></span>
+<span class="cstat-no" title="statement not covered" >result.push(array1[i++]);<span class="cstat-no" title="statement not covered" >w</span>hile(j&lt;array2.length)</span>
+<span class="cstat-no" title="statement not covered" >result.push(array2[j++]);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>
+<span class="cstat-no" title="statement not covered" >Object.defineProperty(Array.prototype,'intersectOrdered',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(array,comparator){<span class="cstat-no" title="statement not covered" >return mergeOrIntersect(this,array,comparator,false);}</span>});<span class="cstat-no" title="statement not covered" >O</span>bject.defineProperty(Array.prototype,'mergeOrdered',{value:<span class="fstat-no" title="function not covered" >fu</span>nction(array,comparator){<span class="cstat-no" title="statement not covered" >return mergeOrIntersect(this,array,comparator,true);}</span>});}</span>)();<span class="cstat-no" title="statement not covered" >String.sprintf=<span class="fstat-no" title="function not covered" >fu</span>nction(format,var_arg){<span class="cstat-no" title="statement not covered" >return String.vsprintf(format,Array.prototype.slice.call(arguments,1));}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.tokenizeFormatString=<span class="fstat-no" title="function not covered" >fu</span>nction(format,formatters){const tokens=<span class="cstat-no" title="statement not covered" >[];</span>function <span class="fstat-no" title="function not covered" >addStringToken(</span>str){<span class="cstat-no" title="statement not covered" >if(!str)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(tokens.length&amp;&amp;tokens[tokens.length-1].type==='string')</span>
+<span class="cstat-no" title="statement not covered" >tokens[tokens.length-1].value+=str;e</span>lse
+<span class="cstat-no" title="statement not covered" >tokens.push({type:'string',value:str});}</span>
+function <span class="fstat-no" title="function not covered" >addSpecifierToken(</span>specifier,precision,substitutionIndex){<span class="cstat-no" title="statement not covered" >tokens.push({type:'specifier',specifier:specifier,precision:precision,substitutionIndex:substitutionIndex});}</span>
+function <span class="fstat-no" title="function not covered" >addAnsiColor(</span>code){const types=<span class="cstat-no" title="statement not covered" >{3:'color',9:'colorLight',4:'bgColor',10:'bgColorLight'};</span>const colorCodes=<span class="cstat-no" title="statement not covered" >['black','red','green','yellow','blue','magenta','cyan','lightGray','','default'];</span>const colorCodesLight=<span class="cstat-no" title="statement not covered" >['darkGray','lightRed','lightGreen','lightYellow','lightBlue','lightMagenta','lightCyan','white',''];</span>const colors=<span class="cstat-no" title="statement not covered" >{color:colorCodes,colorLight:colorCodesLight,bgColor:colorCodes,bgColorLight:colorCodesLight};</span>const type=<span class="cstat-no" title="statement not covered" >types[Math.floor(code/10)];<span class="cstat-no" title="statement not covered" ></span>if(!type)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst color=<span class="cstat-no" title="statement not covered" >colors[type][code%10];<span class="cstat-no" title="statement not covered" ></span>if(!color)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>okens.push({type:'specifier',specifier:'c',value:{description:(type.startsWith('bg')?'background : ':'color: ')+color}});}</span>
+let textStart=<span class="cstat-no" title="statement not covered" >0;</span>let substitutionIndex=<span class="cstat-no" title="statement not covered" >0;</span>const re=<span class="cstat-no" title="statement not covered" >new RegExp(`%%|%(?:(\\d+)\\$)?(?:\\.(\\d*))?([${Object.keys(formatters).join('')}])|\\u001b\\[(\\d+)m`,'g');<span class="cstat-no" title="statement not covered" ></span>for(let match=re.exec(format);!!match;match=re.exec(format)){const matchStart=<span class="cstat-no" title="statement not covered" >match.index;<span class="cstat-no" title="statement not covered" ></span>if(matchStart&gt;textStart)</span></span>
+<span class="cstat-no" title="statement not covered" >addStringToken(format.substring(textStart,matchStart));<span class="cstat-no" title="statement not covered" >i</span>f(match[0]==='%%'){<span class="cstat-no" title="statement not covered" >addStringToken('%');}</span>else <span class="cstat-no" title="statement not covered" >if(match[0].startsWith('%')){const[_,substitionString,precisionString,specifierString]=<span class="cstat-no" title="statement not covered" >match;<span class="cstat-no" title="statement not covered" ></span>if(substitionString&amp;&amp;Number(substitionString)&gt;0)</span></span></span>
+<span class="cstat-no" title="statement not covered" >substitutionIndex=Number(substitionString)-1;c</span>onst precision=<span class="cstat-no" title="statement not covered" >precisionString?Number(precisionString):-1;<span class="cstat-no" title="statement not covered" ></span>addSpecifierToken(specifierString,precision,substitutionIndex);<span class="cstat-no" title="statement not covered" >+</span>+substitutionIndex;}</span>else{const code=<span class="cstat-no" title="statement not covered" >Number(match[4]);<span class="cstat-no" title="statement not covered" ></span>addAnsiColor(code);}</span>
+<span class="cstat-no" title="statement not covered" >textStart=matchStart+match[0].length;}</span>
+<span class="cstat-no" title="statement not covered" >addStringToken(format.substring(textStart));<span class="cstat-no" title="statement not covered" >r</span>eturn tokens;}</span>;<span class="cstat-no" title="statement not covered" >String.standardFormatters={d:<span class="fstat-no" title="function not covered" >fu</span>nction(substitution){<span class="cstat-no" title="statement not covered" >return!isNaN(substitution)?substitution:0;}</span>,f:<span class="fstat-no" title="function not covered" >fu</span>nction(substitution,token){<span class="cstat-no" title="statement not covered" >if(substitution&amp;&amp;token.precision&gt;-1)</span></span>
+<span class="cstat-no" title="statement not covered" >substitution=substitution.toFixed(token.precision);<span class="cstat-no" title="statement not covered" >r</span>eturn!isNaN(substitution)?substitution:(token.precision&gt;-1?Number(0).toFixed(token.precision):0);}</span>,s:<span class="fstat-no" title="function not covered" >fu</span>nction(substitution){<span class="cstat-no" title="statement not covered" >return substitution;}</span>};<span class="cstat-no" title="statement not covered" >String.vsprintf=<span class="fstat-no" title="function not covered" >fu</span>nction(format,substitutions){<span class="cstat-no" title="statement not covered" >return String.format(format,substitutions,String.standardFormatters,'',<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){<span class="cstat-no" title="statement not covered" >return a+b;}</span>).formattedResult;}</span>;<span class="cstat-no" title="statement not covered" >S</span>tring.format=<span class="fstat-no" title="function not covered" >fu</span>nction(format,substitutions,formatters,initialValue,append,tokenizedFormat){<span class="cstat-no" title="statement not covered" >if(!format||((!substitutions||!substitutions.length)&amp;&amp;format.search(/\u001b\[(\d+)m/)===-1))</span></span>
+<span class="cstat-no" title="statement not covered" >return{formattedResult:append(initialValue,format),unusedSubstitutions:substitutions};f</span>unction <span class="fstat-no" title="function not covered" >prettyFunctionName(</span>){<span class="cstat-no" title="statement not covered" >return'String.format("'+format+'", "'+Array.prototype.join.call(substitutions,'", "')+'")';}</span>
+function <span class="fstat-no" title="function not covered" >warn(</span>msg){<span class="cstat-no" title="statement not covered" >console.warn(prettyFunctionName()+': '+msg);}</span>
+function <span class="fstat-no" title="function not covered" >error(</span>msg){<span class="cstat-no" title="statement not covered" >console.error(prettyFunctionName()+': '+msg);}</span>
+let result=<span class="cstat-no" title="statement not covered" >initialValue;</span>const tokens=<span class="cstat-no" title="statement not covered" >tokenizedFormat||String.tokenizeFormatString(format,formatters);</span>const usedSubstitutionIndexes=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;tokens.length;++i){const token=<span class="cstat-no" title="statement not covered" >tokens[i];<span class="cstat-no" title="statement not covered" ></span>if(token.type==='string'){<span class="cstat-no" title="statement not covered" >result=append(result,token.value);<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(token.type!=='specifier'){<span class="cstat-no" title="statement not covered" >error('Unknown token type "'+token.type+'" found.');<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!token.value&amp;&amp;token.substitutionIndex&gt;=substitutions.length){<span class="cstat-no" title="statement not covered" >error('not enough substitution arguments. Had '+substitutions.length+' but needed '+</span></span>
+(token.substitutionIndex+1)+', so substitution was skipped.');<span class="cstat-no" title="statement not covered" >result=append(result,'%'+(token.precision&gt;-1?token.precision:'')+token.specifier);<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span>
+<span class="cstat-no" title="statement not covered" >if(!token.value)</span>
+<span class="cstat-no" title="statement not covered" >usedSubstitutionIndexes[token.substitutionIndex]=true;<span class="cstat-no" title="statement not covered" >i</span>f(!(token.specifier in formatters)){<span class="cstat-no" title="statement not covered" >warn('unsupported format character \u201C'+token.specifier+'\u201D. Treating as a string.');<span class="cstat-no" title="statement not covered" >r</span>esult=append(result,token.value?'':substitutions[token.substitutionIndex]);<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span>
+<span class="cstat-no" title="statement not covered" >result=append(result,formatters[token.specifier](token.value||substitutions[token.substitutionIndex],token));}</span>
+const unusedSubstitutions=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;substitutions.length;++i){<span class="cstat-no" title="statement not covered" >if(i in usedSubstitutionIndexes)</span></span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >u</span>nusedSubstitutions.push(substitutions[i]);}</span>
+<span class="cstat-no" title="statement not covered" >return{formattedResult:result,unusedSubstitutions:unusedSubstitutions};}</span>;function <span class="fstat-no" title="function not covered" >createSearchRegex(</span>query,caseSensitive,isRegex){const regexFlags=<span class="cstat-no" title="statement not covered" >caseSensitive?'g':'gi';</span>let regexObject;<span class="cstat-no" title="statement not covered" >if(isRegex){<span class="cstat-no" title="statement not covered" >try{<span class="cstat-no" title="statement not covered" >regexObject=new RegExp(query,regexFlags);}</span>catch(e){}}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!regexObject)</span>
+<span class="cstat-no" title="statement not covered" >regexObject=createPlainTextSearchRegex(query,regexFlags);<span class="cstat-no" title="statement not covered" >r</span>eturn regexObject;}</span>
+function <span class="fstat-no" title="function not covered" >createPlainTextSearchRegex(</span>query,flags){const regexSpecialCharacters=<span class="cstat-no" title="statement not covered" >String.regexSpecialCharacters();</span>let regex=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;query.length;++i){const c=<span class="cstat-no" title="statement not covered" >query.charAt(i);<span class="cstat-no" title="statement not covered" ></span>if(regexSpecialCharacters.indexOf(c)!==-1)</span></span>
+<span class="cstat-no" title="statement not covered" >regex+='\\';<span class="cstat-no" title="statement not covered" >r</span>egex+=c;}</span>
+<span class="cstat-no" title="statement not covered" >return new RegExp(regex,flags||'');}</span>
+function <span class="fstat-no" title="function not covered" >countRegexMatches(</span>regex,content){let text=<span class="cstat-no" title="statement not covered" >content;</span>let result=<span class="cstat-no" title="statement not covered" >0;</span>let match;<span class="cstat-no" title="statement not covered" >while(text&amp;&amp;(match=regex.exec(text))){<span class="cstat-no" title="statement not covered" >if(match[0].length&gt;0)</span></span>
+<span class="cstat-no" title="statement not covered" >++result;<span class="cstat-no" title="statement not covered" >t</span>ext=text.substring(match.index+1);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>
+function <span class="fstat-no" title="function not covered" >spacesPadding(</span>spacesCount){<span class="cstat-no" title="statement not covered" >return'\u00a0'.repeat(spacesCount);}</span>
+function <span class="fstat-no" title="function not covered" >numberToStringWithSpacesPadding(</span>value,symbolsCount){const numberString=<span class="cstat-no" title="statement not covered" >value.toString();</span>const paddingLength=<span class="cstat-no" title="statement not covered" >Math.max(0,symbolsCount-numberString.length);<span class="cstat-no" title="statement not covered" ></span>return spacesPadding(paddingLength)+numberString;}</span>
+<span class="cstat-no" title="statement not covered" >Set.prototype.valuesArray=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Array.from(this.values());}</span>;<span class="cstat-no" title="statement not covered" >S</span>et.prototype.firstValue=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(!this.size)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >r</span>eturn this.values().next().value;}</span>;<span class="cstat-no" title="statement not covered" >Set.prototype.addAll=<span class="fstat-no" title="function not covered" >fu</span>nction(iterable){<span class="cstat-no" title="statement not covered" >for(const e of iterable)</span></span>
+<span class="cstat-no" title="statement not covered" >this.add(e);}</span>;<span class="cstat-no" title="statement not covered" >Set.prototype.containsAll=<span class="fstat-no" title="function not covered" >fu</span>nction(iterable){<span class="cstat-no" title="statement not covered" >for(const e of iterable){<span class="cstat-no" title="statement not covered" >if(!this.has(e))</span></span></span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>;<span class="cstat-no" title="statement not covered" >Map.prototype.remove=<span class="fstat-no" title="function not covered" >fu</span>nction(key){const value=<span class="cstat-no" title="statement not covered" >this.get(key);<span class="cstat-no" title="statement not covered" ></span>this.delete(key);<span class="cstat-no" title="statement not covered" >r</span>eturn value;}</span>;<span class="cstat-no" title="statement not covered" >M</span>ap.prototype.valuesArray=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Array.from(this.values());}</span>;<span class="cstat-no" title="statement not covered" >M</span>ap.prototype.keysArray=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Array.from(this.keys());}</span>;<span class="cstat-no" title="statement not covered" >M</span>ap.prototype.inverse=<span class="fstat-no" title="function not covered" >fu</span>nction(){const result=<span class="cstat-no" title="statement not covered" >new Multimap();<span class="cstat-no" title="statement not covered" ></span>for(const key of this.keys()){const value=<span class="cstat-no" title="statement not covered" >this.get(key);<span class="cstat-no" title="statement not covered" ></span>result.set(value,key);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;var Multimap=<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >this._map=new Map();}</span>;<span class="cstat-no" title="statement not covered" ></span>Multimap.prototype={set:<span class="fstat-no" title="function not covered" >fu</span>nction(key,value){let set=<span class="cstat-no" title="statement not covered" >this._map.get(key);<span class="cstat-no" title="statement not covered" ></span>if(!set){<span class="cstat-no" title="statement not covered" >set=new Set();<span class="cstat-no" title="statement not covered" >t</span>his._map.set(key,set);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >set.add(value);}</span>,get:<span class="fstat-no" title="function not covered" >fu</span>nction(key){<span class="cstat-no" title="statement not covered" >return this._map.get(key)||new Set();}</span>,has:<span class="fstat-no" title="function not covered" >fu</span>nction(key){<span class="cstat-no" title="statement not covered" >return this._map.has(key);}</span>,hasValue:<span class="fstat-no" title="function not covered" >fu</span>nction(key,value){const set=<span class="cstat-no" title="statement not covered" >this._map.get(key);<span class="cstat-no" title="statement not covered" ></span>if(!set)</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn set.has(value);}</span>,get size(){<span class="cstat-no" title="statement not covered" >return this._map.size;}</span>,delete:<span class="fstat-no" title="function not covered" >fu</span>nction(key,value){const values=<span class="cstat-no" title="statement not covered" >this.get(key);<span class="cstat-no" title="statement not covered" ></span>if(!values)</span>
+<span class="cstat-no" title="statement not covered" >return false;c</span>onst result=<span class="cstat-no" title="statement not covered" >values.delete(value);<span class="cstat-no" title="statement not covered" ></span>if(!values.size)</span>
+<span class="cstat-no" title="statement not covered" >this._map.delete(key);<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>,deleteAll:<span class="fstat-no" title="function not covered" >fu</span>nction(key){<span class="cstat-no" title="statement not covered" >this._map.delete(key);}</span>,keysArray:<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this._map.keysArray();}</span>,valuesArray:<span class="fstat-no" title="function not covered" >fu</span>nction(){const result=<span class="cstat-no" title="statement not covered" >[];</span>const keys=<span class="cstat-no" title="statement not covered" >this.keysArray();<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;keys.length;++i)</span>
+<span class="cstat-no" title="statement not covered" >result.pushAll(this.get(keys[i]).valuesArray());<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>,clear:<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >this._map.clear();}</span>};function <span class="fstat-no" title="function not covered" >loadXHR(</span>url){<span class="cstat-no" title="statement not covered" >return new Promise(load);f</span>unction <span class="fstat-no" title="function not covered" >load(</span>successCallback,failureCallback){function <span class="fstat-no" title="function not covered" >onReadyStateChanged(</span>){<span class="cstat-no" title="statement not covered" >if(xhr.readyState!==XMLHttpRequest.DONE)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(xhr.status!==200){<span class="cstat-no" title="statement not covered" >xhr.onreadystatechange=null;<span class="cstat-no" title="statement not covered" >f</span>ailureCallback(new Error(xhr.status));<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >xhr.onreadystatechange=null;<span class="cstat-no" title="statement not covered" >s</span>uccessCallback(xhr.responseText);}</span>
+const xhr=<span class="cstat-no" title="statement not covered" >new XMLHttpRequest();<span class="cstat-no" title="statement not covered" ></span>xhr.withCredentials=false;<span class="cstat-no" title="statement not covered" >x</span>hr.open('GET',url,true);<span class="cstat-no" title="statement not covered" >x</span>hr.onreadystatechange=onReadyStateChanged;<span class="cstat-no" title="statement not covered" >x</span>hr.send(null);}</span>}
+function <span class="fstat-no" title="function not covered" >suppressUnused(</span>value){}
+<span class="cstat-no" title="statement not covered" >self.setImmediate=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){const args=<span class="cstat-no" title="statement not covered" >[...arguments].slice(1);<span class="cstat-no" title="statement not covered" ></span>Promise.resolve().then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >callback(...args))</span>;<span class="cstat-no" title="statement not covered" >r</span>eturn 0;}</span>;<span class="cstat-no" title="statement not covered" >P</span>romise.prototype.spread=<span class="fstat-no" title="function not covered" >fu</span>nction(callback){<span class="cstat-no" title="statement not covered" >return this.then(spreadPromise);f</span>unction <span class="fstat-no" title="function not covered" >spreadPromise(</span>arg){<span class="cstat-no" title="statement not covered" >return callback.apply(null,arg);}</span>};<span class="cstat-no" title="statement not covered" >P</span>romise.prototype.catchException=<span class="fstat-no" title="function not covered" >fu</span>nction(defaultValue){<span class="cstat-no" title="statement not covered" >return this.catch(<span class="fstat-no" title="function not covered" >fu</span>nction(error){<span class="cstat-no" title="statement not covered" >console.error(error);<span class="cstat-no" title="statement not covered" >r</span>eturn defaultValue;}</span>);}</span>;<span class="cstat-no" title="statement not covered" >M</span>ap.prototype.diff=<span class="fstat-no" title="function not covered" >fu</span>nction(other,isEqual){const leftKeys=<span class="cstat-no" title="statement not covered" >this.keysArray();</span>const rightKeys=<span class="cstat-no" title="statement not covered" >other.keysArray();<span class="cstat-no" title="statement not covered" ></span>leftKeys.sort(<span class="fstat-no" title="function not covered" >(a</span>,b)=&gt;<span class="cstat-no" title="statement not covered" >a-b)</span>;<span class="cstat-no" title="statement not covered" >r</span>ightKeys.sort(<span class="fstat-no" title="function not covered" >(a</span>,b)=&gt;<span class="cstat-no" title="statement not covered" >a-b)</span>;c</span>onst removed=<span class="cstat-no" title="statement not covered" >[];</span>const added=<span class="cstat-no" title="statement not covered" >[];</span>const equal=<span class="cstat-no" title="statement not covered" >[];</span>let leftIndex=<span class="cstat-no" title="statement not covered" >0;</span>let rightIndex=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>while(leftIndex&lt;leftKeys.length&amp;&amp;rightIndex&lt;rightKeys.length){const leftKey=<span class="cstat-no" title="statement not covered" >leftKeys[leftIndex];</span>const rightKey=<span class="cstat-no" title="statement not covered" >rightKeys[rightIndex];<span class="cstat-no" title="statement not covered" ></span>if(leftKey===rightKey&amp;&amp;isEqual(this.get(leftKey),other.get(rightKey))){<span class="cstat-no" title="statement not covered" >equal.push(this.get(leftKey));<span class="cstat-no" title="statement not covered" >+</span>+leftIndex;<span class="cstat-no" title="statement not covered" >+</span>+rightIndex;<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >if(leftKey&lt;=rightKey){<span class="cstat-no" title="statement not covered" >removed.push(this.get(leftKey));<span class="cstat-no" title="statement not covered" >+</span>+leftIndex;<span class="cstat-no" title="statement not covered" >c</span>ontinue;}</span></span>
+<span class="cstat-no" title="statement not covered" >added.push(other.get(rightKey));<span class="cstat-no" title="statement not covered" >+</span>+rightIndex;}</span>
+<span class="cstat-no" title="statement not covered" >while(leftIndex&lt;leftKeys.length){const leftKey=<span class="cstat-no" title="statement not covered" >leftKeys[leftIndex++];<span class="cstat-no" title="statement not covered" ></span>removed.push(this.get(leftKey));}</span></span>
+<span class="cstat-no" title="statement not covered" >while(rightIndex&lt;rightKeys.length){const rightKey=<span class="cstat-no" title="statement not covered" >rightKeys[rightIndex++];<span class="cstat-no" title="statement not covered" ></span>added.push(other.get(rightKey));}</span></span>
+<span class="cstat-no" title="statement not covered" >return{added:added,removed:removed,equal:equal};}</span>;function <span class="fstat-no" title="function not covered" >runOnWindowLoad(</span>callback){function <span class="fstat-no" title="function not covered" >windowLoaded(</span>){<span class="cstat-no" title="statement not covered" >self.removeEventListener('DOMContentLoaded',windowLoaded,false);<span class="cstat-no" title="statement not covered" >c</span>allback();}</span>
+<span class="cstat-no" title="statement not covered" >if(document.readyState==='complete'||document.readyState==='interactive')</span>
+<span class="cstat-no" title="statement not covered" >callback();e</span>lse
+<span class="cstat-no" title="statement not covered" >self.addEventListener('DOMContentLoaded',windowLoaded,false);}</span>
+const _singletonSymbol=<span class="cstat-no" title="statement not covered" >Symbol('singleton');</span>function <span class="fstat-no" title="function not covered" >singleton(</span>constructorFunction){<span class="cstat-no" title="statement not covered" >if(_singletonSymbol in constructorFunction)</span>
+<span class="cstat-no" title="statement not covered" >return constructorFunction[_singletonSymbol];c</span>onst instance=<span class="cstat-no" title="statement not covered" >new constructorFunction();<span class="cstat-no" title="statement not covered" ></span>constructorFunction[_singletonSymbol]=instance;<span class="cstat-no" title="statement not covered" >r</span>eturn instance;}</span>;<span class="cstat-no" title="statement not covered" >self['DomExtension']=self['DomExtension']||{};<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.rangeOfWord=<span class="fstat-no" title="function not covered" >fu</span>nction(offset,stopCharacters,stayWithinNode,direction){let startNode;let startOffset=<span class="cstat-no" title="statement not covered" >0;</span>let endNode;let endOffset=<span class="cstat-no" title="statement not covered" >0;<span class="cstat-no" title="statement not covered" ></span>if(!stayWithinNode)</span></span>
+<span class="cstat-no" title="statement not covered" >stayWithinNode=this;<span class="cstat-no" title="statement not covered" >i</span>f(!direction||direction==='backward'||direction==='both'){let node=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(node){<span class="cstat-no" title="statement not covered" >if(node===stayWithinNode){<span class="cstat-no" title="statement not covered" >if(!startNode)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >startNode=stayWithinNode;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>
+<span class="cstat-no" title="statement not covered" >if(node.nodeType===Node.TEXT_NODE){const start=(<span class="cstat-no" title="statement not covered" >node===this?(offset-1):(node.nodeValue.length-1))</span>;<span class="cstat-no" title="statement not covered" >for(let i=start;i&gt;=0;--i){<span class="cstat-no" title="statement not covered" >if(stopCharacters.indexOf(node.nodeValue[i])!==-1){<span class="cstat-no" title="statement not covered" >startNode=node;<span class="cstat-no" title="statement not covered" >s</span>tartOffset=i+1;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(startNode)</span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >n</span>ode=node.traversePreviousNode(stayWithinNode);}</span>
+<span class="cstat-no" title="statement not covered" >if(!startNode){<span class="cstat-no" title="statement not covered" >startNode=stayWithinNode;<span class="cstat-no" title="statement not covered" >s</span>tartOffset=0;}</span>}</span>else{<span class="cstat-no" title="statement not covered" >startNode=this;<span class="cstat-no" title="statement not covered" >s</span>tartOffset=offset;}</span>
+<span class="cstat-no" title="statement not covered" >if(!direction||direction==='forward'||direction==='both'){let node=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(node){<span class="cstat-no" title="statement not covered" >if(node===stayWithinNode){<span class="cstat-no" title="statement not covered" >if(!endNode)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >endNode=stayWithinNode;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>
+<span class="cstat-no" title="statement not covered" >if(node.nodeType===Node.TEXT_NODE){const start=(<span class="cstat-no" title="statement not covered" >node===this?offset:0)</span>;<span class="cstat-no" title="statement not covered" >for(let i=start;i&lt;node.nodeValue.length;++i){<span class="cstat-no" title="statement not covered" >if(stopCharacters.indexOf(node.nodeValue[i])!==-1){<span class="cstat-no" title="statement not covered" >endNode=node;<span class="cstat-no" title="statement not covered" >e</span>ndOffset=i;<span class="cstat-no" title="statement not covered" >b</span>reak;}</span>}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >if(endNode)</span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >n</span>ode=node.traverseNextNode(stayWithinNode);}</span>
+<span class="cstat-no" title="statement not covered" >if(!endNode){<span class="cstat-no" title="statement not covered" >endNode=stayWithinNode;<span class="cstat-no" title="statement not covered" >e</span>ndOffset=stayWithinNode.nodeType===Node.TEXT_NODE?stayWithinNode.nodeValue.length:stayWithinNode.childNodes.length;}</span>}</span>else{<span class="cstat-no" title="statement not covered" >endNode=this;<span class="cstat-no" title="statement not covered" >e</span>ndOffset=offset;}</span>
+const result=<span class="cstat-no" title="statement not covered" >this.ownerDocument.createRange();<span class="cstat-no" title="statement not covered" ></span>result.setStart(startNode,startOffset);<span class="cstat-no" title="statement not covered" >r</span>esult.setEnd(endNode,endOffset);<span class="cstat-no" title="statement not covered" >r</span>eturn result;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.traverseNextTextNode=<span class="fstat-no" title="function not covered" >fu</span>nction(stayWithin){let node=<span class="cstat-no" title="statement not covered" >this.traverseNextNode(stayWithin);<span class="cstat-no" title="statement not covered" ></span>if(!node)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst nonTextTags=<span class="cstat-no" title="statement not covered" >{'STYLE':1,'SCRIPT':1};<span class="cstat-no" title="statement not covered" ></span>while(node&amp;&amp;(node.nodeType!==Node.TEXT_NODE||nonTextTags[node.parentElement.nodeName]))</span>
+<span class="cstat-no" title="statement not covered" >node=node.traverseNextNode(stayWithin);<span class="cstat-no" title="statement not covered" >r</span>eturn node;}</span>;<span class="cstat-no" title="statement not covered" >Element.prototype.positionAt=<span class="fstat-no" title="function not covered" >fu</span>nction(x,y,relativeTo){let shift=<span class="cstat-no" title="statement not covered" >{x:0,y:0};<span class="cstat-no" title="statement not covered" ></span>if(relativeTo)</span></span>
+<span class="cstat-no" title="statement not covered" >shift=relativeTo.boxInWindow(this.ownerDocument.defaultView);<span class="cstat-no" title="statement not covered" >i</span>f(typeof x==='number')</span>
+<span class="cstat-no" title="statement not covered" >this.style.setProperty('left',(shift.x+x)+'px');e</span>lse
+<span class="cstat-no" title="statement not covered" >this.style.removeProperty('left');<span class="cstat-no" title="statement not covered" >i</span>f(typeof y==='number')</span>
+<span class="cstat-no" title="statement not covered" >this.style.setProperty('top',(shift.y+y)+'px');e</span>lse
+<span class="cstat-no" title="statement not covered" >this.style.removeProperty('top');<span class="cstat-no" title="statement not covered" >i</span>f(typeof x==='number'||typeof y==='number')</span>
+<span class="cstat-no" title="statement not covered" >this.style.setProperty('position','absolute');e</span>lse
+<span class="cstat-no" title="statement not covered" >this.style.removeProperty('position');}</span>;<span class="cstat-no" title="statement not covered" >Element.prototype.isScrolledToBottom=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Math.abs(this.scrollTop+this.clientHeight-this.scrollHeight)&lt;=2;}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.enclosingNodeOrSelfWithNodeNameInArray=<span class="fstat-no" title="function not covered" >fu</span>nction(nameArray){<span class="cstat-no" title="statement not covered" >for(let node=this;node&amp;&amp;node!==this.ownerDocument;node=node.parentNodeOrShadowHost()){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;nameArray.length;++i){<span class="cstat-no" title="statement not covered" >if(node.nodeName.toLowerCase()===nameArray[i].toLowerCase())</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >return node;}</span>}
+<span class="cstat-no" title="statement not covered" >return null;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.enclosingNodeOrSelfWithNodeName=<span class="fstat-no" title="function not covered" >fu</span>nction(nodeName){<span class="cstat-no" title="statement not covered" >return this.enclosingNodeOrSelfWithNodeNameInArray([nodeName]);}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.enclosingNodeOrSelfWithClass=<span class="fstat-no" title="function not covered" >fu</span>nction(className,stayWithin){<span class="cstat-no" title="statement not covered" >return this.enclosingNodeOrSelfWithClassList([className],stayWithin);}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.enclosingNodeOrSelfWithClassList=<span class="fstat-no" title="function not covered" >fu</span>nction(classNames,stayWithin){<span class="cstat-no" title="statement not covered" >for(let node=this;node&amp;&amp;node!==stayWithin&amp;&amp;node!==this.ownerDocument;node=node.parentNodeOrShadowHost()){<span class="cstat-no" title="statement not covered" >if(node.nodeType===Node.ELEMENT_NODE){let containsAll=<span class="cstat-no" title="statement not covered" >true;<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;classNames.length&amp;&amp;containsAll;++i){<span class="cstat-no" title="statement not covered" >if(!node.classList.contains(classNames[i]))</span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >containsAll=false;}</span>
+<span class="cstat-no" title="statement not covered" >if(containsAll)</span>
+<span class="cstat-no" title="statement not covered" >return(node);}</span>}
+<span class="cstat-no" title="statement not covered" >return null;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.parentElementOrShadowHost=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(this.nodeType===Node.DOCUMENT_FRAGMENT_NODE&amp;&amp;this.host)</span></span>
+<span class="cstat-no" title="statement not covered" >return(this.host);c</span>onst node=<span class="cstat-no" title="statement not covered" >this.parentNode;<span class="cstat-no" title="statement not covered" ></span>if(!node)</span>
+<span class="cstat-no" title="statement not covered" >return null;<span class="cstat-no" title="statement not covered" >i</span>f(node.nodeType===Node.ELEMENT_NODE)</span>
+<span class="cstat-no" title="statement not covered" >return(node);<span class="cstat-no" title="statement not covered" >i</span>f(node.nodeType===Node.DOCUMENT_FRAGMENT_NODE)</span>
+<span class="cstat-no" title="statement not covered" >return(node.host);<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.parentNodeOrShadowHost=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(this.parentNode)</span></span>
+<span class="cstat-no" title="statement not covered" >return this.parentNode;<span class="cstat-no" title="statement not covered" >i</span>f(this.nodeType===Node.DOCUMENT_FRAGMENT_NODE&amp;&amp;this.host)</span>
+<span class="cstat-no" title="statement not covered" >return this.host;<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.getComponentSelection=<span class="fstat-no" title="function not covered" >fu</span>nction(){let parent=<span class="cstat-no" title="statement not covered" >this.parentNode;<span class="cstat-no" title="statement not covered" ></span>while(parent&amp;&amp;parent.nodeType!==Node.DOCUMENT_FRAGMENT_NODE)</span></span>
+<span class="cstat-no" title="statement not covered" >parent=parent.parentNode;<span class="cstat-no" title="statement not covered" >r</span>eturn parent instanceof ShadowRoot?parent.getSelection():this.window().getSelection();}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.hasSelection=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(this instanceof Element){const slots=<span class="cstat-no" title="statement not covered" >this.querySelectorAll('slot');<span class="cstat-no" title="statement not covered" ></span>for(const slot of slots){<span class="cstat-no" title="statement not covered" >if(Array.prototype.some.call(slot.assignedNodes(),<span class="fstat-no" title="function not covered" >no</span>de=&gt;<span class="cstat-no" title="statement not covered" >node.hasSelection())</span>)</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >return true;}</span>}
+const selection=<span class="cstat-no" title="statement not covered" >this.getComponentSelection();<span class="cstat-no" title="statement not covered" ></span>if(selection.type!=='Range')</span>
+<span class="cstat-no" title="statement not covered" >return false;<span class="cstat-no" title="statement not covered" >r</span>eturn selection.containsNode(this,true)||selection.anchorNode.isSelfOrDescendant(this)||selection.focusNode.isSelfOrDescendant(this);}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.window=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return(this.ownerDocument.defaultView);}</span>;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.removeChildren=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(this.firstChild)</span></span>
+<span class="cstat-no" title="statement not covered" >this.textContent='';}</span>;function <span class="fstat-no" title="function not covered" >createElement(</span>tagName,customElementType){<span class="cstat-no" title="statement not covered" >return document.createElement(tagName,{is:customElementType});}</span>
+function <span class="fstat-no" title="function not covered" >createTextNode(</span>data){<span class="cstat-no" title="statement not covered" >return document.createTextNode(data);}</span>
+<span class="cstat-no" title="statement not covered" >Document.prototype.createElementWithClass=<span class="fstat-no" title="function not covered" >fu</span>nction(elementName,className,customElementType){const element=<span class="cstat-no" title="statement not covered" >this.createElement(elementName,{is:customElementType});<span class="cstat-no" title="statement not covered" ></span>if(className)</span></span>
+<span class="cstat-no" title="statement not covered" >element.className=className;<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>;function <span class="fstat-no" title="function not covered" >createElementWithClass(</span>elementName,className,customElementType){<span class="cstat-no" title="statement not covered" >return document.createElementWithClass(elementName,className,customElementType);}</span>
+<span class="cstat-no" title="statement not covered" >Document.prototype.createSVGElement=<span class="fstat-no" title="function not covered" >fu</span>nction(childType,className){const element=<span class="cstat-no" title="statement not covered" >this.createElementNS('http://www.w3.org/2000/svg',childType);<span class="cstat-no" title="statement not covered" ></span>if(className)</span></span>
+<span class="cstat-no" title="statement not covered" >element.setAttribute('class',className);<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>;function <span class="fstat-no" title="function not covered" >createSVGElement(</span>childType,className){<span class="cstat-no" title="statement not covered" >return document.createSVGElement(childType,className);}</span>
+function <span class="fstat-no" title="function not covered" >createDocumentFragment(</span>){<span class="cstat-no" title="statement not covered" >return document.createDocumentFragment();}</span>
+<span class="cstat-no" title="statement not covered" >Element.prototype.createChild=<span class="fstat-no" title="function not covered" >fu</span>nction(elementName,className,customElementType){const element=<span class="cstat-no" title="statement not covered" >this.ownerDocument.createElementWithClass(elementName,className,customElementType);<span class="cstat-no" title="statement not covered" ></span>this.appendChild(element);<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>;<span class="cstat-no" title="statement not covered" >D</span>ocumentFragment.prototype.createChild=Element.prototype.createChild;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.createTextChild=<span class="fstat-no" title="function not covered" >fu</span>nction(text){const element=<span class="cstat-no" title="statement not covered" >this.ownerDocument.createTextNode(text);<span class="cstat-no" title="statement not covered" ></span>this.appendChild(element);<span class="cstat-no" title="statement not covered" >r</span>eturn element;}</span>;<span class="cstat-no" title="statement not covered" >D</span>ocumentFragment.prototype.createTextChild=Element.prototype.createTextChild;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.createTextChildren=<span class="fstat-no" title="function not covered" >fu</span>nction(var_args){<span class="cstat-no" title="statement not covered" >for(let i=0,n=arguments.length;i&lt;n;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.createTextChild(arguments[i]);}</span>;<span class="cstat-no" title="statement not covered" >DocumentFragment.prototype.createTextChildren=Element.prototype.createTextChildren;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.totalOffsetLeft=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.totalOffset().left;}</span>;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.totalOffsetTop=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.totalOffset().top;}</span>;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.totalOffset=<span class="fstat-no" title="function not covered" >fu</span>nction(){const rect=<span class="cstat-no" title="statement not covered" >this.getBoundingClientRect();<span class="cstat-no" title="statement not covered" ></span>return{left:rect.left,top:rect.top};}</span>;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.createSVGChild=<span class="fstat-no" title="function not covered" >fu</span>nction(childType,className){const child=<span class="cstat-no" title="statement not covered" >this.ownerDocument.createSVGElement(childType,className);<span class="cstat-no" title="statement not covered" ></span>this.appendChild(child);<span class="cstat-no" title="statement not covered" >r</span>eturn child;}</span>;v</span>ar AnchorBox=<span class="cstat-no" title="statement not covered" >class{<span class="fstat-no" title="function not covered" >co</span>nstructor(x,y,width,height){<span class="cstat-no" title="statement not covered" >this.x=x||0;<span class="cstat-no" title="statement not covered" >t</span>his.y=y||0;<span class="cstat-no" title="statement not covered" >t</span>his.width=width||0;<span class="cstat-no" title="statement not covered" >t</span>his.height=height||0;}</span></span>
+<span class="fstat-no" title="function not covered" >co</span>ntains(x,y){<span class="cstat-no" title="statement not covered" >return x&gt;=this.x&amp;&amp;x&lt;=this.x+this.width&amp;&amp;y&gt;=this.y&amp;&amp;y&lt;=this.y+this.height;}</span>};<span class="cstat-no" title="statement not covered" >AnchorBox.prototype.relativeTo=<span class="fstat-no" title="function not covered" >fu</span>nction(box){<span class="cstat-no" title="statement not covered" >return new AnchorBox(this.x-box.x,this.y-box.y,this.width,this.height);}</span>;<span class="cstat-no" title="statement not covered" >A</span>nchorBox.prototype.relativeToElement=<span class="fstat-no" title="function not covered" >fu</span>nction(element){<span class="cstat-no" title="statement not covered" >return this.relativeTo(element.boxInWindow(element.ownerDocument.defaultView));}</span>;<span class="cstat-no" title="statement not covered" >A</span>nchorBox.prototype.equals=<span class="fstat-no" title="function not covered" >fu</span>nction(anchorBox){<span class="cstat-no" title="statement not covered" >return!!anchorBox&amp;&amp;this.x===anchorBox.x&amp;&amp;this.y===anchorBox.y&amp;&amp;this.width===anchorBox.width&amp;&amp;this.height===anchorBox.height;}</span>;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.boxInWindow=<span class="fstat-no" title="function not covered" >fu</span>nction(targetWindow){<span class="cstat-no" title="statement not covered" >targetWindow=targetWindow||this.ownerDocument.defaultView;c</span>onst anchorBox=<span class="cstat-no" title="statement not covered" >new AnchorBox();</span>let curElement=<span class="cstat-no" title="statement not covered" >this;</span>let curWindow=<span class="cstat-no" title="statement not covered" >this.ownerDocument.defaultView;<span class="cstat-no" title="statement not covered" ></span>while(curWindow&amp;&amp;curElement){<span class="cstat-no" title="statement not covered" >anchorBox.x+=curElement.totalOffsetLeft();<span class="cstat-no" title="statement not covered" >a</span>nchorBox.y+=curElement.totalOffsetTop();<span class="cstat-no" title="statement not covered" >i</span>f(curWindow===targetWindow)</span></span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >c</span>urElement=curWindow.frameElement;<span class="cstat-no" title="statement not covered" >c</span>urWindow=curWindow.parent;}</span>
+<span class="cstat-no" title="statement not covered" >anchorBox.width=Math.min(this.offsetWidth,targetWindow.innerWidth-anchorBox.x);<span class="cstat-no" title="statement not covered" >a</span>nchorBox.height=Math.min(this.offsetHeight,targetWindow.innerHeight-anchorBox.y);<span class="cstat-no" title="statement not covered" >r</span>eturn anchorBox;}</span>;<span class="cstat-no" title="statement not covered" >Event.prototype.consume=<span class="fstat-no" title="function not covered" >fu</span>nction(preventDefault){<span class="cstat-no" title="statement not covered" >this.stopImmediatePropagation();<span class="cstat-no" title="statement not covered" >i</span>f(preventDefault)</span></span>
+<span class="cstat-no" title="statement not covered" >this.preventDefault();<span class="cstat-no" title="statement not covered" >t</span>his.handled=true;}</span>;<span class="cstat-no" title="statement not covered" >Text.prototype.select=<span class="fstat-no" title="function not covered" >fu</span>nction(start,end){<span class="cstat-no" title="statement not covered" >start=start||0;<span class="cstat-no" title="statement not covered" >e</span>nd=end||this.textContent.length;<span class="cstat-no" title="statement not covered" >i</span>f(start&lt;0)</span></span>
+<span class="cstat-no" title="statement not covered" >start=end+start;c</span>onst selection=<span class="cstat-no" title="statement not covered" >this.getComponentSelection();<span class="cstat-no" title="statement not covered" ></span>selection.removeAllRanges();c</span>onst range=<span class="cstat-no" title="statement not covered" >this.ownerDocument.createRange();<span class="cstat-no" title="statement not covered" ></span>range.setStart(this,start);<span class="cstat-no" title="statement not covered" >r</span>ange.setEnd(this,end);<span class="cstat-no" title="statement not covered" >s</span>election.addRange(range);<span class="cstat-no" title="statement not covered" >r</span>eturn this;}</span>;<span class="cstat-no" title="statement not covered" >Element.prototype.selectionLeftOffset=<span class="fstat-no" title="function not covered" >fu</span>nction(){const selection=<span class="cstat-no" title="statement not covered" >this.getComponentSelection();<span class="cstat-no" title="statement not covered" ></span>if(!selection.containsNode(this,true))</span></span>
+<span class="cstat-no" title="statement not covered" >return null;l</span>et leftOffset=<span class="cstat-no" title="statement not covered" >selection.anchorOffset;</span>let node=<span class="cstat-no" title="statement not covered" >selection.anchorNode;<span class="cstat-no" title="statement not covered" ></span>while(node!==this){<span class="cstat-no" title="statement not covered" >while(node.previousSibling){<span class="cstat-no" title="statement not covered" >node=node.previousSibling;<span class="cstat-no" title="statement not covered" >l</span>eftOffset+=node.textContent.length;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >node=node.parentNodeOrShadowHost();}</span>
+<span class="cstat-no" title="statement not covered" >return leftOffset;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.appendChildren=<span class="fstat-no" title="function not covered" >fu</span>nction(var_args){<span class="cstat-no" title="statement not covered" >for(let i=0,n=arguments.length;i&lt;n;++i)</span></span>
+<span class="cstat-no" title="statement not covered" >this.appendChild(arguments[i]);}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.deepTextContent=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return this.childTextNodes().map(<span class="fstat-no" title="function not covered" >fu</span>nction(node){<span class="cstat-no" title="statement not covered" >return node.textContent;}</span>).join('');}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.childTextNodes=<span class="fstat-no" title="function not covered" >fu</span>nction(){let node=<span class="cstat-no" title="statement not covered" >this.traverseNextTextNode(this);</span>const result=<span class="cstat-no" title="statement not covered" >[];</span>const nonTextTags=<span class="cstat-no" title="statement not covered" >{'STYLE':1,'SCRIPT':1};<span class="cstat-no" title="statement not covered" ></span>while(node){<span class="cstat-no" title="statement not covered" >if(!nonTextTags[node.parentElement.nodeName])</span></span></span>
+<span class="cstat-no" title="statement not covered" >result.push(node);<span class="cstat-no" title="statement not covered" >n</span>ode=node.traverseNextTextNode(this);}</span>
+<span class="cstat-no" title="statement not covered" >return result;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.isAncestor=<span class="fstat-no" title="function not covered" >fu</span>nction(node){<span class="cstat-no" title="statement not covered" >if(!node)</span></span>
+<span class="cstat-no" title="statement not covered" >return false;l</span>et currentNode=<span class="cstat-no" title="statement not covered" >node.parentNodeOrShadowHost();<span class="cstat-no" title="statement not covered" ></span>while(currentNode){<span class="cstat-no" title="statement not covered" >if(this===currentNode)</span></span>
+<span class="cstat-no" title="statement not covered" >return true;<span class="cstat-no" title="statement not covered" >c</span>urrentNode=currentNode.parentNodeOrShadowHost();}</span>
+<span class="cstat-no" title="statement not covered" >return false;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.isDescendant=<span class="fstat-no" title="function not covered" >fu</span>nction(descendant){<span class="cstat-no" title="statement not covered" >return!!descendant&amp;&amp;descendant.isAncestor(this);}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.isSelfOrAncestor=<span class="fstat-no" title="function not covered" >fu</span>nction(node){<span class="cstat-no" title="statement not covered" >return!!node&amp;&amp;(node===this||this.isAncestor(node));}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.isSelfOrDescendant=<span class="fstat-no" title="function not covered" >fu</span>nction(node){<span class="cstat-no" title="statement not covered" >return!!node&amp;&amp;(node===this||this.isDescendant(node));}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.traverseNextNode=<span class="fstat-no" title="function not covered" >fu</span>nction(stayWithin){<span class="cstat-no" title="statement not covered" >if(this.shadowRoot)</span></span>
+<span class="cstat-no" title="statement not covered" >return this.shadowRoot;c</span>onst distributedNodes=<span class="cstat-no" title="statement not covered" >this instanceof HTMLSlotElement?this.assignedNodes():[];<span class="cstat-no" title="statement not covered" ></span>if(distributedNodes.length)</span>
+<span class="cstat-no" title="statement not covered" >return distributedNodes[0];<span class="cstat-no" title="statement not covered" >i</span>f(this.firstChild)</span>
+<span class="cstat-no" title="statement not covered" >return this.firstChild;l</span>et node=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(node){<span class="cstat-no" title="statement not covered" >if(stayWithin&amp;&amp;node===stayWithin)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst sibling=<span class="cstat-no" title="statement not covered" >nextSibling(node);<span class="cstat-no" title="statement not covered" ></span>if(sibling)</span>
+<span class="cstat-no" title="statement not covered" >return sibling;<span class="cstat-no" title="statement not covered" >n</span>ode=node.assignedSlot||node.parentNodeOrShadowHost();}</span>
+function <span class="fstat-no" title="function not covered" >nextSibling(</span>node){<span class="cstat-no" title="statement not covered" >if(!node.assignedSlot)</span>
+<span class="cstat-no" title="statement not covered" >return node.nextSibling;c</span>onst distributedNodes=<span class="cstat-no" title="statement not covered" >node.assignedSlot.assignedNodes();</span>const position=<span class="cstat-no" title="statement not covered" >Array.prototype.indexOf.call(distributedNodes,node);<span class="cstat-no" title="statement not covered" ></span>if(position+1&lt;distributedNodes.length)</span>
+<span class="cstat-no" title="statement not covered" >return distributedNodes[position+1];<span class="cstat-no" title="statement not covered" >r</span>eturn null;}</span>
+<span class="cstat-no" title="statement not covered" >return null;}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.traversePreviousNode=<span class="fstat-no" title="function not covered" >fu</span>nction(stayWithin){<span class="cstat-no" title="statement not covered" >if(stayWithin&amp;&amp;this===stayWithin)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;l</span>et node=<span class="cstat-no" title="statement not covered" >this.previousSibling;<span class="cstat-no" title="statement not covered" ></span>while(node&amp;&amp;node.lastChild)</span>
+<span class="cstat-no" title="statement not covered" >node=node.lastChild;<span class="cstat-no" title="statement not covered" >i</span>f(node)</span>
+<span class="cstat-no" title="statement not covered" >return node;<span class="cstat-no" title="statement not covered" >r</span>eturn this.parentNodeOrShadowHost();}</span>;<span class="cstat-no" title="statement not covered" >Node.prototype.setTextContentTruncatedIfNeeded=<span class="fstat-no" title="function not covered" >fu</span>nction(text,placeholder){const maxTextContentLength=<span class="cstat-no" title="statement not covered" >10000;<span class="cstat-no" title="statement not covered" ></span>if(typeof text==='string'&amp;&amp;text.length&gt;maxTextContentLength){<span class="cstat-no" title="statement not covered" >this.textContent=typeof placeholder==='string'?placeholder:text.trimMiddle(maxTextContentLength);<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this.textContent=text;<span class="cstat-no" title="statement not covered" >r</span>eturn false;}</span>;<span class="cstat-no" title="statement not covered" >Event.prototype.deepElementFromPoint=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(!this.which&amp;&amp;!this.pageX&amp;&amp;!this.pageY&amp;&amp;!this.clientX&amp;&amp;!this.clientY&amp;&amp;!this.movementX&amp;&amp;!this.movementY)</span></span>
+<span class="cstat-no" title="statement not covered" >return null;c</span>onst root=<span class="cstat-no" title="statement not covered" >this.target&amp;&amp;this.target.getComponentRoot();<span class="cstat-no" title="statement not covered" ></span>return root?root.deepElementFromPoint(this.pageX,this.pageY):null;}</span>;<span class="cstat-no" title="statement not covered" >Document.prototype.deepElementFromPoint=<span class="fstat-no" title="function not covered" >fu</span>nction(x,y){let container=<span class="cstat-no" title="statement not covered" >this;</span>let node=<span class="cstat-no" title="statement not covered" >null;<span class="cstat-no" title="statement not covered" ></span>while(container){const innerNode=<span class="cstat-no" title="statement not covered" >container.elementFromPoint(x,y);<span class="cstat-no" title="statement not covered" ></span>if(!innerNode||node===innerNode)</span></span></span>
+<span class="cstat-no" title="statement not covered" >break;<span class="cstat-no" title="statement not covered" >n</span>ode=innerNode;<span class="cstat-no" title="statement not covered" >c</span>ontainer=node.shadowRoot;}</span>
+<span class="cstat-no" title="statement not covered" >return node;}</span>;<span class="cstat-no" title="statement not covered" >DocumentFragment.prototype.deepElementFromPoint=Document.prototype.deepElementFromPoint;<span class="cstat-no" title="statement not covered" >D</span>ocument.prototype.deepActiveElement=<span class="fstat-no" title="function not covered" >fu</span>nction(){let activeElement=<span class="cstat-no" title="statement not covered" >this.activeElement;<span class="cstat-no" title="statement not covered" ></span>while(activeElement&amp;&amp;activeElement.shadowRoot&amp;&amp;activeElement.shadowRoot.activeElement)</span></span>
+<span class="cstat-no" title="statement not covered" >activeElement=activeElement.shadowRoot.activeElement;<span class="cstat-no" title="statement not covered" >r</span>eturn activeElement;}</span>;<span class="cstat-no" title="statement not covered" >DocumentFragment.prototype.deepActiveElement=Document.prototype.deepActiveElement;<span class="cstat-no" title="statement not covered" >E</span>lement.prototype.hasFocus=<span class="fstat-no" title="function not covered" >fu</span>nction(){const root=<span class="cstat-no" title="statement not covered" >this.getComponentRoot();<span class="cstat-no" title="statement not covered" ></span>return!!root&amp;&amp;this.isSelfOrAncestor(root.activeElement);}</span>;<span class="cstat-no" title="statement not covered" >N</span>ode.prototype.getComponentRoot=<span class="fstat-no" title="function not covered" >fu</span>nction(){let node=<span class="cstat-no" title="statement not covered" >this;<span class="cstat-no" title="statement not covered" ></span>while(node&amp;&amp;node.nodeType!==Node.DOCUMENT_FRAGMENT_NODE&amp;&amp;node.nodeType!==Node.DOCUMENT_NODE)</span></span>
+<span class="cstat-no" title="statement not covered" >node=node.parentNode;<span class="cstat-no" title="statement not covered" >r</span>eturn(node);}</span>;function <span class="fstat-no" title="function not covered" >isEnterKey(</span>event){<span class="cstat-no" title="statement not covered" >return event.keyCode!==229&amp;&amp;event.key==='Enter';}</span>
+function <span class="fstat-no" title="function not covered" >isEscKey(</span>event){<span class="cstat-no" title="statement not covered" >return event.keyCode===27;}</span>
+<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >fu</span>nction(){const originalToggle=<span class="cstat-no" title="statement not covered" >DOMTokenList.prototype.toggle;<span class="cstat-no" title="statement not covered" ></span>DOMTokenList.prototype['toggle']=<span class="fstat-no" title="function not covered" >fu</span>nction(token,force){<span class="cstat-no" title="statement not covered" >if(arguments.length===1)</span></span></span>
+<span class="cstat-no" title="statement not covered" >force=!this.contains(token);<span class="cstat-no" title="statement not covered" >r</span>eturn originalToggle.call(this,token,!!force);}</span>;})();;<span class="cstat-no" title="statement not covered" >self['ToolboxBootstrap']=self['ToolboxBootstrap']||{};<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" ></span>fu</span>nction(){function <span class="fstat-no" title="function not covered" >toolboxLoaded(</span>){<span class="cstat-no" title="statement not covered" >if(!window.opener)</span></span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst app=<span class="cstat-no" title="statement not covered" >window.opener['Emulation']['AdvancedApp']['_instance']();<span class="cstat-no" title="statement not covered" ></span>app['toolboxLoaded'](document);}</span>
+<span class="cstat-no" title="statement not covered" >runOnWindowLoad(toolboxLoaded);}</span>)();;;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+<script src="../../../../block-navigation.js"></script>
+</body>
+</html>

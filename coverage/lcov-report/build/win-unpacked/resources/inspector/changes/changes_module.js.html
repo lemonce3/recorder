@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/changes/changes_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/changes</a> changes_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/308</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/143</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/73</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Changes.ChangesHighlighter=<span class="fstat-no" title="function not covered" >fu</span>nction(config,parserConfig){const diffRows=<span class="cstat-no" title="statement not covered" >parserConfig.diffRows;</span>const baselineLines=<span class="cstat-no" title="statement not covered" >parserConfig.baselineLines;</span>const currentLines=<span class="cstat-no" title="statement not covered" >parserConfig.currentLines;</span>const syntaxHighlightMode=<span class="cstat-no" title="statement not covered" >CodeMirror.getMode({},parserConfig.mimeType);</span>function <span class="fstat-no" title="function not covered" >fastForward(</span>state,baselineLineNumber,currentLineNumber){<span class="cstat-no" title="statement not covered" >if(baselineLineNumber&gt;state.baselineLineNumber){<span class="cstat-no" title="statement not covered" >fastForwardSyntaxHighlighter(state.baselineSyntaxState,state.baselineLineNumber,baselineLineNumber,baselineLines);<span class="cstat-no" title="statement not covered" >s</span>tate.baselineLineNumber=baselineLineNumber;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(currentLineNumber&gt;state.currentLineNumber){<span class="cstat-no" title="statement not covered" >fastForwardSyntaxHighlighter(state.currentSyntaxState,state.currentLineNumber,currentLineNumber,currentLines);<span class="cstat-no" title="statement not covered" >s</span>tate.currentLineNumber=currentLineNumber;}</span>}</span>
+function <span class="fstat-no" title="function not covered" >fastForwardSyntaxHighlighter(</span>syntaxState,from,to,lines){let lineNumber=<span class="cstat-no" title="statement not covered" >from;<span class="cstat-no" title="statement not covered" ></span>while(lineNumber&lt;to&amp;&amp;lineNumber&lt;lines.length){const stream=<span class="cstat-no" title="statement not covered" >new CodeMirror.StringStream(lines[lineNumber]);<span class="cstat-no" title="statement not covered" ></span>if(stream.eol()&amp;&amp;syntaxHighlightMode.blankLine)</span></span>
+<span class="cstat-no" title="statement not covered" >syntaxHighlightMode.blankLine(syntaxState);<span class="cstat-no" title="statement not covered" >w</span>hile(!stream.eol()){<span class="cstat-no" title="statement not covered" >syntaxHighlightMode.token(stream,syntaxState);<span class="cstat-no" title="statement not covered" >s</span>tream.start=stream.pos;}</span></span>
+<span class="cstat-no" title="statement not covered" >lineNumber++;}</span>}
+<span class="cstat-no" title="statement not covered" >return{startState:<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return{rowNumber:0,diffTokenIndex:0,currentLineNumber:0,baselineLineNumber:0,currentSyntaxState:CodeMirror.startState(syntaxHighlightMode),baselineSyntaxState:CodeMirror.startState(syntaxHighlightMode),syntaxPosition:0,diffPosition:0,syntaxStyle:'',diffStyle:''};}</span>,token:<span class="fstat-no" title="function not covered" >fu</span>nction(stream,state){const diffRow=<span class="cstat-no" title="statement not covered" >diffRows[state.rowNumber];<span class="cstat-no" title="statement not covered" ></span>if(!diffRow){<span class="cstat-no" title="statement not covered" >stream.next();<span class="cstat-no" title="statement not covered" >r</span>eturn'';}</span></span></span>
+<span class="cstat-no" title="statement not covered" >fastForward(state,diffRow.baselineLineNumber-1,diffRow.currentLineNumber-1);l</span>et classes=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>if(stream.pos===0)</span>
+<span class="cstat-no" title="statement not covered" >classes+=' line-background-'+diffRow.type+' line-'+diffRow.type;c</span>onst syntaxHighlighterNeedsRefresh=<span class="cstat-no" title="statement not covered" >state.diffPosition&gt;=state.syntaxPosition;<span class="cstat-no" title="statement not covered" ></span>if(state.diffPosition&lt;=state.syntaxPosition){<span class="cstat-no" title="statement not covered" >state.diffPosition+=diffRow.tokens[state.diffTokenIndex].text.length;<span class="cstat-no" title="statement not covered" >s</span>tate.diffStyle=diffRow.tokens[state.diffTokenIndex].className;<span class="cstat-no" title="statement not covered" >s</span>tate.diffTokenIndex++;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(syntaxHighlighterNeedsRefresh){<span class="cstat-no" title="statement not covered" >if(diffRow.type===Changes.ChangesView.RowType.Deletion||diffRow.type===Changes.ChangesView.RowType.Addition||diffRow.type===Changes.ChangesView.RowType.Equal){<span class="cstat-no" title="statement not covered" >state.syntaxStyle=syntaxHighlightMode.token(stream,diffRow.type===Changes.ChangesView.RowType.Deletion?state.baselineSyntaxState:state.currentSyntaxState);<span class="cstat-no" title="statement not covered" >s</span>tate.syntaxPosition=stream.pos;}</span>else{<span class="cstat-no" title="statement not covered" >state.syntaxStyle='';<span class="cstat-no" title="statement not covered" >s</span>tate.syntaxPosition=Infinity;}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >stream.pos=Math.min(state.syntaxPosition,state.diffPosition);<span class="cstat-no" title="statement not covered" >c</span>lasses+=' '+state.syntaxStyle;<span class="cstat-no" title="statement not covered" >c</span>lasses+=' '+state.diffStyle;<span class="cstat-no" title="statement not covered" >i</span>f(stream.eol()){<span class="cstat-no" title="statement not covered" >state.rowNumber++;<span class="cstat-no" title="statement not covered" >i</span>f(diffRow.type===Changes.ChangesView.RowType.Deletion)</span></span>
+<span class="cstat-no" title="statement not covered" >state.baselineLineNumber++;e</span>lse
+<span class="cstat-no" title="statement not covered" >state.currentLineNumber++;<span class="cstat-no" title="statement not covered" >s</span>tate.diffPosition=0;<span class="cstat-no" title="statement not covered" >s</span>tate.syntaxPosition=0;<span class="cstat-no" title="statement not covered" >s</span>tate.diffTokenIndex=0;}</span>
+<span class="cstat-no" title="statement not covered" >return classes;}</span>,blankLine:<span class="fstat-no" title="function not covered" >fu</span>nction(state){const diffRow=<span class="cstat-no" title="statement not covered" >diffRows[state.rowNumber];<span class="cstat-no" title="statement not covered" ></span>state.rowNumber++;<span class="cstat-no" title="statement not covered" >s</span>tate.syntaxPosition=0;<span class="cstat-no" title="statement not covered" >s</span>tate.diffPosition=0;<span class="cstat-no" title="statement not covered" >s</span>tate.diffTokenIndex=0;<span class="cstat-no" title="statement not covered" >i</span>f(!diffRow)</span>
+<span class="cstat-no" title="statement not covered" >return'';l</span>et style=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>if(syntaxHighlightMode.blankLine){<span class="cstat-no" title="statement not covered" >if(diffRow.type===Changes.ChangesView.RowType.Equal||diffRow.type===Changes.ChangesView.RowType.Addition){<span class="cstat-no" title="statement not covered" >style=syntaxHighlightMode.blankLine(state.currentSyntaxState);<span class="cstat-no" title="statement not covered" >s</span>tate.currentLineNumber++;}</span>else <span class="cstat-no" title="statement not covered" >if(diffRow.type===Changes.ChangesView.RowType.Deletion){<span class="cstat-no" title="statement not covered" >style=syntaxHighlightMode.blankLine(state.baselineSyntaxState);<span class="cstat-no" title="statement not covered" >s</span>tate.baselineLineNumber++;}</span>}</span></span></span>
+<span class="cstat-no" title="statement not covered" >return style+' line-background-'+diffRow.type+' line-'+diffRow.type;}</span>,copyState:<span class="fstat-no" title="function not covered" >fu</span>nction(state){const newState=<span class="cstat-no" title="statement not covered" >Object.assign({},state);<span class="cstat-no" title="statement not covered" ></span>newState.currentSyntaxState=CodeMirror.copyState(syntaxHighlightMode,state.currentSyntaxState);<span class="cstat-no" title="statement not covered" >n</span>ewState.baselineSyntaxState=CodeMirror.copyState(syntaxHighlightMode,state.baselineSyntaxState);<span class="cstat-no" title="statement not covered" >r</span>eturn(newState);}</span>};};<span class="cstat-no" title="statement not covered" >Changes.ChangesHighlighter.DiffState;<span class="cstat-no" title="statement not covered" >C</span>odeMirror.defineMode('devtools-diff',Changes.ChangesHighlighter);;<span class="cstat-no" title="statement not covered" ></span>Changes.ChangesView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >super(true);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('changes/changesView.css');c</span>onst splitWidget=<span class="cstat-no" title="statement not covered" >new UI.SplitWidget(true,false);</span>const mainWidget=<span class="cstat-no" title="statement not covered" >new UI.Widget();<span class="cstat-no" title="statement not covered" ></span>splitWidget.setMainWidget(mainWidget);<span class="cstat-no" title="statement not covered" >s</span>plitWidget.show(this.contentElement);<span class="cstat-no" title="statement not covered" >t</span>his._emptyWidget=new UI.EmptyWidget('');<span class="cstat-no" title="statement not covered" >t</span>his._emptyWidget.show(mainWidget.element);<span class="cstat-no" title="statement not covered" >t</span>his._workspaceDiff=WorkspaceDiff.workspaceDiff();<span class="cstat-no" title="statement not covered" >t</span>his._changesSidebar=new Changes.ChangesSidebar(this._workspaceDiff);<span class="cstat-no" title="statement not covered" >t</span>his._changesSidebar.addEventListener(Changes.ChangesSidebar.Events.SelectedUISourceCodeChanged,this._selectedUISourceCodeChanged,this);<span class="cstat-no" title="statement not covered" >s</span>plitWidget.setSidebarWidget(this._changesSidebar);<span class="cstat-no" title="statement not covered" >t</span>his._selectedUISourceCode=null;<span class="cstat-no" title="statement not covered" >t</span>his._diffRows=[];<span class="cstat-no" title="statement not covered" >t</span>his._maxLineDigits=1;<span class="cstat-no" title="statement not covered" >t</span>his._editor=new TextEditor.CodeMirrorTextEditor({lineNumbers:true,lineWrapping:false,maxHighlightLength:Infinity});<span class="cstat-no" title="statement not covered" >t</span>his._editor.setReadOnly(true);<span class="cstat-no" title="statement not covered" >t</span>his._editor.show(mainWidget.element.createChild('div','editor-container'));<span class="cstat-no" title="statement not covered" >t</span>his._editor.hideWidget();<span class="cstat-no" title="statement not covered" >t</span>his._editor.element.addEventListener('click',this._click.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._toolbar=new UI.Toolbar('changes-toolbar',mainWidget.element);c</span>onst revertButton=<span class="cstat-no" title="statement not covered" >new UI.ToolbarButton(Common.UIString('Revert all changes'),'largeicon-undo');<span class="cstat-no" title="statement not covered" ></span>revertButton.addEventListener(UI.ToolbarButton.Events.Click,this._revert.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._toolbar.appendToolbarItem(revertButton);<span class="cstat-no" title="statement not covered" >t</span>his._diffStats=new UI.ToolbarText('');<span class="cstat-no" title="statement not covered" >t</span>his._toolbar.appendToolbarItem(this._diffStats);<span class="cstat-no" title="statement not covered" >t</span>his._toolbar.setEnabled(false);<span class="cstat-no" title="statement not covered" >t</span>his._hideDiff(ls`No changes`);<span class="cstat-no" title="statement not covered" >t</span>his._selectedUISourceCodeChanged();}</span></span>
+<span class="fstat-no" title="function not covered" >_s</span>electedUISourceCodeChanged(){<span class="cstat-no" title="statement not covered" >this._revealUISourceCode(this._changesSidebar.selectedUISourceCode());}</span>
+<span class="fstat-no" title="function not covered" >_r</span>evert(){const uiSourceCode=<span class="cstat-no" title="statement not covered" >this._selectedUISourceCode;<span class="cstat-no" title="statement not covered" ></span>if(!uiSourceCode)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._workspaceDiff.revertToOriginal(uiSourceCode);}</span>
+<span class="fstat-no" title="function not covered" >_c</span>lick(event){const selection=<span class="cstat-no" title="statement not covered" >this._editor.selection();<span class="cstat-no" title="statement not covered" ></span>if(!selection.isEmpty())</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst row=<span class="cstat-no" title="statement not covered" >this._diffRows[selection.startLine];<span class="cstat-no" title="statement not covered" ></span>Common.Revealer.reveal(this._selectedUISourceCode.uiLocation(row.currentLineNumber-1,selection.startColumn),false);<span class="cstat-no" title="statement not covered" >e</span>vent.consume(true);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>evealUISourceCode(uiSourceCode){<span class="cstat-no" title="statement not covered" >if(this._selectedUISourceCode===uiSourceCode)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._selectedUISourceCode)</span>
+<span class="cstat-no" title="statement not covered" >this._workspaceDiff.unsubscribeFromDiffChange(this._selectedUISourceCode,this._refreshDiff,this);<span class="cstat-no" title="statement not covered" >i</span>f(uiSourceCode&amp;&amp;this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >this._workspaceDiff.subscribeToDiffChange(uiSourceCode,this._refreshDiff,this);<span class="cstat-no" title="statement not covered" >t</span>his._selectedUISourceCode=uiSourceCode;<span class="cstat-no" title="statement not covered" >t</span>his._refreshDiff();}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._refreshDiff();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>efreshDiff(){<span class="cstat-no" title="statement not covered" >if(!this.isShowing())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!this._selectedUISourceCode){<span class="cstat-no" title="statement not covered" >this._renderDiffRows(null);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const uiSourceCode=<span class="cstat-no" title="statement not covered" >this._selectedUISourceCode;<span class="cstat-no" title="statement not covered" ></span>if(!uiSourceCode.contentType().isTextType()){<span class="cstat-no" title="statement not covered" >this._hideDiff(ls`Binary data`);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._workspaceDiff.requestDiff(uiSourceCode).then(<span class="fstat-no" title="function not covered" >di</span>ff=&gt;{<span class="cstat-no" title="statement not covered" >if(this._selectedUISourceCode!==uiSourceCode)</span></span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._renderDiffRows(diff);}</span>);}
+<span class="fstat-no" title="function not covered" >_h</span>ideDiff(message){<span class="cstat-no" title="statement not covered" >this._diffStats.setText('');<span class="cstat-no" title="statement not covered" >t</span>his._toolbar.setEnabled(false);<span class="cstat-no" title="statement not covered" >t</span>his._editor.hideWidget();<span class="cstat-no" title="statement not covered" >t</span>his._emptyWidget.text=message;<span class="cstat-no" title="statement not covered" >t</span>his._emptyWidget.showWidget();}</span>
+<span class="fstat-no" title="function not covered" >_r</span>enderDiffRows(diff){<span class="cstat-no" title="statement not covered" >this._diffRows=[];<span class="cstat-no" title="statement not covered" >i</span>f(!diff||(diff.length===1&amp;&amp;diff[0][0]===Diff.Diff.Operation.Equal)){<span class="cstat-no" title="statement not covered" >this._hideDiff(ls`No changes`);<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+let insertions=<span class="cstat-no" title="statement not covered" >0;</span>let deletions=<span class="cstat-no" title="statement not covered" >0;</span>let currentLineNumber=<span class="cstat-no" title="statement not covered" >0;</span>let baselineLineNumber=<span class="cstat-no" title="statement not covered" >0;</span>const paddingLines=<span class="cstat-no" title="statement not covered" >3;</span>const originalLines=<span class="cstat-no" title="statement not covered" >[];</span>const currentLines=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;diff.length;++i){const token=<span class="cstat-no" title="statement not covered" >diff[i];<span class="cstat-no" title="statement not covered" ></span>switch(token[0]){case Diff.Diff.Operation.Equal:<span class="cstat-no" title="statement not covered" >this._diffRows.pushAll(createEqualRows(token[1],i===0,i===diff.length-1));<span class="cstat-no" title="statement not covered" >o</span>riginalLines.pushAll(token[1]);<span class="cstat-no" title="statement not covered" >c</span>urrentLines.pushAll(token[1]);<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase Diff.Diff.Operation.Insert:<span class="cstat-no" title="statement not covered" >for(const line of token[1])</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._diffRows.push(createRow(line,Changes.ChangesView.RowType.Addition));<span class="cstat-no" title="statement not covered" >i</span>nsertions+=token[1].length;<span class="cstat-no" title="statement not covered" >c</span>urrentLines.pushAll(token[1]);<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase Diff.Diff.Operation.Delete:<span class="cstat-no" title="statement not covered" >deletions+=token[1].length;<span class="cstat-no" title="statement not covered" >o</span>riginalLines.pushAll(token[1]);<span class="cstat-no" title="statement not covered" >i</span>f(diff[i+1]&amp;&amp;diff[i+1][0]===Diff.Diff.Operation.Insert){<span class="cstat-no" title="statement not covered" >i++;<span class="cstat-no" title="statement not covered" >t</span>his._diffRows.pushAll(createModifyRows(token[1].join('\n'),diff[i][1].join('\n')));<span class="cstat-no" title="statement not covered" >i</span>nsertions+=diff[i][1].length;<span class="cstat-no" title="statement not covered" >c</span>urrentLines.pushAll(diff[i][1]);}</span>else{<span class="cstat-no" title="statement not covered" >for(const line of token[1])</span></span>
+<span class="cstat-no" title="statement not covered" >this._diffRows.push(createRow(line,Changes.ChangesView.RowType.Deletion));}</span>
+<span class="cstat-no" title="statement not covered" >break;}</span>}
+<span class="cstat-no" title="statement not covered" >this._maxLineDigits=Math.ceil(Math.log10(Math.max(currentLineNumber,baselineLineNumber)));<span class="cstat-no" title="statement not covered" >t</span>his._diffStats.setText(Common.UIString('%d insertion%s (+), %d deletion%s (-)',insertions,insertions!==1?'s':'',deletions,deletions!==1?'s':''));<span class="cstat-no" title="statement not covered" >t</span>his._toolbar.setEnabled(true);<span class="cstat-no" title="statement not covered" >t</span>his._emptyWidget.hideWidget();<span class="cstat-no" title="statement not covered" >t</span>his._editor.operation(<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._editor.showWidget();<span class="cstat-no" title="statement not covered" >t</span>his._editor.setHighlightMode({name:'devtools-diff',diffRows:this._diffRows,mimeType:(this._selectedUISourceCode).mimeType(),baselineLines:originalLines,currentLines:currentLines});<span class="cstat-no" title="statement not covered" >t</span>his._editor.setText(this._diffRows.map(<span class="fstat-no" title="function not covered" >ro</span>w=&gt;<span class="cstat-no" title="statement not covered" >row.tokens.map(<span class="fstat-no" title="function not covered" >t=</span>&gt;<span class="cstat-no" title="statement not covered" >t.text)</span>.join(''))</span>.join('\n'));<span class="cstat-no" title="statement not covered" >t</span>his._editor.setLineNumberFormatter(this._lineFormatter.bind(this));}</span>);f</span>unction <span class="fstat-no" title="function not covered" >createEqualRows(</span>lines,atStart,atEnd){const equalRows=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(!atStart){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;paddingLines&amp;&amp;i&lt;lines.length;i++)</span></span>
+<span class="cstat-no" title="statement not covered" >equalRows.push(createRow(lines[i],Changes.ChangesView.RowType.Equal));<span class="cstat-no" title="statement not covered" >i</span>f(lines.length&gt;paddingLines*2+1&amp;&amp;!atEnd){<span class="cstat-no" title="statement not covered" >equalRows.push(createRow(Common.UIString('( \u2026 Skipping ')+(lines.length-paddingLines*2)+</span></span>
+Common.UIString(' matching lines \u2026 )'),Changes.ChangesView.RowType.Spacer));}}
+<span class="cstat-no" title="statement not covered" >if(!atEnd){const start=<span class="cstat-no" title="statement not covered" >Math.max(lines.length-paddingLines-1,atStart?0:paddingLines);</span>let skip=<span class="cstat-no" title="statement not covered" >lines.length-paddingLines-1;<span class="cstat-no" title="statement not covered" ></span>if(!atStart)</span></span>
+<span class="cstat-no" title="statement not covered" >skip-=paddingLines;<span class="cstat-no" title="statement not covered" >i</span>f(skip&gt;0){<span class="cstat-no" title="statement not covered" >baselineLineNumber+=skip;<span class="cstat-no" title="statement not covered" >c</span>urrentLineNumber+=skip;}</span></span>
+<span class="cstat-no" title="statement not covered" >for(let i=start;i&lt;lines.length;i++)</span>
+<span class="cstat-no" title="statement not covered" >equalRows.push(createRow(lines[i],Changes.ChangesView.RowType.Equal));}</span>
+<span class="cstat-no" title="statement not covered" >return equalRows;}</span>
+function <span class="fstat-no" title="function not covered" >createModifyRows(</span>before,after){const internalDiff=<span class="cstat-no" title="statement not covered" >Diff.Diff.charDiff(before,after,true);</span>const deletionRows=<span class="cstat-no" title="statement not covered" >[createRow('',Changes.ChangesView.RowType.Deletion)];</span>const insertionRows=<span class="cstat-no" title="statement not covered" >[createRow('',Changes.ChangesView.RowType.Addition)];<span class="cstat-no" title="statement not covered" ></span>for(const token of internalDiff){const text=<span class="cstat-no" title="statement not covered" >token[1];</span>const type=<span class="cstat-no" title="statement not covered" >token[0];</span>const className=<span class="cstat-no" title="statement not covered" >type===Diff.Diff.Operation.Equal?'':'inner-diff';</span>const lines=<span class="cstat-no" title="statement not covered" >text.split('\n');<span class="cstat-no" title="statement not covered" ></span>for(let i=0;i&lt;lines.length;i++){<span class="cstat-no" title="statement not covered" >if(i&gt;0&amp;&amp;type!==Diff.Diff.Operation.Insert)</span></span></span>
+<span class="cstat-no" title="statement not covered" >deletionRows.push(createRow('',Changes.ChangesView.RowType.Deletion));<span class="cstat-no" title="statement not covered" >i</span>f(i&gt;0&amp;&amp;type!==Diff.Diff.Operation.Delete)</span>
+<span class="cstat-no" title="statement not covered" >insertionRows.push(createRow('',Changes.ChangesView.RowType.Addition));<span class="cstat-no" title="statement not covered" >i</span>f(!lines[i])</span>
+<span class="cstat-no" title="statement not covered" >continue;<span class="cstat-no" title="statement not covered" >i</span>f(type!==Diff.Diff.Operation.Insert)</span>
+<span class="cstat-no" title="statement not covered" >deletionRows[deletionRows.length-1].tokens.push({text:lines[i],className});<span class="cstat-no" title="statement not covered" >i</span>f(type!==Diff.Diff.Operation.Delete)</span>
+<span class="cstat-no" title="statement not covered" >insertionRows[insertionRows.length-1].tokens.push({text:lines[i],className});}</span>}
+<span class="cstat-no" title="statement not covered" >return deletionRows.concat(insertionRows);}</span>
+function <span class="fstat-no" title="function not covered" >createRow(</span>text,type){<span class="cstat-no" title="statement not covered" >if(type===Changes.ChangesView.RowType.Addition)</span>
+<span class="cstat-no" title="statement not covered" >currentLineNumber++;<span class="cstat-no" title="statement not covered" >i</span>f(type===Changes.ChangesView.RowType.Deletion)</span>
+<span class="cstat-no" title="statement not covered" >baselineLineNumber++;<span class="cstat-no" title="statement not covered" >i</span>f(type===Changes.ChangesView.RowType.Equal){<span class="cstat-no" title="statement not covered" >baselineLineNumber++;<span class="cstat-no" title="statement not covered" >c</span>urrentLineNumber++;}</span></span>
+<span class="cstat-no" title="statement not covered" >return{baselineLineNumber,currentLineNumber,tokens:text?[{text,className:'inner-diff'}]:[],type};}</span>}
+<span class="fstat-no" title="function not covered" >_l</span>ineFormatter(lineNumber){const row=<span class="cstat-no" title="statement not covered" >this._diffRows[lineNumber-1];</span>let showBaseNumber=<span class="cstat-no" title="statement not covered" >row.type===Changes.ChangesView.RowType.Deletion;</span>let showCurrentNumber=<span class="cstat-no" title="statement not covered" >row.type===Changes.ChangesView.RowType.Addition;<span class="cstat-no" title="statement not covered" ></span>if(row.type===Changes.ChangesView.RowType.Equal){<span class="cstat-no" title="statement not covered" >showBaseNumber=true;<span class="cstat-no" title="statement not covered" >s</span>howCurrentNumber=true;}</span></span>
+const base=<span class="cstat-no" title="statement not covered" >showBaseNumber?numberToStringWithSpacesPadding(row.baselineLineNumber,this._maxLineDigits):spacesPadding(this._maxLineDigits);</span>const current=<span class="cstat-no" title="statement not covered" >showCurrentNumber?numberToStringWithSpacesPadding(row.currentLineNumber,this._maxLineDigits):spacesPadding(this._maxLineDigits);<span class="cstat-no" title="statement not covered" ></span>return base+spacesPadding(1)+current;}</span>};<span class="cstat-no" title="statement not covered" >Changes.ChangesView.Row;<span class="cstat-no" title="statement not covered" >C</span>hanges.ChangesView.RowType={Deletion:'deletion',Addition:'addition',Equal:'equal',Spacer:'spacer'};<span class="cstat-no" title="statement not covered" >C</span>hanges.ChangesView.DiffUILocationRevealer=class{<span class="fstat-no" title="function not covered" >as</span>ync reveal(diffUILocation,omitFocus){<span class="cstat-no" title="statement not covered" >if(!(diffUILocation instanceof WorkspaceDiff.DiffUILocation))</span></span>
+<span class="cstat-no" title="statement not covered" >throw new Error('Internal error: not a diff ui location');c</span>onst changesView=<span class="cstat-no" title="statement not covered" >self.runtime.sharedInstance(Changes.ChangesView);<span class="cstat-no" title="statement not covered" ></span>await UI.viewManager.showView('changes.changes');<span class="cstat-no" title="statement not covered" >c</span>hangesView._changesSidebar.selectUISourceCode(diffUILocation.uiSourceCode,omitFocus);}</span>};;<span class="cstat-no" title="statement not covered" >Changes.ChangesSidebar=class extends UI.Widget{<span class="fstat-no" title="function not covered" >co</span>nstructor(workspaceDiff){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._treeoutline=new UI.TreeOutlineInShadow();<span class="cstat-no" title="statement not covered" >t</span>his._treeoutline.registerRequiredCSS('changes/changesSidebar.css');<span class="cstat-no" title="statement not covered" >t</span>his._treeoutline.setComparator(<span class="fstat-no" title="function not covered" >(a</span>,b)=&gt;<span class="cstat-no" title="statement not covered" >a.titleAsText().compareTo(b.titleAsText()))</span>;<span class="cstat-no" title="statement not covered" >t</span>his._treeoutline.addEventListener(UI.TreeOutline.Events.ElementSelected,this._selectionChanged,this);<span class="cstat-no" title="statement not covered" >t</span>his.element.appendChild(this._treeoutline.element);<span class="cstat-no" title="statement not covered" >t</span>his._treeElements=new Map();<span class="cstat-no" title="statement not covered" >t</span>his._workspaceDiff=workspaceDiff;<span class="cstat-no" title="statement not covered" >t</span>his._workspaceDiff.modifiedUISourceCodes().forEach(this._addUISourceCode.bind(this));<span class="cstat-no" title="statement not covered" >t</span>his._workspaceDiff.addEventListener(WorkspaceDiff.Events.ModifiedStatusChanged,this._uiSourceCodeMofiedStatusChanged,this);}</span></span>
+<span class="fstat-no" title="function not covered" >se</span>lectUISourceCode(uiSourceCode,omitFocus){const treeElement=<span class="cstat-no" title="statement not covered" >this._treeElements.get(uiSourceCode);<span class="cstat-no" title="statement not covered" ></span>if(!treeElement)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>reeElement.select(omitFocus);}</span>
+<span class="fstat-no" title="function not covered" >se</span>lectedUISourceCode(){<span class="cstat-no" title="statement not covered" >return this._treeoutline.selectedTreeElement?this._treeoutline.selectedTreeElement.uiSourceCode:null;}</span>
+<span class="fstat-no" title="function not covered" >_s</span>electionChanged(){<span class="cstat-no" title="statement not covered" >this.dispatchEventToListeners(Changes.ChangesSidebar.Events.SelectedUISourceCodeChanged);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>iSourceCodeMofiedStatusChanged(event){<span class="cstat-no" title="statement not covered" >if(event.data.isModified)</span>
+<span class="cstat-no" title="statement not covered" >this._addUISourceCode(event.data.uiSourceCode);e</span>lse
+<span class="cstat-no" title="statement not covered" >this._removeUISourceCode(event.data.uiSourceCode);}</span>
+<span class="fstat-no" title="function not covered" >_r</span>emoveUISourceCode(uiSourceCode){const treeElement=<span class="cstat-no" title="statement not covered" >this._treeElements.get(uiSourceCode);<span class="cstat-no" title="statement not covered" ></span>this._treeElements.delete(uiSourceCode);<span class="cstat-no" title="statement not covered" >i</span>f(this._treeoutline.selectedTreeElement===treeElement){const nextElementToSelect=<span class="cstat-no" title="statement not covered" >treeElement.previousSibling||treeElement.nextSibling;<span class="cstat-no" title="statement not covered" ></span>if(nextElementToSelect){<span class="cstat-no" title="statement not covered" >nextElementToSelect.select(true);}</span>else{<span class="cstat-no" title="statement not covered" >treeElement.deselect();<span class="cstat-no" title="statement not covered" >t</span>his._selectionChanged();}</span>}</span></span>
+<span class="cstat-no" title="statement not covered" >this._treeoutline.removeChild(treeElement);<span class="cstat-no" title="statement not covered" >t</span>reeElement.dispose();}</span>
+<span class="fstat-no" title="function not covered" >_a</span>ddUISourceCode(uiSourceCode){const treeElement=<span class="cstat-no" title="statement not covered" >new Changes.ChangesSidebar.UISourceCodeTreeElement(uiSourceCode);<span class="cstat-no" title="statement not covered" ></span>this._treeElements.set(uiSourceCode,treeElement);<span class="cstat-no" title="statement not covered" >t</span>his._treeoutline.appendChild(treeElement);<span class="cstat-no" title="statement not covered" >i</span>f(!this._treeoutline.selectedTreeElement)</span>
+<span class="cstat-no" title="statement not covered" >treeElement.select(true);}</span>};<span class="cstat-no" title="statement not covered" >Changes.ChangesSidebar.Events={SelectedUISourceCodeChanged:Symbol('SelectedUISourceCodeChanged')};<span class="cstat-no" title="statement not covered" >C</span>hanges.ChangesSidebar.UISourceCodeTreeElement=class extends UI.TreeElement{<span class="fstat-no" title="function not covered" >co</span>nstructor(uiSourceCode){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his.uiSourceCode=uiSourceCode;<span class="cstat-no" title="statement not covered" >t</span>his.listItemElement.classList.add('navigator-'+uiSourceCode.contentType().name()+'-tree-item');l</span>et iconType=<span class="cstat-no" title="statement not covered" >'largeicon-navigator-file';<span class="cstat-no" title="statement not covered" ></span>if(Snippets.isSnippetsUISourceCode(this.uiSourceCode))</span></span>
+<span class="cstat-no" title="statement not covered" >iconType='largeicon-navigator-snippet';c</span>onst defaultIcon=<span class="cstat-no" title="statement not covered" >UI.Icon.create(iconType,'icon');<span class="cstat-no" title="statement not covered" ></span>this.setLeadingIcons([defaultIcon]);<span class="cstat-no" title="statement not covered" >t</span>his._eventListeners=[uiSourceCode.addEventListener(Workspace.UISourceCode.Events.TitleChanged,this._updateTitle,this),uiSourceCode.addEventListener(Workspace.UISourceCode.Events.WorkingCopyChanged,this._updateTitle,this),uiSourceCode.addEventListener(Workspace.UISourceCode.Events.WorkingCopyCommitted,this._updateTitle,this)];<span class="cstat-no" title="statement not covered" >t</span>his._updateTitle();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateTitle(){let titleText=<span class="cstat-no" title="statement not covered" >this.uiSourceCode.displayName();<span class="cstat-no" title="statement not covered" ></span>if(this.uiSourceCode.isDirty())</span>
+<span class="cstat-no" title="statement not covered" >titleText='*'+titleText;<span class="cstat-no" title="statement not covered" >t</span>his.title=titleText;l</span>et tooltip=<span class="cstat-no" title="statement not covered" >this.uiSourceCode.url();<span class="cstat-no" title="statement not covered" ></span>if(this.uiSourceCode.contentType().isFromSourceMap())</span>
+<span class="cstat-no" title="statement not covered" >tooltip=Common.UIString('%s (from source map)',this.uiSourceCode.displayName());<span class="cstat-no" title="statement not covered" >t</span>his.tooltip=tooltip;}</span>
+<span class="fstat-no" title="function not covered" >di</span>spose(){<span class="cstat-no" title="statement not covered" >Common.EventTarget.removeEventListeners(this._eventListeners);}</span>};;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["changes/changesView.css"]="/*\n * Copyright (c) 2017 The Chromium Authors. All rights reserved.\n * Use of this source code is governed by a BSD-style license that can be\n * found in the LICENSE file.\n */\n[slot=insertion-point-main]{\n    flex-direction: column;\n    display: flex;\n}\n\n[slot=insertion-point-sidebar] {\n    overflow: auto;\n}\n\n.editor-container{\n    flex: 1;\n}\n\n:focus.selected {\n    background-color: var(--selection-bg-color);\n    color: #FFF;\n}\n\n.CodeMirror-lines:not(:active) {\n    cursor: default !important;\n}\n\n.CodeMirror-line:hover {\n    cursor: default !important;\n    background-color: rgba(0,0,255,0.05);\n}\n\n.CodeMirror .CodeMirror-linebackground.spacer {\n    text-align: center;\n    color: rgba(0, 0, 0, 0.5);\n    background-color: rgba(0, 0, 255, 0.1);\n}\n\n.CodeMirror .equal &gt; span &gt; span {\n    opacity: .5;\n}\n\n.CodeMirror .CodeMirror-selectedtext:not(.CodeMirror-persist-highlight) {\n    opacity: 1.0;\n}\n\n.CodeMirror .CodeMirror-linebackground.addition, -theme-preserve {\n    background-color: hsla(144, 55%, 49%, .2);\n}\n\n.CodeMirror .CodeMirror-linebackground.deletion, -theme-preserve {\n    background-color: rgba(255, 0, 0, .2);\n}\n\n.CodeMirror .addition .cm-inner-diff:not(.CodeMirror-selectedtext), -theme-preserve {\n    background-color: hsla(144, 55%, 49%, .3);\n}\n\n.CodeMirror .deletion .cm-inner-diff:not(.CodeMirror-selectedtext), -theme-preserve {\n    background-color: rgba(255, 0, 0, .3);\n}\n\n.changes-toolbar {\n    background-color: var(--toolbar-bg-color);\n    border-top: var(--divider-border);\n}\n\n/*# sourceURL=changes/changesView.css */";<span class="cstat-no" title="statement not covered" >R</span>untime.cachedResources["changes/changesSidebar.css"]="li .icon {\n  margin: -3px -5px -3px -5px;\n  background: linear-gradient(45deg, hsl(0, 0%, 50%), hsl(0, 0%, 70%));\n}\n\n.tree-outline li {\n  min-height: 20px;\n}\n\n.tree-outline li:hover:not(.selected) .selection {\n  display: block;\n  background-color: rgba(56, 121, 217, 0.1);\n}\n\n.navigator-fs-tree-item .icon{\n  background: linear-gradient(45deg, hsl(28, 75%, 50%), hsl(28, 75%, 70%));\n}\n\n.navigator-sm-script-tree-item .icon,\n.navigator-script-tree-item .icon,\n.navigator-snippet-tree-item .icon {\n  background: linear-gradient(45deg, hsl(48, 70%, 50%), hsl(48, 70%, 70%));\n}\n\n.navigator-sm-stylesheet-tree-item .icon,\n.navigator-stylesheet-tree-item .icon {\n  background: linear-gradient(45deg, hsl(256, 50%, 50%), hsl(256, 50%, 70%));\n}\n\n.navigator-image-tree-item .icon,\n.navigator-font-tree-item .icon {\n  background: linear-gradient(45deg, hsl(109, 33%, 50%), hsl(109, 33%, 70%));\n}\n/*# sourceURL=changes/changesSidebar.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

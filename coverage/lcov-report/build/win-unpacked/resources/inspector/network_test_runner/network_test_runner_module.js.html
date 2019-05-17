@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/network_test_runner/network_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector/network_test_runner</a> network_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/109</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/14</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >NetworkTestRunner.waitForRequestResponse=<span class="fstat-no" title="function not covered" >fu</span>nction(request){<span class="cstat-no" title="statement not covered" >if(request.responseReceivedTime!==-1)</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(request);<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.waitForEvent(SDK.NetworkManager.Events.RequestUpdated,TestRunner.networkManager,<span class="fstat-no" title="function not covered" >up</span>dateRequest=&gt;<span class="cstat-no" title="statement not covered" >updateRequest===request&amp;&amp;request.responseReceivedTime!==-1)</span>;}</span>;<span class="cstat-no" title="statement not covered" >NetworkTestRunner.waitForNetworkLogViewNodeForRequest=<span class="fstat-no" title="function not covered" >fu</span>nction(request){const networkLogView=<span class="cstat-no" title="statement not covered" >UI.panels.network._networkLogView;</span>const node=<span class="cstat-no" title="statement not covered" >networkLogView.nodeForRequest(request);<span class="cstat-no" title="statement not covered" ></span>if(node)</span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(node);<span class="cstat-no" title="statement not covered" >c</span>onsole.assert(networkLogView._staleRequests.has(request));<span class="cstat-no" title="statement not covered" >r</span>eturn TestRunner.addSnifferPromise(networkLogView,'_didRefreshForTest').then(<span class="fstat-no" title="function not covered" >()</span>=&gt;{const node=<span class="cstat-no" title="statement not covered" >networkLogView.nodeForRequest(request);<span class="cstat-no" title="statement not covered" ></span>console.assert(node);<span class="cstat-no" title="statement not covered" >r</span>eturn node;}</span>);}</span>;<span class="cstat-no" title="statement not covered" >NetworkTestRunner.waitForWebsocketFrameReceived=<span class="fstat-no" title="function not covered" >fu</span>nction(wsRequest,message){<span class="cstat-no" title="statement not covered" >for(const frame of wsRequest.frames()){<span class="cstat-no" title="statement not covered" >if(checkFrame(frame))</span></span></span>
+<span class="cstat-no" title="statement not covered" >return Promise.resolve(frame);}</span>
+<span class="cstat-no" title="statement not covered" >return TestRunner.waitForEvent(SDK.NetworkRequest.Events.WebsocketFrameAdded,wsRequest,checkFrame);f</span>unction <span class="fstat-no" title="function not covered" >checkFrame(</span>frame){<span class="cstat-no" title="statement not covered" >return frame.type===SDK.NetworkRequest.WebSocketFrameType.Receive&amp;&amp;frame.text===message;}</span>};<span class="cstat-no" title="statement not covered" >NetworkTestRunner.recordNetwork=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >UI.panels.network._networkLogView.setRecording(true);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.networkWaterfallColumn=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return UI.panels.network._networkLogView._columns._waterfallColumn;}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.networkRequests=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Array.from(SDK.networkLog.requests());}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.dumpNetworkRequests=<span class="fstat-no" title="function not covered" >fu</span>nction(){const requests=<span class="cstat-no" title="statement not covered" >NetworkTestRunner.networkRequests();<span class="cstat-no" title="statement not covered" ></span>requests.sort(<span class="fstat-no" title="function not covered" >fu</span>nction(a,b){<span class="cstat-no" title="statement not covered" >return a.url().localeCompare(b.url());}</span>);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult('resources count = '+requests.length);<span class="cstat-no" title="statement not covered" >f</span>or(i=0;i&lt;requests.length;i++)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(requests[i].url());}</span>;<span class="cstat-no" title="statement not covered" >NetworkTestRunner.dumpNetworkRequestsWithSignedExchangeInfo=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >for(const request of SDK.networkLog.requests()){<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`* ${request.url()}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(`  failed: ${!!request.failed}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(`  statusCode: ${request.statusCode}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(`  resourceType: ${request.resourceType().name()}`);<span class="cstat-no" title="statement not covered" >i</span>f(request.signedExchangeInfo()){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('  SignedExchangeInfo');<span class="cstat-no" title="statement not covered" >i</span>f(request.signedExchangeInfo().header){const header=<span class="cstat-no" title="statement not covered" >request.signedExchangeInfo().header;<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(`    Request URL: ${header.requestUrl}`);<span class="cstat-no" title="statement not covered" >f</span>or(const signature of header.signatures)</span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`    Certificate URL: ${signature.certUrl}`);}</span>
+<span class="cstat-no" title="statement not covered" >if(request.signedExchangeInfo().securityDetails){const securityDetails=<span class="cstat-no" title="statement not covered" >request.signedExchangeInfo().securityDetails;<span class="cstat-no" title="statement not covered" ></span>TestRunner.addResult(`    Certificate Subject: ${securityDetails.subjectName}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(`    Certificate Issuer: ${securityDetails.issuer}`);}</span></span>
+<span class="cstat-no" title="statement not covered" >if(request.signedExchangeInfo().errors){<span class="cstat-no" title="statement not covered" >for(const errorMessage of request.signedExchangeInfo().errors)</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`    Error: ${JSON.stringify(errorMessage)}`);}</span>}}};<span class="cstat-no" title="statement not covered" >NetworkTestRunner.findRequestsByURLPattern=<span class="fstat-no" title="function not covered" >fu</span>nction(urlPattern){<span class="cstat-no" title="statement not covered" >return NetworkTestRunner.networkRequests().filter(<span class="fstat-no" title="function not covered" >fu</span>nction(value){<span class="cstat-no" title="statement not covered" >return urlPattern.test(value.url());}</span>);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.makeSimpleXHR=<span class="fstat-no" title="function not covered" >fu</span>nction(method,url,async,callback){<span class="cstat-no" title="statement not covered" >NetworkTestRunner.makeXHR(method,url,async,undefined,undefined,[],false,undefined,undefined,callback);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.makeSimpleXHRWithPayload=<span class="fstat-no" title="function not covered" >fu</span>nction(method,url,async,payload,callback){<span class="cstat-no" title="statement not covered" >NetworkTestRunner.makeXHR(method,url,async,undefined,undefined,[],false,payload,undefined,callback);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.makeXHR=<span class="fstat-no" title="function not covered" >fu</span>nction(method,url,async,user,password,headers,withCredentials,payload,type,callback){const args=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>args.method=method;<span class="cstat-no" title="statement not covered" >a</span>rgs.url=TestRunner.url(url);<span class="cstat-no" title="statement not covered" >a</span>rgs.async=async;<span class="cstat-no" title="statement not covered" >a</span>rgs.user=user;<span class="cstat-no" title="statement not covered" >a</span>rgs.password=password;<span class="cstat-no" title="statement not covered" >a</span>rgs.headers=headers;<span class="cstat-no" title="statement not covered" >a</span>rgs.withCredentials=withCredentials;<span class="cstat-no" title="statement not covered" >a</span>rgs.payload=payload;<span class="cstat-no" title="statement not covered" >a</span>rgs.type=type;c</span>onst jsonArgs=<span class="cstat-no" title="statement not covered" >JSON.stringify(args).replace(/\"/g,'\\"');</span>function <span class="fstat-no" title="function not covered" >innerCallback(</span>msg){<span class="cstat-no" title="statement not covered" >if(msg.messageText.indexOf('XHR loaded')!==-1){<span class="cstat-no" title="statement not covered" >if(callback)</span></span></span>
+<span class="cstat-no" title="statement not covered" >callback();}</span>else{<span class="cstat-no" title="statement not covered" >ConsoleTestRunner.addConsoleSniffer(innerCallback);}</span>}
+<span class="cstat-no" title="statement not covered" >ConsoleTestRunner.addConsoleSniffer(innerCallback);<span class="cstat-no" title="statement not covered" >T</span>estRunner.evaluateInPageAnonymously('makeXHRForJSONArguments("'+jsonArgs+'")');}</span>;<span class="cstat-no" title="statement not covered" >NetworkTestRunner.makeFetch=<span class="fstat-no" title="function not covered" >fu</span>nction(url,requestInitializer,callback){<span class="cstat-no" title="statement not covered" >TestRunner.callFunctionInPageAsync('makeFetch',[url,requestInitializer]).then(callback);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.makeFetchInWorker=<span class="fstat-no" title="function not covered" >fu</span>nction(url,requestInitializer,callback){<span class="cstat-no" title="statement not covered" >TestRunner.callFunctionInPageAsync('makeFetchInWorker',[url,requestInitializer]).then(callback);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.clearNetworkCache=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Promise.all([TestRunner.NetworkAgent.clearBrowserCache(),TestRunner.NetworkAgent.setCacheDisabled(true).then(<span class="fstat-no" title="function not covered" >()</span>=&gt;<span class="cstat-no" title="statement not covered" >TestRunner.NetworkAgent.setCacheDisabled(false))</span>]);}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.HARPropertyFormatters={bodySize:'formatAsTypeName',compression:'formatAsTypeName',connection:'formatAsTypeName',headers:'formatAsTypeName',headersSize:'formatAsTypeName',id:'formatAsTypeName',onContentLoad:'formatAsTypeName',onLoad:'formatAsTypeName',receive:'formatAsTypeName',startedDateTime:'formatAsRecentTime',time:'formatAsTypeName',timings:'formatAsTypeName',version:'formatAsTypeName',wait:'formatAsTypeName',_transferSize:'formatAsTypeName',_error:'skip',_initiator:'formatAsTypeName',_priority:'formatAsTypeName'};<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.HARPropertyFormattersWithSize=JSON.parse(JSON.stringify(NetworkTestRunner.HARPropertyFormatters));<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.HARPropertyFormattersWithSize.size='formatAsTypeName';<span class="cstat-no" title="statement not covered" >T</span>estRunner.deprecatedInitAsync(`</span>
+  let lastXHRIndex = 0;
+&nbsp;
+  function xhrLoadedCallback() {
+    console.log('XHR loaded: ' + ++lastXHRIndex);
+  }
+&nbsp;
+  function makeSimpleXHR(method, url, async, callback) {
+    makeSimpleXHRWithPayload(method, url, async, null, callback);
+  }
+&nbsp;
+  function makeSimpleXHRWithPayload(method, url, async, payload, callback) {
+    makeXHR(method, url, async, undefined, undefined, [], false, payload, undefined, callback);
+  }
+&nbsp;
+  function makeXHR(method, url, async, user, password, headers, withCredentials, payload, type, callback) {
+    let xhr = new XMLHttpRequest();
+&nbsp;
+    if (type == undefined)
+      xhr.responseType = '';
+    else
+      xhr.responseType = type;
+&nbsp;
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (typeof callback === 'function')
+          callback();
+      }
+    };
+&nbsp;
+    xhr.open(method, url, async, user, password);
+    xhr.withCredentials = withCredentials;
+&nbsp;
+    for (let i = 0; i &lt; headers.length; ++i)
+      xhr.setRequestHeader(headers[i][0], headers[i][1]);
+&nbsp;
+    try { xhr.send(payload); } catch (e) {}
+  }
+&nbsp;
+  function makeXHRForJSONArguments(jsonArgs) {
+    let args = JSON.parse(jsonArgs);
+&nbsp;
+    makeXHR(
+      args.method,
+      args.url,
+      args.async,
+      args.user,
+      args.password,
+      args.headers || [],
+      args.withCredentials,
+      args.payload,
+      args.type,
+      xhrLoadedCallback
+    );
+  }
+&nbsp;
+  function makeFetch(url, requestInitializer) {
+    return fetch(url, requestInitializer).then(res =&gt; {
+      res.text();
+      return res;
+    }).catch(e =&gt; e);
+  }
+&nbsp;
+  function makeFetchInWorker(url, requestInitializer) {
+    return new Promise(resolve =&gt; {
+      let worker = new Worker('/devtools/network/resources/fetch-worker.js');
+&nbsp;
+      worker.onmessage = event =&gt; {
+        resolve(event.data);
+      };
+&nbsp;
+      worker.postMessage({
+        url: url,
+        init: requestInitializer
+      });
+    });
+  }
+`);;<span class="cstat-no" title="statement not covered" >NetworkTestRunner.resetProductRegistry=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Cleared ProductRegistryImpl');<span class="cstat-no" title="statement not covered" >P</span>roductRegistryImpl._productsByDomainHash.clear();}</span>;<span class="cstat-no" title="statement not covered" >N</span>etworkTestRunner.addProductRegistryEntry=<span class="fstat-no" title="function not covered" >fu</span>nction(domainPattern,productName,type){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('Adding entry: '+domainPattern);c</span>onst wildCardPosition=<span class="cstat-no" title="statement not covered" >domainPattern.indexOf('*');</span>let prefix=<span class="cstat-no" title="statement not covered" >'';<span class="cstat-no" title="statement not covered" ></span>if(wildCardPosition===-1){}else <span class="cstat-no" title="statement not covered" >if(wildCardPosition===0){<span class="cstat-no" title="statement not covered" >prefix='*';<span class="cstat-no" title="statement not covered" >c</span>onsole.assert(domainPattern.substr(1,1)==='.','Domain pattern wildcard must be followed by \'.\'');<span class="cstat-no" title="statement not covered" >d</span>omainPattern=domainPattern.substr(2);}</span>else{<span class="cstat-no" title="statement not covered" >prefix=domainPattern.substr(0,wildCardPosition);<span class="cstat-no" title="statement not covered" >c</span>onsole.assert(domainPattern.substr(wildCardPosition+1,1)==='.','Domain pattern wildcard must be followed by \'.\'');<span class="cstat-no" title="statement not covered" >d</span>omainPattern=domainPattern.substr(wildCardPosition+2);}</span></span></span></span>
+<span class="cstat-no" title="statement not covered" >console.assert(domainPattern.indexOf('*')===-1,'Domain pattern may only have 1 wildcard.');c</span>onst prefixes=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>prefixes[prefix]={product:0,type:type};<span class="cstat-no" title="statement not covered" >P</span>roductRegistryImpl.register([productName],[{hash:ProductRegistryImpl._hashForDomain(domainPattern),prefixes:prefixes}]);}</span>;;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>

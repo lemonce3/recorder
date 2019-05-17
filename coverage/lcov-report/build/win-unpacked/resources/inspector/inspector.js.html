@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/win-unpacked/resources/inspector/inspector.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">build/win-unpacked/resources/inspector</a> inspector.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/509</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/208</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/121</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >allDescriptors.push(...[{"dependencies":["components","emulation"],"extensions":[{"className":"Screencast.ScreencastAppProvider","type":"@Common.AppProvider","order":1},{"className":"Screencast.ScreencastApp.ToolbarButtonProvider","type":"@UI.ToolbarItem.Provider","order":1,"location":"main-toolbar-left"},{"actionId":"components.request-app-banner","type":"context-menu-item","location":"mainMenu","order":10}],"name":"screencast"}]);<span class="cstat-no" title="statement not covered" >a</span>pplicationDescriptor.modules.push(...[{"type":"autostart","name":"screencast"}])</span>
+<span class="cstat-no" title="statement not covered" >self['Screencast']=self['Screencast']||{};<span class="cstat-no" title="statement not covered" >S</span>creencast.InputModel=class extends SDK.SDKModel{<span class="fstat-no" title="function not covered" >co</span>nstructor(target){<span class="cstat-no" title="statement not covered" >super(target);<span class="cstat-no" title="statement not covered" >t</span>his._inputAgent=target.inputAgent();<span class="cstat-no" title="statement not covered" >t</span>his._activeTouchOffsetTop=null;<span class="cstat-no" title="statement not covered" >t</span>his._activeTouchParams=null;}</span></span>
+<span class="fstat-no" title="function not covered" >em</span>itKeyEvent(event){let type;<span class="cstat-no" title="statement not covered" >switch(event.type){case'keydown':<span class="cstat-no" title="statement not covered" >type='keyDown';<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'keyup':<span class="cstat-no" title="statement not covered" >type='keyUp';<span class="cstat-no" title="statement not covered" >b</span>reak;c</span>ase'keypress':<span class="cstat-no" title="statement not covered" >type='char';<span class="cstat-no" title="statement not covered" >b</span>reak;d</span>efault:<span class="cstat-no" title="statement not covered" >return;}</span></span>
+const text=<span class="cstat-no" title="statement not covered" >event.type==='keypress'?String.fromCharCode(event.charCode):undefined;<span class="cstat-no" title="statement not covered" ></span>this._inputAgent.invoke_dispatchKeyEvent({type:type,modifiers:this._modifiersForEvent(event),text:text,unmodifiedText:text?text.toLowerCase():undefined,keyIdentifier:event.keyIdentifier,code:event.code,key:event.key,windowsVirtualKeyCode:event.keyCode,nativeVirtualKeyCode:event.keyCode,autoRepeat:false,isKeypad:false,isSystemKey:false});}</span>
+<span class="fstat-no" title="function not covered" >em</span>itTouchFromMouseEvent(event,offsetTop,zoom){const buttons=<span class="cstat-no" title="statement not covered" >{0:'none',1:'left',2:'middle',3:'right'};</span>const types=<span class="cstat-no" title="statement not covered" >{'mousedown':'mousePressed','mouseup':'mouseReleased','mousemove':'mouseMoved','mousewheel':'mouseWheel'};<span class="cstat-no" title="statement not covered" ></span>if(!(event.type in types)||!(event.which in buttons))</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(event.type!=='mousewheel'&amp;&amp;buttons[event.which]==='none')</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(event.type==='mousedown'||this._activeTouchOffsetTop===null)</span>
+<span class="cstat-no" title="statement not covered" >this._activeTouchOffsetTop=offsetTop;c</span>onst x=<span class="cstat-no" title="statement not covered" >Math.round(event.offsetX/zoom);</span>let y=<span class="cstat-no" title="statement not covered" >Math.round(event.offsetY/zoom);<span class="cstat-no" title="statement not covered" ></span>y=Math.round(y-this._activeTouchOffsetTop);c</span>onst params=<span class="cstat-no" title="statement not covered" >{type:types[event.type],x:x,y:y,modifiers:this._modifiersForEvent(event),button:buttons[event.which],clickCount:0};<span class="cstat-no" title="statement not covered" ></span>if(event.type==='mousewheel'){<span class="cstat-no" title="statement not covered" >params.deltaX=event.wheelDeltaX/zoom;<span class="cstat-no" title="statement not covered" >p</span>arams.deltaY=event.wheelDeltaY/zoom;}</span>else{<span class="cstat-no" title="statement not covered" >this._activeTouchParams=params;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(event.type==='mouseup')</span>
+<span class="cstat-no" title="statement not covered" >this._activeTouchOffsetTop=null;<span class="cstat-no" title="statement not covered" >t</span>his._inputAgent.invoke_emulateTouchFromMouseEvent(params);}</span>
+<span class="fstat-no" title="function not covered" >ca</span>ncelTouch(){<span class="cstat-no" title="statement not covered" >if(this._activeTouchParams!==null){const params=<span class="cstat-no" title="statement not covered" >this._activeTouchParams;<span class="cstat-no" title="statement not covered" ></span>this._activeTouchParams=null;<span class="cstat-no" title="statement not covered" >p</span>arams.type='mouseReleased';<span class="cstat-no" title="statement not covered" >t</span>his._inputAgent.invoke_emulateTouchFromMouseEvent(params);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_m</span>odifiersForEvent(event){<span class="cstat-no" title="statement not covered" >return(event.altKey?1:0)|(event.ctrlKey?2:0)|(event.metaKey?4:0)|(event.shiftKey?8:0);}</span>};<span class="cstat-no" title="statement not covered" >SDK.SDKModel.register(Screencast.InputModel,SDK.Target.Capability.Input,false);;<span class="cstat-no" title="statement not covered" ></span>Screencast.ScreencastApp=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(){<span class="cstat-no" title="statement not covered" >this._enabledSetting=Common.settings.createSetting('screencastEnabled',true);<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton=new UI.ToolbarToggle(Common.UIString('Toggle screencast'),'largeicon-phone');<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton.setToggled(this._enabledSetting.get());<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton.setEnabled(false);<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton.addEventListener(UI.ToolbarButton.Events.Click,this._toggleButtonClicked,this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.observeModels(SDK.ScreenCaptureModel,this);}</span></span>
+<span class="fstat-no" title="function not covered" >st</span>atic _instance(){<span class="cstat-no" title="statement not covered" >if(!Screencast.ScreencastApp._appInstance)</span>
+<span class="cstat-no" title="statement not covered" >Screencast.ScreencastApp._appInstance=new Screencast.ScreencastApp();<span class="cstat-no" title="statement not covered" >r</span>eturn Screencast.ScreencastApp._appInstance;}</span>
+<span class="fstat-no" title="function not covered" >pr</span>esentUI(document){const rootView=<span class="cstat-no" title="statement not covered" >new UI.RootView();<span class="cstat-no" title="statement not covered" ></span>this._rootSplitWidget=new UI.SplitWidget(false,true,'InspectorView.screencastSplitViewState',300,300);<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.setVertical(true);<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.setSecondIsSidebar(true);<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.show(rootView.element);<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.hideMain();<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.setSidebarWidget(UI.inspectorView);<span class="cstat-no" title="statement not covered" >r</span>ootView.attachToDocument(document);<span class="cstat-no" title="statement not covered" >r</span>ootView.focus();}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delAdded(screenCaptureModel){<span class="cstat-no" title="statement not covered" >if(this._screenCaptureModel)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel=screenCaptureModel;<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton.setEnabled(true);<span class="cstat-no" title="statement not covered" >t</span>his._screencastView=new Screencast.ScreencastView(screenCaptureModel);<span class="cstat-no" title="statement not covered" >t</span>his._rootSplitWidget.setMainWidget(this._screencastView);<span class="cstat-no" title="statement not covered" >t</span>his._screencastView.initialize();<span class="cstat-no" title="statement not covered" >t</span>his._onScreencastEnabledChanged();}</span>
+<span class="fstat-no" title="function not covered" >mo</span>delRemoved(screenCaptureModel){<span class="cstat-no" title="statement not covered" >if(this._screenCaptureModel!==screenCaptureModel)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >d</span>elete this._screenCaptureModel;<span class="cstat-no" title="statement not covered" >t</span>his._toggleButton.setEnabled(false);<span class="cstat-no" title="statement not covered" >t</span>his._screencastView.detach();<span class="cstat-no" title="statement not covered" >d</span>elete this._screencastView;<span class="cstat-no" title="statement not covered" >t</span>his._onScreencastEnabledChanged();}</span>
+<span class="fstat-no" title="function not covered" >_t</span>oggleButtonClicked(){const enabled=<span class="cstat-no" title="statement not covered" >!this._toggleButton.toggled();<span class="cstat-no" title="statement not covered" ></span>this._enabledSetting.set(enabled);<span class="cstat-no" title="statement not covered" >t</span>his._onScreencastEnabledChanged();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nScreencastEnabledChanged(){<span class="cstat-no" title="statement not covered" >if(!this._rootSplitWidget)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst enabled=<span class="cstat-no" title="statement not covered" >this._enabledSetting.get()&amp;&amp;this._screencastView;<span class="cstat-no" title="statement not covered" ></span>this._toggleButton.setToggled(enabled);<span class="cstat-no" title="statement not covered" >i</span>f(enabled)</span>
+<span class="cstat-no" title="statement not covered" >this._rootSplitWidget.showBoth();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._rootSplitWidget.hideMain();}</span>};<span class="cstat-no" title="statement not covered" >Screencast.ScreencastApp._appInstance;<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastApp.ToolbarButtonProvider=class{<span class="fstat-no" title="function not covered" >it</span>em(){<span class="cstat-no" title="statement not covered" >return Screencast.ScreencastApp._instance()._toggleButton;}</span>};<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastAppProvider=class{<span class="fstat-no" title="function not covered" >cr</span>eateApp(){<span class="cstat-no" title="statement not covered" >return Screencast.ScreencastApp._instance();}</span>};;<span class="cstat-no" title="statement not covered" ></span>Screencast.ScreencastView=class extends UI.VBox{<span class="fstat-no" title="function not covered" >co</span>nstructor(screenCaptureModel){<span class="cstat-no" title="statement not covered" >super();<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel=screenCaptureModel;<span class="cstat-no" title="statement not covered" >t</span>his._domModel=screenCaptureModel.target().model(SDK.DOMModel);<span class="cstat-no" title="statement not covered" >t</span>his._overlayModel=screenCaptureModel.target().model(SDK.OverlayModel);<span class="cstat-no" title="statement not covered" >t</span>his._resourceTreeModel=screenCaptureModel.target().model(SDK.ResourceTreeModel);<span class="cstat-no" title="statement not covered" >t</span>his._networkManager=screenCaptureModel.target().model(SDK.NetworkManager);<span class="cstat-no" title="statement not covered" >t</span>his._inputModel=screenCaptureModel.target().model(Screencast.InputModel);<span class="cstat-no" title="statement not covered" >t</span>his.setMinimumSize(150,150);<span class="cstat-no" title="statement not covered" >t</span>his.registerRequiredCSS('screencast/screencastView.css');}</span></span>
+<span class="fstat-no" title="function not covered" >in</span>itialize(){<span class="cstat-no" title="statement not covered" >this.element.classList.add('screencast');<span class="cstat-no" title="statement not covered" >t</span>his._createNavigationBar();<span class="cstat-no" title="statement not covered" >t</span>his._viewportElement=this.element.createChild('div','screencast-viewport hidden');<span class="cstat-no" title="statement not covered" >t</span>his._canvasContainerElement=this._viewportElement.createChild('div','screencast-canvas-container');<span class="cstat-no" title="statement not covered" >t</span>his._glassPaneElement=this._canvasContainerElement.createChild('div','screencast-glasspane fill hidden');<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement=this._canvasContainerElement.createChild('canvas');<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.tabIndex=0;<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('mousedown',this._handleMouseEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('mouseup',this._handleMouseEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('mousemove',this._handleMouseEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('mousewheel',this._handleMouseEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('click',this._handleMouseEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('contextmenu',this._handleContextMenuEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('keydown',this._handleKeyEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('keyup',this._handleKeyEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('keypress',this._handleKeyEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.addEventListener('blur',this._handleBlurEvent.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._titleElement=this._canvasContainerElement.createChild('div','screencast-element-title monospace hidden');<span class="cstat-no" title="statement not covered" >t</span>his._tagNameElement=this._titleElement.createChild('span','screencast-tag-name');<span class="cstat-no" title="statement not covered" >t</span>his._nodeIdElement=this._titleElement.createChild('span','screencast-node-id');<span class="cstat-no" title="statement not covered" >t</span>his._classNameElement=this._titleElement.createChild('span','screencast-class-name');<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.createTextChild(' ');<span class="cstat-no" title="statement not covered" >t</span>his._nodeWidthElement=this._titleElement.createChild('span');<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.createChild('span','screencast-px').textContent='px';<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.createTextChild(' \u00D7 ');<span class="cstat-no" title="statement not covered" >t</span>his._nodeHeightElement=this._titleElement.createChild('span');<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.createChild('span','screencast-px').textContent='px';<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.style.top='0';<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.style.left='0';<span class="cstat-no" title="statement not covered" >t</span>his._imageElement=new Image();<span class="cstat-no" title="statement not covered" >t</span>his._isCasting=false;<span class="cstat-no" title="statement not covered" >t</span>his._context=this._canvasElement.getContext('2d');<span class="cstat-no" title="statement not covered" >t</span>his._checkerboardPattern=this._createCheckerboardPattern(this._context);<span class="cstat-no" title="statement not covered" >t</span>his._shortcuts=({});<span class="cstat-no" title="statement not covered" >t</span>his._shortcuts[UI.KeyboardShortcut.makeKey('l',UI.KeyboardShortcut.Modifiers.Ctrl)]=this._focusNavigationBar.bind(this);<span class="cstat-no" title="statement not covered" >S</span>DK.targetManager.addEventListener(SDK.TargetManager.Events.SuspendStateChanged,this._onSuspendStateChange,this);<span class="cstat-no" title="statement not covered" >t</span>his._updateGlasspane();}</span>
+<span class="fstat-no" title="function not covered" >wa</span>sShown(){<span class="cstat-no" title="statement not covered" >this._startCasting();}</span>
+<span class="fstat-no" title="function not covered" >wi</span>llHide(){<span class="cstat-no" title="statement not covered" >this._stopCasting();}</span>
+<span class="fstat-no" title="function not covered" >_s</span>tartCasting(){<span class="cstat-no" title="statement not covered" >if(SDK.targetManager.allTargetsSuspended())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._isCasting)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._isCasting=true;c</span>onst maxImageDimension=<span class="cstat-no" title="statement not covered" >2048;</span>const dimensions=<span class="cstat-no" title="statement not covered" >this._viewportDimensions();<span class="cstat-no" title="statement not covered" ></span>if(dimensions.width&lt;0||dimensions.height&lt;0){<span class="cstat-no" title="statement not covered" >this._isCasting=false;<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >dimensions.width*=window.devicePixelRatio;<span class="cstat-no" title="statement not covered" >d</span>imensions.height*=window.devicePixelRatio;<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel.startScreencast('jpeg',80,Math.floor(Math.min(maxImageDimension,dimensions.width)),Math.floor(Math.min(maxImageDimension,dimensions.height)),undefined,this._screencastFrame.bind(this),this._screencastVisibilityChanged.bind(this));<span class="cstat-no" title="statement not covered" >f</span>or(const emulationModel of SDK.targetManager.models(SDK.EmulationModel))</span>
+<span class="cstat-no" title="statement not covered" >emulationModel.overrideEmulateTouch(true);<span class="cstat-no" title="statement not covered" >i</span>f(this._overlayModel)</span>
+<span class="cstat-no" title="statement not covered" >this._overlayModel.setHighlighter(this);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>topCasting(){<span class="cstat-no" title="statement not covered" >if(!this._isCasting)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._isCasting=false;<span class="cstat-no" title="statement not covered" >t</span>his._screenCaptureModel.stopScreencast();<span class="cstat-no" title="statement not covered" >f</span>or(const emulationModel of SDK.targetManager.models(SDK.EmulationModel))</span>
+<span class="cstat-no" title="statement not covered" >emulationModel.overrideEmulateTouch(false);<span class="cstat-no" title="statement not covered" >i</span>f(this._overlayModel)</span>
+<span class="cstat-no" title="statement not covered" >this._overlayModel.setHighlighter(null);}</span>
+<span class="fstat-no" title="function not covered" >_s</span>creencastFrame(base64Data,metadata){<span class="cstat-no" title="statement not covered" >this._imageElement.onload=<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >this._pageScaleFactor=metadata.pageScaleFactor;<span class="cstat-no" title="statement not covered" >t</span>his._screenOffsetTop=metadata.offsetTop;<span class="cstat-no" title="statement not covered" >t</span>his._scrollOffsetX=metadata.scrollOffsetX;<span class="cstat-no" title="statement not covered" >t</span>his._scrollOffsetY=metadata.scrollOffsetY;c</span>onst deviceSizeRatio=<span class="cstat-no" title="statement not covered" >metadata.deviceHeight/metadata.deviceWidth;</span>const dimensionsCSS=<span class="cstat-no" title="statement not covered" >this._viewportDimensions();<span class="cstat-no" title="statement not covered" ></span>this._imageZoom=Math.min(dimensionsCSS.width/this._imageElement.naturalWidth,dimensionsCSS.height/(this._imageElement.naturalWidth*deviceSizeRatio));<span class="cstat-no" title="statement not covered" >t</span>his._viewportElement.classList.remove('hidden');c</span>onst bordersSize=<span class="cstat-no" title="statement not covered" >Screencast.ScreencastView._bordersSize;<span class="cstat-no" title="statement not covered" ></span>if(this._imageZoom&lt;1.01/window.devicePixelRatio)</span></span>
+<span class="cstat-no" title="statement not covered" >this._imageZoom=1/window.devicePixelRatio;<span class="cstat-no" title="statement not covered" >t</span>his._screenZoom=this._imageElement.naturalWidth*this._imageZoom/metadata.deviceWidth;<span class="cstat-no" title="statement not covered" >t</span>his._viewportElement.style.width=metadata.deviceWidth*this._screenZoom+bordersSize+'px';<span class="cstat-no" title="statement not covered" >t</span>his._viewportElement.style.height=metadata.deviceHeight*this._screenZoom+bordersSize+'px';<span class="cstat-no" title="statement not covered" >t</span>his.highlightInOverlay({node:this._highlightNode},this._highlightConfig);}</span>;<span class="cstat-no" title="statement not covered" >this._imageElement.src='data:image/jpg;base64,'+base64Data;}</span>
+<span class="fstat-no" title="function not covered" >_i</span>sGlassPaneActive(){<span class="cstat-no" title="statement not covered" >return!this._glassPaneElement.classList.contains('hidden');}</span>
+<span class="fstat-no" title="function not covered" >_s</span>creencastVisibilityChanged(visible){<span class="cstat-no" title="statement not covered" >this._targetInactive=!visible;<span class="cstat-no" title="statement not covered" >t</span>his._updateGlasspane();}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nSuspendStateChange(event){<span class="cstat-no" title="statement not covered" >if(SDK.targetManager.allTargetsSuspended())</span>
+<span class="cstat-no" title="statement not covered" >this._stopCasting();e</span>lse
+<span class="cstat-no" title="statement not covered" >this._startCasting();<span class="cstat-no" title="statement not covered" >t</span>his._updateGlasspane();}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateGlasspane(){<span class="cstat-no" title="statement not covered" >if(this._targetInactive){<span class="cstat-no" title="statement not covered" >this._glassPaneElement.textContent=Common.UIString('The tab is inactive');<span class="cstat-no" title="statement not covered" >t</span>his._glassPaneElement.classList.remove('hidden');}</span>else <span class="cstat-no" title="statement not covered" >if(SDK.targetManager.allTargetsSuspended()){<span class="cstat-no" title="statement not covered" >this._glassPaneElement.textContent=Common.UIString('Profiling in progress');<span class="cstat-no" title="statement not covered" >t</span>his._glassPaneElement.classList.remove('hidden');}</span>else{<span class="cstat-no" title="statement not covered" >this._glassPaneElement.classList.add('hidden');}</span>}</span></span>
+<span class="fstat-no" title="function not covered" >as</span>ync _handleMouseEvent(event){<span class="cstat-no" title="statement not covered" >if(this._isGlassPaneActive()){<span class="cstat-no" title="statement not covered" >event.consume();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(!this._pageScaleFactor||!this._domModel)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!this._inspectModeConfig||event.type==='mousewheel'){<span class="cstat-no" title="statement not covered" >if(this._inputModel)</span></span>
+<span class="cstat-no" title="statement not covered" >this._inputModel.emitTouchFromMouseEvent(event,this._screenOffsetTop,this._screenZoom);<span class="cstat-no" title="statement not covered" >e</span>vent.preventDefault();<span class="cstat-no" title="statement not covered" >i</span>f(event.type==='mousedown')</span>
+<span class="cstat-no" title="statement not covered" >this._canvasElement.focus();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span>
+const position=<span class="cstat-no" title="statement not covered" >this._convertIntoScreenSpace(event);</span>const node=<span class="cstat-no" title="statement not covered" >await this._domModel.nodeForLocation(Math.floor(position.x/this._pageScaleFactor+this._scrollOffsetX),Math.floor(position.y/this._pageScaleFactor+this._scrollOffsetY),Common.moduleSetting('showUAShadowDOM').get());<span class="cstat-no" title="statement not covered" ></span>if(!node)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(event.type==='mousemove'){<span class="cstat-no" title="statement not covered" >this.highlightInOverlay({node},this._inspectModeConfig);<span class="cstat-no" title="statement not covered" >t</span>his._domModel.overlayModel().nodeHighlightRequested(node.id);}</span>else <span class="cstat-no" title="statement not covered" >if(event.type==='click'){<span class="cstat-no" title="statement not covered" >this._domModel.overlayModel().inspectNodeRequested(node.backendNodeId());}</span>}</span></span>
+<span class="fstat-no" title="function not covered" >_h</span>andleKeyEvent(event){<span class="cstat-no" title="statement not covered" >if(this._isGlassPaneActive()){<span class="cstat-no" title="statement not covered" >event.consume();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+const shortcutKey=<span class="cstat-no" title="statement not covered" >UI.KeyboardShortcut.makeKeyFromEvent((event));</span>const handler=<span class="cstat-no" title="statement not covered" >this._shortcuts[shortcutKey];<span class="cstat-no" title="statement not covered" ></span>if(handler&amp;&amp;handler(event)){<span class="cstat-no" title="statement not covered" >event.consume();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >if(this._inputModel)</span>
+<span class="cstat-no" title="statement not covered" >this._inputModel.emitKeyEvent(event);<span class="cstat-no" title="statement not covered" >e</span>vent.consume();<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.focus();}</span>
+<span class="fstat-no" title="function not covered" >_h</span>andleContextMenuEvent(event){<span class="cstat-no" title="statement not covered" >event.consume(true);}</span>
+<span class="fstat-no" title="function not covered" >_h</span>andleBlurEvent(event){<span class="cstat-no" title="statement not covered" >if(this._inputModel)</span>
+<span class="cstat-no" title="statement not covered" >this._inputModel.cancelTouch();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>onvertIntoScreenSpace(event){const position=<span class="cstat-no" title="statement not covered" >{};<span class="cstat-no" title="statement not covered" ></span>position.x=Math.round(event.offsetX/this._screenZoom);<span class="cstat-no" title="statement not covered" >p</span>osition.y=Math.round(event.offsetY/this._screenZoom-this._screenOffsetTop);<span class="cstat-no" title="statement not covered" >r</span>eturn position;}</span>
+<span class="fstat-no" title="function not covered" >on</span>Resize(){<span class="cstat-no" title="statement not covered" >if(this._deferredCasting){<span class="cstat-no" title="statement not covered" >clearTimeout(this._deferredCasting);<span class="cstat-no" title="statement not covered" >d</span>elete this._deferredCasting;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._stopCasting();<span class="cstat-no" title="statement not covered" >t</span>his._deferredCasting=setTimeout(this._startCasting.bind(this),100);}</span>
+<span class="fstat-no" title="function not covered" >hi</span>ghlightInOverlay(data,config){<span class="cstat-no" title="statement not covered" >this._highlightInOverlay(data,config);}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _highlightInOverlay(data,config){const{node:n,deferredNode,object}=<span class="cstat-no" title="statement not covered" >data;</span>let node=<span class="cstat-no" title="statement not covered" >n;<span class="cstat-no" title="statement not covered" ></span>if(!node&amp;&amp;deferredNode)</span>
+<span class="cstat-no" title="statement not covered" >node=await deferredNode.resolvePromise();<span class="cstat-no" title="statement not covered" >i</span>f(!node&amp;&amp;object){const domModel=<span class="cstat-no" title="statement not covered" >object.runtimeModel().target().model(SDK.DOMModel);<span class="cstat-no" title="statement not covered" ></span>if(domModel)</span></span>
+<span class="cstat-no" title="statement not covered" >node=await domModel.pushObjectAsNodeToFrontend(object);}</span>
+<span class="cstat-no" title="statement not covered" >this._highlightNode=node;<span class="cstat-no" title="statement not covered" >t</span>his._highlightConfig=config;<span class="cstat-no" title="statement not covered" >i</span>f(!node){<span class="cstat-no" title="statement not covered" >this._model=null;<span class="cstat-no" title="statement not covered" >t</span>his._config=null;<span class="cstat-no" title="statement not covered" >t</span>his._node=null;<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.classList.add('hidden');<span class="cstat-no" title="statement not covered" >t</span>his._repaint();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span>
+<span class="cstat-no" title="statement not covered" >this._node=node;<span class="cstat-no" title="statement not covered" >n</span>ode.boxModel().then(<span class="fstat-no" title="function not covered" >mo</span>del=&gt;{<span class="cstat-no" title="statement not covered" >if(!model||!this._pageScaleFactor){<span class="cstat-no" title="statement not covered" >this._repaint();<span class="cstat-no" title="statement not covered" >r</span>eturn;}</span></span></span>
+<span class="cstat-no" title="statement not covered" >this._model=this._scaleModel(model);<span class="cstat-no" title="statement not covered" >t</span>his._config=config;<span class="cstat-no" title="statement not covered" >t</span>his._repaint();}</span>);}
+<span class="fstat-no" title="function not covered" >_s</span>caleModel(model){function <span class="fstat-no" title="function not covered" >scaleQuad(</span>quad){<span class="cstat-no" title="statement not covered" >for(let i=0;i&lt;quad.length;i+=2){<span class="cstat-no" title="statement not covered" >quad[i]=quad[i]*this._pageScaleFactor*this._screenZoom;<span class="cstat-no" title="statement not covered" >q</span>uad[i+1]=(quad[i+1]*this._pageScaleFactor+this._screenOffsetTop)*this._screenZoom;}</span>}</span>
+<span class="cstat-no" title="statement not covered" >scaleQuad.call(this,model.content);<span class="cstat-no" title="statement not covered" >s</span>caleQuad.call(this,model.padding);<span class="cstat-no" title="statement not covered" >s</span>caleQuad.call(this,model.border);<span class="cstat-no" title="statement not covered" >s</span>caleQuad.call(this,model.margin);<span class="cstat-no" title="statement not covered" >r</span>eturn model;}</span>
+<span class="fstat-no" title="function not covered" >_r</span>epaint(){const model=<span class="cstat-no" title="statement not covered" >this._model;</span>const config=<span class="cstat-no" title="statement not covered" >this._config;</span>const canvasWidth=<span class="cstat-no" title="statement not covered" >this._canvasElement.getBoundingClientRect().width;</span>const canvasHeight=<span class="cstat-no" title="statement not covered" >this._canvasElement.getBoundingClientRect().height;<span class="cstat-no" title="statement not covered" ></span>this._canvasElement.width=window.devicePixelRatio*canvasWidth;<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.height=window.devicePixelRatio*canvasHeight;<span class="cstat-no" title="statement not covered" >t</span>his._context.save();<span class="cstat-no" title="statement not covered" >t</span>his._context.scale(window.devicePixelRatio,window.devicePixelRatio);<span class="cstat-no" title="statement not covered" >t</span>his._context.save();<span class="cstat-no" title="statement not covered" >t</span>his._context.fillStyle=this._checkerboardPattern;<span class="cstat-no" title="statement not covered" >t</span>his._context.fillRect(0,0,canvasWidth,this._screenOffsetTop*this._screenZoom);<span class="cstat-no" title="statement not covered" >t</span>his._context.fillRect(0,this._screenOffsetTop*this._screenZoom+this._imageElement.naturalHeight*this._imageZoom,canvasWidth,canvasHeight);<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();<span class="cstat-no" title="statement not covered" >i</span>f(model&amp;&amp;config){<span class="cstat-no" title="statement not covered" >this._context.save();c</span>onst transparentColor=<span class="cstat-no" title="statement not covered" >'rgba(0, 0, 0, 0)';</span>const quads=<span class="cstat-no" title="statement not covered" >[];<span class="cstat-no" title="statement not covered" ></span>if(model.content&amp;&amp;config.contentColor!==transparentColor)</span></span>
+<span class="cstat-no" title="statement not covered" >quads.push({quad:model.content,color:config.contentColor});<span class="cstat-no" title="statement not covered" >i</span>f(model.padding&amp;&amp;config.paddingColor!==transparentColor)</span>
+<span class="cstat-no" title="statement not covered" >quads.push({quad:model.padding,color:config.paddingColor});<span class="cstat-no" title="statement not covered" >i</span>f(model.border&amp;&amp;config.borderColor!==transparentColor)</span>
+<span class="cstat-no" title="statement not covered" >quads.push({quad:model.border,color:config.borderColor});<span class="cstat-no" title="statement not covered" >i</span>f(model.margin&amp;&amp;config.marginColor!==transparentColor)</span>
+<span class="cstat-no" title="statement not covered" >quads.push({quad:model.margin,color:config.marginColor});<span class="cstat-no" title="statement not covered" >f</span>or(let i=quads.length-1;i&gt;0;--i)</span>
+<span class="cstat-no" title="statement not covered" >this._drawOutlinedQuadWithClip(quads[i].quad,quads[i-1].quad,quads[i].color);<span class="cstat-no" title="statement not covered" >i</span>f(quads.length&gt;0)</span>
+<span class="cstat-no" title="statement not covered" >this._drawOutlinedQuad(quads[0].quad,quads[0].color);<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();<span class="cstat-no" title="statement not covered" >t</span>his._drawElementTitle();<span class="cstat-no" title="statement not covered" >t</span>his._context.globalCompositeOperation='destination-over';}</span>
+<span class="cstat-no" title="statement not covered" >this._context.drawImage(this._imageElement,0,this._screenOffsetTop*this._screenZoom,this._imageElement.naturalWidth*this._imageZoom,this._imageElement.naturalHeight*this._imageZoom);<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();}</span>
+<span class="fstat-no" title="function not covered" >_c</span>ssColor(color){<span class="cstat-no" title="statement not covered" >if(!color)</span>
+<span class="cstat-no" title="statement not covered" >return'transparent';<span class="cstat-no" title="statement not covered" >r</span>eturn Common.Color.fromRGBA([color.r,color.g,color.b,color.a]).asString(Common.Color.Format.RGBA)||'';}</span>
+<span class="fstat-no" title="function not covered" >_q</span>uadToPath(quad){<span class="cstat-no" title="statement not covered" >this._context.beginPath();<span class="cstat-no" title="statement not covered" >t</span>his._context.moveTo(quad[0],quad[1]);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(quad[2],quad[3]);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(quad[4],quad[5]);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(quad[6],quad[7]);<span class="cstat-no" title="statement not covered" >t</span>his._context.closePath();<span class="cstat-no" title="statement not covered" >r</span>eturn this._context;}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawOutlinedQuad(quad,fillColor){<span class="cstat-no" title="statement not covered" >this._context.save();<span class="cstat-no" title="statement not covered" >t</span>his._context.lineWidth=2;<span class="cstat-no" title="statement not covered" >t</span>his._quadToPath(quad).clip();<span class="cstat-no" title="statement not covered" >t</span>his._context.fillStyle=this._cssColor(fillColor);<span class="cstat-no" title="statement not covered" >t</span>his._context.fill();<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawOutlinedQuadWithClip(quad,clipQuad,fillColor){<span class="cstat-no" title="statement not covered" >this._context.fillStyle=this._cssColor(fillColor);<span class="cstat-no" title="statement not covered" >t</span>his._context.save();<span class="cstat-no" title="statement not covered" >t</span>his._context.lineWidth=0;<span class="cstat-no" title="statement not covered" >t</span>his._quadToPath(quad).fill();<span class="cstat-no" title="statement not covered" >t</span>his._context.globalCompositeOperation='destination-out';<span class="cstat-no" title="statement not covered" >t</span>his._context.fillStyle='red';<span class="cstat-no" title="statement not covered" >t</span>his._quadToPath(clipQuad).fill();<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();}</span>
+<span class="fstat-no" title="function not covered" >_d</span>rawElementTitle(){<span class="cstat-no" title="statement not covered" >if(!this._node)</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst canvasWidth=<span class="cstat-no" title="statement not covered" >this._canvasElement.getBoundingClientRect().width;</span>const canvasHeight=<span class="cstat-no" title="statement not covered" >this._canvasElement.getBoundingClientRect().height;</span>const lowerCaseName=<span class="cstat-no" title="statement not covered" >this._node.localName()||this._node.nodeName().toLowerCase();<span class="cstat-no" title="statement not covered" ></span>this._tagNameElement.textContent=lowerCaseName;<span class="cstat-no" title="statement not covered" >t</span>his._nodeIdElement.textContent=this._node.getAttribute('id')?'#'+this._node.getAttribute('id'):'';<span class="cstat-no" title="statement not covered" >t</span>his._nodeIdElement.textContent=this._node.getAttribute('id')?'#'+this._node.getAttribute('id'):'';l</span>et className=<span class="cstat-no" title="statement not covered" >this._node.getAttribute('class');<span class="cstat-no" title="statement not covered" ></span>if(className&amp;&amp;className.length&gt;50)</span>
+<span class="cstat-no" title="statement not covered" >className=className.substring(0,50)+'\u2026';<span class="cstat-no" title="statement not covered" >t</span>his._classNameElement.textContent=className||'';<span class="cstat-no" title="statement not covered" >t</span>his._nodeWidthElement.textContent=this._model.width;<span class="cstat-no" title="statement not covered" >t</span>his._nodeHeightElement.textContent=this._model.height;<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.classList.remove('hidden');c</span>onst titleWidth=<span class="cstat-no" title="statement not covered" >this._titleElement.offsetWidth+6;</span>const titleHeight=<span class="cstat-no" title="statement not covered" >this._titleElement.offsetHeight+4;</span>const anchorTop=<span class="cstat-no" title="statement not covered" >this._model.margin[1];</span>const anchorBottom=<span class="cstat-no" title="statement not covered" >this._model.margin[7];</span>const arrowHeight=<span class="cstat-no" title="statement not covered" >7;</span>let renderArrowUp=<span class="cstat-no" title="statement not covered" >false;</span>let renderArrowDown=<span class="cstat-no" title="statement not covered" >false;</span>let boxX=<span class="cstat-no" title="statement not covered" >Math.max(2,this._model.margin[0]);<span class="cstat-no" title="statement not covered" ></span>if(boxX+titleWidth&gt;canvasWidth)</span>
+<span class="cstat-no" title="statement not covered" >boxX=canvasWidth-titleWidth-2;l</span>et boxY;<span class="cstat-no" title="statement not covered" >if(anchorTop&gt;canvasHeight){<span class="cstat-no" title="statement not covered" >boxY=canvasHeight-titleHeight-arrowHeight;<span class="cstat-no" title="statement not covered" >r</span>enderArrowDown=true;}</span>else <span class="cstat-no" title="statement not covered" >if(anchorBottom&lt;0){<span class="cstat-no" title="statement not covered" >boxY=arrowHeight;<span class="cstat-no" title="statement not covered" >r</span>enderArrowUp=true;}</span>else <span class="cstat-no" title="statement not covered" >if(anchorBottom+titleHeight+arrowHeight&lt;canvasHeight){<span class="cstat-no" title="statement not covered" >boxY=anchorBottom+arrowHeight-4;<span class="cstat-no" title="statement not covered" >r</span>enderArrowUp=true;}</span>else <span class="cstat-no" title="statement not covered" >if(anchorTop-titleHeight-arrowHeight&gt;0){<span class="cstat-no" title="statement not covered" >boxY=anchorTop-titleHeight-arrowHeight+3;<span class="cstat-no" title="statement not covered" >r</span>enderArrowDown=true;}</span>else{<span class="cstat-no" title="statement not covered" >boxY=arrowHeight;}</span></span></span></span></span>
+<span class="cstat-no" title="statement not covered" >this._context.save();<span class="cstat-no" title="statement not covered" >t</span>his._context.translate(0.5,0.5);<span class="cstat-no" title="statement not covered" >t</span>his._context.beginPath();<span class="cstat-no" title="statement not covered" >t</span>his._context.moveTo(boxX,boxY);<span class="cstat-no" title="statement not covered" >i</span>f(renderArrowUp){<span class="cstat-no" title="statement not covered" >this._context.lineTo(boxX+2*arrowHeight,boxY);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(boxX+3*arrowHeight,boxY-arrowHeight);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(boxX+4*arrowHeight,boxY);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._context.lineTo(boxX+titleWidth,boxY);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(boxX+titleWidth,boxY+titleHeight);<span class="cstat-no" title="statement not covered" >i</span>f(renderArrowDown){<span class="cstat-no" title="statement not covered" >this._context.lineTo(boxX+4*arrowHeight,boxY+titleHeight);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(boxX+3*arrowHeight,boxY+titleHeight+arrowHeight);<span class="cstat-no" title="statement not covered" >t</span>his._context.lineTo(boxX+2*arrowHeight,boxY+titleHeight);}</span></span>
+<span class="cstat-no" title="statement not covered" >this._context.lineTo(boxX,boxY+titleHeight);<span class="cstat-no" title="statement not covered" >t</span>his._context.closePath();<span class="cstat-no" title="statement not covered" >t</span>his._context.fillStyle='rgb(255, 255, 194)';<span class="cstat-no" title="statement not covered" >t</span>his._context.fill();<span class="cstat-no" title="statement not covered" >t</span>his._context.strokeStyle='rgb(128, 128, 128)';<span class="cstat-no" title="statement not covered" >t</span>his._context.stroke();<span class="cstat-no" title="statement not covered" >t</span>his._context.restore();<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.style.top=(boxY+3)+'px';<span class="cstat-no" title="statement not covered" >t</span>his._titleElement.style.left=(boxX+3)+'px';}</span>
+<span class="fstat-no" title="function not covered" >_v</span>iewportDimensions(){const gutterSize=<span class="cstat-no" title="statement not covered" >30;</span>const bordersSize=<span class="cstat-no" title="statement not covered" >Screencast.ScreencastView._bordersSize;</span>const width=<span class="cstat-no" title="statement not covered" >this.element.offsetWidth-bordersSize-gutterSize;</span>const height=<span class="cstat-no" title="statement not covered" >this.element.offsetHeight-bordersSize-gutterSize-Screencast.ScreencastView._navBarHeight;<span class="cstat-no" title="statement not covered" ></span>return{width:width,height:height};}</span>
+<span class="fstat-no" title="function not covered" >se</span>tInspectMode(mode,config){<span class="cstat-no" title="statement not covered" >this._inspectModeConfig=mode!==Protocol.Overlay.InspectMode.None?config:null;<span class="cstat-no" title="statement not covered" >r</span>eturn Promise.resolve();}</span>
+<span class="fstat-no" title="function not covered" >hi</span>ghlightFrame(frameId){}
+<span class="fstat-no" title="function not covered" >_c</span>reateCheckerboardPattern(context){const pattern=(<span class="cstat-no" title="statement not covered" >createElement('canvas'))</span>;const size=<span class="cstat-no" title="statement not covered" >32;<span class="cstat-no" title="statement not covered" ></span>pattern.width=size*2;<span class="cstat-no" title="statement not covered" >p</span>attern.height=size*2;c</span>onst pctx=<span class="cstat-no" title="statement not covered" >pattern.getContext('2d');<span class="cstat-no" title="statement not covered" ></span>pctx.fillStyle='rgb(195, 195, 195)';<span class="cstat-no" title="statement not covered" >p</span>ctx.fillRect(0,0,size*2,size*2);<span class="cstat-no" title="statement not covered" >p</span>ctx.fillStyle='rgb(225, 225, 225)';<span class="cstat-no" title="statement not covered" >p</span>ctx.fillRect(0,0,size,size);<span class="cstat-no" title="statement not covered" >p</span>ctx.fillRect(size,size,size,size);<span class="cstat-no" title="statement not covered" >r</span>eturn context.createPattern(pattern,'repeat');}</span>
+<span class="fstat-no" title="function not covered" >_c</span>reateNavigationBar(){<span class="cstat-no" title="statement not covered" >this._navigationBar=this.element.createChild('div','screencast-navigation');<span class="cstat-no" title="statement not covered" >t</span>his._navigationBack=this._navigationBar.createChild('button','back');<span class="cstat-no" title="statement not covered" >t</span>his._navigationBack.disabled=true;<span class="cstat-no" title="statement not covered" >t</span>his._navigationForward=this._navigationBar.createChild('button','forward');<span class="cstat-no" title="statement not covered" >t</span>his._navigationForward.disabled=true;<span class="cstat-no" title="statement not covered" >t</span>his._navigationReload=this._navigationBar.createChild('button','reload');<span class="cstat-no" title="statement not covered" >t</span>his._navigationUrl=UI.createInput();<span class="cstat-no" title="statement not covered" >t</span>his._navigationBar.appendChild(this._navigationUrl);<span class="cstat-no" title="statement not covered" >t</span>his._navigationUrl.type='text';<span class="cstat-no" title="statement not covered" >t</span>his._navigationProgressBar=new Screencast.ScreencastView.ProgressTracker(this._resourceTreeModel,this._networkManager,this._navigationBar.createChild('div','progress'));<span class="cstat-no" title="statement not covered" >i</span>f(this._resourceTreeModel){<span class="cstat-no" title="statement not covered" >this._navigationBack.addEventListener('click',this._navigateToHistoryEntry.bind(this,-1),false);<span class="cstat-no" title="statement not covered" >t</span>his._navigationForward.addEventListener('click',this._navigateToHistoryEntry.bind(this,1),false);<span class="cstat-no" title="statement not covered" >t</span>his._navigationReload.addEventListener('click',this._navigateReload.bind(this),false);<span class="cstat-no" title="statement not covered" >t</span>his._navigationUrl.addEventListener('keyup',this._navigationUrlKeyUp.bind(this),true);<span class="cstat-no" title="statement not covered" >t</span>his._requestNavigationHistory();<span class="cstat-no" title="statement not covered" >t</span>his._resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.MainFrameNavigated,this._requestNavigationHistory,this);<span class="cstat-no" title="statement not covered" >t</span>his._resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.CachedResourcesLoaded,this._requestNavigationHistory,this);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_n</span>avigateToHistoryEntry(offset){const newIndex=<span class="cstat-no" title="statement not covered" >this._historyIndex+offset;<span class="cstat-no" title="statement not covered" ></span>if(newIndex&lt;0||newIndex&gt;=this._historyEntries.length)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._resourceTreeModel.navigateToHistoryEntry(this._historyEntries[newIndex]);<span class="cstat-no" title="statement not covered" >t</span>his._requestNavigationHistory();}</span>
+<span class="fstat-no" title="function not covered" >_n</span>avigateReload(){<span class="cstat-no" title="statement not covered" >this._resourceTreeModel.reloadPage();}</span>
+<span class="fstat-no" title="function not covered" >_n</span>avigationUrlKeyUp(event){<span class="cstat-no" title="statement not covered" >if(event.key!=='Enter')</span>
+<span class="cstat-no" title="statement not covered" >return;l</span>et url=<span class="cstat-no" title="statement not covered" >this._navigationUrl.value;<span class="cstat-no" title="statement not covered" ></span>if(!url)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(!url.match(Screencast.ScreencastView._SchemeRegex))</span>
+<span class="cstat-no" title="statement not covered" >url='http://'+url;<span class="cstat-no" title="statement not covered" >t</span>his._resourceTreeModel.navigate(url);<span class="cstat-no" title="statement not covered" >t</span>his._canvasElement.focus();}</span>
+<span class="fstat-no" title="function not covered" >as</span>ync _requestNavigationHistory(){const history=<span class="cstat-no" title="statement not covered" >await this._resourceTreeModel.navigationHistory();<span class="cstat-no" title="statement not covered" ></span>if(!history)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._historyIndex=history.currentIndex;<span class="cstat-no" title="statement not covered" >t</span>his._historyEntries=history.entries;<span class="cstat-no" title="statement not covered" >t</span>his._navigationBack.disabled=this._historyIndex===0;<span class="cstat-no" title="statement not covered" >t</span>his._navigationForward.disabled=this._historyIndex===(this._historyEntries.length-1);l</span>et url=<span class="cstat-no" title="statement not covered" >this._historyEntries[this._historyIndex].url;</span>const match=<span class="cstat-no" title="statement not covered" >url.match(Screencast.ScreencastView._HttpRegex);<span class="cstat-no" title="statement not covered" ></span>if(match)</span>
+<span class="cstat-no" title="statement not covered" >url=match[1];<span class="cstat-no" title="statement not covered" >I</span>nspectorFrontendHost.inspectedURLChanged(url);<span class="cstat-no" title="statement not covered" >t</span>his._navigationUrl.value=url;}</span>
+<span class="fstat-no" title="function not covered" >_f</span>ocusNavigationBar(){<span class="cstat-no" title="statement not covered" >this._navigationUrl.focus();<span class="cstat-no" title="statement not covered" >t</span>his._navigationUrl.select();<span class="cstat-no" title="statement not covered" >r</span>eturn true;}</span>};<span class="cstat-no" title="statement not covered" >Screencast.ScreencastView._bordersSize=44;<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastView._navBarHeight=29;<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastView._HttpRegex=/^http:\/\/(.+)/;<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastView._SchemeRegex=/^(https?|about|chrome):/;<span class="cstat-no" title="statement not covered" >S</span>creencast.ScreencastView.ProgressTracker=class{<span class="fstat-no" title="function not covered" >co</span>nstructor(resourceTreeModel,networkManager,element){<span class="cstat-no" title="statement not covered" >this._element=element;<span class="cstat-no" title="statement not covered" >i</span>f(resourceTreeModel){<span class="cstat-no" title="statement not covered" >resourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.MainFrameNavigated,this._onMainFrameNavigated,this);<span class="cstat-no" title="statement not covered" >r</span>esourceTreeModel.addEventListener(SDK.ResourceTreeModel.Events.Load,this._onLoad,this);}</span></span></span>
+<span class="cstat-no" title="statement not covered" >if(networkManager){<span class="cstat-no" title="statement not covered" >networkManager.addEventListener(SDK.NetworkManager.Events.RequestStarted,this._onRequestStarted,this);<span class="cstat-no" title="statement not covered" >n</span>etworkManager.addEventListener(SDK.NetworkManager.Events.RequestFinished,this._onRequestFinished,this);}</span>}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nMainFrameNavigated(){<span class="cstat-no" title="statement not covered" >this._requestIds={};<span class="cstat-no" title="statement not covered" >t</span>his._startedRequests=0;<span class="cstat-no" title="statement not covered" >t</span>his._finishedRequests=0;<span class="cstat-no" title="statement not covered" >t</span>his._maxDisplayedProgress=0;<span class="cstat-no" title="statement not covered" >t</span>his._updateProgress(0.1);}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nLoad(){<span class="cstat-no" title="statement not covered" >delete this._requestIds;<span class="cstat-no" title="statement not covered" >t</span>his._updateProgress(1);<span class="cstat-no" title="statement not covered" >s</span>etTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >if(!this._navigationProgressVisible())</span></span>
+<span class="cstat-no" title="statement not covered" >this._displayProgress(0);}</span>.bind(this),500);}
+<span class="fstat-no" title="function not covered" >_n</span>avigationProgressVisible(){<span class="cstat-no" title="statement not covered" >return!!this._requestIds;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nRequestStarted(event){<span class="cstat-no" title="statement not covered" >if(!this._navigationProgressVisible())</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst request=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >if(request.type===Common.resourceTypes.WebSocket)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._requestIds[request.requestId()]=request;<span class="cstat-no" title="statement not covered" >+</span>+this._startedRequests;}</span>
+<span class="fstat-no" title="function not covered" >_o</span>nRequestFinished(event){<span class="cstat-no" title="statement not covered" >if(!this._navigationProgressVisible())</span>
+<span class="cstat-no" title="statement not covered" >return;c</span>onst request=(<span class="cstat-no" title="statement not covered" >event.data)</span>;<span class="cstat-no" title="statement not covered" >if(!(request.requestId()in this._requestIds))</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >+</span>+this._finishedRequests;<span class="cstat-no" title="statement not covered" >s</span>etTimeout(<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >this._updateProgress(this._finishedRequests/this._startedRequests*0.9);}</span>.bind(this),500);}</span>
+<span class="fstat-no" title="function not covered" >_u</span>pdateProgress(progress){<span class="cstat-no" title="statement not covered" >if(!this._navigationProgressVisible())</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >i</span>f(this._maxDisplayedProgress&gt;=progress)</span>
+<span class="cstat-no" title="statement not covered" >return;<span class="cstat-no" title="statement not covered" >t</span>his._maxDisplayedProgress=progress;<span class="cstat-no" title="statement not covered" >t</span>his._displayProgress(progress);}</span>
+<span class="fstat-no" title="function not covered" >_d</span>isplayProgress(progress){<span class="cstat-no" title="statement not covered" >this._element.style.width=(100*progress)+'%';}</span>};;;<span class="cstat-no" title="statement not covered" >Runtime.cachedResources["screencast/screencastView.css"]="/*\n * Copyright (C) 2013 Google Inc. All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are\n * met:\n *\n *     * Redistributions of source code must retain the above copyright\n * notice, this list of conditions and the following disclaimer.\n *     * Redistributions in binary form must reproduce the above\n * copyright notice, this list of conditions and the following disclaimer\n * in the documentation and/or other materials provided with the\n * distribution.\n *     * Neither the name of Google Inc. nor the names of its\n * contributors may be used to endorse or promote products derived from\n * this software without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\n\n.screencast {\n    overflow: hidden;\n}\n\n.screencast-navigation {\n    flex-direction: row;\n    display: flex;\n    flex: 24px 0 0;\n    position: relative;\n    padding-left: 1px;\n    border-bottom: 1px solid rgb(64%, 64%, 64%);\n    background-origin: padding-box;\n    background-clip: padding-box;\n}\n\n.screencast-navigation button {\n    border-radius: 2px;\n    background-color: transparent;\n    background-image: -webkit-image-set(\n        url(Images/navigationControls.png) 1x,\n        url(Images/navigationControls_2x.png) 2x);\n    background-clip: content-box;\n    background-origin: content-box;\n    background-repeat: no-repeat;\n    border: 1px solid transparent;\n    height: 23px;\n    padding: 2px;\n    width: 23px;\n}\n\n.screencast-navigation button:hover {\n    border-color: #ccc;\n}\n\n.screencast-navigation button:active {\n    border-color: #aaa;\n}\n\n.screencast-navigation button[disabled] {\n    opacity: 0.5;\n}\n\n.screencast-navigation button.back {\n    background-position-x: -1px;\n}\n\n.screencast-navigation button.forward {\n    background-position-x: -18px;\n}\n\n.screencast-navigation button.reload {\n    background-position-x: -37px;\n}\n\n.screencast-navigation input {\n    -webkit-flex: 1;\n    margin: 2px;\n    max-height: 19px;\n}\n\n.screencast-navigation .progress {\n    background-color: rgb(66, 129, 235);\n    height: 3px;\n    left: 0;\n    position: absolute;\n    top: 100%;  /* Align with the bottom edge of the parent. */\n    width: 0;\n    z-index: 2;  /* Above .screencast-glasspane. */\n}\n\n.screencast-viewport {\n    display: flex;\n    border: 1px solid #999;\n    border-radius: 20px;\n    flex: none;\n    padding: 20px;\n    margin: 10px;\n    background-color: #eee;\n}\n\n.screencast-canvas-container {\n    flex: auto;\n    display: flex;\n    border: 1px solid #999;\n    position: relative;\n    cursor: -webkit-image-set(url(Images/touchCursor.png) 1x, url(Images/touchCursor_2x.png) 2x), default;\n}\n\n.screencast canvas {\n    flex: auto;\n    position: relative;\n}\n\n.screencast-px {\n    color: rgb(128, 128, 128);\n}\n\n.screencast-element-title {\n    position: absolute;\n    z-index: 10;\n}\n\n.screencast-tag-name {\n    /* Keep this in sync with view-source.css (.webkit-html-tag) */\n    color: rgb(136, 18, 128);\n}\n\n.screencast-node-id {\n    /* Keep this in sync with view-source.css (.webkit-html-attribute-value) */\n    color: rgb(26, 26, 166);\n}\n\n.screencast-class-name {\n    /* Keep this in sync with view-source.css (.webkit-html-attribute-name) */\n    color: rgb(153, 69, 0);\n}\n\n.screencast-glasspane {\n    background-color: rgba(255, 255, 255, 0.8);\n    font-size: 30px;\n    z-index: 100;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n/*# sourceURL=screencast/screencastView.css */";</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:04:04 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+<script src="../../../../block-navigation.js"></script>
+</body>
+</html>

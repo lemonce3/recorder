@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/linux-unpacked/resources/inspector/audits2_test_runner/audits2_test_runner_module.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">build/linux-unpacked/resources/inspector/audits2_test_runner</a> audits2_test_runner_module.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/45</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/4</span>
+      </div>
+    </div>
+    <p class="quiet">
+      Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+    </p>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >Audits2TestRunner._panel=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return(UI.panels).audits2;}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.getContainerElement=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Audits2TestRunner._panel().contentElement;}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.getResultsElement=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Audits2TestRunner._panel()._auditResultsElement;}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.getDialogElement=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return Audits2TestRunner._panel()._statusView._dialog.contentElement.shadowRoot.querySelector('.audits2-view');}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.getRunButton=<span class="fstat-no" title="function not covered" >fu</span>nction(){const dialog=<span class="cstat-no" title="statement not covered" >Audits2TestRunner.getContainerElement();<span class="cstat-no" title="statement not covered" ></span>return dialog&amp;&amp;dialog.querySelectorAll('button')[0];}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.getCancelButton=<span class="fstat-no" title="function not covered" >fu</span>nction(){const dialog=<span class="cstat-no" title="statement not covered" >Audits2TestRunner.getDialogElement();<span class="cstat-no" title="statement not covered" ></span>return dialog&amp;&amp;dialog.querySelectorAll('button')[0];}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.openStartAudit=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >Audits2TestRunner._panel()._renderStartView();}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.addStatusListener=<span class="fstat-no" title="function not covered" >fu</span>nction(onMessage){<span class="cstat-no" title="statement not covered" >TestRunner.addSniffer(Audits2.StatusView.prototype,'updateStatus',onMessage,true);}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.waitForResults=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >return new Promise(<span class="fstat-no" title="function not covered" >re</span>solve=&gt;{<span class="cstat-no" title="statement not covered" >TestRunner.addSniffer(Audits2.Audits2Panel.prototype,'_buildReportUI',resolve);}</span>);}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner.forcePageAuditabilityCheck=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >Audits2TestRunner._panel()._controller.recomputePageAuditability();}</span>;<span class="cstat-no" title="statement not covered" >A</span>udits2TestRunner._checkboxStateLabel=<span class="fstat-no" title="function not covered" >fu</span>nction(checkboxContainer){<span class="cstat-no" title="statement not covered" >if(!checkboxContainer)</span></span>
+<span class="cstat-no" title="statement not covered" >return'missing';c</span>onst label=<span class="cstat-no" title="statement not covered" >checkboxContainer.textElement.textContent;</span>const checkedLabel=<span class="cstat-no" title="statement not covered" >checkboxContainer.checkboxElement.checked?'x':' ';<span class="cstat-no" title="statement not covered" ></span>return`[${checkedLabel}] ${label}`;}</span>;<span class="cstat-no" title="statement not covered" >Audits2TestRunner._buttonStateLabel=<span class="fstat-no" title="function not covered" >fu</span>nction(button){<span class="cstat-no" title="statement not covered" >if(!button)</span></span>
+<span class="cstat-no" title="statement not covered" >return'missing';c</span>onst enabledLabel=<span class="cstat-no" title="statement not covered" >button.disabled?'disabled':'enabled';</span>const hiddenLabel=<span class="cstat-no" title="statement not covered" >window.getComputedStyle(button).getPropertyValue('visibility');<span class="cstat-no" title="statement not covered" ></span>return`${button.textContent}: ${enabledLabel} ${hiddenLabel}`;}</span>;<span class="cstat-no" title="statement not covered" >Audits2TestRunner.dumpStartAuditState=<span class="fstat-no" title="function not covered" >fu</span>nction(){<span class="cstat-no" title="statement not covered" >TestRunner.addResult('\n========== Audits2 Start Audit State ==========');c</span>onst containerElement=<span class="cstat-no" title="statement not covered" >Audits2TestRunner.getContainerElement();</span>const checkboxes=<span class="cstat-no" title="statement not covered" >[...containerElement.querySelectorAll('.checkbox')];<span class="cstat-no" title="statement not covered" ></span>checkboxes.forEach(<span class="fstat-no" title="function not covered" >el</span>ement=&gt;{<span class="cstat-no" title="statement not covered" >TestRunner.addResult(Audits2TestRunner._checkboxStateLabel(element));}</span>);c</span>onst helpText=<span class="cstat-no" title="statement not covered" >containerElement.querySelector('.audits2-help-text');<span class="cstat-no" title="statement not covered" ></span>if(!helpText.classList.contains('hidden'))</span></span>
+<span class="cstat-no" title="statement not covered" >TestRunner.addResult(`Help text: ${helpText.textContent}`);<span class="cstat-no" title="statement not covered" >T</span>estRunner.addResult(Audits2TestRunner._buttonStateLabel(Audits2TestRunner.getRunButton()));}</span>;;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed May 15 2019 19:03:43 GMT+0800 (China Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+<script src="../../../../../block-navigation.js"></script>
+</body>
+</html>
