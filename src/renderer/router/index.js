@@ -7,12 +7,25 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
-			// name: 'Record',
-			// component: require('@/components/EditArea/Record').default
 		},
 		{
 			path: '*',
 			redirect: '/'
-		}
+		},
+		{
+			path: '/genCode',
+			name:'GenCode',
+			component: require('@/components/EditArea/GenCode').default
+		},
+		{
+			path: '/editDoc',
+			name:'EditDoc',
+			component: require('@/components/EditArea/EditDoc').default
+		},
+		{
+			path: '/setting',
+			name:'setting',
+			component: require('@/components/Setting').default
+		},
 	]
 });

@@ -1,25 +1,67 @@
 @font-face {
 	font-family: 'source-han-sans-simplified-c';
-	src: url('./assets/font/source-han-sans-simplified-c.eot'); /* IE9 */
-	src: url('./assets/font/source-han-sans-simplified-c.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('./assets/font/source-han-sans-simplified-c.woff') format('woff'), /* chrome、firefox */
-	url('./assets/font/source-han-sans-simplified-c.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-	url('./assets/font/source-han-sans-simplified-c.svg#source-han-sans-simplified-c') format('svg'); /* iOS 4.1- */
+	src        : url('./assets/font/source-han-sans-simplified-c.eot');
+	/* IE9 */
+	src: url('./assets/font/source-han-sans-simplified-c.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('./assets/font/source-han-sans-simplified-c.woff') format('woff'),
+		/* chrome、firefox */
+		url('./assets/font/source-han-sans-simplified-c.ttf') format('truetype'),
+		/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+		url('./assets/font/source-han-sans-simplified-c.svg#source-han-sans-simplified-c') format('svg');
+	/* iOS 4.1- */
 }
 
 
 html {
-	height: 600px;
-	width: 400px;
-	overflow: hidden;
+	height     : 600px;
+	width      : 400px;
+	overflow   : hidden;
 	font-family: 'source-han-sans-simplified-c', sans-serif;
 }
 
 body {
-	box-sizing: border-box;
-	height: 100%;
-	width: 100%;
+	box-sizing      : border-box;
+	height          : 100%;
+	width           : 100%;
 	background-color: #ffffff;
-	border: 1px solid #ccc;
-	user-select: none;
+	border          : 1px solid #ccc;
+	user-select     : none;
+}
+
+.cut-button {
+	padding: 0;
+	margin : 0;
+}
+
+* {
+	min-height   : auto !important;
+	min-width    : auto !important;
+	border-radius: 0 !important;
+}
+
+.container {
+	padding: 0;
+	margin : 0;
+
+	.layout {
+		padding: 0;
+		margin : 0;
+	}
+}
+
+.bt1 {
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.br1 {
+	border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bb1 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.bl1 {
+	border-left: 1px solid rgba(0, 0, 0, 0.12);
 }

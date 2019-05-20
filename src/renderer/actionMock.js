@@ -1,123 +1,169 @@
 export default [
-	{
-		id: 'aoeu-ueao1',
-		type: 'enter',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
-		}
-	},
+	// {
+	// 	id: 'aoeu-ueao1',
+	// 	type: 'enter',
+	// 	data: {
+	// 		'href': 'http://localhost:3000/indexu.html',
+	// 		'referrer': '',
+	// 		'title': 'Document'
+	// 	},
+	// },
 	{
 		id: 'aoeu-ueao2',
 		type: 'click',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': '#hhh',
+			'abstract': '<input type="text" id="hhh" lc-apm-value="">',
+			'text': '12'
+		},
+		'element': {
+			'localName': 'input',
+			'type': 'text'
 		}
 	},
 	{
 		id: 'aoeu-ueao3',
 		type: 'rightClick',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': 'body > div:nth-child(7)',
+			'abstract': '<div>',
+			'text': '这是utf-8 meta声明'
+		},
+		'element': {
+			'localName': 'div',
+			'type': null
 		}
 	},
 	{
 		id: 'aoeu-ueao4',
 		type: 'doubleClick',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': 'body > div:nth-child(7)',
+			'abstract': '<div>',
+			'text': '这是utf-8 meta声明'
+		},
+		'element': {
+			'localName': 'div',
+			'type': null
 		}
 	},
 	{
 		id: 'aoeu-ueao5',
 		type: 'input',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': 'body > div:nth-child(4) > iframe:nth-child(2) < body > input:nth-child(2)', 'abstract': '<input type="text">',
+			'value': '321',
+			'text': '321'
+		},
+		'element': {
+			'localName': 'input',
+			'type': 'text'
 		}
 	},
 	{
 		id: 'aoeu-ueao6',
 		type: 'check',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': 'body > input:nth-child(2)',
+			'abstract': '<input type="checkbox" lc-apm-checked="false">',
+			'value': 'on',
+			'text': null
+		},
+		'element': {
+			'localName': 'input',
+			'type': 'checkbox'
 		}
 	},
 	{
 		id: 'aoeu-ueao7',
 		type: 'uncheck',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': 'body > input:nth-child(2)',
+			'abstract': '<input type="checkbox" lc-apm-checked="false">',
+			'value': 'on',
+			'text': null
+		},
+		'element': {
+			'localName': 'input',
+			'type': 'checkbox'
 		}
 	},
 	{
 		id: 'aoeu-ueao8',
 		type: 'select',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': '#pet-select',
+			'abstract': '<select id="pet-select" lc-apm-value="">',
+			'value': 'cat',
+			'text': '--Please choose an option--',
+			'selectedIndex': 2,
+			'label': 'Cat'
+		},
+		'element': {
+			'localName': 'select',
+			'type': null
 		}
 	},
 	{
 		id: 'aoeu-ueao9',
 		type: 'select',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': '#pet-select',
+			'abstract': '<select id="pet-select" lc-apm-value="">',
+			'value': 'cat',
+			'text': '--Please choose an option--',
+			'selectedIndex': 2,
+			'label': 'Cat'
+		},
+		'element': {
+			'localName': 'select',
+			'type': null
 		}
 	},
 	{
 		id: 'aoeu-ueao10',
 		type: 'select',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': '#pet-select',
+			'abstract': '<select id="pet-select" lc-apm-value="">',
+			'value': 'cat',
+			'text': '--Please choose an option--',
+			'selectedIndex': 2,
+			'label': 'Cat'
+		},
+		'element': {
+			'localName': 'select',
+			'type': null
 		}
 	},
 	{
 		id: 'aoeu-ueao11',
 		type: 'select',
-		path: '#rmRiskMonitorReCheck_iframe < #ext-gen5 > div:nth-child(8) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)',
-		text: 'hhhhhh',
-		value: '123',
-		element: {
-			localName: '',
-			type: ''
+		data: {
+			'path': '#pet-select',
+			'abstract': '<select id="pet-select" lc-apm-value="">',
+			'value': 'cat',
+			'text': '--Please choose an option--',
+			'selectedIndex': 2,
+			'label': 'Cat'
+		},
+		'element': {
+			'localName': 'select',
+			'type': null
 		}
 	},
+
 ];
+
+const data = {
+	'path': '#pet-select',
+	'abstract': '<select id="pet-select" lc-apm-value="">',
+	'value': 'cat',
+	'text': '--Please choose an option--',
+	'selectedIndex': 2,
+	'label': 'Cat',
+	'element': {
+		'localName': 'select',
+		'type': null
+	}
+};

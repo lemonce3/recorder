@@ -7,11 +7,8 @@
 			:height="menuHeight"
 			@selected-change="onSelectChange"
 		/>
-		<edit-area
-			:category="activeCategory"
-			:actionList="mockData"
-		/>
-		<!-- <router-view></router-view> -->
+		<record :category="activeCategory" :actionList="actionList" />
+			<router-view></router-view>
 	</v-app>
 </template>
 
@@ -21,22 +18,34 @@ import { ipcRenderer } from "electron";
 
 import TopBar from "./components/TopBar";
 import RootMenu from "./components/RootMenu";
-import EditArea from "./components/EditArea/Record";
+import Record from "./components/EditArea/Record/index";
 
 import mockData from "./actionMock";
+
+function actionDataHandle(raw) {
+	raw.forEach(action => {
+		const data = {};
+		Object.keys(action.data).forEach(
+			key => (data[key] = { key, value: action.data[key] })
+		);
+		action.data = data;
+	});
+	return raw;
+}
 
 export default {
 	name: "recorder",
 	components: {
 		TopBar,
 		RootMenu,
-		EditArea
+		Record
 	},
 	data() {
 		return {
 			topBarHeight: 30,
 			menuLength: 4,
 			menuHeight: 30,
+			actionList: [],
 			activeCategoryIndex: 1,
 			categoryList: ["file", "record", "genCode", "editDoc", "setting"],
 			mockData
@@ -48,6 +57,8 @@ export default {
 			this.onGetScreenshot
 		);
 		ipcRenderer.on("LEMONCE3_RECORDER::get-screenshot", this.onGetScreenshot);
+
+		this.actionList = actionDataHandle(mockData);
 	},
 	methods: {
 		async onGetScreenshot() {
@@ -57,7 +68,15 @@ export default {
 			);
 		},
 		onSelectChange(categoryIndex) {
+			const routeMap = {
+				record: "/",
+				genCode: "/genCode",
+				editDoc: "/editDoc",
+				setting: "/setting"
+			};
+
 			this.activeCategoryIndex = categoryIndex;
+			this.$router.push(routeMap[this.categoryList[categoryIndex]]);
 		}
 	},
 	computed: {
@@ -68,6 +87,20 @@ export default {
 };
 </script>
 
-<style>
-/* CSS */
+<style lang="less">
+#app {
+	height: 100%;
+	#record {
+		position: absolute;
+		top: 60px;
+		bottom: 0px;
+		z-index: 0;
+	}
+
+	.edit-area {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+	}
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div id="root-menu">
-		<v-toolbar :height="height">
+		<v-toolbar :height="height" flat>
 			<v-btn-toggle
 				:style="{ height: height + 'px' }"
 				v-model="active"
@@ -11,6 +11,7 @@
 					:key="item"
 					:style="{ height: height + 'px' }"
 					:ripple="false"
+					@click="jumpTo(item)"
 					flat
 				>
 					<span>{{ $t(`category.${item}`) }}</span>
@@ -60,6 +61,11 @@ export default {
 		this.shownCategory = this.category.slice(0, this.length);
 		this.hiddenCategory = this.category.slice(this.length);
 	},
+	methods: {
+		jumpTo(path) {
+			this.$router.push(path);
+		}
+	},
 	watch: {
 		active(categoryIndex) {
 			this.$emit("selected-change", categoryIndex);
@@ -69,9 +75,5 @@ export default {
 </script>
 
 <style lang="less">
-#root-menu {
-	.v-toolbar {
-		box-shadow: none;
-	}
-}
+
 </style>
