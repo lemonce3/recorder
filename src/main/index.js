@@ -36,6 +36,7 @@ function createWindow() {
 		}
 	});
 
+	mainWindow.removeMenu();
 	mainWindow.loadURL(winURL);
 
 	mainWindow.on('closed', () => {

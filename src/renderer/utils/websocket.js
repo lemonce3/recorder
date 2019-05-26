@@ -1,2 +1,2 @@
-const websocket = new WebSocket(`ws://localhost:${port}`);
+import io from 'socket.io-client';
 

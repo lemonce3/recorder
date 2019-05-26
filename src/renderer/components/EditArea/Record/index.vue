@@ -1,5 +1,5 @@
 <template>
-	<div id="record" class="bt1">
+	<div id="record">
 		<v-snackbar v-model="snackbar" :timeout="1000" :bottom="true" color="green">
 			<v-spacer></v-spacer>
 			<span>已复制到剪贴板</span>
@@ -24,15 +24,7 @@
 					<v-spacer></v-spacer>
 					<v-menu bottom>
 						<template v-slot:activator="{ on }">
-							<v-btn
-								:style="{
-									minWidth: 'auto',
-									boxShadow: 'none',
-									margin: '0px'
-								}"
-								:ripple="false"
-								v-on="on"
-							>
+							<v-btn :ripple="false" v-on="on">
 								<i class="fas fa-chevron-down"></i>
 							</v-btn>
 						</template>
@@ -43,7 +35,7 @@
 						</v-list>
 					</v-menu>
 					<v-spacer></v-spacer>
-					<v-btn color="primary" :ripple="false" flat @click="onDialogOK">
+					<v-btn color="primary" :ripple="false" flat @click="comfirmEdit">
 						确定
 					</v-btn>
 					<v-btn color="error" :ripple="false" flat @click="dialog = false">
@@ -53,24 +45,72 @@
 			</v-card>
 		</v-dialog>
 		<v-toolbar height="30px" flat class="bb1">
-			<v-btn class="cut-button" :ripple="false" flat>
-				<i class="fas fa-circle record-child-menu-record"></i>
+			<v-btn
+				class="cut-button"
+				@click="onStartClick"
+				:ripple="false"
+				color="red"
+				flat
+				:input-value="recording"
+				:disabled="selectmode"
+			>
+				<!-- <i class="ms-Icon ms-Icon--Record2"></i> -->
+				<i class="ms-Icon ms-Icon--CircleFill"></i>
 			</v-btn>
-			<v-btn class="cut-button" :ripple="false" flat>
-				<i class="fas fa-stop"></i>
+			<v-btn
+				class="cut-button"
+				@click="onStopClick"
+				:ripple="false"
+				flat
+				:disabled="selectmode"
+			>
+				<i class="ms-Icon ms-Icon--StopSolid"></i>
 			</v-btn>
-			<v-btn class="cut-button" :ripple="false" flat>
-				<i class="fas fa-trash-alt"></i>
+			<v-divider class="mx-1" vertical></v-divider>
+			<v-btn
+				class="cut-button"
+				@click="onListClick"
+				:ripple="false"
+				flat
+				:input-value="selectmode"
+			>
+				<i class="ms-Icon ms-Icon--GroupedList"></i>
 			</v-btn>
-			<v-btn class="cut-button" :ripple="false" flat>
-				<i class="fas fa-download"></i>
+			<v-btn
+				class="cut-button"
+				@click="switchSelectAll"
+				:ripple="false"
+				flat
+				:input-value="selected.length === actionList.length"
+				:disabled="!selectmode"
+			>
+				<i class="ms-Icon ms-Icon--CheckList"></i>
+			</v-btn>
+			<v-btn
+				class="cut-button"
+				@click="deleteSelected"
+				:ripple="false"
+				flat
+				:disabled="!selectmode"
+			>
+				<i class="ms-Icon ms-Icon--Delete"></i>
+			</v-btn>
+			<v-divider class="mx-1" vertical></v-divider>
+			<v-btn
+				class="cut-button"
+				@click="onSaveClick"
+				:ripple="false"
+				flat
+				:disabled="selectmode"
+			>
+				<i class="ms-Icon ms-Icon--Save"></i>
 			</v-btn>
 		</v-toolbar>
 		<div id="action-list">
 			<v-expansion-panel v-model="activeActionIndex">
 				<v-expansion-panel-content
-					expand-icon="fa-chevron-down"
-					v-for="action in actionList"
+					expand-icon="ms-Icon ms-Icon--ChevronDown"
+					v-for="(action, index) in actionList"
 					:key="action.id"
 				>
 					<template v-slot:header>
@@ -81,14 +121,31 @@
 							class="bl1 br1"
 						>
 							<v-layout row wrap fill-height>
+								<v-flex v-show="selectmode" xs1 align-self-center br1>
+									<v-btn
+										class="cut-button select-mode-button"
+										@click.stop="switchSelected(index)"
+										:ripple="false"
+										flat
+									>
+										<i
+											:class="[
+												'ms-Icon ',
+												selected.includes(index)
+													? 'ms-Icon--CheckboxComposite'
+													: 'ms-Icon--Checkbox'
+											]"
+										></i>
+									</v-btn>
+								</v-flex>
 								<v-flex xs1 align-self-center>
 									<i :class="iconClass[action.type]"></i>
 								</v-flex>
 								<v-flex xs3 align-self-center>
-									<span>{{ action.type }}</span>
+									{{ action.type }}
 								</v-flex>
-								<v-flex xs8 align-self-center>
-									<span>{{ action.data.text.value }}</span>
+								<v-flex :xs7="selectmode" :xs8="!selectmode" align-self-center>
+									{{ action.data.text.value }}
 								</v-flex>
 							</v-layout>
 						</v-container>
@@ -103,8 +160,8 @@
 								:name="item.key"
 								:key="index"
 								:editable="editableProperty.includes(item.key)"
-								@call-snackbar="onCallSnackbar(item.key)"
-								@call-dialog="onCallDialog(item.key)"
+								@call-snackbar="showSnackbar(item.key)"
+								@call-dialog="showDialog(item.key)"
 							/>
 						</div>
 					</div>
@@ -115,23 +172,32 @@
 </template>
 
 <script>
-import Property from "./Property";
+import Property from './Property';
+import { read, save } from '../../../utils/data-store';
+import { actionToBuffer, bufferToAction } from '../../../utils/action-util';
 
 export default {
-	props: ["category", "actionList"],
+	props: ['category', 'actionList'],
 	components: {
 		Property
 	},
 	data() {
 		return {
+			headers: [
+				{ text: 'type', value: 'type', sortable: false },
+				{ text: 'text', value: 'text', sortable: false }
+			],
 			snackbar: false,
 			dialog: false,
 			activeActionIndex: 1,
 			p: null,
 			dialogReadOnly: false,
 			mode: [1, 2, 3],
-			dialogContent: "",
-			editableProperty: ["path", "text"],
+			dialogContent: '',
+			editableProperty: ['path', 'text'],
+			recording: false,
+			selectmode: false,
+			selected: [],
 			iconClass: {
 				click: 'fas fa-mouse-pointer',
 				rightClick: 'fas fa-mouse-pointer',
@@ -144,17 +210,55 @@ export default {
 		};
 	},
 	methods: {
-		onCallDialog(p) {
+		onStartClick() {
+			this.recording = true;
+			// this.$api.startRecord();
+		},
+		onStopClick() {
+			this.recording = false;
+			// this.$api.stopRecord();
+		},
+		onListClick() {
+			this.selected = [];
+			this.selectmode = !this.selectmode;
+		},
+		onSaveClick() {
+			this.$electron.remote.dialog.showSaveDialog(filename => {
+				save(filename, actionToBuffer(this.actionList));
+			});
+		},
+		switchSelected(id) {
+			const index = this.selected.indexOf(id);
+
+			index === -1 ? this.selected.push(id) : this.selected.splice(index, 1);
+		},
+		switchSelectAll() {
+			if (this.selected.length === this.actionList.length) {
+				this.selected = [];
+			} else {
+				this.actionList.forEach((action, index) => this.selected.push(index));
+			}
+		},
+		deleteSelected() {
+			if (this.selected.length === this.actionList.length) {
+				this.actionList = [];
+			} else {
+				this.selected.forEach(index => this.actionList.splice(index, 1));
+			}
+
+			this.selected = [];
+		},
+		showDialog(p) {
 			this.p = p;
 			this.dialogReadOnly = !this.editableProperty.includes(p);
 			this.dialogContent = this.activeAction.data[p].value;
 			this.dialog = true;
 		},
-		onDialogOK() {
+		comfirmEdit() {
 			this.activeAction.data[this.p].value = this.dialogContent;
 			this.dialog = false;
 		},
-		onCallSnackbar() {
+		showSnackbar() {
 			this.snackbar = true;
 		}
 	},
@@ -171,6 +275,7 @@ export default {
 <style lang="less">
 #record {
 	.v-toolbar .v-btn {
+		font-size: 16px;
 		height: 30px;
 		width: 30px;
 	}
@@ -181,24 +286,31 @@ export default {
 	}
 
 	.v-expansion-panel__header {
-		min-height: auto;
 		height: 36px;
 		padding: 0 4px 0 4px;
 
 		.container {
 			margin: 0 2px 0 4px;
 
+			.select-mode-button {
+				width: 100%;
+			}
+
 			.flex {
+				line-height: 100%;
+
 				i {
 					font-size: 18px;
-					height: 20px;
-					width: 15px;
 				}
 			}
 		}
 
-		.v-icon {
-			font-size: 16px;
+		.v-expansion-panel__header__icon {
+			margin-left: 4px;
+
+			.v-icon {
+				font-size: 16px;
+			}
 		}
 	}
 

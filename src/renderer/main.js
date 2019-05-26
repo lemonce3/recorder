@@ -7,6 +7,8 @@ import store from './store';
 import VueI18n from 'vue-i18n';
 import Vuetify from 'vuetify';
 
+import 'office-ui-fabric-core/dist/css/fabric.min.css';
+import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'vuetify/dist/vuetify.min.css';
 import './style.less';

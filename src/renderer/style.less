@@ -41,12 +41,16 @@ body {
 }
 
 .container {
-	padding: 0;
-	margin : 0;
+	padding: 0 !important;
+	margin : 0 !important;
 
 	.layout {
-		padding: 0;
-		margin : 0;
+		padding: 0 !important;
+		margin : 0 !important;
+
+		.flex {
+			padding: 0 !important;
+		}
 	}
 }
 
@@ -64,4 +68,13 @@ body {
 
 .bl1 {
 	border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.12);
 }

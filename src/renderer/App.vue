@@ -8,19 +8,19 @@
 			@selected-change="onSelectChange"
 		/>
 		<record :category="activeCategory" :actionList="actionList" />
-			<router-view></router-view>
+		<router-view></router-view>
 	</v-app>
 </template>
 
 <script>
-import getScreenshot from "../../../../or-change/electron-screenshot";
-import { ipcRenderer } from "electron";
+import getScreenshot from '../../../../or-change/electron-screenshot';
+import { ipcRenderer } from 'electron';
 
-import TopBar from "./components/TopBar";
-import RootMenu from "./components/RootMenu";
-import Record from "./components/EditArea/Record/index";
+import TopBar from './components/TopBar';
+import RootMenu from './components/RootMenu';
+import Record from './components/EditArea/Record/index';
 
-import mockData from "./actionMock";
+import mockData from './dataMock';
 
 function actionDataHandle(raw) {
 	raw.forEach(action => {
@@ -34,7 +34,7 @@ function actionDataHandle(raw) {
 }
 
 export default {
-	name: "recorder",
+	name: 'recorder',
 	components: {
 		TopBar,
 		RootMenu,
@@ -47,32 +47,35 @@ export default {
 			menuHeight: 30,
 			actionList: [],
 			activeCategoryIndex: 1,
-			categoryList: ["file", "record", "genCode", "editDoc", "setting"],
-			mockData
+			categoryList: ['file', 'record', 'genCode', 'editDoc', 'setting'],
+			mockData,
+			screenshotStack: [],
+			a: null
 		};
 	},
 	mounted() {
 		ipcRenderer.removeAllListeners(
-			"LEMONCE3_RECORDER::get-screenshot",
+			'LEMONCE3_RECORDER::get-screenshot',
 			this.onGetScreenshot
 		);
-		ipcRenderer.on("LEMONCE3_RECORDER::get-screenshot", this.onGetScreenshot);
+		ipcRenderer.on('LEMONCE3_RECORDER::get-screenshot', this.onGetScreenshot);
 
 		this.actionList = actionDataHandle(mockData);
 	},
 	methods: {
 		async onGetScreenshot() {
 			ipcRenderer.send(
-				"LEMONCE3_RECORDER::screenshot-data",
+				'LEMONCE3_RECORDER::screenshot-data',
 				await getScreenshot()
 			);
 		},
 		onSelectChange(categoryIndex) {
 			const routeMap = {
-				record: "/",
-				genCode: "/genCode",
-				editDoc: "/editDoc",
-				setting: "/setting"
+				record: '/',
+				genCode: '/genCode',
+				editDoc: '/editDoc',
+				setting: '/setting',
+				file: '/file'
 			};
 
 			this.activeCategoryIndex = categoryIndex;
@@ -95,6 +98,7 @@ export default {
 		top: 60px;
 		bottom: 0px;
 		z-index: 0;
+		width: 100%;
 	}
 
 	.edit-area {

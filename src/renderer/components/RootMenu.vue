@@ -1,6 +1,6 @@
 <template>
 	<div id="root-menu">
-		<v-toolbar :height="height" flat>
+		<v-toolbar :height="height" color="#71c3c3" flat>
 			<v-btn-toggle
 				:style="{ height: height + 'px' }"
 				v-model="active"
@@ -8,6 +8,7 @@
 			>
 				<v-btn
 					v-for="item in shownCategory"
+					class="cut-button"
 					:key="item"
 					:style="{ height: height + 'px' }"
 					:ripple="false"
@@ -21,14 +22,12 @@
 				<template v-slot:activator="{ on }">
 					<v-btn
 						:style="{
-							height: height + 'px',
-							minWidth: 'auto',
-							boxShadow: 'none',
-							backgroundColor: 'white',
-							margin: '0px'
+							height: height + 'px'
 						}"
+						class="cut-button"
 						:ripple="false"
 						v-on="on"
+						flat
 						><i class="fas fa-chevron-down"></i
 					></v-btn>
 				</template>
@@ -47,9 +46,8 @@
 </template>
 
 <script>
-
 export default {
-	props: ["height", "category", "length"],
+	props: ['height', 'category', 'length'],
 	data() {
 		return {
 			active: 1,
@@ -68,12 +66,29 @@ export default {
 	},
 	watch: {
 		active(categoryIndex) {
-			this.$emit("selected-change", categoryIndex);
+			this.$emit('selected-change', categoryIndex);
 		}
 	}
 };
 </script>
 
 <style lang="less">
+#root-menu .v-toolbar .v-toolbar__content {
+	padding: 0;
 
+	.v-btn-toggle {
+		background-color: #71c3c3;
+
+		.v-btn {
+			color: white;
+			background-color: #71c3c3;
+			opacity: 1;
+		}
+
+		.v-btn--active {
+			color: #71c3c3;
+			background-color: #f5f5f5;
+		}
+	}
+}
 </style>

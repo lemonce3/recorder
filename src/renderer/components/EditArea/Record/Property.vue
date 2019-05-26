@@ -21,12 +21,12 @@
 						class="cut-button"
 						flat
 					>
-						<i class="fas fa-copy"></i>
+						<i class="ms-Icon ms-Icon--Copy"></i>
 					</v-btn>
 					<v-menu bottom>
 						<template v-slot:activator="{ on }">
 							<v-btn class="cut-button" :ripple="false" v-on="on" flat>
-								<i class="fas fa-chevron-down"></i>
+								<i class="ms-Icon ms-Icon--ChevronDown"></i>
 							</v-btn>
 						</template>
 						<v-list>
@@ -44,7 +44,7 @@
 					:ripple="false"
 					flat
 				>
-					<i class="fas fa-copy"></i>
+					<i class="ms-Icon ms-Icon--Copy"></i>
 				</v-btn>
 			</v-flex>
 		</v-layout>
@@ -53,15 +53,15 @@
 
 <script>
 export default {
-	props: ["name", "value", "editable"],
+	props: ['name', 'value', 'editable'],
 	model: {
-		prop: "value",
-		event: "input"
+		prop: 'value',
+		event: 'input'
 	},
 	data() {
 		return {
-			mode: ["Selector", "XPath", "Custom"],
-			content: ""
+			mode: ['Selector', 'XPath', 'Custom'],
+			content: ''
 		};
 	},
 	mounted() {
@@ -74,7 +74,7 @@ export default {
 	},
 	computed: {
 		multiMode() {
-			return this.name === "path";
+			return this.name === 'path';
 		}
 	}
 };
