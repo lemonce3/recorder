@@ -8,6 +8,6 @@
 #edit-doc {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(200, 200, 200, 1);
+	background-color: #f5f5f5;
 }
 </style>

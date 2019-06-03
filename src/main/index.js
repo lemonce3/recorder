@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { app, BrowserWindow, ipcMain, nativeImage, globalShortcut } from 'electron';
-import getRect from '../../../../or-change/electron-screenshot-window/dist/main/main';
+import { cropImage } from './capturer';
+import './server';
+import './websocket';
 
 /**
  * Set `__static` path to static files in production
@@ -32,7 +34,8 @@ function createWindow() {
 			nodeIntegration: true,  //default value of webPreferences.nodeIntegration is false in Electron 5.0.0
 			nodeIntegrationInWorker: true,
 			allowRunningInsecureContent: false,
-			webSecurity: true
+			webSecurity: true,
+			backgroundThrottling: false
 		}
 	});
 
@@ -44,25 +47,15 @@ function createWindow() {
 	});
 }
 
-async function getScreenshot() {
-	return new Promise(resolve => {
-		ipcMain.on('LEMONCE3_RECORDER::screenshot-data', (event, args) => resolve(args));
-
-		mainWindow.webContents.send('LEMONCE3_RECORDER::get-screenshot');
-	});
-}
-
 async function cropScreenshot() {
-	const { dataURL, size } = await getScreenshot();
-	const origin = nativeImage.createFromDataURL(dataURL);
-	const rect = await getRect(dataURL, size);
-	const result = origin.crop(rect);
+	const result = await cropImage();
+	console.log(result);
 
-	fs.mkdir(screenshotDir, { recursive: true }, error => {
-		error && console.log(error);
-		const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
-		fs.writeFile(filename, result.toPNG(), error => error && console.log(error));
-	});
+	// fs.mkdir(screenshotDir, { recursive: true }, error => {
+	// 	error && console.log(error);
+	// 	const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
+	// 	fs.writeFile(filename, result.toPNG(), error => error && console.log(error));
+	// });
 }
 
 app.on('ready', () => {

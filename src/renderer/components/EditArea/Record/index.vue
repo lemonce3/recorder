@@ -1,49 +1,5 @@
 <template>
 	<div id="record">
-		<v-snackbar v-model="snackbar" :timeout="1000" :bottom="true" color="green">
-			<v-spacer></v-spacer>
-			<span>已复制到剪贴板</span>
-			<v-spacer></v-spacer>
-			<v-btn color="white" flat @click="snackbar = false">
-				<i class="fas fa-times-circle"></i>
-			</v-btn>
-		</v-snackbar>
-		<v-dialog v-model="dialog">
-			<v-card>
-				<v-card-title class="headline grey lighten-2" primary-title>
-					编辑
-				</v-card-title>
-
-				<v-card-text>
-					<v-textarea v-model="dialogContent" :readonly="dialogReadOnly" />
-				</v-card-text>
-
-				<v-divider></v-divider>
-
-				<v-card-actions>
-					<v-spacer></v-spacer>
-					<v-menu bottom>
-						<template v-slot:activator="{ on }">
-							<v-btn :ripple="false" v-on="on">
-								<i class="fas fa-chevron-down"></i>
-							</v-btn>
-						</template>
-						<v-list>
-							<v-list-tile v-for="(item, index) in mode" :key="index" @click>
-								<v-list-tile-title>{{ item }}</v-list-tile-title>
-							</v-list-tile>
-						</v-list>
-					</v-menu>
-					<v-spacer></v-spacer>
-					<v-btn color="primary" :ripple="false" flat @click="comfirmEdit">
-						确定
-					</v-btn>
-					<v-btn color="error" :ripple="false" flat @click="dialog = false">
-						取消
-					</v-btn>
-				</v-card-actions>
-			</v-card>
-		</v-dialog>
 		<v-toolbar height="30px" flat class="bb1">
 			<v-btn
 				class="cut-button"
@@ -95,118 +51,72 @@
 			>
 				<i class="ms-Icon ms-Icon--Delete"></i>
 			</v-btn>
-			<v-divider class="mx-1" vertical></v-divider>
-			<v-btn
-				class="cut-button"
-				@click="onSaveClick"
-				:ripple="false"
-				flat
-				:disabled="selectmode"
-			>
-				<i class="ms-Icon ms-Icon--Save"></i>
-			</v-btn>
 		</v-toolbar>
 		<div id="action-list">
-			<v-expansion-panel v-model="activeActionIndex">
-				<v-expansion-panel-content
-					expand-icon="ms-Icon ms-Icon--ChevronDown"
-					v-for="(action, index) in actionList"
-					:key="action.id"
+			<v-list>
+				<v-list-tile
+					v-for="(item, index) in actionList"
+					:key="item.id"
+					class="raw-item bb1"
 				>
-					<template v-slot:header>
-						<v-container
-							grid-list-md
-							text-xs-center
+					<v-container grid-list-md text-xs-center fill-height>
+						<v-layout
+							align-center
+							justify-center
+							style="text-align:center;"
 							fill-height
-							class="bl1 br1"
 						>
-							<v-layout row wrap fill-height>
-								<v-flex v-show="selectmode" xs1 align-self-center br1>
-									<v-btn
-										class="cut-button select-mode-button"
-										@click.stop="switchSelected(index)"
-										:ripple="false"
-										flat
-									>
-										<i
-											:class="[
-												'ms-Icon ',
-												selected.includes(index)
-													? 'ms-Icon--CheckboxComposite'
-													: 'ms-Icon--Checkbox'
-											]"
-										></i>
-									</v-btn>
-								</v-flex>
-								<v-flex xs1 align-self-center>
-									<i :class="iconClass[action.type]"></i>
-								</v-flex>
-								<v-flex xs3 align-self-center>
-									{{ action.type }}
-								</v-flex>
-								<v-flex :xs7="selectmode" :xs8="!selectmode" align-self-center>
-									{{ action.data.text.value }}
-								</v-flex>
-							</v-layout>
-						</v-container>
-					</template>
-					<div class="record-detail-content">
-						<div
-							class="record-detail-item"
-							v-for="(item, index) in action.data"
-						>
-							<property
-								v-model="item.value"
-								:name="item.key"
-								:key="index"
-								:editable="editableProperty.includes(item.key)"
-								@call-snackbar="showSnackbar(item.key)"
-								@call-dialog="showDialog(item.key)"
-							/>
-						</div>
-					</div>
-				</v-expansion-panel-content>
-			</v-expansion-panel>
+							<v-flex v-show="selectmode" xs1 align-self-center br1>
+								<v-btn
+									class="cut-button select-mode-button"
+									@click.stop="switchSelected(index)"
+									:ripple="false"
+									flat
+								>
+									<i
+										:class="[
+											'ms-Icon ',
+											selected.includes(index)
+												? 'ms-Icon--CheckboxComposite'
+												: 'ms-Icon--Checkbox'
+										]"
+									></i>
+								</v-btn>
+							</v-flex>
+							<v-flex xs4>
+								<div>{{ item.type }}</div>
+							</v-flex>
+							<v-flex :xs6="selectmode" :xs7="!selectmode">
+								<img
+									src="http://img.boqiicdn.com/Data/BK/A/1406/26/img63991403776002.jpg"
+								/>
+							</v-flex>
+							<v-flex xs1>
+								<v-btn class="cut-button raw-delete-button" flat>
+									<i class="ms-Icon ms-Icon--Delete"></i>
+								</v-btn>
+							</v-flex>
+						</v-layout>
+					</v-container>
+					<!-- <v-list-tile-title>{{ item.type }}</v-list-tile-title> -->
+				</v-list-tile>
+			</v-list>
 		</div>
 	</div>
 </template>
 
 <script>
-import Property from './Property';
 import { read, save } from '../../../utils/data-store';
 import { actionToBuffer, bufferToAction } from '../../../utils/action-util';
 
 export default {
-	props: ['category', 'actionList'],
-	components: {
-		Property
-	},
+	props: ['actionList'],
 	data() {
 		return {
-			headers: [
-				{ text: 'type', value: 'type', sortable: false },
-				{ text: 'text', value: 'text', sortable: false }
-			],
-			snackbar: false,
-			dialog: false,
 			activeActionIndex: 1,
-			p: null,
-			dialogReadOnly: false,
-			mode: [1, 2, 3],
-			dialogContent: '',
-			editableProperty: ['path', 'text'],
 			recording: false,
 			selectmode: false,
-			selected: [],
-			iconClass: {
-				click: 'fas fa-mouse-pointer',
-				rightClick: 'fas fa-mouse-pointer',
-				doubleClick: 'fas fa-mouse-pointer',
-				input: 'fas fa-i-cursor',
-				check: 'far fa-check-square',
-				uncheck: 'far fa-square',
-				select: 'fas fa-bars'
-			}
+			selected: []
 		};
 	},
 	methods: {
@@ -221,11 +131,6 @@ export default {
 		onListClick() {
 			this.selected = [];
 			this.selectmode = !this.selectmode;
-		},
-		onSaveClick() {
-			this.$electron.remote.dialog.showSaveDialog(filename => {
-				save(filename, actionToBuffer(this.actionList));
-			});
 		},
 		switchSelected(id) {
 			const index = this.selected.indexOf(id);
@@ -283,47 +188,31 @@ export default {
 	#action-list {
 		height: 506px;
 		overflow-y: scroll;
-	}
 
-	.v-expansion-panel__header {
-		height: 36px;
-		padding: 0 4px 0 4px;
-
-		.container {
-			margin: 0 2px 0 4px;
-
-			.select-mode-button {
-				width: 100%;
-			}
-
-			.flex {
-				line-height: 100%;
-
-				i {
-					font-size: 18px;
-				}
-			}
+		.container .layout .flex {
+			line-height: 100%;
 		}
 
-		.v-expansion-panel__header__icon {
-			margin-left: 4px;
+		.raw-item {
+			height: 80px;
+			padding: 0 0 0 8px;
+			margin-bottom: 4px;
 
-			.v-icon {
-				font-size: 16px;
-			}
-		}
-	}
+			.v-list__tile {
+				height: 100%;
+				padding: 0;
 
-	.v-expansion-panel__body {
-		.record-detail-content {
-			border: 2px solid skyblue;
+				.container .layout .flex {
+					img {
+						height: 70px;
+					}
 
-			.record-detail-item {
-				height: 56px;
-				margin: 4px;
-
-				.flex {
-					height: 100%;
+					.raw-delete-button {
+						color: white;
+						background-color: rgba(255, 0, 0, 0.7);
+						width: 100%;
+						height: 100%;
+					}
 				}
 			}
 		}

@@ -5,7 +5,7 @@ const io = require('socket.io')(server);
 
 io.on('connection', client => {
 	client.on('heartbeat', data => {
-		client.send('heartbeat', 'ok');
+		client.emit('heartbeat', 'ok');
 	});
 
 	client.on('disconnect', () => {
@@ -13,5 +13,5 @@ io.on('connection', client => {
 	});
 
 	// actionStore.removeAllListeners();
-	// actionStore.on('newAction', action => client.send('newAction', action));
+	// actionStore.on('newRaw', raw => client.send('newRaw', raw));
 });

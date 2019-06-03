@@ -1,12 +1,10 @@
 <template>
 	<div id="top-bar">
-		<v-system-bar status color="#71c3c3" :height="height">
+		<v-system-bar status>
 			<v-btn
 				class="cut-button top-bar-item top-bar-button"
-				@click="onSaveClick"
-				:style="{ height: height + 'px', width: height + 'px' }"
+				@click="$emit('save-file')"
 				:ripple="false"
-				color="white"
 				flat
 			>
 				<i class="ms-Icon ms-Icon--Save"></i>
@@ -18,9 +16,8 @@
 			<v-spacer></v-spacer>
 			<v-btn
 				class="cut-button top-bar-item top-bar-button"
+				@click="$emit('open-setting')"
 				:ripple="false"
-				:style="{ height: height + 'px', width: height + 'px' }"
-				color="white"
 				flat
 			>
 				<i class="ms-Icon ms-Icon--Settings" />
@@ -37,11 +34,22 @@ export default {
 
 
 <style lang="less">
+@width: 30px;
+@lemonceThemeColor: #71c3c3;
+
 #top-bar {
 	-webkit-app-region: drag;
 
+	.v-system-bar {
+		border-color: @lemonceThemeColor;
+		background-color: @lemonceThemeColor;
+		height: @width !important;
+	}
+
 	.top-bar-item {
 		font-size: 16px;
+		width: @width;
+		height: @width;
 	}
 
 	.top-bar-product-name {
@@ -50,8 +58,8 @@ export default {
 	}
 
 	.top-bar-button {
-		font-weight: bold;
-		background-color: #71c3c3;
+		color: white;
+		background-color: @lemonceThemeColor;
 		-webkit-app-region: no-drag;
 	}
 }

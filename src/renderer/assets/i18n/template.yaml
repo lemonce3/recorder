@@ -2,6 +2,7 @@ category:
   label: ''
   file: ''
   record: ''
+  resolve: ''
   genCode: ''
   editDoc: ''
   setting: ''

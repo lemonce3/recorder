@@ -1,4 +1,5 @@
 import { remote } from 'electron';
+import { actionToBuffer, bufferToAction } from './action-util';
 const fs = remote.require('fs').promises;
 const zlib = remote.require('zlib');
 
@@ -8,7 +9,8 @@ export function read(filename) {
 			if (error) {
 				reject(error);
 			} else {
-				resolve(buffer);
+				const data = bufferToAction(buffer);
+				resolve(data);
 			}
 		});
 	});
@@ -20,7 +22,8 @@ export function save(filename, buffer) {
 			if (error) {
 				reject(error);
 			} else {
-				fs.writeFile(filename, buffer).then(() => resolve()).catch(error => reject(error));
+				const data = actionToBuffer(buffer);
+				fs.writeFile(filename, data).then(() => resolve()).catch(error => reject(error));
 			}
 		});
 	});

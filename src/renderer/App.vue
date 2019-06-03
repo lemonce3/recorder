@@ -1,20 +1,18 @@
 <template>
 	<v-app>
-		<top-bar :height="topBarHeight" />
+		<top-bar />
 		<root-menu
 			:category="categoryList"
 			:length="menuLength"
-			:height="menuHeight"
 			@selected-change="onSelectChange"
 		/>
-		<record :category="activeCategory" :actionList="actionList" />
-		<router-view></router-view>
+		<record :actionList="actionList" />
+		<router-view :actionList="actionList"></router-view>
 	</v-app>
 </template>
 
 <script>
-import getScreenshot from '../../../../or-change/electron-screenshot';
-import { ipcRenderer } from 'electron';
+import io from 'socket.io-client';
 
 import TopBar from './components/TopBar';
 import RootMenu from './components/RootMenu';
@@ -42,49 +40,53 @@ export default {
 	},
 	data() {
 		return {
-			topBarHeight: 30,
-			menuLength: 4,
+			menuLength: 5,
 			menuHeight: 30,
 			actionList: [],
 			activeCategoryIndex: 1,
-			categoryList: ['file', 'record', 'genCode', 'editDoc', 'setting'],
+			categoryList: [
+				'file',
+				'record',
+				'resolve',
+				// 'genCode',
+				'editDoc'
+				// 'setting'
+			],
 			mockData,
-			screenshotStack: [],
-			a: null
+			socketPath: '',
+			socket: null,
+			heartbeatIntervalID: null
 		};
 	},
 	mounted() {
-		ipcRenderer.removeAllListeners(
-			'LEMONCE3_RECORDER::get-screenshot',
-			this.onGetScreenshot
-		);
-		ipcRenderer.on('LEMONCE3_RECORDER::get-screenshot', this.onGetScreenshot);
-
+		clearInterval(this.heartbeatIntervalID);
 		this.actionList = actionDataHandle(mockData);
+		const socket = this.socket = io('http://localhost:10000');
+
+		socket.on('newRaw', data => this.actionList.push(data));
 	},
 	methods: {
-		async onGetScreenshot() {
-			ipcRenderer.send(
-				'LEMONCE3_RECORDER::screenshot-data',
-				await getScreenshot()
-			);
-		},
 		onSelectChange(categoryIndex) {
-			const routeMap = {
-				record: '/',
-				genCode: '/genCode',
-				editDoc: '/editDoc',
-				setting: '/setting',
-				file: '/file'
-			};
-
 			this.activeCategoryIndex = categoryIndex;
-			this.$router.push(routeMap[this.categoryList[categoryIndex]]);
 		}
 	},
 	computed: {
 		activeCategory() {
 			return this.categoryList[this.activeCategoryIndex];
+		}
+	},
+	watch: {
+		activeCategoryIndex(index) {
+			const routeMap = {
+				file: '/fileManage',
+				record: '/',
+				resolve: '/resolve',
+				genCode: '/genCode',
+				editDoc: '/editDoc',
+				setting: '/setting'
+			};
+
+			this.$router.push(routeMap[this.categoryList[index]]);
 		}
 	}
 };

@@ -8,7 +8,7 @@
 					:readonly="!editable"
 					@input="$emit('input', content)"
 					@dblclick.stop="$emit('call-dialog', name)"
-					background-color="white"
+					background-color="rgba(0, 0, 0, 0)"
 					hide-details
 					box
 				></v-text-field>
@@ -18,7 +18,7 @@
 					<v-btn
 						:ripple="false"
 						@click="$emit('call-snackbar')"
-						class="cut-button"
+						class="cut-button bb1"
 						flat
 					>
 						<i class="ms-Icon ms-Icon--Copy"></i>

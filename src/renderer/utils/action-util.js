@@ -51,11 +51,11 @@ const actionListSchema = {
 	}
 };
 
-
 const stringify = fastJson(actionListSchema);
 
 export function actionToBuffer(actionList) {
-	return Buffer.from(stringify(actionList));
+	// return Buffer.from(stringify(actionList));
+	return Buffer.from(JSON.stringify(actionList));
 }
 
 export function bufferToAction(buffer) {
