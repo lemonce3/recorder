@@ -11,7 +11,7 @@
 			</v-btn>
 			<v-spacer></v-spacer>
 			<div id="brand">
-				<span class="top-bar-product-name">untitled - Recorder</span>
+				<span class="top-bar-product-name">{{status.file.name}} - Recorder</span>
 			</div>
 			<v-spacer></v-spacer>
 			<v-btn

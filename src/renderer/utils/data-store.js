@@ -5,6 +5,7 @@ const zlib = remote.require('zlib');
 
 export function read(filename) {
 	return new Promise(async (resolve, reject) => {
+		// resolve(bufferToAction(await fs.readFile(filename)));
 		zlib.gunzip(await fs.readFile(filename), (error, buffer) => {
 			if (error) {
 				reject(error);
@@ -16,14 +17,15 @@ export function read(filename) {
 	});
 }
 
-export function save(filename, buffer) {
+export function save(filename, actionList) {
+	const data = actionToBuffer(actionList);
 	return new Promise((resolve, reject) => {
-		zlib.gzip(buffer, async (error, buffer) => {
+		// fs.writeFile(filename, data).then(() => resolve()).catch(error => reject(error));
+		zlib.gzip(data, async (error, buffer) => {
 			if (error) {
 				reject(error);
 			} else {
-				const data = actionToBuffer(buffer);
-				fs.writeFile(filename, data).then(() => resolve()).catch(error => reject(error));
+				fs.writeFile(filename, buffer).then(() => resolve()).catch(error => reject(error));
 			}
 		});
 	});

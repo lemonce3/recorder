@@ -50,7 +50,7 @@
 			</div>
 		</div>
 		<div class="file-manage-content" v-show="active === 'saveAs'">
-			<div class="file-card" @click="">
+			<div class="file-card" @click="saveAs">
 				<div class="file-card-icon">
 					<i class="ms-Icon ms-Icon--PageAdd"></i>
 				</div>
@@ -76,11 +76,11 @@ function parseFilename(filename) {
 		base: result.base,
 		dir: result.dir,
 		path: filename
-	}
+	};
 }
 
 export default {
-	props: ['actionList'],
+	props: ['actionList', 'status'],
 	data() {
 		return {
 			buttonList: ['open', 'saveAs'],
@@ -109,6 +109,9 @@ export default {
 	},
 	methods: {
 		saveFile() {
+			this.saveData(this.status.filename);
+		},
+		saveAs() {
 			this.$electron.remote.dialog.showSaveDialog(filename => {
 				if (filename) {
 					this.saveData(filename);
@@ -116,8 +119,10 @@ export default {
 			});
 		},
 		openFile() {
-			this.$electron.remote.dialog.showOpenDialog(filename => {
-				if (filename) {
+			this.$electron.remote.dialog.showOpenDialog(result => {
+				if (result.length !== 0) {
+					const filename = result[0];
+					this.status.file = parseFilename(filename);
 					this.loadData(filename);
 				}
 			});
@@ -125,8 +130,10 @@ export default {
 		updateRecent(filename) {
 			const exist = this.recentList.findIndex(file => file.path === filename);
 
-			if (exist) {
+			if (exist !== -1) {
 				this.recentList.splice(exist, 1);
+			} else {
+				this.recentList.pop();
 			}
 
 			this.recentList.unshift(parseFilename(filename));
@@ -135,9 +142,10 @@ export default {
 			save(filename, this.actionList);
 		},
 		async loadData(filename) {
-			this.updateRecent(filename);
 			console.log(filename);
-			// this.actionList = await load(filename);
+			this.updateRecent(filename);
+			const newActionList = await read(filename);
+			this.actionList.splice(0, this.actionList.length, ...newActionList);
 		}
 	}
 };

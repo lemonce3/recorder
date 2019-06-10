@@ -1,19 +1,22 @@
 <template>
 	<v-app>
-		<top-bar />
+		<top-bar :status="status" @save-file="saveData(status.file.path)"/>
 		<root-menu
 			:category="categoryList"
 			:length="menuLength"
 			@selected-change="onSelectChange"
 		/>
 		<record :actionList="actionList" />
-		<router-view :actionList="actionList"></router-view>
+		<keep-alive>
+			<router-view :actionList="actionList" :status="status"></router-view>
+		</keep-alive>
 	</v-app>
 </template>
 
 <script>
 import io from 'socket.io-client';
 import { nativeImage } from 'electron';
+import { save } from './utils/data-store';
 
 import TopBar from './components/TopBar';
 import RootMenu from './components/RootMenu';
@@ -21,15 +24,23 @@ import Record from './components/EditArea/Record/index';
 
 import mockData from './dataMock';
 
-const getId = (length = 5) => Array(length).fill('').map(() => Math.random().toString(16).substring(2, 8)).join('-');
+const getId = (length = 5) =>
+	Array(length)
+		.fill('')
+		.map(() =>
+			Math.random()
+				.toString(16)
+				.substring(2, 8)
+		)
+		.join('-');
 
 function preResolve(action) {
 	action.id = getId();
 	action.resolve = {
 		image: nativeImage
-					.createFromDataURL(action.screenshot.dataURL)
-					.crop(action.data.rect)
-					.toDataURL(),
+			.createFromDataURL(action.screenshot.dataURL)
+			.crop(action.data.rect)
+			.toDataURL(),
 		property: {
 			text: {
 				key: 'text',
@@ -42,7 +53,7 @@ function preResolve(action) {
 		action.resolve.property.value = {
 			key: 'value',
 			value: action.data.value
-		}
+		};
 	}
 
 	return action;
@@ -57,8 +68,12 @@ export default {
 	},
 	data() {
 		return {
+			status: {
+				file: {
+					name: 'untitled'
+				}
+			},
 			menuLength: 5,
-			menuHeight: 30,
 			actionList: [],
 			activeCategoryIndex: 1,
 			categoryList: [
@@ -85,11 +100,15 @@ export default {
 
 		socket.off();
 		socket.on('receive-snapshot', html => console.log(html));
-		socket.on('receive-action', action => {console.log(action)
+		socket.on('receive-action', action => {
+			console.log(action);
 			this.actionList.push(preResolve(action));
 		});
 	},
 	methods: {
+		saveData(filename) {
+			save(filename, this.actionList);
+		},
 		onSelectChange(categoryIndex) {
 			this.activeCategoryIndex = categoryIndex;
 		}

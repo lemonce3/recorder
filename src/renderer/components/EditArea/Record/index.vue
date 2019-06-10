@@ -110,11 +110,9 @@ export default {
 	methods: {
 		onStartClick() {
 			this.recording = true;
-			// this.$api.startRecord();
 		},
 		onStopClick() {
 			this.recording = false;
-			// this.$api.stopRecord();
 		},
 		onListClick() {
 			this.selected = [];
@@ -209,9 +207,13 @@ export default {
 					width: 20%;
 				}
 
-				.raw-image img {
-					max-width: 100%;
+				.raw-image {
 					max-height: 100%;
+
+					img {
+						max-width: 100%;
+						max-height: 80px;
+					}
 				}
 
 				.raw-delete {
