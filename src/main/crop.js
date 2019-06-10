@@ -1,14 +1,15 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
+import { updateScreenSize } from './capturer';
 
-const EVENT_PREFIX = 'ELECTRON_SCREENSHOT_CAPTURER::';
+const EVENT_PREFIX = 'ELECTRON_CROPER_WINDOW::';
 
 let win;
 let screen;
 let screenSize;
 
 const winURL = process.env.NODE_ENV === 'development'
-	? 'http://localhost:9080/capturer'
-	: `file://${__dirname}/capturer.html`;
+	? 'http://localhost:9080/croper'
+	: `file://${__dirname}/croper.html`;
 
 function getSize() {
 	const screens = screen.getAllDisplays();
@@ -36,11 +37,11 @@ app.on('ready', () => {
 
 	win = new BrowserWindow({
 		useContentSize: true,
-		height: 0,
-		width: 0,
+		minWidth: screenSize.width,
+		minHeight: screenSize.height,
 		frame: false,
 		movable: false,
-		alwaysOnTop: false,
+		alwaysOnTop: true,
 		webPreferences: {
 			nodeIntegration: true,
 			webSecurity: false,
@@ -49,35 +50,35 @@ app.on('ready', () => {
 	});
 
 	win.loadURL(winURL);
+	win.setBounds({ x: 0, y: 0 });
 	win.setSkipTaskbar(true);
 	win.minimize();
 
 	ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
-	ipcMain.on(EVENT_PREFIX + 'load', () => win.webContents.send(EVENT_PREFIX + 'update-screen-size', screenSize));
-	
 });
 
-export function updateScreenSize(size) {
-	win.webContents.send('update-screen-size', size);
-}
+export function getCropRect({ size, dataURL }) {
+	const newSize = getSize();
+	if (newSize.height !== screenSize.height || newSize.width !== screenSize.height) {
+		screenSize = newSize;
+		win.setBounds(screenSize);
+		updateScreenSize(screenSize);
+	}
 
-export function getScreenshot() {
+	if (!size) {
+		size = screenSize;
+	}
+
 	return new Promise((resolve, reject) => {
-		win.webContents.send(EVENT_PREFIX + 'get-screenshot');
+		win.restore();
+		win.webContents.send(EVENT_PREFIX + 'get-crop-rect', size, dataURL);
 
-		ipcMain.once(EVENT_PREFIX + 'get-screenshot-reply', (event, args) => {
-			resolve(args);
+		ipcMain.once(EVENT_PREFIX + 'get-crop-rect-reply', (event, { rect }) => {
+			resolve(rect);
+			win.minimize();
 		});
-	});
-}
 
-export function getScreenshotByTimestamp(timestamp) {
-	return new Promise((resolve, reject) => {
-		win.webContents.send(EVENT_PREFIX + 'get-screenshot-by-timestamp', timestamp);
-
-		ipcMain.once(EVENT_PREFIX + 'get-screenshot-by-timestamp', (event, args) => {
-			resolve(args);
-		});
+		win.setBounds({ x: 0, y: 0 });
 	});
 }
 

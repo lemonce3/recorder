@@ -158,7 +158,6 @@
 				@click="assert.showDialog = true"
 				:ripple="false"
 				flat
-				:disabled="!selectmode"
 			>
 				<i class="ms-Icon ms-Icon--RedEye"></i>
 			</v-btn>
@@ -176,7 +175,7 @@
 							text-xs-center
 							fill-height
 							class="bl1 br1"
-							@click.stop
+							@click.stop="aaa(index)"
 						>
 							<v-layout row wrap fill-height>
 								<v-flex v-show="selectmode" xs1 align-self-center br1>
@@ -203,7 +202,7 @@
 									{{ action.type }}
 								</v-flex>
 								<v-flex :xs7="selectmode" :xs8="!selectmode" align-self-center>
-									{{ action.data.text.value }}
+									{{ action.resolve.property.text.value }}
 								</v-flex>
 							</v-layout>
 						</v-container>
@@ -211,7 +210,7 @@
 					<div class="record-detail-content">
 						<div
 							class="record-detail-item"
-							v-for="(item, index) in action.data"
+							v-for="(item, index) in action.resolve.property"
 						>
 							<property
 								v-model="item.value"
@@ -224,12 +223,20 @@
 						</div>
 						<div class="image-preview">
 							<div class="image-content">
-								<img :src="action.image" />
+								<img :src="action.resolve.image" />
 							</div>
 							<div class="image-action bt1">
 								<v-btn
 									:ripple="false"
-									@click="$emit('call-snackbar')"
+									@click="recropImage(action)"
+									class="cut-button br1"
+									flat
+								>
+									<i class="ms-Icon ms-Icon--Annotation"></i>
+								</v-btn>
+								<v-btn
+									:ripple="false"
+									@click="replaceImageWithScreenshot(action)"
 									class="cut-button br1"
 									flat
 								>
@@ -237,7 +244,7 @@
 								</v-btn>
 								<v-btn
 									:ripple="false"
-									@click="$emit('call-snackbar')"
+									@click="replaceImageWithFile(action)"
 									class="cut-button"
 									flat
 								>
@@ -256,6 +263,10 @@
 import Property from './Property';
 import { read, save } from '../../../utils/data-store';
 import { actionToBuffer, bufferToAction } from '../../../utils/action-util';
+import { ipcRenderer, remote } from 'electron';
+const fs = remote.require('fs').promises;
+
+const EVENT_PREFIX = 'ELECTRON_RECORDER::';
 
 export default {
 	props: ['actionList'],
@@ -284,6 +295,7 @@ export default {
 			recording: false,
 			selectmode: false,
 			selected: [],
+			fuck: null,
 			iconClass: {
 				assert: 'far fa-eye',
 				click: 'fas fa-mouse-pointer',
@@ -297,13 +309,14 @@ export default {
 		};
 	},
 	methods: {
+		aaa(index) {
+			this.fuck = index;
+		},
 		onStartClick() {
 			this.recording = true;
-			// this.$api.startRecord();
 		},
 		onStopClick() {
 			this.recording = false;
-			// this.$api.stopRecord();
 		},
 		onListClick() {
 			this.selected = [];
@@ -328,7 +341,7 @@ export default {
 		},
 		deleteSelected() {
 			if (this.selected.length === this.actionList.length) {
-				this.actionList = [];
+				this.actionList.length = 0;
 			} else {
 				this.selected.forEach(index => this.actionList.splice(index, 1));
 			}
@@ -337,19 +350,46 @@ export default {
 		},
 		insertAssert() {
 			this.assert.showDialog = false;
+			console.log(this.fuck);
 		},
 		showPropertyDialog(propertyName) {
 			this.property.name = propertyName;
 			this.property.readonly = !this.editableProperty.includes(propertyName);
-			this.property.content = this.activeAction.data[propertyName].value;
+			this.property.content = this.activeAction.resolve.property[propertyName].value;
 			this.property.showDialog = true;
 		},
 		comfirmEdit() {
-			this.activeAction.data[this.property.name].value = this.property.content;
+			this.activeAction.resolve.property[this.property.name].value = this.property.content;
 			this.property.showDialog = false;
 		},
 		showSnackbar() {
 			this.snackbar = true;
+		},
+		recropImage(action) {
+			ipcRenderer.once(EVENT_PREFIX + 'recrop-image-reply', (event, { dataURL }) => action.resolve.image = dataURL);
+
+			ipcRenderer.send(EVENT_PREFIX + 'recrop-image', {
+				size: action.screenshot.size,
+				dataURL: action.screenshot.dataURL
+			});
+		},
+		replaceImageWithFile(action) {
+			this.$electron.remote.dialog.showOpenDialog({
+					filters: {
+						name: 'image',
+						extensions: ['']
+					}
+				},
+				async filename => {
+					if (filename) {
+						action.resolve.image = nativeImage.createFromPath(filename).toDataURL();
+					}
+				});
+		},
+		replaceImageWithScreenshot(action) {
+			ipcRenderer.once(EVENT_PREFIX + 'replace-image-with-screenshot-reply', (event, { dataURL }) => action.resolve.image = dataURL);
+
+			ipcRenderer.send(EVENT_PREFIX + 'replace-image-with-screenshot');
 		}
 	},
 	computed: {
@@ -441,7 +481,7 @@ export default {
 					.v-btn {
 						float: left;
 						height: 100%;
-						width: 50%;
+						width: 33.333%;
 					}
 				}
 			}

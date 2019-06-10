@@ -1,5 +1,4 @@
 import { Resizable } from '../../../../../webVdesk/ui-native';
-import { ipcRenderer } from 'electron';
 
 import './style.css';
 
@@ -34,8 +33,11 @@ function reset() {
 }
 
 function onMousedown(event) {
+	const finishEvent = new CustomEvent('crop-result', { detail: { rect: null } });
+
 	if (event.button === 2 && event.ctrlKey) {
-		ipcRenderer.send('ELECTRON_SCREENSHOT_WINDOW::hide');
+		document.dispatchEvent(finishEvent);
+		reset();
 		return;
 	}
 
@@ -95,7 +97,7 @@ function onMousedown(event) {
 
 		if (event.code === 'Enter') {
 			const { x, y, width, height } = cropArea.getBoundingClientRect();
-			const finishEvent = new CustomEvent('crop-finish', { detail: { x, y, width, height } });
+			finishEvent.detail.rect = { x, y, width, height };
 			document.dispatchEvent(finishEvent);
 			reset();
 

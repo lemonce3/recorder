@@ -1,42 +1,37 @@
 import { desktopCapturer } from 'electron';
 
-const snapshotStack = [];
+const screenshotStack = [];
 
-const windowSize = {
-	height: 0,
-	width: 0
+const screenSize = {
+	width: 0,
+	height: 0
 };
 
 export async function getScreenshot() {
 	return desktopCapturer.getSources({
 		types: ['screen'],
-		thumbnailSize: windowSize
-	}).then(sources => sources.find(source => source.name === 'Entire screen').thumbnail);
+		thumbnailSize: screenSize
+	}).then(sources => ({ size: screenSize, image: sources.find(source => source.name === 'Entire screen').thumbnail }));
 }
 
-export function updateWindowSize(newSize) {
-	windowSize.height = newSize.height;
-	windowSize.width = newSize.width;
+export function updateScreenSize(newSize) {
+	screenSize.height = newSize.height;
+	screenSize.width = newSize.width;
 }
 
-export function getSnapshotByTimestamp(timestamp) {
-	return snapshotStack[9];
-}
+export const getScreenshotByTimestamp = timestamp => screenshotStack.find(item => item.time < timestamp);
 
-async function updateSnapshotStack() {
-	const screenshot = await getScreenshot(windowSize);
+async function updateScreenshotStack() {
+	const screenshot = await getScreenshot(screenSize);
 
-	if (snapshotStack.length > 10) {
-		snapshotStack.shift();
+	if (screenshotStack.length >= 50) {
+		screenshotStack.pop();
 	}
 
-	console.log(snapshotStack.length, 1);
+	console.log(screenshotStack.length, 1);
+	screenshot.time = Date.now();
 
-	snapshotStack.push({ time: Date.now(), screenshot });
+	screenshotStack.unshift(screenshot);
 }
 
-window.addEventListener('load', () => {
-	updateWindowSize(document.body.getBoundingClientRect());
-});
-
-setInterval(updateSnapshotStack);
+setInterval(updateScreenshotStack, 100);

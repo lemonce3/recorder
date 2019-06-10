@@ -59,46 +59,34 @@
 					:key="item.id"
 					class="raw-item bb1"
 				>
-					<v-container grid-list-md text-xs-center fill-height>
-						<v-layout
-							align-center
-							justify-center
-							style="text-align:center;"
-							fill-height
+					<div v-show="selectmode" class="select-mode-item br1">
+						<v-btn
+							class="cut-button select-mode-button"
+							@click.stop="switchSelected(index)"
+							:ripple="false"
+							flat
 						>
-							<v-flex v-show="selectmode" xs1 align-self-center br1>
-								<v-btn
-									class="cut-button select-mode-button"
-									@click.stop="switchSelected(index)"
-									:ripple="false"
-									flat
-								>
-									<i
-										:class="[
-											'ms-Icon ',
-											selected.includes(index)
-												? 'ms-Icon--CheckboxComposite'
-												: 'ms-Icon--Checkbox'
-										]"
-									></i>
-								</v-btn>
-							</v-flex>
-							<v-flex xs4>
-								<div>{{ item.type }}</div>
-							</v-flex>
-							<v-flex :xs6="selectmode" :xs7="!selectmode">
-								<img
-									src="http://img.boqiicdn.com/Data/BK/A/1406/26/img63991403776002.jpg"
-								/>
-							</v-flex>
-							<v-flex xs1>
-								<v-btn class="cut-button raw-delete-button" flat>
-									<i class="ms-Icon ms-Icon--Delete"></i>
-								</v-btn>
-							</v-flex>
-						</v-layout>
-					</v-container>
-					<!-- <v-list-tile-title>{{ item.type }}</v-list-tile-title> -->
+							<i
+								:class="[
+									'ms-Icon ',
+									selected.includes(index)
+										? 'ms-Icon--CheckboxComposite'
+										: 'ms-Icon--Checkbox'
+								]"
+							></i>
+						</v-btn>
+					</div>
+					<div class="raw-type">
+						<div>{{ item.type }}</div>
+					</div>
+					<div class="raw-image" :style="{ width: rawImageWidth }">
+						<img :src="item.resolve.image" />
+					</div>
+					<div class="cut-button raw-delete">
+						<v-btn class="cut-button raw-button" flat>
+							<i class="ms-Icon ms-Icon--Delete"></i>
+						</v-btn>
+					</div>
 				</v-list-tile>
 			</v-list>
 		</div>
@@ -146,7 +134,7 @@ export default {
 		},
 		deleteSelected() {
 			if (this.selected.length === this.actionList.length) {
-				this.actionList = [];
+				this.actionList.length = 0;
 			} else {
 				this.selected.forEach(index => this.actionList.splice(index, 1));
 			}
@@ -172,6 +160,9 @@ export default {
 			return this.activeActionIndex !== null
 				? this.actionList[this.activeActionIndex]
 				: {};
+		},
+		rawImageWidth() {
+			return this.selectmode ? '60%' : '70%';
 		}
 	}
 };
@@ -189,30 +180,50 @@ export default {
 		height: 506px;
 		overflow-y: scroll;
 
-		.container .layout .flex {
-			line-height: 100%;
+		.v-list {
+			padding: 0;
 		}
 
 		.raw-item {
 			height: 80px;
-			padding: 0 0 0 8px;
-			margin-bottom: 4px;
 
 			.v-list__tile {
 				height: 100%;
 				padding: 0;
 
-				.container .layout .flex {
-					img {
-						height: 70px;
-					}
+				div {
+					text-align: center;
+				}
 
-					.raw-delete-button {
-						color: white;
-						background-color: rgba(255, 0, 0, 0.7);
-						width: 100%;
+				.select-mode-item {
+					height: 100%;
+					width: 10%;
+
+					.select-mode-button {
 						height: 100%;
+						width: 100%;
 					}
+				}
+
+				.raw-type {
+					width: 20%;
+				}
+
+				.raw-image img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+
+				.raw-delete {
+					height: 100%;
+					width: 10%;
+				}
+
+				.raw-button {
+					color: white;
+					background-color: rgba(255, 0, 0, 0.7);
+					width: 100%;
+					height: 100%;
 				}
 			}
 		}

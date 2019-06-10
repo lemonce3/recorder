@@ -1,9 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import { app, BrowserWindow, ipcMain, nativeImage, globalShortcut } from 'electron';
-import { cropImage } from './capturer';
-import './server';
+import { getScreenshot } from './capturer';
+import { getCropRect } from './crop';
+import server from './server';
+import { recorderServer } from './recorder-server';
 import './websocket';
+import mitm from './mitm';
+
+const EVENT_PREFIX = 'ELECTRON_RECORDER::';
+app.commandLine.appendSwitch('disable-background-timer-throttling');
 
 /**
  * Set `__static` path to static files in production
@@ -43,24 +49,36 @@ function createWindow() {
 	mainWindow.loadURL(winURL);
 
 	mainWindow.on('closed', () => {
+		server.close();
+		mitm.close();
+		recorderServer.close();
 		mainWindow = null;
 	});
 }
 
-async function cropScreenshot() {
-	const result = await cropImage();
-	console.log(result);
+async function cropImage(image) {
+	const rect = await getCropRect(image);
+	return nativeImage.createFromDataURL(image.dataURL).crop(rect);
+}
 
-	// fs.mkdir(screenshotDir, { recursive: true }, error => {
-	// 	error && console.log(error);
-	// 	const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
-	// 	fs.writeFile(filename, result.toPNG(), error => error && console.log(error));
-	// });
+async function cropScreenshot() {
+	return cropImage(await getScreenshot());
+}
+
+async function screenshot() {
+	const image = await cropScreenshot();
+	fs.mkdir(screenshotDir, { recursive: true }, error => {
+		error && console.log(error);
+		const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
+		fs.writeFile(filename, image.toPNG(), error => error && console.log(error));
+	});
 }
 
 app.on('ready', () => {
 	createWindow();
-	globalShortcut.register('ctrl+shift+a', cropScreenshot);
+	globalShortcut.register('ctrl+shift+a', screenshot);
+	ipcMain.on(EVENT_PREFIX + 'recrop-image', async (event, image) => event.reply(EVENT_PREFIX + 'recrop-image-reply', { dataURL: (await cropImage(image)).toDataURL() }));
+	ipcMain.on(EVENT_PREFIX + 'replace-image-with-screenshot', async (event) => event.reply(EVENT_PREFIX + 'replace-image-with-screenshot-reply', { dataURL: (await cropScreenshot()).toDataURL() }));
 });
 
 app.on('window-all-closed', () => {
