@@ -21,64 +21,7 @@ import { save } from './utils/data-store';
 import TopBar from './components/TopBar';
 import RootMenu from './components/RootMenu';
 import Record from './components/EditArea/Record/index';
-
-import mockData from './dataMock';
-
-const getId = (length = 5) =>
-	Array(length)
-		.fill('')
-		.map(() =>
-			Math.random()
-				.toString(16)
-				.substring(2, 8)
-		)
-		.join('-');
-
-function preResolve(action) {
-	action.id = getId();
-
-	const { bounds, dataURL } = action.screenshot;
-	const { rect, text } = action.data;
-
-	const offsetRect = {
-		x: rect.x - bounds.x,
-		y: rect.y - bounds.y,
-		width: rect.width,
-		height: rect.height
-	};
-
-	console.log(bounds, offsetRect, dataURL);
-
-	action.resolve = {
-		image: nativeImage
-			.createFromDataURL(dataURL)
-			.crop(offsetRect)
-			.toDataURL(),
-		property: {
-			text: {
-				key: 'text',
-				value: text
-			},
-			tagName: {
-				key: 'tagName',
-				value: action.data.element.tagName.toLowerCase()
-			},
-			type: {
-				key: 'type',
-				value: action.data.element.type.toLowerCase()
-			}
-		}
-	};
-
-	if (action.data.value) {
-		action.resolve.property.value = {
-			key: 'value',
-			value: action.data.value
-		};
-	}
-
-	return action;
-}
+import { preResolve } from './pre-resolve';
 
 export default {
 	name: 'recorder',
@@ -106,7 +49,6 @@ export default {
 				'editDoc'
 				// 'setting'
 			],
-			mockData,
 			socketPath: '',
 			socket: null,
 			heartbeatIntervalID: null
@@ -114,11 +56,11 @@ export default {
 	},
 	mounted() {
 		console.log('fuck');
+		window.fuck = 'fuck';
 		if (!this.socket) {
 			this.socket = io('http://localhost:10100');
 		}
 
-		
 		const socket = this.socket;
 
 		socket.off();

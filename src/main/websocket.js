@@ -7,7 +7,7 @@ const io = require('socket.io')(server);
 io.on('connection', client => {
 	client.on('disconnect', () => {
 		rawProvider.removeAllListeners();
-		console.log('fuck');
+		console.log('disconnect');
 	});
 
 	client.on('error', error => {

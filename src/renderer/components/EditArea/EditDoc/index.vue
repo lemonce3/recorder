@@ -54,8 +54,8 @@ export default {
 					 what = this.$t(`element.${property.tagName}`);
 				}
 				
-				paragraph.addRun(new docx.TextRun(`${how} 一个 ${what} ${property.text.value}`).break());
-				paragraph.addRun(new docx.TextRun(`动作类型: ${property.type}`).break());
+				paragraph.addRun(new docx.TextRun(`# ${how} 一个 ${what} ${property.text.value}`).break().bold());
+				paragraph.addRun(new docx.TextRun(`动作类型: ${action.type}`).break());
 				paragraph.addRun(new docx.TextRun(`元素文本: ${property.text.value}`).break());
 				if (property.value) {
 					paragraph.addRun(new docx.TextRun(`元素值: ${property.value.value}`).break());
