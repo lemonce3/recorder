@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "docx": "^5.0.0-rc3",
     "fast-json-stringify": "^1.15.2",
     "formidable": "^1.2.1",
     "koa": "^2.7.0",

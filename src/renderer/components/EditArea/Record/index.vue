@@ -7,7 +7,7 @@
 				:ripple="false"
 				color="red"
 				flat
-				:input-value="recording"
+				:input-value="status.recording"
 				:disabled="selectmode"
 			>
 				<!-- <i class="ms-Icon ms-Icon--Record2"></i> -->
@@ -98,21 +98,20 @@ import { read, save } from '../../../utils/data-store';
 import { actionToBuffer, bufferToAction } from '../../../utils/action-util';
 
 export default {
-	props: ['actionList'],
+	props: ['actionList', 'status'],
 	data() {
 		return {
 			activeActionIndex: 1,
-			recording: false,
 			selectmode: false,
 			selected: []
 		};
 	},
 	methods: {
 		onStartClick() {
-			this.recording = true;
+			this.status.recording = true;
 		},
 		onStopClick() {
-			this.recording = false;
+			this.status.recording = false;
 		},
 		onListClick() {
 			this.selected = [];

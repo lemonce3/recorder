@@ -6,7 +6,7 @@
 			:length="menuLength"
 			@selected-change="onSelectChange"
 		/>
-		<record :actionList="actionList" />
+		<record :actionList="actionList" :status="status"/>
 		<keep-alive>
 			<router-view :actionList="actionList" :status="status"></router-view>
 		</keep-alive>
@@ -58,6 +58,14 @@ function preResolve(action) {
 			text: {
 				key: 'text',
 				value: text
+			},
+			tagName: {
+				key: 'tagName',
+				value: action.data.element.tagName.toLowerCase()
+			},
+			type: {
+				key: 'type',
+				value: action.data.element.type.toLowerCase()
 			}
 		}
 	};
@@ -84,7 +92,8 @@ export default {
 			status: {
 				file: {
 					name: 'untitled'
-				}
+				},
+				recording: true
 			},
 			menuLength: 5,
 			actionList: [],
@@ -104,17 +113,30 @@ export default {
 		};
 	},
 	mounted() {
-		clearInterval(this.heartbeatIntervalID);
-		// this.actionList = actionDataHandle(mockData);
+		console.log('fuck');
 		if (!this.socket) {
 			this.socket = io('http://localhost:10100');
 		}
+
+		
 		const socket = this.socket;
 
 		socket.off();
+		socket.on('heartbeat', html => console.log(html));
+		setInterval(() => {
+			socket.emit('heartbeat');
+			console.log('fuck');
+		}, 100);
+		socket.on('disconnect', () => console.log('fuck'));
+		socket.on('error', error => console.log(error));
+		socket.on('connect_error', error => console.log(error));
+		socket.on('error', error => console.log(error));
 		socket.on('receive-snapshot', html => console.log(html));
 		socket.on('receive-action', action => {
 			console.log(action);
+			if (!this.status.recording) {
+				return;
+			}
 			this.actionList.push(preResolve(action));
 		});
 	},

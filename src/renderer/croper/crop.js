@@ -56,8 +56,8 @@ function onMousedown(event) {
 	cropArea.id = 'crop-area';
 	new Resizable(cropArea);
 	const start = {
-		x: event.screenX,
-		y: event.screenY
+		x: event.clientX,
+		y: event.clientY
 	};
 
 	cropArea.style.left = start.x + 'px';

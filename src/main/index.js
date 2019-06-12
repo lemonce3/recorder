@@ -69,7 +69,7 @@ async function screenshot() {
 	const image = await cropScreenshot();
 	fs.mkdir(screenshotDir, { recursive: true }, error => {
 		error && console.log(error);
-		const filename = path.resolve(screenshotDir, `${new Date().toISOString()}.png`);
+		const filename = path.resolve(screenshotDir, `${new Date().toLocaleString().replace(/:|\//g, '-')}.png`);
 		fs.writeFile(filename, image.toPNG(), error => error && console.log(error));
 	});
 }

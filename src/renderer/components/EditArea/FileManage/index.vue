@@ -44,7 +44,7 @@
 					<div class="headline">{{ file.name }}</div>
 					<p>...{{ file.path.slice(-44) }}</p>
 				</div>
-				<v-btn class="cut-button card-close-button" flat>
+				<v-btn @click="removeRecent(index)" class="cut-button card-close-button" flat>
 					<i class="ms-Icon ms-Icon--ChromeClose"></i>
 				</v-btn>
 			</div>
@@ -65,8 +65,13 @@
 <script>
 import { read, save } from '../../../utils/data-store';
 import { remote } from 'electron';
-
+import { config, syncConfig } from '../../../utils/config-data';
 const path = remote.require('path');
+
+const lemonceRecorderFilter = {
+	name: "LemonceRecorderFile",
+	extensions: ["lcrc"]
+};
 
 function parseFilename(filename) {
 	const result = path.parse(filename);
@@ -107,27 +112,29 @@ export default {
 			]
 		};
 	},
+	mounted() {
+		this.recentList = config.recentList;
+	},
 	methods: {
 		saveFile() {
 			this.saveData(this.status.filename);
 		},
 		saveAs() {
-			this.$electron.remote.dialog.showSaveDialog(filename => {
+			this.$electron.remote.dialog.showSaveDialog({ filters: [ lemonceRecorderFilter ] }, filename => {
 				if (filename) {
 					this.saveData(filename);
 				}
 			});
 		},
 		openFile() {
-			this.$electron.remote.dialog.showOpenDialog(result => {
+			this.$electron.remote.dialog.showOpenDialog({ properties: ["openFile"], filters: [ lemonceRecorderFilter ] }, result => {
 				if (result.length !== 0) {
 					const filename = result[0];
-					this.status.file = parseFilename(filename);
 					this.loadData(filename);
 				}
 			});
 		},
-		updateRecent(filename) {
+		pushRecent(filename) {
 			const exist = this.recentList.findIndex(file => file.path === filename);
 
 			if (exist !== -1) {
@@ -137,15 +144,21 @@ export default {
 			}
 
 			this.recentList.unshift(parseFilename(filename));
+			syncConfig();
+		},
+		removeRecent(index) {
+			this.recentList.splice(index);
+			syncConfig();
 		},
 		saveData(filename) {
 			save(filename, this.actionList);
 		},
 		async loadData(filename) {
 			console.log(filename);
-			this.updateRecent(filename);
+			this.pushRecent(filename);
 			const newActionList = await read(filename);
 			this.actionList.splice(0, this.actionList.length, ...newActionList);
+			this.status.file = parseFilename(filename);
 		}
 	}
 };
