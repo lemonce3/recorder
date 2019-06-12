@@ -26,6 +26,7 @@ action:
     uncheck: '取消选中'
     select: '选择'
     input: '输入'
+    assert: '断言'
 
 element:
   a: '一个超链接'

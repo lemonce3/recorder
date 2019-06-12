@@ -17,10 +17,10 @@ export function preResolve(action) {
 	const { rect, text } = action.data;
 
 	const offsetRect = {
-		x: rect.x - bounds.x,
-		y: rect.y - bounds.y,
-		width: rect.width,
-		height: rect.height
+		x: Math.floor(rect.x) - bounds.x,
+		y: Math.floor(rect.y) - bounds.y,
+		width: Math.round(rect.width),
+		height: Math.round(rect.height)
 	};
 
 	console.log(bounds, offsetRect, dataURL);

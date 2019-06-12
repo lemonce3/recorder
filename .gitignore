@@ -11,3 +11,4 @@ thumbs.db
 screenshot/
 *.lcrc
 config.json
+bundle.js

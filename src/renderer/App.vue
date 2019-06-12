@@ -64,11 +64,11 @@ export default {
 		const socket = this.socket;
 
 		socket.off();
-		socket.on('heartbeat', html => console.log(html));
-		setInterval(() => {
-			socket.emit('heartbeat');
-			console.log('fuck');
-		}, 100);
+		// socket.on('heartbeat', html => console.log(html));
+		// setInterval(() => {
+		// 	socket.emit('heartbeat');
+		// 	console.log('fuck');
+		// }, 100);
 		socket.on('disconnect', () => console.log('fuck'));
 		socket.on('error', error => console.log(error));
 		socket.on('connect_error', error => console.log(error));
