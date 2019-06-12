@@ -44,12 +44,13 @@ app.on('ready', () => {
 		webPreferences: {
 			nodeIntegration: true,
 			webSecurity: false,
-			backgroundThrottling: false
+			backgroundThrottling: false,
+			offscreen: true
 		}
 	});
 
 	win.loadURL(winURL);
-	// win.setSkipTaskbar(true);
+	win.setSkipTaskbar(true);
 	win.minimize();
 
 	ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
