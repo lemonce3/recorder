@@ -49,16 +49,14 @@ app.on('ready', () => {
 	});
 
 	win.loadURL(winURL);
-	win.setSkipTaskbar(true);
+	// win.setSkipTaskbar(true);
 	win.minimize();
 
 	ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
-	ipcMain.on(EVENT_PREFIX + 'load', () => win.webContents.send(EVENT_PREFIX + 'update-screen-size', screenSize));
-	
 });
 
-export function updateScreenSize(size) {
-	win.webContents.send('update-screen-size', size);
+export function updateScreenSize() {
+	win.webContents.send('update-screen-size');
 }
 
 export function getScreenshot() {

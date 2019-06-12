@@ -36,15 +36,28 @@ const getId = (length = 5) =>
 
 function preResolve(action) {
 	action.id = getId();
+
+	const { bounds, dataURL } = action.screenshot;
+	const { rect, text } = action.data;
+
+	const offsetRect = {
+		x: rect.x - bounds.x,
+		y: rect.y - bounds.y,
+		width: rect.width,
+		height: rect.height
+	};
+
+	console.log(bounds, offsetRect, dataURL);
+
 	action.resolve = {
 		image: nativeImage
-			.createFromDataURL(action.screenshot.dataURL)
-			.crop(action.data.rect)
+			.createFromDataURL(dataURL)
+			.crop(offsetRect)
 			.toDataURL(),
 		property: {
 			text: {
 				key: 'text',
-				value: action.data.text
+				value: text
 			}
 		}
 	};

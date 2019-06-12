@@ -13,22 +13,61 @@ const winURL = process.env.NODE_ENV === 'development'
 
 function getSize() {
 	const screens = screen.getAllDisplays();
-	const size = {
+	const bounds = {
+		x: 0,
+		y: 0,
 		width: 0,
 		height: 0
 	};
 
 	screens.forEach(screen => {
-		if (screen.bounds.x === size.width) {
-			size.width = size.width + screen.bounds.width;
+		if (screen.bounds.x === bounds.width) {
+			bounds.width = bounds.width + screen.bounds.width;
+		}
+		if (screen.bounds.x < bounds.x) {
+			bounds.x = screen.bounds.x;
 		}
 
-		if (screen.bounds.y === size.height) {
-			size.height = size.height + screen.bounds.height;
+		if (screen.bounds.y === bounds.height) {
+			bounds.height = bounds.height + screen.bounds.height;
+		}
+
+		if (screen.bounds.y < bounds.y) {
+			bounds.y = screen.bounds.y;
 		}
 	});
 
-	return size;
+	return {
+		height: bounds.y - bounds.height,
+		width: bounds.x - bounds.width
+	};
+}
+
+function getMergeBounds(images) {
+	let x = 0 , y = 0 , xe = 0, ye = 0;
+
+	images.forEach(image => {
+		if (image.bounds.x === xe) {
+			xe = xe + image.bounds.width;
+		}
+		if (image.bounds.x < x) {
+			x = image.bounds.x;
+		}
+
+		if (image.bounds.y === ye) {
+			ye = ye + image.bounds.height;
+		}
+
+		if (image.bounds.y < y) {
+			y = image.bounds.y;
+		}
+	});
+
+	return {
+		x, y,
+		width: xe - x,
+		height: ye -y
+	};
 }
 
 app.on('ready', () => {
@@ -62,7 +101,7 @@ export function getCropRect({ size, dataURL }) {
 	if (newSize.height !== screenSize.height || newSize.width !== screenSize.height) {
 		screenSize = newSize;
 		win.setBounds(screenSize);
-		updateScreenSize(screenSize);
+		updateScreenSize();
 	}
 
 	if (!size) {
