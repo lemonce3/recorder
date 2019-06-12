@@ -3,7 +3,12 @@ const fs = require('fs');
 const path = require('path');
 const createMitm = require('../../../mitm-agent');
 const rootCA = require('../../dev-cert.json');
-const inject = fs.readFileSync(path.resolve('bundle.js')).toString();
+const { app } = require('electron');
+const injectPath = process.env.NODE_ENV === 'development'
+	? path.resolve('bundle.js')
+	: path.join(path.parse(app.getPath('exe')).dir, 'bundle.js');
+
+const inject = fs.readFileSync(injectPath).toString();
 
 const config = {
 	observer: 'http://localhost:10120',

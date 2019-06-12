@@ -27,6 +27,9 @@
     "files": [
       "dist/electron/**/*"
     ],
+    "extraFiles": [
+      "bundle.js"
+    ],
     "dmg": {
       "contents": [
         {

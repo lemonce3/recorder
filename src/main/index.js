@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { app, BrowserWindow, ipcMain, nativeImage, globalShortcut } from 'electron';
-import { getScreenshot } from './capturer';
-import { getCropRect } from './crop';
+import * as capturer from './capturer';
+import * as crop from './crop';
 import server from './server';
 import { recorderServer } from './recorder-server';
 import './websocket';
@@ -52,17 +52,19 @@ function createWindow() {
 		server.close();
 		mitm.close();
 		recorderServer.close();
+		capturer.destroy();
+		crop.destroy();
 		mainWindow = null;
 	});
 }
 
 async function cropImage(image) {
-	const rect = await getCropRect(image);
+	const rect = await crop.getCropRect(image);
 	return nativeImage.createFromDataURL(image.dataURL).crop(rect);
 }
 
 async function cropScreenshot() {
-	return cropImage(await getScreenshot());
+	return cropImage(await capturer.getScreenshot());
 }
 
 async function screenshot() {
