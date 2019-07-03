@@ -80,7 +80,7 @@
 						<div>{{ item.type }}</div>
 					</div>
 					<div class="raw-image" :style="{ width: rawImageWidth }">
-						<img :src="item.resolve.image" />
+						<img :src="item.extend.image" />
 					</div>
 					<div class="cut-button raw-delete">
 						<v-btn class="cut-button raw-button" flat>
@@ -94,9 +94,6 @@
 </template>
 
 <script>
-import { read, save } from '../../../utils/data-store';
-import { actionToBuffer, bufferToAction } from '../../../utils/action-util';
-
 export default {
 	props: ['actionList', 'status'],
 	data() {

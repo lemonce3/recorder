@@ -69,7 +69,6 @@
     "fast-json-stringify": "^1.15.2",
     "formidable": "^1.2.1",
     "koa": "^2.7.0",
-    "lodash": "^4.17.11",
     "socket.io": "^2.2.0",
     "vue": "^2.6.10",
     "vue-electron": "^1.0.6",

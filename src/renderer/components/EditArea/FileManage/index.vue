@@ -1,5 +1,34 @@
 <template>
 	<div id="file-manage" class="edit-area">
+		<v-dialog content-class="assert-dialog" v-model="showDialog">
+			<v-card>
+				<v-card-title class="headline grey lighten-2" primary-title>
+					新建文件
+				</v-card-title>
+
+				<v-card-text>
+					<v-textarea label="文件名" placeholder="未命名lcrc记录" v-model="newFileName"></v-textarea>
+				</v-card-text>
+
+				<v-divider></v-divider>
+
+				<v-card-actions>
+					<v-spacer></v-spacer>
+					<v-btn color="primary" :ripple="false" flat @click="newFile">
+						确定
+					</v-btn>
+					<v-btn
+						color="error"
+						:ripple="false"
+						flat
+						@click="showDialog = false"
+					>
+						取消
+					</v-btn>
+				</v-card-actions>
+				<v-divider></v-divider>
+			</v-card>
+		</v-dialog>
 		<div class="file-manage-menu br1 bt1">
 			<div v-for="(item, index) in buttonList">
 				<v-btn
@@ -14,7 +43,7 @@
 			</div>
 		</div>
 		<div class="file-manage-content" v-show="active === 'open'">
-			<div class="file-card" @click="">
+			<div class="file-card" @click="showDialog = true">
 				<div class="file-card-icon">
 					<i class="ms-Icon ms-Icon--PageAdd"></i>
 				</div>
@@ -63,15 +92,11 @@
 </template>
 
 <script>
-import { read, save } from '../../../utils/data-store';
 import { remote } from 'electron';
 import { config, syncConfig } from '../../../utils/config-data';
+import { actionStringify, actionListStringify } from '../../../utils/action-util';
+import { newFile, saveFile, saveAs, openFile, fileStatus } from '../../../utils/file';
 const path = remote.require('path');
-
-const lemonceRecorderFilter = {
-	name: "LemonceRecorderFile",
-	extensions: ["lcrc"]
-};
 
 function parseFilename(filename) {
 	const result = path.parse(filename);
@@ -85,54 +110,34 @@ function parseFilename(filename) {
 }
 
 export default {
-	props: ['actionList', 'status'],
+	props: [ 'actionList' ],
 	data() {
 		return {
+			showDialog: false,
 			buttonList: ['open', 'saveAs'],
 			active: 'open',
-			recentList: [
-				{
-					name: 'test1',
-					base: 'test1.lcrc',
-					dir: '/home/dameneko/project/github.com/lemonce3/recorder',
-					path: '/home/dameneko/project/github.com/lemonce3/recorder/test1.lcrc'
-				},
-				{
-					name: 'test2',
-					base: 'test2.lcrc',
-					dir: '/home/dameneko/project/github.com/lemonce3/recorder',
-					path: '/home/dameneko/project/github.com/lemonce3/recorder/test2.lcrc'
-				},
-				{
-					name: 'test3',
-					base: 'test3.lcrc',
-					dir: '/home/dameneko/project/github.com/lemonce3/recorder',
-					path: '/home/dameneko/project/github.com/lemonce3/recorder/test3.lcrc'
-				}
-			]
+			recentList: [],
+			newFileName: ''
 		};
 	},
 	mounted() {
 		this.recentList = config.recentList;
 	},
 	methods: {
+		newFile() {
+			newFile(newFileName);
+		},
 		saveFile() {
-			this.saveData(this.status.filename);
+			saveFile(Buffer.from(actionStringify(this.actionList)));
 		},
 		saveAs() {
-			this.$electron.remote.dialog.showSaveDialog({ filters: [ lemonceRecorderFilter ] }, filename => {
-				if (filename) {
-					this.saveData(filename);
-				}
-			});
+			saveAs(Buffer.from(actionStringify(this.actionList)));
 		},
-		openFile() {
-			this.$electron.remote.dialog.showOpenDialog({ properties: ["openFile"], filters: [ lemonceRecorderFilter ] }, result => {
-				if (result.length !== 0) {
-					const filename = result[0];
-					this.loadData(filename);
-				}
-			});
+		async openFile() {
+			const { filename, buffer } = await openFile();
+			const newActionList = JSON.parse(buffer.toString());
+			this.actionList.splice(0, this.actionList.length, ...newActionList);
+			this.pushRecent(filename);
 		},
 		pushRecent(filename) {
 			const exist = this.recentList.findIndex(file => file.path === filename);
@@ -140,7 +145,9 @@ export default {
 			if (exist !== -1) {
 				this.recentList.splice(exist, 1);
 			} else {
-				this.recentList.pop();
+				if (this.recentList.length > 2) {
+					this.recentList.pop();
+				}
 			}
 
 			this.recentList.unshift(parseFilename(filename));
@@ -149,16 +156,6 @@ export default {
 		removeRecent(index) {
 			this.recentList.splice(index);
 			syncConfig();
-		},
-		saveData(filename) {
-			save(filename, this.actionList);
-		},
-		async loadData(filename) {
-			console.log(filename);
-			this.pushRecent(filename);
-			const newActionList = await read(filename);
-			this.actionList.splice(0, this.actionList.length, ...newActionList);
-			this.status.file = parseFilename(filename);
 		}
 	}
 };
