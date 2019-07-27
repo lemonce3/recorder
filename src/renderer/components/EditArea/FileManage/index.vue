@@ -94,9 +94,13 @@
 <script>
 import { remote } from 'electron';
 import { config, syncConfig } from '../../../utils/config-data';
-import { actionStringify, actionListStringify } from '../../../utils/action-util';
-import { newFile, saveFile, saveAs, openFile, fileStatus } from '../../../utils/file';
+
 const path = remote.require('path');
+
+const lemonceRecorderFilter = {
+	name: 'LemonceRecorderFile',
+	extensions: ['lcrc']
+};
 
 function parseFilename(filename) {
 	const result = path.parse(filename);
@@ -109,11 +113,15 @@ function parseFilename(filename) {
 	};
 }
 
+function getOpenPath() {
+	return new Promise(resolve => remote.dialog.showOpenDialog({ properties: ['openFile'], filters: [lemonceRecorderFilter] }, result => resolve(result[0])));
+}
+
 export default {
-	props: [ 'actionList' ],
 	data() {
 		return {
 			showDialog: false,
+			fileList: [],
 			buttonList: ['open', 'saveAs'],
 			active: 'open',
 			recentList: [],
@@ -124,20 +132,22 @@ export default {
 		this.recentList = config.recentList;
 	},
 	methods: {
-		newFile() {
-			newFile(newFileName);
+		async newFile(pathname) {
+			const project = await this.$workspace.project.create();
+			const recordCase = await project.IDocument.createCase('__default__');
+			
+			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
+
+			this.showDialog = false;
 		},
-		saveFile() {
-			saveFile(Buffer.from(actionStringify(this.actionList)));
-		},
-		saveAs() {
-			saveAs(Buffer.from(actionStringify(this.actionList)));
+		async saveAs() {
+			await this.$workspace.project.list[this.$store.workspace.state.project].save();
 		},
 		async openFile() {
-			const { filename, buffer } = await openFile();
-			const newActionList = JSON.parse(buffer.toString());
-			this.actionList.splice(0, this.actionList.length, ...newActionList);
-			this.pushRecent(filename);
+			const pathname = await getOpenPath();
+			const project = await this.$workspace.project.create(pathname);
+
+			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
 		},
 		pushRecent(filename) {
 			const exist = this.recentList.findIndex(file => file.path === filename);

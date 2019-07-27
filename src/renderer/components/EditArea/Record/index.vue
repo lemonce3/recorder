@@ -3,7 +3,7 @@
 		<v-toolbar height="30px" flat class="bb1">
 			<v-btn
 				class="cut-button"
-				@click="onStartClick"
+				@click="startRecord"
 				:ripple="false"
 				color="red"
 				flat
@@ -15,7 +15,7 @@
 			</v-btn>
 			<v-btn
 				class="cut-button"
-				@click="onStopClick"
+				@click="stopRecord"
 				:ripple="false"
 				flat
 				:disabled="selectmode"
@@ -25,7 +25,7 @@
 			<v-divider class="mx-1" vertical></v-divider>
 			<v-btn
 				class="cut-button"
-				@click="onListClick"
+				@click="switchSelectMode"
 				:ripple="false"
 				flat
 				:input-value="selectmode"
@@ -94,23 +94,97 @@
 </template>
 
 <script>
+import { nativeImage } from 'electron';
+import io from 'socket.io-client';
+import resolver from '../../../../../../recoder-resolver/';
+
+const getId = (length = 5) =>
+		Array(length)
+			.fill('')
+			.map(() =>
+				Math.random()
+					.toString(16)
+					.substring(2, 8)
+			)
+			.join('-');
+
 export default {
-	props: ['actionList', 'status'],
+	props: ['status'],
 	data() {
 		return {
+			caseId: '',
+			actionList: [],
+			actionIndex: [],
 			activeActionIndex: 1,
 			selectmode: false,
-			selected: []
+			selected: [],
+			socket: null,
 		};
 	},
+	mounted() {
+		if (!this.socket) {
+			this.socket = io('http://localhost:10100');
+		}
+
+		const socket = this.socket;
+
+		socket.off();
+
+		socket.on('disconnect', () => console.log('fuck'));
+		socket.on('error', error => console.log(error));
+		socket.on('connect_error', error => console.log(error));
+		socket.on('error', error => console.log(error));
+		socket.on('receive-snapshot', snapshot => {
+			console.log(snapshot);
+			snapshot.id = getId();
+			this.$workspace.project.list[this.projectId].IDocument.addTrace(snapshot);
+			resolver.emit('snapshot', snapshot);
+		});
+
+		socket.on('receive-action', action => {
+			if (!this.status.recording) {
+				return;
+			}
+
+			const { bounds, dataURL } = action.screenshot;
+			const { rect } = action.data;
+
+			const offsetRect = {
+				x: Math.floor(rect.x) - bounds.x,
+				y: Math.floor(rect.y) - bounds.y,
+				width: Math.round(rect.width),
+				height: Math.round(rect.height)
+			};
+
+			action.id = getId();
+			const image = nativeImage.createFromDataURL(dataURL);
+			action.screenshot.id = action.id
+			delete action.screenshot.dataURL;
+
+			this.$workspace.project.list[this.projectId].IDocument.addTrace(action, image.toPNG());
+
+			action.extend = {
+				image: image.crop(offsetRect).toDataURL()
+			};
+
+			resolver.emit('action', action);
+		});
+
+		resolver.on('resolved-action', action => {
+			this.$workspace.project.list[this.projectId].document.caseList[this.caseId].addAction(action);
+		});
+	},
 	methods: {
-		onStartClick() {
+		createCase(casename) {
+
+		},
+		startRecord() {
 			this.status.recording = true;
 		},
-		onStopClick() {
+		stopRecord() {
 			this.status.recording = false;
 		},
-		onListClick() {
+		switchSelectMode() {
 			this.selected = [];
 			this.selectmode = !this.selectmode;
 		},
@@ -128,7 +202,7 @@ export default {
 		},
 		deleteSelected() {
 			if (this.selected.length === this.actionList.length) {
-				this.actionList.length = 0;
+				this.actionList.splice(0, this.actionList.length);
 			} else {
 				this.selected.forEach(index => this.actionList.splice(index, 1));
 			}
@@ -147,6 +221,15 @@ export default {
 		},
 		showSnackbar() {
 			this.snackbar = true;
+		},
+		update(action) {
+			this.$workspace.project.list[filename].document.caseList[casename].updateAction(action);
+		},
+		delete(action) {
+			this.$workspace.project.list[filename].document.caseList[casename].deleteAction(action.id);
+		},
+		add(action) {
+			this.$workspace.project.list[filename].document.caseList[casename].addAction(prevId, action);
 		}
 	},
 	computed: {
@@ -157,6 +240,26 @@ export default {
 		},
 		rawImageWidth() {
 			return this.selectmode ? '60%' : '70%';
+		},
+		projectId() {
+			return this.$store.state.workspace.project;
+		}
+	},
+	watch: {
+		projectId() {
+			const caseList = this.$workspace.project.list[this.projectId].document.caseList;
+			console.log(caseList, this.projectId);
+			this.caseId = Object.keys(caseList).find(id => caseList[id].name === '__default__');
+			
+			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
+		},
+		caseId() {
+			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
+		},
+		actionIndex() {
+			if (this.projectId && this.caseId) {
+				this.actionList.splice(0, this.actionList.length, ...JSON.parse(this.$workspace.getter.actionList(this.projectId, this.caseId)));
+			}
 		}
 	}
 };

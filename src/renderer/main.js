@@ -7,6 +7,8 @@ import store from './store';
 import VueI18n from 'vue-i18n';
 import Vuetify from 'vuetify';
 
+import workspace from './workspace';
+
 import 'office-ui-fabric-core/dist/css/fabric.min.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -17,6 +19,7 @@ import zh from './assets/i18n/zh-hans.yaml';
 
 const messages = { zh };
 
+Vue.use(workspace);
 Vue.use(VueI18n);
 
 Vue.use(Vuetify, {

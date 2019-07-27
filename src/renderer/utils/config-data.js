@@ -10,7 +10,7 @@ const DEFAULT_CONFIG = {
 
 if (!fs.existsSync(configPath)) {
 	fs.writeFileSync(configPath, JSON.stringify(DEFAULT_CONFIG));
-};
+}
 
 export const config = JSON.parse(fs.readFileSync(configPath));
 

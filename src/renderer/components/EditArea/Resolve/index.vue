@@ -270,6 +270,9 @@ export default {
 	},
 	data() {
 		return {
+			actionList: [],
+			actionIndex: [],
+			caseId: '',
 			snackbar: false,
 			assert: {
 				content: '',
@@ -381,6 +384,25 @@ export default {
 			ipcRenderer.once(EVENT_PREFIX + 'replace-image-with-screenshot-reply', (event, { dataURL }) => target.image = dataURL);
 
 			ipcRenderer.send(EVENT_PREFIX + 'replace-image-with-screenshot');
+		}
+	},
+	computed: {
+		projectId() {
+			return this.$store.state.workspace.project;
+		}
+	},
+	watch: {
+		projectId() {
+			console.log(this.caseId);
+			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
+		},
+		caseId() {
+			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
+		},
+		actionIndex() {
+			if (this.projectId && this.caseId) {
+				this.actionList.splice(0, this.actionList.length, ...JSON.parse(this.$workspace.getter.actionList(this.projectId, this.caseId)));
+			}
 		}
 	}
 };

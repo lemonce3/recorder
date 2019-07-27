@@ -3,7 +3,7 @@
 		<v-system-bar status>
 			<v-btn
 				class="cut-button top-bar-item top-bar-button"
-				@click="$emit('save-file')"
+				@click="saveCurrentProject"
 				:ripple="false"
 				flat
 			>
@@ -28,7 +28,17 @@
 
 <script>
 export default {
-	props: ['height', 'status']
+	props: ['height', 'status'],
+	computed: {
+		projectId() {
+			return this.$store.state.workspace.project;
+		}
+	},
+	methods: {
+		async saveCurrentProject() {
+			await this.$workspace.project.list[this.projectId].save();
+		}
+	}
 };
 </script>
 
