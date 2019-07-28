@@ -1,9 +1,15 @@
 import { ipcRenderer, remote } from 'electron';
-import { tempPath, ProjectTemp, CaseTemp } from './temp';
+import { ProjectTemp, CaseTemp } from './temp';
 
 const path = remote.require('path');
 
-const EVENT_PREFIX = 'ELECTRON_CROPER_WINDOW::';
+const EVENT_PREFIX = 'ELECTRON_MAIN_WINDOW::';
+const MODULE_NAME = 'FS';
+
+const send = async (channel, message) => new Promise(resolve => {
+	ipcRenderer.once(EVENT_PREFIX + MODULE_NAME + channel + 'reply', (event, reply) => resolve(reply));
+	ipcRenderer.send(EVENT_PREFIX + MODULE_NAME + channel, message);
+});
 
 const lemonceRecorderFilter = {
 	name: 'LemonceRecorderFile',
@@ -22,36 +28,9 @@ const getId = (length = 5) =>
 
 let documentCounter = 1;
 
-
 function getSavePath() {
 	return new Promise(resolve => remote.dialog.showSaveDialog({ filters: [lemonceRecorderFilter] }, resolve));
 }
-
-const packArchive = (projectId, target) => {console.log(projectId, target);
-	return new Promise((resolve, reject) => {
-		ipcRenderer.send(EVENT_PREFIX + 'pack-archive', { 
-			source: path.join(tempPath, projectId),
-			target,
-		});
-
-		ipcRenderer.once(EVENT_PREFIX + 'pack-archive-reply', (event, args) => {
-			resolve(args);
-		});
-	});
-};
-
-const extractArchive = (source, projectId) => {console.log(source);
-	return new Promise((resolve, reject) => {
-		ipcRenderer.send(EVENT_PREFIX + 'extract-archive', {
-			source,
-			tempPath
-		});
-	
-		ipcRenderer.once(EVENT_PREFIX + 'extract-archive-reply', (event, args) => {
-			resolve(args);
-		});
-	});
-};
 
 function getNewDocumentName(prefix) {
 	return `${prefix}${documentCounter++}`;
@@ -64,10 +43,10 @@ function install(Vue) {
 	const projectList = {};
 
 	class CaseInterface {
-		constructor(name, document) {
+		constructor(document, name, id) {
 			this.actionIndex = [];
 			this.$actionList = [];
-			this.id = getId();
+			this.id = id ? id : getId();
 			this.name = name;
 			this.document = document;
 
@@ -80,9 +59,9 @@ function install(Vue) {
 		}
 
 		async loadFromTemp() {
-			const indexList = this.actionTemp.getActionIndex();
-
-			this.$actionList = await Promise.all(indexList.map(id => this.actionTemp.getAction(id)));
+			this.$actionList = await this.actionTemp.getActionList();
+			console.log(this.$actionList);
+			this.$updateIndex();
 		}
 
 		get actionList() {
@@ -126,12 +105,12 @@ function install(Vue) {
 			this.document = document;
 		}
 
-		async createCase(caseName) {
-			if (this.document.caseList[caseName]) {
+		async createCase(caseName, caseId) {
+			if (this.document.caseList[caseId]) {
 				return;
 			}
 
-			const recordCase = new CaseInterface(caseName, this.document);
+			const recordCase = new CaseInterface(this.document, caseName, caseId);
 			await recordCase.init();
 
 			this.document.caseList[recordCase.id] = recordCase;
@@ -182,25 +161,43 @@ function install(Vue) {
 		}
 
 		async init() {
-			if (this.pathname) {
-				const { id } = await extractArchive(this.pathname);
-				this.document.id = id;
+			const isOpen = Boolean(this.pathname);
+
+			if (isOpen) {
+				const reply = await send('extract-archive', { source: this.pathname });
+				console.log(reply);
+				this.document.id = reply.id;
 			} else {
 				this.document.id = getId();
 			}
 
 			const projectTemp = this.document.projectTemp = new ProjectTemp(this.document.id);
 			await projectTemp.init();
+
+			if (isOpen) {
+				await projectTemp.loadTraceTemp();
+				const { data } = await projectTemp.loadCaseIndex();
+				const caseIndex = JSON.parse(data.toString());
+				console.log(caseIndex);
+				await Promise.all(caseIndex.map(async ({ name, id }) => {
+					const recordCase = await this.IDocument.createCase(name, id);
+					await recordCase.init();
+					await recordCase.loadFromTemp();
+				}));
+			}
 		}
 
 		async save(asPathname) {
 			if (asPathname) {
-				await packArchive(this.document.id, asPathname);
+				await send('pack-archive', this.document.id, asPathname);
 			}
 
-			const targetPath = this.pathname ? this.pathname : await getSavePath();
+			const target = this.pathname ? this.pathname : await getSavePath();
 			
-			await packArchive(this.document.id, targetPath);
+			await send('pack-archive', {
+				projectId: this.document.id,
+				target
+			});
 		}
 
 		unload() {

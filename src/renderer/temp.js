@@ -1,132 +1,133 @@
-import { ipcRenderer, remote } from 'electron';
-import path from 'path';
-import fs from 'fs';
+import { ipcRenderer } from 'electron';
 
-function writeFile(pathname, json) {
-	return new Promise((resolve, reject) => {
-		ipcRenderer.emit(EVENT_PREFIX + 'write-file', { pathname, json });
-		ipcRenderer.once(EVENT_PREFIX + 'write-file-reply', message => {
-			message.error ? reject(message) : resolve(message);
-		});
+const EVENT_PREFIX = 'ELECTRON_MAIN_WINDOW::';
+const MODULE_NAME = 'FS';
+
+const send = async (channel, message) => new Promise(resolve => {
+	ipcRenderer.once(EVENT_PREFIX + MODULE_NAME + channel + 'reply', (event, reply) => {
+		console.log(channel, reply);
+		resolve(reply);
 	});
-}
-
-function writeFile1(pathname, data) {
-	return fs.promises.writeFile(pathname, data);
-}
-
-function readFile1(pathname) {
-	return fs.promises.readFile(pathname);
-}
-
-function deleteFile1(pathname) {
-	return fs.promises.unlink(pathname);
-}
-function readFile(pathname) {
-	return new Promise((resolve, reject) => {
-		ipcRenderer.emit(EVENT_PREFIX + 'read-file', { pathname });
-		ipcRenderer.once(EVENT_PREFIX + 'read-file-reply', message => {
-			message.error ? reject(message) : resolve(message);
-		});
-	});
-}
-
-function deleteFile(pathname) {
-	return new Promise((resolve, reject) => {
-		ipcRenderer.emit(EVENT_PREFIX + 'delete-file', { pathname });
-		ipcRenderer.once(EVENT_PREFIX + 'delete-file-reply', message => {
-			message.error ? reject(message) : resolve(message);
-		});
-	});
-}
-
-export const tempPath = path.join(remote.app.getPath('temp'), 'recorder', 'temp');
-const EVENT_PREFIX = 'ELECTRON_CROPER_WINDOW::';
+	ipcRenderer.send(EVENT_PREFIX + MODULE_NAME + channel, message);
+});
 
 export class ProjectTemp {
 	constructor(projectId) {
-		this.projectID = projectId;
+		this.projectId = projectId;
 		this.traceIndex = [];
-		const projectDir = this.projectDir = path.join(tempPath, projectId);
-		this.caseDir = path.join(projectDir, 'case');
-		this.dataDir = path.join(projectDir, 'trace-data');
-		this.imageDir = path.join(projectDir, 'trace-image');
-	}
-
-	getTraceIndex() {
-		return readFile1(path.join(this.dataDir, 'index.json'));
 	}
 
 	async init() {
-		await fs.promises.mkdir(this.projectDir, { recursive: true });
-		await fs.promises.mkdir(this.caseDir, { recursive: true });
-		await fs.promises.mkdir(this.dataDir, { recursive: true });
-		await fs.promises.mkdir(this.imageDir, { recursive: true });
-		
-		await writeFile1(path.join(this.projectDir, 'document.json'), JSON.stringify({ id: this.projectID }));
+		const projectId = this.projectId;
+		await send('ensure-project-dir', { projectId });
+		await send('write-document-data', { projectId, data: JSON.stringify({ id: projectId })});
 	}
 
 	async addTrace(trace, image) {
+		const projectId = this.projectId;
+		const traceId = trace.id;
+
 		if (image) {
-			await writeFile1(path.join(this.imageDir, trace.id) + '.png', image);
-			await writeFile1(path.join(this.dataDir, trace.id), JSON.stringify({
+			await send('write-trace-image', { projectId, traceId, image });
+			await send('write-trace-data', { projectId, traceId, data: JSON.stringify({
 				type: 'action',
 				data: trace
-			}));
+			})
+			});
 		} else {
-			await writeFile1(path.join(this.dataDir, trace.id), JSON.stringify({
+			await send('write-trace-data', { projectId, traceId, data: JSON.stringify({
 				type: 'snapshot',
 				data: trace
-			}));
+			})
+			});
 		}
 
 		this.traceIndex.push(trace.id);
 		this.$updateIndex();
 	}
 
-	getTraceData(id) {
-		return readFile1(path.join(this.dataDir, id));
+	async getTraceIndex() {
+		return await send('read-trace-index', { projectId: this.projectId });
 	}
 
-	getTraceImage(id) {
-		return readFile1(path.join(this.imageDir, id));
+	async loadTraceTemp() {
+		const { data } = await this.getTraceIndex();
+		const index = JSON.stringify(data.toString());
+		this.traceIndex.splice(0, this.traceIndex.length, ...index);
+		return index;
+	}
+
+	async getTraceData(traceId) {
+		return await send('read-trace-data', { projectId: this.projectId, traceId });
+	}
+
+	async getTraceImage(traceId) {
+		return await send('read-trace-image', { projectId: this.projectId, traceId });
 	}
 
 	async $updateIndex() {
-		await writeFile1(path.join(this.dataDir, 'index.json'), JSON.stringify(this.traceIndex));
+		await send('write-trace-index', { projectId: this.projectId, data: JSON.stringify(this.traceIndex) });
+	}
+
+	async loadCaseIndex() {
+		return await send('read-case-index', { projectId: this.projectId });
 	}
 
 	async updateCaseIndex(caseIndex) {
-		await writeFile1(path.join(this.caseDir, 'case.json'), JSON.stringify(caseIndex));
+		await send('write-case-index', { projectId: this.projectId, data: JSON.stringify(caseIndex) });
 	}
 }
 
 export class CaseTemp {
-	constructor(filehash, casename) {
-		this.actionDir = path.join(tempPath, filehash, 'case', casename, 'action');
+	constructor(projectId, caseId) {
+		this.projectId = projectId;
+		this.caseId = caseId;
 		this.actionIndex = [];
 	}
 	
 	async init() {
-		await fs.promises.mkdir(this.actionDir, { recursive: true });
+		await send('ensure-case-dir', { projectId: this.projectId, caseId: this.caseId });
 	}
 
-	getActionIndex() {
-		readFile1(path.join(this.actionDir, 'index.json'));
+	async getActionIndex() {
+		const { data } = await send('read-action-index', { projectId: this.projectId, caseId: this.caseId });
+		return JSON.parse(data);
 	}
 
-	getAction(id) {
-		readFile1(path.join(this.actionDir, id));
+	async getActionList() {
+		const { data } = await send('read-action-list', { projectId: this.projectId, caseId: this.caseId });
+		return data;
+	}
+
+	async getAction(id) {
+		const { data } =  await send('read-action', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			actionId: id
+		});
+		return JSON.parse(data);
 	}
 
 	async addAction(action) {
-		await writeFile1(path.join(this.actionDir, action.id), JSON.stringify(action));
+		await send('write-action', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			actionId: action.id,
+			data: JSON.stringify(action)
+		});
+
 		this.actionIndex.push(action.id);
 		this.$updateIndex();
 	}
 
 	async insertAction(action, prevId) {
-		await writeFile1(path.join(this.actionDir, action.id), JSON.stringify(action));
+		await send('write-action', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			actionId: action.id,
+			data: JSON.stringify(action)
+		});
+
 		const prevIndex = this.actionIndex.findIndex(id => id === prevId);
 			
 		this.actionIndex.splice(prevIndex, 0, action.id);
@@ -134,26 +135,31 @@ export class CaseTemp {
 	}
 
 	async updateAction(action) {
-		await writeFile1(path.join(this.actionDir, action.id), JSON.stringify(action));
+		await send('write-action', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			actionId: action.id,
+			data: JSON.stringify(action)
+		});
 	}
 
 	async deleteAction(action) {
-		await deleteFile1(path.join(this.actionDir, action.id));
+		await send('delete-action', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			actionId: action.id
+		});
+
 		const index = this.$actionList.findIndex(id => id === action.id);
 		this.actionIndex.splice(index, 1);
 		this.$updateIndex();
 	}
 
 	async $updateIndex() {
-		await writeFile1(path.join(this.actionDir, 'index.json'), JSON.stringify(this.actionIndex));
-	}
-}
-
-function packageFile(source, target) {
-	return new Promise((resolve, reject) => {
-		ipcRenderer.emit(EVENT_PREFIX + 'package-file', { source, target });
-		ipcRenderer.once(EVENT_PREFIX + 'package-file-reply', message => {
-			message.error ? reject(message) : resolve(message);
+		await send('write-action-index', {
+			projectId: this.projectId,
+			caseId: this.caseId,
+			data: JSON.stringify(this.actionIndex)
 		});
-	});
+	}
 }
