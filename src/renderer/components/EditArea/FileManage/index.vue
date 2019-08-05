@@ -38,7 +38,7 @@
 					class="cut-button"
 					:ripple="false"
 					flat
-					>{{ item }}</v-btn
+					>{{ $t(`file.${item}`) }}</v-btn
 				>
 			</div>
 		</div>
@@ -141,11 +141,11 @@ export default {
 			this.showDialog = false;
 		},
 		async saveAs() {
-			await this.$workspace.project.list[this.$store.workspace.state.project].save();
+			await this.$workspace.project.list[this.$store.state.workspace.project].saveAs();
 		},
 		async openFile() {
 			const pathname = await getOpenPath();
-			const project = await this.$workspace.project.create(pathname);
+			const project = await this.$workspace.project.openFile(pathname);
 
 			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
 		},

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const fse = require('fs-extra');
 const fsp = fs.promises;
 
 const path = require('path');
@@ -50,7 +51,7 @@ function pack(source, target) {console.log(source, target);
 }
 
 async function writeFile(pathname, data) {
-	return await fsp.writeFile(pathname, data);
+	return await fsp.writeFile(pathname, data).catch(e => console.log(e));
 }
 
 async function readFile(pathname) {
@@ -59,15 +60,6 @@ async function readFile(pathname) {
 
 async function deleteFile(pathname) {
 	return await fsp.unlink(pathname);
-}
-
-async function ensureDir(dir) {
-	return new Promise(resolve => {
-		fsp.access(dir, fs.constants.R_OK | fs.constants.W_OK).then(resolve).catch(async () => {
-			await fsp.mkdir(dir, { recursive: true });
-			resolve();
-		});
-	});
 }
 
 const getProjectDir = projectId => path.join(tempPath, projectId);
@@ -89,8 +81,11 @@ const getActionPath = (projectId, caseId, actionId) => path.join(getActionDir(pr
 const getActionIndexPath = (projectId, caseId) => path.join(getActionDir(projectId, caseId), 'index.json');
 
 const handler = {
-	'ensure-project-dir': async ({ projectId }) => await Promise.all([ getTraceDataDir(projectId), getTraceImageDir(projectId), getCaseDir(projectId) ].map(dir => ensureDir(dir))),
-	'ensure-case-dir': async ({ projectId, caseId }) => await Promise.all([ getCaseDir(projectId), getActionDir(projectId, caseId) ].map(dir => ensureDir(dir))),
+	'ensure-project-dir': async ({ projectId }) => await Promise.all([ getTraceDataDir(projectId), getTraceImageDir(projectId), getCaseDir(projectId) ].map(dir => {
+		console.log(dir);
+		fse.ensureDir(dir);
+	})),
+	'ensure-case-dir': async ({ projectId, caseId }) => await fse.ensureDir(getActionDir(projectId, caseId)),
 	'write-document-data': async({projectId, data}) => await writeFile(getDocumentDataPath(projectId), data),
 	'write-trace-data': async ({ projectId, traceId, data }) => await writeFile(getTraceDataPath(projectId, traceId), data),
 	'write-trace-image': async ({ projectId, traceId, image }) => await writeFile(getTraceImagePath(projectId, traceId), image),
@@ -161,16 +156,19 @@ const handler = {
 			}, 1000);
 		});
 	},
-	'pack-archive': async ({ projectId, target }) => {console.log(projectId, target);
-		await pack(getProjectDir(projectId), target);
-	}	
+	'pack-archive': async ({ projectId, target }) => await pack(getProjectDir(projectId), target)
 };
 
 Object.keys(handler).forEach(name => {
 	const channel = EVENT_PREFIX + MODULE_NAME + name;
 	ipcMain.removeAllListeners(channel);
 	ipcMain.on(channel, async (event, message) => {
-		const reply = await handler[name](message);console.log(name, message, reply);
+		const reply = await handler[name](message);
+		// console.log(name, message, reply);
 		event.reply(channel + 'reply', reply);
 	});
 });
+
+export function cleanTemp() {
+	fse.removeSync(tempPath);
+}

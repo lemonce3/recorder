@@ -3,7 +3,7 @@ import path from 'path';
 import { app, BrowserWindow, ipcMain, nativeImage, globalShortcut } from 'electron';
 import * as capturer from './capturer';
 import * as crop from './crop';
-import './temp';
+import { cleanTemp } from './temp';
 import server from './server';
 import { recorderServer } from './recorder-server';
 import './websocket';
@@ -55,6 +55,7 @@ function createWindow() {
 		recorderServer.close();
 		capturer.destroy();
 		crop.destroy();
+		cleanTemp();
 		mainWindow = null;
 	});
 }

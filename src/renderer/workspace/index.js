@@ -1,15 +1,8 @@
-import { ipcRenderer, remote } from 'electron';
-import { ProjectTemp, CaseTemp } from './temp';
+import { remote } from 'electron';
+import { ProjectStore, CaseStore } from './store';
+import { api } from './api';
 
 const path = remote.require('path');
-
-const EVENT_PREFIX = 'ELECTRON_MAIN_WINDOW::';
-const MODULE_NAME = 'FS';
-
-const send = async (channel, message) => new Promise(resolve => {
-	ipcRenderer.once(EVENT_PREFIX + MODULE_NAME + channel + 'reply', (event, reply) => resolve(reply));
-	ipcRenderer.send(EVENT_PREFIX + MODULE_NAME + channel, message);
-});
 
 const lemonceRecorderFilter = {
 	name: 'LemonceRecorderFile',
@@ -50,16 +43,17 @@ function install(Vue) {
 			this.name = name;
 			this.document = document;
 
-			this.actionTemp = null;
+			this.caseStore = null;
 		}
 
-		async init() {
-			this.actionTemp = new CaseTemp(this.document.id, this.id);
-			await this.actionTemp.init();
+		async ensureDir() {
+			this.caseStore = new CaseStore(this.document.id, this.id);
+			await this.caseStore.ensureDir();
 		}
 
-		async loadFromTemp() {
-			this.$actionList = await this.actionTemp.getActionList();
+		async loadFromVolume() {
+			this.caseStore = new CaseStore(this.document.id, this.id);
+			this.$actionList = await this.caseStore.getActionList();
 			console.log(this.$actionList);
 			this.$updateIndex();
 		}
@@ -70,7 +64,7 @@ function install(Vue) {
 
 		async addAction(action) {
 			this.$actionList.push(action);
-			await this.actionTemp.addAction(action);
+			await this.caseStore.addAction(action);
 			this.$updateIndex();
 		}
 
@@ -78,20 +72,20 @@ function install(Vue) {
 			const prevIndex = this.$actionList.findIndex(action => action.id === prevId);
 			
 			this.$actionList.splice(prevIndex, 0, action);
-			await this.actionTemp.insertAction(action, prevId);
+			await this.caseStore.insertAction(action, prevId);
 			this.$updateIndex();
 		}
 
 		async updateAction(action) {
 			const index = this.$actionList.findIndex(action => action.id === action.id);
 			this.$actionList.splice(index, 1, action);
-			await this.actionTemp.updateAction(action);
+			await this.caseStore.updateAction(action);
 		}
 
 		async deleteAction(action) {
 			const index = this.$actionList.findIndex(action => action.id === action.id);
 			this.$actionList.splice(index, 1);
-			await this.actionTemp.deleteAction(action);
+			await this.caseStore.deleteAction(action);
 			this.$updateIndex();
 		}
 
@@ -111,35 +105,46 @@ function install(Vue) {
 			}
 
 			const recordCase = new CaseInterface(this.document, caseName, caseId);
-			await recordCase.init();
+			await recordCase.ensureDir();
 
 			this.document.caseList[recordCase.id] = recordCase;
-			
+			await this.$updateCaseIndex();
+
+			return recordCase;
+		}
+
+		async loadCase(caseName, caseId) {
+			const recordCase = new CaseInterface(this.document, caseName, caseId);
+			await recordCase.loadFromVolume();
+			this.document.caseList[recordCase.id] = recordCase;
+
+			return recordCase;
+		}
+
+		async addTrace(trace, image) {
+			this.document.projectStore.addTrace(trace, image);
+		}
+
+		async getTraceIndex() {
+			this.document.projectStore.getTraceIndex();
+		}
+
+		async getTraceData(id) {
+			this.document.projectStore.getTraceData(id);
+		}
+
+		async getTraceImage(id) {
+			this.document.projectStore.getTraceImage(id);
+		}
+
+		async $updateCaseIndex() {
 			const result = Object.keys(this.document.caseList).map(id => {
 				const item = this.document.caseList[id];
 				return { name: item.name, id: item.id };
 			});
 
 			console.log(result);
-			this.document.projectTemp.updateCaseIndex(result);
-
-			return recordCase;
-		}
-
-		async addTrace(trace, image) {
-			this.document.projectTemp.addTrace(trace, image);
-		}
-
-		async getTraceIndex() {
-			this.document.projectTemp.getTraceIndex();
-		}
-
-		async getTraceData(id) {
-			this.document.projectTemp.getTraceData(id);
-		}
-
-		async getTraceImage(id) {
-			this.document.projectTemp.getTraceImage(id);
+			this.document.projectStore.updateCaseIndex(result);
 		}
 	}
 
@@ -149,7 +154,7 @@ function install(Vue) {
 			console.log(options, pathname);
 			this.document = {
 				name: pathname ? path.basename(pathname) : getNewDocumentName(),
-				projectTemp: null,
+				projectStore: null,
 				caseList: {}
 			};
 			
@@ -160,44 +165,35 @@ function install(Vue) {
 			return new DocumentInterface(this.document);
 		}
 
-		async init() {
-			const isOpen = Boolean(this.pathname);
+		async loadFromVolume() {
+			const documentId = await api.fs.project.extract(this.pathname);
+			console.log(documentId);
+			this.document.id = documentId;
 
-			if (isOpen) {
-				const reply = await send('extract-archive', { source: this.pathname });
-				console.log(reply);
-				this.document.id = reply.id;
-			} else {
-				this.document.id = getId();
-			}
+			const projectStore = this.document.projectStore = new ProjectStore(this.document.id);
+			await projectStore.loadFromVolume();
 
-			const projectTemp = this.document.projectTemp = new ProjectTemp(this.document.id);
-			await projectTemp.init();
-
-			if (isOpen) {
-				await projectTemp.loadTraceTemp();
-				const { data } = await projectTemp.loadCaseIndex();
-				const caseIndex = JSON.parse(data.toString());
-				console.log(caseIndex);
-				await Promise.all(caseIndex.map(async ({ name, id }) => {
-					const recordCase = await this.IDocument.createCase(name, id);
-					await recordCase.init();
-					await recordCase.loadFromTemp();
-				}));
-			}
+			const caseIndex = await projectStore.getCaseIndex();
+			console.log('caseIndex', caseIndex);
+			await Promise.all(caseIndex.map(async ({ name, id }) => {
+				await this.IDocument.loadCase(name, id);
+			}));
 		}
 
-		async save(asPathname) {
-			if (asPathname) {
-				await send('pack-archive', this.document.id, asPathname);
-			}
+		async ensureDir() {
+			this.document.id = getId();
+			const projectStore = this.document.projectStore = new ProjectStore(this.document.id);
+			await projectStore.ensureDir();
+		}
 
+		async save() {
 			const target = this.pathname ? this.pathname : await getSavePath();
-			
-			await send('pack-archive', {
-				projectId: this.document.id,
-				target
-			});
+			await api.fs.project.pack(this.document.id, target);
+		}
+
+		async saveAs() {
+			const target = await getSavePath();
+			await api.fs.project.pack(this.document.id, target);
 		}
 
 		unload() {
@@ -212,7 +208,16 @@ function install(Vue) {
 			list: projectList,
 			async create(pathname) {
 				const project = new Project({ pathname });
-				await project.init();
+				await project.ensureDir();
+
+				projectList[project.document.id] = project;
+				projectIndex.push(project.document.name);
+
+				return project;
+			},
+			async openFile(pathname) {
+				const project = new Project({pathname});
+				await project.loadFromVolume();
 
 				projectList[project.document.id] = project;
 				projectIndex.push(project.document.name);
@@ -221,7 +226,7 @@ function install(Vue) {
 			}
 		},
 		getter: {
-			actionIndex(projectId, caseId) {
+			actionIndex(projectId, caseId) {console.log(projectId, caseId, projectList);
 				return projectList[projectId].document.caseList[caseId].actionIndex;
 			},
 			actionList(projectId, caseId) {

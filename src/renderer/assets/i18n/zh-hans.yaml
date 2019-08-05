@@ -78,3 +78,10 @@ input:
     reset: '一个重置按钮'
     submit: '一个提交按钮'
     text: '一个文本框'
+
+file:
+  label: '文件'
+  new: '新建文件'
+  save: '保存'
+  saveAs: '另存为'
+  open: '打开文件'

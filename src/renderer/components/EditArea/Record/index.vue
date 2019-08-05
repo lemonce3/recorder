@@ -250,8 +250,6 @@ export default {
 			const caseList = this.$workspace.project.list[this.projectId].document.caseList;
 			console.log(caseList, this.projectId);
 			this.caseId = Object.keys(caseList).find(id => caseList[id].name === '__default__');
-			
-			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
 		},
 		caseId() {
 			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
