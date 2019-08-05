@@ -53,6 +53,7 @@ function install(Vue) {
 
 		async loadFromVolume() {
 			this.caseStore = new CaseStore(this.document.id, this.id);
+			await this.caseStore.loadFromVolume();
 			this.$actionList = await this.caseStore.getActionList();
 			console.log(this.$actionList);
 			this.$updateIndex();
@@ -78,8 +79,9 @@ function install(Vue) {
 
 		async updateAction(action) {
 			const index = this.$actionList.findIndex(action => action.id === action.id);
-			this.$actionList.splice(index, 1, action);
+			this.$actionList.splice(index + 1, 1, action);
 			await this.caseStore.updateAction(action);
+			this.$updateIndex();
 		}
 
 		async deleteAction(action) {
@@ -126,15 +128,15 @@ function install(Vue) {
 		}
 
 		async getTraceIndex() {
-			this.document.projectStore.getTraceIndex();
+			return await this.document.projectStore.getTraceIndex();
 		}
 
 		async getTraceData(id) {
-			this.document.projectStore.getTraceData(id);
+			return await this.document.projectStore.getTraceData(id);
 		}
 
 		async getTraceImage(id) {
-			this.document.projectStore.getTraceImage(id);
+			return await this.document.projectStore.getTraceImage(id);
 		}
 
 		async $updateCaseIndex() {

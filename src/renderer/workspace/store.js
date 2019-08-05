@@ -48,7 +48,7 @@ export class ProjectStore {
 	}
 
 	async getTraceImage(traceId) {
-		return await api.fs.project.trace.image.read(this.projectId, traceId);
+		return (await api.fs.project.trace.image.read(this.projectId, traceId)).data;
 	}
 
 	async $updateIndex() {
@@ -77,24 +77,20 @@ export class CaseStore {
 	}
 
 	async loadFromVolume() {
-		const { data } = await this.getActionIndex();
-		const index = JSON.stringify(data.toString());
+		const index = await this.getActionIndex();
 		this.actionIndex.splice(0, this.actionIndex.length, ...index);
 	}
 
 	async getActionIndex() {
-		const data = await api.fs.project.case.action.index.read(this.projectId, this.caseId);
-		return JSON.parse(data);
+		return await api.fs.project.case.action.index.read(this.projectId, this.caseId);
 	}
 
 	async getActionList() {
-		const data = await api.fs.project.case.action.list.read(this.projectId, this.caseId);
-		return data;
+		return await api.fs.project.case.action.list.read(this.projectId, this.caseId);
 	}
 
 	async getAction(id) {
-		const data = await api.fs.project.case.action.read(this.projectId, this.caseId, id);
-		return JSON.parse(data);
+		return await api.fs.project.case.action.read(this.projectId, this.caseId, id);
 	}
 
 	async addAction(action) {

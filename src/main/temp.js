@@ -139,6 +139,7 @@ const handler = {
 		return { data };
 	},
 	'extract-archive': async ({ source }) => {
+		await fse.remove(tempPath);
 		return new Promise(async resolve => {
 			const dir = path.join(tempPath, 'opening');
 	

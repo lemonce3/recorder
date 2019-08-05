@@ -97,6 +97,7 @@
 import { nativeImage } from 'electron';
 import io from 'socket.io-client';
 import resolver from '../../../../../../recoder-resolver/';
+import preResolve from '../../../pre-resolve';
 
 const getId = (length = 5) =>
 		Array(length)
@@ -171,7 +172,7 @@ export default {
 		});
 
 		resolver.on('resolved-action', action => {
-			this.$workspace.project.list[this.projectId].document.caseList[this.caseId].addAction(action);
+			this.$workspace.project.list[this.projectId].document.caseList[this.caseId].addAction(preResolve(action));
 		});
 	},
 	methods: {
@@ -255,7 +256,7 @@ export default {
 			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
 		},
 		actionIndex() {
-			if (this.projectId && this.caseId) {
+			if (this.projectId && this.caseId) {console.log('record');
 				this.actionList.splice(0, this.actionList.length, ...JSON.parse(this.$workspace.getter.actionList(this.projectId, this.caseId)));
 			}
 		}
