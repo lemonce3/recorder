@@ -79,7 +79,7 @@ function install(Vue) {
 
 		async updateAction(action) {
 			const index = this.$actionList.findIndex(action => action.id === action.id);
-			this.$actionList.splice(index + 1, 1, action);
+			this.$actionList.splice(index, 1, action);
 			await this.caseStore.updateAction(action);
 			this.$updateIndex();
 		}
