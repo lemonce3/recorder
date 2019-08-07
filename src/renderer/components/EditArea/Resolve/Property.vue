@@ -17,7 +17,7 @@
 				<v-layout column fill-height>
 					<v-btn
 						:ripple="false"
-						@click="$emit('call-snackbar')"
+						@click="writeContentToClipBoard"
 						class="cut-button bb1"
 						flat
 					>
@@ -40,7 +40,7 @@
 			<v-flex xs1 v-else>
 				<v-btn
 					class="cut-button"
-					@click="$emit('call-snackbar')"
+					@click="writeContentToClipBoard"
 					:ripple="false"
 					flat
 				>
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import { clipboard } from 'electron';
+
 export default {
 	props: ['name', 'value', 'editable'],
 	model: {
@@ -66,6 +68,12 @@ export default {
 	},
 	mounted() {
 		this.content = this.value;
+	},
+	methods: {
+		writeContentToClipBoard() {
+			clipboard.writeText(this.content);
+			this.$emit('call-snackbar');
+		}
 	},
 	watch: {
 		value() {

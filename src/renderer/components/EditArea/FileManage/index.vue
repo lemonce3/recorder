@@ -63,7 +63,7 @@
 			<div class="recent-title">最近打开</div>
 			<div
 				v-for="(file, index) in recentList"
-				@click="loadData(file.path)"
+				@click="openFile({pathname: file.path})"
 				class="file-card"
 			>
 				<div class="file-card-icon">
@@ -143,10 +143,11 @@ export default {
 		async saveAs() {
 			await this.$workspace.project.list[this.$store.state.workspace.project].saveAs();
 		},
-		async openFile() {
-			const pathname = await getOpenPath();
-			const project = await this.$workspace.project.openFile(pathname);
+		async openFile({pathname}) {
+			const target = pathname ? pathname : await getOpenPath();
+			const project = await this.$workspace.project.openFile(target);
 
+			this.pushRecent(target);
 			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
 		},
 		pushRecent(filename) {
