@@ -168,7 +168,7 @@ function install(Vue) {
 		}
 
 		async loadFromVolume() {
-			const documentId = await api.fs.project.extract(this.pathname);
+			const documentId = await api.store.extract(this.pathname);
 			console.log(documentId);
 			this.document.id = documentId;
 
@@ -190,12 +190,12 @@ function install(Vue) {
 
 		async save() {
 			const target = this.pathname ? this.pathname : await getSavePath();
-			await api.fs.project.pack(this.document.id, target);
+			await api.store.project(this.document.id).pack(target);
 		}
 
 		async saveAs() {
 			const target = await getSavePath();
-			await api.fs.project.pack(this.document.id, target);
+			await api.store.project(this.document.id).pack(target);
 		}
 
 		unload() {

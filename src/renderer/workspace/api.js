@@ -12,86 +12,50 @@ const send = async (channel, message) => new Promise(resolve => {
 });
 
 export const api = {
-	fs: {
-		project: {
-			async ensureDir(projectId) {
-				await send('ensure-project-dir', { projectId });
-			},
-			async writeDocumentData(projectId, data) {
-				await send('write-document-data', { projectId, data });
-			},
-			async pack(projectId, target) {
-				await send('pack-archive', { projectId, target });
-			},
-			async extract(source) {
-				return (await send('extract-archive', { source })).id;
-			},
-			trace: {
-				index: {
-					async write(projectId, data) {
-						await send('write-trace-index', { projectId, data });
-					},
-					async read(projectId) {
-						return await send('read-trace-index', { projectId });
-					}
+	store: {
+		extract: async source => (await send('extract-archive', { source })).id,
+		project(projectId) {
+			return {
+				ensureDir: async () => await send('ensure-project-dir', { projectId }),
+				writeDocumentData: async data => await send('write-document-data', { projectId, data }),
+				pack: async target => await send('pack-archive', { projectId, target }),
+				caseIndex: {
+					write: async data => await send('write-case-index', { projectId, data }),
+					read: async () => JSON.parse((await send('read-case-index', { projectId })).data),
 				},
-				data: {
-					async write(projectId, traceId, data) {
-						await send('write-trace-data', { projectId, traceId, data });
-					},
-					async read(projectId, traceId) {
-						return await send('read-trace-data', { projectId, traceId });
-					}
-				},
-				image: {
-					async write(projectId, traceId, image) {
-						await send('write-trace-image', { projectId, traceId, image });
-					},
-					async read(projectId, traceId) {
-						return await send('read-trace-image', { projectId, traceId });
-					}
-				}
-			},
-			case: {
-				async ensureDir(projectId, caseId) {
-					await send('ensure-case-dir', { projectId, caseId });
-				},
-				index: {
-					async write(projectId, data) {
-						await send('write-case-index', { projectId, data });
-					},
-					async read(projectId) {
-						return await send('read-case-index', { projectId });
-					},
-				},
-				action: {
+				trace: {
 					index: {
-						async write(projectId, caseId, data) {
-							await send('write-action-index', { projectId, caseId, data });
-						},
-						async read(projectId, caseId) {
-							const { data } = await send('read-action-index', { projectId, caseId });
-							return JSON.parse(data);
-						}
+						write: async data => await send('write-trace-index', { projectId, data }),
+						read: async () => JSON.parse((await send('read-trace-index', { projectId })).data)
 					},
-					list: {
-						async read(projectId, caseId) {
-							const { data } = await send('read-action-list', { projectId, caseId });
-							return data;					
-						}
+					data: {
+						write: async (traceId, data) => await send('write-trace-data', { projectId, traceId, data }),
+						read: async traceId => JSON.parse((await send('read-trace-data', { projectId, traceId })).data)
 					},
-					async write(projectId, caseId, actionId, data) {
-						await send('write-action', { projectId,	caseId, actionId, data });
-					},
-					async read(projectId, caseId, actionId) {
-						const { data } =  await send('read-action', { projectId, caseId, actionId	});
-						return JSON.parse(data);
-					},
-					async delete(projectId, caseId, actionId) {
-						await send('delete-action', { projectId, caseId, actionId	});
+					image: {
+						write: async (traceId, image) => await send('write-trace-image', { projectId, traceId, image }),
+						read: async traceId => await send('read-trace-image', { projectId, traceId })
 					}
+				},
+				case(caseId) {
+					return {
+						ensureDir: async () => await send('ensure-case-dir', { projectId, caseId }),
+						action: {
+							index: {
+								write: async data => await send('write-action-index', { projectId, caseId, data }),
+								read: async () => JSON.parse((await send('read-action-index', { projectId, caseId })).data),
+							},
+							list: {
+								read: async () => (await send('read-action-list', { projectId, caseId })).data
+							},
+							write: async (actionId, data) => await send('write-action', { projectId,	caseId, actionId, data }),
+							read: async actionId => JSON.parse((await send('read-action', { projectId, caseId, actionId	})).data),
+							delete: async actionId => await send('delete-action', { projectId, caseId, actionId	})
+						}
+					};
 				}
-			}
+			};
 		}
 	}
-}; 
+};
+

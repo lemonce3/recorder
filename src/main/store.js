@@ -81,9 +81,9 @@ const getActionPath = (projectId, caseId, actionId) => path.join(getActionDir(pr
 const getActionIndexPath = (projectId, caseId) => path.join(getActionDir(projectId, caseId), 'index.json');
 
 const handler = {
-	'ensure-project-dir': async ({ projectId }) => await Promise.all([ getTraceDataDir(projectId), getTraceImageDir(projectId), getCaseDir(projectId) ].map(dir => {
+	'ensure-project-dir': async ({ projectId }) => await Promise.all([ getTraceDataDir(projectId), getTraceImageDir(projectId), getCaseDir(projectId) ].map(async dir => {
 		console.log(dir);
-		fse.ensureDir(dir);
+		await fse.ensureDir(dir);
 	})),
 	'ensure-case-dir': async ({ projectId, caseId }) => await fse.ensureDir(getActionDir(projectId, caseId)),
 	'write-document-data': async({projectId, data}) => await writeFile(getDocumentDataPath(projectId), data),
@@ -103,7 +103,7 @@ const handler = {
 	'read-trace-index': async ({ projectId }) => {
 		const pathname = getTraceIndexPath(projectId);
 		const data = await readFile(pathname);
-		return { data };
+		return { data: data.toString() };
 	},
 	'write-case-index': async ({ projectId, data }) => {
 		const pathname = getCaseIndexPath(projectId);
@@ -112,7 +112,7 @@ const handler = {
 	'read-case-index': async ({ projectId }) => {
 		const pathname = getCaseIndexPath(projectId);
 		const data = await readFile(pathname);
-		return { data };
+		return { data: data.toString() };
 	},
 	'write-action-index': async ({ projectId, caseId, data }) => await writeFile(getActionIndexPath(projectId, caseId), data),
 	'write-action': async ({ projectId, caseId, actionId, data }) => await writeFile(getActionPath(projectId, caseId, actionId), data),
@@ -165,7 +165,7 @@ Object.keys(handler).forEach(name => {
 	ipcMain.removeAllListeners(channel);
 	ipcMain.on(channel, async (event, message) => {
 		const reply = await handler[name](message);
-		// console.log(name, message, reply);
+		console.log(name, message, reply);
 		event.reply(channel + 'reply', reply);
 	});
 });

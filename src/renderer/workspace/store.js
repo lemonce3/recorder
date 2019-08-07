@@ -4,32 +4,30 @@ export class ProjectStore {
 	constructor(projectId) {
 		this.projectId = projectId;
 		this.traceIndex = [];
+		this.api = api.store.project(projectId);
 	}
 
 	async ensureDir() {
-		const projectId = this.projectId;
-		await api.fs.project.ensureDir(projectId);
-		await api.fs.project.writeDocumentData(projectId, JSON.stringify({ id: projectId }));
+		await this.api.ensureDir();
+		await this.api.writeDocumentData(JSON.stringify({ id: this.projectId }));
 	}
 
 	async loadFromVolume() {		
-		const { data } = await this.getTraceIndex();
-		const index = JSON.stringify(data.toString());
+		const index = await this.getTraceIndex();
 		this.traceIndex.splice(0, this.traceIndex.length, ...index);
 	}
 
 	async addTrace(trace, image) {
-		const projectId = this.projectId;
 		const traceId = trace.id;
 
 		if (image) {
-			await api.fs.project.trace.image.write(projectId, traceId, image);
-			await api.fs.project.trace.data.write(projectId, traceId, JSON.stringify({
+			await this.api.trace.image.write(traceId, image);
+			await this.api.trace.data.write(traceId, JSON.stringify({
 				type: 'action',
 				data: trace
 			}));
 		} else {
-			await api.fs.project.trace.data.write(projectId, traceId, JSON.stringify({
+			await this.api.trace.data.write(traceId, JSON.stringify({
 				type: 'action',
 				data: trace
 			}));
@@ -40,40 +38,38 @@ export class ProjectStore {
 	}
 
 	async getTraceIndex() {
-		return await api.fs.project.trace.index.read(this.projectId);
+		return await this.api.trace.index.read();
 	}
 
 	async getTraceData(traceId) {
-		return await api.fs.project.trace.data.read(this.projectId, traceId);
+		return await this.api.trace.data.read(traceId);
 	}
 
 	async getTraceImage(traceId) {
-		return (await api.fs.project.trace.image.read(this.projectId, traceId)).data;
+		return (await this.api.trace.image.read(traceId)).data;
 	}
 
 	async $updateIndex() {
-		await api.fs.project.trace.index.write(this.projectId, JSON.stringify(this.traceIndex));
+		await this.api.trace.index.write(JSON.stringify(this.traceIndex));
 	}
 
 	async getCaseIndex() {
-		const { data } = await api.fs.project.case.index.read(this.projectId);
-		return JSON.parse(data.toString());
+		return await this.api.caseIndex.read();
 	}
 
-	async updateCaseIndex(caseIndex) {console.log(caseIndex, 'hhh');
-		await api.fs.project.case.index.write(this.projectId, JSON.stringify(caseIndex));
+	async updateCaseIndex(caseIndex) {
+		await this.api.caseIndex.write(JSON.stringify(caseIndex));
 	}
 }
 
 export class CaseStore {
 	constructor(projectId, caseId) {
-		this.projectId = projectId;
-		this.caseId = caseId;
 		this.actionIndex = [];
+		this.api = api.store.project(projectId).case(caseId);
 	}
 	
 	async ensureDir() {
-		api.fs.project.case.ensureDir(this.projectId, this.caseId);
+		this.api.ensureDir(this.projectId, this.caseId);
 	}
 
 	async loadFromVolume() {
@@ -82,25 +78,25 @@ export class CaseStore {
 	}
 
 	async getActionIndex() {
-		return await api.fs.project.case.action.index.read(this.projectId, this.caseId);
+		return await this.api.action.index.read();
 	}
 
 	async getActionList() {
-		return await api.fs.project.case.action.list.read(this.projectId, this.caseId);
+		return await this.api.action.list.read();
 	}
 
 	async getAction(id) {
-		return await api.fs.project.case.action.read(this.projectId, this.caseId, id);
+		return await this.api.action.read(id);
 	}
 
 	async addAction(action) {
-		await api.fs.project.case.action.write(this.projectId, this.caseId, action.id, JSON.stringify(action));
+		await this.api.action.write(action.id, JSON.stringify(action));
 		this.actionIndex.push(action.id);
 		this.$updateIndex();
 	}
 
 	async insertAction(action, prevId) {
-		await api.fs.project.case.action.write(this.projectId, this.caseId, action.id, JSON.stringify(action));
+		await this.api.action.write(action.id, JSON.stringify(action));
 
 		const prevIndex = this.actionIndex.findIndex(id => id === prevId);
 			
@@ -109,11 +105,11 @@ export class CaseStore {
 	}
 
 	async updateAction(action) {
-		await api.fs.project.case.action.write(this.projectId, this.caseId, action.id, JSON.stringify(action));
+		await this.api.action.write(action.id, JSON.stringify(action));
 	}
 
 	async deleteAction(action) {
-		await api.fs.project.case.action.delete(this.projectId, this.caseId, action.id);
+		await this.api.action.delete(action.id);
 
 		const index = this.$actionList.findIndex(id => id === action.id);
 		this.actionIndex.splice(index, 1);
@@ -121,6 +117,6 @@ export class CaseStore {
 	}
 
 	async $updateIndex() {
-		await api.fs.project.case.action.index.write(this.projectId, this.caseId, JSON.stringify(this.actionIndex));
+		await this.api.action.index.write(JSON.stringify(this.actionIndex));
 	}
 }
