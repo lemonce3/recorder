@@ -62,6 +62,10 @@ async function deleteFile(pathname) {
 	return await fsp.unlink(pathname);
 }
 
+async function emptyDir(pathname) {
+	return await fse.emptyDir(pathname);
+}
+
 const getProjectDir = projectId => path.join(tempPath, projectId);
 
 const getDocumentDataPath = projectId => path.join(getProjectDir(projectId), 'document.json');
@@ -133,9 +137,13 @@ const handler = {
 		const data = await readFile(pathname);
 		return { data };
 	},
+	'empty-action': async ({ projectId, caseId }) => {
+		const pathname = getActionDir(projectId, caseId);
+		await emptyDir(pathname);
+	},
 	'delete-action': async ({ projectId, caseId, actionId }) => {
 		const pathname = getActionPath(projectId, caseId, actionId);
-		const data = await readFile(pathname);
+		const data = await deleteFile(pathname);
 		return { data };
 	},
 	'extract-archive': async ({ source }) => {

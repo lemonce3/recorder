@@ -50,7 +50,8 @@ export const api = {
 							},
 							write: async (actionId, data) => await send('write-action', { projectId,	caseId, actionId, data }),
 							read: async actionId => JSON.parse((await send('read-action', { projectId, caseId, actionId	})).data),
-							delete: async actionId => await send('delete-action', { projectId, caseId, actionId	})
+							delete: async actionId => await send('delete-action', { projectId, caseId, actionId	}),
+							empty: async () => await send('empty-action', { projectId, caseId })
 						}
 					};
 				}

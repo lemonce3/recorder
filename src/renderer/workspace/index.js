@@ -70,7 +70,7 @@ function install(Vue) {
 		}
 
 		async insertAction(action, prevId) {
-			const prevIndex = this.$actionList.findIndex(action => action.id === prevId);
+			const prevIndex = this.$actionList.findIndex(item => item.id === prevId);
 			
 			this.$actionList.splice(prevIndex, 0, action);
 			await this.caseStore.insertAction(action, prevId);
@@ -78,17 +78,21 @@ function install(Vue) {
 		}
 
 		async updateAction(action) {
-			const index = this.$actionList.findIndex(action => action.id === action.id);
+			const index = this.$actionList.findIndex(item => item.id === action.id);
 			this.$actionList.splice(index, 1, action);
 			await this.caseStore.updateAction(action);
 			this.$updateIndex();
 		}
 
 		async deleteAction(action) {
-			const index = this.$actionList.findIndex(action => action.id === action.id);
+			const index = this.$actionList.findIndex(item => item.id === action.id);
 			this.$actionList.splice(index, 1);
 			await this.caseStore.deleteAction(action);
 			this.$updateIndex();
+		}
+
+		async emptyAction() {
+			await this.caseStore.api.action.empty();
 		}
 
 		$updateIndex() {

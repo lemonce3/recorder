@@ -300,8 +300,9 @@ export default {
 			iconClass: {
 				assert: 'far fa-eye',
 				click: 'fas fa-mouse-pointer',
+				contextmenu: 'fas fa-mouse-pointer',
 				rightClick: 'fas fa-mouse-pointer',
-				doubleClick: 'fas fa-mouse-pointer',
+				dblclick: 'fas fa-mouse-pointer',
 				input: 'fas fa-i-cursor',
 				check: 'far fa-check-square',
 				uncheck: 'far fa-square',
@@ -331,12 +332,15 @@ export default {
 		},
 		deleteSelected() {
 			if (this.selected.length === this.actionList.length) {
-				this.actionList.length = 0;
+				this.$workspace.project.list[this.projectId].document.caseList[this.caseId].emptyAction();
 			} else {
-				this.selected.forEach(index => this.actionList.splice(index, 1));
+				this.selected.forEach(async index => await this.deleteAction(this.actionList[index]));
 			}
 
 			this.selected = [];
+		},
+		deleteAction(action) {
+			this.$workspace.project.list[this.projectId].document.caseList[this.caseId].deleteAction(action);
 		},
 		initAssert() {
 			this.assert = {

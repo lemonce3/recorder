@@ -111,7 +111,7 @@ export class CaseStore {
 	async deleteAction(action) {
 		await this.api.action.delete(action.id);
 
-		const index = this.$actionList.findIndex(id => id === action.id);
+		const index = this.actionIndex.findIndex(id => id === action.id);
 		this.actionIndex.splice(index, 1);
 		this.$updateIndex();
 	}
