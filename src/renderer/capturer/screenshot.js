@@ -6,6 +6,7 @@ window.desktopCapturer = desktopCapturer; window.scr = screen;
 
 const screenshotStack = [];
 const displays = {};
+let intervalId = null;
 let mergeBounds;
 
 function cacheDispalyMessage() {
@@ -35,6 +36,16 @@ export function updateScreenSize() {
 
 export const getScreenshotByTimestamp = timestamp => screenshotStack.find(item => item.time < timestamp);
 
+//replace with Promise
+export function startCapture() {
+	intervalId = setInterval(updateScreenshotStack, 100);
+}
+
+export function stopCapture() {
+	clearInterval(intervalId);
+	screenshotStack.length = 0;
+}
+
 async function updateScreenshotStack() {
 	const result = {
 		time: Date.now(),
@@ -51,4 +62,4 @@ async function updateScreenshotStack() {
 }
 
 cacheDispalyMessage();
-setInterval(updateScreenshotStack, 100);
+startCapture();

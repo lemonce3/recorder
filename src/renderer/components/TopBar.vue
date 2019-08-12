@@ -11,7 +11,7 @@
 			</v-btn>
 			<v-spacer></v-spacer>
 			<div id="brand">
-				<span class="top-bar-product-name">{{status.file.name}} - Recorder</span>
+				<span class="top-bar-product-name">{{filename}} - Recorder</span>
 			</div>
 			<v-spacer></v-spacer>
 			<v-btn
@@ -32,6 +32,11 @@ export default {
 	computed: {
 		projectId() {
 			return this.$store.state.workspace.project;
+		},
+		filename() {
+			const project = this.$workspace.project.list[this.projectId];
+
+			return project ? project.document.name : '';
 		}
 	},
 	methods: {

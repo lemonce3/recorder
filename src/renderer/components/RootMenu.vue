@@ -7,6 +7,7 @@
 					class="cut-button root-menu-item"
 					:key="item"
 					:ripple="false"
+					:disabled="item !== 'file' && projectId === ''"
 					@click="jumpTo(item)"
 					flat
 				>
@@ -54,6 +55,11 @@ export default {
 	methods: {
 		jumpTo(path) {
 			this.$router.push(path);
+		}
+	},
+	computed: {
+		projectId() {
+			return this.$store.state.workspace.project;
 		}
 	},
 	watch: {

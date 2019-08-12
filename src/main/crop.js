@@ -1,5 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
-import { updateScreenSize } from './capturer';
+import { updateScreenSize, startCapture, stopCapture } from './capturer';
 import { getMergeBounds } from '../renderer/utils/get-merge-bounds';
 
 const EVENT_PREFIX = 'ELECTRON_CROPER_WINDOW::';
@@ -37,7 +37,8 @@ app.on('ready', () => {
 	ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
 });
 
-export function getCropRect({ size, dataURL }) {
+export async function getCropRect({ size, dataURL }) {
+	await stopCapture();
 	const newSize = getMergeBounds(screen.getAllDisplays());
 	if (newSize.height !== screenSize.height || newSize.width !== screenSize.height) {
 		screenSize = newSize;
@@ -53,7 +54,8 @@ export function getCropRect({ size, dataURL }) {
 		win.setBounds(screenSize);
 		win.webContents.send(EVENT_PREFIX + 'get-crop-rect', size, dataURL);
 
-		ipcMain.once(EVENT_PREFIX + 'get-crop-rect-reply', (event, { rect }) => {
+		ipcMain.once(EVENT_PREFIX + 'get-crop-rect-reply', async (event, { rect }) => {
+			await startCapture();
 			resolve(rect);
 			win.hide();
 		});

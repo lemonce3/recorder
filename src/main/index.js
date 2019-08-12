@@ -83,6 +83,14 @@ app.on('ready', () => {
 	globalShortcut.register('ctrl+shift+a', screenshot);
 	ipcMain.on(EVENT_PREFIX + 'recrop-image', async (event, image) => event.reply(EVENT_PREFIX + 'recrop-image-reply', { dataURL: (await cropImage(image)).toDataURL() }));
 	ipcMain.on(EVENT_PREFIX + 'replace-image-with-screenshot', async (event) => event.reply(EVENT_PREFIX + 'replace-image-with-screenshot-reply', { dataURL: (await cropScreenshot()).toDataURL() }));
+	ipcMain.on(EVENT_PREFIX + 'start-capturer', async (event) => {
+		await capturer.startCapture();
+		event.reply(EVENT_PREFIX + 'start-capturer-reply');
+	});
+	ipcMain.on(EVENT_PREFIX + 'stop-capturer', async (event) => {
+		await capturer.stopCapture();
+		event.reply(EVENT_PREFIX + 'stop-capturer-reply');
+	});
 });
 
 app.on('window-all-closed', () => {

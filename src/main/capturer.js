@@ -80,6 +80,26 @@ export function getScreenshotByTimestamp(timestamp) {
 	});
 }
 
+export function startCapture() {
+	return new Promise((resolve, reject) => {
+		win.webContents.send(EVENT_PREFIX + 'start-capture');
+
+		ipcMain.once(EVENT_PREFIX + 'start-capture-reply', (event, args) => {
+			resolve(args);
+		});
+	});
+}
+
+export function stopCapture() {
+	return new Promise((resolve, reject) => {
+		win.webContents.send(EVENT_PREFIX + 'stop-capture');
+
+		ipcMain.once(EVENT_PREFIX + 'stop-capture-reply', (event, args) => {
+			resolve(args);
+		});
+	});
+}
+
 export function destroy() {
 	win.destroy();
 }
