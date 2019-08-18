@@ -178,7 +178,7 @@
 									<i :class="iconClass[action.type]"></i>
 								</v-flex>
 								<v-flex xs3 align-self-center>
-									{{ action.type }}
+									{{ $t(`action.type.${action.type}`) }}
 								</v-flex>
 								<v-flex :xs7="selectmode" :xs8="!selectmode" align-self-center style="max-width: 200px;">
 									<div>{{ action.extend.property.text.value }}</div>

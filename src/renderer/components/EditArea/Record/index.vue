@@ -77,7 +77,7 @@
 						</v-btn>
 					</div>
 					<div class="raw-type">
-						<div>{{ item.type }}</div>
+						<div>{{ $t(`action.type.${item.type}`) }}</div>
 					</div>
 					<div class="raw-image" :style="{ width: rawImageWidth }">
 						<img :src="item.extend.image" />
@@ -201,9 +201,9 @@ export default {
 				this.actionList.forEach((action, index) => this.selected.push(index));
 			}
 		},
-		deleteSelected() {
+		async deleteSelected() {
 			if (this.selected.length === this.actionList.length) {
-				this.actionList.splice(0, this.actionList.length);
+				await this.$workspace.project.list[this.projectId].document.caseList[this.caseId].emptyAction();
 			} else {
 				this.selected.forEach(index => this.actionList.splice(index, 1));
 			}
@@ -223,15 +223,9 @@ export default {
 		showSnackbar() {
 			this.snackbar = true;
 		},
-		update(action) {
-			this.$workspace.project.list[filename].document.caseList[casename].updateAction(action);
-		},
 		delete(action) {
-			this.$workspace.project.list[filename].document.caseList[casename].deleteAction(action.id);
+			this.$workspace.project.list[this.projectId].document.caseList[this.caseId].deleteAction(action.id);
 		},
-		add(action) {
-			this.$workspace.project.list[filename].document.caseList[casename].addAction(prevId, action);
-		}
 	},
 	computed: {
 		activeAction() {

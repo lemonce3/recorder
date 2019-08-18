@@ -19,8 +19,10 @@ action:
 
   type:
     click: '单击'
+    dblclick: '双击'
     doubleClick: '双击'
     rightClick: '右击'
+    contextmenu: '右击'
     enter: '跳转至'
     check: '选中'
     uncheck: '取消选中'

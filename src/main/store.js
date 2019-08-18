@@ -173,7 +173,7 @@ Object.keys(handler).forEach(name => {
 	ipcMain.removeAllListeners(channel);
 	ipcMain.on(channel, async (event, message) => {
 		const reply = await handler[name](message);
-		console.log(name, message, reply);
+		// console.log(name, message, reply);
 		event.reply(channel + 'reply', reply);
 	});
 });

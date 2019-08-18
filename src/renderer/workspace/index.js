@@ -93,6 +93,8 @@ function install(Vue) {
 
 		async emptyAction() {
 			await this.caseStore.api.action.empty();
+			this.$actionList.splice(0, this.$actionList.length);
+			this.$updateIndex();
 		}
 
 		$updateIndex() {
@@ -159,7 +161,7 @@ function install(Vue) {
 			const { pathname = null } = options;
 			console.log(options, pathname);
 			this.document = {
-				name: pathname ? path.basename(pathname) : getNewDocumentName(),
+				name: pathname ? path.basename(pathname) : getNewDocumentName('录制工程'),
 				projectStore: null,
 				caseList: {}
 			};
