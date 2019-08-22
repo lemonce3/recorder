@@ -12,7 +12,7 @@ export function margeImage(images) {
 	return Promise.all(images.map(image => new Promise(resolve => {
 		const { x, y, width, height } = image.bounds;
 		const imageElement = new Image(width, height);
-		imageElement.src = image.thumbnail.toDataURL();
+		imageElement.src = image.dataURL;
 
 		requestAnimationFrame(() => {
 			context.drawImage(imageElement, x - mergeBounds.x, y - mergeBounds.y, width, height);

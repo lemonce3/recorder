@@ -1,33 +1,44 @@
 import { desktopCapturer, remote } from 'electron';
-import { getMergeBounds } from '../utils/get-merge-bounds';
+import { createCapturer } from './screen-capturer';
 
 const screen = remote.screen;
 window.desktopCapturer = desktopCapturer; window.scr = screen;
 
 const screenshotStack = [];
 const displays = {};
+const capturerList = [];
 let intervalId = null;
-let mergeBounds;
 
 function cacheDispalyMessage() {
 	const screens = screen.getAllDisplays();
 	screens.forEach(display => displays[display.id] = display);
-	mergeBounds = getMergeBounds(screens);
 }
 
-// export async function getScreenshot() {
-// 	return desktopCapturer.getSources({
-// 		types: ['screen'],
-// 		thumbnailSize: screenSize
-// 	}).then(sources => ({ size: screenSize, image: sources.find(source => source.name === 'Entire screen').thumbnail }));
-// }
-
-export function getScreenshot(thumbnailSize = mergeBounds) {
-	return desktopCapturer.getSources({ types: ['screen'],	thumbnailSize	})
+function initCapturerList() {
+	return desktopCapturer.getSources({ types: ['screen']	})
 		.then(sources => {
-			sources.forEach(source => source.bounds = displays[source.display_id].bounds);
-			return sources;
+			sources.forEach(async source => {
+				const bounds = displays[source.display_id].bounds;
+				const stream = await navigator.mediaDevices.getUserMedia({
+					audio: false,
+					video: {
+						mandatory: {
+							chromeMediaSource: 'desktop',
+							chromeMediaSourceId: source.id,
+							minWidth: bounds.width,
+							maxWidth: bounds.width,
+							minHeight: bounds.height,
+							maxHeight: bounds.height
+						}
+					}
+				});
+				capturerList.push(createCapturer(stream, bounds));
+			});
 		});
+}
+
+export function getScreenshot() {
+	return capturerList.map(capturer => capturer());
 }
 
 export function updateScreenSize() {
@@ -62,4 +73,5 @@ async function updateScreenshotStack() {
 }
 
 cacheDispalyMessage();
+initCapturerList();
 startCapture();

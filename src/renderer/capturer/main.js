@@ -13,10 +13,7 @@ const EVENT_PREFIX = 'ELECTRON_SCREENSHOT_CAPTURER::';
 export async function ScreenshotReplyFactory(images) {
 	return images.length > 1
 		? await margeImage(images)
-		: {
-			bounds: images[0].bounds,
-			dataURL: images[0].thumbnail.toDataURL()
-		};
+		: images[0];
 }
 
 ipcRenderer.on(EVENT_PREFIX + 'update-screen-size', () => updateScreenSize());
