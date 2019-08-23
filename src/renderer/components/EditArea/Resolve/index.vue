@@ -427,7 +427,7 @@ export default {
 		},
 		actionIndex() {console.log('resolve');
 			if (this.projectId && this.caseId) {
-				this.actionList.splice(0, this.actionList.length, ...JSON.parse(this.$workspace.getter.actionList(this.projectId, this.caseId)));
+				this.actionList.splice(0, this.actionList.length, ...this.$workspace.getter.actionList(this.projectId, this.caseId));
 				console.log(this.actionList, 'resolve');
 			}
 		}

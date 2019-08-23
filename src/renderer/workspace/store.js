@@ -89,29 +89,29 @@ export class CaseStore {
 		return await this.api.action.read(id);
 	}
 
-	async addAction(action) {
-		await this.api.action.write(action.id, JSON.stringify(action));
-		this.actionIndex.push(action.id);
+	async addAction(id, data) {
+		await this.api.action.write(id, data);
+		this.actionIndex.push(id);
 		this.$updateIndex();
 	}
 
-	async insertAction(action, prevId) {
-		await this.api.action.write(action.id, JSON.stringify(action));
+	async insertAction(id, data, prevId) {
+		await this.api.action.write(id, data);
 
-		const prevIndex = this.actionIndex.findIndex(id => id === prevId);
+		const prevIndex = this.actionIndex.findIndex(actionId => actionId === prevId);
 			
-		this.actionIndex.splice(prevIndex, 0, action.id);
+		this.actionIndex.splice(prevIndex, 0, id);
 		this.$updateIndex();
 	}
 
-	async updateAction(action) {
-		await this.api.action.write(action.id, JSON.stringify(action));
+	async updateAction(id, data) {
+		await this.api.action.write(id, data);
 	}
 
-	async deleteAction(action) {
-		await this.api.action.delete(action.id);
+	async deleteAction(id, data) {
+		await this.api.action.delete(id);
 
-		const index = this.actionIndex.findIndex(id => id === action.id);
+		const index = this.actionIndex.findIndex(actionId => actionId === id);
 		this.actionIndex.splice(index, 1);
 		this.$updateIndex();
 	}

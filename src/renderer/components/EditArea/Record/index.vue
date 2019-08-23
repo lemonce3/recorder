@@ -251,7 +251,7 @@ export default {
 		},
 		actionIndex() {
 			if (this.projectId && this.caseId) {console.log('record');
-				this.actionList.splice(0, this.actionList.length, ...JSON.parse(this.$workspace.getter.actionList(this.projectId, this.caseId)));
+				this.actionList.splice(0, this.actionList.length, ...this.$workspace.getter.actionList(this.projectId, this.caseId));
 			}
 		}
 	}

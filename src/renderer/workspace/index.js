@@ -9,6 +9,10 @@ const lemonceRecorderFilter = {
 	extensions: ['lcrc']
 };
 
+function actionStringify(action) {
+	return JSON.stringify(action);
+}
+
 const getId = (length = 5) =>
 	Array(length)
 		.fill('')
@@ -54,40 +58,56 @@ function install(Vue) {
 		async loadFromVolume() {
 			this.caseStore = new CaseStore(this.document.id, this.id);
 			await this.caseStore.loadFromVolume();
-			this.$actionList = await this.caseStore.getActionList();
+			const actionList = await this.caseStore.getActionList();
+			this.$actionList = actionList.map(action => ({id: action, data: JSON.stringify(action)}));
 			console.log(this.$actionList);
 			this.$updateIndex();
 		}
 
 		get actionList() {
-			return JSON.stringify(this.$actionList);
+			return this.$actionList.map(action => JSON.parse(action.data));
 		}
 
 		async addAction(action) {
-			this.$actionList.push(action);
-			await this.caseStore.addAction(action);
+			const data = actionStringify(action);
+			this.$actionList.push({
+				id: action.id,
+				data
+			});
+			await this.caseStore.addAction(action.id, data);
 			this.$updateIndex();
 		}
 
 		async insertAction(action, prevId) {
 			const prevIndex = this.$actionList.findIndex(item => item.id === prevId);
-			
-			this.$actionList.splice(prevIndex, 0, action);
-			await this.caseStore.insertAction(action, prevId);
+			const data = actionStringify(action);
+
+			this.$actionList.splice(prevIndex, 0, {
+				id: action.id,
+				data
+			});
+
+			await this.caseStore.insertAction(action.id, data, prevId);
 			this.$updateIndex();
 		}
 
 		async updateAction(action) {
 			const index = this.$actionList.findIndex(item => item.id === action.id);
-			this.$actionList.splice(index, 1, action);
-			await this.caseStore.updateAction(action);
+			const data = actionStringify(action);
+
+			this.$actionList.splice(index, 1, {
+				id: action.id,
+				data
+			});
+
+			await this.caseStore.updateAction(action.id, data);
 			this.$updateIndex();
 		}
 
 		async deleteAction(action) {
 			const index = this.$actionList.findIndex(item => item.id === action.id);
 			this.$actionList.splice(index, 1);
-			await this.caseStore.deleteAction(action);
+			await this.caseStore.deleteAction(action.id, action);
 			this.$updateIndex();
 		}
 
@@ -98,7 +118,7 @@ function install(Vue) {
 		}
 
 		$updateIndex() {
-			this.actionIndex.splice(0, this.actionIndex.length, ...this.$actionList.map(action => action.id));console.log(this.actionIndex);
+			this.actionIndex.splice(0, this.actionIndex.length, ...this.$actionList.map(action => action.id));
 		}
 	}
 
