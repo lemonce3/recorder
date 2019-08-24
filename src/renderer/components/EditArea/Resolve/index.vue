@@ -311,7 +311,10 @@ export default {
 		};
 	},
 	mounted() {
-		console.log('resolve mount');
+		const projectId = this.$store.state.workspace.project;
+		const caseList = this.$workspace.project.list[projectId].document.caseList;
+		const caseId = Object.keys(caseList).find(id => caseList[id].name === '__default__');
+		this.actionList = this.$workspace.getter.actionList(projectId, caseId);
 	},
 	methods: {
 		onListClick() {
@@ -414,22 +417,6 @@ export default {
 	computed: {
 		projectId() {
 			return this.$store.state.workspace.project;
-		}
-	},
-	watch: {
-		projectId() {
-			const caseList = this.$workspace.project.list[this.projectId].document.caseList;
-			console.log(caseList, this.projectId);
-			this.caseId = Object.keys(caseList).find(id => caseList[id].name === '__default__');
-		},
-		caseId() {
-			this.actionIndex = this.$workspace.getter.actionIndex(this.projectId, this.caseId);
-		},
-		actionIndex() {console.log('resolve');
-			if (this.projectId && this.caseId) {
-				this.actionList.splice(0, this.actionList.length, ...this.$workspace.getter.actionList(this.projectId, this.caseId));
-				console.log(this.actionList, 'resolve');
-			}
 		}
 	}
 };

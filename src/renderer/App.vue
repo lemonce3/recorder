@@ -7,9 +7,7 @@
 			@selected-change="onSelectChange"
 		/>
 		<record :status="status"/>
-		<keep-alive>
-			<router-view :status="status"></router-view>
-		</keep-alive>
+		<router-view :status="status"></router-view>
 	</v-app>
 </template>
 
