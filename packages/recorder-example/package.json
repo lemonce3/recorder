@@ -1,0 +1,20 @@
+{
+  "name": "@lemonce3/recorder-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:renender": "webpack-dev-server --config ./build/webpack.dev.js",
+    "dev:main": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lemonce3/recorder": "^0.2.0",
+    "@lemonce3/recorder-store-fs": "^0.0.1",
+    "electron": "^6.0.10",
+    "webpack": "^4.40.2",
+    "webpack-dev-server": "^3.8.1",
+    "webpack-merge": "^4.2.2"
+  }
+}

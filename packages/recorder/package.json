@@ -1,0 +1,21 @@
+{
+  "name": "@lemonce3/recorder",
+  "version": "0.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lemonce3/recorder-croper": "^0.0.1",
+    "@lemonce3/recorder-screenshot": "^0.0.1",
+    "@or-change/duck": "^0.4.0",
+    "@or-change/duck-electron": "^0.1.2",
+    "@or-change/duck-web": "^0.1.2",
+    "@or-change/duck-webpack": "^0.1.2",
+    "electron": "^6.0.9",
+    "webpack": "^4.40.2"
+  }
+}
