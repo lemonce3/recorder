@@ -1,8 +1,7 @@
-const EventEmiter = require('events');
-
+const EventEmitter = require('events');
 
 module.exports = function Workspace({store}) {
-	const workspace = new EventEmiter();
+	const workspace = new EventEmitter();
 	
 	const projectList = {};
 	
@@ -162,7 +161,7 @@ module.exports = function Workspace({store}) {
 				projectList[payload.PathBase64] = ProjectFactory(payload.PathBase64);
 			},
 			async update(pathBase64, payload) {
-				if (projectList[PathBase64]) {
+				if (projectList[pathBase64]) {
 					return new Error();
 				}
 	

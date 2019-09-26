@@ -3,7 +3,6 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const EVENT_PREFIX = 'ELECTRON_SCREENSHOT_CAPTURER::';
 
 module.exports = function (options) {
-	
 	let win;
 	let screen;
 	

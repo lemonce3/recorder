@@ -206,7 +206,7 @@ module.exports = function (options) {
 				await projectStore.update();
 			},
 			async delete(filename) {
-				await projectStore.update();
+				await projectStore.delete();
 			}
 		},
 		TraceList: {

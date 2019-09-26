@@ -11,7 +11,7 @@ const Application = require('./src/Application');
 const WorkSpace = require('./src/Workspace');
 const WebSocket = require('./src/Websocket');
 const ScreenshotQueue = require('./src/ScreenshotQueue');
-const mitm = require('./src/mitm');
+const Mitm = require('./src/Mitm');
 
 
 
@@ -21,7 +21,7 @@ function Recorder(options) {
 	Duck({
 		id: 'com.orchange.recorder',
 		name: 'Lemonce3 Recorder',
-		version: '0.2.0',
+		version: '0.3.0',
 		injection: {
 			screenshot: RecorderScreenshot.main,
 			croper: RecorderCroper.main,
