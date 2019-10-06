@@ -1,12 +1,9 @@
 'use strict';
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
-const path = require('path');
-const config = require('../config.json');
-const { webpack: base } = require('../index');
+const { renderer } = require('../index');
 
-module.exports = merge(base, {
+module.exports = merge(renderer.Webpack(), {
 	mode: 'development',
 	devtool: '#inline-source-map',
 	devServer: {

@@ -2,8 +2,32 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 
 // import { startCapture, stopCapture } from './capturer';
 
-// const { getMergeBounds } = require('../renderer/utils/get-merge-bounds');
-function getMergeBounds() {}
+function getMergeBounds(items) {
+	let x = 0 , y = 0 , xe = 0, ye = 0;
+
+	items.forEach(item => {
+		if (item.bounds.x === xe) {
+			xe = xe + item.bounds.width;
+		}
+		if (item.bounds.x < x) {
+			x = item.bounds.x;
+		}
+
+		if (item.bounds.y === ye) {
+			ye = ye + item.bounds.height;
+		}
+
+		if (item.bounds.y < y) {
+			y = item.bounds.y;
+		}
+	});
+
+	return {
+		x, y,
+		width: xe - x,
+		height: ye -y
+	};
+}
 
 const EVENT_PREFIX = 'ELECTRON_CROPER_WINDOW::';
 
@@ -37,6 +61,7 @@ module.exports = function (options) {
 		win.setBounds(screenSize);
 		win.loadURL(winURL);
 		win.hide();
+		win.webContents.openDevTools();
 	
 		ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
 	}

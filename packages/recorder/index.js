@@ -1,11 +1,12 @@
 const Duck = require('@or-change/duck');
 const DuckWeb = require('@or-change/duck-web');
 const DuckElectron = require('@or-change/duck-electron');
-const DuckWebpack = require('@or-change/duck-web');
+const DuckWebpack = require('@or-change/duck-webpack');
 
 const RecorderScreenshot = require('@lemonce3/recorder-screenshot');
 const RecorderCroper = require('@lemonce3/recorder-croper');
 const RecorderResolver = require('./src/resolver');
+const RecorderWebpack = require('./src/Webpack');
 const bootstrap = require('./src/bootstrap');
 const Application = require('./src/Application');
 const WorkSpace = require('./src/Workspace');
@@ -13,9 +14,7 @@ const WebSocket = require('./src/Websocket');
 const ScreenshotQueue = require('./src/ScreenshotQueue');
 const Mitm = require('./src/Mitm');
 
-
-
-function Recorder(options) {
+module.exports = function Recorder(options) {
 	const recorder = {};
 
 	Duck({
@@ -23,8 +22,14 @@ function Recorder(options) {
 		name: 'Lemonce3 Recorder',
 		version: '0.3.0',
 		injection: {
-			screenshot: RecorderScreenshot.main,
-			croper: RecorderCroper.main,
+			screenshot: RecorderScreenshot.main({
+				productURL: '',
+				devURL: 'http://localhost:8080/screenshot.html'
+			}),
+			croper: RecorderCroper.main({
+				productURL: '',
+				devURL: 'http://localhost:8080/croper.html'
+			}),
 			resolver: RecorderResolver,
 			workspace: WorkSpace({
 				store: options.store
@@ -39,27 +44,35 @@ function Recorder(options) {
 					id: 'WebIPC',
 					description: '',
 					Application: Application()
-				},
-				options.store
+				}
 			]),
 			DuckWebpack({
-				recorder: {},
-				croper: RecorderScreenshot.renderer.Webpack,
-				capturer: RecorderCroper.renderer.Webpack
+				recorder: RecorderWebpack,
+				screenshot: RecorderScreenshot.renderer.Webpack,
+				croper: RecorderCroper.renderer.Webpack
 			})
 		],
-		installed({ Web, workspace, injection }) {
-			const server = Web.Http.createServer(Web.Application('WebIPC'));
-			const websocket = WebSocket({server});
-			workspace.addListener('update', () => websocket.send('updated'));
+		installed({ workspace, Web, injection }) {
 		}
-	}, ({ Webpack }) => {
+	}, ({ workspace, Webpack, Web, mitm }) => {
 		recorder.webpack = {
 			recorder: Webpack('recorder'),
 			croper: Webpack('croper'),
 			screenshot: Webpack('screenshot')
 		}
+
+		if (typeof require('electron') === 'string') {
+			return;
+		}
+
+		mitm.listen(options.mitm.port);
+		const server = recorder.server = Web.Http.createServer(Web.Application('WebIPC'));
+		const websocket = WebSocket({server});
+		workspace.addListener('update', () => websocket.send('updated'));
+		server.listen(10110);
 	});
 
 	return recorder;
 }
+
+process.on('error', console.log);

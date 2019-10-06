@@ -1,23 +1,37 @@
+'use strict';
+
 const merge = require('webpack-merge');
 const { webpack } = require('../index');
+const { recorder, croper, screenshot } = webpack;
 
-const recorder = merge(webpack.recorder, {
-	mode: 'development',
-	devtool: '#inline-source-map'
-});
-
-const corper = merge(webpack.corper, {
-	mode: 'development',
-	devtool: '#inline-source-map'
-});
-
-const screenshot = merge(webpack.screenshot, {
-	mode: 'development',
-	devtool: '#inline-source-map'
-});
+console.log(webpack);
 
 module.exports = [
-	recorder,
-	corper,
-	screenshot
-]
+	merge(recorder, {
+		name: 'recorder',
+		mode: 'development',
+		devtool: '#inline-source-map',
+		output: {
+			filename: '[name].js',
+			libraryTarget: 'commonjs2',
+		},
+	}),
+	merge(croper, {
+		name: 'croper',
+		mode: 'development',
+		devtool: '#inline-source-map',
+		output: {
+			filename: '[name].js',
+			libraryTarget: 'commonjs2',
+		},
+	}),
+	merge(screenshot, {
+		name: 'screenshot',
+		mode: 'development',
+		devtool: '#inline-source-map',
+		output: {
+			filename: '[name].js',
+			libraryTarget: 'commonjs2',
+		},
+	})
+];

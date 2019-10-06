@@ -1,5 +1,6 @@
 const Router = {
 	Base: require('./Base'),
+	Workspace: require('./Workspace'),
 	Project: require('./Project'),
 	Trace: require('./Trace'),
 	Case: require('./Case'),

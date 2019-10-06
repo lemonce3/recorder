@@ -1,5 +1,6 @@
 import { desktopCapturer, remote } from 'electron';
 import { createCapturer } from './screen-capturer';
+import { margeImage } from '../utils/marge-image';
 import axios from 'axios';
 
 const screenshotStack = [];
@@ -58,10 +59,14 @@ export function stopCapture() {
 }
 
 async function sendScreenshot() {
-	axios.post('/api/screenshot', {
-		time: Date.now(),
-		screenshot: await getScreenshot()
-	});
+	const images = await getScreenshot();
+	const result = images.length > 1
+		? await margeImage(images)
+		: images[0];
+
+	result.time = Date.now();
+
+	await axios.post('http://localhost:10110/api/screenshot', result);
 }
 
 startCapture();

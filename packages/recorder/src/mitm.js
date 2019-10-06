@@ -1,17 +1,13 @@
+const createMitm = require('../../../../lemonce3/mitm-agent');
+const { Normalizer, Validator } = require('@or-change/duck');
+const http = require('http');
+
 module.exports = function (options) {
-	const {
-		observer,
-		tracker,
-		ssl,
-		inject
-	} = options;
+	//TODO normalize
 
-	return {
-		listen() {
+	const server = module.exports = http.createServer();
 
-		},
-		close() {
-			
-		}
-	}
+	createMitm(server, options);
+
+	return server;
 }

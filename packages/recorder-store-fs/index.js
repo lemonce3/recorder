@@ -5,6 +5,14 @@ const fse = require('fs-extra');
 const fsp = fs.promises;
 const path = require('path');
 
+function base64Encode(string) {
+	return Buffer.from(string).toString('base64');
+}
+
+function base64Decode(base64) {
+	return Buffer.from(base64, 'base64').toString();
+}
+
 async function writeFile(pathname, data) {
 	return await fsp.writeFile(pathname, data).catch(e => console.log(e));
 }

@@ -35,6 +35,7 @@ module.exports = function Workspace({store}) {
 				},
 				async delete() {
 					recordCase.actionList.splice(0, recordCase.actionList.length);
+					workspaceUpdated();
 				}
 			},
 			Action: {
@@ -43,6 +44,7 @@ module.exports = function Workspace({store}) {
 				},
 				async create(payload) {
 					recordCase.actionList.push(JSON.stringify(payload));
+					workspaceUpdated();
 				},
 				async update(id, payload) {
 					const index = recordCase.actionList.findIndex(action => action.id = id);
@@ -51,6 +53,7 @@ module.exports = function Workspace({store}) {
 					}
 	
 					recordCase.actionList[index] = payload;
+					workspaceUpdated();
 				},
 				async delete(id) {
 					const index = recordCase.actionList.findIndex(action => action.id = id);
@@ -59,6 +62,7 @@ module.exports = function Workspace({store}) {
 					}
 	
 					delete recordCase.actionList[index];
+					workspaceUpdated();
 				}
 			}
 		}
@@ -80,7 +84,7 @@ module.exports = function Workspace({store}) {
 					
 				},
 				async delete() {
-	
+					workspaceUpdated();
 				}
 			},
 			Case: {
@@ -89,12 +93,15 @@ module.exports = function Workspace({store}) {
 				},
 				async create(nameBase64) {
 					project.caseList[nameBase64] = CaseFactory(nameBase64);
+					workspaceUpdated();
 				},
 				async update(nameBase64, payload) {
 					project.caseList[nameBase64] = payload;
+					workspaceUpdated();
 				},
 				async delete(nameBase64) {
 					delete project.caseList[nameBase64];
+					workspaceUpdated();
 				}
 			},
 			TraceList: {
@@ -104,7 +111,7 @@ module.exports = function Workspace({store}) {
 			},
 			Trace: {
 				async create() {
-	
+					workspaceUpdated();
 				},
 				async getData() {
 	
@@ -118,7 +125,7 @@ module.exports = function Workspace({store}) {
 	
 				},
 				async update() {
-	
+					workspaceUpdated();
 				}
 			}
 		}

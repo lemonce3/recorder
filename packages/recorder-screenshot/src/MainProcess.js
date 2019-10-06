@@ -7,8 +7,8 @@ module.exports = function (options) {
 	let screen;
 	
 	const winURL = process.env.NODE_ENV === 'development'
-		? 'http://localhost:9080/capturer'
-		: `file://${__dirname}/capturer.html`;
+	? options.devURL
+	: options.productURL;
 	
 	function getSize() {
 		const screens = screen.getAllDisplays();
@@ -38,6 +38,8 @@ module.exports = function (options) {
 			useContentSize: true,
 			height: 0,
 			width: 0,
+			// width: 600,
+			// height: 400,
 			frame: false,
 			movable: false,
 			alwaysOnTop: false,
@@ -52,8 +54,7 @@ module.exports = function (options) {
 		win.loadURL(winURL);
 		win.setSkipTaskbar(true);
 		win.minimize();
-	
-		ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
+		win.webContents.openDevTools();
 	}
 	
 	function start() {

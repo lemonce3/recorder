@@ -63,3 +63,4 @@ typings/
 .vscode
 
 config.json
+dev-cert.json

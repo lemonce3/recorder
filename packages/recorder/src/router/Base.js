@@ -12,10 +12,14 @@ const getId = (length = 5) =>
 			.join('-');
 
 module.exports = function (router, context, { workspace, screenshotQueue, resolver }) {
-	router.post('/snapshot', ctx => {
+	router.post('/screenshot', async ctx => {
+		screenshotQueue.pushScreenshot(ctx.request.body);
+
+		ctx.status = 200;
+	}).post('/snapshot', async ctx => {
 		const { recording, projectPath } = workspace.status.query();
 
-		if (!recording) {
+		if (recording) {
 			const snapshot = ctx.request.body;
 	
 			await workspace.Project.get(projectPath).Trace.create(snapshot);
@@ -23,10 +27,12 @@ module.exports = function (router, context, { workspace, screenshotQueue, resolv
 		}
 
 		ctx.status = 200;
-	}).post('/action', ctx => {
+	}).post('/action', async ctx => {
 		const { recording, projectPath } = workspace.status.query();
 
-		if (!recording)
+		if (recording) {
+			
+		}
 
 		const action = ctx.request.body;
 

@@ -1,9 +1,9 @@
 module.exports = function ({ server }) {
 	const io = require('socket.io')(server);
+	let recorderGUIClient = null;
 
 	io.on('connection', client => {
 		client.on('disconnect', () => {
-			rawProvider.removeAllListeners();
 			console.log('disconnect');
 		});
 
@@ -13,14 +13,20 @@ module.exports = function ({ server }) {
 
 		client.on('connect_error', error => console.log(error));
 		client.on('connect_timeout', error => console.log(error));
-
-		return {
-			send(event, data) {
-				client.emit(event, data);
-			},
-			addEventListener(event, callback) {
-				client.on(event, callback);
-			}
-		}
+		recorderGUIClient = client;
+		// setInterval(() => {
+		// 	console.log('update');
+		// 	client.emit('update', {aa: 'aoeuaoeu'});
+		// }, 2000);
+		console.log('connected');
 	});
+
+	return {
+		send(event, data) {
+			recorderGUIClient.emit(event, data);
+		},
+		addEventListener(event, callback) {
+			recorderGUIClient.on(event, callback);
+		}
+	}
 }
