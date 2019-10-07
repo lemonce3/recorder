@@ -7,7 +7,7 @@ const Recorder = require('@lemonce3/recorder');
 const RecorderStoreFS = require('@lemonce3/recorder-store-fs');
 
 const injectPath = process.env.NODE_ENV === 'development'
-	? path.resolve('bundle.js')
+	? path.join(__dirname, 'bundle.js')
 	: path.join(path.parse(app.getPath('exe')).dir, 'bundle.js');
 
 const inject = fs.readFileSync(injectPath).toString();

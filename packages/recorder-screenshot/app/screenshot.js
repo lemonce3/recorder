@@ -50,7 +50,7 @@ export function updateScreenSize() {
 
 export async function startCapture() {
 	await initCapturerList();
-	intervalId = setInterval(sendScreenshot, 100);
+	intervalId = setInterval(sendScreenshot, 2000);
 }
 
 export function stopCapture() {

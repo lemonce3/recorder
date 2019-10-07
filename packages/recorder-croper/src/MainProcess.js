@@ -61,7 +61,7 @@ module.exports = function (options) {
 		win.setBounds(screenSize);
 		win.loadURL(winURL);
 		win.hide();
-		win.webContents.openDevTools();
+		// win.webContents.openDevTools();
 	
 		ipcMain.on(EVENT_PREFIX + 'restore', () => win.restore());
 	}

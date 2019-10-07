@@ -54,7 +54,7 @@ module.exports = function (options) {
 		win.loadURL(winURL);
 		win.setSkipTaskbar(true);
 		win.minimize();
-		win.webContents.openDevTools();
+		// win.webContents.openDevTools();
 	}
 	
 	function start() {

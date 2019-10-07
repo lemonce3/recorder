@@ -1,16 +1,22 @@
-module.exports = function (router, context, { workspace }) {
+module.exports = function (router, context, { workspace, util }) {
 	router.get('/', async ctx => {
-		ctx.body = await workspace.Project.query();
+		ctx.body = await workspace.ProjectList.query();
 	}).post('/', async ctx => {
-		const payload = ctx.request.body;
+		const payload = ctx.request.body.data;
 		ctx.body = await workspace.Project.create(payload);
+	}).param('pathBase64', async (pathBase64, ctx, next) => {
+		ctx.state = {
+			projectPath: util.base64Decode(ctx.params.pathBase64)
+		}
+
+		return next();
 	}).get('/:pathBase64', async ctx => {
-		const { pathBase64 } = ctx.params;
-		ctx.body = await workspace.Project.get(pathBase64);
-	}).put('/:pathBase64', async ctx => {
-		const { pathBase64 } = ctx.params;
-		const payload = ctx.request.body;
-		ctx.body = await workspace.Project.update(pathBase64, payload);
+		const projectPath = util.base64Decode(ctx.params.pathBase64);
+		ctx.body = await workspace.Project.get(projectPath);
+	}).patch('/:pathBase64', async ctx => {
+		const projectPath = util.base64Decode(ctx.params.pathBase64);
+		const payload = ctx.request.body.data;
+		ctx.body = await workspace.Project.update(projectPath, payload);
 	});
 	
 	// .del(':/pathBase64', async ctx => {

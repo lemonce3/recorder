@@ -1,12 +1,19 @@
 import axios from 'axios';
 import io from 'socket.io';
 
+function base64Encode(string) {
+	return btoa(string);
+}
+
+function base64Decode(base64) {
+	return atob(base64);
+}
 
 export default function install(Vue, { store }) {
 	const origin = 'http://localhost:10110';
 
 	const agent = axios.create({
-		baseURL: origin + '/api/workspace'
+		baseURL: '/api/workspace'
 	});
 
 	const websocket = io(origin);
@@ -36,7 +43,7 @@ export default function install(Vue, { store }) {
 	websocket.on('error', error => console.log(error));
 	websocket.on('connect_error', error => console.log(error));
 	websocket.on('error', error => console.log(error));
-	websocket.on('update', () => {
+	websocket.on('updated', () => {
 		console.log('workspace update');
 		if (store) {
 			store.dispatch('UPDATE_LAST_UPDATED', Date.now());
@@ -46,53 +53,69 @@ export default function install(Vue, { store }) {
 	Vue.prototype.$workspace = {
 		status: {
 			async query() {
-				return await agent.get('/status');
+				const { data: status } = await agent.get('/status');
+
+				return status;
 			},
 			async updateFocus(focus) {
-				return await agent.put('/status', {
+				const { data: result } = await agent.put('/status', {
 					data: {
-						project: focus.project,
-						case: focus.case
+						projectPath: focus.projectPath,
+						caseName: focus.caseName
 					}
 				});
+
+				return result;
 			}
 		},
 		projectList: {
 			async query() {
-				return await agent.get('/project');
+				const { data: projectList } = await agent.get('/project');
+
+				return projectList;
 			}
 		},
 		project: {
-			async get(pathBase64) {
-				return await agent.get(`/project/${pathBase64}`);
+			async get(pathname) {
+				const pathBase64 = base64Encode(pathname);
+				const { data: project } = await agent.get(`/project/${pathBase64}`);
+				return project;
 			},
 			async create(payload) {
-				return await agent.post('/project', {
+				const { data: project } = await agent.post('/project', {
 					data: payload
 				});
+
+				return project;
 			},
-			async update(pathBase64, payload) {
-				return await agent.put(`/project/${pathBase64}`, {
+			async patch(pathname, payload) {
+				const pathBase64 = base64Encode(pathname);
+				const { data: project } = await agent.patch(`/project/${pathBase64}`, {
 					data: payload
 				});
+				return project;
 			},
-			async delete(pathBase64) {
-				return await agent.delete(`/project/${pathBase64}`);
+			async delete(pathname) {
+				const pathBase64 = base64Encode(pathname);
+				const { data: result } = await agent.delete(`/project/${pathBase64}`);
+				return result;
 			},
-			traceList(pathBase64) {
+			traceList(pathname) {
+				const pathBase64 = base64Encode(pathname);
 				return {
 					async query() {
 						return await agent.get(`/project/${pathBase64}/trace`);
 					}
 				}
 			},
-			trace(pathBase64) {
+			trace(pathname) {
+				const pathBase64 = base64Encode(pathname);
 				return {
 					async getData(id) {
-						return await agent.get(`/project/${pathBase64}/trace/${id}`);
+						return await agent.get(`/project/${pathBase64}/trace/data/${id}`);
 					},
 					async getScreenshot(id) {
-						return await agent.get(`/project/${pathBase64}/screenshot/${id}`);
+						return await agent.get(`/project/${pathBase64}/trace/screenshot/${id}`);
 					},
 					async create(payload) {
 						return await agent.post(`/project/${pathBase64}/trace`, {
@@ -101,7 +124,8 @@ export default function install(Vue, { store }) {
 					}
 				}
 			},
-			caseList(pathBase64) {
+			caseList(pathname) {
+				const pathBase64 = base64Encode(pathname);
 				return {
 					async query() {
 						return await agent.get(`/project/${pathBase64}/case`);
@@ -111,9 +135,11 @@ export default function install(Vue, { store }) {
 					}
 				}
 			},
-			case(pathBase64) {
+			case(pathname) {
+				const pathBase64 = base64Encode(pathname);
 				return {
-					async get(nameBase64) {
+					async get(caseName) {
+						const nameBase64 = base64Encode(caseName);
 						return await agent.get(`/project/${pathBase64}/case/${nameBase64}`);
 					},
 					async create(payload) {
@@ -121,25 +147,29 @@ export default function install(Vue, { store }) {
 							data: payload
 						});
 					},
-					async update(nameBase64, payload) {
+					async update(caseName, payload) {
+						const nameBase64 = base64Encode(caseName);
 						return await agent.put(`/project/${pathBase64}/case/${nameBase64}`, {
 							data: payload
 						});
 					},
-					async delete(nameBase64) {
+					async delete(caseName) {
+						const nameBase64 = base64Encode(caseName);
 						return await agent.delete(`/project/${pathBase64}/case/${nameBase64}`);
 					},
-					actionList(nameBase64) {
+					actionList(caseName) {
+						const nameBase64 = base64Encode(caseName);
 						return {
 							async query() {
-								return await agent.get(`/project/${pathBase64}/case/${nameBase64}/action`);
+								return await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/`);
 							},
 							async delete() {
 								return await agent.delete(`/project/${pathBase64}/case/${nameBase64}/action`);
 							}
 						}
 					},
-					action(nameBase64) {
+					action(caseName) {
+						const nameBase64 = base64Encode(caseName);
 						return {
 							async get(id) {
 								return await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/${id}`);

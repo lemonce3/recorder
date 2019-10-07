@@ -15,14 +15,14 @@ module.exports = function ({ server }) {
 		client.on('connect_timeout', error => console.log(error));
 		recorderGUIClient = client;
 		// setInterval(() => {
-		// 	console.log('update');
-		// 	client.emit('update', {aa: 'aoeuaoeu'});
+		// 	console.log('updated');
+		// 	client.emit('updated', {aa: 'aoeuaoeu'});
 		// }, 2000);
 		console.log('connected');
 	});
 
 	return {
-		send(event, data) {
+		emit(event, data) {
 			recorderGUIClient.emit(event, data);
 		},
 		addEventListener(event, callback) {

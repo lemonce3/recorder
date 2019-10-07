@@ -45,6 +45,7 @@ export default {
 	},
 	mounted() {
 		this.projectIndex = this.$workspace.project.index;
+		window.workspace = this.$workspace;
 	},
 	methods: {
 		saveData(filename) {

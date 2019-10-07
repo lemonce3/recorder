@@ -15,6 +15,13 @@ module.exports = [
 			filename: '[name].js',
 			libraryTarget: 'commonjs2',
 		},
+		devServer: {
+			host: '0.0.0.0',
+			proxy: {
+				'/api': `http://localhost:10110`
+			},
+			port: 8080
+		}
 	}),
 	merge(croper, {
 		name: 'croper',

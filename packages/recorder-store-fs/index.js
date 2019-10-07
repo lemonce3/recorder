@@ -29,14 +29,6 @@ async function emptyDir(pathname) {
 	return await fse.emptyDir(pathname);
 }
 
-const getProjectDir = projectId => path.join(tempPath, projectId);
-
-const getTraceDataDir = projectId => path.join(getProjectDir(projectId), 'trace-data');
-const getTraceImageDir = projectId => path.join(getProjectDir(projectId), 'trace-image');
-
-const getCaseDir = projectId => path.join(getProjectDir(projectId), 'case');
-const getActionDir = (projectId, caseName) => path.join(getProjectDir(projectId), 'case', caseName, 'action');
-
 async function KeyValueStore({
 	storePath,
 	extension = ''
@@ -102,7 +94,7 @@ function BoxStore(options) {
 	const { baseDir } = options;
 
 	function getItemDir(key) {
-		return path.join(baseDir, key);
+		return path.join(baseDir, base64Encode(String(key)));
 	}
 
 	function getDataPath(key) {
@@ -117,6 +109,7 @@ function BoxStore(options) {
 	}
 
 	async function writeData(key, value) {
+		await fse.ensureDir(getItemDir(key));
 		await writeFile(getDataPath(key), value);
 	}
 
@@ -149,16 +142,25 @@ function BoxStore(options) {
 module.exports = function (options) {
 	const { baseDir } = options;
 	const rootPath = path.join(baseDir, 'recorder', 'temp');
-	
+
+	const getProjectDir = projectId => path.join(rootPath, base64Encode(String(projectId)));
+
+	const getTraceDataDir = projectId => path.join(getProjectDir(projectId), 'trace-data');
+	const getTraceImageDir = projectId => path.join(getProjectDir(projectId), 'trace-image');
+
+	const getCaseDir = projectId => path.join(getProjectDir(projectId), 'case');
+	const getActionDir = (projectId, caseName) => path.join(getProjectDir(String(projectId)), 'case', base64Encode(String(caseName)), 'action');
+
+
 	const actionStoreList = {};
 	const traceDataStoreList = {};
 	const traceImageStoreList = {};
 	const caseStoreList = {};
 	const projectStore = BoxStore({
-		rootPath
+		baseDir: rootPath
 	});
-	
-	
+
+
 	function getTraceDataStore(projectId) {
 		return traceDataStoreList[projectId]
 			? traceDataStoreList[projectId]
@@ -166,7 +168,7 @@ module.exports = function (options) {
 				storePath: getTraceDataDir(projectId)
 			});
 	}
-	
+
 	function getTraceImageStore(projectId) {
 		return traceImageStoreList[projectId]
 			? traceImageStoreList[projectId]
@@ -175,18 +177,20 @@ module.exports = function (options) {
 				extension: '.png'
 			});
 	}
-	
+
 	function getCaseStore(projectId) {
 		return caseStoreList[projectId]
 			? caseStoreList[projectId]
-			: caseStoreList[projectId] = BoxStore(getCaseDir(projectId));
+			: caseStoreList[projectId] = BoxStore({
+				baseDir: getCaseDir(projectId)
+			});
 	}
-	
+
 	function getActionStore(projectId, caseName) {
 		if (!actionStoreList[projectId]) {
 			actionStoreList[projectId] = {};
 		}
-	
+
 		return actionStoreList[projectId][caseName]
 			? actionStoreList[projectId][caseName]
 			: actionStoreList[projectId][caseName] = KeyValueStore({
@@ -204,115 +208,134 @@ module.exports = function (options) {
 			}
 		},
 		Project: {
-			async create(filename) {
-				await projectStore.create();
+			async create(payload) {
+				return await projectStore.create({
+					key: payload.projectPath,
+					value: JSON.stringify(payload)
+				});
 			},
 			async get(filename) {
 				await projectStore.get();
 			},
-			async update(filename, data) {
+			async update(filename, payload) {
 				await projectStore.update();
 			},
 			async delete(filename) {
 				await projectStore.delete();
-			}
-		},
-		TraceList: {
-			async query() {
-				return await getTraceDataStore(projectId).getList();
 			},
-			async delete() {
-				return await getTraceDataStore(projectId).clean();
-			}
-		},
-		Trace: {
-			async create(projectId, payload) {
-				await getTraceDataStore(projectId).create({
-					key: payload.id,
-					value: payload.data
-				});
-				if (payload.image) {
-					await getTraceImageStore(projectId).create({
-						key: payload.id,
-						value: payload.image
-					});
+			TraceList(projectId) {
+				return {
+					async query() {
+						return await getTraceDataStore(projectId).getList();
+					},
+					async delete() {
+						return await getTraceDataStore(projectId).clean();
+					}
 				}
 			},
-			async get(projectId, payload) {
-				await getTraceDataStore(projectId).get({
-					id: payload.id
-				});
-			},
-			async update(projectId, payload) {
-				await getTraceDataStore(projectId).update({
-					key: payload.id,
-					value: payload.data
-				});
-				if (payload.image) {
-					await getTraceImageStore(projectId).update({
-						key: payload.id,
-						value: payload.image
-					});
+			Trace(projectId) {
+				return {
+					async create(payload) {
+						const traceStore = await getTraceDataStore(projectId);
+						await traceStore.create({
+							key: payload.id,
+							value: payload.data
+						});
+						if (payload.image) {
+							await getTraceImageStore(projectId).create({
+								key: payload.id,
+								value: payload.image
+							});
+						}
+					},
+					async get(payload) {
+						await getTraceDataStore(projectId).get({
+							id: payload.id
+						});
+					},
+					async update(payload) {
+						await getTraceDataStore(projectId).update({
+							key: payload.id,
+							value: payload.data
+						});
+						if (payload.image) {
+							await getTraceImageStore(projectId).update({
+								key: payload.id,
+								value: payload.image
+							});
+						}
+					},
+					async delete(payload) {
+						await getTraceDataStore(projectId).delete({
+							id: payload.id
+						});
+					}
 				}
 			},
-			async delete(projectId, payload) {
-				await getTraceDataStore(projectId).delete({
-					id: payload.id
-				});
-			}
-		},
-		CaseList: {
-			async query() {
-				await getCaseStore(projectId).getList();
+			CaseList(projectId) {
+				return {
+					async query() {
+						await getCaseStore(projectId).getList();
+					},
+					async delete() {
+						await getCaseStore(projectId).clean();
+					}
+				}
 			},
-			async delete() {
-				await getCaseStore(projectId).clean();
-			}
-		},
-		Case: {
-			async create(payload) {
-				await getCaseStore(projectId).create();
-			},
-			async get(payload) {
-				await getCaseStore(projectId).get();
-			},
-			async update(payload) {
-				await getCaseStore(projectId).update();
-			},
-			async delete(payload) {
-				await getCaseStore(projectId).delete();
-			}
-		},
-		ActionList: {
-			async query() {
-				return await getActionStore(projectId, caseName).getList();
-			},
-			async delete() {
-				return await getActionStore(projectId, caseName).clean();
-			}
-		},
-		Action: {
-			async create(id) {
-				await getActionStore(projectId, caseName).create({
-					key: payload.id,
-					value: payload.data
-				});
-			},
-			async get(id) {
-				await getActionStore(projectId, caseName).get({
-					id: payload.id
-				});
-			},
-			async update() {
-				await getActionStore(projectId, caseName).update({
-					key: payload.id,
-					value: payload.data
-				});
-			},
-			async delete() {
-				await getActionStore(projectId, caseName).delete({
-					id: payload.id
-				});
+			Case(projectId) {
+				return {
+					async create(payload) {
+						await getCaseStore(projectId).create({
+							key: payload.name,
+							value: JSON.stringify(payload)
+						});
+					},
+					async get(payload) {
+						await getCaseStore(projectId).get();
+					},
+					async update(payload) {
+						await getCaseStore(projectId).update();
+					},
+					async delete(payload) {
+						await getCaseStore(projectId).delete();
+					},
+					ActionList(caseName) {
+						return {
+							async query() {
+								return await getActionStore(projectId, caseName).getList();
+							},
+							async delete() {
+								return await getActionStore(projectId, caseName).clean();
+							}
+						};
+					},
+					Action(caseName) {
+						return {
+							async create(payload) {
+								await getActionStore(projectId, caseName).create({
+									key: payload.id,
+									value: payload.data
+								});
+							},
+							async get(id) {
+								await getActionStore(projectId, caseName).get({
+									id
+								});
+							},
+							async update(id, payload) {
+								await getActionStore(projectId, caseName).update({
+									key: id,
+									value: payload.data
+								});
+							},
+							async delete(id) {
+								await getActionStore(projectId, caseName).delete({
+									id
+								});
+							}
+						}
+					}
+				}
 			}
 		}
 	}

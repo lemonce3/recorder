@@ -35,7 +35,15 @@ module.exports = function Recorder(options) {
 				store: options.store
 			}),
 			screenshotQueue: ScreenshotQueue({ length: 50 }),
-			mitm: Mitm(options.mitm)
+			mitm: Mitm(options.mitm),
+			util: {
+				base64Encode(string) {
+					return Buffer.from(string).toString('base64');
+				},
+				base64Decode(base64) {
+					return Buffer.from(base64, 'base64').toString();
+				}
+			}
 		},
 		components: [
 			DuckElectron(bootstrap),
@@ -68,7 +76,9 @@ module.exports = function Recorder(options) {
 		mitm.listen(options.mitm.port);
 		const server = recorder.server = Web.Http.createServer(Web.Application('WebIPC'));
 		const websocket = WebSocket({server});
-		workspace.addListener('update', () => websocket.send('updated'));
+		workspace.addListener('updated', () => {
+			websocket.emit('updated');
+		});
 		server.listen(10110);
 	});
 

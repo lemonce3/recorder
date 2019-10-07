@@ -138,15 +138,20 @@ export default {
 		this.recentList = config.recentList;
 	},
 	methods: {
-		async newFile(pathname) {
+		async newFile() {
 			this.enterFileNameDialog = false;
 			this.waitDialog = true;
-			const project = await this.$workspace.project.create();
-			const recordCase = await project.IDocument.createCase('__default__');
 			
-			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
-			this.$store.dispatch('UPDATE_EDITING_CASE_ID', recordCase.id);
-			this.$store.dispatch('UPDATE_ARCHIVED_STATUS', project.document.traceArchived);
+			const project = await this.$workspace.project.create({
+				projectPath: Date.now()
+			});
+			console.log(project);
+
+			await this.$workspace.status.updateFocus({
+				projectPath: project.projectPath,
+				caseName: 'PROJECT_DEFAULT_CASE'
+			});
+
 			this.waitDialog = false;
 		},
 		async saveAs() {
@@ -155,15 +160,10 @@ export default {
 		async openFile({pathname}) {
 			const target = pathname ? pathname : await getOpenPath();
 			this.waitDialog = true;
-			const project = await this.$workspace.project.openFile(target);
-			const caseList = project.document.caseList;
-			const defaultCaseId = Object.keys(caseList).find(id => caseList[id].name === '__default__');
+
+			const project = this.$workspace.project.get(target);
 
 			this.pushRecent(target);
-			this.$store.dispatch('UPDATE_EDITING_PROJECT_ID', project.document.id);
-			this.$store.dispatch('UPDATE_EDITING_CASE_ID', defaultCaseId);
-			console.log(project);
-			this.$store.dispatch('UPDATE_ARCHIVED_STATUS', project.document.traceArchived);
 			this.waitDialog = false;
 		},
 		pushRecent(filename) {

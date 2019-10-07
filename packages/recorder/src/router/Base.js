@@ -1,5 +1,6 @@
 'use strict';
 const { nativeImage } = require('electron');
+const fs = require('fs');
 
 const getId = (length = 5) =>
 		Array(length)
@@ -14,15 +15,17 @@ const getId = (length = 5) =>
 module.exports = function (router, context, { workspace, screenshotQueue, resolver }) {
 	router.post('/screenshot', async ctx => {
 		screenshotQueue.pushScreenshot(ctx.request.body);
+		// fs.promises.writeFile(`./${Date.now()}.png`, nativeImage.createFromDataURL(ctx.request.body.dataURL).toPNG());
 
 		ctx.status = 200;
 	}).post('/snapshot', async ctx => {
-		const { recording, projectPath } = workspace.status.query();
-
+		const { recording, focus } = workspace.status.query();
+		const { projectPath } = focus;
+		console.log(recording, focus);
 		if (recording) {
 			const snapshot = ctx.request.body;
 	
-			await workspace.Project.get(projectPath).Trace.create(snapshot);
+			await workspace.Project.Trace(projectPath).create(snapshot);
 			resolver.pushSnapshot(snapshot);
 		}
 
@@ -41,7 +44,7 @@ module.exports = function (router, context, { workspace, screenshotQueue, resolv
 		}
 
 		action.screenshot = await screenshotQueue.getScreenshotBytime(action.data.time);
-		await workspace.Project.get(projectPath).Trace.create(action);
+		await workspace.Project.Trace(projectPath).create(action);
 
 		const { bounds, dataURL } = action.screenshot;
 		const { rect } = action.data;

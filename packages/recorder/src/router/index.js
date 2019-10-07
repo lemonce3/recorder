@@ -20,17 +20,17 @@ module.exports = {
 					Router: Router.Project,
 					use: [
 						{
-							mount: '/:projectId',
+							mount: '/:pathBase64',
 							prefix: '/trace',
 							Router: Router.Trace
 						},
 						{
-							mount: '/:projectId',
+							mount: '/:pathBase64',
 							prefix: '/case',
 							Router: Router.Case,
 							use: [
 								{
-									mount: '/:caseName',
+									mount: '/:nameBase64',
 									prefix: '/action',
 									Router: Router.Action
 								}
