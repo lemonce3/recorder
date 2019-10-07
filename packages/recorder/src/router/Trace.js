@@ -1,9 +1,9 @@
 module.exports = function (router, context, { workspace }) {
 	router.get('/trace', async ctx => {
-		ctx.body = await workspace.Project.TraceList(ctx.state.projectPath).query();
+		ctx.body = await workspace.Project(ctx.state.projectPath).TraceList.query();
 	}).get('/data/:traceId', async ctx => {
-		ctx.body = await workspace.Project.Trace(ctx.state.projectPath).getData(traceId);
+		ctx.body = await workspace.Project(ctx.state.projectPath).Trace.getData(traceId);
 	}).get('/screenshot/:traceId', async ctx => {
-		ctx.body = await workspace.Project.Trace(ctx.state.projectPath).getScreenshot(traceId);
+		ctx.body = await workspace.Project(ctx.state.projectPath).Trace.getScreenshot(traceId);
 	});
 }

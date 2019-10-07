@@ -1,26 +1,22 @@
 module.exports = function (router, context, { workspace, util }) {
 	router.get('/', async ctx => {
-		ctx.body = await workspace.Project.CaseList(ctx.state.projectPath).query();
+		ctx.body = await workspace.Project(ctx.params.pathBase64).caseList.query();
 	}).del('/', async ctx => {
-		ctx.body = await workspace.Project.CaseList(ctx.state.projectPath).delete();
+		ctx.body = await workspace.Project(ctx.params.pathBase64).caseList.delete();
 	});
 
 	router.post('/', async ctx => {
-		const projectPath = util.base64Decode(ctx.params.pathBase64);
 		const payload = ctx.request.body.data;
-		ctx.body = await workspace.Project.Case(projectPath).create(payload);
-	}).param('nameBase64', async (nameBase64, ctx, next) => {
-		ctx.state.caseName = util.base64Decode(nameBase64);
-		return next();
+		ctx.body = await workspace.Project(ctx.params.pathBase64).Case.create(payload);
 	}).get('/:nameBase64', async ctx => {
-		const { projectPath, caseName } = ctx.state;
-		ctx.body = await workspace.Project.Case(projectPath).get(caseName);
+		const { pathBase64, nameBase64 } = ctx.params;
+		ctx.body = await workspace.Project(pathBase64).Case.get(nameBase64);
 	}).put('/:nameBase64', async ctx => {
-		const { projectPath, caseName } = ctx.state;
+		const { pathBase64, nameBase64 } = ctx.params;
 		const payload = ctx.request.body.data;
-		ctx.body = await workspace.Project.Case(projectPath).update(caseName, payload);
+		ctx.body = await workspace.Project(pathBase64).Case.update(nameBase64, payload);
 	}).del('/:nameBase64', async ctx => {
-		const { projectPath, caseName } = ctx.state;
-		ctx.body = await workspace.Project.Case(projectPath).delete(caseName);
+		const { pathBase64, nameBase64 } = ctx.params;
+		ctx.body = await workspace.Project(pathBase64).Case.delete(nameBase64);
 	})
 }

@@ -9,6 +9,38 @@ function base64Decode(base64) {
 	return atob(base64);
 }
 
+function ProjectPayload(raw) {
+	if (raw.projectPath) {
+		raw.projectPath = base64Encode(raw.projectPath);
+	}
+
+	return raw;
+}
+
+function ProjectResponse(raw) {
+	if (raw.projectPath) {
+		raw.projectPath = base64Decode(raw.projectPath);
+	}
+
+	return raw;
+}
+
+function CasePayload(raw) {
+	if (raw.caseName) {
+		raw.caseName = base64Encode(raw.caseName);
+	}
+
+	return raw;
+}
+
+function CaseResponse(raw) {
+	if (raw.projectPath) {
+		raw.projectPath = base64Decode(raw.projectPath);
+	}
+
+	return raw;
+}
+
 export default function install(Vue, { store }) {
 	const origin = 'http://localhost:10110';
 
@@ -58,139 +90,151 @@ export default function install(Vue, { store }) {
 				return status;
 			},
 			async updateFocus(focus) {
-				const { data: result } = await agent.put('/status', {
+				const { data: status } = await agent.put('/status', {
 					data: {
-						projectPath: focus.projectPath,
-						caseName: focus.caseName
+						projectPath: base64Encode(focus.projectPath),
+						caseName: base64Encode(focus.caseName)
 					}
 				});
 
-				return result;
+				status.focus.projectPath = base64Decode(status.focus.projectPath);
+				status.focus.caseName = base64Decode(status.focus.caseName);
+
+				return status;
 			}
 		},
 		projectList: {
 			async query() {
-				const { data: projectList } = await agent.get('/project');
-
-				return projectList;
+				
 			}
 		},
-		project: {
+		Project: Object.assign(function (projectPath) {
+			const pathBase64 = base64Encode(projectPath);
+			return {
+				caseList: {
+					async query() {
+						const { data: caseList } = await agent.get(`/project/${pathBase64}/case`);
+						return caseList;
+					},
+					async delete() {
+						const { data: result } = await agent.delete(`/project/${pathBase64}/case`);
+						return result;
+					}
+				},
+				Case: Object.assign(function (caseName) {
+					const nameBase64 = base64Encode(caseName);
+					return {
+						actionList: {
+							async query() {
+								const { data: actionList } = await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/`);
+								return actionList;
+							},
+							async delete() {
+								const { data: result } = await agent.delete(`/project/${pathBase64}/case/${nameBase64}/action`);
+								return result;
+							}
+						},
+						action: {
+							async get(id) {
+								const { data: action } = await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/${id}`);
+								return action;
+							},
+							async create(payload) {
+								const { data: action } = await agent.post(`/project/${pathBase64}/case/${nameBase64}/action`, {
+									data: payload
+								});
+								return action;
+							},
+							async update(id, payload) {
+								const { data: action } = await agent.put(`/project/${pathBase64}/case/${nameBase64}/action/${id}`, {
+									data: payload
+								});
+								return action;
+							},
+							async delete(id) {
+								const { data: result } = await agent.delete(`/project/${pathBase64}/case/${nameBase64}/action/${id}`);
+								return result;
+							}
+						}
+					}
+				}, {
+					async get(caseName) {
+						const nameBase64 = base64Encode(caseName);
+						const { data: recordCase } = await agent.get(`/project/${pathBase64}/case/${nameBase64}`);
+
+						return CaseResponse(recordCase);
+					},
+					async create(payload) {
+						const { data: recordCase } = await agent.post(`/project/${pathBase64}/case`, {
+							data: CasePayload(payload)
+						});
+
+						return CaseResponse(recordCase);
+					},
+					async update(caseName, payload) {
+						const nameBase64 = base64Encode(caseName);
+						const { data: recordCase } = await agent.put(`/project/${pathBase64}/case/${nameBase64}`, {
+							data: CasePayload(payload)
+						});
+
+						return CaseResponse(recordCase);
+					},
+					async delete(caseName) {
+						const nameBase64 = base64Encode(caseName);
+						const { data: result } = await agent.delete(`/project/${pathBase64}/case/${nameBase64}`);
+						return result;
+					}
+				}),
+				traceList: {
+					async query() {
+						const { data: traceList } = await agent.get(`/project/${pathBase64}/trace`);
+						return traceList;
+					}
+				},
+				trace: {
+					async getData(id) {
+						const { data: traceData } = await agent.get(`/project/${pathBase64}/trace/data/${id}`);
+						return traceData;
+					},
+					async getScreenshot(id) {
+						const { data: traceScreenshot } = await agent.get(`/project/${pathBase64}/trace/screenshot/${id}`);
+						return traceScreenshot;
+					},
+					async create(payload) {
+						const { data: trace } = await agent.post(`/project/${pathBase64}/trace`, {
+							data: payload
+						});
+
+						return trace;
+					}
+				}
+			}
+		}, {
 			async get(pathname) {
 				const pathBase64 = base64Encode(pathname);
 				const { data: project } = await agent.get(`/project/${pathBase64}`);
-				return project;
+				return ProjectResponse(project);
 			},
 			async create(payload) {
 				const { data: project } = await agent.post('/project', {
-					data: payload
+					data: ProjectPayload(payload)
 				});
-
-				return project;
+	
+				return ProjectResponse(project);
 			},
 			async patch(pathname, payload) {
 				const pathBase64 = base64Encode(pathname);
 				const { data: project } = await agent.patch(`/project/${pathBase64}`, {
-					data: payload
+					data: ProjectPayload(payload)
 				});
-				return project;
+
+				return ProjectResponse(project);
 			},
 			async delete(pathname) {
 				const pathBase64 = base64Encode(pathname);
 				const { data: result } = await agent.delete(`/project/${pathBase64}`);
 				return result;
-			},
-			traceList(pathname) {
-				const pathBase64 = base64Encode(pathname);
-				return {
-					async query() {
-						return await agent.get(`/project/${pathBase64}/trace`);
-					}
-				}
-			},
-			trace(pathname) {
-				const pathBase64 = base64Encode(pathname);
-				return {
-					async getData(id) {
-						return await agent.get(`/project/${pathBase64}/trace/data/${id}`);
-					},
-					async getScreenshot(id) {
-						return await agent.get(`/project/${pathBase64}/trace/screenshot/${id}`);
-					},
-					async create(payload) {
-						return await agent.post(`/project/${pathBase64}/trace`, {
-							data: payload
-						});
-					}
-				}
-			},
-			caseList(pathname) {
-				const pathBase64 = base64Encode(pathname);
-				return {
-					async query() {
-						return await agent.get(`/project/${pathBase64}/case`);
-					},
-					async delete() {
-						return await agent.delete(`/project/${pathBase64}/case`);
-					}
-				}
-			},
-			case(pathname) {
-				const pathBase64 = base64Encode(pathname);
-				return {
-					async get(caseName) {
-						const nameBase64 = base64Encode(caseName);
-						return await agent.get(`/project/${pathBase64}/case/${nameBase64}`);
-					},
-					async create(payload) {
-						return await agent.post(`/project/${pathBase64}/case`, {
-							data: payload
-						});
-					},
-					async update(caseName, payload) {
-						const nameBase64 = base64Encode(caseName);
-						return await agent.put(`/project/${pathBase64}/case/${nameBase64}`, {
-							data: payload
-						});
-					},
-					async delete(caseName) {
-						const nameBase64 = base64Encode(caseName);
-						return await agent.delete(`/project/${pathBase64}/case/${nameBase64}`);
-					},
-					actionList(caseName) {
-						const nameBase64 = base64Encode(caseName);
-						return {
-							async query() {
-								return await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/`);
-							},
-							async delete() {
-								return await agent.delete(`/project/${pathBase64}/case/${nameBase64}/action`);
-							}
-						}
-					},
-					action(caseName) {
-						const nameBase64 = base64Encode(caseName);
-						return {
-							async get(id) {
-								return await agent.get(`/project/${pathBase64}/case/${nameBase64}/action/${id}`);
-							},
-							async create(payload) {
-								return await agent.post(`/project/${pathBase64}/case/${nameBase64}/action`, {
-									data: payload
-								});
-							},
-							async update(id, payload) {
-								return await agent.put(`/project/${pathBase64}/case/${nameBase64}/action/${id}`, {
-									data: payload
-								});
-							},
-							async delete(id) {
-								return await agent.delete(`/project/${pathBase64}/case/${nameBase64}/action/${id}`);
-							}
-						}
-					}
-				}
 			}
-		}
+		})
 	};
 }

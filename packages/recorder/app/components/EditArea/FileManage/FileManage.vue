@@ -141,17 +141,21 @@ export default {
 		async newFile() {
 			this.enterFileNameDialog = false;
 			this.waitDialog = true;
+
+			const projectPath = Date.now();
 			
-			const project = await this.$workspace.project.create({
-				projectPath: Date.now()
+			const project = await this.$workspace.Project.create({
+				projectPath
 			});
-			console.log(project);
 
-			await this.$workspace.status.updateFocus({
+			const caseList = await this.$workspace.Project(projectPath).caseList.query();
+
+			const status = await this.$workspace.status.updateFocus({
 				projectPath: project.projectPath,
-				caseName: 'PROJECT_DEFAULT_CASE'
+				caseName: caseList[0].name
 			});
 
+			console.log(project, caseList, status);
 			this.waitDialog = false;
 		},
 		async saveAs() {

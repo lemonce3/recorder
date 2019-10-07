@@ -1,6 +1,14 @@
 const EventEmitter = require('events');
 const _ = require('lodash');
-const DEFAULT_CASE_NAME = 'PROJECT_DEFAULT_CASE';
+const SAMPLE_CASE_NAME = '__SAMPLE_CASE__';
+
+function base64Encode(string) {
+	return Buffer.from(string).toString('base64');
+}
+
+function base64Decode(base64) {
+	return Buffer.from(base64, 'base64').toString();
+}
 
 module.exports = function Workspace({store}) {
 	const workspace = new EventEmitter();
@@ -29,7 +37,7 @@ module.exports = function Workspace({store}) {
 	function ProjectFactory(projectPath) {
 		const caseList = {};
 
-		caseList[DEFAULT_CASE_NAME] = CaseFactory(DEFAULT_CASE_NAME);
+		caseList[base64Encode(SAMPLE_CASE_NAME)] = CaseFactory(SAMPLE_CASE_NAME);
 		
 		return {
 			projectPath,
@@ -54,9 +62,11 @@ module.exports = function Workspace({store}) {
 				} else {
 					return new Error();
 				}
+
+				return status;
 			}
 		},
-		ProjectList: {
+		projectList: {
 			async query() {
 				return Object.keys(projectList).map(projectPath => projectList[projectPath]);
 			},
@@ -64,116 +74,31 @@ module.exports = function Workspace({store}) {
 				Object.keys(projectList).forEach(projectPath => delete projectList[projectPath]);
 			}
 		},
-		Project: {
-			async get(projectPath) {
-				return projectList[projectPath] ? projectList[projectPath] : new Error();	
-			},
-			async create(payload) {
-				if (!payload.projectPath) {
-					payload.projectPath = Date.now();
-				}
-
-				const { projectPath } = payload;
-				
-				if (projectList[projectPath]) {
-					return new Error();
-				}
-				
-				const project = ProjectFactory(projectPath);
-				const defaultCase = project.caseList[DEFAULT_CASE_NAME];
-				await store.Project.create(_.pick(project, ['projectPath', 'ignoreList']));
-				await store.Project.Case(projectPath).create(_.pick(defaultCase, ['name']));
-				projectList[projectPath] = project;
-				return project;
-			},
-			async update(projectPath, payload) {
-				if (projectList[projectPath]) {
-					return new Error();
-				}
-	
-				projectList[payload.projectPath] = payload;
-			},
-			async delete(projectPath) {
-				projectList[projectPath] ? delete projectList[projectPath] : new Error();
-				
-			},
-			TraceList(projectPath) {
-				const project = projectList[projectPath];
-				return {
+		Project: Object.assign(function (projectPath) {
+			const project = projectList[projectPath];
+			return {
+				sampleCase: {
+					
+				},
+				caseList: {
 					async query() {
-						await store.TraceList(projectPath).getList();
-					}
-				}
-			},
-			Trace(projectPath) {
-				const project = projectList[projectPath];
-				return {
-					async create(payload) {
-						await store.Project.Trace(projectPath).create(payload);
-					},
-					async getData(id) {
-						await store.Project.Trace(projectPath).get(id);
-					},
-					async getScreenshot(id) {
-						await store.Project.Trace(projectPath).get(id);
-					}
-				}
-			},
-			ignoreList(projectPath) {
-				const project = projectList[projectPath];
-				return {
-					async get() {
-		
-					},
-					async update() {
-						
-					}
-				}
-			},
-			CaseList(projectPath) {
-				const project = projectList[projectPath];
-				return {
-					async query() {
-						return project.caseList;
+						return Object.keys(project.caseList).map(caseName => project.caseList[caseName]);
 					},
 					async delete() {
 						project.caseList = {};
 					}
-			}
-			},
-			Case(projectPath) {
-				const project = projectList[projectPath];
-				return {
-					async get(caseName) {
-						return project.caseList[caseName]
-					},
-					async create(caseName) {
-						project.caseList[caseName] = CaseFactory(caseName);
-						
-					},
-					async update(caseName, payload) {
-						project.caseList[caseName] = payload;
-						
-					},
-					async delete(caseName) {
-						delete project.caseList[caseName];
-						
-					},
-					ActionList(caseName) {
-						const recordCase = project.caseList[caseName];
-						return {
+				},
+				Case: Object.assign(function (caseName) {
+					const recordCase = project.caseList[caseName];
+					return {
+						actionList: {
 							async query() {
 								return recordCase.actionList;
 							},
 							async delete() {
 								recordCase.actionList.splice(0, recordCase.actionList.length);
-								
-							}
-						}
-					},
-					Action(caseName) {
-						const recordCase = project.caseList[caseName];
-						return {
+							},
+						action: {
 							async get(id) {
 								return recordCase.actionList.find(action => action.id = id);
 							},
@@ -200,8 +125,74 @@ module.exports = function Workspace({store}) {
 						}
 					}
 				}
+			}, {
+				async get(caseName) {
+					return project.caseList[caseName]
+				},
+				async create(caseName) {
+					project.caseList[caseName] = CaseFactory(caseName);
+					
+				},
+				async update(caseName, payload) {
+					project.caseList[caseName] = payload;
+					
+				},
+				async delete(caseName) {
+					delete project.caseList[caseName];
+				}
+				}),
+				traceList: {
+					async query() {
+						await store.Project(projectPath).traceList.getList();
+					}
+				},
+				trace: {
+					async create(payload) {
+						await store.Project(projectPath).trace.create(payload);
+					},
+					async getData(id) {
+						await store.Project(projectPath).trace.get(id);
+					},
+					async getScreenshot(id) {
+						await store.Project(projectPath).trace.get(id);
+					}
+				}
 			}
-		}
+		}, {
+			async get(projectPath) {
+				return projectList[projectPath] ? projectList[projectPath] : new Error();	
+			},
+			async create(payload) {
+				if (!payload.projectPath) {
+					payload.projectPath = Date.now();
+				}
+	
+				const { projectPath } = payload;
+				
+				if (projectList[projectPath]) {
+					return new Error();
+				}
+				
+				const project = projectList[projectPath] = ProjectFactory(projectPath);
+				const result = _.pick(project, ['projectPath', 'ignoreList']);
+				await store.Project.create(result);
+
+				const sampleCase = project.caseList[base64Encode(SAMPLE_CASE_NAME)];
+				await store.Project(projectPath).Case.create(_.pick(sampleCase, ['name']));
+				return result;
+			},
+			async update(projectPath, payload) {
+				if (projectList[projectPath]) {
+					return new Error();
+				}
+	
+				projectList[payload.projectPath] = payload;
+			},
+			async delete(projectPath) {
+				projectList[projectPath] ? delete projectList[projectPath] : new Error();
+				
+			}
+		})
 	});
 	
 	return workspace;
